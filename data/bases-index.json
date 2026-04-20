@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Cheyenne Mountain Complex",
+    "slug": "cheyenne-mountain-complex",
+    "type": "Military Facility",
+    "region": "North America"
+  },
+  {
+    "name": "Svalbard Global Seed Vault",
+    "slug": "svalbard-seed-vault",
+    "type": "Arctic Vault",
+    "region": "Europe"
+  },
+  {
+    "name": "Monastery of St. Catherine",
+    "slug": "st-catherine-monastery",
+    "type": "Fortified Monastery",
+    "region": "Middle East"
+  },
+  {
+    "name": "Kangaroo Island Airfield",
+    "slug": "kangaroo-island-airfield",
+    "type": "Remote Airfield",
+    "region": "Oceania"
+  },
+  {
+    "name": "Icelandic Geothermal Station",
+    "slug": "iceland-geothermal-station",
+    "type": "Energy Site",
+    "region": "Europe"
+  }
+]
