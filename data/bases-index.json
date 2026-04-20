@@ -1,32 +1,1298 @@
 [
   {
-    "name": "Cheyenne Mountain Complex",
-    "slug": "cheyenne-mountain-complex",
-    "type": "Military Facility",
-    "region": "North America"
+    "name": "Dover Fortress",
+    "slug": "dover-fortress",
+    "type": "fortified_structure",
+    "region": "uk_ireland"
   },
   {
-    "name": "Svalbard Global Seed Vault",
-    "slug": "svalbard-seed-vault",
-    "type": "Arctic Vault",
-    "region": "Europe"
+    "name": "Skellig Michael Citadel",
+    "slug": "skellig-michael-citadel",
+    "type": "fortified_structure",
+    "region": "uk_ireland"
   },
   {
-    "name": "Monastery of St. Catherine",
-    "slug": "st-catherine-monastery",
-    "type": "Fortified Monastery",
-    "region": "Middle East"
+    "name": "Dover Island Redoubt",
+    "slug": "dover-island-redoubt",
+    "type": "isolated_landmass",
+    "region": "uk_ireland"
   },
   {
-    "name": "Kangaroo Island Airfield",
-    "slug": "kangaroo-island-airfield",
-    "type": "Remote Airfield",
-    "region": "Oceania"
+    "name": "Skellig Michael Offshore Bastion",
+    "slug": "skellig-michael-offshore-bastion",
+    "type": "isolated_landmass",
+    "region": "uk_ireland"
   },
   {
-    "name": "Icelandic Geothermal Station",
-    "slug": "iceland-geothermal-station",
-    "type": "Energy Site",
-    "region": "Europe"
+    "name": "Dover Ridge Keep",
+    "slug": "dover-ridge-keep",
+    "type": "elevated_stronghold",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Skellig Michael Summit Bastion",
+    "slug": "skellig-michael-summit-bastion",
+    "type": "elevated_stronghold",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Dover Deep Shelter",
+    "slug": "dover-deep-shelter",
+    "type": "subterranean",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Skellig Michael Underground Vault",
+    "slug": "skellig-michael-underground-vault",
+    "type": "subterranean",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Dover Academy Compound",
+    "slug": "dover-academy-compound",
+    "type": "institutional_compound",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Skellig Michael Research Enclave",
+    "slug": "skellig-michael-research-enclave",
+    "type": "institutional_compound",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Dover Foundry Complex",
+    "slug": "dover-foundry-complex",
+    "type": "industrial_site",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Skellig Michael Power Yard",
+    "slug": "skellig-michael-power-yard",
+    "type": "industrial_site",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Dover Frontier Hamlet",
+    "slug": "dover-frontier-hamlet",
+    "type": "remote_settlement",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Skellig Michael Outpost Village",
+    "slug": "skellig-michael-outpost-village",
+    "type": "remote_settlement",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Dover Airstrip Hub",
+    "slug": "dover-airstrip-hub",
+    "type": "transit_hub",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Skellig Michael Rail Junction",
+    "slug": "skellig-michael-rail-junction",
+    "type": "transit_hub",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Dover Beacon Tower",
+    "slug": "dover-beacon-tower",
+    "type": "landmark_structure",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Skellig Michael Monument Bastion",
+    "slug": "skellig-michael-monument-bastion",
+    "type": "landmark_structure",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Mont Saint-Michel Fortress",
+    "slug": "mont-saint-michel-fortress",
+    "type": "fortified_structure",
+    "region": "western_europe"
+  },
+  {
+    "name": "Gibraltar Citadel",
+    "slug": "gibraltar-citadel",
+    "type": "fortified_structure",
+    "region": "western_europe"
+  },
+  {
+    "name": "Mont Saint-Michel Island Redoubt",
+    "slug": "mont-saint-michel-island-redoubt",
+    "type": "isolated_landmass",
+    "region": "western_europe"
+  },
+  {
+    "name": "Gibraltar Offshore Bastion",
+    "slug": "gibraltar-offshore-bastion",
+    "type": "isolated_landmass",
+    "region": "western_europe"
+  },
+  {
+    "name": "Mont Saint-Michel Ridge Keep",
+    "slug": "mont-saint-michel-ridge-keep",
+    "type": "elevated_stronghold",
+    "region": "western_europe"
+  },
+  {
+    "name": "Gibraltar Summit Bastion",
+    "slug": "gibraltar-summit-bastion",
+    "type": "elevated_stronghold",
+    "region": "western_europe"
+  },
+  {
+    "name": "Mont Saint-Michel Deep Shelter",
+    "slug": "mont-saint-michel-deep-shelter",
+    "type": "subterranean",
+    "region": "western_europe"
+  },
+  {
+    "name": "Gibraltar Underground Vault",
+    "slug": "gibraltar-underground-vault",
+    "type": "subterranean",
+    "region": "western_europe"
+  },
+  {
+    "name": "Mont Saint-Michel Academy Compound",
+    "slug": "mont-saint-michel-academy-compound",
+    "type": "institutional_compound",
+    "region": "western_europe"
+  },
+  {
+    "name": "Gibraltar Research Enclave",
+    "slug": "gibraltar-research-enclave",
+    "type": "institutional_compound",
+    "region": "western_europe"
+  },
+  {
+    "name": "Mont Saint-Michel Foundry Complex",
+    "slug": "mont-saint-michel-foundry-complex",
+    "type": "industrial_site",
+    "region": "western_europe"
+  },
+  {
+    "name": "Gibraltar Power Yard",
+    "slug": "gibraltar-power-yard",
+    "type": "industrial_site",
+    "region": "western_europe"
+  },
+  {
+    "name": "Mont Saint-Michel Frontier Hamlet",
+    "slug": "mont-saint-michel-frontier-hamlet",
+    "type": "remote_settlement",
+    "region": "western_europe"
+  },
+  {
+    "name": "Gibraltar Outpost Village",
+    "slug": "gibraltar-outpost-village",
+    "type": "remote_settlement",
+    "region": "western_europe"
+  },
+  {
+    "name": "Mont Saint-Michel Airstrip Hub",
+    "slug": "mont-saint-michel-airstrip-hub",
+    "type": "transit_hub",
+    "region": "western_europe"
+  },
+  {
+    "name": "Gibraltar Rail Junction",
+    "slug": "gibraltar-rail-junction",
+    "type": "transit_hub",
+    "region": "western_europe"
+  },
+  {
+    "name": "Mont Saint-Michel Beacon Tower",
+    "slug": "mont-saint-michel-beacon-tower",
+    "type": "landmark_structure",
+    "region": "western_europe"
+  },
+  {
+    "name": "Gibraltar Monument Bastion",
+    "slug": "gibraltar-monument-bastion",
+    "type": "landmark_structure",
+    "region": "western_europe"
+  },
+  {
+    "name": "Krakow Fortress",
+    "slug": "krakow-fortress",
+    "type": "fortified_structure",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Transylvania Citadel",
+    "slug": "transylvania-citadel",
+    "type": "fortified_structure",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Krakow Island Redoubt",
+    "slug": "krakow-island-redoubt",
+    "type": "isolated_landmass",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Transylvania Offshore Bastion",
+    "slug": "transylvania-offshore-bastion",
+    "type": "isolated_landmass",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Krakow Ridge Keep",
+    "slug": "krakow-ridge-keep",
+    "type": "elevated_stronghold",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Transylvania Summit Bastion",
+    "slug": "transylvania-summit-bastion",
+    "type": "elevated_stronghold",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Krakow Deep Shelter",
+    "slug": "krakow-deep-shelter",
+    "type": "subterranean",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Transylvania Underground Vault",
+    "slug": "transylvania-underground-vault",
+    "type": "subterranean",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Krakow Academy Compound",
+    "slug": "krakow-academy-compound",
+    "type": "institutional_compound",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Transylvania Research Enclave",
+    "slug": "transylvania-research-enclave",
+    "type": "institutional_compound",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Krakow Foundry Complex",
+    "slug": "krakow-foundry-complex",
+    "type": "industrial_site",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Transylvania Power Yard",
+    "slug": "transylvania-power-yard",
+    "type": "industrial_site",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Krakow Frontier Hamlet",
+    "slug": "krakow-frontier-hamlet",
+    "type": "remote_settlement",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Transylvania Outpost Village",
+    "slug": "transylvania-outpost-village",
+    "type": "remote_settlement",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Krakow Airstrip Hub",
+    "slug": "krakow-airstrip-hub",
+    "type": "transit_hub",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Transylvania Rail Junction",
+    "slug": "transylvania-rail-junction",
+    "type": "transit_hub",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Krakow Beacon Tower",
+    "slug": "krakow-beacon-tower",
+    "type": "landmark_structure",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Transylvania Monument Bastion",
+    "slug": "transylvania-monument-bastion",
+    "type": "landmark_structure",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Colorado Springs Fortress",
+    "slug": "colorado-springs-fortress",
+    "type": "fortified_structure",
+    "region": "north_america"
+  },
+  {
+    "name": "Vancouver Island Citadel",
+    "slug": "vancouver-island-citadel",
+    "type": "fortified_structure",
+    "region": "north_america"
+  },
+  {
+    "name": "Colorado Springs Island Redoubt",
+    "slug": "colorado-springs-island-redoubt",
+    "type": "isolated_landmass",
+    "region": "north_america"
+  },
+  {
+    "name": "Vancouver Island Offshore Bastion",
+    "slug": "vancouver-island-offshore-bastion",
+    "type": "isolated_landmass",
+    "region": "north_america"
+  },
+  {
+    "name": "Colorado Springs Ridge Keep",
+    "slug": "colorado-springs-ridge-keep",
+    "type": "elevated_stronghold",
+    "region": "north_america"
+  },
+  {
+    "name": "Vancouver Island Summit Bastion",
+    "slug": "vancouver-island-summit-bastion",
+    "type": "elevated_stronghold",
+    "region": "north_america"
+  },
+  {
+    "name": "Colorado Springs Deep Shelter",
+    "slug": "colorado-springs-deep-shelter",
+    "type": "subterranean",
+    "region": "north_america"
+  },
+  {
+    "name": "Vancouver Island Underground Vault",
+    "slug": "vancouver-island-underground-vault",
+    "type": "subterranean",
+    "region": "north_america"
+  },
+  {
+    "name": "Colorado Springs Academy Compound",
+    "slug": "colorado-springs-academy-compound",
+    "type": "institutional_compound",
+    "region": "north_america"
+  },
+  {
+    "name": "Vancouver Island Research Enclave",
+    "slug": "vancouver-island-research-enclave",
+    "type": "institutional_compound",
+    "region": "north_america"
+  },
+  {
+    "name": "Colorado Springs Foundry Complex",
+    "slug": "colorado-springs-foundry-complex",
+    "type": "industrial_site",
+    "region": "north_america"
+  },
+  {
+    "name": "Vancouver Island Power Yard",
+    "slug": "vancouver-island-power-yard",
+    "type": "industrial_site",
+    "region": "north_america"
+  },
+  {
+    "name": "Colorado Springs Frontier Hamlet",
+    "slug": "colorado-springs-frontier-hamlet",
+    "type": "remote_settlement",
+    "region": "north_america"
+  },
+  {
+    "name": "Vancouver Island Outpost Village",
+    "slug": "vancouver-island-outpost-village",
+    "type": "remote_settlement",
+    "region": "north_america"
+  },
+  {
+    "name": "Colorado Springs Airstrip Hub",
+    "slug": "colorado-springs-airstrip-hub",
+    "type": "transit_hub",
+    "region": "north_america"
+  },
+  {
+    "name": "Vancouver Island Rail Junction",
+    "slug": "vancouver-island-rail-junction",
+    "type": "transit_hub",
+    "region": "north_america"
+  },
+  {
+    "name": "Colorado Springs Beacon Tower",
+    "slug": "colorado-springs-beacon-tower",
+    "type": "landmark_structure",
+    "region": "north_america"
+  },
+  {
+    "name": "Vancouver Island Monument Bastion",
+    "slug": "vancouver-island-monument-bastion",
+    "type": "landmark_structure",
+    "region": "north_america"
+  },
+  {
+    "name": "Patagonia Fortress",
+    "slug": "patagonia-fortress",
+    "type": "fortified_structure",
+    "region": "south_america"
+  },
+  {
+    "name": "Atacama Citadel",
+    "slug": "atacama-citadel",
+    "type": "fortified_structure",
+    "region": "south_america"
+  },
+  {
+    "name": "Patagonia Island Redoubt",
+    "slug": "patagonia-island-redoubt",
+    "type": "isolated_landmass",
+    "region": "south_america"
+  },
+  {
+    "name": "Atacama Offshore Bastion",
+    "slug": "atacama-offshore-bastion",
+    "type": "isolated_landmass",
+    "region": "south_america"
+  },
+  {
+    "name": "Patagonia Ridge Keep",
+    "slug": "patagonia-ridge-keep",
+    "type": "elevated_stronghold",
+    "region": "south_america"
+  },
+  {
+    "name": "Atacama Summit Bastion",
+    "slug": "atacama-summit-bastion",
+    "type": "elevated_stronghold",
+    "region": "south_america"
+  },
+  {
+    "name": "Patagonia Deep Shelter",
+    "slug": "patagonia-deep-shelter",
+    "type": "subterranean",
+    "region": "south_america"
+  },
+  {
+    "name": "Atacama Underground Vault",
+    "slug": "atacama-underground-vault",
+    "type": "subterranean",
+    "region": "south_america"
+  },
+  {
+    "name": "Patagonia Academy Compound",
+    "slug": "patagonia-academy-compound",
+    "type": "institutional_compound",
+    "region": "south_america"
+  },
+  {
+    "name": "Atacama Research Enclave",
+    "slug": "atacama-research-enclave",
+    "type": "institutional_compound",
+    "region": "south_america"
+  },
+  {
+    "name": "Patagonia Foundry Complex",
+    "slug": "patagonia-foundry-complex",
+    "type": "industrial_site",
+    "region": "south_america"
+  },
+  {
+    "name": "Atacama Power Yard",
+    "slug": "atacama-power-yard",
+    "type": "industrial_site",
+    "region": "south_america"
+  },
+  {
+    "name": "Patagonia Frontier Hamlet",
+    "slug": "patagonia-frontier-hamlet",
+    "type": "remote_settlement",
+    "region": "south_america"
+  },
+  {
+    "name": "Atacama Outpost Village",
+    "slug": "atacama-outpost-village",
+    "type": "remote_settlement",
+    "region": "south_america"
+  },
+  {
+    "name": "Patagonia Airstrip Hub",
+    "slug": "patagonia-airstrip-hub",
+    "type": "transit_hub",
+    "region": "south_america"
+  },
+  {
+    "name": "Atacama Rail Junction",
+    "slug": "atacama-rail-junction",
+    "type": "transit_hub",
+    "region": "south_america"
+  },
+  {
+    "name": "Patagonia Beacon Tower",
+    "slug": "patagonia-beacon-tower",
+    "type": "landmark_structure",
+    "region": "south_america"
+  },
+  {
+    "name": "Atacama Monument Bastion",
+    "slug": "atacama-monument-bastion",
+    "type": "landmark_structure",
+    "region": "south_america"
+  },
+  {
+    "name": "Atlas Mountains Fortress",
+    "slug": "atlas-mountains-fortress",
+    "type": "fortified_structure",
+    "region": "africa"
+  },
+  {
+    "name": "Zanzibar Citadel",
+    "slug": "zanzibar-citadel",
+    "type": "fortified_structure",
+    "region": "africa"
+  },
+  {
+    "name": "Atlas Mountains Island Redoubt",
+    "slug": "atlas-mountains-island-redoubt",
+    "type": "isolated_landmass",
+    "region": "africa"
+  },
+  {
+    "name": "Zanzibar Offshore Bastion",
+    "slug": "zanzibar-offshore-bastion",
+    "type": "isolated_landmass",
+    "region": "africa"
+  },
+  {
+    "name": "Atlas Mountains Ridge Keep",
+    "slug": "atlas-mountains-ridge-keep",
+    "type": "elevated_stronghold",
+    "region": "africa"
+  },
+  {
+    "name": "Zanzibar Summit Bastion",
+    "slug": "zanzibar-summit-bastion",
+    "type": "elevated_stronghold",
+    "region": "africa"
+  },
+  {
+    "name": "Atlas Mountains Deep Shelter",
+    "slug": "atlas-mountains-deep-shelter",
+    "type": "subterranean",
+    "region": "africa"
+  },
+  {
+    "name": "Zanzibar Underground Vault",
+    "slug": "zanzibar-underground-vault",
+    "type": "subterranean",
+    "region": "africa"
+  },
+  {
+    "name": "Atlas Mountains Academy Compound",
+    "slug": "atlas-mountains-academy-compound",
+    "type": "institutional_compound",
+    "region": "africa"
+  },
+  {
+    "name": "Zanzibar Research Enclave",
+    "slug": "zanzibar-research-enclave",
+    "type": "institutional_compound",
+    "region": "africa"
+  },
+  {
+    "name": "Atlas Mountains Foundry Complex",
+    "slug": "atlas-mountains-foundry-complex",
+    "type": "industrial_site",
+    "region": "africa"
+  },
+  {
+    "name": "Zanzibar Power Yard",
+    "slug": "zanzibar-power-yard",
+    "type": "industrial_site",
+    "region": "africa"
+  },
+  {
+    "name": "Atlas Mountains Frontier Hamlet",
+    "slug": "atlas-mountains-frontier-hamlet",
+    "type": "remote_settlement",
+    "region": "africa"
+  },
+  {
+    "name": "Zanzibar Outpost Village",
+    "slug": "zanzibar-outpost-village",
+    "type": "remote_settlement",
+    "region": "africa"
+  },
+  {
+    "name": "Atlas Mountains Airstrip Hub",
+    "slug": "atlas-mountains-airstrip-hub",
+    "type": "transit_hub",
+    "region": "africa"
+  },
+  {
+    "name": "Zanzibar Rail Junction",
+    "slug": "zanzibar-rail-junction",
+    "type": "transit_hub",
+    "region": "africa"
+  },
+  {
+    "name": "Atlas Mountains Beacon Tower",
+    "slug": "atlas-mountains-beacon-tower",
+    "type": "landmark_structure",
+    "region": "africa"
+  },
+  {
+    "name": "Zanzibar Monument Bastion",
+    "slug": "zanzibar-monument-bastion",
+    "type": "landmark_structure",
+    "region": "africa"
+  },
+  {
+    "name": "Petra Fortress",
+    "slug": "petra-fortress",
+    "type": "fortified_structure",
+    "region": "middle_east"
+  },
+  {
+    "name": "Socotra Citadel",
+    "slug": "socotra-citadel",
+    "type": "fortified_structure",
+    "region": "middle_east"
+  },
+  {
+    "name": "Petra Island Redoubt",
+    "slug": "petra-island-redoubt",
+    "type": "isolated_landmass",
+    "region": "middle_east"
+  },
+  {
+    "name": "Socotra Offshore Bastion",
+    "slug": "socotra-offshore-bastion",
+    "type": "isolated_landmass",
+    "region": "middle_east"
+  },
+  {
+    "name": "Petra Ridge Keep",
+    "slug": "petra-ridge-keep",
+    "type": "elevated_stronghold",
+    "region": "middle_east"
+  },
+  {
+    "name": "Socotra Summit Bastion",
+    "slug": "socotra-summit-bastion",
+    "type": "elevated_stronghold",
+    "region": "middle_east"
+  },
+  {
+    "name": "Petra Deep Shelter",
+    "slug": "petra-deep-shelter",
+    "type": "subterranean",
+    "region": "middle_east"
+  },
+  {
+    "name": "Socotra Underground Vault",
+    "slug": "socotra-underground-vault",
+    "type": "subterranean",
+    "region": "middle_east"
+  },
+  {
+    "name": "Petra Academy Compound",
+    "slug": "petra-academy-compound",
+    "type": "institutional_compound",
+    "region": "middle_east"
+  },
+  {
+    "name": "Socotra Research Enclave",
+    "slug": "socotra-research-enclave",
+    "type": "institutional_compound",
+    "region": "middle_east"
+  },
+  {
+    "name": "Petra Foundry Complex",
+    "slug": "petra-foundry-complex",
+    "type": "industrial_site",
+    "region": "middle_east"
+  },
+  {
+    "name": "Socotra Power Yard",
+    "slug": "socotra-power-yard",
+    "type": "industrial_site",
+    "region": "middle_east"
+  },
+  {
+    "name": "Petra Frontier Hamlet",
+    "slug": "petra-frontier-hamlet",
+    "type": "remote_settlement",
+    "region": "middle_east"
+  },
+  {
+    "name": "Socotra Outpost Village",
+    "slug": "socotra-outpost-village",
+    "type": "remote_settlement",
+    "region": "middle_east"
+  },
+  {
+    "name": "Petra Airstrip Hub",
+    "slug": "petra-airstrip-hub",
+    "type": "transit_hub",
+    "region": "middle_east"
+  },
+  {
+    "name": "Socotra Rail Junction",
+    "slug": "socotra-rail-junction",
+    "type": "transit_hub",
+    "region": "middle_east"
+  },
+  {
+    "name": "Petra Beacon Tower",
+    "slug": "petra-beacon-tower",
+    "type": "landmark_structure",
+    "region": "middle_east"
+  },
+  {
+    "name": "Socotra Monument Bastion",
+    "slug": "socotra-monument-bastion",
+    "type": "landmark_structure",
+    "region": "middle_east"
+  },
+  {
+    "name": "Ladakh Fortress",
+    "slug": "ladakh-fortress",
+    "type": "fortified_structure",
+    "region": "south_asia"
+  },
+  {
+    "name": "Andaman Citadel",
+    "slug": "andaman-citadel",
+    "type": "fortified_structure",
+    "region": "south_asia"
+  },
+  {
+    "name": "Ladakh Island Redoubt",
+    "slug": "ladakh-island-redoubt",
+    "type": "isolated_landmass",
+    "region": "south_asia"
+  },
+  {
+    "name": "Andaman Offshore Bastion",
+    "slug": "andaman-offshore-bastion",
+    "type": "isolated_landmass",
+    "region": "south_asia"
+  },
+  {
+    "name": "Ladakh Ridge Keep",
+    "slug": "ladakh-ridge-keep",
+    "type": "elevated_stronghold",
+    "region": "south_asia"
+  },
+  {
+    "name": "Andaman Summit Bastion",
+    "slug": "andaman-summit-bastion",
+    "type": "elevated_stronghold",
+    "region": "south_asia"
+  },
+  {
+    "name": "Ladakh Deep Shelter",
+    "slug": "ladakh-deep-shelter",
+    "type": "subterranean",
+    "region": "south_asia"
+  },
+  {
+    "name": "Andaman Underground Vault",
+    "slug": "andaman-underground-vault",
+    "type": "subterranean",
+    "region": "south_asia"
+  },
+  {
+    "name": "Ladakh Academy Compound",
+    "slug": "ladakh-academy-compound",
+    "type": "institutional_compound",
+    "region": "south_asia"
+  },
+  {
+    "name": "Andaman Research Enclave",
+    "slug": "andaman-research-enclave",
+    "type": "institutional_compound",
+    "region": "south_asia"
+  },
+  {
+    "name": "Ladakh Foundry Complex",
+    "slug": "ladakh-foundry-complex",
+    "type": "industrial_site",
+    "region": "south_asia"
+  },
+  {
+    "name": "Andaman Power Yard",
+    "slug": "andaman-power-yard",
+    "type": "industrial_site",
+    "region": "south_asia"
+  },
+  {
+    "name": "Ladakh Frontier Hamlet",
+    "slug": "ladakh-frontier-hamlet",
+    "type": "remote_settlement",
+    "region": "south_asia"
+  },
+  {
+    "name": "Andaman Outpost Village",
+    "slug": "andaman-outpost-village",
+    "type": "remote_settlement",
+    "region": "south_asia"
+  },
+  {
+    "name": "Ladakh Airstrip Hub",
+    "slug": "ladakh-airstrip-hub",
+    "type": "transit_hub",
+    "region": "south_asia"
+  },
+  {
+    "name": "Andaman Rail Junction",
+    "slug": "andaman-rail-junction",
+    "type": "transit_hub",
+    "region": "south_asia"
+  },
+  {
+    "name": "Ladakh Beacon Tower",
+    "slug": "ladakh-beacon-tower",
+    "type": "landmark_structure",
+    "region": "south_asia"
+  },
+  {
+    "name": "Andaman Monument Bastion",
+    "slug": "andaman-monument-bastion",
+    "type": "landmark_structure",
+    "region": "south_asia"
+  },
+  {
+    "name": "Hokkaido Fortress",
+    "slug": "hokkaido-fortress",
+    "type": "fortified_structure",
+    "region": "east_asia"
+  },
+  {
+    "name": "Jeju Citadel",
+    "slug": "jeju-citadel",
+    "type": "fortified_structure",
+    "region": "east_asia"
+  },
+  {
+    "name": "Hokkaido Island Redoubt",
+    "slug": "hokkaido-island-redoubt",
+    "type": "isolated_landmass",
+    "region": "east_asia"
+  },
+  {
+    "name": "Jeju Offshore Bastion",
+    "slug": "jeju-offshore-bastion",
+    "type": "isolated_landmass",
+    "region": "east_asia"
+  },
+  {
+    "name": "Hokkaido Ridge Keep",
+    "slug": "hokkaido-ridge-keep",
+    "type": "elevated_stronghold",
+    "region": "east_asia"
+  },
+  {
+    "name": "Jeju Summit Bastion",
+    "slug": "jeju-summit-bastion",
+    "type": "elevated_stronghold",
+    "region": "east_asia"
+  },
+  {
+    "name": "Hokkaido Deep Shelter",
+    "slug": "hokkaido-deep-shelter",
+    "type": "subterranean",
+    "region": "east_asia"
+  },
+  {
+    "name": "Jeju Underground Vault",
+    "slug": "jeju-underground-vault",
+    "type": "subterranean",
+    "region": "east_asia"
+  },
+  {
+    "name": "Hokkaido Academy Compound",
+    "slug": "hokkaido-academy-compound",
+    "type": "institutional_compound",
+    "region": "east_asia"
+  },
+  {
+    "name": "Jeju Research Enclave",
+    "slug": "jeju-research-enclave",
+    "type": "institutional_compound",
+    "region": "east_asia"
+  },
+  {
+    "name": "Hokkaido Foundry Complex",
+    "slug": "hokkaido-foundry-complex",
+    "type": "industrial_site",
+    "region": "east_asia"
+  },
+  {
+    "name": "Jeju Power Yard",
+    "slug": "jeju-power-yard",
+    "type": "industrial_site",
+    "region": "east_asia"
+  },
+  {
+    "name": "Hokkaido Frontier Hamlet",
+    "slug": "hokkaido-frontier-hamlet",
+    "type": "remote_settlement",
+    "region": "east_asia"
+  },
+  {
+    "name": "Jeju Outpost Village",
+    "slug": "jeju-outpost-village",
+    "type": "remote_settlement",
+    "region": "east_asia"
+  },
+  {
+    "name": "Hokkaido Airstrip Hub",
+    "slug": "hokkaido-airstrip-hub",
+    "type": "transit_hub",
+    "region": "east_asia"
+  },
+  {
+    "name": "Jeju Rail Junction",
+    "slug": "jeju-rail-junction",
+    "type": "transit_hub",
+    "region": "east_asia"
+  },
+  {
+    "name": "Hokkaido Beacon Tower",
+    "slug": "hokkaido-beacon-tower",
+    "type": "landmark_structure",
+    "region": "east_asia"
+  },
+  {
+    "name": "Jeju Monument Bastion",
+    "slug": "jeju-monument-bastion",
+    "type": "landmark_structure",
+    "region": "east_asia"
+  },
+  {
+    "name": "Palawan Fortress",
+    "slug": "palawan-fortress",
+    "type": "fortified_structure",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Borneo Citadel",
+    "slug": "borneo-citadel",
+    "type": "fortified_structure",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Palawan Island Redoubt",
+    "slug": "palawan-island-redoubt",
+    "type": "isolated_landmass",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Borneo Offshore Bastion",
+    "slug": "borneo-offshore-bastion",
+    "type": "isolated_landmass",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Palawan Ridge Keep",
+    "slug": "palawan-ridge-keep",
+    "type": "elevated_stronghold",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Borneo Summit Bastion",
+    "slug": "borneo-summit-bastion",
+    "type": "elevated_stronghold",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Palawan Deep Shelter",
+    "slug": "palawan-deep-shelter",
+    "type": "subterranean",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Borneo Underground Vault",
+    "slug": "borneo-underground-vault",
+    "type": "subterranean",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Palawan Academy Compound",
+    "slug": "palawan-academy-compound",
+    "type": "institutional_compound",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Borneo Research Enclave",
+    "slug": "borneo-research-enclave",
+    "type": "institutional_compound",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Palawan Foundry Complex",
+    "slug": "palawan-foundry-complex",
+    "type": "industrial_site",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Borneo Power Yard",
+    "slug": "borneo-power-yard",
+    "type": "industrial_site",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Palawan Frontier Hamlet",
+    "slug": "palawan-frontier-hamlet",
+    "type": "remote_settlement",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Borneo Outpost Village",
+    "slug": "borneo-outpost-village",
+    "type": "remote_settlement",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Palawan Airstrip Hub",
+    "slug": "palawan-airstrip-hub",
+    "type": "transit_hub",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Borneo Rail Junction",
+    "slug": "borneo-rail-junction",
+    "type": "transit_hub",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Palawan Beacon Tower",
+    "slug": "palawan-beacon-tower",
+    "type": "landmark_structure",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Borneo Monument Bastion",
+    "slug": "borneo-monument-bastion",
+    "type": "landmark_structure",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Tasmania Fortress",
+    "slug": "tasmania-fortress",
+    "type": "fortified_structure",
+    "region": "oceania"
+  },
+  {
+    "name": "Chatham Islands Citadel",
+    "slug": "chatham-islands-citadel",
+    "type": "fortified_structure",
+    "region": "oceania"
+  },
+  {
+    "name": "Tasmania Island Redoubt",
+    "slug": "tasmania-island-redoubt",
+    "type": "isolated_landmass",
+    "region": "oceania"
+  },
+  {
+    "name": "Chatham Islands Offshore Bastion",
+    "slug": "chatham-islands-offshore-bastion",
+    "type": "isolated_landmass",
+    "region": "oceania"
+  },
+  {
+    "name": "Tasmania Ridge Keep",
+    "slug": "tasmania-ridge-keep",
+    "type": "elevated_stronghold",
+    "region": "oceania"
+  },
+  {
+    "name": "Chatham Islands Summit Bastion",
+    "slug": "chatham-islands-summit-bastion",
+    "type": "elevated_stronghold",
+    "region": "oceania"
+  },
+  {
+    "name": "Tasmania Deep Shelter",
+    "slug": "tasmania-deep-shelter",
+    "type": "subterranean",
+    "region": "oceania"
+  },
+  {
+    "name": "Chatham Islands Underground Vault",
+    "slug": "chatham-islands-underground-vault",
+    "type": "subterranean",
+    "region": "oceania"
+  },
+  {
+    "name": "Tasmania Academy Compound",
+    "slug": "tasmania-academy-compound",
+    "type": "institutional_compound",
+    "region": "oceania"
+  },
+  {
+    "name": "Chatham Islands Research Enclave",
+    "slug": "chatham-islands-research-enclave",
+    "type": "institutional_compound",
+    "region": "oceania"
+  },
+  {
+    "name": "Tasmania Foundry Complex",
+    "slug": "tasmania-foundry-complex",
+    "type": "industrial_site",
+    "region": "oceania"
+  },
+  {
+    "name": "Chatham Islands Power Yard",
+    "slug": "chatham-islands-power-yard",
+    "type": "industrial_site",
+    "region": "oceania"
+  },
+  {
+    "name": "Tasmania Frontier Hamlet",
+    "slug": "tasmania-frontier-hamlet",
+    "type": "remote_settlement",
+    "region": "oceania"
+  },
+  {
+    "name": "Chatham Islands Outpost Village",
+    "slug": "chatham-islands-outpost-village",
+    "type": "remote_settlement",
+    "region": "oceania"
+  },
+  {
+    "name": "Tasmania Airstrip Hub",
+    "slug": "tasmania-airstrip-hub",
+    "type": "transit_hub",
+    "region": "oceania"
+  },
+  {
+    "name": "Chatham Islands Rail Junction",
+    "slug": "chatham-islands-rail-junction",
+    "type": "transit_hub",
+    "region": "oceania"
+  },
+  {
+    "name": "Tasmania Beacon Tower",
+    "slug": "tasmania-beacon-tower",
+    "type": "landmark_structure",
+    "region": "oceania"
+  },
+  {
+    "name": "Chatham Islands Monument Bastion",
+    "slug": "chatham-islands-monument-bastion",
+    "type": "landmark_structure",
+    "region": "oceania"
+  },
+  {
+    "name": "Svalbard Fortress",
+    "slug": "svalbard-fortress",
+    "type": "fortified_structure",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "McMurdo Citadel",
+    "slug": "mcmurdo-citadel",
+    "type": "fortified_structure",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Svalbard Island Redoubt",
+    "slug": "svalbard-island-redoubt",
+    "type": "isolated_landmass",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "McMurdo Offshore Bastion",
+    "slug": "mcmurdo-offshore-bastion",
+    "type": "isolated_landmass",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Svalbard Ridge Keep",
+    "slug": "svalbard-ridge-keep",
+    "type": "elevated_stronghold",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "McMurdo Summit Bastion",
+    "slug": "mcmurdo-summit-bastion",
+    "type": "elevated_stronghold",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Svalbard Deep Shelter",
+    "slug": "svalbard-deep-shelter",
+    "type": "subterranean",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "McMurdo Underground Vault",
+    "slug": "mcmurdo-underground-vault",
+    "type": "subterranean",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Svalbard Academy Compound",
+    "slug": "svalbard-academy-compound",
+    "type": "institutional_compound",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "McMurdo Research Enclave",
+    "slug": "mcmurdo-research-enclave",
+    "type": "institutional_compound",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Svalbard Foundry Complex",
+    "slug": "svalbard-foundry-complex",
+    "type": "industrial_site",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "McMurdo Power Yard",
+    "slug": "mcmurdo-power-yard",
+    "type": "industrial_site",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Svalbard Frontier Hamlet",
+    "slug": "svalbard-frontier-hamlet",
+    "type": "remote_settlement",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "McMurdo Outpost Village",
+    "slug": "mcmurdo-outpost-village",
+    "type": "remote_settlement",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Svalbard Airstrip Hub",
+    "slug": "svalbard-airstrip-hub",
+    "type": "transit_hub",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "McMurdo Rail Junction",
+    "slug": "mcmurdo-rail-junction",
+    "type": "transit_hub",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Svalbard Beacon Tower",
+    "slug": "svalbard-beacon-tower",
+    "type": "landmark_structure",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "McMurdo Monument Bastion",
+    "slug": "mcmurdo-monument-bastion",
+    "type": "landmark_structure",
+    "region": "polar_extreme"
   }
 ]
