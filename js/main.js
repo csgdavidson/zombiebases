@@ -1,5 +1,30 @@
 const DATA_URL = './data/bases-index.json';
 
+const LABELS = {
+  type: {
+    fortified_structure: 'Fortified Structure',
+    isolated_landmass: 'Isolated Landmass',
+    elevated_stronghold: 'Elevated Stronghold',
+    subterranean: 'Subterranean',
+    institutional_compound: 'Institutional Compound',
+    industrial_site: 'Industrial Site',
+    remote_settlement: 'Remote Settlement',
+    transit_hub: 'Transit Hub',
+    landmark_structure: 'Landmark Structure'
+  },
+  region: {
+    uk_ireland: 'UK & Ireland',
+    western_europe: 'Western Europe',
+    eastern_europe: 'Eastern Europe',
+    north_america: 'North America',
+    central_south_america: 'Central & South America',
+    middle_east_africa: 'Middle East & Africa',
+    central_south_asia: 'Central & South Asia',
+    east_southeast_asia: 'East & Southeast Asia',
+    oceania: 'Oceania'
+  }
+};
+
 const state = {
   bases: [],
   filteredBases: []
@@ -12,15 +37,26 @@ const elements = {
   status: document.getElementById('status')
 };
 
+function toTitleCaseSlug(value) {
+  return value
+    .split('_')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+}
+
+function labelFor(kind, value) {
+  return LABELS[kind][value] ?? toTitleCaseSlug(value);
+}
+
 function uniqueValues(items, key) {
   return [...new Set(items.map((item) => item[key]))].sort();
 }
 
-function populateFilter(selectElement, values) {
+function populateFilter(selectElement, values, kind) {
   values.forEach((value) => {
     const option = document.createElement('option');
     option.value = value;
-    option.textContent = value;
+    option.textContent = labelFor(kind, value);
     selectElement.appendChild(option);
   });
 }
@@ -47,12 +83,12 @@ function renderBaseList(items) {
     listItem.className = 'base-card';
 
     const link = document.createElement('a');
-    link.href = `./bases/${base.slug}.html`;
+    link.href = `./base.html?slug=${encodeURIComponent(base.slug)}`;
     link.textContent = base.name;
 
     const meta = document.createElement('p');
     meta.className = 'base-meta';
-    meta.textContent = `${base.type} • ${base.region}`;
+    meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
 
     listItem.append(link, meta);
     elements.list.appendChild(listItem);
@@ -76,8 +112,8 @@ async function loadBases() {
 
     state.bases = await response.json();
 
-    populateFilter(elements.regionFilter, uniqueValues(state.bases, 'region'));
-    populateFilter(elements.typeFilter, uniqueValues(state.bases, 'type'));
+    populateFilter(elements.regionFilter, uniqueValues(state.bases, 'region'), 'region');
+    populateFilter(elements.typeFilter, uniqueValues(state.bases, 'type'), 'type');
 
     applyFilters();
     elements.status.textContent = '';

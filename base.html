@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zombie Base Details</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1><a class="home-link" href="./index.html">Zombie Bases</a></h1>
+    </div>
+  </header>
+
+  <main>
+    <p id="detail-status" role="status" aria-live="polite"></p>
+
+    <article id="base-detail" class="base-page" hidden>
+      <header>
+        <h2 id="base-name"></h2>
+        <p id="base-meta" class="base-meta"></p>
+      </header>
+
+      <section class="placeholder-box" aria-label="Hero image placeholder">
+        <h3>Hero Image</h3>
+        <p>Placeholder for a featured base image.</p>
+      </section>
+
+      <section class="placeholder-box" aria-label="Description placeholder">
+        <h3>Description</h3>
+        <p>Placeholder for a full base description.</p>
+      </section>
+
+      <section class="placeholder-box" aria-label="Score breakdown placeholder">
+        <h3>Score Breakdown</h3>
+        <p>Placeholder for survivability and logistics scoring details.</p>
+      </section>
+    </article>
+
+    <section id="not-found" class="not-found" hidden>
+      <h2>Base not found</h2>
+      <p>We couldn't find a base for this link.</p>
+      <a href="./index.html">Back to homepage</a>
+    </section>
+  </main>
+
+  <script src="./js/base.js" defer></script>
+</body>
+</html>
