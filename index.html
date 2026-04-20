@@ -1,9 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zombie Bases</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-  <h1>Zombie Bases is live</h1>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>Zombie Bases</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="filters" aria-label="Filter zombie base list">
+      <label for="region-filter">
+        Region
+        <select id="region-filter">
+          <option value="">All regions</option>
+        </select>
+      </label>
+
+      <label for="type-filter">
+        Type
+        <select id="type-filter">
+          <option value="">All types</option>
+        </select>
+      </label>
+    </section>
+
+    <p id="status" role="status" aria-live="polite"></p>
+
+    <ul id="bases-list" aria-label="List of zombie base locations"></ul>
+  </main>
+
+  <script src="./js/main.js" defer></script>
 </body>
 </html>
