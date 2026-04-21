@@ -5,7 +5,9 @@
     "type": "elevated_stronghold",
     "region": "africa",
     "lat": 13.1807,
-    "lng": 38.065
+    "lng": 38.065,
+    "country": "Ethiopia",
+    "summary": "A high-altitude mountain stronghold with limited approach routes and natural lookout points."
   },
   {
     "name": "Table Mountain Plateau",
@@ -109,7 +111,9 @@
     "type": "transit_hub",
     "region": "africa",
     "lat": -33.9696,
-    "lng": 18.5972
+    "lng": 18.5972,
+    "country": "South Africa",
+    "summary": "A major transit hub with long runways, fuel access, and clear evacuation corridors."
   },
   {
     "name": "Mombasa Port",
@@ -143,7 +147,10 @@
     "type": "fortified_structure",
     "region": "east_asia",
     "lat": 34.8394,
-    "lng": 134.6939
+    "lng": 134.6939,
+    "country": "Japan",
+    "summary": "A hilltop castle complex with layered defenses and strong visibility over surrounding streets.",
+    "status": "featured"
   },
   {
     "name": "Shenzhen Industrial Zone",
@@ -193,7 +200,9 @@
     "type": "landmark_structure",
     "region": "east_asia",
     "lat": 35.6586,
-    "lng": 139.7454
+    "lng": 139.7454,
+    "country": "Japan",
+    "summary": "A reinforced landmark with observation levels useful for long-range monitoring and signaling."
   },
   {
     "name": "Mountain Hamlet China",
@@ -255,7 +264,10 @@
     "type": "fortified_structure",
     "region": "eastern_europe",
     "lat": 60.1462,
-    "lng": 24.9884
+    "lng": 24.9884,
+    "country": "Finland",
+    "summary": "A sea-fortress island network with controlled entry points and durable stone structures.",
+    "status": "featured"
   },
   {
     "name": "Baltic Shipyards",
