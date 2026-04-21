@@ -22,21 +22,32 @@
       <header>
         <h2 id="base-name"></h2>
         <p id="base-meta" class="base-meta"></p>
+        <ul id="base-meta-row" class="base-meta-row" aria-label="Base metadata"></ul>
       </header>
 
-      <section class="placeholder-box" aria-label="Hero image placeholder">
+      <section id="hero-section" class="content-section" aria-label="Hero image section" hidden>
         <h3>Hero Image</h3>
-        <p>Placeholder for a featured base image.</p>
+        <img id="base-hero-image" class="hero-image" alt="">
       </section>
 
-      <section class="placeholder-box" aria-label="Description placeholder">
+      <section id="summary-section" class="content-section" aria-label="Summary section" hidden>
+        <h3>Summary</h3>
+        <p id="base-summary"></p>
+      </section>
+
+      <section id="description-section" class="content-section" aria-label="Description section">
         <h3>Description</h3>
-        <p>Placeholder for a full base description.</p>
+        <p id="base-description"></p>
       </section>
 
-      <section class="placeholder-box" aria-label="Score breakdown placeholder">
-        <h3>Score Breakdown</h3>
-        <p>Placeholder for survivability and logistics scoring details.</p>
+      <section id="score-section" class="content-section" aria-label="Score section" hidden>
+        <h3>Score</h3>
+        <p id="base-score"></p>
+      </section>
+
+      <section id="related-section" class="content-section" aria-label="Related bases section" hidden>
+        <h3>Related Bases</h3>
+        <ul id="related-bases-list" class="compact-base-list"></ul>
       </section>
     </article>
 

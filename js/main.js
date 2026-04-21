@@ -30,7 +30,9 @@ const LABELS = {
 
 const state = {
   bases: [],
+  visibleBases: [],
   filteredBases: [],
+  featuredBases: [],
   view: 'list'
 };
 
@@ -46,7 +48,9 @@ const elements = {
   mapStatus: document.getElementById('map-status'),
   mapElement: document.getElementById('bases-map'),
   listViewButton: document.getElementById('view-list'),
-  mapViewButton: document.getElementById('view-map')
+  mapViewButton: document.getElementById('view-map'),
+  featuredSection: document.getElementById('featured-section'),
+  featuredList: document.getElementById('featured-bases-list')
 };
 
 const baseMap = (window.createBaseMap && elements.mapElement && elements.mapStatus)
@@ -71,6 +75,23 @@ function labelFor(kind, value) {
 
 function uniqueValues(items, key) {
   return [...new Set(items.map((item) => item[key]))].sort();
+}
+
+function hasDisplayableStatus(base) {
+  return typeof base.status === 'string' && base.status.trim().length > 0;
+}
+
+function normalizeStatus(base) {
+  return hasDisplayableStatus(base) ? base.status.trim().toLowerCase() : '';
+}
+
+function shouldDisplayBase(base) {
+  return normalizeStatus(base) !== 'hidden';
+}
+
+function statusLabel(base) {
+  const value = normalizeStatus(base);
+  return value ? toTitleCaseSlug(value) : '';
 }
 
 function populateFilter(selectElement, values, kind) {
@@ -164,9 +185,61 @@ function renderBaseList(items) {
     meta.className = 'base-meta';
     meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
 
-    listItem.append(link, meta);
+    const supportingMeta = [];
+    if (base.country) {
+      supportingMeta.push(base.country);
+    }
+    if (base.summary) {
+      supportingMeta.push(base.summary);
+    }
+
+    if (supportingMeta.length) {
+      const supplemental = document.createElement('p');
+      supplemental.className = 'base-extra';
+      supplemental.textContent = supportingMeta.join(' • ');
+      listItem.append(link, meta, supplemental);
+    } else {
+      listItem.append(link, meta);
+    }
+
+    if (hasDisplayableStatus(base)) {
+      const badge = document.createElement('span');
+      badge.className = `status-badge status-${normalizeStatus(base)}`;
+      badge.textContent = statusLabel(base);
+      listItem.appendChild(badge);
+    }
+
     elements.list.appendChild(listItem);
   });
+}
+
+function renderFeaturedBases(items) {
+  if (!elements.featuredSection || !elements.featuredList) {
+    return;
+  }
+
+  elements.featuredList.innerHTML = '';
+
+  if (!items.length) {
+    elements.featuredSection.hidden = true;
+    return;
+  }
+
+  items.slice(0, 3).forEach((base) => {
+    const listItem = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = createBaseUrl(base.slug);
+    link.textContent = base.name;
+
+    const meta = document.createElement('p');
+    meta.className = 'base-meta';
+    meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
+
+    listItem.append(link, meta);
+    elements.featuredList.appendChild(listItem);
+  });
+
+  elements.featuredSection.hidden = false;
 }
 
 function renderCurrentView() {
@@ -189,7 +262,7 @@ function applyFilters() {
   const region = elements.regionFilter.value;
   const type = elements.typeFilter.value;
 
-  state.filteredBases = state.bases.filter((base) => matchesFilters(base, region, type));
+  state.filteredBases = state.visibleBases.filter((base) => matchesFilters(base, region, type));
   updateResultCount(state.filteredBases.length);
   renderBaseList(state.filteredBases);
   renderCurrentView();
@@ -228,11 +301,14 @@ async function loadBases() {
     }
 
     state.bases = await response.json();
+    state.visibleBases = state.bases.filter(shouldDisplayBase);
+    state.featuredBases = state.visibleBases.filter((base) => normalizeStatus(base) === 'featured');
 
-    populateFilter(elements.regionFilter, uniqueValues(state.bases, 'region'), 'region');
-    populateFilter(elements.typeFilter, uniqueValues(state.bases, 'type'), 'type');
+    populateFilter(elements.regionFilter, uniqueValues(state.visibleBases, 'region'), 'region');
+    populateFilter(elements.typeFilter, uniqueValues(state.visibleBases, 'type'), 'type');
 
     setInitialControls();
+    renderFeaturedBases(state.featuredBases);
     applyFilters();
     elements.status.textContent = '';
   } catch (error) {
