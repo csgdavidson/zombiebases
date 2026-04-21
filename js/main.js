@@ -177,36 +177,41 @@ function renderBaseList(items) {
     const listItem = document.createElement('li');
     listItem.className = 'base-card';
 
+    const header = document.createElement('div');
+    header.className = 'base-card-header';
+
     const link = document.createElement('a');
+    link.className = 'base-card-title';
     link.href = createBaseUrl(base.slug);
     link.textContent = base.name;
 
-    const meta = document.createElement('p');
-    meta.className = 'base-meta';
-    meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
-
-    const supportingMeta = [];
-    if (base.country) {
-      supportingMeta.push(base.country);
-    }
-    if (base.summary) {
-      supportingMeta.push(base.summary);
-    }
-
-    if (supportingMeta.length) {
-      const supplemental = document.createElement('p');
-      supplemental.className = 'base-extra';
-      supplemental.textContent = supportingMeta.join(' • ');
-      listItem.append(link, meta, supplemental);
-    } else {
-      listItem.append(link, meta);
-    }
+    header.appendChild(link);
 
     if (hasDisplayableStatus(base)) {
       const badge = document.createElement('span');
       badge.className = `status-badge status-${normalizeStatus(base)}`;
       badge.textContent = statusLabel(base);
-      listItem.appendChild(badge);
+      header.appendChild(badge);
+    }
+
+    const meta = document.createElement('p');
+    meta.className = 'base-meta';
+    meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
+
+    listItem.append(header, meta);
+
+    if (base.country) {
+      const country = document.createElement('p');
+      country.className = 'base-country';
+      country.textContent = base.country;
+      listItem.appendChild(country);
+    }
+
+    if (base.summary) {
+      const summary = document.createElement('p');
+      summary.className = 'base-summary';
+      summary.textContent = base.summary;
+      listItem.appendChild(summary);
     }
 
     elements.list.appendChild(listItem);
@@ -228,6 +233,7 @@ function renderFeaturedBases(items) {
   items.slice(0, 3).forEach((base) => {
     const listItem = document.createElement('li');
     const link = document.createElement('a');
+    link.className = 'featured-link';
     link.href = createBaseUrl(base.slug);
     link.textContent = base.name;
 
