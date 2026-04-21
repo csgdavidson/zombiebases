@@ -1,4538 +1,1298 @@
 [
   {
-    "name": "Dover",
-    "slug": "dover-fortress",
-    "type": "fortified_structure",
-    "region": "uk_ireland",
-    "country": "United Kingdom",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Skellig Michael",
-    "slug": "skellig-michael-citadel",
-    "type": "fortified_structure",
-    "region": "uk_ireland",
-    "country": "Ireland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Dover",
-    "slug": "dover-island-redoubt",
-    "type": "isolated_landmass",
-    "region": "uk_ireland",
-    "country": "United Kingdom",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Skellig Michael",
-    "slug": "skellig-michael-offshore-bastion",
-    "type": "isolated_landmass",
-    "region": "uk_ireland",
-    "country": "Ireland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Dover",
-    "slug": "dover-ridge-keep",
+    "name": "Simien Mountains",
+    "slug": "simien",
     "type": "elevated_stronghold",
-    "region": "uk_ireland",
-    "country": "United Kingdom",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "africa"
   },
   {
-    "name": "Skellig Michael",
-    "slug": "skellig-michael-summit-bastion",
+    "name": "Table Mountain Plateau",
+    "slug": "table-mountain",
     "type": "elevated_stronghold",
-    "region": "uk_ireland",
-    "country": "Ireland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "africa"
   },
   {
-    "name": "Dover",
-    "slug": "dover-deep-shelter",
-    "type": "subterranean",
-    "region": "uk_ireland",
-    "country": "United Kingdom",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Skellig Michael",
-    "slug": "skellig-michael-underground-vault",
-    "type": "subterranean",
-    "region": "uk_ireland",
-    "country": "Ireland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Dover",
-    "slug": "dover-academy-compound",
-    "type": "institutional_compound",
-    "region": "uk_ireland",
-    "country": "United Kingdom",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Skellig Michael",
-    "slug": "skellig-michael-research-enclave",
-    "type": "institutional_compound",
-    "region": "uk_ireland",
-    "country": "Ireland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Dover",
-    "slug": "dover-foundry-complex",
-    "type": "industrial_site",
-    "region": "uk_ireland",
-    "country": "United Kingdom",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Skellig Michael",
-    "slug": "skellig-michael-power-yard",
-    "type": "industrial_site",
-    "region": "uk_ireland",
-    "country": "Ireland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Dover",
-    "slug": "dover-frontier-hamlet",
-    "type": "remote_settlement",
-    "region": "uk_ireland",
-    "country": "United Kingdom",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Skellig Michael",
-    "slug": "skellig-michael-outpost-village",
-    "type": "remote_settlement",
-    "region": "uk_ireland",
-    "country": "Ireland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Dover",
-    "slug": "dover-airstrip-hub",
-    "type": "transit_hub",
-    "region": "uk_ireland",
-    "country": "United Kingdom",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Skellig Michael",
-    "slug": "skellig-michael-rail-junction",
-    "type": "transit_hub",
-    "region": "uk_ireland",
-    "country": "Ireland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Dover",
-    "slug": "dover-beacon-tower",
-    "type": "landmark_structure",
-    "region": "uk_ireland",
-    "country": "United Kingdom",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Skellig Michael",
-    "slug": "skellig-michael-monument-bastion",
-    "type": "landmark_structure",
-    "region": "uk_ireland",
-    "country": "Ireland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Mont Saint-Michel",
-    "slug": "mont-saint-michel-fortress",
+    "name": "Elmina Castle",
+    "slug": "elmina",
     "type": "fortified_structure",
-    "region": "western_europe",
-    "country": "France",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "africa"
   },
   {
-    "name": "Gibraltar",
-    "slug": "gibraltar-citadel",
+    "name": "Fasil Ghebbi",
+    "slug": "fasil-ghebbi",
     "type": "fortified_structure",
-    "region": "western_europe",
-    "country": "Gibraltar",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "africa"
   },
   {
-    "name": "Mont Saint-Michel",
-    "slug": "mont-saint-michel-island-redoubt",
+    "name": "Diamond Mine Complex",
+    "slug": "diamond-mine",
+    "type": "industrial_site",
+    "region": "africa"
+  },
+  {
+    "name": "Oil Terminal Nigeria",
+    "slug": "oil-terminal",
+    "type": "industrial_site",
+    "region": "africa"
+  },
+  {
+    "name": "French Foreign Legion Outpost",
+    "slug": "legion-outpost",
+    "type": "institutional_compound",
+    "region": "africa"
+  },
+  {
+    "name": "UN Base Africa",
+    "slug": "un-base",
+    "type": "institutional_compound",
+    "region": "africa"
+  },
+  {
+    "name": "Seychelles",
+    "slug": "seychelles",
     "type": "isolated_landmass",
-    "region": "western_europe",
-    "country": "France",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "africa"
   },
   {
-    "name": "Gibraltar",
-    "slug": "gibraltar-offshore-bastion",
+    "name": "Zanzibar Island",
+    "slug": "zanzibar",
     "type": "isolated_landmass",
-    "region": "western_europe",
-    "country": "Gibraltar",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "africa"
   },
   {
-    "name": "Mont Saint-Michel",
-    "slug": "mont-saint-michel-ridge-keep",
-    "type": "elevated_stronghold",
-    "region": "western_europe",
-    "country": "France",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Gibraltar",
-    "slug": "gibraltar-summit-bastion",
-    "type": "elevated_stronghold",
-    "region": "western_europe",
-    "country": "Gibraltar",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Mont Saint-Michel",
-    "slug": "mont-saint-michel-deep-shelter",
-    "type": "subterranean",
-    "region": "western_europe",
-    "country": "France",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Gibraltar",
-    "slug": "gibraltar-underground-vault",
-    "type": "subterranean",
-    "region": "western_europe",
-    "country": "Gibraltar",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Mont Saint-Michel",
-    "slug": "mont-saint-michel-academy-compound",
-    "type": "institutional_compound",
-    "region": "western_europe",
-    "country": "France",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Gibraltar",
-    "slug": "gibraltar-research-enclave",
-    "type": "institutional_compound",
-    "region": "western_europe",
-    "country": "Gibraltar",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Mont Saint-Michel",
-    "slug": "mont-saint-michel-foundry-complex",
-    "type": "industrial_site",
-    "region": "western_europe",
-    "country": "France",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Gibraltar",
-    "slug": "gibraltar-power-yard",
-    "type": "industrial_site",
-    "region": "western_europe",
-    "country": "Gibraltar",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Mont Saint-Michel",
-    "slug": "mont-saint-michel-frontier-hamlet",
-    "type": "remote_settlement",
-    "region": "western_europe",
-    "country": "France",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Gibraltar",
-    "slug": "gibraltar-outpost-village",
-    "type": "remote_settlement",
-    "region": "western_europe",
-    "country": "Gibraltar",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Mont Saint-Michel",
-    "slug": "mont-saint-michel-airstrip-hub",
-    "type": "transit_hub",
-    "region": "western_europe",
-    "country": "France",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Gibraltar",
-    "slug": "gibraltar-rail-junction",
-    "type": "transit_hub",
-    "region": "western_europe",
-    "country": "Gibraltar",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Mont Saint-Michel",
-    "slug": "mont-saint-michel-beacon-tower",
+    "name": "Cape Point Lighthouse",
+    "slug": "cape-point",
     "type": "landmark_structure",
-    "region": "western_europe",
-    "country": "France",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "africa"
   },
   {
-    "name": "Gibraltar",
-    "slug": "gibraltar-monument-bastion",
+    "name": "Great Mosque of Djenné",
+    "slug": "djenne",
     "type": "landmark_structure",
-    "region": "western_europe",
-    "country": "Gibraltar",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "africa"
   },
   {
-    "name": "Kraków",
-    "slug": "krakow-fortress",
+    "name": "Atlas Mountain Village",
+    "slug": "atlas-village",
+    "type": "remote_settlement",
+    "region": "africa"
+  },
+  {
+    "name": "Namib Desert Settlement",
+    "slug": "namib-settlement",
+    "type": "remote_settlement",
+    "region": "africa"
+  },
+  {
+    "name": "Libyan Bunker Network",
+    "slug": "libya-bunkers",
+    "type": "subterranean",
+    "region": "africa"
+  },
+  {
+    "name": "Sahara Cave Systems",
+    "slug": "sahara-caves",
+    "type": "subterranean",
+    "region": "africa"
+  },
+  {
+    "name": "Cape Town Airport",
+    "slug": "cape-town-airport",
+    "type": "transit_hub",
+    "region": "africa"
+  },
+  {
+    "name": "Mombasa Port",
+    "slug": "mombasa",
+    "type": "transit_hub",
+    "region": "africa"
+  },
+  {
+    "name": "Mount Huashan",
+    "slug": "huashan",
+    "type": "elevated_stronghold",
+    "region": "east_asia"
+  },
+  {
+    "name": "Tiger Leaping Gorge Cliffs",
+    "slug": "tiger-gorge",
+    "type": "elevated_stronghold",
+    "region": "east_asia"
+  },
+  {
+    "name": "Great Wall Fortress Sections",
+    "slug": "great-wall",
     "type": "fortified_structure",
-    "region": "eastern_europe",
-    "country": "Poland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "east_asia"
   },
   {
-    "name": "Transylvania",
-    "slug": "transylvania-citadel",
+    "name": "Himeji Castle",
+    "slug": "himeji",
     "type": "fortified_structure",
-    "region": "eastern_europe",
-    "country": "Romania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "east_asia"
   },
   {
-    "name": "Kraków",
-    "slug": "krakow-island-redoubt",
-    "type": "isolated_landmass",
-    "region": "eastern_europe",
-    "country": "Poland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Transylvania",
-    "slug": "transylvania-offshore-bastion",
-    "type": "isolated_landmass",
-    "region": "eastern_europe",
-    "country": "Romania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Kraków",
-    "slug": "krakow-ridge-keep",
-    "type": "elevated_stronghold",
-    "region": "eastern_europe",
-    "country": "Poland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Transylvania",
-    "slug": "transylvania-summit-bastion",
-    "type": "elevated_stronghold",
-    "region": "eastern_europe",
-    "country": "Romania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Kraków",
-    "slug": "krakow-deep-shelter",
-    "type": "subterranean",
-    "region": "eastern_europe",
-    "country": "Poland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Transylvania",
-    "slug": "transylvania-underground-vault",
-    "type": "subterranean",
-    "region": "eastern_europe",
-    "country": "Romania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Kraków",
-    "slug": "krakow-academy-compound",
-    "type": "institutional_compound",
-    "region": "eastern_europe",
-    "country": "Poland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Transylvania",
-    "slug": "transylvania-research-enclave",
-    "type": "institutional_compound",
-    "region": "eastern_europe",
-    "country": "Romania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Kraków",
-    "slug": "krakow-foundry-complex",
+    "name": "Shenzhen Industrial Zone",
+    "slug": "shenzhen",
     "type": "industrial_site",
-    "region": "eastern_europe",
-    "country": "Poland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "east_asia"
   },
   {
-    "name": "Transylvania",
-    "slug": "transylvania-power-yard",
+    "name": "Shipbuilding Yard Korea",
+    "slug": "shipyard-korea",
     "type": "industrial_site",
-    "region": "eastern_europe",
-    "country": "Romania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "east_asia"
   },
   {
-    "name": "Kraków",
-    "slug": "krakow-frontier-hamlet",
-    "type": "remote_settlement",
-    "region": "eastern_europe",
-    "country": "Poland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Transylvania",
-    "slug": "transylvania-outpost-village",
-    "type": "remote_settlement",
-    "region": "eastern_europe",
-    "country": "Romania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Kraków",
-    "slug": "krakow-airstrip-hub",
-    "type": "transit_hub",
-    "region": "eastern_europe",
-    "country": "Poland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Transylvania",
-    "slug": "transylvania-rail-junction",
-    "type": "transit_hub",
-    "region": "eastern_europe",
-    "country": "Romania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Kraków",
-    "slug": "krakow-beacon-tower",
-    "type": "landmark_structure",
-    "region": "eastern_europe",
-    "country": "Poland",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Transylvania",
-    "slug": "transylvania-monument-bastion",
-    "type": "landmark_structure",
-    "region": "eastern_europe",
-    "country": "Romania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Colorado Springs",
-    "slug": "colorado-springs-fortress",
-    "type": "fortified_structure",
-    "region": "north_america",
-    "country": "United States",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Vancouver Island",
-    "slug": "vancouver-island-citadel",
-    "type": "fortified_structure",
-    "region": "north_america",
-    "country": "Canada",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Colorado Springs",
-    "slug": "colorado-springs-island-redoubt",
-    "type": "isolated_landmass",
-    "region": "north_america",
-    "country": "United States",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Vancouver Island",
-    "slug": "vancouver-island-offshore-bastion",
-    "type": "isolated_landmass",
-    "region": "north_america",
-    "country": "Canada",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Colorado Springs",
-    "slug": "colorado-springs-ridge-keep",
-    "type": "elevated_stronghold",
-    "region": "north_america",
-    "country": "United States",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Vancouver Island",
-    "slug": "vancouver-island-summit-bastion",
-    "type": "elevated_stronghold",
-    "region": "north_america",
-    "country": "Canada",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Colorado Springs",
-    "slug": "colorado-springs-deep-shelter",
-    "type": "subterranean",
-    "region": "north_america",
-    "country": "United States",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Vancouver Island",
-    "slug": "vancouver-island-underground-vault",
-    "type": "subterranean",
-    "region": "north_america",
-    "country": "Canada",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Colorado Springs",
-    "slug": "colorado-springs-academy-compound",
+    "name": "Chinese Research Facility",
+    "slug": "china-research",
     "type": "institutional_compound",
-    "region": "north_america",
-    "country": "United States",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "east_asia"
   },
   {
-    "name": "Vancouver Island",
-    "slug": "vancouver-island-research-enclave",
+    "name": "North Korean Military Complex",
+    "slug": "nk-complex",
     "type": "institutional_compound",
-    "region": "north_america",
-    "country": "Canada",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Colorado Springs",
-    "slug": "colorado-springs-foundry-complex",
-    "type": "industrial_site",
-    "region": "north_america",
-    "country": "United States",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Vancouver Island",
-    "slug": "vancouver-island-power-yard",
-    "type": "industrial_site",
-    "region": "north_america",
-    "country": "Canada",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Colorado Springs",
-    "slug": "colorado-springs-frontier-hamlet",
-    "type": "remote_settlement",
-    "region": "north_america",
-    "country": "United States",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Vancouver Island",
-    "slug": "vancouver-island-outpost-village",
-    "type": "remote_settlement",
-    "region": "north_america",
-    "country": "Canada",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Colorado Springs",
-    "slug": "colorado-springs-airstrip-hub",
-    "type": "transit_hub",
-    "region": "north_america",
-    "country": "United States",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Vancouver Island",
-    "slug": "vancouver-island-rail-junction",
-    "type": "transit_hub",
-    "region": "north_america",
-    "country": "Canada",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Colorado Springs",
-    "slug": "colorado-springs-beacon-tower",
-    "type": "landmark_structure",
-    "region": "north_america",
-    "country": "United States",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Vancouver Island",
-    "slug": "vancouver-island-monument-bastion",
-    "type": "landmark_structure",
-    "region": "north_america",
-    "country": "Canada",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Patagonia",
-    "slug": "patagonia-fortress",
-    "type": "fortified_structure",
-    "region": "south_america",
-    "country": "Argentina/Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atacama Desert",
-    "slug": "atacama-citadel",
-    "type": "fortified_structure",
-    "region": "south_america",
-    "country": "Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Patagonia",
-    "slug": "patagonia-island-redoubt",
-    "type": "isolated_landmass",
-    "region": "south_america",
-    "country": "Argentina/Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atacama Desert",
-    "slug": "atacama-offshore-bastion",
-    "type": "isolated_landmass",
-    "region": "south_america",
-    "country": "Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Patagonia",
-    "slug": "patagonia-ridge-keep",
-    "type": "elevated_stronghold",
-    "region": "south_america",
-    "country": "Argentina/Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atacama Desert",
-    "slug": "atacama-summit-bastion",
-    "type": "elevated_stronghold",
-    "region": "south_america",
-    "country": "Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Patagonia",
-    "slug": "patagonia-deep-shelter",
-    "type": "subterranean",
-    "region": "south_america",
-    "country": "Argentina/Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atacama Desert",
-    "slug": "atacama-underground-vault",
-    "type": "subterranean",
-    "region": "south_america",
-    "country": "Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Patagonia",
-    "slug": "patagonia-academy-compound",
-    "type": "institutional_compound",
-    "region": "south_america",
-    "country": "Argentina/Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atacama Desert",
-    "slug": "atacama-research-enclave",
-    "type": "institutional_compound",
-    "region": "south_america",
-    "country": "Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Patagonia",
-    "slug": "patagonia-foundry-complex",
-    "type": "industrial_site",
-    "region": "south_america",
-    "country": "Argentina/Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atacama Desert",
-    "slug": "atacama-power-yard",
-    "type": "industrial_site",
-    "region": "south_america",
-    "country": "Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Patagonia",
-    "slug": "patagonia-frontier-hamlet",
-    "type": "remote_settlement",
-    "region": "south_america",
-    "country": "Argentina/Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atacama Desert",
-    "slug": "atacama-outpost-village",
-    "type": "remote_settlement",
-    "region": "south_america",
-    "country": "Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Patagonia",
-    "slug": "patagonia-airstrip-hub",
-    "type": "transit_hub",
-    "region": "south_america",
-    "country": "Argentina/Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atacama Desert",
-    "slug": "atacama-rail-junction",
-    "type": "transit_hub",
-    "region": "south_america",
-    "country": "Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Patagonia",
-    "slug": "patagonia-beacon-tower",
-    "type": "landmark_structure",
-    "region": "south_america",
-    "country": "Argentina/Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atacama Desert",
-    "slug": "atacama-monument-bastion",
-    "type": "landmark_structure",
-    "region": "south_america",
-    "country": "Chile",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atlas Mountains",
-    "slug": "atlas-mountains-fortress",
-    "type": "fortified_structure",
-    "region": "africa",
-    "country": "Morocco",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Zanzibar",
-    "slug": "zanzibar-citadel",
-    "type": "fortified_structure",
-    "region": "africa",
-    "country": "Tanzania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atlas Mountains",
-    "slug": "atlas-mountains-island-redoubt",
-    "type": "isolated_landmass",
-    "region": "africa",
-    "country": "Morocco",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Zanzibar",
-    "slug": "zanzibar-offshore-bastion",
-    "type": "isolated_landmass",
-    "region": "africa",
-    "country": "Tanzania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atlas Mountains",
-    "slug": "atlas-mountains-ridge-keep",
-    "type": "elevated_stronghold",
-    "region": "africa",
-    "country": "Morocco",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Zanzibar",
-    "slug": "zanzibar-summit-bastion",
-    "type": "elevated_stronghold",
-    "region": "africa",
-    "country": "Tanzania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atlas Mountains",
-    "slug": "atlas-mountains-deep-shelter",
-    "type": "subterranean",
-    "region": "africa",
-    "country": "Morocco",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Zanzibar",
-    "slug": "zanzibar-underground-vault",
-    "type": "subterranean",
-    "region": "africa",
-    "country": "Tanzania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atlas Mountains",
-    "slug": "atlas-mountains-academy-compound",
-    "type": "institutional_compound",
-    "region": "africa",
-    "country": "Morocco",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Zanzibar",
-    "slug": "zanzibar-research-enclave",
-    "type": "institutional_compound",
-    "region": "africa",
-    "country": "Tanzania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atlas Mountains",
-    "slug": "atlas-mountains-foundry-complex",
-    "type": "industrial_site",
-    "region": "africa",
-    "country": "Morocco",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Zanzibar",
-    "slug": "zanzibar-power-yard",
-    "type": "industrial_site",
-    "region": "africa",
-    "country": "Tanzania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atlas Mountains",
-    "slug": "atlas-mountains-frontier-hamlet",
-    "type": "remote_settlement",
-    "region": "africa",
-    "country": "Morocco",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Zanzibar",
-    "slug": "zanzibar-outpost-village",
-    "type": "remote_settlement",
-    "region": "africa",
-    "country": "Tanzania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atlas Mountains",
-    "slug": "atlas-mountains-airstrip-hub",
-    "type": "transit_hub",
-    "region": "africa",
-    "country": "Morocco",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Zanzibar",
-    "slug": "zanzibar-rail-junction",
-    "type": "transit_hub",
-    "region": "africa",
-    "country": "Tanzania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Atlas Mountains",
-    "slug": "atlas-mountains-beacon-tower",
-    "type": "landmark_structure",
-    "region": "africa",
-    "country": "Morocco",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Zanzibar",
-    "slug": "zanzibar-monument-bastion",
-    "type": "landmark_structure",
-    "region": "africa",
-    "country": "Tanzania",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Petra",
-    "slug": "petra-fortress",
-    "type": "fortified_structure",
-    "region": "middle_east",
-    "country": "Jordan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Socotra",
-    "slug": "socotra-citadel",
-    "type": "fortified_structure",
-    "region": "middle_east",
-    "country": "Yemen",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Petra",
-    "slug": "petra-island-redoubt",
-    "type": "isolated_landmass",
-    "region": "middle_east",
-    "country": "Jordan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Socotra",
-    "slug": "socotra-offshore-bastion",
-    "type": "isolated_landmass",
-    "region": "middle_east",
-    "country": "Yemen",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Petra",
-    "slug": "petra-ridge-keep",
-    "type": "elevated_stronghold",
-    "region": "middle_east",
-    "country": "Jordan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Socotra",
-    "slug": "socotra-summit-bastion",
-    "type": "elevated_stronghold",
-    "region": "middle_east",
-    "country": "Yemen",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Petra",
-    "slug": "petra-deep-shelter",
-    "type": "subterranean",
-    "region": "middle_east",
-    "country": "Jordan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Socotra",
-    "slug": "socotra-underground-vault",
-    "type": "subterranean",
-    "region": "middle_east",
-    "country": "Yemen",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Petra",
-    "slug": "petra-academy-compound",
-    "type": "institutional_compound",
-    "region": "middle_east",
-    "country": "Jordan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Socotra",
-    "slug": "socotra-research-enclave",
-    "type": "institutional_compound",
-    "region": "middle_east",
-    "country": "Yemen",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Petra",
-    "slug": "petra-foundry-complex",
-    "type": "industrial_site",
-    "region": "middle_east",
-    "country": "Jordan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Socotra",
-    "slug": "socotra-power-yard",
-    "type": "industrial_site",
-    "region": "middle_east",
-    "country": "Yemen",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Petra",
-    "slug": "petra-frontier-hamlet",
-    "type": "remote_settlement",
-    "region": "middle_east",
-    "country": "Jordan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Socotra",
-    "slug": "socotra-outpost-village",
-    "type": "remote_settlement",
-    "region": "middle_east",
-    "country": "Yemen",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Petra",
-    "slug": "petra-airstrip-hub",
-    "type": "transit_hub",
-    "region": "middle_east",
-    "country": "Jordan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Socotra",
-    "slug": "socotra-rail-junction",
-    "type": "transit_hub",
-    "region": "middle_east",
-    "country": "Yemen",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Petra",
-    "slug": "petra-beacon-tower",
-    "type": "landmark_structure",
-    "region": "middle_east",
-    "country": "Jordan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Socotra",
-    "slug": "socotra-monument-bastion",
-    "type": "landmark_structure",
-    "region": "middle_east",
-    "country": "Yemen",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Ladakh",
-    "slug": "ladakh-fortress",
-    "type": "fortified_structure",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Andaman Islands",
-    "slug": "andaman-citadel",
-    "type": "fortified_structure",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Ladakh",
-    "slug": "ladakh-island-redoubt",
-    "type": "isolated_landmass",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Andaman Islands",
-    "slug": "andaman-offshore-bastion",
-    "type": "isolated_landmass",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Ladakh",
-    "slug": "ladakh-ridge-keep",
-    "type": "elevated_stronghold",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Andaman Islands",
-    "slug": "andaman-summit-bastion",
-    "type": "elevated_stronghold",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Ladakh",
-    "slug": "ladakh-deep-shelter",
-    "type": "subterranean",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Andaman Islands",
-    "slug": "andaman-underground-vault",
-    "type": "subterranean",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Ladakh",
-    "slug": "ladakh-academy-compound",
-    "type": "institutional_compound",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Andaman Islands",
-    "slug": "andaman-research-enclave",
-    "type": "institutional_compound",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Ladakh",
-    "slug": "ladakh-foundry-complex",
-    "type": "industrial_site",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Andaman Islands",
-    "slug": "andaman-power-yard",
-    "type": "industrial_site",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Ladakh",
-    "slug": "ladakh-frontier-hamlet",
-    "type": "remote_settlement",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Andaman Islands",
-    "slug": "andaman-outpost-village",
-    "type": "remote_settlement",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Ladakh",
-    "slug": "ladakh-airstrip-hub",
-    "type": "transit_hub",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Andaman Islands",
-    "slug": "andaman-rail-junction",
-    "type": "transit_hub",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Ladakh",
-    "slug": "ladakh-beacon-tower",
-    "type": "landmark_structure",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Andaman Islands",
-    "slug": "andaman-monument-bastion",
-    "type": "landmark_structure",
-    "region": "south_asia",
-    "country": "India",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Hokkaido",
-    "slug": "hokkaido-fortress",
-    "type": "fortified_structure",
-    "region": "east_asia",
-    "country": "Japan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "east_asia"
   },
   {
     "name": "Jeju Island",
-    "slug": "jeju-citadel",
+    "slug": "jeju",
+    "type": "isolated_landmass",
+    "region": "east_asia"
+  },
+  {
+    "name": "Okinawa",
+    "slug": "okinawa",
+    "type": "isolated_landmass",
+    "region": "east_asia"
+  },
+  {
+    "name": "Great Buddha Leshan",
+    "slug": "leshan",
+    "type": "landmark_structure",
+    "region": "east_asia"
+  },
+  {
+    "name": "Tokyo Tower",
+    "slug": "tokyo-tower",
+    "type": "landmark_structure",
+    "region": "east_asia"
+  },
+  {
+    "name": "Mountain Hamlet China",
+    "slug": "china-hamlet",
+    "type": "remote_settlement",
+    "region": "east_asia"
+  },
+  {
+    "name": "Rural Japanese Village",
+    "slug": "japan-village",
+    "type": "remote_settlement",
+    "region": "east_asia"
+  },
+  {
+    "name": "Japanese War Bunkers",
+    "slug": "japan-bunkers",
+    "type": "subterranean",
+    "region": "east_asia"
+  },
+  {
+    "name": "Underground Cities China",
+    "slug": "china-underground",
+    "type": "subterranean",
+    "region": "east_asia"
+  },
+  {
+    "name": "Shanghai Port",
+    "slug": "shanghai-port",
+    "type": "transit_hub",
+    "region": "east_asia"
+  },
+  {
+    "name": "Tokyo Airport",
+    "slug": "tokyo-airport",
+    "type": "transit_hub",
+    "region": "east_asia"
+  },
+  {
+    "name": "Predjama Castle",
+    "slug": "predjama",
+    "type": "elevated_stronghold",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Sigiriya-style cliffs (analogue)",
+    "slug": "sigiriya-analogue",
+    "type": "elevated_stronghold",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Malbork Castle",
+    "slug": "malbork",
     "type": "fortified_structure",
-    "region": "east_asia",
-    "country": "South Korea",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "eastern_europe"
   },
   {
-    "name": "Hokkaido",
-    "slug": "hokkaido-island-redoubt",
-    "type": "isolated_landmass",
-    "region": "east_asia",
-    "country": "Japan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Jeju Island",
-    "slug": "jeju-offshore-bastion",
-    "type": "isolated_landmass",
-    "region": "east_asia",
-    "country": "South Korea",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Hokkaido",
-    "slug": "hokkaido-ridge-keep",
-    "type": "elevated_stronghold",
-    "region": "east_asia",
-    "country": "Japan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Jeju Island",
-    "slug": "jeju-summit-bastion",
-    "type": "elevated_stronghold",
-    "region": "east_asia",
-    "country": "South Korea",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Hokkaido",
-    "slug": "hokkaido-deep-shelter",
-    "type": "subterranean",
-    "region": "east_asia",
-    "country": "Japan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Jeju Island",
-    "slug": "jeju-underground-vault",
-    "type": "subterranean",
-    "region": "east_asia",
-    "country": "South Korea",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Hokkaido",
-    "slug": "hokkaido-academy-compound",
-    "type": "institutional_compound",
-    "region": "east_asia",
-    "country": "Japan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Jeju Island",
-    "slug": "jeju-research-enclave",
-    "type": "institutional_compound",
-    "region": "east_asia",
-    "country": "South Korea",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Hokkaido",
-    "slug": "hokkaido-foundry-complex",
-    "type": "industrial_site",
-    "region": "east_asia",
-    "country": "Japan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Jeju Island",
-    "slug": "jeju-power-yard",
-    "type": "industrial_site",
-    "region": "east_asia",
-    "country": "South Korea",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Hokkaido",
-    "slug": "hokkaido-frontier-hamlet",
-    "type": "remote_settlement",
-    "region": "east_asia",
-    "country": "Japan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Jeju Island",
-    "slug": "jeju-outpost-village",
-    "type": "remote_settlement",
-    "region": "east_asia",
-    "country": "South Korea",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Hokkaido",
-    "slug": "hokkaido-airstrip-hub",
-    "type": "transit_hub",
-    "region": "east_asia",
-    "country": "Japan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Jeju Island",
-    "slug": "jeju-rail-junction",
-    "type": "transit_hub",
-    "region": "east_asia",
-    "country": "South Korea",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Hokkaido",
-    "slug": "hokkaido-beacon-tower",
-    "type": "landmark_structure",
-    "region": "east_asia",
-    "country": "Japan",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Jeju Island",
-    "slug": "jeju-monument-bastion",
-    "type": "landmark_structure",
-    "region": "east_asia",
-    "country": "South Korea",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Palawan",
-    "slug": "palawan-fortress",
+    "name": "Suomenlinna Fortress",
+    "slug": "suomenlinna",
     "type": "fortified_structure",
-    "region": "southeast_asia",
-    "country": "Philippines",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "eastern_europe"
   },
   {
-    "name": "Borneo",
-    "slug": "borneo-citadel",
+    "name": "Baltic Shipyards",
+    "slug": "shipyard",
+    "type": "industrial_site",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Norilsk Industrial Complex",
+    "slug": "norilsk",
+    "type": "industrial_site",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Chernobyl Exclusion Zone Facility",
+    "slug": "chernobyl",
+    "type": "institutional_compound",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Russian Arctic Base",
+    "slug": "arctic-base",
+    "type": "institutional_compound",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Faroe Islands",
+    "slug": "faroe",
+    "type": "isolated_landmass",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Gotland",
+    "slug": "gotland",
+    "type": "isolated_landmass",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Kizhi Pogost",
+    "slug": "kizhi",
+    "type": "landmark_structure",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Ostankino Tower",
+    "slug": "ostankino",
+    "type": "landmark_structure",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Longyearbyen",
+    "slug": "longyearbyen",
+    "type": "remote_settlement",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Visby",
+    "slug": "visby",
+    "type": "remote_settlement",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Cold War Bunkers Baltic",
+    "slug": "baltic-bunker",
+    "type": "subterranean",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Derinkuyu Underground City",
+    "slug": "derinkuyu",
+    "type": "subterranean",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Helsinki Airport",
+    "slug": "helsinki-airport",
+    "type": "transit_hub",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Murmansk Port",
+    "slug": "murmansk",
+    "type": "transit_hub",
+    "region": "eastern_europe"
+  },
+  {
+    "name": "Cappadocia Highlands",
+    "slug": "cappadocia",
+    "type": "elevated_stronghold",
+    "region": "middle_east"
+  },
+  {
+    "name": "Petra",
+    "slug": "petra",
+    "type": "elevated_stronghold",
+    "region": "middle_east"
+  },
+  {
+    "name": "Krak des Chevaliers",
+    "slug": "krak",
     "type": "fortified_structure",
-    "region": "southeast_asia",
-    "country": "Malaysia/Indonesia/Brunei",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "middle_east"
   },
   {
-    "name": "Palawan",
-    "slug": "palawan-island-redoubt",
-    "type": "isolated_landmass",
-    "region": "southeast_asia",
-    "country": "Philippines",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Borneo",
-    "slug": "borneo-offshore-bastion",
-    "type": "isolated_landmass",
-    "region": "southeast_asia",
-    "country": "Malaysia/Indonesia/Brunei",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Palawan",
-    "slug": "palawan-ridge-keep",
-    "type": "elevated_stronghold",
-    "region": "southeast_asia",
-    "country": "Philippines",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Borneo",
-    "slug": "borneo-summit-bastion",
-    "type": "elevated_stronghold",
-    "region": "southeast_asia",
-    "country": "Malaysia/Indonesia/Brunei",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Palawan",
-    "slug": "palawan-deep-shelter",
-    "type": "subterranean",
-    "region": "southeast_asia",
-    "country": "Philippines",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Borneo",
-    "slug": "borneo-underground-vault",
-    "type": "subterranean",
-    "region": "southeast_asia",
-    "country": "Malaysia/Indonesia/Brunei",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Palawan",
-    "slug": "palawan-academy-compound",
-    "type": "institutional_compound",
-    "region": "southeast_asia",
-    "country": "Philippines",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Borneo",
-    "slug": "borneo-research-enclave",
-    "type": "institutional_compound",
-    "region": "southeast_asia",
-    "country": "Malaysia/Indonesia/Brunei",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Palawan",
-    "slug": "palawan-foundry-complex",
-    "type": "industrial_site",
-    "region": "southeast_asia",
-    "country": "Philippines",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Borneo",
-    "slug": "borneo-power-yard",
-    "type": "industrial_site",
-    "region": "southeast_asia",
-    "country": "Malaysia/Indonesia/Brunei",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Palawan",
-    "slug": "palawan-frontier-hamlet",
-    "type": "remote_settlement",
-    "region": "southeast_asia",
-    "country": "Philippines",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Borneo",
-    "slug": "borneo-outpost-village",
-    "type": "remote_settlement",
-    "region": "southeast_asia",
-    "country": "Malaysia/Indonesia/Brunei",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Palawan",
-    "slug": "palawan-airstrip-hub",
-    "type": "transit_hub",
-    "region": "southeast_asia",
-    "country": "Philippines",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Borneo",
-    "slug": "borneo-rail-junction",
-    "type": "transit_hub",
-    "region": "southeast_asia",
-    "country": "Malaysia/Indonesia/Brunei",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Palawan",
-    "slug": "palawan-beacon-tower",
-    "type": "landmark_structure",
-    "region": "southeast_asia",
-    "country": "Philippines",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Borneo",
-    "slug": "borneo-monument-bastion",
-    "type": "landmark_structure",
-    "region": "southeast_asia",
-    "country": "Malaysia/Indonesia/Brunei",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Tasmania",
-    "slug": "tasmania-fortress",
+    "name": "Masada",
+    "slug": "masada",
     "type": "fortified_structure",
-    "region": "oceania",
-    "country": "Australia",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "middle_east"
   },
   {
-    "name": "Chatham Islands",
-    "slug": "chatham-islands-citadel",
+    "name": "Refinery Complex Gulf",
+    "slug": "gulf-refinery",
+    "type": "industrial_site",
+    "region": "middle_east"
+  },
+  {
+    "name": "Water Desalination Plant",
+    "slug": "desalination",
+    "type": "industrial_site",
+    "region": "middle_east"
+  },
+  {
+    "name": "Desert Military Base",
+    "slug": "desert-base",
+    "type": "institutional_compound",
+    "region": "middle_east"
+  },
+  {
+    "name": "Oil Field Compound",
+    "slug": "oil-compound",
+    "type": "institutional_compound",
+    "region": "middle_east"
+  },
+  {
+    "name": "Qeshm Island",
+    "slug": "qeshm",
+    "type": "isolated_landmass",
+    "region": "middle_east"
+  },
+  {
+    "name": "Socotra Island",
+    "slug": "socotra",
+    "type": "isolated_landmass",
+    "region": "middle_east"
+  },
+  {
+    "name": "Burj Khalifa",
+    "slug": "burj",
+    "type": "landmark_structure",
+    "region": "middle_east"
+  },
+  {
+    "name": "Lighthouse Hormuz",
+    "slug": "hormuz-light",
+    "type": "landmark_structure",
+    "region": "middle_east"
+  },
+  {
+    "name": "Bedouin Settlement",
+    "slug": "bedouin",
+    "type": "remote_settlement",
+    "region": "middle_east"
+  },
+  {
+    "name": "Oasis Town",
+    "slug": "oasis-town",
+    "type": "remote_settlement",
+    "region": "middle_east"
+  },
+  {
+    "name": "Derinkuyu",
+    "slug": "derinkuyu-me",
+    "type": "subterranean",
+    "region": "middle_east"
+  },
+  {
+    "name": "Gaza Tunnel Network",
+    "slug": "gaza-tunnels",
+    "type": "subterranean",
+    "region": "middle_east"
+  },
+  {
+    "name": "Dubai Airport",
+    "slug": "dubai-airport",
+    "type": "transit_hub",
+    "region": "middle_east"
+  },
+  {
+    "name": "Jebel Ali Port",
+    "slug": "jebel-ali",
+    "type": "transit_hub",
+    "region": "middle_east"
+  },
+  {
+    "name": "Mesa Verde",
+    "slug": "mesa-verde",
+    "type": "elevated_stronghold",
+    "region": "north_america"
+  },
+  {
+    "name": "Table Rock Plateau",
+    "slug": "table-rock",
+    "type": "elevated_stronghold",
+    "region": "north_america"
+  },
+  {
+    "name": "Alcatraz Island",
+    "slug": "alcatraz",
     "type": "fortified_structure",
-    "region": "oceania",
-    "country": "New Zealand",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "north_america"
   },
   {
-    "name": "Tasmania",
-    "slug": "tasmania-island-redoubt",
-    "type": "isolated_landmass",
-    "region": "oceania",
-    "country": "Australia",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Chatham Islands",
-    "slug": "chatham-islands-offshore-bastion",
-    "type": "isolated_landmass",
-    "region": "oceania",
-    "country": "New Zealand",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Tasmania",
-    "slug": "tasmania-ridge-keep",
-    "type": "elevated_stronghold",
-    "region": "oceania",
-    "country": "Australia",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Chatham Islands",
-    "slug": "chatham-islands-summit-bastion",
-    "type": "elevated_stronghold",
-    "region": "oceania",
-    "country": "New Zealand",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Tasmania",
-    "slug": "tasmania-deep-shelter",
-    "type": "subterranean",
-    "region": "oceania",
-    "country": "Australia",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Chatham Islands",
-    "slug": "chatham-islands-underground-vault",
-    "type": "subterranean",
-    "region": "oceania",
-    "country": "New Zealand",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Tasmania",
-    "slug": "tasmania-academy-compound",
-    "type": "institutional_compound",
-    "region": "oceania",
-    "country": "Australia",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Chatham Islands",
-    "slug": "chatham-islands-research-enclave",
-    "type": "institutional_compound",
-    "region": "oceania",
-    "country": "New Zealand",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Tasmania",
-    "slug": "tasmania-foundry-complex",
-    "type": "industrial_site",
-    "region": "oceania",
-    "country": "Australia",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Chatham Islands",
-    "slug": "chatham-islands-power-yard",
-    "type": "industrial_site",
-    "region": "oceania",
-    "country": "New Zealand",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Tasmania",
-    "slug": "tasmania-frontier-hamlet",
-    "type": "remote_settlement",
-    "region": "oceania",
-    "country": "Australia",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Chatham Islands",
-    "slug": "chatham-islands-outpost-village",
-    "type": "remote_settlement",
-    "region": "oceania",
-    "country": "New Zealand",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Tasmania",
-    "slug": "tasmania-airstrip-hub",
-    "type": "transit_hub",
-    "region": "oceania",
-    "country": "Australia",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Chatham Islands",
-    "slug": "chatham-islands-rail-junction",
-    "type": "transit_hub",
-    "region": "oceania",
-    "country": "New Zealand",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Tasmania",
-    "slug": "tasmania-beacon-tower",
-    "type": "landmark_structure",
-    "region": "oceania",
-    "country": "Australia",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Chatham Islands",
-    "slug": "chatham-islands-monument-bastion",
-    "type": "landmark_structure",
-    "region": "oceania",
-    "country": "New Zealand",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Svalbard",
-    "slug": "svalbard-fortress",
+    "name": "Fort Jefferson",
+    "slug": "fort-jefferson",
     "type": "fortified_structure",
-    "region": "polar_extreme",
-    "country": "Norway",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "north_america"
   },
   {
-    "name": "McMurdo Station",
-    "slug": "mcmurdo-citadel",
+    "name": "Grain Silos Midwest",
+    "slug": "grain-silos",
+    "type": "industrial_site",
+    "region": "north_america"
+  },
+  {
+    "name": "Texas Oil Refinery",
+    "slug": "oil-refinery",
+    "type": "industrial_site",
+    "region": "north_america"
+  },
+  {
+    "name": "Area 51",
+    "slug": "area-51",
+    "type": "institutional_compound",
+    "region": "north_america"
+  },
+  {
+    "name": "Guantanamo Bay",
+    "slug": "guantanamo",
+    "type": "institutional_compound",
+    "region": "north_america"
+  },
+  {
+    "name": "Kodiak Island",
+    "slug": "kodiak",
+    "type": "isolated_landmass",
+    "region": "north_america"
+  },
+  {
+    "name": "Vancouver Island",
+    "slug": "vancouver-island",
+    "type": "isolated_landmass",
+    "region": "north_america"
+  },
+  {
+    "name": "CN Tower",
+    "slug": "cn-tower",
+    "type": "landmark_structure",
+    "region": "north_america"
+  },
+  {
+    "name": "Cape Hatteras Lighthouse",
+    "slug": "cape-hatteras",
+    "type": "landmark_structure",
+    "region": "north_america"
+  },
+  {
+    "name": "Telluride",
+    "slug": "telluride",
+    "type": "remote_settlement",
+    "region": "north_america"
+  },
+  {
+    "name": "Utqiagvik",
+    "slug": "utqiagvik",
+    "type": "remote_settlement",
+    "region": "north_america"
+  },
+  {
+    "name": "Cheyenne Mountain Complex",
+    "slug": "cheyenne",
+    "type": "subterranean",
+    "region": "north_america"
+  },
+  {
+    "name": "Missile Silo",
+    "slug": "missile-silo",
+    "type": "subterranean",
+    "region": "north_america"
+  },
+  {
+    "name": "Chicago Rail Yard",
+    "slug": "rail-yard",
+    "type": "transit_hub",
+    "region": "north_america"
+  },
+  {
+    "name": "LAX Airport",
+    "slug": "lax",
+    "type": "transit_hub",
+    "region": "north_america"
+  },
+  {
+    "name": "Blue Mountains Cliffs",
+    "slug": "blue-mountains",
+    "type": "elevated_stronghold",
+    "region": "oceania"
+  },
+  {
+    "name": "Uluru Surroundings",
+    "slug": "uluru",
+    "type": "elevated_stronghold",
+    "region": "oceania"
+  },
+  {
+    "name": "Fort Denison",
+    "slug": "fort-denison",
     "type": "fortified_structure",
-    "region": "polar_extreme",
-    "country": "Antarctica",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "oceania"
   },
   {
-    "name": "Svalbard",
-    "slug": "svalbard-island-redoubt",
-    "type": "isolated_landmass",
-    "region": "polar_extreme",
-    "country": "Norway",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "name": "Maori Pa Fortifications",
+    "slug": "maori-pa",
+    "type": "fortified_structure",
+    "region": "oceania"
   },
   {
-    "name": "McMurdo Station",
-    "slug": "mcmurdo-offshore-bastion",
-    "type": "isolated_landmass",
-    "region": "polar_extreme",
-    "country": "Antarctica",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Svalbard",
-    "slug": "svalbard-ridge-keep",
-    "type": "elevated_stronghold",
-    "region": "polar_extreme",
-    "country": "Norway",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "McMurdo Station",
-    "slug": "mcmurdo-summit-bastion",
-    "type": "elevated_stronghold",
-    "region": "polar_extreme",
-    "country": "Antarctica",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Svalbard",
-    "slug": "svalbard-deep-shelter",
-    "type": "subterranean",
-    "region": "polar_extreme",
-    "country": "Norway",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "McMurdo Station",
-    "slug": "mcmurdo-underground-vault",
-    "type": "subterranean",
-    "region": "polar_extreme",
-    "country": "Antarctica",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Svalbard",
-    "slug": "svalbard-academy-compound",
-    "type": "institutional_compound",
-    "region": "polar_extreme",
-    "country": "Norway",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "McMurdo Station",
-    "slug": "mcmurdo-research-enclave",
-    "type": "institutional_compound",
-    "region": "polar_extreme",
-    "country": "Antarctica",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
-  },
-  {
-    "name": "Svalbard",
-    "slug": "svalbard-foundry-complex",
+    "name": "Mining Operation Site",
+    "slug": "mining-site",
     "type": "industrial_site",
-    "region": "polar_extreme",
-    "country": "Norway",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "oceania"
   },
   {
-    "name": "McMurdo Station",
-    "slug": "mcmurdo-power-yard",
+    "name": "Sheep Station Complex",
+    "slug": "sheep-station",
     "type": "industrial_site",
-    "region": "polar_extreme",
-    "country": "Antarctica",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "oceania"
   },
   {
-    "name": "Svalbard",
-    "slug": "svalbard-frontier-hamlet",
-    "type": "remote_settlement",
-    "region": "polar_extreme",
-    "country": "Norway",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "name": "Remote Defence Base",
+    "slug": "defence-base",
+    "type": "institutional_compound",
+    "region": "oceania"
   },
   {
-    "name": "McMurdo Station",
-    "slug": "mcmurdo-outpost-village",
-    "type": "remote_settlement",
-    "region": "polar_extreme",
-    "country": "Antarctica",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "name": "Research Station Outback",
+    "slug": "outback-research",
+    "type": "institutional_compound",
+    "region": "oceania"
   },
   {
-    "name": "Svalbard",
-    "slug": "svalbard-airstrip-hub",
-    "type": "transit_hub",
-    "region": "polar_extreme",
-    "country": "Norway",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "name": "Fiji Islands",
+    "slug": "fiji",
+    "type": "isolated_landmass",
+    "region": "oceania"
   },
   {
-    "name": "McMurdo Station",
-    "slug": "mcmurdo-rail-junction",
-    "type": "transit_hub",
-    "region": "polar_extreme",
-    "country": "Antarctica",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "name": "Tasmania",
+    "slug": "tasmania",
+    "type": "isolated_landmass",
+    "region": "oceania"
   },
   {
-    "name": "Svalbard",
-    "slug": "svalbard-beacon-tower",
+    "name": "Cape Byron Lighthouse",
+    "slug": "byron-light",
     "type": "landmark_structure",
-    "region": "polar_extreme",
-    "country": "Norway",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "oceania"
+  },
+  {
+    "name": "Sydney Harbour Bridge",
+    "slug": "harbour-bridge",
+    "type": "landmark_structure",
+    "region": "oceania"
+  },
+  {
+    "name": "Island Village Pacific",
+    "slug": "pacific-village",
+    "type": "remote_settlement",
+    "region": "oceania"
+  },
+  {
+    "name": "Outback Settlement",
+    "slug": "outback-town",
+    "type": "remote_settlement",
+    "region": "oceania"
+  },
+  {
+    "name": "Cold War Bunker Australia",
+    "slug": "aus-bunker",
+    "type": "subterranean",
+    "region": "oceania"
+  },
+  {
+    "name": "Opal Mining Tunnels",
+    "slug": "opal-mines",
+    "type": "subterranean",
+    "region": "oceania"
+  },
+  {
+    "name": "Auckland Port",
+    "slug": "auckland-port",
+    "type": "transit_hub",
+    "region": "oceania"
+  },
+  {
+    "name": "Sydney Airport",
+    "slug": "sydney-airport",
+    "type": "transit_hub",
+    "region": "oceania"
+  },
+  {
+    "name": "Glacier Plateau",
+    "slug": "glacier",
+    "type": "elevated_stronghold",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Ice Shelf Ridge",
+    "slug": "ice-shelf",
+    "type": "elevated_stronghold",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Amundsen-Scott Station",
+    "slug": "amundsen",
+    "type": "fortified_structure",
+    "region": "polar_extreme"
   },
   {
     "name": "McMurdo Station",
-    "slug": "mcmurdo-monument-bastion",
+    "slug": "mcmurdo",
+    "type": "fortified_structure",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Fuel Depot Arctic",
+    "slug": "fuel-depot",
+    "type": "industrial_site",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Icebreaker Dock",
+    "slug": "icebreaker",
+    "type": "industrial_site",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Arctic Military Outpost",
+    "slug": "arctic-outpost",
+    "type": "institutional_compound",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Research Base Antarctica",
+    "slug": "antarctica-base",
+    "type": "institutional_compound",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Antarctic Peninsula",
+    "slug": "antarctic-peninsula",
+    "type": "isolated_landmass",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Greenland",
+    "slug": "greenland",
+    "type": "isolated_landmass",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Antarctic Lighthouse",
+    "slug": "antarctic-light",
     "type": "landmark_structure",
-    "region": "polar_extreme",
-    "country": "Antarctica",
-    "status": "published",
-    "heroCandidate": false,
-    "summary": "",
-    "description": "",
-    "image": "",
-    "scores": {
-      "defensibility": null,
-      "food": null,
-      "water": null,
-      "isolation": null,
-      "escape": null,
-      "sustainability": null,
-      "human_risk": null
-    }
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Polar Observation Tower",
+    "slug": "polar-tower",
+    "type": "landmark_structure",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Antarctic Camp",
+    "slug": "antarctic-camp",
+    "type": "remote_settlement",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Remote Arctic Village",
+    "slug": "arctic-village",
+    "type": "remote_settlement",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Arctic Bunker",
+    "slug": "arctic-bunker",
+    "type": "subterranean",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Ice Tunnel Systems",
+    "slug": "ice-tunnels",
+    "type": "subterranean",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Ice Runway",
+    "slug": "ice-runway",
+    "type": "transit_hub",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Supply Port Arctic",
+    "slug": "arctic-port",
+    "type": "transit_hub",
+    "region": "polar_extreme"
+  },
+  {
+    "name": "Andean Ridge Settlement",
+    "slug": "andean-ridge",
+    "type": "elevated_stronghold",
+    "region": "south_america"
+  },
+  {
+    "name": "Machu Picchu",
+    "slug": "machu-picchu",
+    "type": "elevated_stronghold",
+    "region": "south_america"
+  },
+  {
+    "name": "Fort Copacabana",
+    "slug": "copacabana-fort",
+    "type": "fortified_structure",
+    "region": "south_america"
+  },
+  {
+    "name": "San Felipe Fortress",
+    "slug": "san-felipe",
+    "type": "fortified_structure",
+    "region": "south_america"
+  },
+  {
+    "name": "Hydroelectric Dam Complex",
+    "slug": "hydro-dam",
+    "type": "industrial_site",
+    "region": "south_america"
+  },
+  {
+    "name": "Soy Processing Plant",
+    "slug": "soy-plant",
+    "type": "industrial_site",
+    "region": "south_america"
+  },
+  {
+    "name": "Amazon Research Station",
+    "slug": "amazon-station",
+    "type": "institutional_compound",
+    "region": "south_america"
+  },
+  {
+    "name": "Military Jungle Base",
+    "slug": "jungle-base",
+    "type": "institutional_compound",
+    "region": "south_america"
+  },
+  {
+    "name": "Chiloé Island",
+    "slug": "chiloe",
+    "type": "isolated_landmass",
+    "region": "south_america"
+  },
+  {
+    "name": "Galápagos Islands",
+    "slug": "galapagos",
+    "type": "isolated_landmass",
+    "region": "south_america"
+  },
+  {
+    "name": "Christ the Redeemer",
+    "slug": "christ-redeemer",
+    "type": "landmark_structure",
+    "region": "south_america"
+  },
+  {
+    "name": "Lighthouse Punta Del Este",
+    "slug": "punta-lighthouse",
+    "type": "landmark_structure",
+    "region": "south_america"
+  },
+  {
+    "name": "Andean Hamlet",
+    "slug": "andean-hamlet",
+    "type": "remote_settlement",
+    "region": "south_america"
+  },
+  {
+    "name": "Patagonian Village",
+    "slug": "patagonia-village",
+    "type": "remote_settlement",
+    "region": "south_america"
+  },
+  {
+    "name": "Cave Systems Patagonia",
+    "slug": "patagonia-caves",
+    "type": "subterranean",
+    "region": "south_america"
+  },
+  {
+    "name": "Mining Tunnel Network",
+    "slug": "mine-tunnels",
+    "type": "subterranean",
+    "region": "south_america"
+  },
+  {
+    "name": "Panama Canal Zone",
+    "slug": "panama-canal",
+    "type": "transit_hub",
+    "region": "south_america"
+  },
+  {
+    "name": "São Paulo Airport",
+    "slug": "sao-paulo-airport",
+    "type": "transit_hub",
+    "region": "south_america"
+  },
+  {
+    "name": "Hilltop Fort Rajasthan",
+    "slug": "rajasthan-fort",
+    "type": "elevated_stronghold",
+    "region": "south_asia"
+  },
+  {
+    "name": "Tiger’s Nest Monastery",
+    "slug": "tigers-nest",
+    "type": "elevated_stronghold",
+    "region": "south_asia"
+  },
+  {
+    "name": "Mehrangarh Fort",
+    "slug": "mehrangarh",
+    "type": "fortified_structure",
+    "region": "south_asia"
+  },
+  {
+    "name": "Sigiriya",
+    "slug": "sigiriya",
+    "type": "fortified_structure",
+    "region": "south_asia"
+  },
+  {
+    "name": "Rice Processing Facility",
+    "slug": "rice-facility",
+    "type": "industrial_site",
+    "region": "south_asia"
+  },
+  {
+    "name": "Textile Industrial Complex",
+    "slug": "textile-complex",
+    "type": "industrial_site",
+    "region": "south_asia"
+  },
+  {
+    "name": "Indian Army Base",
+    "slug": "army-base",
+    "type": "institutional_compound",
+    "region": "south_asia"
+  },
+  {
+    "name": "Research Station Himalayas",
+    "slug": "himalaya-station",
+    "type": "institutional_compound",
+    "region": "south_asia"
+  },
+  {
+    "name": "Andaman Islands",
+    "slug": "andaman",
+    "type": "isolated_landmass",
+    "region": "south_asia"
+  },
+  {
+    "name": "Lakshadweep",
+    "slug": "lakshadweep",
+    "type": "isolated_landmass",
+    "region": "south_asia"
+  },
+  {
+    "name": "Lighthouse Mahabalipuram",
+    "slug": "mahabalipuram",
+    "type": "landmark_structure",
+    "region": "south_asia"
+  },
+  {
+    "name": "Qutub Minar",
+    "slug": "qutub",
+    "type": "landmark_structure",
+    "region": "south_asia"
+  },
+  {
+    "name": "Himalayan Village",
+    "slug": "himalayan-village",
+    "type": "remote_settlement",
+    "region": "south_asia"
+  },
+  {
+    "name": "Rural Kerala Settlement",
+    "slug": "kerala-village",
+    "type": "remote_settlement",
+    "region": "south_asia"
+  },
+  {
+    "name": "Ajanta Caves",
+    "slug": "ajanta",
+    "type": "subterranean",
+    "region": "south_asia"
+  },
+  {
+    "name": "Military Bunker Kashmir",
+    "slug": "kashmir-bunker",
+    "type": "subterranean",
+    "region": "south_asia"
+  },
+  {
+    "name": "Delhi Airport",
+    "slug": "delhi-airport",
+    "type": "transit_hub",
+    "region": "south_asia"
+  },
+  {
+    "name": "Mumbai Port",
+    "slug": "mumbai-port",
+    "type": "transit_hub",
+    "region": "south_asia"
+  },
+  {
+    "name": "Ha Long Bay Cliffs",
+    "slug": "halong",
+    "type": "elevated_stronghold",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Rice Terrace Highlands",
+    "slug": "rice-terraces",
+    "type": "elevated_stronghold",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Hue Citadel",
+    "slug": "hue",
+    "type": "fortified_structure",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Intramuros Manila",
+    "slug": "intramuros",
+    "type": "fortified_structure",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Fishing Port Hub",
+    "slug": "fishing-port",
+    "type": "industrial_site",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Palm Oil Plantation Complex",
+    "slug": "palm-oil",
+    "type": "industrial_site",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Military Jungle Base",
+    "slug": "sea-jungle-base",
+    "type": "institutional_compound",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Remote Research Station",
+    "slug": "sea-research",
+    "type": "institutional_compound",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Komodo Island",
+    "slug": "komodo",
+    "type": "isolated_landmass",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Palawan",
+    "slug": "palawan",
+    "type": "isolated_landmass",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Petronas Towers",
+    "slug": "petronas",
+    "type": "landmark_structure",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Phu Quoc Lighthouse",
+    "slug": "phuquoc-light",
+    "type": "landmark_structure",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Island Village Indonesia",
+    "slug": "island-village",
+    "type": "remote_settlement",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Jungle Hamlet",
+    "slug": "jungle-hamlet",
+    "type": "remote_settlement",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Bunker Network Jungle",
+    "slug": "jungle-bunker",
+    "type": "subterranean",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Vietnam Tunnel Systems",
+    "slug": "cu-chi",
+    "type": "subterranean",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Bangkok Airport",
+    "slug": "bangkok-airport",
+    "type": "transit_hub",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Singapore Port",
+    "slug": "singapore-port",
+    "type": "transit_hub",
+    "region": "southeast_asia"
+  },
+  {
+    "name": "Edinburgh Castle",
+    "slug": "edinburgh-castle",
+    "type": "elevated_stronghold",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "The Roaches",
+    "slug": "the-roaches",
+    "type": "elevated_stronghold",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Caerphilly Castle",
+    "slug": "caerphilly-castle",
+    "type": "fortified_structure",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Fort George",
+    "slug": "fort-george",
+    "type": "fortified_structure",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Port Talbot Steelworks",
+    "slug": "port-talbot",
+    "type": "industrial_site",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "UK Distribution Warehouse",
+    "slug": "uk-warehouse",
+    "type": "industrial_site",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "HM Prison Dartmoor",
+    "slug": "dartmoor-prison",
+    "type": "institutional_compound",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Porton Down",
+    "slug": "porton-down",
+    "type": "institutional_compound",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Lindisfarne",
+    "slug": "lindisfarne",
+    "type": "isolated_landmass",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "St Kilda",
+    "slug": "st-kilda",
+    "type": "isolated_landmass",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Fastnet Lighthouse",
+    "slug": "fastnet",
+    "type": "landmark_structure",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Spinnaker Tower",
+    "slug": "spinnaker",
+    "type": "landmark_structure",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Clovelly",
+    "slug": "clovelly",
+    "type": "remote_settlement",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Isle of Eigg Village",
+    "slug": "eigg",
+    "type": "remote_settlement",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Burlington Bunker",
+    "slug": "burlington-bunker",
+    "type": "subterranean",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Cheddar Gorge Caves",
+    "slug": "cheddar-gorge",
+    "type": "subterranean",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Heathrow Airport",
+    "slug": "heathrow",
+    "type": "transit_hub",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Portsmouth Harbour",
+    "slug": "portsmouth-harbour",
+    "type": "transit_hub",
+    "region": "uk_ireland"
+  },
+  {
+    "name": "Neuschwanstein Castle",
+    "slug": "neuschwanstein",
+    "type": "elevated_stronghold",
+    "region": "western_europe"
+  },
+  {
+    "name": "Rocamadour",
+    "slug": "rocamadour",
+    "type": "elevated_stronghold",
+    "region": "western_europe"
+  },
+  {
+    "name": "Carcassonne",
+    "slug": "carcassonne",
+    "type": "fortified_structure",
+    "region": "western_europe"
+  },
+  {
+    "name": "Mont Saint-Michel",
+    "slug": "mont-saint-michel",
+    "type": "fortified_structure",
+    "region": "western_europe"
+  },
+  {
+    "name": "Rotterdam Port",
+    "slug": "rotterdam-port",
+    "type": "industrial_site",
+    "region": "western_europe"
+  },
+  {
+    "name": "Ruhr Industrial Complex",
+    "slug": "ruhr",
+    "type": "industrial_site",
+    "region": "western_europe"
+  },
+  {
+    "name": "French Legion Base",
+    "slug": "legion-base",
+    "type": "institutional_compound",
+    "region": "western_europe"
+  },
+  {
+    "name": "NATO Airbase Geilenkirchen",
+    "slug": "geilenkirchen",
+    "type": "institutional_compound",
+    "region": "western_europe"
+  },
+  {
+    "name": "Heligoland",
+    "slug": "heligoland",
+    "type": "isolated_landmass",
+    "region": "western_europe"
+  },
+  {
+    "name": "Île d’Yeu",
+    "slug": "ile-dyeu",
+    "type": "isolated_landmass",
+    "region": "western_europe"
+  },
+  {
+    "name": "Eiffel Tower",
+    "slug": "eiffel",
+    "type": "landmark_structure",
+    "region": "western_europe"
+  },
+  {
+    "name": "Phare du Créac'h",
+    "slug": "creach",
+    "type": "landmark_structure",
+    "region": "western_europe"
+  },
+  {
+    "name": "Eguisheim",
+    "slug": "eguisheim",
+    "type": "remote_settlement",
+    "region": "western_europe"
+  },
+  {
+    "name": "Hallstatt",
+    "slug": "hallstatt",
+    "type": "remote_settlement",
+    "region": "western_europe"
+  },
+  {
+    "name": "Maginot Line Bunkers",
+    "slug": "maginot-line",
+    "type": "subterranean",
+    "region": "western_europe"
+  },
+  {
+    "name": "Naours Underground City",
+    "slug": "naours",
+    "type": "subterranean",
+    "region": "western_europe"
+  },
+  {
+    "name": "Charles de Gaulle Airport",
+    "slug": "cdg",
+    "type": "transit_hub",
+    "region": "western_europe"
+  },
+  {
+    "name": "Schiphol Airport",
+    "slug": "schiphol",
+    "type": "transit_hub",
+    "region": "western_europe"
   }
 ]
