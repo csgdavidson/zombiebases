@@ -33,7 +33,9 @@ const state = {
 const elements = {
   regionFilter: document.getElementById('region-filter'),
   typeFilter: document.getElementById('type-filter'),
+  resetFilters: document.getElementById('reset-filters'),
   list: document.getElementById('bases-list'),
+  resultCount: document.getElementById('result-count'),
   status: document.getElementById('status')
 };
 
@@ -67,13 +69,52 @@ function matchesFilters(base, region, type) {
   return matchesRegion && matchesType;
 }
 
+function readFiltersFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  return {
+    region: params.get('region') ?? '',
+    type: params.get('type') ?? ''
+  };
+}
+
+function setFiltersFromUrl() {
+  const { region, type } = readFiltersFromUrl();
+
+  const isValidRegion = !region || LABELS.region[region];
+  const isValidType = !type || LABELS.type[type];
+
+  elements.regionFilter.value = isValidRegion ? region : '';
+  elements.typeFilter.value = isValidType ? type : '';
+}
+
+function updateUrlFromFilters(region, type) {
+  const params = new URLSearchParams();
+
+  if (region) {
+    params.set('region', region);
+  }
+
+  if (type) {
+    params.set('type', type);
+  }
+
+  const query = params.toString();
+  const nextUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
+  window.history.replaceState({}, '', nextUrl);
+}
+
+function updateResultCount(count) {
+  const baseLabel = count === 1 ? 'base' : 'bases';
+  elements.resultCount.textContent = `${count} ${baseLabel} found`;
+}
+
 function renderBaseList(items) {
   elements.list.innerHTML = '';
 
   if (!items.length) {
     const emptyMessage = document.createElement('li');
     emptyMessage.className = 'empty-state';
-    emptyMessage.textContent = 'No bases match the selected filters.';
+    emptyMessage.textContent = 'No zombie bases match your filters. Try resetting filters or choosing different values.';
     elements.list.appendChild(emptyMessage);
     return;
   }
@@ -100,7 +141,15 @@ function applyFilters() {
   const type = elements.typeFilter.value;
 
   state.filteredBases = state.bases.filter((base) => matchesFilters(base, region, type));
+  updateResultCount(state.filteredBases.length);
   renderBaseList(state.filteredBases);
+  updateUrlFromFilters(region, type);
+}
+
+function resetFilters() {
+  elements.regionFilter.value = '';
+  elements.typeFilter.value = '';
+  applyFilters();
 }
 
 async function loadBases() {
@@ -115,6 +164,7 @@ async function loadBases() {
     populateFilter(elements.regionFilter, uniqueValues(state.bases, 'region'), 'region');
     populateFilter(elements.typeFilter, uniqueValues(state.bases, 'type'), 'type');
 
+    setFiltersFromUrl();
     applyFilters();
     elements.status.textContent = '';
   } catch (error) {
@@ -126,5 +176,6 @@ async function loadBases() {
 if (elements.regionFilter && elements.typeFilter && elements.list) {
   elements.regionFilter.addEventListener('change', applyFilters);
   elements.typeFilter.addEventListener('change', applyFilters);
+  elements.resetFilters?.addEventListener('click', resetFilters);
   loadBases();
 }
