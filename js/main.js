@@ -77,12 +77,16 @@ function uniqueValues(items, key) {
   return [...new Set(items.map((item) => item[key]))].sort();
 }
 
-function hasDisplayableStatus(base) {
+function hasStatus(base) {
   return typeof base.status === 'string' && base.status.trim().length > 0;
 }
 
 function normalizeStatus(base) {
-  return hasDisplayableStatus(base) ? base.status.trim().toLowerCase() : '';
+  return hasStatus(base) ? base.status.trim().toLowerCase() : '';
+}
+
+function isFeatured(base) {
+  return normalizeStatus(base) === 'featured';
 }
 
 function shouldDisplayBase(base) {
@@ -187,7 +191,7 @@ function renderBaseList(items) {
 
     header.appendChild(link);
 
-    if (hasDisplayableStatus(base)) {
+    if (isFeatured(base)) {
       const badge = document.createElement('span');
       badge.className = `status-badge status-${normalizeStatus(base)}`;
       badge.textContent = statusLabel(base);
@@ -308,7 +312,7 @@ async function loadBases() {
 
     state.bases = await response.json();
     state.visibleBases = state.bases.filter(shouldDisplayBase);
-    state.featuredBases = state.visibleBases.filter((base) => normalizeStatus(base) === 'featured');
+    state.featuredBases = state.visibleBases.filter(isFeatured);
 
     populateFilter(elements.regionFilter, uniqueValues(state.visibleBases, 'region'), 'region');
     populateFilter(elements.typeFilter, uniqueValues(state.visibleBases, 'type'), 'type');
