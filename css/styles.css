@@ -114,7 +114,27 @@ select {
   border-radius: 0.75rem;
   padding: 0.9rem 1rem;
   display: grid;
-  gap: 0.3rem;
+  gap: 0.35rem;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.base-card:hover,
+.base-card:focus-within {
+  border-color: #bfdbfe;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  transform: translateY(-1px);
+}
+
+.base-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 0.75rem;
+}
+
+.base-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
 }
 
 .base-card a,
@@ -140,6 +160,19 @@ select {
   margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.base-country {
+  margin: 0;
+  font-size: 0.84rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.base-summary {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .status-badge {
@@ -191,6 +224,29 @@ select {
   gap: 1rem;
 }
 
+.detail-hero {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.detail-hero h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+
+.detail-summary {
+  margin: 0.5rem 0 0.65rem;
+  color: #1e293b;
+  max-width: 72ch;
+  font-size: 1rem;
+}
+
+.hero-section {
+  padding: 0.75rem;
+}
+
 .content-section {
   border: 1px solid var(--border);
   background: var(--surface);
@@ -234,6 +290,10 @@ select {
 .featured-section h2 {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
+}
+
+.featured-link {
+  font-weight: 600;
 }
 
 .compact-base-list {

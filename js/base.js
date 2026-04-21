@@ -33,6 +33,7 @@ const elements = {
   detail: document.getElementById('base-detail'),
   notFound: document.getElementById('not-found'),
   name: document.getElementById('base-name'),
+  summaryLead: document.getElementById('base-summary-lead'),
   meta: document.getElementById('base-meta'),
   metaRow: document.getElementById('base-meta-row'),
   backLink: document.getElementById('back-link'),
@@ -158,7 +159,8 @@ function renderMetaRow(base) {
   const items = [
     { label: 'Type', value: labelFor('type', base.type) },
     { label: 'Region', value: labelFor('region', base.region) },
-    { label: 'Country', value: isNonEmptyString(base.country) ? base.country : null }
+    { label: 'Country', value: isNonEmptyString(base.country) ? base.country : null },
+    { label: 'Status', value: normalizeStatus(base) ? toTitleCaseSlug(normalizeStatus(base)) : null }
   ];
 
   items.forEach((item) => {
@@ -188,6 +190,13 @@ function renderHero(base) {
 
 function renderSummary(base) {
   const summary = getSummary(base);
+  const hasLead = Boolean(elements.summaryLead);
+
+  if (hasLead) {
+    elements.summaryLead.hidden = !summary;
+    elements.summaryLead.textContent = summary;
+  }
+
   if (!summary) {
     elements.summarySection.hidden = true;
     return;
@@ -266,7 +275,10 @@ function renderRelatedBases(base, bases, params) {
     const link = document.createElement('a');
     link.href = createBaseUrl(item.slug, params);
     link.textContent = item.name;
-    li.appendChild(link);
+    const meta = document.createElement('p');
+    meta.className = 'base-meta';
+    meta.textContent = `${labelFor('type', item.type)} • ${labelFor('region', item.region)}`;
+    li.append(link, meta);
     elements.relatedList.appendChild(li);
   });
 

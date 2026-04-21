@@ -45,7 +45,7 @@
       const mappableBases = bases.filter(hasCoordinates);
 
       if (!mappableBases.length) {
-        statusElement.textContent = 'No mapped zombie bases match the current filters yet.';
+        statusElement.textContent = 'No map-ready bases match these filters yet. Try a different region/type or reset filters.';
         map.setView([18, 10], 2);
         map.invalidateSize();
         return;
@@ -59,6 +59,7 @@
         const popupHtml = `
           <strong>${base.name}</strong><br>
           ${labelFor('type', base.type)} • ${labelFor('region', base.region)}<br>
+          ${base.country ? `${base.country}<br>` : ''}
           <a href="${createBaseUrl(base.slug)}">View base details</a>
         `;
 
