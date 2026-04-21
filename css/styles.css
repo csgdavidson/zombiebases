@@ -390,3 +390,31 @@ select {
   padding: 1rem;
   color: var(--muted);
 }
+
+.base-overall-score {
+  margin: 0.2rem 0 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #0c4a6e;
+}
+
+.detail-overall-score {
+  margin: 0 0 0.6rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0c4a6e;
+}
+
+.score-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.score-insight {
+  margin-top: 0.65rem !important;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
