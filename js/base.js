@@ -49,8 +49,6 @@ const elements = {
   backLink: document.getElementById('back-link'),
   heroSection: document.getElementById('hero-section'),
   heroImage: document.getElementById('base-hero-image'),
-  summarySection: document.getElementById('summary-section'),
-  summary: document.getElementById('base-summary'),
   descriptionSection: document.getElementById('description-section'),
   description: document.getElementById('base-description'),
   scoreSection: document.getElementById('score-section'),
@@ -131,30 +129,35 @@ function normalizeStatus(base) {
 }
 
 function buildBackLink(params) {
-  const query = new URLSearchParams();
+  const linkParams = new URLSearchParams();
   const view = params.get('view') === 'map' ? 'map' : 'list';
 
   if (view === 'map') {
-    query.set('view', 'map');
+    linkParams.set('view', 'map');
   }
 
   const region = params.get('region') ?? '';
   const type = params.get('type') ?? '';
   const sort = params.get('sort') ?? '';
+  const query = params.get('q') ?? '';
 
   if (region) {
-    query.set('region', region);
+    linkParams.set('region', region);
   }
 
   if (type) {
-    query.set('type', type);
+    linkParams.set('type', type);
   }
 
   if (sort) {
-    query.set('sort', sort);
+    linkParams.set('sort', sort);
   }
 
-  const queryString = query.toString();
+  if (query) {
+    linkParams.set('q', query);
+  }
+
+  const queryString = linkParams.toString();
   const href = queryString ? `./index.html?${queryString}` : './index.html';
   const text = view === 'map' ? '← Back to Map' : '← Back to List';
 
@@ -212,18 +215,12 @@ function renderSummary(base) {
   const summary = getSummary(base);
   const hasLead = Boolean(elements.summaryLead);
 
-  if (hasLead) {
-    elements.summaryLead.hidden = !summary;
-    elements.summaryLead.textContent = summary;
-  }
-
-  if (!summary) {
-    elements.summarySection.hidden = true;
+  if (!hasLead) {
     return;
   }
 
-  elements.summary.textContent = summary;
-  elements.summarySection.hidden = false;
+  elements.summaryLead.hidden = !summary;
+  elements.summaryLead.textContent = summary;
 }
 
 function renderDescription(base) {
@@ -291,6 +288,7 @@ function createBaseUrl(slug, sourceParams) {
   const region = sourceParams.get('region');
   const type = sourceParams.get('type');
   const sort = sourceParams.get('sort');
+  const query = sourceParams.get('q');
 
   if (view === 'map') {
     params.set('view', view);
@@ -303,6 +301,9 @@ function createBaseUrl(slug, sourceParams) {
   }
   if (sort) {
     params.set('sort', sort);
+  }
+  if (query) {
+    params.set('q', query);
   }
 
   return `./base.html?${params.toString()}`;

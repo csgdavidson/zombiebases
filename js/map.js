@@ -3,7 +3,7 @@
     return Number.isFinite(base.lat) && Number.isFinite(base.lng);
   }
 
-  function createBaseMap({ mapElement, statusElement, labelFor, createBaseUrl }) {
+  function createBaseMap({ mapElement, statusElement, labelFor, createBaseUrl, onReset }) {
     let map = null;
     let tileLayer = null;
     let markersLayer = null;
@@ -45,13 +45,25 @@
       const mappableBases = bases.filter(hasCoordinates);
 
       if (!mappableBases.length) {
-        statusElement.textContent = 'No map-ready bases match these filters yet. Try a different region/type or reset filters.';
+        statusElement.innerHTML = '';
+        const message = document.createElement('span');
+        message.textContent = 'No bases match your filters';
+        statusElement.appendChild(message);
+
+        if (typeof onReset === 'function') {
+          const resetButton = document.createElement('button');
+          resetButton.type = 'button';
+          resetButton.className = 'reset-filters map-reset';
+          resetButton.textContent = 'Reset filters';
+          resetButton.addEventListener('click', onReset);
+          statusElement.appendChild(resetButton);
+        }
         map.setView([18, 10], 2);
         map.invalidateSize();
         return;
       }
 
-      statusElement.textContent = '';
+      statusElement.innerHTML = '';
       const bounds = [];
 
       mappableBases.forEach((base) => {

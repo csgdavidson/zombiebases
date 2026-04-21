@@ -44,10 +44,12 @@ const state = {
   filteredBases: [],
   featuredBases: [],
   view: 'list',
-  sort: 'highest_score'
+  sort: 'highest_score',
+  search: ''
 };
 
 const elements = {
+  searchInput: document.getElementById('search-input'),
   regionFilter: document.getElementById('region-filter'),
   typeFilter: document.getElementById('type-filter'),
   sortSelect: document.getElementById('sort-select'),
@@ -70,7 +72,8 @@ const baseMap = (window.createBaseMap && elements.mapElement && elements.mapStat
     mapElement: elements.mapElement,
     statusElement: elements.mapStatus,
     labelFor,
-    createBaseUrl
+    createBaseUrl,
+    onReset: resetFilters
   })
   : null;
 
@@ -218,10 +221,27 @@ function populateSortOptions(selectElement) {
   });
 }
 
-function matchesFilters(base, region, type) {
+function matchesSearch(base, query) {
+  if (!query) {
+    return true;
+  }
+
+  const normalizedQuery = query.toLowerCase();
+  const fields = [
+    base.name,
+    labelFor('region', base.region),
+    base.country,
+    labelFor('type', base.type)
+  ];
+
+  return fields.some((value) => typeof value === 'string' && value.toLowerCase().includes(normalizedQuery));
+}
+
+function matchesFilters(base, region, type, query) {
   const matchesRegion = !region || base.region === region;
   const matchesType = !type || base.type === type;
-  return matchesRegion && matchesType;
+  const matchesQuery = matchesSearch(base, query);
+  return matchesRegion && matchesType && matchesQuery;
 }
 
 function readStateFromUrl() {
@@ -232,6 +252,7 @@ function readStateFromUrl() {
     view: params.get('view') === 'map' ? 'map' : 'list',
     region: params.get('region') ?? '',
     type: params.get('type') ?? '',
+    q: params.get('q') ?? '',
     sort: SORT_OPTIONS[sort] ? sort : 'highest_score'
   };
 }
@@ -249,6 +270,10 @@ function updateUrlFromState() {
 
   if (elements.typeFilter.value) {
     params.set('type', elements.typeFilter.value);
+  }
+
+  if (state.search) {
+    params.set('q', state.search);
   }
 
   if (state.sort !== 'highest_score') {
@@ -281,6 +306,10 @@ function createBaseUrl(slug) {
     params.set('type', elements.typeFilter.value);
   }
 
+  if (state.search) {
+    params.set('q', state.search);
+  }
+
   if (state.sort !== 'highest_score') {
     params.set('sort', state.sort);
   }
@@ -300,14 +329,28 @@ function appendCardScore(container, base) {
   container.appendChild(score);
 }
 
+function createEmptyState() {
+  const emptyState = document.createElement('li');
+  emptyState.className = 'empty-state';
+
+  const message = document.createElement('p');
+  message.textContent = 'No bases match your filters';
+
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'reset-filters empty-reset';
+  button.textContent = 'Reset filters';
+  button.addEventListener('click', resetFilters);
+
+  emptyState.append(message, button);
+  return emptyState;
+}
+
 function renderBaseList(items) {
   elements.list.innerHTML = '';
 
   if (!items.length) {
-    const emptyMessage = document.createElement('li');
-    emptyMessage.className = 'empty-state';
-    emptyMessage.textContent = 'No zombie bases match your filters. Try resetting filters or choosing different values.';
-    elements.list.appendChild(emptyMessage);
+    elements.list.appendChild(createEmptyState());
     return;
   }
 
@@ -315,15 +358,18 @@ function renderBaseList(items) {
     const listItem = document.createElement('li');
     listItem.className = 'base-card';
 
+    const link = document.createElement('a');
+    link.className = 'base-card-link';
+    link.href = createBaseUrl(base.slug);
+
     const header = document.createElement('div');
     header.className = 'base-card-header';
 
-    const link = document.createElement('a');
-    link.className = 'base-card-title';
-    link.href = createBaseUrl(base.slug);
-    link.textContent = base.name;
+    const title = document.createElement('span');
+    title.className = 'base-card-title';
+    title.textContent = base.name;
 
-    header.appendChild(link);
+    header.appendChild(title);
 
     if (isFeatured(base)) {
       const badge = document.createElement('span');
@@ -336,24 +382,25 @@ function renderBaseList(items) {
     meta.className = 'base-meta';
     meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
 
-    listItem.append(header, meta);
+    link.append(header, meta);
 
-    appendCardScore(listItem, base);
+    appendCardScore(link, base);
 
     if (base.country) {
       const country = document.createElement('p');
       country.className = 'base-country';
       country.textContent = base.country;
-      listItem.appendChild(country);
+      link.appendChild(country);
     }
 
     if (base.summary) {
       const summary = document.createElement('p');
       summary.className = 'base-summary';
       summary.textContent = base.summary;
-      listItem.appendChild(summary);
+      link.appendChild(summary);
     }
 
+    listItem.appendChild(link);
     elements.list.appendChild(listItem);
   });
 }
@@ -417,8 +464,9 @@ function renderCurrentView() {
 function applyFilters() {
   const region = elements.regionFilter.value;
   const type = elements.typeFilter.value;
+  state.search = elements.searchInput.value.trim();
 
-  const filtered = state.visibleBases.filter((base) => matchesFilters(base, region, type));
+  const filtered = state.visibleBases.filter((base) => matchesFilters(base, region, type, state.search));
   state.filteredBases = sortBases(filtered);
 
   updateResultCount(state.filteredBases.length);
@@ -435,13 +483,16 @@ function setView(nextView) {
 }
 
 function resetFilters() {
+  elements.searchInput.value = '';
   elements.regionFilter.value = '';
   elements.typeFilter.value = '';
+  state.sort = 'highest_score';
+  elements.sortSelect.value = state.sort;
   applyFilters();
 }
 
 function setInitialControls() {
-  const { view, region, type, sort } = readStateFromUrl();
+  const { view, region, type, sort, q } = readStateFromUrl();
 
   state.view = view;
   state.sort = sort;
@@ -451,6 +502,7 @@ function setInitialControls() {
 
   elements.regionFilter.value = isValidRegion ? region : '';
   elements.typeFilter.value = isValidType ? type : '';
+  elements.searchInput.value = q;
 
   if (elements.sortSelect) {
     elements.sortSelect.value = state.sort;
@@ -481,7 +533,8 @@ async function loadBases() {
   }
 }
 
-if (elements.regionFilter && elements.typeFilter && elements.list && elements.listViewButton && elements.mapViewButton) {
+if (elements.searchInput && elements.regionFilter && elements.typeFilter && elements.list && elements.listViewButton && elements.mapViewButton) {
+  elements.searchInput.addEventListener('input', applyFilters);
   elements.regionFilter.addEventListener('change', applyFilters);
   elements.typeFilter.addEventListener('change', applyFilters);
   elements.sortSelect?.addEventListener('change', () => {
