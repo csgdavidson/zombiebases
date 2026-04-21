@@ -15,6 +15,16 @@ Zombie Bases is a static, GitHub Pages-friendly directory of fictional and real-
 - Related bases on detail pages
 - URL state persistence for view, filters, sort, and search
 
+## Roadmap (next epics)
+
+The core alpha framework is in place. The next phase focuses on improving data quality and refining the user experience.
+
+1. **Data Cleaning** — normalize base records, resolve inconsistent fields, tighten scoring inputs, and improve summary/metadata quality across the dataset.
+2. **Security** — harden static-site inputs and rendering paths (especially JSON/content handling) and add basic safeguards to reduce abuse and injection risks.
+3. **SEO** — improve discoverability with stronger metadata, page titles/descriptions, and crawl-friendly detail/list content for search engines.
+4. **Web Design** — refine visual hierarchy, spacing, typography, and map/list presentation so the site feels more cohesive and readable.
+5. **UX Polish** — smooth interaction details (filter/search/sort feedback, loading states, empty states, and mobile ergonomics) for a cleaner browsing flow.
+
 ## Project structure
 
 - `index.html` — homepage with featured, controls, list, and map views
