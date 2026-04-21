@@ -113,6 +113,8 @@ select {
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   padding: 0.9rem 1rem;
+  display: grid;
+  gap: 0.3rem;
 }
 
 .base-card a,
@@ -129,9 +131,39 @@ select {
 }
 
 .base-meta {
-  margin-top: 0.35rem;
+  margin-top: 0.15rem;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.base-extra {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.status-badge {
+  justify-self: start;
+  margin-top: 0.2rem;
+  display: inline-block;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+}
+
+.status-featured {
+  color: #92400e;
+  background: #fef3c7;
+  border-color: #f59e0b;
+}
+
+.status-published {
+  color: #065f46;
+  background: #d1fae5;
+  border-color: #10b981;
 }
 
 .map-view {
@@ -159,12 +191,77 @@ select {
   gap: 1rem;
 }
 
-.placeholder-box {
-  border: 1px dashed var(--border);
+.content-section {
+  border: 1px solid var(--border);
   background: var(--surface);
   border-radius: 0.75rem;
   padding: 1rem;
+}
+
+.content-section h3 {
+  margin-top: 0;
+}
+
+.content-section p {
+  margin: 0;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.base-meta-row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
   color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.featured-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.featured-section h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.compact-base-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.compact-base-list li {
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.compact-base-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.compact-base-list a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.compact-base-list a:hover,
+.compact-base-list a:focus-visible {
+  color: var(--accent);
 }
 
 .home-link {
