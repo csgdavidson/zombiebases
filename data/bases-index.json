@@ -3,19 +3,25 @@
     "name": "Simien Mountains",
     "slug": "simien",
     "type": "elevated_stronghold",
-    "region": "africa"
+    "region": "africa",
+    "lat": 13.1807,
+    "lng": 38.065
   },
   {
     "name": "Table Mountain Plateau",
     "slug": "table-mountain",
     "type": "elevated_stronghold",
-    "region": "africa"
+    "region": "africa",
+    "lat": -33.9628,
+    "lng": 18.4098
   },
   {
     "name": "Elmina Castle",
     "slug": "elmina",
     "type": "fortified_structure",
-    "region": "africa"
+    "region": "africa",
+    "lat": 5.0847,
+    "lng": -1.3509
   },
   {
     "name": "Fasil Ghebbi",
@@ -51,7 +57,9 @@
     "name": "Seychelles",
     "slug": "seychelles",
     "type": "isolated_landmass",
-    "region": "africa"
+    "region": "africa",
+    "lat": -4.6796,
+    "lng": 55.492
   },
   {
     "name": "Zanzibar Island",
@@ -99,13 +107,17 @@
     "name": "Cape Town Airport",
     "slug": "cape-town-airport",
     "type": "transit_hub",
-    "region": "africa"
+    "region": "africa",
+    "lat": -33.9696,
+    "lng": 18.5972
   },
   {
     "name": "Mombasa Port",
     "slug": "mombasa",
     "type": "transit_hub",
-    "region": "africa"
+    "region": "africa",
+    "lat": -4.0435,
+    "lng": 39.6682
   },
   {
     "name": "Mount Huashan",
@@ -129,7 +141,9 @@
     "name": "Himeji Castle",
     "slug": "himeji",
     "type": "fortified_structure",
-    "region": "east_asia"
+    "region": "east_asia",
+    "lat": 34.8394,
+    "lng": 134.6939
   },
   {
     "name": "Shenzhen Industrial Zone",
@@ -177,7 +191,9 @@
     "name": "Tokyo Tower",
     "slug": "tokyo-tower",
     "type": "landmark_structure",
-    "region": "east_asia"
+    "region": "east_asia",
+    "lat": 35.6586,
+    "lng": 139.7454
   },
   {
     "name": "Mountain Hamlet China",
@@ -237,7 +253,9 @@
     "name": "Suomenlinna Fortress",
     "slug": "suomenlinna",
     "type": "fortified_structure",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "lat": 60.1462,
+    "lng": 24.9884
   },
   {
     "name": "Baltic Shipyards",
@@ -255,7 +273,9 @@
     "name": "Chernobyl Exclusion Zone Facility",
     "slug": "chernobyl",
     "type": "institutional_compound",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "lat": 51.2766,
+    "lng": 30.2219
   },
   {
     "name": "Russian Arctic Base",

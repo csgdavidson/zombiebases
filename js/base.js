@@ -15,13 +15,16 @@ const LABELS = {
   region: {
     uk_ireland: 'UK & Ireland',
     western_europe: 'Western Europe',
-    eastern_europe: 'Eastern Europe',
+    eastern_europe: 'Eastern & Northern Europe',
     north_america: 'North America',
-    central_south_america: 'Central & South America',
-    middle_east_africa: 'Middle East & Africa',
-    central_south_asia: 'Central & South Asia',
-    east_southeast_asia: 'East & Southeast Asia',
-    oceania: 'Oceania'
+    south_america: 'South America',
+    africa: 'Africa',
+    middle_east: 'Middle East',
+    south_asia: 'South Asia',
+    east_asia: 'East Asia',
+    southeast_asia: 'Southeast Asia',
+    oceania: 'Oceania',
+    polar_extreme: 'Polar & Extreme'
   }
 };
 
@@ -30,7 +33,8 @@ const elements = {
   detail: document.getElementById('base-detail'),
   notFound: document.getElementById('not-found'),
   name: document.getElementById('base-name'),
-  meta: document.getElementById('base-meta')
+  meta: document.getElementById('base-meta'),
+  backLink: document.getElementById('back-link')
 };
 
 function toTitleCaseSlug(value) {
@@ -42,6 +46,38 @@ function toTitleCaseSlug(value) {
 
 function labelFor(kind, value) {
   return LABELS[kind][value] ?? toTitleCaseSlug(value);
+}
+
+function buildBackLink(params) {
+  const query = new URLSearchParams();
+  const view = params.get('view') === 'map' ? 'map' : 'list';
+
+  if (view === 'map') {
+    query.set('view', 'map');
+  }
+
+  const region = params.get('region') ?? '';
+  const type = params.get('type') ?? '';
+
+  if (region) {
+    query.set('region', region);
+  }
+
+  if (type) {
+    query.set('type', type);
+  }
+
+  const queryString = query.toString();
+  const href = queryString ? `./index.html?${queryString}` : './index.html';
+  const text = view === 'map' ? '← Back to Map' : '← Back to List';
+
+  return { href, text };
+}
+
+function setBackLink(params) {
+  const { href, text } = buildBackLink(params);
+  elements.backLink.href = href;
+  elements.backLink.textContent = text;
 }
 
 function showNotFound() {
@@ -61,6 +97,8 @@ function showBase(base) {
 async function loadBase() {
   const params = new URLSearchParams(window.location.search);
   const slug = params.get('slug');
+
+  setBackLink(params);
 
   if (!slug) {
     showNotFound();
@@ -90,6 +128,6 @@ async function loadBase() {
   }
 }
 
-if (elements.status && elements.detail && elements.notFound && elements.name && elements.meta) {
+if (elements.status && elements.detail && elements.notFound && elements.name && elements.meta && elements.backLink) {
   loadBase();
 }

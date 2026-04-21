@@ -43,6 +43,39 @@ main {
   padding: 1.5rem 0 3rem;
 }
 
+.view-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.toggle-label {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.toggle-buttons {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.toggle-button {
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+}
+
+.toggle-button[aria-pressed="true"] {
+  background: var(--accent);
+  color: #fff;
+}
+
 .filters {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -82,13 +115,16 @@ select {
   padding: 0.9rem 1rem;
 }
 
-.base-card a {
+.base-card a,
+.leaflet-popup-content a {
   color: var(--text);
   text-decoration: none;
 }
 
 .base-card a:hover,
-.base-card a:focus-visible {
+.base-card a:focus-visible,
+.leaflet-popup-content a:hover,
+.leaflet-popup-content a:focus-visible {
   color: var(--accent);
 }
 
@@ -98,6 +134,25 @@ select {
   font-size: 0.92rem;
 }
 
+.map-view {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.bases-map {
+  width: 100%;
+  min-height: 480px;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.map-status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
 
 .base-page {
   display: grid;
@@ -119,6 +174,18 @@ select {
 
 .home-link:hover,
 .home-link:focus-visible {
+  color: var(--accent);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
   color: var(--accent);
 }
 

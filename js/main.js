@@ -15,19 +15,23 @@ const LABELS = {
   region: {
     uk_ireland: 'UK & Ireland',
     western_europe: 'Western Europe',
-    eastern_europe: 'Eastern Europe',
+    eastern_europe: 'Eastern & Northern Europe',
     north_america: 'North America',
-    central_south_america: 'Central & South America',
-    middle_east_africa: 'Middle East & Africa',
-    central_south_asia: 'Central & South Asia',
-    east_southeast_asia: 'East & Southeast Asia',
-    oceania: 'Oceania'
+    south_america: 'South America',
+    africa: 'Africa',
+    middle_east: 'Middle East',
+    south_asia: 'South Asia',
+    east_asia: 'East Asia',
+    southeast_asia: 'Southeast Asia',
+    oceania: 'Oceania',
+    polar_extreme: 'Polar & Extreme'
   }
 };
 
 const state = {
   bases: [],
-  filteredBases: []
+  filteredBases: [],
+  view: 'list'
 };
 
 const elements = {
@@ -36,8 +40,23 @@ const elements = {
   resetFilters: document.getElementById('reset-filters'),
   list: document.getElementById('bases-list'),
   resultCount: document.getElementById('result-count'),
-  status: document.getElementById('status')
+  status: document.getElementById('status'),
+  listView: document.getElementById('list-view'),
+  mapView: document.getElementById('map-view'),
+  mapStatus: document.getElementById('map-status'),
+  mapElement: document.getElementById('bases-map'),
+  listViewButton: document.getElementById('view-list'),
+  mapViewButton: document.getElementById('view-map')
 };
+
+const baseMap = (window.createBaseMap && elements.mapElement && elements.mapStatus)
+  ? window.createBaseMap({
+    mapElement: elements.mapElement,
+    statusElement: elements.mapStatus,
+    labelFor,
+    createBaseUrl
+  })
+  : null;
 
 function toTitleCaseSlug(value) {
   return value
@@ -69,33 +88,28 @@ function matchesFilters(base, region, type) {
   return matchesRegion && matchesType;
 }
 
-function readFiltersFromUrl() {
+function readStateFromUrl() {
   const params = new URLSearchParams(window.location.search);
   return {
+    view: params.get('view') === 'map' ? 'map' : 'list',
     region: params.get('region') ?? '',
     type: params.get('type') ?? ''
   };
 }
 
-function setFiltersFromUrl() {
-  const { region, type } = readFiltersFromUrl();
-
-  const isValidRegion = !region || LABELS.region[region];
-  const isValidType = !type || LABELS.type[type];
-
-  elements.regionFilter.value = isValidRegion ? region : '';
-  elements.typeFilter.value = isValidType ? type : '';
-}
-
-function updateUrlFromFilters(region, type) {
+function updateUrlFromState() {
   const params = new URLSearchParams();
 
-  if (region) {
-    params.set('region', region);
+  if (state.view === 'map') {
+    params.set('view', 'map');
   }
 
-  if (type) {
-    params.set('type', type);
+  if (elements.regionFilter.value) {
+    params.set('region', elements.regionFilter.value);
+  }
+
+  if (elements.typeFilter.value) {
+    params.set('type', elements.typeFilter.value);
   }
 
   const query = params.toString();
@@ -106,6 +120,25 @@ function updateUrlFromFilters(region, type) {
 function updateResultCount(count) {
   const baseLabel = count === 1 ? 'base' : 'bases';
   elements.resultCount.textContent = `${count} ${baseLabel} found`;
+}
+
+function createBaseUrl(slug) {
+  const params = new URLSearchParams();
+  params.set('slug', slug);
+
+  if (state.view === 'map') {
+    params.set('view', 'map');
+  }
+
+  if (elements.regionFilter.value) {
+    params.set('region', elements.regionFilter.value);
+  }
+
+  if (elements.typeFilter.value) {
+    params.set('type', elements.typeFilter.value);
+  }
+
+  return `./base.html?${params.toString()}`;
 }
 
 function renderBaseList(items) {
@@ -124,7 +157,7 @@ function renderBaseList(items) {
     listItem.className = 'base-card';
 
     const link = document.createElement('a');
-    link.href = `./base.html?slug=${encodeURIComponent(base.slug)}`;
+    link.href = createBaseUrl(base.slug);
     link.textContent = base.name;
 
     const meta = document.createElement('p');
@@ -136,6 +169,22 @@ function renderBaseList(items) {
   });
 }
 
+function renderCurrentView() {
+  const isMapView = state.view === 'map';
+  elements.listView.hidden = isMapView;
+  elements.mapView.hidden = !isMapView;
+  elements.listViewButton.setAttribute('aria-pressed', String(!isMapView));
+  elements.mapViewButton.setAttribute('aria-pressed', String(isMapView));
+
+  if (isMapView) {
+    if (baseMap) {
+      baseMap.render(state.filteredBases);
+    } else {
+      elements.mapStatus.textContent = 'Map is unavailable right now. Please use list view.';
+    }
+  }
+}
+
 function applyFilters() {
   const region = elements.regionFilter.value;
   const type = elements.typeFilter.value;
@@ -143,13 +192,32 @@ function applyFilters() {
   state.filteredBases = state.bases.filter((base) => matchesFilters(base, region, type));
   updateResultCount(state.filteredBases.length);
   renderBaseList(state.filteredBases);
-  updateUrlFromFilters(region, type);
+  renderCurrentView();
+  updateUrlFromState();
+}
+
+function setView(nextView) {
+  state.view = nextView === 'map' ? 'map' : 'list';
+  renderCurrentView();
+  updateUrlFromState();
 }
 
 function resetFilters() {
   elements.regionFilter.value = '';
   elements.typeFilter.value = '';
   applyFilters();
+}
+
+function setInitialControls() {
+  const { view, region, type } = readStateFromUrl();
+
+  state.view = view;
+
+  const isValidRegion = !region || LABELS.region[region];
+  const isValidType = !type || LABELS.type[type];
+
+  elements.regionFilter.value = isValidRegion ? region : '';
+  elements.typeFilter.value = isValidType ? type : '';
 }
 
 async function loadBases() {
@@ -164,7 +232,7 @@ async function loadBases() {
     populateFilter(elements.regionFilter, uniqueValues(state.bases, 'region'), 'region');
     populateFilter(elements.typeFilter, uniqueValues(state.bases, 'type'), 'type');
 
-    setFiltersFromUrl();
+    setInitialControls();
     applyFilters();
     elements.status.textContent = '';
   } catch (error) {
@@ -173,9 +241,11 @@ async function loadBases() {
   }
 }
 
-if (elements.regionFilter && elements.typeFilter && elements.list) {
+if (elements.regionFilter && elements.typeFilter && elements.list && elements.listViewButton && elements.mapViewButton) {
   elements.regionFilter.addEventListener('change', applyFilters);
   elements.typeFilter.addEventListener('change', applyFilters);
   elements.resetFilters?.addEventListener('click', resetFilters);
+  elements.listViewButton.addEventListener('click', () => setView('list'));
+  elements.mapViewButton.addEventListener('click', () => setView('map'));
   loadBases();
 }
