@@ -1,0 +1,303 @@
+{
+  "regions": [
+    {
+      "id": "uk_ireland",
+      "name": "UK & Ireland",
+      "bases": [
+        { "name": "Fort George", "slug": "fort-george", "type": "fortified_structure" },
+        { "name": "Caerphilly Castle", "slug": "caerphilly-castle", "type": "fortified_structure" },
+        { "name": "Lindisfarne", "slug": "lindisfarne", "type": "isolated_landmass" },
+        { "name": "St Kilda", "slug": "st-kilda", "type": "isolated_landmass" },
+        { "name": "Edinburgh Castle", "slug": "edinburgh-castle", "type": "elevated_stronghold" },
+        { "name": "The Roaches", "slug": "the-roaches", "type": "elevated_stronghold" },
+        { "name": "Cheddar Gorge Caves", "slug": "cheddar-gorge", "type": "subterranean" },
+        { "name": "Burlington Bunker", "slug": "burlington-bunker", "type": "subterranean" },
+        { "name": "HM Prison Dartmoor", "slug": "dartmoor-prison", "type": "institutional_compound" },
+        { "name": "Porton Down", "slug": "porton-down", "type": "institutional_compound" },
+        { "name": "Port Talbot Steelworks", "slug": "port-talbot", "type": "industrial_site" },
+        { "name": "UK Distribution Warehouse", "slug": "uk-warehouse", "type": "industrial_site" },
+        { "name": "Isle of Eigg Village", "slug": "eigg", "type": "remote_settlement" },
+        { "name": "Clovelly", "slug": "clovelly", "type": "remote_settlement" },
+        { "name": "Heathrow Airport", "slug": "heathrow", "type": "transit_hub" },
+        { "name": "Portsmouth Harbour", "slug": "portsmouth-harbour", "type": "transit_hub" },
+        { "name": "Fastnet Lighthouse", "slug": "fastnet", "type": "landmark_structure" },
+        { "name": "Spinnaker Tower", "slug": "spinnaker", "type": "landmark_structure" }
+      ]
+    },
+
+    {
+      "id": "western_europe",
+      "name": "Western Europe",
+      "bases": [
+        { "name": "Mont Saint-Michel", "slug": "mont-saint-michel", "type": "fortified_structure" },
+        { "name": "Carcassonne", "slug": "carcassonne", "type": "fortified_structure" },
+        { "name": "Heligoland", "slug": "heligoland", "type": "isolated_landmass" },
+        { "name": "Île d’Yeu", "slug": "ile-dyeu", "type": "isolated_landmass" },
+        { "name": "Neuschwanstein Castle", "slug": "neuschwanstein", "type": "elevated_stronghold" },
+        { "name": "Rocamadour", "slug": "rocamadour", "type": "elevated_stronghold" },
+        { "name": "Naours Underground City", "slug": "naours", "type": "subterranean" },
+        { "name": "Maginot Line Bunkers", "slug": "maginot-line", "type": "subterranean" },
+        { "name": "NATO Airbase Geilenkirchen", "slug": "geilenkirchen", "type": "institutional_compound" },
+        { "name": "French Legion Base", "slug": "legion-base", "type": "institutional_compound" },
+        { "name": "Rotterdam Port", "slug": "rotterdam-port", "type": "industrial_site" },
+        { "name": "Ruhr Industrial Complex", "slug": "ruhr", "type": "industrial_site" },
+        { "name": "Hallstatt", "slug": "hallstatt", "type": "remote_settlement" },
+        { "name": "Eguisheim", "slug": "eguisheim", "type": "remote_settlement" },
+        { "name": "Charles de Gaulle Airport", "slug": "cdg", "type": "transit_hub" },
+        { "name": "Schiphol Airport", "slug": "schiphol", "type": "transit_hub" },
+        { "name": "Phare du Créac'h", "slug": "creach", "type": "landmark_structure" },
+        { "name": "Eiffel Tower", "slug": "eiffel", "type": "landmark_structure" }
+      ]
+    },
+
+    {
+      "id": "eastern_europe",
+      "name": "Eastern & Northern Europe",
+      "bases": [
+        { "name": "Malbork Castle", "slug": "malbork", "type": "fortified_structure" },
+        { "name": "Suomenlinna Fortress", "slug": "suomenlinna", "type": "fortified_structure" },
+        { "name": "Gotland", "slug": "gotland", "type": "isolated_landmass" },
+        { "name": "Faroe Islands", "slug": "faroe", "type": "isolated_landmass" },
+        { "name": "Predjama Castle", "slug": "predjama", "type": "elevated_stronghold" },
+        { "name": "Sigiriya-style cliffs (analogue)", "slug": "sigiriya-analogue", "type": "elevated_stronghold" },
+        { "name": "Derinkuyu Underground City", "slug": "derinkuyu", "type": "subterranean" },
+        { "name": "Cold War Bunkers Baltic", "slug": "baltic-bunker", "type": "subterranean" },
+        { "name": "Chernobyl Exclusion Zone Facility", "slug": "chernobyl", "type": "institutional_compound" },
+        { "name": "Russian Arctic Base", "slug": "arctic-base", "type": "institutional_compound" },
+        { "name": "Norilsk Industrial Complex", "slug": "norilsk", "type": "industrial_site" },
+        { "name": "Baltic Shipyards", "slug": "shipyard", "type": "industrial_site" },
+        { "name": "Longyearbyen", "slug": "longyearbyen", "type": "remote_settlement" },
+        { "name": "Visby", "slug": "visby", "type": "remote_settlement" },
+        { "name": "Helsinki Airport", "slug": "helsinki-airport", "type": "transit_hub" },
+        { "name": "Murmansk Port", "slug": "murmansk", "type": "transit_hub" },
+        { "name": "Kizhi Pogost", "slug": "kizhi", "type": "landmark_structure" },
+        { "name": "Ostankino Tower", "slug": "ostankino", "type": "landmark_structure" }
+      ]
+    },
+
+    {
+      "id": "north_america",
+      "name": "North America",
+      "bases": [
+        { "name": "Alcatraz Island", "slug": "alcatraz", "type": "fortified_structure" },
+        { "name": "Fort Jefferson", "slug": "fort-jefferson", "type": "fortified_structure" },
+        { "name": "Kodiak Island", "slug": "kodiak", "type": "isolated_landmass" },
+        { "name": "Vancouver Island", "slug": "vancouver-island", "type": "isolated_landmass" },
+        { "name": "Mesa Verde", "slug": "mesa-verde", "type": "elevated_stronghold" },
+        { "name": "Table Rock Plateau", "slug": "table-rock", "type": "elevated_stronghold" },
+        { "name": "Cheyenne Mountain Complex", "slug": "cheyenne", "type": "subterranean" },
+        { "name": "Missile Silo", "slug": "missile-silo", "type": "subterranean" },
+        { "name": "Area 51", "slug": "area-51", "type": "institutional_compound" },
+        { "name": "Guantanamo Bay", "slug": "guantanamo", "type": "institutional_compound" },
+        { "name": "Grain Silos Midwest", "slug": "grain-silos", "type": "industrial_site" },
+        { "name": "Texas Oil Refinery", "slug": "oil-refinery", "type": "industrial_site" },
+        { "name": "Utqiagvik", "slug": "utqiagvik", "type": "remote_settlement" },
+        { "name": "Telluride", "slug": "telluride", "type": "remote_settlement" },
+        { "name": "LAX Airport", "slug": "lax", "type": "transit_hub" },
+        { "name": "Chicago Rail Yard", "slug": "rail-yard", "type": "transit_hub" },
+        { "name": "Cape Hatteras Lighthouse", "slug": "cape-hatteras", "type": "landmark_structure" },
+        { "name": "CN Tower", "slug": "cn-tower", "type": "landmark_structure" }
+      ]
+    },
+
+    {
+      "id": "south_america",
+      "name": "South America",
+      "bases": [
+        { "name": "San Felipe Fortress", "slug": "san-felipe", "type": "fortified_structure" },
+        { "name": "Fort Copacabana", "slug": "copacabana-fort", "type": "fortified_structure" },
+        { "name": "Chiloé Island", "slug": "chiloe", "type": "isolated_landmass" },
+        { "name": "Galápagos Islands", "slug": "galapagos", "type": "isolated_landmass" },
+        { "name": "Machu Picchu", "slug": "machu-picchu", "type": "elevated_stronghold" },
+        { "name": "Andean Ridge Settlement", "slug": "andean-ridge", "type": "elevated_stronghold" },
+        { "name": "Cave Systems Patagonia", "slug": "patagonia-caves", "type": "subterranean" },
+        { "name": "Mining Tunnel Network", "slug": "mine-tunnels", "type": "subterranean" },
+        { "name": "Amazon Research Station", "slug": "amazon-station", "type": "institutional_compound" },
+        { "name": "Military Jungle Base", "slug": "jungle-base", "type": "institutional_compound" },
+        { "name": "Soy Processing Plant", "slug": "soy-plant", "type": "industrial_site" },
+        { "name": "Hydroelectric Dam Complex", "slug": "hydro-dam", "type": "industrial_site" },
+        { "name": "Patagonian Village", "slug": "patagonia-village", "type": "remote_settlement" },
+        { "name": "Andean Hamlet", "slug": "andean-hamlet", "type": "remote_settlement" },
+        { "name": "São Paulo Airport", "slug": "sao-paulo-airport", "type": "transit_hub" },
+        { "name": "Panama Canal Zone", "slug": "panama-canal", "type": "transit_hub" },
+        { "name": "Christ the Redeemer", "slug": "christ-redeemer", "type": "landmark_structure" },
+        { "name": "Lighthouse Punta Del Este", "slug": "punta-lighthouse", "type": "landmark_structure" }
+      ]
+    },
+
+    {
+      "id": "africa",
+      "name": "Africa",
+      "bases": [
+        { "name": "Fasil Ghebbi", "slug": "fasil-ghebbi", "type": "fortified_structure" },
+        { "name": "Elmina Castle", "slug": "elmina", "type": "fortified_structure" },
+        { "name": "Zanzibar Island", "slug": "zanzibar", "type": "isolated_landmass" },
+        { "name": "Seychelles", "slug": "seychelles", "type": "isolated_landmass" },
+        { "name": "Simien Mountains", "slug": "simien", "type": "elevated_stronghold" },
+        { "name": "Table Mountain Plateau", "slug": "table-mountain", "type": "elevated_stronghold" },
+        { "name": "Sahara Cave Systems", "slug": "sahara-caves", "type": "subterranean" },
+        { "name": "Libyan Bunker Network", "slug": "libya-bunkers", "type": "subterranean" },
+        { "name": "French Foreign Legion Outpost", "slug": "legion-outpost", "type": "institutional_compound" },
+        { "name": "UN Base Africa", "slug": "un-base", "type": "institutional_compound" },
+        { "name": "Diamond Mine Complex", "slug": "diamond-mine", "type": "industrial_site" },
+        { "name": "Oil Terminal Nigeria", "slug": "oil-terminal", "type": "industrial_site" },
+        { "name": "Atlas Mountain Village", "slug": "atlas-village", "type": "remote_settlement" },
+        { "name": "Namib Desert Settlement", "slug": "namib-settlement", "type": "remote_settlement" },
+        { "name": "Cape Town Airport", "slug": "cape-town-airport", "type": "transit_hub" },
+        { "name": "Mombasa Port", "slug": "mombasa", "type": "transit_hub" },
+        { "name": "Cape Point Lighthouse", "slug": "cape-point", "type": "landmark_structure" },
+        { "name": "Great Mosque of Djenné", "slug": "djenne", "type": "landmark_structure" }
+      ]
+    },
+
+    {
+      "id": "middle_east",
+      "name": "Middle East",
+      "bases": [
+        { "name": "Masada", "slug": "masada", "type": "fortified_structure" },
+        { "name": "Krak des Chevaliers", "slug": "krak", "type": "fortified_structure" },
+        { "name": "Socotra Island", "slug": "socotra", "type": "isolated_landmass" },
+        { "name": "Qeshm Island", "slug": "qeshm", "type": "isolated_landmass" },
+        { "name": "Petra", "slug": "petra", "type": "elevated_stronghold" },
+        { "name": "Cappadocia Highlands", "slug": "cappadocia", "type": "elevated_stronghold" },
+        { "name": "Derinkuyu", "slug": "derinkuyu-me", "type": "subterranean" },
+        { "name": "Gaza Tunnel Network", "slug": "gaza-tunnels", "type": "subterranean" },
+        { "name": "Desert Military Base", "slug": "desert-base", "type": "institutional_compound" },
+        { "name": "Oil Field Compound", "slug": "oil-compound", "type": "institutional_compound" },
+        { "name": "Refinery Complex Gulf", "slug": "gulf-refinery", "type": "industrial_site" },
+        { "name": "Water Desalination Plant", "slug": "desalination", "type": "industrial_site" },
+        { "name": "Bedouin Settlement", "slug": "bedouin", "type": "remote_settlement" },
+        { "name": "Oasis Town", "slug": "oasis-town", "type": "remote_settlement" },
+        { "name": "Dubai Airport", "slug": "dubai-airport", "type": "transit_hub" },
+        { "name": "Jebel Ali Port", "slug": "jebel-ali", "type": "transit_hub" },
+        { "name": "Burj Khalifa", "slug": "burj", "type": "landmark_structure" },
+        { "name": "Lighthouse Hormuz", "slug": "hormuz-light", "type": "landmark_structure" }
+      ]
+    },
+
+    {
+      "id": "south_asia",
+      "name": "South Asia",
+      "bases": [
+        { "name": "Mehrangarh Fort", "slug": "mehrangarh", "type": "fortified_structure" },
+        { "name": "Sigiriya", "slug": "sigiriya", "type": "fortified_structure" },
+        { "name": "Andaman Islands", "slug": "andaman", "type": "isolated_landmass" },
+        { "name": "Lakshadweep", "slug": "lakshadweep", "type": "isolated_landmass" },
+        { "name": "Tiger’s Nest Monastery", "slug": "tigers-nest", "type": "elevated_stronghold" },
+        { "name": "Hilltop Fort Rajasthan", "slug": "rajasthan-fort", "type": "elevated_stronghold" },
+        { "name": "Ajanta Caves", "slug": "ajanta", "type": "subterranean" },
+        { "name": "Military Bunker Kashmir", "slug": "kashmir-bunker", "type": "subterranean" },
+        { "name": "Indian Army Base", "slug": "army-base", "type": "institutional_compound" },
+        { "name": "Research Station Himalayas", "slug": "himalaya-station", "type": "institutional_compound" },
+        { "name": "Rice Processing Facility", "slug": "rice-facility", "type": "industrial_site" },
+        { "name": "Textile Industrial Complex", "slug": "textile-complex", "type": "industrial_site" },
+        { "name": "Himalayan Village", "slug": "himalayan-village", "type": "remote_settlement" },
+        { "name": "Rural Kerala Settlement", "slug": "kerala-village", "type": "remote_settlement" },
+        { "name": "Delhi Airport", "slug": "delhi-airport", "type": "transit_hub" },
+        { "name": "Mumbai Port", "slug": "mumbai-port", "type": "transit_hub" },
+        { "name": "Qutub Minar", "slug": "qutub", "type": "landmark_structure" },
+        { "name": "Lighthouse Mahabalipuram", "slug": "mahabalipuram", "type": "landmark_structure" }
+      ]
+    },
+
+    {
+      "id": "east_asia",
+      "name": "East Asia",
+      "bases": [
+        { "name": "Great Wall Fortress Sections", "slug": "great-wall", "type": "fortified_structure" },
+        { "name": "Himeji Castle", "slug": "himeji", "type": "fortified_structure" },
+        { "name": "Jeju Island", "slug": "jeju", "type": "isolated_landmass" },
+        { "name": "Okinawa", "slug": "okinawa", "type": "isolated_landmass" },
+        { "name": "Mount Huashan", "slug": "huashan", "type": "elevated_stronghold" },
+        { "name": "Tiger Leaping Gorge Cliffs", "slug": "tiger-gorge", "type": "elevated_stronghold" },
+        { "name": "Underground Cities China", "slug": "china-underground", "type": "subterranean" },
+        { "name": "Japanese War Bunkers", "slug": "japan-bunkers", "type": "subterranean" },
+        { "name": "North Korean Military Complex", "slug": "nk-complex", "type": "institutional_compound" },
+        { "name": "Chinese Research Facility", "slug": "china-research", "type": "institutional_compound" },
+        { "name": "Shenzhen Industrial Zone", "slug": "shenzhen", "type": "industrial_site" },
+        { "name": "Shipbuilding Yard Korea", "slug": "shipyard-korea", "type": "industrial_site" },
+        { "name": "Rural Japanese Village", "slug": "japan-village", "type": "remote_settlement" },
+        { "name": "Mountain Hamlet China", "slug": "china-hamlet", "type": "remote_settlement" },
+        { "name": "Tokyo Airport", "slug": "tokyo-airport", "type": "transit_hub" },
+        { "name": "Shanghai Port", "slug": "shanghai-port", "type": "transit_hub" },
+        { "name": "Tokyo Tower", "slug": "tokyo-tower", "type": "landmark_structure" },
+        { "name": "Great Buddha Leshan", "slug": "leshan", "type": "landmark_structure" }
+      ]
+    },
+
+    {
+      "id": "southeast_asia",
+      "name": "Southeast Asia",
+      "bases": [
+        { "name": "Intramuros Manila", "slug": "intramuros", "type": "fortified_structure" },
+        { "name": "Hue Citadel", "slug": "hue", "type": "fortified_structure" },
+        { "name": "Palawan", "slug": "palawan", "type": "isolated_landmass" },
+        { "name": "Komodo Island", "slug": "komodo", "type": "isolated_landmass" },
+        { "name": "Ha Long Bay Cliffs", "slug": "halong", "type": "elevated_stronghold" },
+        { "name": "Rice Terrace Highlands", "slug": "rice-terraces", "type": "elevated_stronghold" },
+        { "name": "Vietnam Tunnel Systems", "slug": "cu-chi", "type": "subterranean" },
+        { "name": "Bunker Network Jungle", "slug": "jungle-bunker", "type": "subterranean" },
+        { "name": "Military Jungle Base", "slug": "sea-jungle-base", "type": "institutional_compound" },
+        { "name": "Remote Research Station", "slug": "sea-research", "type": "institutional_compound" },
+        { "name": "Palm Oil Plantation Complex", "slug": "palm-oil", "type": "industrial_site" },
+        { "name": "Fishing Port Hub", "slug": "fishing-port", "type": "industrial_site" },
+        { "name": "Island Village Indonesia", "slug": "island-village", "type": "remote_settlement" },
+        { "name": "Jungle Hamlet", "slug": "jungle-hamlet", "type": "remote_settlement" },
+        { "name": "Bangkok Airport", "slug": "bangkok-airport", "type": "transit_hub" },
+        { "name": "Singapore Port", "slug": "singapore-port", "type": "transit_hub" },
+        { "name": "Petronas Towers", "slug": "petronas", "type": "landmark_structure" },
+        { "name": "Phu Quoc Lighthouse", "slug": "phuquoc-light", "type": "landmark_structure" }
+      ]
+    },
+
+    {
+      "id": "oceania",
+      "name": "Oceania",
+      "bases": [
+        { "name": "Fort Denison", "slug": "fort-denison", "type": "fortified_structure" },
+        { "name": "Maori Pa Fortifications", "slug": "maori-pa", "type": "fortified_structure" },
+        { "name": "Tasmania", "slug": "tasmania", "type": "isolated_landmass" },
+        { "name": "Fiji Islands", "slug": "fiji", "type": "isolated_landmass" },
+        { "name": "Uluru Surroundings", "slug": "uluru", "type": "elevated_stronghold" },
+        { "name": "Blue Mountains Cliffs", "slug": "blue-mountains", "type": "elevated_stronghold" },
+        { "name": "Opal Mining Tunnels", "slug": "opal-mines", "type": "subterranean" },
+        { "name": "Cold War Bunker Australia", "slug": "aus-bunker", "type": "subterranean" },
+        { "name": "Remote Defence Base", "slug": "defence-base", "type": "institutional_compound" },
+        { "name": "Research Station Outback", "slug": "outback-research", "type": "institutional_compound" },
+        { "name": "Mining Operation Site", "slug": "mining-site", "type": "industrial_site" },
+        { "name": "Sheep Station Complex", "slug": "sheep-station", "type": "industrial_site" },
+        { "name": "Outback Settlement", "slug": "outback-town", "type": "remote_settlement" },
+        { "name": "Island Village Pacific", "slug": "pacific-village", "type": "remote_settlement" },
+        { "name": "Sydney Airport", "slug": "sydney-airport", "type": "transit_hub" },
+        { "name": "Auckland Port", "slug": "auckland-port", "type": "transit_hub" },
+        { "name": "Sydney Harbour Bridge", "slug": "harbour-bridge", "type": "landmark_structure" },
+        { "name": "Cape Byron Lighthouse", "slug": "byron-light", "type": "landmark_structure" }
+      ]
+    },
+
+    {
+      "id": "polar_extreme",
+      "name": "Polar & Extreme",
+      "bases": [
+        { "name": "McMurdo Station", "slug": "mcmurdo", "type": "fortified_structure" },
+        { "name": "Amundsen-Scott Station", "slug": "amundsen", "type": "fortified_structure" },
+        { "name": "Greenland", "slug": "greenland", "type": "isolated_landmass" },
+        { "name": "Antarctic Peninsula", "slug": "antarctic-peninsula", "type": "isolated_landmass" },
+        { "name": "Ice Shelf Ridge", "slug": "ice-shelf", "type": "elevated_stronghold" },
+        { "name": "Glacier Plateau", "slug": "glacier", "type": "elevated_stronghold" },
+        { "name": "Ice Tunnel Systems", "slug": "ice-tunnels", "type": "subterranean" },
+        { "name": "Arctic Bunker", "slug": "arctic-bunker", "type": "subterranean" },
+        { "name": "Research Base Antarctica", "slug": "antarctica-base", "type": "institutional_compound" },
+        { "name": "Arctic Military Outpost", "slug": "arctic-outpost", "type": "institutional_compound" },
+        { "name": "Fuel Depot Arctic", "slug": "fuel-depot", "type": "industrial_site" },
+        { "name": "Icebreaker Dock", "slug": "icebreaker", "type": "industrial_site" },
+        { "name": "Remote Arctic Village", "slug": "arctic-village", "type": "remote_settlement" },
+        { "name": "Antarctic Camp", "slug": "antarctic-camp", "type": "remote_settlement" },
+        { "name": "Ice Runway", "slug": "ice-runway", "type": "transit_hub" },
+        { "name": "Supply Port Arctic", "slug": "arctic-port", "type": "transit_hub" },
+        { "name": "Polar Observation Tower", "slug": "polar-tower", "type": "landmark_structure" },
+        { "name": "Antarctic Lighthouse", "slug": "antarctic-light", "type": "landmark_structure" }
+      ]
+    }
+  ]
+}
