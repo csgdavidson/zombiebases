@@ -28,17 +28,29 @@ const LABELS = {
   }
 };
 
+const SCORE_KEYS = ['defensibility', 'food', 'water', 'isolation', 'escape', 'sustainability', 'human_risk'];
+
+const SORT_OPTIONS = {
+  highest_score: 'Highest score',
+  lowest_score: 'Lowest score',
+  name_az: 'Name A-Z',
+  region: 'Region',
+  type: 'Type'
+};
+
 const state = {
   bases: [],
   visibleBases: [],
   filteredBases: [],
   featuredBases: [],
-  view: 'list'
+  view: 'list',
+  sort: 'highest_score'
 };
 
 const elements = {
   regionFilter: document.getElementById('region-filter'),
   typeFilter: document.getElementById('type-filter'),
+  sortSelect: document.getElementById('sort-select'),
   resetFilters: document.getElementById('reset-filters'),
   list: document.getElementById('bases-list'),
   resultCount: document.getElementById('result-count'),
@@ -98,11 +110,110 @@ function statusLabel(base) {
   return value ? toTitleCaseSlug(value) : '';
 }
 
+function isValidScoreValue(value) {
+  return Number.isFinite(value);
+}
+
+function getScoreObject(base) {
+  if (!base || typeof base.scores !== 'object' || !base.scores) {
+    return null;
+  }
+
+  const entries = SCORE_KEYS
+    .map((key) => [key, base.scores[key]])
+    .filter(([, value]) => isValidScoreValue(value));
+
+  return entries.length ? Object.fromEntries(entries) : null;
+}
+
+function computeOverallScore(base) {
+  if (isValidScoreValue(base?.score)) {
+    return base.score;
+  }
+
+  const scoreObject = getScoreObject(base);
+  if (!scoreObject) {
+    return null;
+  }
+
+  const values = Object.values(scoreObject);
+  const total = values.reduce((sum, value) => sum + value, 0);
+  return Number((total / values.length).toFixed(1));
+}
+
+function formatOverallScore(base) {
+  const score = computeOverallScore(base);
+  return score === null ? '' : `${score.toFixed(1)}/10`;
+}
+
+function compareByName(a, b) {
+  return a.name.localeCompare(b.name);
+}
+
+function compareByOverallScore(a, b, descending = true) {
+  const aScore = computeOverallScore(a);
+  const bScore = computeOverallScore(b);
+
+  if (aScore === null && bScore === null) {
+    return compareByName(a, b);
+  }
+
+  if (aScore === null) {
+    return 1;
+  }
+
+  if (bScore === null) {
+    return -1;
+  }
+
+  const diff = descending ? (bScore - aScore) : (aScore - bScore);
+  return diff || compareByName(a, b);
+}
+
+function sortBases(items) {
+  const sorted = [...items];
+
+  sorted.sort((a, b) => {
+    switch (state.sort) {
+      case 'lowest_score':
+        return compareByOverallScore(a, b, false);
+      case 'name_az':
+        return compareByName(a, b);
+      case 'region': {
+        const regionDiff = labelFor('region', a.region).localeCompare(labelFor('region', b.region));
+        return regionDiff || compareByName(a, b);
+      }
+      case 'type': {
+        const typeDiff = labelFor('type', a.type).localeCompare(labelFor('type', b.type));
+        return typeDiff || compareByName(a, b);
+      }
+      case 'highest_score':
+      default:
+        return compareByOverallScore(a, b, true);
+    }
+  });
+
+  return sorted;
+}
+
 function populateFilter(selectElement, values, kind) {
   values.forEach((value) => {
     const option = document.createElement('option');
     option.value = value;
     option.textContent = labelFor(kind, value);
+    selectElement.appendChild(option);
+  });
+}
+
+function populateSortOptions(selectElement) {
+  if (!selectElement) {
+    return;
+  }
+
+  Object.entries(SORT_OPTIONS).forEach(([value, label]) => {
+    const option = document.createElement('option');
+    option.value = value;
+    option.textContent = label;
     selectElement.appendChild(option);
   });
 }
@@ -115,10 +226,13 @@ function matchesFilters(base, region, type) {
 
 function readStateFromUrl() {
   const params = new URLSearchParams(window.location.search);
+  const sort = params.get('sort') ?? 'highest_score';
+
   return {
     view: params.get('view') === 'map' ? 'map' : 'list',
     region: params.get('region') ?? '',
-    type: params.get('type') ?? ''
+    type: params.get('type') ?? '',
+    sort: SORT_OPTIONS[sort] ? sort : 'highest_score'
   };
 }
 
@@ -135,6 +249,10 @@ function updateUrlFromState() {
 
   if (elements.typeFilter.value) {
     params.set('type', elements.typeFilter.value);
+  }
+
+  if (state.sort !== 'highest_score') {
+    params.set('sort', state.sort);
   }
 
   const query = params.toString();
@@ -163,7 +281,23 @@ function createBaseUrl(slug) {
     params.set('type', elements.typeFilter.value);
   }
 
+  if (state.sort !== 'highest_score') {
+    params.set('sort', state.sort);
+  }
+
   return `./base.html?${params.toString()}`;
+}
+
+function appendCardScore(container, base) {
+  const scoreText = formatOverallScore(base);
+  if (!scoreText) {
+    return;
+  }
+
+  const score = document.createElement('p');
+  score.className = 'base-overall-score';
+  score.textContent = `Overall score: ${scoreText}`;
+  container.appendChild(score);
 }
 
 function renderBaseList(items) {
@@ -204,6 +338,8 @@ function renderBaseList(items) {
 
     listItem.append(header, meta);
 
+    appendCardScore(listItem, base);
+
     if (base.country) {
       const country = document.createElement('p');
       country.className = 'base-country';
@@ -234,7 +370,7 @@ function renderFeaturedBases(items) {
     return;
   }
 
-  items.slice(0, 3).forEach((base) => {
+  sortBases(items).slice(0, 3).forEach((base) => {
     const listItem = document.createElement('li');
     const link = document.createElement('a');
     link.className = 'featured-link';
@@ -246,6 +382,16 @@ function renderFeaturedBases(items) {
     meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
 
     listItem.append(link, meta);
+
+    appendCardScore(listItem, base);
+
+    if (base.summary) {
+      const summary = document.createElement('p');
+      summary.className = 'base-summary';
+      summary.textContent = base.summary;
+      listItem.appendChild(summary);
+    }
+
     elements.featuredList.appendChild(listItem);
   });
 
@@ -272,9 +418,12 @@ function applyFilters() {
   const region = elements.regionFilter.value;
   const type = elements.typeFilter.value;
 
-  state.filteredBases = state.visibleBases.filter((base) => matchesFilters(base, region, type));
+  const filtered = state.visibleBases.filter((base) => matchesFilters(base, region, type));
+  state.filteredBases = sortBases(filtered);
+
   updateResultCount(state.filteredBases.length);
   renderBaseList(state.filteredBases);
+  renderFeaturedBases(state.featuredBases);
   renderCurrentView();
   updateUrlFromState();
 }
@@ -292,15 +441,20 @@ function resetFilters() {
 }
 
 function setInitialControls() {
-  const { view, region, type } = readStateFromUrl();
+  const { view, region, type, sort } = readStateFromUrl();
 
   state.view = view;
+  state.sort = sort;
 
   const isValidRegion = !region || LABELS.region[region];
   const isValidType = !type || LABELS.type[type];
 
   elements.regionFilter.value = isValidRegion ? region : '';
   elements.typeFilter.value = isValidType ? type : '';
+
+  if (elements.sortSelect) {
+    elements.sortSelect.value = state.sort;
+  }
 }
 
 async function loadBases() {
@@ -316,9 +470,9 @@ async function loadBases() {
 
     populateFilter(elements.regionFilter, uniqueValues(state.visibleBases, 'region'), 'region');
     populateFilter(elements.typeFilter, uniqueValues(state.visibleBases, 'type'), 'type');
+    populateSortOptions(elements.sortSelect);
 
     setInitialControls();
-    renderFeaturedBases(state.featuredBases);
     applyFilters();
     elements.status.textContent = '';
   } catch (error) {
@@ -330,6 +484,10 @@ async function loadBases() {
 if (elements.regionFilter && elements.typeFilter && elements.list && elements.listViewButton && elements.mapViewButton) {
   elements.regionFilter.addEventListener('change', applyFilters);
   elements.typeFilter.addEventListener('change', applyFilters);
+  elements.sortSelect?.addEventListener('change', () => {
+    state.sort = elements.sortSelect.value;
+    applyFilters();
+  });
   elements.resetFilters?.addEventListener('click', resetFilters);
   elements.listViewButton.addEventListener('click', () => setView('list'));
   elements.mapViewButton.addEventListener('click', () => setView('map'));

@@ -28,6 +28,16 @@ const LABELS = {
   }
 };
 
+const SCORE_LABELS = {
+  defensibility: 'Defensibility',
+  food: 'Food',
+  water: 'Water',
+  isolation: 'Isolation',
+  escape: 'Escape',
+  sustainability: 'Sustainability',
+  human_risk: 'Human Risk'
+};
+
 const elements = {
   status: document.getElementById('detail-status'),
   detail: document.getElementById('base-detail'),
@@ -44,7 +54,11 @@ const elements = {
   descriptionSection: document.getElementById('description-section'),
   description: document.getElementById('base-description'),
   scoreSection: document.getElementById('score-section'),
-  score: document.getElementById('base-score'),
+  scoreEmpty: document.getElementById('score-empty'),
+  scoreOverall: document.getElementById('base-score-overall'),
+  scoreList: document.getElementById('base-score-list'),
+  scoreStrengths: document.getElementById('base-score-strengths'),
+  scoreWeaknesses: document.getElementById('base-score-weaknesses'),
   relatedSection: document.getElementById('related-section'),
   relatedList: document.getElementById('related-bases-list')
 };
@@ -62,6 +76,10 @@ function labelFor(kind, value) {
 
 function isNonEmptyString(value) {
   return typeof value === 'string' && value.trim().length > 0;
+}
+
+function isValidScoreValue(value) {
+  return Number.isFinite(value);
 }
 
 function firstAvailableValue(base, keys) {
@@ -84,31 +102,28 @@ function getHeroImage(base) {
   return isNonEmptyString(value) ? value : '';
 }
 
-function getScore(base) {
-  return firstAvailableValue(base, ['score', 'scores']);
+function getScoreObject(base) {
+  if (!base || typeof base.scores !== 'object' || !base.scores) {
+    return null;
+  }
+
+  const entries = Object.entries(base.scores).filter(([key, value]) => SCORE_LABELS[key] && isValidScoreValue(value));
+  return entries.length ? Object.fromEntries(entries) : null;
 }
 
-function formatScore(score) {
-  if (typeof score === 'number') {
-    return `${score}/10`;
+function computeOverallScore(base) {
+  if (isValidScoreValue(base?.score)) {
+    return base.score;
   }
 
-  if (isNonEmptyString(score)) {
-    return score;
+  const scoreObject = getScoreObject(base);
+  if (!scoreObject) {
+    return null;
   }
 
-  if (score && typeof score === 'object') {
-    const entries = Object.entries(score).filter(([, value]) => typeof value === 'number' || isNonEmptyString(value));
-    if (!entries.length) {
-      return '';
-    }
-
-    return entries
-      .map(([key, value]) => `${toTitleCaseSlug(key)}: ${value}`)
-      .join(' • ');
-  }
-
-  return '';
+  const values = Object.values(scoreObject);
+  const average = values.reduce((sum, value) => sum + value, 0) / values.length;
+  return Number(average.toFixed(1));
 }
 
 function normalizeStatus(base) {
@@ -125,6 +140,7 @@ function buildBackLink(params) {
 
   const region = params.get('region') ?? '';
   const type = params.get('type') ?? '';
+  const sort = params.get('sort') ?? '';
 
   if (region) {
     query.set('region', region);
@@ -132,6 +148,10 @@ function buildBackLink(params) {
 
   if (type) {
     query.set('type', type);
+  }
+
+  if (sort) {
+    query.set('sort', sort);
   }
 
   const queryString = query.toString();
@@ -211,15 +231,56 @@ function renderDescription(base) {
   elements.description.textContent = description || 'Description coming soon.';
 }
 
+function renderScoreBreakdown(scoreObject) {
+  elements.scoreList.innerHTML = '';
+
+  Object.entries(SCORE_LABELS).forEach(([key, label]) => {
+    if (!isValidScoreValue(scoreObject[key])) {
+      return;
+    }
+
+    const item = document.createElement('li');
+    item.innerHTML = `<strong>${label}:</strong> ${scoreObject[key].toFixed(1)}/10`;
+    elements.scoreList.appendChild(item);
+  });
+}
+
+function renderStrengthsAndWeaknesses(scoreObject) {
+  const sortedScores = Object.entries(scoreObject)
+    .filter(([key, value]) => SCORE_LABELS[key] && isValidScoreValue(value))
+    .sort((a, b) => b[1] - a[1]);
+
+  const topTwo = sortedScores.slice(0, 2).map(([key, value]) => `${SCORE_LABELS[key]} (${value.toFixed(1)})`);
+  const bottomTwo = [...sortedScores].reverse().slice(0, 2).map(([key, value]) => `${SCORE_LABELS[key]} (${value.toFixed(1)})`);
+
+  elements.scoreStrengths.textContent = topTwo.join(' • ');
+  elements.scoreWeaknesses.textContent = bottomTwo.join(' • ');
+}
+
 function renderScore(base) {
-  const scoreText = formatScore(getScore(base));
-  if (!scoreText) {
-    elements.scoreSection.hidden = true;
+  const scoreObject = getScoreObject(base);
+  const overall = computeOverallScore(base);
+
+  elements.scoreSection.hidden = false;
+
+  if (!scoreObject || overall === null) {
+    elements.scoreEmpty.hidden = false;
+    elements.scoreOverall.hidden = true;
+    elements.scoreList.hidden = true;
+    elements.scoreStrengths.parentElement.hidden = true;
+    elements.scoreWeaknesses.parentElement.hidden = true;
     return;
   }
 
-  elements.score.textContent = scoreText;
-  elements.scoreSection.hidden = false;
+  elements.scoreEmpty.hidden = true;
+  elements.scoreOverall.hidden = false;
+  elements.scoreOverall.textContent = `${overall.toFixed(1)}/10`;
+  elements.scoreList.hidden = false;
+  elements.scoreStrengths.parentElement.hidden = false;
+  elements.scoreWeaknesses.parentElement.hidden = false;
+
+  renderScoreBreakdown(scoreObject);
+  renderStrengthsAndWeaknesses(scoreObject);
 }
 
 function createBaseUrl(slug, sourceParams) {
@@ -229,6 +290,7 @@ function createBaseUrl(slug, sourceParams) {
   const view = sourceParams.get('view');
   const region = sourceParams.get('region');
   const type = sourceParams.get('type');
+  const sort = sourceParams.get('sort');
 
   if (view === 'map') {
     params.set('view', view);
@@ -238,6 +300,9 @@ function createBaseUrl(slug, sourceParams) {
   }
   if (type) {
     params.set('type', type);
+  }
+  if (sort) {
+    params.set('sort', sort);
   }
 
   return `./base.html?${params.toString()}`;
