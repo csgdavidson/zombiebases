@@ -41,13 +41,22 @@ h1 {
 
 main {
   padding: 1.5rem 0 3rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+main > * {
+  margin: 0;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 .view-toggle {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 1rem;
 }
 
 .toggle-label {
@@ -77,14 +86,14 @@ main {
 }
 
 .search {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0;
 }
 
 .filters {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.75rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.15rem;
 }
 
 label {
@@ -301,7 +310,6 @@ input[type="search"] {
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   padding: 1rem;
-  margin-bottom: 1rem;
 }
 
 .featured-section h2 {
