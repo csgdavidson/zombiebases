@@ -53,6 +53,7 @@ const elements = {
   regionFilter: document.getElementById('region-filter'),
   typeFilter: document.getElementById('type-filter'),
   sortSelect: document.getElementById('sort-select'),
+  sortControl: document.getElementById('sort-select')?.closest('label') ?? null,
   resetFilters: document.getElementById('reset-filters'),
   list: document.getElementById('bases-list'),
   resultCount: document.getElementById('result-count'),
@@ -449,6 +450,9 @@ function renderCurrentView() {
   const isMapView = state.view === 'map';
   elements.listView.hidden = isMapView;
   elements.mapView.hidden = !isMapView;
+  if (elements.sortControl) {
+    elements.sortControl.hidden = isMapView;
+  }
   elements.listViewButton.setAttribute('aria-pressed', String(!isMapView));
   elements.mapViewButton.setAttribute('aria-pressed', String(isMapView));
 
