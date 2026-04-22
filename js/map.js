@@ -5,7 +5,6 @@
 
   function createBaseMap({ mapElement, statusElement, labelFor, createBaseUrl, onReset }) {
     let map = null;
-    let tileLayer = null;
     let markers = null;
 
     function ensureMap() {
@@ -24,15 +23,34 @@
         minZoom: 2
       }).setView([18, 10], 2);
 
-      tileLayer = window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 18,
         attribution: '&copy; OpenStreetMap contributors'
-      });
-      tileLayer.addTo(map);
+      }).addTo(map);
 
       markers = window.L.markerClusterGroup();
       map.addLayer(markers);
       return true;
+    }
+
+    function addMarkersToClusterGroup(bases) {
+      const bounds = [];
+
+      bases.forEach((base) => {
+        const marker = window.L.marker([base.lat, base.long]);
+        const popupHtml = `
+          <strong>${base.name}</strong><br>
+          ${labelFor('type', base.type)} • ${labelFor('region', base.region)}<br>
+          ${base.country ? `${base.country}<br>` : ''}
+          <a href="${createBaseUrl(base.slug)}">View base details</a>
+        `;
+
+        marker.bindPopup(popupHtml);
+        markers.addLayer(marker);
+        bounds.push([base.lat, base.long]);
+      });
+
+      return bounds;
     }
 
     function render(bases) {
@@ -41,6 +59,8 @@
       }
 
       mapElement.hidden = false;
+
+      // Keep the cluster group as the single marker layer source of truth.
       markers.clearLayers();
 
       const mappableBases = bases.filter(hasCoordinates);
@@ -65,21 +85,7 @@
       }
 
       statusElement.innerHTML = '';
-      const bounds = [];
-
-      mappableBases.forEach((base) => {
-        const marker = window.L.marker([base.lat, base.long]);
-        const popupHtml = `
-          <strong>${base.name}</strong><br>
-          ${labelFor('type', base.type)} • ${labelFor('region', base.region)}<br>
-          ${base.country ? `${base.country}<br>` : ''}
-          <a href="${createBaseUrl(base.slug)}">View base details</a>
-        `;
-
-        marker.bindPopup(popupHtml);
-        markers.addLayer(marker);
-        bounds.push([base.lat, base.long]);
-      });
+      const bounds = addMarkersToClusterGroup(mappableBases);
 
       if (bounds.length === 1) {
         map.setView(bounds[0], 5);
