@@ -4,1347 +4,1916 @@
     "slug": "simien",
     "type": "elevated_stronghold",
     "region": "africa",
-    "lat": 13.1807,
-    "lng": 38.065,
     "country": "Ethiopia",
-    "summary": "A high-altitude mountain stronghold with limited approach routes and natural lookout points."
+    "lat": 13.1807,
+    "long": 38.065
   },
   {
     "name": "Table Mountain Plateau",
     "slug": "table-mountain",
     "type": "elevated_stronghold",
     "region": "africa",
+    "country": "South Africa",
     "lat": -33.9628,
-    "lng": 18.4098
+    "long": 18.4098
   },
   {
     "name": "Elmina Castle",
     "slug": "elmina",
     "type": "fortified_structure",
     "region": "africa",
+    "country": "Ghana",
     "lat": 5.0847,
-    "lng": -1.3509
+    "long": -1.3509
   },
   {
     "name": "Fasil Ghebbi",
     "slug": "fasil-ghebbi",
     "type": "fortified_structure",
-    "region": "africa"
+    "region": "africa",
+    "country": "Ethiopia",
+    "lat": 12.6075,
+    "long": 37.4689
   },
   {
-    "name": "Diamond Mine Complex",
-    "slug": "diamond-mine",
+    "name": "Kimberley Big Hole & Mining Complex",
+    "slug": "kimberley-big-hole",
     "type": "industrial_site",
-    "region": "africa"
+    "region": "africa",
+    "country": "South Africa",
+    "lat": -28.7383,
+    "long": 24.7586
   },
   {
-    "name": "Oil Terminal Nigeria",
-    "slug": "oil-terminal",
+    "name": "Bonny Island LNG Terminal",
+    "slug": "bonny-lng-terminal",
     "type": "industrial_site",
-    "region": "africa"
+    "region": "africa",
+    "country": "Nigeria",
+    "lat": 4.4297,
+    "long": 7.17
   },
   {
-    "name": "French Foreign Legion Outpost",
-    "slug": "legion-outpost",
+    "name": "Camp Lemonnier",
+    "slug": "camp-lemonnier",
     "type": "institutional_compound",
-    "region": "africa"
+    "region": "africa",
+    "country": "Djibouti",
+    "lat": 11.5473,
+    "long": 43.1595
   },
   {
-    "name": "UN Base Africa",
-    "slug": "un-base",
+    "name": "UN Base in Juba (UNMISS HQ, South Sudan)",
+    "slug": "unmiss-juba",
     "type": "institutional_compound",
-    "region": "africa"
+    "region": "africa",
+    "country": "South Sudan",
+    "lat": 4.8517,
+    "long": 31.5825
   },
   {
     "name": "Seychelles",
     "slug": "seychelles",
     "type": "isolated_landmass",
     "region": "africa",
+    "country": "Seychelles",
     "lat": -4.6796,
-    "lng": 55.492
+    "long": 55.492
   },
   {
     "name": "Zanzibar Island",
     "slug": "zanzibar",
     "type": "isolated_landmass",
-    "region": "africa"
+    "region": "africa",
+    "country": "Tanzania",
+    "lat": -6.1659,
+    "long": 39.2026
   },
   {
     "name": "Cape Point Lighthouse",
     "slug": "cape-point",
     "type": "landmark_structure",
-    "region": "africa"
+    "region": "africa",
+    "country": "South Africa",
+    "lat": -34.3568,
+    "long": 18.4897
   },
   {
     "name": "Great Mosque of Djenn\u00e9",
     "slug": "djenne",
     "type": "landmark_structure",
-    "region": "africa"
+    "region": "africa",
+    "country": "Mali",
+    "lat": 13.905,
+    "long": -4.555
   },
   {
-    "name": "Atlas Mountain Village",
-    "slug": "atlas-village",
+    "name": "A\u00eft Benhaddou",
+    "slug": "ait-benhaddou",
     "type": "remote_settlement",
-    "region": "africa"
+    "region": "africa",
+    "country": "Morocco",
+    "lat": 31.047,
+    "long": -7.13
   },
   {
-    "name": "Namib Desert Settlement",
-    "slug": "namib-settlement",
+    "name": "Kolmanskop",
+    "slug": "kolmanskop",
     "type": "remote_settlement",
-    "region": "africa"
+    "region": "africa",
+    "country": "Namibia",
+    "lat": -26.7033,
+    "long": 15.2283
   },
   {
-    "name": "Libyan Bunker Network",
-    "slug": "libya-bunkers",
+    "name": "Waw an Namus Cave System",
+    "slug": "waw-namus",
     "type": "subterranean",
-    "region": "africa"
+    "region": "africa",
+    "country": "Libya",
+    "lat": 24.92,
+    "long": 17.88
   },
   {
-    "name": "Sahara Cave Systems",
-    "slug": "sahara-caves",
+    "name": "Matmata Underground Dwellings",
+    "slug": "matmata",
     "type": "subterranean",
-    "region": "africa"
+    "region": "africa",
+    "country": "Tunisia",
+    "lat": 33.5444,
+    "long": 9.9711
   },
   {
     "name": "Cape Town Airport",
     "slug": "cape-town-airport",
     "type": "transit_hub",
     "region": "africa",
-    "lat": -33.9696,
-    "lng": 18.5972,
     "country": "South Africa",
-    "summary": "A major transit hub with long runways, fuel access, and clear evacuation corridors."
+    "lat": -33.9696,
+    "long": 18.5972
   },
   {
     "name": "Mombasa Port",
     "slug": "mombasa",
     "type": "transit_hub",
     "region": "africa",
+    "country": "Kenya",
     "lat": -4.0435,
-    "lng": 39.6682
+    "long": 39.6682
   },
   {
     "name": "Mount Huashan",
     "slug": "huashan",
     "type": "elevated_stronghold",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "China",
+    "lat": 34.4836,
+    "long": 110.084
   },
   {
     "name": "Tiger Leaping Gorge Cliffs",
     "slug": "tiger-gorge",
     "type": "elevated_stronghold",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "China",
+    "lat": 27.1788,
+    "long": 100.095
   },
   {
     "name": "Great Wall Fortress Sections",
     "slug": "great-wall",
     "type": "fortified_structure",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "China",
+    "lat": 40.4319,
+    "long": 116.5704
   },
   {
     "name": "Himeji Castle",
     "slug": "himeji",
     "type": "fortified_structure",
     "region": "east_asia",
-    "lat": 34.8394,
-    "lng": 134.6939,
     "country": "Japan",
-    "summary": "A hilltop castle complex with layered defenses, chokepoints, and long sightlines over the city below.",
-    "status": "featured",
-    "description": "Himeji Castle combines elevation, concentric walls, and confusing approach routes that slow large groups. Inner courtyards can be zoned into fallback positions while rooftops provide observation over multiple streets. Long-term survival still depends on resupply and water management once nearby urban stores are exhausted.",
-    "scores": {
-      "defensibility": 9.3,
-      "food": 4.8,
-      "water": 6.2,
-      "isolation": 5.4,
-      "escape": 6.6,
-      "sustainability": 5.1,
-      "human_risk": 5.7
-    }
+    "lat": 34.8394,
+    "long": 134.6939
   },
   {
-    "name": "Shenzhen Industrial Zone",
-    "slug": "shenzhen",
+    "name": "Foxconn Shenzhen Factory",
+    "slug": "factory-shenzhen",
     "type": "industrial_site",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "China",
+    "lat": 22.5431,
+    "long": 114.0579
   },
   {
-    "name": "Shipbuilding Yard Korea",
-    "slug": "shipyard-korea",
+    "name": "Hyundai Heavy Industries Shipyard",
+    "slug": "hyundai-shipyard",
     "type": "industrial_site",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "South Korea",
+    "lat": 35.5045,
+    "long": 129.3889
   },
   {
-    "name": "Chinese Research Facility",
-    "slug": "china-research",
+    "name": "Wuhan Institute of Virology",
+    "slug": "wuhan-institute-of-virology",
     "type": "institutional_compound",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "China",
+    "lat": 30.5436,
+    "long": 114.3625
   },
   {
-    "name": "North Korean Military Complex",
-    "slug": "nk-complex",
+    "name": "Ryongsong Residence Compound",
+    "slug": "ryongsong-compound",
     "type": "institutional_compound",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "North Korea",
+    "lat": 39.049,
+    "long": 125.793
   },
   {
     "name": "Jeju Island",
     "slug": "jeju",
     "type": "isolated_landmass",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "Japan",
+    "lat": 33.892,
+    "long": 130.875
   },
   {
     "name": "Okinawa",
     "slug": "okinawa",
     "type": "isolated_landmass",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "Japan",
+    "lat": 26.2124,
+    "long": 127.6809
   },
   {
     "name": "Great Buddha Leshan",
     "slug": "leshan",
     "type": "landmark_structure",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "China",
+    "lat": 29.5447,
+    "long": 103.7734
   },
   {
     "name": "Tokyo Tower",
     "slug": "tokyo-tower",
     "type": "landmark_structure",
     "region": "east_asia",
-    "lat": 35.6586,
-    "lng": 139.7454,
     "country": "Japan",
-    "summary": "A reinforced landmark with observation levels useful for long-range monitoring and signaling."
+    "lat": 35.6586,
+    "long": 139.7454
   },
   {
-    "name": "Mountain Hamlet China",
-    "slug": "china-hamlet",
+    "name": "Shaxi Ancient Town",
+    "slug": "shaxi",
     "type": "remote_settlement",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "China",
+    "lat": 25.248,
+    "long": 100.162
   },
   {
-    "name": "Rural Japanese Village",
-    "slug": "japan-village",
+    "name": "Shirakawa-go",
+    "slug": "shirakawa-go",
     "type": "remote_settlement",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "Japan",
+    "lat": 36.26,
+    "long": 136.905
   },
   {
-    "name": "Japanese War Bunkers",
-    "slug": "japan-bunkers",
+    "name": "Iwo Jima Underground Bunkers",
+    "slug": "iwo-jima-bunkers",
     "type": "subterranean",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "Japan",
+    "lat": 24.784,
+    "long": 141.322
   },
   {
-    "name": "Underground Cities China",
-    "slug": "china-underground",
+    "name": "Beijing Underground City",
+    "slug": "beijing-underground",
     "type": "subterranean",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "China",
+    "lat": 39.9042,
+    "long": 116.4074
   },
   {
     "name": "Shanghai Port",
     "slug": "shanghai-port",
     "type": "transit_hub",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "China",
+    "lat": 31.2304,
+    "long": 121.4737
   },
   {
     "name": "Tokyo Airport",
     "slug": "tokyo-airport",
     "type": "transit_hub",
-    "region": "east_asia"
+    "region": "east_asia",
+    "country": "Japan",
+    "lat": 35.5494,
+    "long": 139.7798
   },
   {
     "name": "Predjama Castle",
     "slug": "predjama",
     "type": "elevated_stronghold",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Slovenia",
+    "lat": 45.815,
+    "long": 14.1275
   },
   {
-    "name": "Sigiriya-style cliffs (analogue)",
-    "slug": "sigiriya-analogue",
+    "name": "Sigiriya",
+    "slug": "sigiriya",
     "type": "elevated_stronghold",
-    "region": "eastern_europe"
+    "region": "south_asia",
+    "country": "Sri Lanka",
+    "lat": 7.957,
+    "long": 80.7603
   },
   {
     "name": "Malbork Castle",
     "slug": "malbork",
     "type": "fortified_structure",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Poland",
+    "lat": 54.039,
+    "long": 19.0266
   },
   {
     "name": "Suomenlinna Fortress",
     "slug": "suomenlinna",
     "type": "fortified_structure",
     "region": "eastern_europe",
-    "lat": 60.1462,
-    "lng": 24.9884,
     "country": "Finland",
-    "summary": "A sea-fortress island network with controlled entry points, durable stone structures, and maritime visibility.",
-    "status": "featured",
-    "description": "Suomenlinna benefits from natural water barriers and limited access routes that are easier to monitor than open city districts. Existing tunnels, old bastions, and distributed buildings create redundancy if one sector is compromised. Exposure to severe weather and dependence on logistics from the mainland are the main constraints for prolonged occupation.",
-    "scores": {
-      "defensibility": 8.7,
-      "food": 5.6,
-      "water": 6.0,
-      "isolation": 8.9,
-      "escape": 6.1,
-      "sustainability": 6.3,
-      "human_risk": 6.8
-    }
+    "lat": 60.1462,
+    "long": 24.9884
   },
   {
-    "name": "Baltic Shipyards",
-    "slug": "shipyard",
+    "name": "Gda\u0144sk Shipyard",
+    "slug": "gdansk-shipyard",
     "type": "industrial_site",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Poland",
+    "lat": 54.352,
+    "long": 18.6466
   },
   {
-    "name": "Norilsk Industrial Complex",
+    "name": "Norilsk",
     "slug": "norilsk",
     "type": "industrial_site",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Russia",
+    "lat": 69.3558,
+    "long": 88.1893
   },
   {
     "name": "Chernobyl Exclusion Zone Facility",
     "slug": "chernobyl",
     "type": "institutional_compound",
     "region": "eastern_europe",
+    "country": "Ukraine",
     "lat": 51.2766,
-    "lng": 30.2219
+    "long": 30.2219
   },
   {
-    "name": "Russian Arctic Base",
-    "slug": "arctic-base",
+    "name": "Olenya Air Base",
+    "slug": "olenya-airbase",
     "type": "institutional_compound",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Russia",
+    "lat": 68.15,
+    "long": 33.45
   },
   {
     "name": "Faroe Islands",
     "slug": "faroe",
     "type": "isolated_landmass",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Faroe Islands",
+    "lat": 62.0,
+    "long": -6.7833
   },
   {
     "name": "Gotland",
     "slug": "gotland",
     "type": "isolated_landmass",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Sweden",
+    "lat": 57.6348,
+    "long": 18.2948
   },
   {
     "name": "Kizhi Pogost",
     "slug": "kizhi",
     "type": "landmark_structure",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Russia",
+    "lat": 62.0667,
+    "long": 35.2333
   },
   {
     "name": "Ostankino Tower",
     "slug": "ostankino",
     "type": "landmark_structure",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Russia",
+    "lat": 55.8197,
+    "long": 37.6116
   },
   {
     "name": "Longyearbyen",
     "slug": "longyearbyen",
     "type": "remote_settlement",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Norway",
+    "lat": 78.2232,
+    "long": 15.6469
   },
   {
     "name": "Visby",
     "slug": "visby",
     "type": "remote_settlement",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Sweden",
+    "lat": 57.6409,
+    "long": 18.296
   },
   {
-    "name": "Cold War Bunkers Baltic",
-    "slug": "baltic-bunker",
+    "name": "Ligatne Bunker",
+    "slug": "ligatne-bunker",
     "type": "subterranean",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Latvia",
+    "lat": 57.2558,
+    "long": 25.069
   },
   {
     "name": "Derinkuyu Underground City",
     "slug": "derinkuyu",
     "type": "subterranean",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Turkey",
+    "lat": 38.3746,
+    "long": 34.735
   },
   {
     "name": "Helsinki Airport",
     "slug": "helsinki-airport",
     "type": "transit_hub",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Finland",
+    "lat": 60.3172,
+    "long": 24.9633
   },
   {
     "name": "Murmansk Port",
     "slug": "murmansk",
     "type": "transit_hub",
-    "region": "eastern_europe"
+    "region": "eastern_europe",
+    "country": "Russia",
+    "lat": 68.9585,
+    "long": 33.0827
   },
   {
     "name": "Cappadocia Highlands",
     "slug": "cappadocia",
     "type": "elevated_stronghold",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Turkey",
+    "lat": 38.6431,
+    "long": 34.83
   },
   {
     "name": "Petra",
     "slug": "petra",
     "type": "elevated_stronghold",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Jordan",
+    "lat": 30.3285,
+    "long": 35.4444
   },
   {
     "name": "Krak des Chevaliers",
     "slug": "krak",
     "type": "fortified_structure",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Syria",
+    "lat": 34.7594,
+    "long": 36.308
   },
   {
     "name": "Masada",
     "slug": "masada",
     "type": "fortified_structure",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Israel",
+    "lat": 31.3156,
+    "long": 35.353
   },
   {
-    "name": "Refinery Complex Gulf",
-    "slug": "gulf-refinery",
+    "name": "Abqaiq Oil Processing Facility",
+    "slug": "abqaiq",
     "type": "industrial_site",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Saudi Arabia",
+    "lat": 25.937,
+    "long": 49.668
   },
   {
-    "name": "Water Desalination Plant",
-    "slug": "desalination",
+    "name": "Ras Al Khair Desalination Plant",
+    "slug": "ras-al-khair",
     "type": "industrial_site",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Saudi Arabia",
+    "lat": 27.527,
+    "long": 49.192
   },
   {
-    "name": "Desert Military Base",
-    "slug": "desert-base",
+    "name": "Al Udeid Air Base",
+    "slug": "al-udeid",
     "type": "institutional_compound",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Qatar",
+    "lat": 25.117,
+    "long": 51.314
   },
   {
-    "name": "Oil Field Compound",
-    "slug": "oil-compound",
+    "name": "Ghawar Oil Field Central Processing",
+    "slug": "ghawar-processing",
     "type": "institutional_compound",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Saudi Arabia",
+    "lat": 25.4,
+    "long": 49.6
   },
   {
     "name": "Qeshm Island",
     "slug": "qeshm",
     "type": "isolated_landmass",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Iran",
+    "lat": 26.8118,
+    "long": 55.8919
   },
   {
     "name": "Socotra Island",
     "slug": "socotra",
     "type": "isolated_landmass",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Yemen",
+    "lat": 12.4634,
+    "long": 53.8236
   },
   {
     "name": "Burj Khalifa",
     "slug": "burj",
     "type": "landmark_structure",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "United Arab Emirates",
+    "lat": 25.1972,
+    "long": 55.2744
   },
   {
     "name": "Lighthouse Hormuz",
     "slug": "hormuz-light",
     "type": "landmark_structure",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Iran",
+    "lat": 26.954,
+    "long": 56.272
   },
   {
-    "name": "Bedouin Settlement",
-    "slug": "bedouin",
+    "name": "Siwa Oasis",
+    "slug": "siwa-oasis",
     "type": "remote_settlement",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Egypt",
+    "lat": 29.2044,
+    "long": 25.5195
   },
   {
-    "name": "Oasis Town",
-    "slug": "oasis-town",
+    "name": "Wadi Musa",
+    "slug": "wadi-musa",
     "type": "remote_settlement",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Jordan",
+    "lat": 30.3225,
+    "long": 35.4789
   },
   {
     "name": "Derinkuyu",
     "slug": "derinkuyu-me",
     "type": "subterranean",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Turkey",
+    "lat": 38.3746,
+    "long": 34.735
   },
   {
     "name": "Gaza Tunnel Network",
     "slug": "gaza-tunnels",
     "type": "subterranean",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "Gaza Strip",
+    "lat": 31.5017,
+    "long": 34.4668
   },
   {
     "name": "Dubai Airport",
     "slug": "dubai-airport",
     "type": "transit_hub",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "United Arab Emirates",
+    "lat": 25.2532,
+    "long": 55.3657
   },
   {
     "name": "Jebel Ali Port",
     "slug": "jebel-ali",
     "type": "transit_hub",
-    "region": "middle_east"
+    "region": "middle_east",
+    "country": "United Arab Emirates",
+    "lat": 25.0113,
+    "long": 55.0606
   },
   {
     "name": "Mesa Verde",
     "slug": "mesa-verde",
     "type": "elevated_stronghold",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "United States",
+    "lat": 37.2309,
+    "long": -108.4618
   },
   {
     "name": "Table Rock Plateau",
     "slug": "table-rock",
     "type": "elevated_stronghold",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "United States",
+    "lat": 36.5395,
+    "long": -93.4896
   },
   {
     "name": "Alcatraz Island",
     "slug": "alcatraz",
     "type": "fortified_structure",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "United States",
+    "lat": 37.8267,
+    "long": -122.423
   },
   {
     "name": "Fort Jefferson",
     "slug": "fort-jefferson",
     "type": "fortified_structure",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "United States",
+    "lat": 24.6285,
+    "long": -82.8732
   },
   {
-    "name": "Grain Silos Midwest",
-    "slug": "grain-silos",
+    "name": "Hutchinson Salt Storage Caverns",
+    "slug": "hutchinson-salt",
     "type": "industrial_site",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "USA",
+    "lat": 38.0608,
+    "long": -97.9298
   },
   {
-    "name": "Texas Oil Refinery",
-    "slug": "oil-refinery",
+    "name": "Port Arthur Refinery",
+    "slug": "port-arthur-refinery",
     "type": "industrial_site",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "USA",
+    "lat": 29.8849,
+    "long": -93.9399
   },
   {
     "name": "Area 51",
     "slug": "area-51",
     "type": "institutional_compound",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "United States",
+    "lat": 37.235,
+    "long": -115.8111
   },
   {
     "name": "Guantanamo Bay",
     "slug": "guantanamo",
     "type": "institutional_compound",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "Cuba",
+    "lat": 19.9065,
+    "long": -75.2071
   },
   {
     "name": "Kodiak Island",
     "slug": "kodiak",
     "type": "isolated_landmass",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "United States",
+    "lat": 57.79,
+    "long": -152.4072
   },
   {
     "name": "Vancouver Island",
     "slug": "vancouver-island",
     "type": "isolated_landmass",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "Canada",
+    "lat": 49.65,
+    "long": -125.45
   },
   {
     "name": "CN Tower",
     "slug": "cn-tower",
     "type": "landmark_structure",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "Canada",
+    "lat": 43.6426,
+    "long": -79.3871
   },
   {
     "name": "Cape Hatteras Lighthouse",
     "slug": "cape-hatteras",
     "type": "landmark_structure",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "United States",
+    "lat": 35.2514,
+    "long": -75.528
   },
   {
     "name": "Telluride",
     "slug": "telluride",
     "type": "remote_settlement",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "United States",
+    "lat": 37.9375,
+    "long": -107.8123
   },
   {
     "name": "Utqiagvik",
     "slug": "utqiagvik",
     "type": "remote_settlement",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "United States",
+    "lat": 71.2906,
+    "long": -156.7886
   },
   {
     "name": "Cheyenne Mountain Complex",
     "slug": "cheyenne",
     "type": "subterranean",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "United States",
+    "lat": 38.7444,
+    "long": -104.8719
   },
   {
-    "name": "Missile Silo",
-    "slug": "missile-silo",
+    "name": "Titan Missile Museum (Silo 571-7)",
+    "slug": "titan-silo",
     "type": "subterranean",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "USA",
+    "lat": 31.8876,
+    "long": -110.9965
   },
   {
-    "name": "Chicago Rail Yard",
-    "slug": "rail-yard",
+    "name": "Corwith Intermodal Yard",
+    "slug": "corwith-yard",
     "type": "transit_hub",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "USA",
+    "lat": 41.8283,
+    "long": -87.7056
   },
   {
     "name": "LAX Airport",
     "slug": "lax",
     "type": "transit_hub",
-    "region": "north_america"
+    "region": "north_america",
+    "country": "United States",
+    "lat": 33.9416,
+    "long": -118.4085
   },
   {
     "name": "Blue Mountains Cliffs",
     "slug": "blue-mountains",
     "type": "elevated_stronghold",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Australia",
+    "lat": -33.7,
+    "long": 150.3
   },
   {
     "name": "Uluru Surroundings",
     "slug": "uluru",
     "type": "elevated_stronghold",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Australia",
+    "lat": -25.3444,
+    "long": 131.0369
   },
   {
     "name": "Fort Denison",
     "slug": "fort-denison",
     "type": "fortified_structure",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Australia",
+    "lat": -33.8568,
+    "long": 151.2253
   },
   {
     "name": "Maori Pa Fortifications",
     "slug": "maori-pa",
     "type": "fortified_structure",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "New Zealand",
+    "lat": -38.1368,
+    "long": 176.2497
   },
   {
-    "name": "Mining Operation Site",
-    "slug": "mining-site",
+    "name": "Super Pit Gold Mine",
+    "slug": "super-pit",
     "type": "industrial_site",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Australia",
+    "lat": -30.7485,
+    "long": 121.516
   },
   {
-    "name": "Sheep Station Complex",
-    "slug": "sheep-station",
+    "name": "Anna Creek Station",
+    "slug": "anna-creek",
     "type": "industrial_site",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Australia",
+    "lat": -28.8667,
+    "long": 136.5
   },
   {
-    "name": "Remote Defence Base",
-    "slug": "defence-base",
+    "name": "RAAF Base Tindal",
+    "slug": "tindal-base",
     "type": "institutional_compound",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Australia",
+    "lat": -14.5211,
+    "long": 132.3783
   },
   {
-    "name": "Research Station Outback",
-    "slug": "outback-research",
+    "name": "Pine Gap Facility",
+    "slug": "pine-gap",
     "type": "institutional_compound",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Australia",
+    "lat": -23.799,
+    "long": 133.737
   },
   {
     "name": "Fiji Islands",
     "slug": "fiji",
     "type": "isolated_landmass",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Fiji",
+    "lat": -17.7134,
+    "long": 178.065
   },
   {
     "name": "Tasmania",
     "slug": "tasmania",
     "type": "isolated_landmass",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Australia",
+    "lat": -41.4545,
+    "long": 145.9707
   },
   {
     "name": "Cape Byron Lighthouse",
     "slug": "byron-light",
     "type": "landmark_structure",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Australia",
+    "lat": -28.638,
+    "long": 153.638
   },
   {
     "name": "Sydney Harbour Bridge",
     "slug": "harbour-bridge",
     "type": "landmark_structure",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Australia",
+    "lat": -33.8523,
+    "long": 151.2108
   },
   {
-    "name": "Island Village Pacific",
-    "slug": "pacific-village",
+    "name": "Port Vila",
+    "slug": "port-vila",
     "type": "remote_settlement",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Vanuatu",
+    "lat": -17.7333,
+    "long": 168.3273
   },
   {
-    "name": "Outback Settlement",
-    "slug": "outback-town",
+    "name": "Coober Pedy",
+    "slug": "coober-pedy",
     "type": "remote_settlement",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Australia",
+    "lat": -29.0139,
+    "long": 134.7547
   },
   {
-    "name": "Cold War Bunker Australia",
-    "slug": "aus-bunker",
+    "name": "North Head Gun Emplacements",
+    "slug": "north-head-bunker",
     "type": "subterranean",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Australia",
+    "lat": -33.82,
+    "long": 151.305
   },
   {
-    "name": "Opal Mining Tunnels",
-    "slug": "opal-mines",
+    "name": "Coober Pedy Underground Homes",
+    "slug": "coober-pedy-underground",
     "type": "subterranean",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Australia",
+    "lat": -29.0139,
+    "long": 134.7547
   },
   {
     "name": "Auckland Port",
     "slug": "auckland-port",
     "type": "transit_hub",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "New Zealand",
+    "lat": -36.844,
+    "long": 174.7622
   },
   {
     "name": "Sydney Airport",
     "slug": "sydney-airport",
     "type": "transit_hub",
-    "region": "oceania"
+    "region": "oceania",
+    "country": "Australia",
+    "lat": -33.9399,
+    "long": 151.1753
   },
   {
     "name": "Glacier Plateau",
     "slug": "glacier",
     "type": "elevated_stronghold",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Antarctica",
+    "lat": -82.8628,
+    "long": 135.0
   },
   {
     "name": "Ice Shelf Ridge",
     "slug": "ice-shelf",
     "type": "elevated_stronghold",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Antarctica",
+    "lat": -75.0,
+    "long": -100.0
   },
   {
     "name": "Amundsen-Scott Station",
     "slug": "amundsen",
     "type": "fortified_structure",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Antarctica",
+    "lat": -90.0,
+    "long": 0.0
   },
   {
     "name": "McMurdo Station",
     "slug": "mcmurdo",
     "type": "fortified_structure",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Antarctica",
+    "lat": -77.8419,
+    "long": 166.6863
   },
   {
-    "name": "Fuel Depot Arctic",
-    "slug": "fuel-depot",
+    "name": "Prudhoe Bay Oil Field",
+    "slug": "prudhoe-bay",
     "type": "industrial_site",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "USA",
+    "lat": 70.255,
+    "long": -148.337
   },
   {
-    "name": "Icebreaker Dock",
-    "slug": "icebreaker",
+    "name": "Murmansk Icebreaker Port",
+    "slug": "murmansk-icebreaker",
     "type": "industrial_site",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Russia",
+    "lat": 68.9585,
+    "long": 33.0827
   },
   {
-    "name": "Arctic Military Outpost",
-    "slug": "arctic-outpost",
+    "name": "Nagurskoye Air Base",
+    "slug": "nagurskoye",
     "type": "institutional_compound",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Russia",
+    "lat": 80.8032,
+    "long": 47.6636
   },
   {
-    "name": "Research Base Antarctica",
-    "slug": "antarctica-base",
+    "name": "Amundsen-Scott South Pole Station",
+    "slug": "south-pole-station",
     "type": "institutional_compound",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Antarctica",
+    "lat": -90.0,
+    "long": 0.0
   },
   {
     "name": "Antarctic Peninsula",
     "slug": "antarctic-peninsula",
     "type": "isolated_landmass",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Antarctica",
+    "lat": -63.0,
+    "long": -57.0
   },
   {
     "name": "Greenland",
     "slug": "greenland",
     "type": "isolated_landmass",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Greenland",
+    "lat": 71.7069,
+    "long": -42.6043
   },
   {
     "name": "Antarctic Lighthouse",
     "slug": "antarctic-light",
     "type": "landmark_structure",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Antarctica",
+    "lat": -64.0,
+    "long": -60.0
   },
   {
     "name": "Polar Observation Tower",
     "slug": "polar-tower",
     "type": "landmark_structure",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Antarctica",
+    "lat": -75.0,
+    "long": 0.0
   },
   {
-    "name": "Antarctic Camp",
-    "slug": "antarctic-camp",
-    "type": "remote_settlement",
-    "region": "polar_extreme"
-  },
-  {
-    "name": "Remote Arctic Village",
-    "slug": "arctic-village",
-    "type": "remote_settlement",
-    "region": "polar_extreme"
-  },
-  {
-    "name": "Arctic Bunker",
-    "slug": "arctic-bunker",
+    "name": "Olavsvern Naval Base",
+    "slug": "olavsvern",
     "type": "subterranean",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Norway",
+    "lat": 69.6817,
+    "long": 18.9826
   },
   {
-    "name": "Ice Tunnel Systems",
-    "slug": "ice-tunnels",
+    "name": "Camp Century Ice Tunnels",
+    "slug": "camp-century",
     "type": "subterranean",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Greenland",
+    "lat": 77.166,
+    "long": -61.133
   },
   {
-    "name": "Ice Runway",
-    "slug": "ice-runway",
+    "name": "Phoenix Airfield (McMurdo)",
+    "slug": "phoenix-airfield",
     "type": "transit_hub",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Antarctica",
+    "lat": -77.9564,
+    "long": 166.7667
   },
   {
-    "name": "Supply Port Arctic",
-    "slug": "arctic-port",
+    "name": "Port of Murmansk",
+    "slug": "murmansk-port",
     "type": "transit_hub",
-    "region": "polar_extreme"
+    "region": "polar_extreme",
+    "country": "Russia",
+    "lat": 68.9707,
+    "long": 33.074
   },
   {
-    "name": "Andean Ridge Settlement",
-    "slug": "andean-ridge",
+    "name": "La Rinconada",
+    "slug": "la-rinconada",
     "type": "elevated_stronghold",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Peru",
+    "lat": -14.6315,
+    "long": -69.446
   },
   {
     "name": "Machu Picchu",
     "slug": "machu-picchu",
     "type": "elevated_stronghold",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Peru",
+    "lat": -13.1631,
+    "long": -72.545
   },
   {
     "name": "Fort Copacabana",
     "slug": "copacabana-fort",
     "type": "fortified_structure",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Brazil",
+    "lat": -22.9886,
+    "long": -43.1916
   },
   {
     "name": "San Felipe Fortress",
     "slug": "san-felipe",
     "type": "fortified_structure",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Colombia",
+    "lat": 10.4236,
+    "long": -75.5514
   },
   {
-    "name": "Hydroelectric Dam Complex",
-    "slug": "hydro-dam",
+    "name": "Itaipu Dam",
+    "slug": "itaipu-dam",
     "type": "industrial_site",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Brazil/Paraguay",
+    "lat": -25.4078,
+    "long": -54.5882
   },
   {
-    "name": "Soy Processing Plant",
-    "slug": "soy-plant",
+    "name": "Bunge Soy Processing Plant (Santos)",
+    "slug": "bunge-santos",
     "type": "industrial_site",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Brazil",
+    "lat": -23.9608,
+    "long": -46.3336
   },
   {
-    "name": "Amazon Research Station",
-    "slug": "amazon-station",
+    "name": "Amazon Tall Tower Observatory",
+    "slug": "atto",
     "type": "institutional_compound",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Brazil",
+    "lat": -2.145,
+    "long": -59.005
   },
   {
-    "name": "Military Jungle Base",
-    "slug": "jungle-base",
+    "name": "Tambopata Research Center",
+    "slug": "tambopata",
     "type": "institutional_compound",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Peru",
+    "lat": -12.836,
+    "long": -69.296
   },
   {
     "name": "Chilo\u00e9 Island",
     "slug": "chiloe",
     "type": "isolated_landmass",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Chile",
+    "lat": -42.64,
+    "long": -73.99
   },
   {
     "name": "Gal\u00e1pagos Islands",
     "slug": "galapagos",
     "type": "isolated_landmass",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Ecuador",
+    "lat": -0.9538,
+    "long": -90.9656
   },
   {
     "name": "Christ the Redeemer",
     "slug": "christ-redeemer",
     "type": "landmark_structure",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Brazil",
+    "lat": -22.9519,
+    "long": -43.2105
   },
   {
     "name": "Lighthouse Punta Del Este",
     "slug": "punta-lighthouse",
     "type": "landmark_structure",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Uruguay",
+    "lat": -34.9671,
+    "long": -54.9503
   },
   {
-    "name": "Andean Hamlet",
-    "slug": "andean-hamlet",
+    "name": "Cusco Highlands Village",
+    "slug": "cusco-highlands",
     "type": "remote_settlement",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Peru",
+    "lat": -13.5319,
+    "long": -71.9675
   },
   {
     "name": "Patagonian Village",
     "slug": "patagonia-village",
     "type": "remote_settlement",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Argentina",
+    "lat": -49.3315,
+    "long": -72.8863
   },
   {
-    "name": "Cave Systems Patagonia",
-    "slug": "patagonia-caves",
+    "name": "Cueva de las Manos",
+    "slug": "cueva-de-las-manos",
     "type": "subterranean",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Argentina",
+    "lat": -47.1556,
+    "long": -70.6608
   },
   {
-    "name": "Mining Tunnel Network",
-    "slug": "mine-tunnels",
+    "name": "Potos\u00ed Silver Mine (Cerro Rico)",
+    "slug": "potosi-mine",
     "type": "subterranean",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Bolivia",
+    "lat": -19.585,
+    "long": -65.753
   },
   {
     "name": "Panama Canal Zone",
     "slug": "panama-canal",
     "type": "transit_hub",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Panama",
+    "lat": 9.08,
+    "long": -79.68
   },
   {
     "name": "S\u00e3o Paulo Airport",
     "slug": "sao-paulo-airport",
     "type": "transit_hub",
-    "region": "south_america"
+    "region": "south_america",
+    "country": "Brazil",
+    "lat": -23.4356,
+    "long": -46.4731
   },
   {
     "name": "Hilltop Fort Rajasthan",
     "slug": "rajasthan-fort",
     "type": "elevated_stronghold",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 26.9124,
+    "long": 75.7873
   },
   {
     "name": "Tiger\u2019s Nest Monastery",
     "slug": "tigers-nest",
     "type": "elevated_stronghold",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "Bhutan",
+    "lat": 27.4916,
+    "long": 89.363
   },
   {
     "name": "Mehrangarh Fort",
     "slug": "mehrangarh",
     "type": "fortified_structure",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 26.2986,
+    "long": 73.0183
   },
   {
-    "name": "Sigiriya",
-    "slug": "sigiriya",
-    "type": "fortified_structure",
-    "region": "south_asia"
-  },
-  {
-    "name": "Rice Processing Facility",
-    "slug": "rice-facility",
+    "name": "KRBL Rice Mill (Dhuri)",
+    "slug": "krbl-dhuri",
     "type": "industrial_site",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 30.368,
+    "long": 75.873
   },
   {
-    "name": "Textile Industrial Complex",
-    "slug": "textile-complex",
+    "name": "Tiruppur Textile Cluster",
+    "slug": "tiruppur-textiles",
     "type": "industrial_site",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 11.1085,
+    "long": 77.3411
   },
   {
-    "name": "Indian Army Base",
-    "slug": "army-base",
+    "name": "Pathankot Air Force Station",
+    "slug": "pathankot-afs",
     "type": "institutional_compound",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 32.233,
+    "long": 75.634
   },
   {
-    "name": "Research Station Himalayas",
-    "slug": "himalaya-station",
+    "name": "Hanle Observatory",
+    "slug": "hanle-observatory",
     "type": "institutional_compound",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 32.7794,
+    "long": 78.9642
   },
   {
     "name": "Andaman Islands",
     "slug": "andaman",
     "type": "isolated_landmass",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 11.7401,
+    "long": 92.6586
   },
   {
     "name": "Lakshadweep",
     "slug": "lakshadweep",
     "type": "isolated_landmass",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 10.5667,
+    "long": 72.6417
   },
   {
     "name": "Lighthouse Mahabalipuram",
     "slug": "mahabalipuram",
     "type": "landmark_structure",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 12.617,
+    "long": 80.1945
   },
   {
     "name": "Qutub Minar",
     "slug": "qutub",
     "type": "landmark_structure",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 28.5245,
+    "long": 77.1855
   },
   {
-    "name": "Himalayan Village",
-    "slug": "himalayan-village",
+    "name": "Kibber Village",
+    "slug": "kibber",
     "type": "remote_settlement",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 32.332,
+    "long": 78.011
   },
   {
-    "name": "Rural Kerala Settlement",
-    "slug": "kerala-village",
+    "name": "Kuttanad Village",
+    "slug": "kuttanad",
     "type": "remote_settlement",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 9.405,
+    "long": 76.42
   },
   {
     "name": "Ajanta Caves",
     "slug": "ajanta",
     "type": "subterranean",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 20.5519,
+    "long": 75.7033
   },
   {
-    "name": "Military Bunker Kashmir",
-    "slug": "kashmir-bunker",
+    "name": "Kargil War Bunkers",
+    "slug": "kargil-bunkers",
     "type": "subterranean",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 34.553,
+    "long": 76.1348
   },
   {
     "name": "Delhi Airport",
     "slug": "delhi-airport",
     "type": "transit_hub",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 28.5562,
+    "long": 77.1
   },
   {
     "name": "Mumbai Port",
     "slug": "mumbai-port",
     "type": "transit_hub",
-    "region": "south_asia"
+    "region": "south_asia",
+    "country": "India",
+    "lat": 18.9488,
+    "long": 72.8354
   },
   {
     "name": "Ha Long Bay Cliffs",
     "slug": "halong",
     "type": "elevated_stronghold",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Vietnam",
+    "lat": 20.9101,
+    "long": 107.1839
   },
   {
     "name": "Rice Terrace Highlands",
     "slug": "rice-terraces",
     "type": "elevated_stronghold",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Philippines",
+    "lat": 16.912,
+    "long": 121.056
   },
   {
     "name": "Hue Citadel",
     "slug": "hue",
     "type": "fortified_structure",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Vietnam",
+    "lat": 16.4637,
+    "long": 107.5909
   },
   {
     "name": "Intramuros Manila",
     "slug": "intramuros",
     "type": "fortified_structure",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Philippines",
+    "lat": 14.5896,
+    "long": 120.975
   },
   {
-    "name": "Fishing Port Hub",
-    "slug": "fishing-port",
+    "name": "General Santos Fish Port",
+    "slug": "gen-santos-port",
     "type": "industrial_site",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Philippines",
+    "lat": 6.0922,
+    "long": 125.1716
   },
   {
-    "name": "Palm Oil Plantation Complex",
-    "slug": "palm-oil",
+    "name": "Sime Darby Palm Oil Estate (Sabah)",
+    "slug": "sime-darby-sabah",
     "type": "industrial_site",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Malaysia",
+    "lat": 5.98,
+    "long": 117.85
   },
   {
-    "name": "Military Jungle Base",
-    "slug": "sea-jungle-base",
+    "name": "Kota Kinabalu Naval Base",
+    "slug": "kota-kinabalu-base",
     "type": "institutional_compound",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Malaysia",
+    "lat": 6.0,
+    "long": 116.071
   },
   {
-    "name": "Remote Research Station",
-    "slug": "sea-research",
+    "name": "Danum Valley Field Centre",
+    "slug": "danum-valley",
     "type": "institutional_compound",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Malaysia",
+    "lat": 4.96,
+    "long": 117.8
   },
   {
     "name": "Komodo Island",
     "slug": "komodo",
     "type": "isolated_landmass",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Indonesia",
+    "lat": -8.55,
+    "long": 119.49
   },
   {
     "name": "Palawan",
     "slug": "palawan",
     "type": "isolated_landmass",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Philippines",
+    "lat": 9.8349,
+    "long": 118.7384
   },
   {
     "name": "Petronas Towers",
     "slug": "petronas",
     "type": "landmark_structure",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Malaysia",
+    "lat": 3.1579,
+    "long": 101.7115
   },
   {
     "name": "Phu Quoc Lighthouse",
     "slug": "phuquoc-light",
     "type": "landmark_structure",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Vietnam",
+    "lat": 10.2897,
+    "long": 103.984
   },
   {
-    "name": "Island Village Indonesia",
-    "slug": "island-village",
+    "name": "Banda Neira",
+    "slug": "banda-neira",
     "type": "remote_settlement",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Indonesia",
+    "lat": -4.5233,
+    "long": 129.8958
   },
   {
-    "name": "Jungle Hamlet",
-    "slug": "jungle-hamlet",
+    "name": "Banlung",
+    "slug": "banlung",
     "type": "remote_settlement",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Cambodia",
+    "lat": 13.7394,
+    "long": 106.9873
   },
   {
-    "name": "Bunker Network Jungle",
-    "slug": "jungle-bunker",
+    "name": "Cu Chi Tunnels",
+    "slug": "cu-chi-tunnels",
     "type": "subterranean",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Vietnam",
+    "lat": 10.8327,
+    "long": 106.4713
   },
   {
     "name": "Vietnam Tunnel Systems",
     "slug": "cu-chi",
     "type": "subterranean",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Vietnam",
+    "lat": 10.8327,
+    "long": 106.4713
   },
   {
     "name": "Bangkok Airport",
     "slug": "bangkok-airport",
     "type": "transit_hub",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Thailand",
+    "lat": 13.69,
+    "long": 100.7501
   },
   {
     "name": "Singapore Port",
     "slug": "singapore-port",
     "type": "transit_hub",
-    "region": "southeast_asia"
+    "region": "southeast_asia",
+    "country": "Singapore",
+    "lat": 1.2644,
+    "long": 103.82
   },
   {
     "name": "Edinburgh Castle",
     "slug": "edinburgh-castle",
     "type": "elevated_stronghold",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 55.9486,
+    "long": -3.1999
   },
   {
     "name": "The Roaches",
     "slug": "the-roaches",
     "type": "elevated_stronghold",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 53.171,
+    "long": -1.996
   },
   {
     "name": "Caerphilly Castle",
     "slug": "caerphilly-castle",
     "type": "fortified_structure",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 51.5744,
+    "long": -3.218
   },
   {
     "name": "Fort George",
     "slug": "fort-george",
     "type": "fortified_structure",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 57.623,
+    "long": -3.87
   },
   {
     "name": "Port Talbot Steelworks",
     "slug": "port-talbot",
     "type": "industrial_site",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 51.5885,
+    "long": -3.7806
   },
   {
-    "name": "UK Distribution Warehouse",
-    "slug": "uk-warehouse",
+    "name": "Amazon BHX4 Fulfilment Centre",
+    "slug": "bhx4-amazon",
     "type": "industrial_site",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 52.483,
+    "long": -1.718
   },
   {
     "name": "HM Prison Dartmoor",
     "slug": "dartmoor-prison",
     "type": "institutional_compound",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 50.596,
+    "long": -3.9157
   },
   {
     "name": "Porton Down",
     "slug": "porton-down",
     "type": "institutional_compound",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 51.129,
+    "long": -1.803
   },
   {
     "name": "Lindisfarne",
     "slug": "lindisfarne",
     "type": "isolated_landmass",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 55.669,
+    "long": -1.799
   },
   {
     "name": "St Kilda",
     "slug": "st-kilda",
     "type": "isolated_landmass",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 57.814,
+    "long": -8.583
   },
   {
     "name": "Fastnet Lighthouse",
     "slug": "fastnet",
     "type": "landmark_structure",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "Ireland",
+    "lat": 51.388,
+    "long": -9.602
   },
   {
     "name": "Spinnaker Tower",
     "slug": "spinnaker",
     "type": "landmark_structure",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 50.795,
+    "long": -1.108
   },
   {
     "name": "Clovelly",
     "slug": "clovelly",
     "type": "remote_settlement",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 50.989,
+    "long": -4.399
   },
   {
     "name": "Isle of Eigg Village",
     "slug": "eigg",
     "type": "remote_settlement",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 56.914,
+    "long": -6.142
   },
   {
     "name": "Burlington Bunker",
     "slug": "burlington-bunker",
     "type": "subterranean",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 51.356,
+    "long": -2.317
   },
   {
     "name": "Cheddar Gorge Caves",
     "slug": "cheddar-gorge",
     "type": "subterranean",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 51.279,
+    "long": -2.767
   },
   {
     "name": "Heathrow Airport",
     "slug": "heathrow",
     "type": "transit_hub",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 51.47,
+    "long": -0.4543
   },
   {
     "name": "Portsmouth Harbour",
     "slug": "portsmouth-harbour",
     "type": "transit_hub",
-    "region": "uk_ireland"
+    "region": "uk_ireland",
+    "country": "United Kingdom",
+    "lat": 50.798,
+    "long": -1.109
   },
   {
     "name": "Neuschwanstein Castle",
     "slug": "neuschwanstein",
     "type": "elevated_stronghold",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "Germany",
+    "lat": 47.5576,
+    "long": 10.7498
   },
   {
     "name": "Rocamadour",
     "slug": "rocamadour",
     "type": "elevated_stronghold",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "France",
+    "lat": 44.8,
+    "long": 1.616
   },
   {
     "name": "Carcassonne",
     "slug": "carcassonne",
     "type": "fortified_structure",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "France",
+    "lat": 43.213,
+    "long": 2.351
   },
   {
     "name": "Mont Saint-Michel",
     "slug": "mont-saint-michel",
     "type": "fortified_structure",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "France",
+    "lat": 48.636,
+    "long": -1.511
   },
   {
     "name": "Rotterdam Port",
     "slug": "rotterdam-port",
     "type": "industrial_site",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "Netherlands",
+    "lat": 51.955,
+    "long": 4.142
   },
   {
     "name": "Ruhr Industrial Complex",
     "slug": "ruhr",
     "type": "industrial_site",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "Germany",
+    "lat": 51.4556,
+    "long": 7.0116
   },
   {
-    "name": "French Legion Base",
-    "slug": "legion-base",
+    "name": "2e REP Barracks (Calvi)",
+    "slug": "2rep-calvi",
     "type": "institutional_compound",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "France",
+    "lat": 42.5667,
+    "long": 8.757
   },
   {
     "name": "NATO Airbase Geilenkirchen",
     "slug": "geilenkirchen",
     "type": "institutional_compound",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "Germany",
+    "lat": 50.96,
+    "long": 6.042
   },
   {
     "name": "Heligoland",
     "slug": "heligoland",
     "type": "isolated_landmass",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "Germany",
+    "lat": 54.182,
+    "long": 7.885
   },
   {
     "name": "\u00cele d\u2019Yeu",
     "slug": "ile-dyeu",
     "type": "isolated_landmass",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "France",
+    "lat": 46.705,
+    "long": -2.341
   },
   {
     "name": "Eiffel Tower",
     "slug": "eiffel",
     "type": "landmark_structure",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "France",
+    "lat": 48.8584,
+    "long": 2.2945
   },
   {
     "name": "Phare du Cr\u00e9ac'h",
     "slug": "creach",
     "type": "landmark_structure",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "France",
+    "lat": 48.459,
+    "long": -4.785
   },
   {
     "name": "Eguisheim",
     "slug": "eguisheim",
     "type": "remote_settlement",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "France",
+    "lat": 48.042,
+    "long": 7.307
   },
   {
     "name": "Hallstatt",
     "slug": "hallstatt",
     "type": "remote_settlement",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "Austria",
+    "lat": 47.561,
+    "long": 13.649
   },
   {
     "name": "Maginot Line Bunkers",
     "slug": "maginot-line",
     "type": "subterranean",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "France",
+    "lat": 49.925,
+    "long": 2.142
   },
   {
     "name": "Naours Underground City",
     "slug": "naours",
     "type": "subterranean",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "France",
+    "lat": 50.951,
+    "long": 2.133
   },
   {
     "name": "Charles de Gaulle Airport",
     "slug": "cdg",
     "type": "transit_hub",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "France",
+    "lat": 49.0097,
+    "long": 2.5479
   },
   {
     "name": "Schiphol Airport",
     "slug": "schiphol",
     "type": "transit_hub",
-    "region": "western_europe"
+    "region": "western_europe",
+    "country": "Netherlands",
+    "lat": 52.3105,
+    "long": 4.7683
   }
 ]
