@@ -6,10 +6,10 @@
   function createBaseMap({ mapElement, statusElement, labelFor, createBaseUrl, onReset }) {
     let map = null;
     let tileLayer = null;
-    let markersLayer = null;
+    let markers = null;
 
     function ensureMap() {
-      if (!window.L) {
+      if (!window.L || typeof window.L.markerClusterGroup !== 'function') {
         statusElement.textContent = 'Map failed to load. Please refresh or switch to list view.';
         mapElement.hidden = true;
         return false;
@@ -30,7 +30,8 @@
       });
       tileLayer.addTo(map);
 
-      markersLayer = window.L.layerGroup().addTo(map);
+      markers = window.L.markerClusterGroup();
+      map.addLayer(markers);
       return true;
     }
 
@@ -40,7 +41,7 @@
       }
 
       mapElement.hidden = false;
-      markersLayer.clearLayers();
+      markers.clearLayers();
 
       const mappableBases = bases.filter(hasCoordinates);
 
@@ -76,7 +77,7 @@
         `;
 
         marker.bindPopup(popupHtml);
-        marker.addTo(markersLayer);
+        markers.addLayer(marker);
         bounds.push([base.lat, base.long]);
       });
 
