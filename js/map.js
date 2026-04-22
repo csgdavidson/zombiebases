@@ -1,6 +1,6 @@
 (function () {
   function hasCoordinates(base) {
-    return Number.isFinite(base.lat) && Number.isFinite(base.lng);
+    return base?.lat != null && base?.long != null && Number.isFinite(base.lat) && Number.isFinite(base.long);
   }
 
   function createBaseMap({ mapElement, statusElement, labelFor, createBaseUrl, onReset }) {
@@ -67,7 +67,7 @@
       const bounds = [];
 
       mappableBases.forEach((base) => {
-        const marker = window.L.marker([base.lat, base.lng]);
+        const marker = window.L.marker([base.lat, base.long]);
         const popupHtml = `
           <strong>${base.name}</strong><br>
           ${labelFor('type', base.type)} • ${labelFor('region', base.region)}<br>
@@ -77,7 +77,7 @@
 
         marker.bindPopup(popupHtml);
         marker.addTo(markersLayer);
-        bounds.push([base.lat, base.lng]);
+        bounds.push([base.lat, base.long]);
       });
 
       if (bounds.length === 1) {
