@@ -7,6 +7,22 @@
     let map = null;
     let markers = null;
 
+    function removeDirectMarkerLayers() {
+      if (!map) {
+        return;
+      }
+
+      map.eachLayer((layer) => {
+        if (!layer || layer === markers) {
+          return;
+        }
+
+        if (layer instanceof window.L.Marker) {
+          map.removeLayer(layer);
+        }
+      });
+    }
+
     function ensureMap() {
       if (!window.L || typeof window.L.markerClusterGroup !== 'function') {
         statusElement.textContent = 'Map failed to load. Please refresh or switch to list view.';
@@ -30,6 +46,7 @@
 
       markers = window.L.markerClusterGroup();
       map.addLayer(markers);
+      removeDirectMarkerLayers();
       return true;
     }
 
@@ -61,6 +78,7 @@
       mapElement.hidden = false;
 
       // Keep the cluster group as the single marker layer source of truth.
+      removeDirectMarkerLayers();
       markers.clearLayers();
 
       const mappableBases = bases.filter(hasCoordinates);
@@ -86,6 +104,7 @@
 
       statusElement.innerHTML = '';
       const bounds = addMarkersToClusterGroup(mappableBases);
+      removeDirectMarkerLayers();
 
       if (bounds.length === 1) {
         map.setView(bounds[0], 5);
