@@ -2596,7 +2596,27 @@
     "region": "oceania",
     "country": "Australia",
     "lat": -33.7,
-    "long": 150.3
+    "long": 150.3,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "A strong terrain-based refuge with serious defensive value and lower population pressure than coastal cities.",
+      "strengths": [
+        "Strong natural defensive terrain",
+        "Difficult access routes"
+      ],
+      "weaknesses": [
+        "Limited infrastructure",
+        "Long-term livability is uneven"
+      ]
+    }
   },
   {
     "name": "Uluru Surroundings",
@@ -2605,7 +2625,27 @@
     "region": "oceania",
     "country": "Australia",
     "lat": -25.3444,
-    "long": 131.0369
+    "long": 131.0369,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 3,
+        "isolation": 9,
+        "accessibility": 2
+      }
+    },
+    "description": {
+      "summary": "Strong on remoteness, weaker on sustainability.",
+      "strengths": [
+        "Extreme isolation",
+        "Terrain presence"
+      ],
+      "weaknesses": [
+        "Limited resources",
+        "Very difficult logistics"
+      ]
+    }
   },
   {
     "name": "Fort Denison",
@@ -2614,7 +2654,27 @@
     "region": "oceania",
     "country": "Australia",
     "lat": -33.8568,
-    "long": 151.2253
+    "long": 151.2253,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 3,
+        "isolation": 5,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "A compact fortified island site with strong defence but limited long-term viability.",
+      "strengths": [
+        "Strong defensive structure",
+        "Controlled access"
+      ],
+      "weaknesses": [
+        "Very small capacity",
+        "Urban proximity"
+      ]
+    }
   },
   {
     "name": "Maori Pa Fortifications",
@@ -2623,7 +2683,27 @@
     "region": "oceania",
     "country": "New Zealand",
     "lat": -38.1368,
-    "long": 176.2497
+    "long": 176.2497,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Historically defensive sites with strong terrain advantage but limited modern infrastructure.",
+      "strengths": [
+        "Terrain-based defence",
+        "Controlled approaches"
+      ],
+      "weaknesses": [
+        "Limited infrastructure",
+        "Moderate sustainability"
+      ]
+    }
   },
   {
     "name": "Super Pit Gold Mine",
@@ -2632,7 +2712,27 @@
     "region": "oceania",
     "country": "Australia",
     "lat": -30.7485,
-    "long": 121.516
+    "long": 121.516,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 3,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Industrial and remote but not suited to long-term habitation.",
+      "strengths": [
+        "Remote location",
+        "Industrial resources"
+      ],
+      "weaknesses": [
+        "Hazardous environment",
+        "Poor livability"
+      ]
+    }
   },
   {
     "name": "Anna Creek Station",
@@ -2641,7 +2741,27 @@
     "region": "oceania",
     "country": "Australia",
     "lat": -28.8667,
-    "long": 136.5
+    "long": 136.5,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 4,
+        "sustainability": 7,
+        "isolation": 8,
+        "accessibility": 2
+      }
+    },
+    "description": {
+      "summary": "Anna Creek Station offers huge scale, remoteness, and genuine long-term land-use potential. Its weakness is that it is hard to defend in a traditional fortress sense and difficult to support logistically.",
+      "strengths": [
+        "Exceptional remoteness reduces outside pressure",
+        "Real long-term land and livestock potential"
+      ],
+      "weaknesses": [
+        "Very large area is hard to secure",
+        "Resupply and access are difficult"
+      ]
+    }
   },
   {
     "name": "RAAF Base Tindal",
@@ -2650,7 +2770,27 @@
     "region": "oceania",
     "country": "Australia",
     "lat": -14.5211,
-    "long": 132.3783
+    "long": 132.3783,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 7,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "A remote military compound with strong defensive capability and moderate sustainability.",
+      "strengths": [
+        "Controlled military infrastructure",
+        "Low population pressure"
+      ],
+      "weaknesses": [
+        "Strategic visibility",
+        "Dependent on supply chains"
+      ]
+    }
   },
   {
     "name": "Pine Gap Facility",
@@ -2659,7 +2799,27 @@
     "region": "oceania",
     "country": "Australia",
     "lat": -23.799,
-    "long": 133.737
+    "long": 133.737,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 8,
+        "accessibility": 2
+      }
+    },
+    "description": {
+      "summary": "Remote and secure with real infrastructure, but dependent on systems and potentially strategic.",
+      "strengths": [
+        "Extreme remoteness",
+        "Secure facility design"
+      ],
+      "weaknesses": [
+        "System dependency",
+        "Strategic target risk"
+      ]
+    }
   },
   {
     "name": "Fiji Islands",
@@ -2668,7 +2828,27 @@
     "region": "oceania",
     "country": "Fiji",
     "lat": -17.7134,
-    "long": 178.065
+    "long": 178.065,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 7,
+        "isolation": 9,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "A strong island candidate balancing isolation with livability and resource availability.",
+      "strengths": [
+        "Island separation",
+        "Good resource base"
+      ],
+      "weaknesses": [
+        "Difficult reinforcement",
+        "Distributed geography"
+      ]
+    }
   },
   {
     "name": "Tasmania",
@@ -2677,7 +2857,27 @@
     "region": "oceania",
     "country": "Australia",
     "lat": -41.4545,
-    "long": 145.9707
+    "long": 145.9707,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 8,
+        "isolation": 8,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "One of the best balanced survival options, combining isolation with real sustainability.",
+      "strengths": [
+        "Strong resource base",
+        "Island separation"
+      ],
+      "weaknesses": [
+        "Hard to fully secure",
+        "Not fully isolated"
+      ]
+    }
   },
   {
     "name": "Cape Byron Lighthouse",
@@ -2686,7 +2886,27 @@
     "region": "oceania",
     "country": "Australia",
     "lat": -28.638,
-    "long": 153.638
+    "long": 153.638,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 2,
+        "isolation": 4,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Good as a lookout, poor as a survival base. It lacks the scale and resource base needed for anything beyond temporary refuge.",
+      "strengths": [
+        "Coastal visibility",
+        "Some separation from dense population"
+      ],
+      "weaknesses": [
+        "Minimal capacity",
+        "Exposed environment"
+      ]
+    }
   },
   {
     "name": "Sydney Harbour Bridge",
@@ -2695,7 +2915,27 @@
     "region": "oceania",
     "country": "Australia",
     "lat": -33.8523,
-    "long": 151.2108
+    "long": 151.2108,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 1,
+        "isolation": 1,
+        "accessibility": 9
+      }
+    },
+    "description": {
+      "summary": "Strategically visible but not a viable base.",
+      "strengths": [
+        "Control point",
+        "Visibility"
+      ],
+      "weaknesses": [
+        "No habitation value",
+        "Highly exposed"
+      ]
+    }
   },
   {
     "name": "Port Vila",
@@ -2704,7 +2944,27 @@
     "region": "oceania",
     "country": "Vanuatu",
     "lat": -17.7333,
-    "long": 168.3273
+    "long": 168.3273,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 6,
+        "isolation": 7,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "A balanced island settlement with real livability and moderate isolation.",
+      "strengths": [
+        "Island separation",
+        "Existing settlement"
+      ],
+      "weaknesses": [
+        "Limited defence",
+        "Modest infrastructure"
+      ]
+    }
   },
   {
     "name": "Coober Pedy",
@@ -2713,7 +2973,27 @@
     "region": "oceania",
     "country": "Australia",
     "lat": -29.0139,
-    "long": 134.7547
+    "long": 134.7547,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 6,
+        "isolation": 8,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "A strong remote-settlement option combining real habitation logic with remoteness and environmental adaptation.",
+      "strengths": [
+        "Low population pressure",
+        "Adapted to harsh conditions"
+      ],
+      "weaknesses": [
+        "Moderate defensibility",
+        "Difficult logistics"
+      ]
+    }
   },
   {
     "name": "North Head Gun Emplacements",
@@ -2722,7 +3002,27 @@
     "region": "oceania",
     "country": "Australia",
     "lat": -33.82,
-    "long": 151.305
+    "long": 151.305,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 3,
+        "isolation": 4,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Strong as a defensive outpost, but limited as a full survival base.",
+      "strengths": [
+        "Military-style fortification",
+        "Strategic positioning"
+      ],
+      "weaknesses": [
+        "Limited capacity",
+        "Urban proximity"
+      ]
+    }
   },
   {
     "name": "Coober Pedy Underground Homes",
@@ -2731,7 +3031,27 @@
     "region": "oceania",
     "country": "Australia",
     "lat": -29.0139,
-    "long": 134.7547
+    "long": 134.7547,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 6,
+        "isolation": 8,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "One of the best subterranean civilian survival options, combining concealment with real habitation.",
+      "strengths": [
+        "Underground protection",
+        "Designed for long-term living"
+      ],
+      "weaknesses": [
+        "Remote logistics",
+        "Limited scalability"
+      ]
+    }
   },
   {
     "name": "Auckland Port",
@@ -2740,7 +3060,27 @@
     "region": "oceania",
     "country": "New Zealand",
     "lat": -36.844,
-    "long": 174.7622
+    "long": 174.7622,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 4,
+        "isolation": 2,
+        "accessibility": 9
+      }
+    },
+    "description": {
+      "summary": "Strong on logistics and storage, but fundamentally too exposed and urban to work as a serious survival base.",
+      "strengths": [
+        "Major port infrastructure and storage potential",
+        "Strong maritime access"
+      ],
+      "weaknesses": [
+        "High population exposure",
+        "Very difficult to defend effectively"
+      ]
+    }
   },
   {
     "name": "Sydney Airport",
@@ -2749,7 +3089,27 @@
     "region": "oceania",
     "country": "Australia",
     "lat": -33.9399,
-    "long": 151.1753
+    "long": 151.1753,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 2,
+        "isolation": 1,
+        "accessibility": 9
+      }
+    },
+    "description": {
+      "summary": "Excellent for transport, terrible for survival.",
+      "strengths": [
+        "Infrastructure scale",
+        "Logistics hub"
+      ],
+      "weaknesses": [
+        "Highly exposed",
+        "Impossible to secure"
+      ]
+    }
   },
   {
     "name": "Glacier Plateau",
