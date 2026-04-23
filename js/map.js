@@ -5,23 +5,8 @@
 
   function createBaseMap({ mapElement, statusElement, labelFor, createBaseUrl, onReset }) {
     let map = null;
+    let tileLayer = null;
     let markers = null;
-
-    function removeDirectMarkerLayers() {
-      if (!map) {
-        return;
-      }
-
-      map.eachLayer((layer) => {
-        if (!layer || layer === markers) {
-          return;
-        }
-
-        if (layer instanceof window.L.Marker) {
-          map.removeLayer(layer);
-        }
-      });
-    }
 
     function ensureMap() {
       if (!window.L || typeof window.L.markerClusterGroup !== 'function') {
@@ -39,35 +24,15 @@
         minZoom: 2
       }).setView([18, 10], 2);
 
-      window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      tileLayer = window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 18,
         attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(map);
+      });
+      tileLayer.addTo(map);
 
       markers = window.L.markerClusterGroup();
       map.addLayer(markers);
-      removeDirectMarkerLayers();
       return true;
-    }
-
-    function addMarkersToClusterGroup(bases) {
-      const bounds = [];
-
-      bases.forEach((base) => {
-        const marker = window.L.marker([base.lat, base.long]);
-        const popupHtml = `
-          <strong>${base.name}</strong><br>
-          ${labelFor('type', base.type)} • ${labelFor('region', base.region)}<br>
-          ${base.country ? `${base.country}<br>` : ''}
-          <a href="${createBaseUrl(base.slug)}">View base details</a>
-        `;
-
-        marker.bindPopup(popupHtml);
-        markers.addLayer(marker);
-        bounds.push([base.lat, base.long]);
-      });
-
-      return bounds;
     }
 
     function render(bases) {
@@ -76,9 +41,6 @@
       }
 
       mapElement.hidden = false;
-
-      // Keep the cluster group as the single marker layer source of truth.
-      removeDirectMarkerLayers();
       markers.clearLayers();
 
       const mappableBases = bases.filter(hasCoordinates);
@@ -103,8 +65,21 @@
       }
 
       statusElement.innerHTML = '';
-      const bounds = addMarkersToClusterGroup(mappableBases);
-      removeDirectMarkerLayers();
+      const bounds = [];
+
+      mappableBases.forEach((base) => {
+        const marker = window.L.marker([base.lat, base.long]);
+        const popupHtml = `
+          <strong>${base.name}</strong><br>
+          ${labelFor('type', base.type)} • ${labelFor('region', base.region)}<br>
+          ${base.country ? `${base.country}<br>` : ''}
+          <a href="${createBaseUrl(base.slug)}">View base details</a>
+        `;
+
+        marker.bindPopup(popupHtml);
+        markers.addLayer(marker);
+        bounds.push([base.lat, base.long]);
+      });
 
       if (bounds.length === 1) {
         map.setView(bounds[0], 5);
