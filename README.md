@@ -21,7 +21,8 @@ and a small set of standalone proof-of-concept dedicated pages under `bases/`.
 - `js/base.js` — detail-page data loading, rendering, related bases, metadata updates.
 - `js/seo.js` — shared metadata/canonical helpers.
 - `data/bases-index.json` — normalized dataset consumed by the frontend.
-- `scripts/generate-sitemap.py` — deterministic sitemap generation from base slugs.
+- `scripts/generate-sitemap.py` — deterministic sitemap generation for canonical/indexable URLs.
+- `.github/workflows/sitemap.yml` — GitHub Actions automation that regenerates and commits `sitemap.xml` on relevant changes.
 - `robots.txt` and `sitemap.xml` — crawl/index controls.
 
 ## Purpose of index, list, map, and detail pages
@@ -38,7 +39,7 @@ and a small set of standalone proof-of-concept dedicated pages under `bases/`.
 - Detail pages set per-base title, description, and canonical URL as `/base.html?slug=...`.
 - Query-parameter UX state (`view`, `region`, `type`, `sort`, `q`) is intentionally excluded from canonicals.
 - `robots.txt` allows site crawl but disallows `/bases/` proof-of-concept pages.
-- `sitemap.xml` is generated from `data/bases-index.json` slugs (plus homepage root).
+- `sitemap.xml` is generated from canonical URL sources (homepage, data slugs, and indexable dedicated pages).
 
 ## Security baseline (current)
 
@@ -64,15 +65,30 @@ See `SECURITY.md` for deferred post-design hardening items.
 ### `sitemap.xml`
 
 - **Generated (not hand-maintained).**
-- Built from:
+- Produced by `scripts/generate-sitemap.py` and written to `sitemap.xml`.
+- Uses the production canonical origin `https://zombiebases.com` for every URL.
+- Includes:
   - homepage root (`https://zombiebases.com/`)
-  - each unique slug in `data/bases-index.json` as `https://zombiebases.com/base.html?slug=<slug>`
+  - each unique detail route from `data/bases-index.json` as `https://zombiebases.com/base.html?slug=<slug>`
+  - dedicated pages under `/bases/*.html` only if they are indexable (pages with `meta robots` containing `noindex` are excluded)
+- Excludes non-canonical URL-state variants (filters/sort/search/map view query params such as `view`, `region`, `type`, `sort`, `q`).
+- Adds `<lastmod>` using `git log` timestamps when available (entry source file-based).
 
-Regenerate after slug/data changes:
+### When sitemap generation runs
+
+- **Automatically on GitHub:** `.github/workflows/sitemap.yml` runs on pushes to `main` that touch sitemap inputs and auto-commits `sitemap.xml` if it changed.
+- **Locally/manual (optional):**
 
 ```bash
 python3 scripts/generate-sitemap.py
 ```
+
+### If a new page type is introduced later
+
+1. Decide whether the page type is canonical/indexable in production.
+2. Add deterministic URL generation for that page type in `scripts/generate-sitemap.py`.
+3. Ensure non-canonical query-state URLs remain excluded.
+4. If new source files drive those URLs, add them to workflow `paths` in `.github/workflows/sitemap.yml`.
 
 ## Adding a new dedicated base page (current workflow)
 
@@ -81,7 +97,7 @@ Dedicated static pages are still experimental. If you add one under `bases/`:
 1. Start from `bases/template.html`.
 2. Keep `meta name="robots" content="noindex, nofollow"` unless and until the project decides to make these pages production-indexable.
 3. Keep links/styles static-site safe (relative paths, no server-only behavior).
-4. Do **not** add dedicated POC pages to sitemap while this section remains deferred.
+4. Keep POC pages `noindex` while this section remains deferred so they stay out of sitemap and search indices.
 
 If the new page corresponds to a production base entry, prefer adding/updating the record in `data/bases-index.json` so the `base.html?slug=` route becomes the canonical searchable detail page.
 
