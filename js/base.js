@@ -98,6 +98,18 @@ function getNonEmptyStringArray(value) {
   return [];
 }
 
+function getNormalizedListValue(base, nestedKey, rootKey) {
+  const nestedValue = base?.description && typeof base.description === 'object'
+    ? base.description[nestedKey]
+    : undefined;
+
+  if (nestedValue !== undefined && nestedValue !== null) {
+    return getNonEmptyStringArray(nestedValue);
+  }
+
+  return getNonEmptyStringArray(base?.[rootKey]);
+}
+
 function isValidScoreValue(value) {
   return Number.isFinite(value);
 }
@@ -132,19 +144,21 @@ function getSummary(base) {
 function getStructuredDescription(base) {
   const description = base?.description;
   const summary = getSummary(base) || getDescription(base);
+  const strengths = getNormalizedListValue(base, 'strengths', 'strengths');
+  const weaknesses = getNormalizedListValue(base, 'weaknesses', 'weaknesses');
 
   if (!description || typeof description !== 'object') {
     return {
       summary,
-      strengths: [],
-      weaknesses: []
+      strengths,
+      weaknesses
     };
   }
 
   return {
     summary: isNonEmptyString(description.summary) ? description.summary : summary,
-    strengths: getNonEmptyStringArray(description.strengths),
-    weaknesses: getNonEmptyStringArray(description.weaknesses)
+    strengths,
+    weaknesses
   };
 }
 
