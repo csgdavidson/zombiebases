@@ -156,6 +156,8 @@ const baseMap = (window.createBaseMap && elements.mapElement && elements.mapStat
   })
   : null;
 
+const slugHelper = window.baseSlugHelper;
+
 function toTitleCaseSlug(value) {
   return value
     .split('_')
@@ -370,7 +372,20 @@ function updateResultCount(count) {
   elements.resultCount.textContent = `${count} ${baseLabel} found`;
 }
 
-function createBaseUrl(slug) {
+function preferredSlugFor(baseOrSlug) {
+  if (slugHelper?.getPreferredSlug) {
+    return slugHelper.getPreferredSlug(baseOrSlug);
+  }
+
+  if (typeof baseOrSlug === 'string') {
+    return baseOrSlug;
+  }
+
+  return baseOrSlug?.slug ?? '';
+}
+
+function createBaseUrl(baseOrSlug) {
+  const slug = preferredSlugFor(baseOrSlug);
   const params = new URLSearchParams();
   params.set('slug', slug);
 
@@ -440,7 +455,7 @@ function renderBaseList(items) {
 
     const link = document.createElement('a');
     link.className = 'base-card-link';
-    link.href = createBaseUrl(base.slug);
+    link.href = createBaseUrl(base);
 
     const header = document.createElement('div');
     header.className = 'base-card-header';
@@ -501,7 +516,7 @@ function renderFeaturedBases(items) {
     const listItem = document.createElement('li');
     const link = document.createElement('a');
     link.className = 'featured-link';
-    link.href = createBaseUrl(base.slug);
+    link.href = createBaseUrl(base);
     link.textContent = base.name;
 
     const meta = document.createElement('p');
@@ -602,6 +617,12 @@ async function loadBases() {
     }
 
     state.bases = await response.json();
+    state.bases.forEach((base) => {
+      const preferredSlug = preferredSlugFor(base);
+      if (preferredSlug && !base.slug) {
+        base.slug = preferredSlug;
+      }
+    });
     state.visibleBases = state.bases.filter(shouldDisplayBase);
     state.featuredBases = state.visibleBases.filter(isFeatured);
 
