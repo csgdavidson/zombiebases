@@ -133,7 +133,7 @@
       }
     },
     "description": {
-      "summary": "Kimberley\u2019s mining complex has some defensive and industrial logic, especially where terrain shapes movement, but it carries significant practical downsides. It feels more like a difficult fallback site than a truly desirable stronghold.",
+      "summary": "Kimberley’s mining complex has some defensive and industrial logic, especially where terrain shapes movement, but it carries significant practical downsides. It feels more like a difficult fallback site than a truly desirable stronghold.",
       "strengths": [
         "Terrain and infrastructure could help channel movement",
         "Industrial remnants may offer salvage value"
@@ -319,7 +319,7 @@
     }
   },
   {
-    "name": "Great Mosque of Djenn\u00e9",
+    "name": "Great Mosque of Djenné",
     "slug": "djenne",
     "type": "landmark_structure",
     "region": "africa",
@@ -336,7 +336,7 @@
       }
     },
     "description": {
-      "summary": "The Great Mosque of Djenn\u00e9 is iconic but not especially strong as a zombie base. It lacks the defensive, logistical, and long-term survival advantages needed to compete with more practical sites.",
+      "summary": "The Great Mosque of Djenné is iconic but not especially strong as a zombie base. It lacks the defensive, logistical, and long-term survival advantages needed to compete with more practical sites.",
       "strengths": [
         "Central landmark with some structural mass and visibility",
         "Could serve as a rally point or temporary refuge"
@@ -348,7 +348,7 @@
     }
   },
   {
-    "name": "A\u00eft Benhaddou",
+    "name": "Aït Benhaddou",
     "slug": "ait-benhaddou",
     "type": "remote_settlement",
     "region": "africa",
@@ -365,7 +365,7 @@
       }
     },
     "description": {
-      "summary": "A\u00eft Benhaddou is a remote fortified settlement in Morocco whose compact historic form and defensible layout would make it a credible short-to-medium-term refuge. Its biggest challenge is long-term sustainability in a harsh environment with limited local productivity.",
+      "summary": "Aït Benhaddou is a remote fortified settlement in Morocco whose compact historic form and defensible layout would make it a credible short-to-medium-term refuge. Its biggest challenge is long-term sustainability in a harsh environment with limited local productivity.",
       "strengths": [
         "Naturally defensive built form with strong control over entry points",
         "Lower surrounding population pressure than major urban sites"
@@ -452,7 +452,7 @@
       }
     },
     "description": {
-      "summary": "Matmata\u2019s underground dwellings are one of the more interesting survival candidates in Africa because they combine concealment, passive protection, and environmental shelter. Their main limitation is scale and dependence on wider local resources.",
+      "summary": "Matmata’s underground dwellings are one of the more interesting survival candidates in Africa because they combine concealment, passive protection, and environmental shelter. Their main limitation is scale and dependence on wider local resources.",
       "strengths": [
         "Excellent concealment and natural thermal protection",
         "Harder to overrun than exposed surface settlements"
@@ -1160,7 +1160,7 @@
     }
   },
   {
-    "name": "Gda\u0144sk Shipyard",
+    "name": "Gdańsk Shipyard",
     "slug": "gdansk-shipyard",
     "type": "industrial_site",
     "region": "eastern_europe",
@@ -1960,7 +1960,7 @@
       }
     },
     "description": {
-      "summary": "Wadi Musa is a decent remote settlement candidate with workable long-term habitation logic and reduced population pressure. It is more practical than spectacular, and lacks the hard defensive edge of the region\u2019s best sites.",
+      "summary": "Wadi Musa is a decent remote settlement candidate with workable long-term habitation logic and reduced population pressure. It is more practical than spectacular, and lacks the hard defensive edge of the region’s best sites.",
       "strengths": [
         "Lower population pressure than major regional hubs",
         "Better day-to-day habitability than many extreme sites"
@@ -3828,7 +3828,7 @@
     }
   },
   {
-    "name": "Chilo\u00e9 Island",
+    "name": "Chiloé Island",
     "slug": "chiloe",
     "type": "isolated_landmass",
     "region": "south_america",
@@ -3857,7 +3857,7 @@
     }
   },
   {
-    "name": "Gal\u00e1pagos Islands",
+    "name": "Galápagos Islands",
     "slug": "galapagos",
     "type": "isolated_landmass",
     "region": "south_america",
@@ -4031,7 +4031,7 @@
     }
   },
   {
-    "name": "Potos\u00ed Silver Mine (Cerro Rico)",
+    "name": "Potosí Silver Mine (Cerro Rico)",
     "slug": "potosi-mine",
     "type": "subterranean",
     "region": "south_america",
@@ -4089,7 +4089,7 @@
     }
   },
   {
-    "name": "S\u00e3o Paulo Airport",
+    "name": "São Paulo Airport",
     "slug": "sao-paulo-airport",
     "type": "transit_hub",
     "region": "south_america",
@@ -4147,7 +4147,7 @@
     }
   },
   {
-    "name": "Tiger\u2019s Nest Monastery",
+    "name": "Tiger’s Nest Monastery",
     "slug": "tigers-nest",
     "type": "elevated_stronghold",
     "region": "south_asia",
@@ -5139,7 +5139,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 55.9486,
-    "long": -3.1999
+    "long": -3.1999,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 5,
+        "isolation": 4,
+        "accessibility": 6
+      }
+    },
+    "description": {
+      "summary": "One of the strongest fortress candidates in the region, combining commanding terrain with serious defensive history.",
+      "strengths": [
+        "Exceptional elevated defensive position",
+        "Strong fortification and visibility"
+      ],
+      "weaknesses": [
+        "Urban setting increases pressure",
+        "Long-term sustainability is only moderate"
+      ]
+    }
   },
   {
     "name": "The Roaches",
@@ -5148,7 +5168,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 53.171,
-    "long": -1.996
+    "long": -1.996,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 4,
+        "isolation": 5,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Strong terrain and elevation give it real defensive interest, but it lacks the infrastructure and sustainability of stronger regional contenders.",
+      "strengths": [
+        "Natural rocky defensive terrain",
+        "Good local visibility and control of approach"
+      ],
+      "weaknesses": [
+        "Limited shelter and infrastructure",
+        "Weak long-term sustainability"
+      ]
+    }
   },
   {
     "name": "Caerphilly Castle",
@@ -5157,7 +5197,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 51.5744,
-    "long": -3.218
+    "long": -3.218,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 5,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "A highly defensible medieval fortress with strong water and wall defenses, but only moderate long-term viability.",
+      "strengths": [
+        "Excellent fortification and defensive layout",
+        "Strong control over access"
+      ],
+      "weaknesses": [
+        "Limited modern infrastructure",
+        "Dependent on surrounding support systems"
+      ]
+    }
   },
   {
     "name": "Fort George",
@@ -5166,7 +5226,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 57.623,
-    "long": -3.87
+    "long": -3.87,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 5,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "A strong military fortress with real defensive depth, though still constrained by scale and dependence on surrounding support.",
+      "strengths": [
+        "Purpose-built defensive design",
+        "Strong perimeter control"
+      ],
+      "weaknesses": [
+        "Limited long-term independence",
+        "Not isolated enough to avoid outside pressure"
+      ]
+    }
   },
   {
     "name": "Port Talbot Steelworks",
@@ -5175,7 +5255,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 51.5885,
-    "long": -3.7806
+    "long": -3.7806,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 4,
+        "sustainability": 5,
+        "isolation": 2,
+        "accessibility": 7
+      }
+    },
+    "description": {
+      "summary": "Industrial scale brings useful material infrastructure, but it is too exposed and too dependent on complex systems to rank highly.",
+      "strengths": [
+        "Large industrial footprint and salvage potential",
+        "Strong built infrastructure"
+      ],
+      "weaknesses": [
+        "Hard to secure and highly visible",
+        "System dependence undermines survivability"
+      ]
+    }
   },
   {
     "name": "Amazon BHX4 Fulfilment Centre",
@@ -5184,7 +5284,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 52.483,
-    "long": -1.718
+    "long": -1.718,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 6,
+        "isolation": 2,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "Strong logistics and storage capacity but far too exposed and system-dependent to serve as a serious long-term base.",
+      "strengths": [
+        "Large warehousing and supply space",
+        "Existing operational infrastructure"
+      ],
+      "weaknesses": [
+        "Difficult to defend at scale",
+        "Located in a high-pressure populated region"
+      ]
+    }
   },
   {
     "name": "HM Prison Dartmoor",
@@ -5193,7 +5313,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 50.596,
-    "long": -3.9157
+    "long": -3.9157,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 7,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "A naturally isolated prison complex with strong containment logic and a better setting than most carceral sites.",
+      "strengths": [
+        "Built for control and restricted access",
+        "Remote moorland location reduces pressure"
+      ],
+      "weaknesses": [
+        "Harsh setting and limited comfort",
+        "Long-term sustainability is moderate at best"
+      ]
+    }
   },
   {
     "name": "Porton Down",
@@ -5202,7 +5342,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 51.129,
-    "long": -1.803
+    "long": -1.803,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 5,
+        "isolation": 4,
+        "accessibility": 6
+      }
+    },
+    "description": {
+      "summary": "A secure institutional site with real infrastructure and defensive promise, but still too visible and system-linked to be elite.",
+      "strengths": [
+        "Controlled access and secure compound logic",
+        "Established infrastructure"
+      ],
+      "weaknesses": [
+        "Strategic visibility and target value",
+        "Moderate dependence on wider systems"
+      ]
+    }
   },
   {
     "name": "Lindisfarne",
@@ -5211,7 +5371,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 55.669,
-    "long": -1.799
+    "long": -1.799,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 5,
+        "isolation": 8,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Tidal isolation gives Lindisfarne real defensive interest, though its small scale limits long-term survivability.",
+      "strengths": [
+        "Natural separation improves control of access",
+        "Low population footprint"
+      ],
+      "weaknesses": [
+        "Limited resources and infrastructure",
+        "Too small for large-scale long-term occupation"
+      ]
+    }
   },
   {
     "name": "St Kilda",
@@ -5220,7 +5400,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 57.814,
-    "long": -8.583
+    "long": -8.583,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 5,
+        "isolation": 10,
+        "accessibility": 1
+      }
+    },
+    "description": {
+      "summary": "One of the most isolated sites in the region, with extraordinary separation from the mainland but serious challenges for long-term living.",
+      "strengths": [
+        "Near-maximum isolation",
+        "Very low risk of outside pressure"
+      ],
+      "weaknesses": [
+        "Extremely difficult access and resupply",
+        "Long-term sustainability is limited"
+      ]
+    }
   },
   {
     "name": "Fastnet Lighthouse",
@@ -5229,7 +5429,27 @@
     "region": "uk_ireland",
     "country": "Ireland",
     "lat": 51.388,
-    "long": -9.602
+    "long": -9.602,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 2,
+        "isolation": 9,
+        "accessibility": 1
+      }
+    },
+    "description": {
+      "summary": "Exceptionally isolated but too small and too resource-poor to rank as a serious survival base.",
+      "strengths": [
+        "Extreme separation from mainland threat",
+        "Excellent visibility and early warning value"
+      ],
+      "weaknesses": [
+        "Tiny footprint and no scalability",
+        "Very weak long-term sustainability"
+      ]
+    }
   },
   {
     "name": "Spinnaker Tower",
@@ -5238,7 +5458,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 50.795,
-    "long": -1.108
+    "long": -1.108,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 1,
+        "isolation": 1,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "An observation landmark rather than a viable base, offering visibility but almost no meaningful survival value.",
+      "strengths": [
+        "Strong visibility over local area",
+        "Central landmark value"
+      ],
+      "weaknesses": [
+        "No real habitation or sustainability",
+        "Extremely exposed urban setting"
+      ]
+    }
   },
   {
     "name": "Clovelly",
@@ -5247,7 +5487,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 50.989,
-    "long": -4.399
+    "long": -4.399,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 6,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "A small and relatively self-contained coastal settlement with decent survivability, but not a naturally dominant defensive site.",
+      "strengths": [
+        "Low scale and manageable population footprint",
+        "Some local sustainability potential"
+      ],
+      "weaknesses": [
+        "Limited defensive hardening",
+        "Coastal exposure reduces resilience"
+      ]
+    }
   },
   {
     "name": "Isle of Eigg Village",
@@ -5256,7 +5516,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 56.914,
-    "long": -6.142
+    "long": -6.142,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 8,
+        "isolation": 8,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "One of the best balanced remote settlement options in the region, combining island separation with genuine community-scale survivability.",
+      "strengths": [
+        "Strong island isolation",
+        "Credible long-term local living model"
+      ],
+      "weaknesses": [
+        "Limited scale and infrastructure",
+        "Resupply is difficult once cut off"
+      ]
+    }
   },
   {
     "name": "Burlington Bunker",
@@ -5265,7 +5545,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 51.356,
-    "long": -2.317
+    "long": -2.317,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 5,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "One of the strongest bunker-style sites in the region, combining underground protection with purpose-built continuity logic.",
+      "strengths": [
+        "Hardened subterranean structure",
+        "Designed for protected occupation"
+      ],
+      "weaknesses": [
+        "Long-term sustainability is limited",
+        "Scalability and comfort are constrained"
+      ]
+    }
   },
   {
     "name": "Cheddar Gorge Caves",
@@ -5274,7 +5574,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 51.279,
-    "long": -2.767
+    "long": -2.767,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 4,
+        "isolation": 6,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Natural cave shelter with strong defensive promise, though long-term living conditions and resources remain limited.",
+      "strengths": [
+        "Natural subterranean protection",
+        "Difficult terrain improves defensibility"
+      ],
+      "weaknesses": [
+        "Poor long-term comfort and capacity",
+        "Limited sustainability without external support"
+      ]
+    }
   },
   {
     "name": "Heathrow Airport",
@@ -5283,7 +5603,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 51.47,
-    "long": -0.4543
+    "long": -0.4543,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 1,
+        "sustainability": 3,
+        "isolation": 1,
+        "accessibility": 10
+      }
+    },
+    "description": {
+      "summary": "One of the worst possible survival sites: enormous, exposed, and embedded in one of the densest transport systems in Europe.",
+      "strengths": [
+        "Massive infrastructure and storage",
+        "Excellent transport connectivity"
+      ],
+      "weaknesses": [
+        "Impossible to defend effectively",
+        "Extreme population and conflict exposure"
+      ]
+    }
   },
   {
     "name": "Portsmouth Harbour",
@@ -5292,7 +5632,27 @@
     "region": "uk_ireland",
     "country": "United Kingdom",
     "lat": 50.798,
-    "long": -1.109
+    "long": -1.109,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 4,
+        "sustainability": 5,
+        "isolation": 2,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "Useful as a naval and logistics hub, but far too exposed and strategically obvious to function as a safe long-term refuge.",
+      "strengths": [
+        "Strong maritime infrastructure",
+        "Resource and transport value"
+      ],
+      "weaknesses": [
+        "High population and strategic pressure",
+        "Difficult to defend comprehensively"
+      ]
+    }
   },
   {
     "name": "Neuschwanstein Castle",
@@ -5376,7 +5736,7 @@
     "long": 7.885
   },
   {
-    "name": "\u00cele d\u2019Yeu",
+    "name": "Île d’Yeu",
     "slug": "ile-dyeu",
     "type": "isolated_landmass",
     "region": "western_europe",
@@ -5394,7 +5754,7 @@
     "long": 2.2945
   },
   {
-    "name": "Phare du Cr\u00e9ac'h",
+    "name": "Phare du Créac'h",
     "slug": "creach",
     "type": "landmark_structure",
     "region": "western_europe",
