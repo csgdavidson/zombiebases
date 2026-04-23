@@ -2074,7 +2074,27 @@
     "region": "north_america",
     "country": "United States",
     "lat": 37.2309,
-    "long": -108.4618
+    "long": -108.4618,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 5,
+        "isolation": 7,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "A strong elevated and semi-hidden settlement with defensible terrain and moderate sustainability.",
+      "strengths": [
+        "Natural defensive positioning",
+        "Relative remoteness"
+      ],
+      "weaknesses": [
+        "Limited modern infrastructure",
+        "Sustainability is moderate"
+      ]
+    }
   },
   {
     "name": "Table Rock Plateau",
@@ -2083,7 +2103,27 @@
     "region": "north_america",
     "country": "United States",
     "lat": 36.5395,
-    "long": -93.4896
+    "long": -93.4896,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 6,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "A solid elevated position with balanced defensive and sustainability potential, though not exceptional in any one area.",
+      "strengths": [
+        "Strong elevation-based defence",
+        "Reasonable sustainability potential"
+      ],
+      "weaknesses": [
+        "Not fully isolated",
+        "Limited infrastructure"
+      ]
+    }
   },
   {
     "name": "Alcatraz Island",
@@ -2092,20 +2132,23 @@
     "region": "north_america",
     "country": "United States",
     "description": {
-      "summary": "An island prison complex with hardened structures and naturally limited access points.",
-      "strengths": "Water barrier and fortified buildings create a strong first line of defense.",
-      "weaknesses": "Limited arable land and dependence on marine resupply constrain autonomy."
+      "summary": "Alcatraz is a classic island stronghold with natural separation and controlled access. It works well defensively, but long-term survival depends heavily on external supply and adaptation.",
+      "strengths": [
+        "Strong island isolation reduces external threat",
+        "Highly controllable access points"
+      ],
+      "weaknesses": [
+        "Limited food and resource base",
+        "Long-term sustainability is constrained"
+      ]
     },
     "scores": {
-      "overall": 7.9,
+      "overall": 8,
       "categories": {
-        "defensibility": 8.7,
-        "food": 4.9,
-        "water": 5.8,
-        "isolation": 8.8,
-        "escape": 5.1,
-        "sustainability": 5.6,
-        "human_risk": 7.3
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 9,
+        "accessibility": 3
       }
     },
     "lat": 37.8267,
@@ -2118,7 +2161,27 @@
     "region": "north_america",
     "country": "United States",
     "lat": 24.6285,
-    "long": -82.8732
+    "long": -82.8732,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 5,
+        "isolation": 9,
+        "accessibility": 2
+      }
+    },
+    "description": {
+      "summary": "A near-ideal island fortress combining isolation and strong defensive design. Sustainability remains the primary challenge.",
+      "strengths": [
+        "Exceptional defensive fortification",
+        "Strong island isolation"
+      ],
+      "weaknesses": [
+        "Limited natural resources",
+        "Difficult to resupply or expand"
+      ]
+    }
   },
   {
     "name": "Hutchinson Salt Storage Caverns",
@@ -2127,7 +2190,27 @@
     "region": "north_america",
     "country": "USA",
     "lat": 38.0608,
-    "long": -97.9298
+    "long": -97.9298,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 5,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Subterranean storage caverns provide strong protection and stability, though not originally designed for habitation.",
+      "strengths": [
+        "Underground protection from external threats",
+        "Stable environmental conditions"
+      ],
+      "weaknesses": [
+        "Limited livability without modification",
+        "Sustainability depends on surface support"
+      ]
+    }
   },
   {
     "name": "Port Arthur Refinery",
@@ -2136,7 +2219,27 @@
     "region": "north_america",
     "country": "USA",
     "lat": 29.8849,
-    "long": -93.9399
+    "long": -93.9399,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 4,
+        "isolation": 2,
+        "accessibility": 7
+      }
+    },
+    "description": {
+      "summary": "Industrial scale offers resource potential, but the site is far too exposed and system-dependent.",
+      "strengths": [
+        "Large-scale industrial infrastructure",
+        "Resource potential"
+      ],
+      "weaknesses": [
+        "Highly exposed location",
+        "Dependent on complex systems"
+      ]
+    }
   },
   {
     "name": "Area 51",
@@ -2145,7 +2248,27 @@
     "region": "north_america",
     "country": "United States",
     "lat": 37.235,
-    "long": -115.8111
+    "long": -115.8111,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 6,
+        "isolation": 8,
+        "accessibility": 2
+      }
+    },
+    "description": {
+      "summary": "Remote, controlled, and infrastructure-rich, Area 51 is a strong candidate for survival. Its secrecy works in its favour, but long-term viability depends on what remains operational.",
+      "strengths": [
+        "Extreme remoteness limits population pressure",
+        "Existing infrastructure and controlled access"
+      ],
+      "weaknesses": [
+        "Unknown reliance on complex systems",
+        "Potential strategic target"
+      ]
+    }
   },
   {
     "name": "Guantanamo Bay",
@@ -2154,7 +2277,27 @@
     "region": "north_america",
     "country": "Cuba",
     "lat": 19.9065,
-    "long": -75.2071
+    "long": -75.2071,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 6,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "A controlled military compound with strong defensive capabilities and infrastructure, though still dependent on external systems.",
+      "strengths": [
+        "Strong perimeter control and security",
+        "Established infrastructure"
+      ],
+      "weaknesses": [
+        "Strategic visibility",
+        "Dependent on resupply and maintenance"
+      ]
+    }
   },
   {
     "name": "Kodiak Island",
@@ -2163,7 +2306,27 @@
     "region": "north_america",
     "country": "United States",
     "lat": 57.79,
-    "long": -152.4072
+    "long": -152.4072,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 7,
+        "isolation": 9,
+        "accessibility": 2
+      }
+    },
+    "description": {
+      "summary": "A strong island candidate combining isolation with real natural resources. Harsh conditions are both a strength and a weakness.",
+      "strengths": [
+        "Excellent isolation from mainland threats",
+        "Strong natural resource base"
+      ],
+      "weaknesses": [
+        "Harsh climate and environment",
+        "Difficult logistics and access"
+      ]
+    }
   },
   {
     "name": "Vancouver Island",
@@ -2172,7 +2335,27 @@
     "region": "north_america",
     "country": "Canada",
     "lat": 49.65,
-    "long": -125.45
+    "long": -125.45,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 8,
+        "isolation": 7,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "One of the best balanced island options, combining livability, resources, and defensibility.",
+      "strengths": [
+        "Strong natural resources and sustainability",
+        "Island separation improves security"
+      ],
+      "weaknesses": [
+        "Not fully isolated",
+        "Population presence in some areas"
+      ]
+    }
   },
   {
     "name": "CN Tower",
@@ -2181,7 +2364,27 @@
     "region": "north_america",
     "country": "Canada",
     "lat": 43.6426,
-    "long": -79.3871
+    "long": -79.3871,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 2,
+        "isolation": 1,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "A vertical landmark in a dense urban centre, offering almost no realistic survival value beyond visibility.",
+      "strengths": [
+        "High vantage point for observation",
+        "Large internal structure"
+      ],
+      "weaknesses": [
+        "Located in a dense urban population centre",
+        "Impossible to defend or sustain"
+      ]
+    }
   },
   {
     "name": "Cape Hatteras Lighthouse",
@@ -2190,7 +2393,27 @@
     "region": "north_america",
     "country": "United States",
     "lat": 35.2514,
-    "long": -75.528
+    "long": -75.528,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 2,
+        "isolation": 5,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Visually striking but functionally weak as a base. It offers limited shelter and poor long-term viability in a harsh coastal environment.",
+      "strengths": [
+        "Coastal visibility and early warning potential",
+        "Relative isolation compared to urban sites"
+      ],
+      "weaknesses": [
+        "Minimal living space and infrastructure",
+        "Exposure to extreme weather and erosion"
+      ]
+    }
   },
   {
     "name": "Telluride",
@@ -2199,7 +2422,27 @@
     "region": "north_america",
     "country": "United States",
     "lat": 37.9375,
-    "long": -107.8123
+    "long": -107.8123,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 7,
+        "isolation": 7,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "A remote mountain settlement with strong livability and moderate defensibility, making it a credible long-term refuge.",
+      "strengths": [
+        "Low population pressure",
+        "Good long-term living conditions"
+      ],
+      "weaknesses": [
+        "Moderate defensibility",
+        "Limited scalability"
+      ]
+    }
   },
   {
     "name": "Utqiagvik",
@@ -2208,7 +2451,27 @@
     "region": "north_america",
     "country": "United States",
     "lat": 71.2906,
-    "long": -156.7886
+    "long": -156.7886,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 5,
+        "isolation": 9,
+        "accessibility": 1
+      }
+    },
+    "description": {
+      "summary": "Extreme isolation provides safety, but harsh conditions significantly reduce long-term viability.",
+      "strengths": [
+        "Very low population pressure",
+        "Extreme remoteness"
+      ],
+      "weaknesses": [
+        "Harsh climate limits sustainability",
+        "Very difficult logistics"
+      ]
+    }
   },
   {
     "name": "Cheyenne Mountain Complex",
@@ -2217,20 +2480,23 @@
     "region": "north_america",
     "country": "United States",
     "description": {
-      "summary": "A hardened mountain bunker system engineered for continuity under extreme conditions.",
-      "strengths": "Massive blast protection and controlled access points support resilient defense.",
-      "weaknesses": "Heavy reliance on power, maintenance, and specialized systems raises fragility."
+      "summary": "One of the strongest purpose-built survival facilities imaginable, combining hardened underground design with real infrastructure. Its only limitation is reliance on complex systems over very long timeframes.",
+      "strengths": [
+        "Extremely hardened subterranean structure",
+        "Designed for continuity and command resilience"
+      ],
+      "weaknesses": [
+        "Dependent on long-term system maintenance",
+        "Limited scalability beyond intended capacity"
+      ]
     },
     "scores": {
-      "overall": 8.6,
+      "overall": 9,
       "categories": {
-        "defensibility": 9.5,
-        "food": 6.1,
-        "water": 7.4,
-        "isolation": 8.2,
-        "escape": 5.3,
-        "sustainability": 7.6,
-        "human_risk": 8.0
+        "defensibility": 10,
+        "sustainability": 7,
+        "isolation": 6,
+        "accessibility": 3
       }
     },
     "lat": 38.7444,
@@ -2243,7 +2509,27 @@
     "region": "north_america",
     "country": "USA",
     "lat": 31.8876,
-    "long": -110.9965
+    "long": -110.9965,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 5,
+        "isolation": 5,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "A hardened underground site with strong defensive characteristics, though not designed for long-term habitation.",
+      "strengths": [
+        "Highly reinforced underground structure",
+        "Strong protection from external threats"
+      ],
+      "weaknesses": [
+        "Limited living space",
+        "Requires adaptation for sustainability"
+      ]
+    }
   },
   {
     "name": "Corwith Intermodal Yard",
@@ -2252,7 +2538,27 @@
     "region": "north_america",
     "country": "USA",
     "lat": 41.8283,
-    "long": -87.7056
+    "long": -87.7056,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 4,
+        "isolation": 2,
+        "accessibility": 9
+      }
+    },
+    "description": {
+      "summary": "A logistics-heavy site with strong resource potential, but far too exposed and difficult to secure to act as a viable base.",
+      "strengths": [
+        "Extensive logistics and storage infrastructure",
+        "Strong transport connectivity"
+      ],
+      "weaknesses": [
+        "Highly exposed and difficult to defend",
+        "High population and traffic pressure"
+      ]
+    }
   },
   {
     "name": "LAX Airport",
@@ -2261,7 +2567,27 @@
     "region": "north_america",
     "country": "United States",
     "lat": 33.9416,
-    "long": -118.4085
+    "long": -118.4085,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 2,
+        "isolation": 1,
+        "accessibility": 10
+      }
+    },
+    "description": {
+      "summary": "One of the worst possible base locations due to scale, exposure, and population density.",
+      "strengths": [
+        "Massive infrastructure and storage",
+        "Transport connectivity"
+      ],
+      "weaknesses": [
+        "Extreme exposure and population pressure",
+        "Impossible to secure effectively"
+      ]
+    }
   },
   {
     "name": "Blue Mountains Cliffs",
