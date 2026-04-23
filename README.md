@@ -88,3 +88,9 @@ python3 scripts/generate-sitemap.py
 ## Alpha/curation note
 
 The dataset is currently curated for alpha and still being refined. Expect scoring, summaries, and base metadata to evolve as content quality and consistency improve.
+
+## Security baseline
+
+A lightweight pre-design client-side security baseline is documented in
+`SECURITY.md`, including current external domain dependencies relevant to CSP,
+current secret/public-key posture, and deferred hardening follow-ups.
