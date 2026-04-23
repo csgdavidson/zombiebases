@@ -6,20 +6,23 @@
     "region": "africa",
     "country": "Ethiopia",
     "description": {
-      "summary": "A high-altitude escarpment with natural choke points and panoramic visibility.",
-      "strengths": "Steep terrain and narrow approaches simplify perimeter defense.",
-      "weaknesses": "Harsh weather and difficult logistics can disrupt supply stability."
+      "summary": "The Simien Mountains are a strong elevated fallback zone with serious natural defensive value and low population pressure. They score highly on protection and remoteness, but lower on ease of living and long-term infrastructure.",
+      "strengths": [
+        "Outstanding terrain advantage for defence",
+        "Isolation sharply reduces casual threat flow"
+      ],
+      "weaknesses": [
+        "Difficult access cuts both ways for survival",
+        "Sustaining a large population would be challenging"
+      ]
     },
     "scores": {
-      "overall": 8.2,
+      "overall": 7,
       "categories": {
-        "defensibility": 8.8,
-        "food": 6.7,
-        "water": 7.6,
-        "isolation": 8.9,
-        "escape": 6.5,
-        "sustainability": 7.2,
-        "human_risk": 7.4
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 8,
+        "accessibility": 3
       }
     },
     "lat": 13.1807,
@@ -32,20 +35,23 @@
     "region": "africa",
     "country": "South Africa",
     "description": {
-      "summary": "A flat-topped mountain stronghold near urban infrastructure and coastal routes.",
-      "strengths": "Excellent overlook and constrained ascent paths aid early threat detection.",
-      "weaknesses": "Proximity to dense population zones raises long-term encounter risk."
+      "summary": "Table Mountain Plateau has obvious terrain advantages, but its proximity to Cape Town limits its value in a high-collapse scenario. It is dramatic and defensible in theory, yet weaker as a long-term refuge than it first appears.",
+      "strengths": [
+        "Elevated position with strong natural defensive edges",
+        "Good visibility over surrounding approaches"
+      ],
+      "weaknesses": [
+        "Too close to a major urban centre",
+        "Limited self-sustaining settlement potential on the plateau itself"
+      ]
     },
     "scores": {
-      "overall": 7.3,
+      "overall": 5,
       "categories": {
-        "defensibility": 8.1,
-        "food": 5.4,
-        "water": 6.2,
-        "isolation": 5.9,
-        "escape": 8.4,
-        "sustainability": 6.3,
-        "human_risk": 4.6
+        "defensibility": 7,
+        "sustainability": 4,
+        "isolation": 4,
+        "accessibility": 4
       }
     },
     "lat": -33.9628,
@@ -58,7 +64,27 @@
     "region": "africa",
     "country": "Ghana",
     "lat": 5.0847,
-    "long": -1.3509
+    "long": -1.3509,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 4,
+        "isolation": 4,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Elmina Castle is one of the more defensible historic sites in the region, with thick walls and a layout built around control and protection. Its weakness is that it lacks the broader land, flexibility, and resource base needed for long-term resilience.",
+      "strengths": [
+        "Strong defensive architecture and durable construction",
+        "High control over access compared with most historic sites"
+      ],
+      "weaknesses": [
+        "Limited long-term food and water independence",
+        "Coastal position may create exposure without major resupply advantage"
+      ]
+    }
   },
   {
     "name": "Fasil Ghebbi",
@@ -67,7 +93,27 @@
     "region": "africa",
     "country": "Ethiopia",
     "lat": 12.6075,
-    "long": 37.4689
+    "long": 37.4689,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 5,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Fasil Ghebbi combines serious fortification value with a more adaptable inland setting than many heritage compounds. It looks like a credible medium-term holdout site, though it would still need broader support systems for real long-term survival.",
+      "strengths": [
+        "Strong walls and inherently defensive historic design",
+        "Inland setting gives it better survival logic than coastal heritage sites"
+      ],
+      "weaknesses": [
+        "Historic structures may constrain modern adaptation",
+        "Sustainability still depends on surrounding land and systems"
+      ]
+    }
   },
   {
     "name": "Kimberley Big Hole & Mining Complex",
@@ -76,7 +122,27 @@
     "region": "africa",
     "country": "South Africa",
     "lat": -28.7383,
-    "long": 24.7586
+    "long": 24.7586,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 4,
+        "isolation": 5,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Kimberley’s mining complex has some defensive and industrial logic, especially where terrain shapes movement, but it carries significant practical downsides. It feels more like a difficult fallback site than a truly desirable stronghold.",
+      "strengths": [
+        "Terrain and infrastructure could help channel movement",
+        "Industrial remnants may offer salvage value"
+      ],
+      "weaknesses": [
+        "Mining environments can be hazardous and hard to maintain",
+        "Weak agricultural and lifestyle potential for long-term habitation"
+      ]
+    }
   },
   {
     "name": "Bonny Island LNG Terminal",
@@ -85,7 +151,27 @@
     "region": "africa",
     "country": "Nigeria",
     "lat": 4.4297,
-    "long": 7.17
+    "long": 7.17,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 3,
+        "isolation": 7,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Bonny Island LNG Terminal benefits from island separation and industrial infrastructure, but it is poorly suited to long-term survival without complex technical support. It works better as a temporary strongpoint than a true endgame base.",
+      "strengths": [
+        "Island geography limits casual access",
+        "Industrial footprint may offer useful hard infrastructure"
+      ],
+      "weaknesses": [
+        "Highly dependent on complex systems and supply chains",
+        "Industrial hazards and maintenance burden are major liabilities"
+      ]
+    }
   },
   {
     "name": "Camp Lemonnier",
@@ -94,7 +180,27 @@
     "region": "africa",
     "country": "Djibouti",
     "lat": 11.5473,
-    "long": 43.1595
+    "long": 43.1595,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 4,
+        "accessibility": 6
+      }
+    },
+    "description": {
+      "summary": "Camp Lemonnier is one of the stronger institutional compounds in Africa thanks to its hardened perimeter, military-grade layout, and established infrastructure. Its weakness is that it would be an obvious strategic target in any wider collapse.",
+      "strengths": [
+        "Strong perimeter security and controlled access",
+        "Existing infrastructure suited to organised occupation"
+      ],
+      "weaknesses": [
+        "Low stealth value and high likelihood of competition",
+        "Long-term sustainability depends on maintaining supply systems"
+      ]
+    }
   },
   {
     "name": "UN Base in Juba (UNMISS HQ, South Sudan)",
@@ -103,7 +209,27 @@
     "region": "africa",
     "country": "South Sudan",
     "lat": 4.8517,
-    "long": 31.5825
+    "long": 31.5825,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 4,
+        "isolation": 3,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "The UN base in Juba has the perimeter control and infrastructure of a serious institutional compound, but it suffers from being visible, contested, and tied to a fragile urban environment. Strong tactically, weaker strategically.",
+      "strengths": [
+        "Hardened compound logic with controlled access",
+        "Existing facilities support organised occupation"
+      ],
+      "weaknesses": [
+        "High competition risk in a crisis",
+        "Limited long-term independence from surrounding systems"
+      ]
+    }
   },
   {
     "name": "Seychelles",
@@ -112,7 +238,27 @@
     "region": "africa",
     "country": "Seychelles",
     "lat": -4.6796,
-    "long": 55.492
+    "long": 55.492,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 7,
+        "isolation": 9,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Seychelles is one of the strongest island-based options in Africa because it combines real isolation with a credible long-term habitation environment. Its main challenge is that access and resupply would become difficult once systems break down.",
+      "strengths": [
+        "Exceptional isolation from mainland collapse dynamics",
+        "Better lifestyle and sustainability potential than harsher islands"
+      ],
+      "weaknesses": [
+        "Hard to reach and reinforce once cut off",
+        "Fragmented geography may complicate coordination and defence"
+      ]
+    }
   },
   {
     "name": "Zanzibar Island",
@@ -121,7 +267,27 @@
     "region": "africa",
     "country": "Tanzania",
     "lat": -6.1659,
-    "long": 39.2026
+    "long": 39.2026,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 6,
+        "isolation": 8,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Zanzibar Island is one of the stronger balanced options in Africa because it combines island separation with an established human environment and better long-term viability than many remote extremes. Its main weakness is that it is not isolated enough to be effortless.",
+      "strengths": [
+        "Strong island separation from mainland threat flow",
+        "More credible long-term habitation base than many harsher sites"
+      ],
+      "weaknesses": [
+        "Existing population pressures would complicate control",
+        "Coastline scale makes total defence difficult"
+      ]
+    }
   },
   {
     "name": "Cape Point Lighthouse",
@@ -130,25 +296,85 @@
     "region": "africa",
     "country": "South Africa",
     "lat": -34.3568,
-    "long": 18.4897
+    "long": 18.4897,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 4,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Cape Point Lighthouse offers useful geographic separation and strong visibility, but it is too limited in scale and long-term resource depth to function as a top-tier apocalypse base. It is better viewed as a lookout position than a settlement anchor.",
+      "strengths": [
+        "Coastal position provides visibility and natural defensive edges",
+        "Relative remoteness reduces immediate pressure"
+      ],
+      "weaknesses": [
+        "Limited living and agricultural capacity",
+        "Exposure to weather and supply constraints"
+      ]
+    }
   },
   {
-    "name": "Great Mosque of Djenn\u00e9",
+    "name": "Great Mosque of Djenné",
     "slug": "djenne",
     "type": "landmark_structure",
     "region": "africa",
     "country": "Mali",
     "lat": 13.905,
-    "long": -4.555
+    "long": -4.555,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 4,
+        "sustainability": 4,
+        "isolation": 4,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "The Great Mosque of Djenné is iconic but not especially strong as a zombie base. It lacks the defensive, logistical, and long-term survival advantages needed to compete with more practical sites.",
+      "strengths": [
+        "Central landmark with some structural mass and visibility",
+        "Could serve as a rally point or temporary refuge"
+      ],
+      "weaknesses": [
+        "Limited defensive suitability for prolonged occupation",
+        "Not designed for self-sustaining settlement use"
+      ]
+    }
   },
   {
-    "name": "A\u00eft Benhaddou",
+    "name": "Aït Benhaddou",
     "slug": "ait-benhaddou",
     "type": "remote_settlement",
     "region": "africa",
     "country": "Morocco",
     "lat": 31.047,
-    "long": -7.13
+    "long": -7.13,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 5,
+        "isolation": 6,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Aït Benhaddou is a remote fortified settlement in Morocco whose compact historic form and defensible layout would make it a credible short-to-medium-term refuge. Its biggest challenge is long-term sustainability in a harsh environment with limited local productivity.",
+      "strengths": [
+        "Naturally defensive built form with strong control over entry points",
+        "Lower surrounding population pressure than major urban sites"
+      ],
+      "weaknesses": [
+        "Arid conditions reduce long-term self-sufficiency",
+        "Heritage-style structures may be hard to adapt at scale"
+      ]
+    }
   },
   {
     "name": "Kolmanskop",
@@ -157,7 +383,27 @@
     "region": "africa",
     "country": "Namibia",
     "lat": -26.7033,
-    "long": 15.2283
+    "long": 15.2283,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 2,
+        "isolation": 8,
+        "accessibility": 2
+      }
+    },
+    "description": {
+      "summary": "Kolmanskop is highly isolated and atmospherically ideal for the concept, but in practical survival terms it is too resource-poor and too decayed to rank highly. It is strong on remoteness and weak on almost everything else.",
+      "strengths": [
+        "Very low surrounding population pressure",
+        "Desert isolation reduces external threat flow"
+      ],
+      "weaknesses": [
+        "Minimal long-term sustainability",
+        "Decayed structures and harsh conditions reduce viability"
+      ]
+    }
   },
   {
     "name": "Waw an Namus Cave System",
@@ -166,7 +412,27 @@
     "region": "africa",
     "country": "Libya",
     "lat": 24.92,
-    "long": 17.88
+    "long": 17.88,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 2,
+        "isolation": 9,
+        "accessibility": 1
+      }
+    },
+    "description": {
+      "summary": "Waw an Namus is extremely isolated and naturally hard to reach, but that same remoteness works against it as a practical survival site. It is compelling as an extreme refuge, not as a sustainable base.",
+      "strengths": [
+        "Exceptional remoteness and low traffic",
+        "Hard terrain provides natural protection"
+      ],
+      "weaknesses": [
+        "Very poor accessibility and resupply potential",
+        "Minimal long-term habitability without major preparation"
+      ]
+    }
   },
   {
     "name": "Matmata Underground Dwellings",
@@ -175,7 +441,27 @@
     "region": "africa",
     "country": "Tunisia",
     "lat": 33.5444,
-    "long": 9.9711
+    "long": 9.9711,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 7,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Matmata’s underground dwellings are one of the more interesting survival candidates in Africa because they combine concealment, passive protection, and environmental shelter. Their main limitation is scale and dependence on wider local resources.",
+      "strengths": [
+        "Excellent concealment and natural thermal protection",
+        "Harder to overrun than exposed surface settlements"
+      ],
+      "weaknesses": [
+        "Limited expansion capacity",
+        "Long-term viability depends on surrounding land and water access"
+      ]
+    }
   },
   {
     "name": "Cape Town Airport",
@@ -184,7 +470,27 @@
     "region": "africa",
     "country": "South Africa",
     "lat": -33.9696,
-    "long": 18.5972
+    "long": 18.5972,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 3,
+        "isolation": 2,
+        "accessibility": 9
+      }
+    },
+    "description": {
+      "summary": "Cape Town Airport is extremely accessible and logistically useful, but it is weak as a survival base because it is open, highly visible, and tied to dense population systems. In a zombie scenario it is more liability than sanctuary.",
+      "strengths": [
+        "Excellent transport and logistics infrastructure",
+        "Large built environment with storage potential"
+      ],
+      "weaknesses": [
+        "Very difficult to defend effectively",
+        "High human traffic exposure makes it an early flashpoint"
+      ]
+    }
   },
   {
     "name": "Mombasa Port",
@@ -193,7 +499,27 @@
     "region": "africa",
     "country": "Kenya",
     "lat": -4.0435,
-    "long": 39.6682
+    "long": 39.6682,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 4,
+        "isolation": 3,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "Mombasa Port has infrastructure and access but suffers from the same problems as most major transport hubs: exposure, scale, and intense competition. It makes sense as a transit node, not as a final base.",
+      "strengths": [
+        "Strong logistics and storage potential",
+        "Maritime access could be useful in controlled conditions"
+      ],
+      "weaknesses": [
+        "Extremely exposed and hard to secure",
+        "High strategic visibility would attract conflict"
+      ]
+    }
   },
   {
     "name": "Mount Huashan",
@@ -394,7 +720,7 @@
     "long": 24.9884
   },
   {
-    "name": "Gda\u0144sk Shipyard",
+    "name": "Gdańsk Shipyard",
     "slug": "gdansk-shipyard",
     "type": "industrial_site",
     "region": "eastern_europe",
@@ -1256,7 +1582,7 @@
     "long": -69.296
   },
   {
-    "name": "Chilo\u00e9 Island",
+    "name": "Chiloé Island",
     "slug": "chiloe",
     "type": "isolated_landmass",
     "region": "south_america",
@@ -1265,7 +1591,7 @@
     "long": -73.99
   },
   {
-    "name": "Gal\u00e1pagos Islands",
+    "name": "Galápagos Islands",
     "slug": "galapagos",
     "type": "isolated_landmass",
     "region": "south_america",
@@ -1319,7 +1645,7 @@
     "long": -70.6608
   },
   {
-    "name": "Potos\u00ed Silver Mine (Cerro Rico)",
+    "name": "Potosí Silver Mine (Cerro Rico)",
     "slug": "potosi-mine",
     "type": "subterranean",
     "region": "south_america",
@@ -1337,7 +1663,7 @@
     "long": -79.68
   },
   {
-    "name": "S\u00e3o Paulo Airport",
+    "name": "São Paulo Airport",
     "slug": "sao-paulo-airport",
     "type": "transit_hub",
     "region": "south_america",
@@ -1355,7 +1681,7 @@
     "long": 75.7873
   },
   {
-    "name": "Tiger\u2019s Nest Monastery",
+    "name": "Tiger’s Nest Monastery",
     "slug": "tigers-nest",
     "type": "elevated_stronghold",
     "region": "south_asia",
@@ -1904,7 +2230,7 @@
     "long": 7.885
   },
   {
-    "name": "\u00cele d\u2019Yeu",
+    "name": "Île d’Yeu",
     "slug": "ile-dyeu",
     "type": "isolated_landmass",
     "region": "western_europe",
@@ -1922,7 +2248,7 @@
     "long": 2.2945
   },
   {
-    "name": "Phare du Cr\u00e9ac'h",
+    "name": "Phare du Créac'h",
     "slug": "creach",
     "type": "landmark_structure",
     "region": "western_europe",
