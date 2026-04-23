@@ -70,6 +70,21 @@ npx serve .
 3. Keep `CNAME` in the repo root for your custom domain.
 4. Point your DNS records to GitHub Pages per GitHub documentation.
 
+## Crawl/indexing baseline (robots + sitemap)
+
+- Production canonical origin is `https://zombiebases.com`.
+- `robots.txt` allows crawling for public pages and points crawlers to the sitemap.
+- `sitemap.xml` is generated from `data/bases-index.json` and includes:
+  - Homepage (`/` and `/index.html`)
+  - Detail routes (`/base.html?slug=...`) for each unique base slug
+- Query-param filter/sort/search states are intentionally excluded from sitemap entries and canonicalized to `/index.html` to avoid duplicate indexing.
+
+To regenerate the sitemap after data updates:
+
+```bash
+python3 scripts/generate-sitemap.py
+```
+
 ## Alpha/curation note
 
 The dataset is currently curated for alpha and still being refined. Expect scoring, summaries, and base metadata to evolve as content quality and consistency improve.
