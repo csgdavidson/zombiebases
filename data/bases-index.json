@@ -5661,7 +5661,27 @@
     "region": "western_europe",
     "country": "Germany",
     "lat": 47.5576,
-    "long": 10.7498
+    "long": 10.7498,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 5,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Elevated and visually defensive site, though not built for real conflict.",
+      "strengths": [
+        "Strong elevation",
+        "Difficult access routes"
+      ],
+      "weaknesses": [
+        "Not a true defensive structure",
+        "Tourism exposure"
+      ]
+    }
   },
   {
     "name": "Rocamadour",
@@ -5670,7 +5690,27 @@
     "region": "western_europe",
     "country": "France",
     "lat": 44.8,
-    "long": 1.616
+    "long": 1.616,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Cliffside settlement with strong defensive terrain and moderate viability.",
+      "strengths": [
+        "Natural vertical defense",
+        "Controlled access routes"
+      ],
+      "weaknesses": [
+        "Limited expansion",
+        "Resource constraints"
+      ]
+    }
   },
   {
     "name": "Carcassonne",
@@ -5679,7 +5719,27 @@
     "region": "western_europe",
     "country": "France",
     "lat": 43.213,
-    "long": 2.351
+    "long": 2.351,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 5,
+        "isolation": 5,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "One of Europe’s strongest historic fortifications with excellent defensive potential.",
+      "strengths": [
+        "Massive fortified walls",
+        "Clear defensive structure"
+      ],
+      "weaknesses": [
+        "Limited modern sustainability",
+        "Tourism exposure"
+      ]
+    }
   },
   {
     "name": "Mont Saint-Michel",
@@ -5688,7 +5748,27 @@
     "region": "western_europe",
     "country": "France",
     "lat": 48.636,
-    "long": -1.511
+    "long": -1.511,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 5,
+        "isolation": 8,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Exceptional tidal fortress with elite defensive characteristics.",
+      "strengths": [
+        "Natural tidal isolation",
+        "Strong defensive structure"
+      ],
+      "weaknesses": [
+        "Limited living space",
+        "Supply constraints"
+      ]
+    }
   },
   {
     "name": "Rotterdam Port",
@@ -5697,7 +5777,27 @@
     "region": "western_europe",
     "country": "Netherlands",
     "lat": 51.955,
-    "long": 4.142
+    "long": 4.142,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 7,
+        "isolation": 2,
+        "accessibility": 9
+      }
+    },
+    "description": {
+      "summary": "Massive industrial logistics hub with resources but extreme exposure.",
+      "strengths": [
+        "Industrial scale resources",
+        "Logistics infrastructure"
+      ],
+      "weaknesses": [
+        "Highly visible",
+        "Impossible to secure"
+      ]
+    }
   },
   {
     "name": "Ruhr Industrial Complex",
@@ -5706,7 +5806,27 @@
     "region": "western_europe",
     "country": "Germany",
     "lat": 51.4556,
-    "long": 7.0116
+    "long": 7.0116,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 4,
+        "sustainability": 7,
+        "isolation": 2,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "Resource-rich industrial region but heavily exposed and densely populated.",
+      "strengths": [
+        "Industrial production capacity",
+        "Resource availability"
+      ],
+      "weaknesses": [
+        "Dense population",
+        "Difficult to defend"
+      ]
+    }
   },
   {
     "name": "2e REP Barracks (Calvi)",
@@ -5715,7 +5835,27 @@
     "region": "western_europe",
     "country": "France",
     "lat": 42.5667,
-    "long": 8.757
+    "long": 8.757,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 6,
+        "isolation": 6,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Military-grade infrastructure with strong defensive capability and moderate isolation.",
+      "strengths": [
+        "Trained defensive layout",
+        "Controlled access environment"
+      ],
+      "weaknesses": [
+        "Strategic target risk",
+        "Limited long-term independence"
+      ]
+    }
   },
   {
     "name": "NATO Airbase Geilenkirchen",
@@ -5724,7 +5864,27 @@
     "region": "western_europe",
     "country": "Germany",
     "lat": 50.96,
-    "long": 6.042
+    "long": 6.042,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 6,
+        "isolation": 4,
+        "accessibility": 7
+      }
+    },
+    "description": {
+      "summary": "Highly capable military installation with strong infrastructure and defense.",
+      "strengths": [
+        "Military-grade security",
+        "Operational infrastructure"
+      ],
+      "weaknesses": [
+        "High-value target",
+        "Limited isolation"
+      ]
+    }
   },
   {
     "name": "Heligoland",
@@ -5733,7 +5893,27 @@
     "region": "western_europe",
     "country": "Germany",
     "lat": 54.182,
-    "long": 7.885
+    "long": 7.885,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 6,
+        "isolation": 9,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Highly isolated island offering strong defensive and survival advantages.",
+      "strengths": [
+        "Extreme isolation",
+        "Clear perimeter control"
+      ],
+      "weaknesses": [
+        "Limited infrastructure",
+        "Resupply challenges"
+      ]
+    }
   },
   {
     "name": "Île d’Yeu",
@@ -5742,7 +5922,27 @@
     "region": "western_europe",
     "country": "France",
     "lat": 46.705,
-    "long": -2.341
+    "long": -2.341,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 6,
+        "isolation": 8,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Strong island option with good isolation and moderate sustainability.",
+      "strengths": [
+        "Island separation",
+        "Manageable population"
+      ],
+      "weaknesses": [
+        "Limited resources",
+        "Dependent on supply routes"
+      ]
+    }
   },
   {
     "name": "Eiffel Tower",
@@ -5751,7 +5951,27 @@
     "region": "western_europe",
     "country": "France",
     "lat": 48.8584,
-    "long": 2.2945
+    "long": 2.2945,
+    "scores": {
+      "overall": 1,
+      "categories": {
+        "defensibility": 1,
+        "sustainability": 1,
+        "isolation": 1,
+        "accessibility": 9
+      }
+    },
+    "description": {
+      "summary": "Iconic landmark with no realistic survival application.",
+      "strengths": [
+        "High visibility",
+        "Strong structure"
+      ],
+      "weaknesses": [
+        "No sustainability",
+        "Impossible to defend"
+      ]
+    }
   },
   {
     "name": "Phare du Créac'h",
@@ -5760,7 +5980,27 @@
     "region": "western_europe",
     "country": "France",
     "lat": 48.459,
-    "long": -4.785
+    "long": -4.785,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 4,
+        "sustainability": 3,
+        "isolation": 8,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Isolated lighthouse with visibility advantages but limited survival capacity.",
+      "strengths": [
+        "Remote coastal position",
+        "High visibility"
+      ],
+      "weaknesses": [
+        "Very limited resources",
+        "Small footprint"
+      ]
+    }
   },
   {
     "name": "Eguisheim",
@@ -5769,7 +6009,27 @@
     "region": "western_europe",
     "country": "France",
     "lat": 48.042,
-    "long": 7.307
+    "long": 7.307,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 6,
+        "isolation": 5,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Small village with moderate sustainability but limited defensive advantage.",
+      "strengths": [
+        "Low population density",
+        "Local resource potential"
+      ],
+      "weaknesses": [
+        "Minimal fortification",
+        "Limited scale"
+      ]
+    }
   },
   {
     "name": "Hallstatt",
@@ -5778,7 +6038,27 @@
     "region": "western_europe",
     "country": "Austria",
     "lat": 47.561,
-    "long": 13.649
+    "long": 13.649,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 7,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Naturally constrained alpine settlement with solid survivability potential.",
+      "strengths": [
+        "Geographic defensibility",
+        "Water and local resources"
+      ],
+      "weaknesses": [
+        "Tourism exposure",
+        "Limited expansion"
+      ]
+    }
   },
   {
     "name": "Maginot Line Bunkers",
@@ -5787,7 +6067,27 @@
     "region": "western_europe",
     "country": "France",
     "lat": 49.925,
-    "long": 2.142
+    "long": 2.142,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 4,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Deep defensive bunker systems with exceptional protection but limited adaptability.",
+      "strengths": [
+        "Hardened underground defenses",
+        "Designed for prolonged defense"
+      ],
+      "weaknesses": [
+        "Low sustainability",
+        "Static design limitations"
+      ]
+    }
   },
   {
     "name": "Naours Underground City",
@@ -5796,7 +6096,27 @@
     "region": "western_europe",
     "country": "France",
     "lat": 50.951,
-    "long": 2.133
+    "long": 2.133,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Extensive underground refuge system with strong defensive advantages.",
+      "strengths": [
+        "Hidden subterranean network",
+        "Protected environment"
+      ],
+      "weaknesses": [
+        "Limited sustainability",
+        "Ventilation constraints"
+      ]
+    }
   },
   {
     "name": "Charles de Gaulle Airport",
@@ -5805,7 +6125,27 @@
     "region": "western_europe",
     "country": "France",
     "lat": 49.0097,
-    "long": 2.5479
+    "long": 2.5479,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 1,
+        "sustainability": 4,
+        "isolation": 1,
+        "accessibility": 10
+      }
+    },
+    "description": {
+      "summary": "Extensive infrastructure but completely exposed and impossible to secure.",
+      "strengths": [
+        "Logistics and supply access",
+        "Large infrastructure"
+      ],
+      "weaknesses": [
+        "Extreme exposure",
+        "High population density"
+      ]
+    }
   },
   {
     "name": "Schiphol Airport",
@@ -5814,6 +6154,26 @@
     "region": "western_europe",
     "country": "Netherlands",
     "lat": 52.3105,
-    "long": 4.7683
+    "long": 4.7683,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 1,
+        "sustainability": 4,
+        "isolation": 1,
+        "accessibility": 10
+      }
+    },
+    "description": {
+      "summary": "Highly advanced transport hub but completely unsuitable for survival.",
+      "strengths": [
+        "Infrastructure",
+        "Connectivity"
+      ],
+      "weaknesses": [
+        "Extreme exposure",
+        "Unmanageable scale"
+      ]
+    }
   }
 ]
