@@ -528,7 +528,27 @@
     "region": "east_asia",
     "country": "China",
     "lat": 34.4836,
-    "long": 110.084
+    "long": 110.084,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 4,
+        "isolation": 7,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Extreme terrain creates natural defence and isolation, but limits long-term habitability and logistics.",
+      "strengths": [
+        "Exceptional natural defensive position",
+        "Difficult access routes"
+      ],
+      "weaknesses": [
+        "Very limited living capacity",
+        "Harsh environment for sustained habitation"
+      ]
+    }
   },
   {
     "name": "Tiger Leaping Gorge Cliffs",
@@ -537,7 +557,27 @@
     "region": "east_asia",
     "country": "China",
     "lat": 27.1788,
-    "long": 100.095
+    "long": 100.095,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 3,
+        "isolation": 7,
+        "accessibility": 2
+      }
+    },
+    "description": {
+      "summary": "Incredible terrain advantage and defensibility, but extremely poor for long-term living.",
+      "strengths": [
+        "Near-impenetrable terrain",
+        "Natural choke points"
+      ],
+      "weaknesses": [
+        "Minimal sustainability",
+        "Extremely difficult logistics"
+      ]
+    }
   },
   {
     "name": "Great Wall Fortress Sections",
@@ -546,7 +586,27 @@
     "region": "east_asia",
     "country": "China",
     "lat": 40.4319,
-    "long": 116.5704
+    "long": 116.5704,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 4,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Purpose-built defensive infrastructure with strong terrain advantage. Excellent for control and defence, but weaker for long-term living.",
+      "strengths": [
+        "Exceptional defensive positioning and choke points",
+        "Built specifically for defence across terrain"
+      ],
+      "weaknesses": [
+        "Limited sustainability and living infrastructure",
+        "Spread-out structure hard to fully control"
+      ]
+    }
   },
   {
     "name": "Himeji Castle",
@@ -555,7 +615,27 @@
     "region": "east_asia",
     "country": "Japan",
     "lat": 34.8394,
-    "long": 134.6939
+    "long": 134.6939,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 4,
+        "isolation": 3,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "One of the most refined defensive castles ever built, offering strong protection but limited modern survival capability.",
+      "strengths": [
+        "Highly sophisticated defensive design",
+        "Strong control over entry points"
+      ],
+      "weaknesses": [
+        "Located in populated region",
+        "Limited adaptability for long-term survival"
+      ]
+    }
   },
   {
     "name": "Foxconn Shenzhen Factory",
@@ -564,7 +644,27 @@
     "region": "east_asia",
     "country": "China",
     "lat": 22.5431,
-    "long": 114.0579
+    "long": 114.0579,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 4,
+        "sustainability": 4,
+        "isolation": 2,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "Massive industrial scale with infrastructure and resources, but highly exposed and deeply embedded in dense population systems.",
+      "strengths": [
+        "Large-scale infrastructure and potential resource stockpiles",
+        "Self-contained industrial footprint"
+      ],
+      "weaknesses": [
+        "Extremely high population exposure",
+        "Difficult to secure perimeter at scale"
+      ]
+    }
   },
   {
     "name": "Hyundai Heavy Industries Shipyard",
@@ -573,7 +673,27 @@
     "region": "east_asia",
     "country": "South Korea",
     "lat": 35.5045,
-    "long": 129.3889
+    "long": 129.3889,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 5,
+        "isolation": 3,
+        "accessibility": 7
+      }
+    },
+    "description": {
+      "summary": "Industrial scale and infrastructure offer potential, but exposure and scale make defence and long-term control difficult.",
+      "strengths": [
+        "Massive industrial resources and facilities",
+        "Access to maritime routes"
+      ],
+      "weaknesses": [
+        "Difficult to secure large open areas",
+        "High visibility and strategic importance"
+      ]
+    }
   },
   {
     "name": "Wuhan Institute of Virology",
@@ -582,7 +702,27 @@
     "region": "east_asia",
     "country": "China",
     "lat": 30.5436,
-    "long": 114.3625
+    "long": 114.3625,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 4,
+        "isolation": 3,
+        "accessibility": 6
+      }
+    },
+    "description": {
+      "summary": "Secure institutional compound with infrastructure, but highly visible and tied to dense urban systems.",
+      "strengths": [
+        "Controlled facility with security measures",
+        "Advanced infrastructure"
+      ],
+      "weaknesses": [
+        "High visibility and risk of targeting",
+        "Dependent on surrounding systems"
+      ]
+    }
   },
   {
     "name": "Ryongsong Residence Compound",
@@ -591,7 +731,27 @@
     "region": "east_asia",
     "country": "North Korea",
     "lat": 39.049,
-    "long": 125.793
+    "long": 125.793,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 4,
+        "isolation": 3,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Highly controlled institutional compound with strong perimeter security, but limited independence from wider systems.",
+      "strengths": [
+        "Strongly secured and controlled environment",
+        "Designed for protection of high-value occupants"
+      ],
+      "weaknesses": [
+        "High strategic visibility",
+        "Dependent on external systems"
+      ]
+    }
   },
   {
     "name": "Jeju Island",
@@ -600,7 +760,27 @@
     "region": "east_asia",
     "country": "Japan",
     "lat": 33.892,
-    "long": 130.875
+    "long": 130.875,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 7,
+        "isolation": 8,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Strong island candidate combining isolation with a viable living environment, though not immune to population pressures.",
+      "strengths": [
+        "Good balance of isolation and livability",
+        "Established infrastructure and resources"
+      ],
+      "weaknesses": [
+        "Population density could create pressure",
+        "Not fully defensible coastline"
+      ]
+    }
   },
   {
     "name": "Okinawa",
@@ -609,7 +789,27 @@
     "region": "east_asia",
     "country": "Japan",
     "lat": 26.2124,
-    "long": 127.6809
+    "long": 127.6809,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 7,
+        "isolation": 8,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Large island with good sustainability potential and isolation, though strategic importance makes it a likely contested zone.",
+      "strengths": [
+        "Strong island separation",
+        "Established infrastructure and agriculture"
+      ],
+      "weaknesses": [
+        "Strategic visibility and conflict risk",
+        "Large area hard to fully secure"
+      ]
+    }
   },
   {
     "name": "Great Buddha Leshan",
@@ -618,7 +818,27 @@
     "region": "east_asia",
     "country": "China",
     "lat": 29.5447,
-    "long": 103.7734
+    "long": 103.7734,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 3,
+        "isolation": 3,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Iconic but not functionally useful as a survival base. Lacks defensibility, infrastructure, and long-term viability.",
+      "strengths": [
+        "Elevated position offers limited visibility",
+        "Remote relative to dense urban cores"
+      ],
+      "weaknesses": [
+        "No meaningful defensive structure",
+        "Not suitable for habitation or sustainability"
+      ]
+    }
   },
   {
     "name": "Tokyo Tower",
@@ -627,7 +847,27 @@
     "region": "east_asia",
     "country": "Japan",
     "lat": 35.6586,
-    "long": 139.7454
+    "long": 139.7454,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 2,
+        "isolation": 1,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "Iconic but completely impractical as a survival base.",
+      "strengths": [
+        "Visibility",
+        "Central landmark"
+      ],
+      "weaknesses": [
+        "No defensibility",
+        "No sustainability or habitation value"
+      ]
+    }
   },
   {
     "name": "Shaxi Ancient Town",
@@ -636,7 +876,27 @@
     "region": "east_asia",
     "country": "China",
     "lat": 25.248,
-    "long": 100.162
+    "long": 100.162,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 6,
+        "isolation": 7,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Remote and relatively self-contained settlement with decent sustainability, but limited defensive strength.",
+      "strengths": [
+        "Lower population pressure",
+        "Some level of local sustainability"
+      ],
+      "weaknesses": [
+        "Weak defensive structures",
+        "Limited scalability"
+      ]
+    }
   },
   {
     "name": "Shirakawa-go",
@@ -645,7 +905,27 @@
     "region": "east_asia",
     "country": "Japan",
     "lat": 36.26,
-    "long": 136.905
+    "long": 136.905,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 6,
+        "isolation": 7,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Remote mountain village with sustainability potential and isolation, though not strongly defensible.",
+      "strengths": [
+        "Strong local living model",
+        "Remote location reduces pressure"
+      ],
+      "weaknesses": [
+        "Limited defensive capability",
+        "Harsh seasonal conditions"
+      ]
+    }
   },
   {
     "name": "Iwo Jima Underground Bunkers",
@@ -654,7 +934,27 @@
     "region": "east_asia",
     "country": "Japan",
     "lat": 24.784,
-    "long": 141.322
+    "long": 141.322,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 4,
+        "isolation": 8,
+        "accessibility": 2
+      }
+    },
+    "description": {
+      "summary": "A hardened, battle-tested subterranean network with excellent defensive qualities and isolation, but limited long-term sustainability.",
+      "strengths": [
+        "Deep, fortified underground system",
+        "Extremely hard to access and overrun"
+      ],
+      "weaknesses": [
+        "Limited resupply and expansion potential",
+        "Harsh island environment"
+      ]
+    }
   },
   {
     "name": "Beijing Underground City",
@@ -663,7 +963,27 @@
     "region": "east_asia",
     "country": "China",
     "lat": 39.9042,
-    "long": 116.4074
+    "long": 116.4074,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 5,
+        "accessibility": 6
+      }
+    },
+    "description": {
+      "summary": "A vast subterranean network built for wartime survival, offering strong defensive and concealment advantages. Its main limitation is long-term sustainability and dependence on surface systems.",
+      "strengths": [
+        "Extensive underground shelter network difficult to overrun",
+        "Built with survival scenarios in mind"
+      ],
+      "weaknesses": [
+        "Reliant on surface supply chains",
+        "Ventilation and resource constraints over time"
+      ]
+    }
   },
   {
     "name": "Shanghai Port",
@@ -672,7 +992,27 @@
     "region": "east_asia",
     "country": "China",
     "lat": 31.2304,
-    "long": 121.4737
+    "long": 121.4737,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 4,
+        "isolation": 2,
+        "accessibility": 9
+      }
+    },
+    "description": {
+      "summary": "Massive logistical hub with resources, but extremely exposed and unsuitable as a defensive base.",
+      "strengths": [
+        "Huge storage and logistics potential",
+        "Maritime access"
+      ],
+      "weaknesses": [
+        "Extremely high population and exposure",
+        "Impossible to defend effectively"
+      ]
+    }
   },
   {
     "name": "Tokyo Airport",
@@ -681,7 +1021,27 @@
     "region": "east_asia",
     "country": "Japan",
     "lat": 35.5494,
-    "long": 139.7798
+    "long": 139.7798,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 3,
+        "isolation": 2,
+        "accessibility": 9
+      }
+    },
+    "description": {
+      "summary": "High-access infrastructure but fundamentally unsuitable as a survival base due to exposure and scale.",
+      "strengths": [
+        "Logistics and infrastructure",
+        "Large built environment"
+      ],
+      "weaknesses": [
+        "Extremely exposed",
+        "Impossible to secure long-term"
+      ]
+    }
   },
   {
     "name": "Predjama Castle",
