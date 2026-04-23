@@ -123,6 +123,8 @@ Security/header hardening is expected to be enforced at Cloudflare (or equivalen
 ## Intentionally deferred (post-design / later hardening)
 
 - Strict production security headers (full CSP, Permissions-Policy, etc.).
+
+<!-- redeploy trigger -->
 - Self-hosting third-party map assets and completing SRI coverage for all third-party files.
 - Final indexability decision for static dedicated pages in `bases/`.
 - Broad data cleanup and consistency improvements across all base records.
