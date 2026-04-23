@@ -69,6 +69,8 @@ const elements = {
   relatedList: document.getElementById('related-bases-list')
 };
 
+const slugHelper = window.baseSlugHelper;
+
 function toTitleCaseSlug(value) {
   return value
     .split('_')
@@ -379,8 +381,9 @@ function renderScore(base) {
 }
 
 function createBaseUrl(slug, sourceParams) {
+  const resolvedSlug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(slug) : slug;
   const params = new URLSearchParams();
-  params.set('slug', slug);
+  params.set('slug', resolvedSlug);
 
   const view = sourceParams.get('view');
   const region = sourceParams.get('region');
@@ -484,7 +487,9 @@ async function loadBase() {
     }
 
     const bases = await response.json();
-    const matchedBase = bases.find((base) => base.slug === slug);
+    const matchedBase = slugHelper?.resolveBaseBySlug
+      ? slugHelper.resolveBaseBySlug(bases, slug)
+      : bases.find((base) => base.slug === slug);
 
     if (!matchedBase) {
       showNotFound();
