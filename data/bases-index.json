@@ -3582,7 +3582,27 @@
     "region": "south_america",
     "country": "Peru",
     "lat": -14.6315,
-    "long": -69.446
+    "long": -69.446,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 3,
+        "isolation": 7,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Extreme altitude provides isolation but makes sustainable living very difficult.",
+      "strengths": [
+        "Remote high-altitude location",
+        "Low external pressure"
+      ],
+      "weaknesses": [
+        "Harsh living conditions",
+        "Limited sustainability"
+      ]
+    }
   },
   {
     "name": "Machu Picchu",
@@ -3591,7 +3611,27 @@
     "region": "south_america",
     "country": "Peru",
     "lat": -13.1631,
-    "long": -72.545
+    "long": -72.545,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 6,
+        "isolation": 7,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Highly defensible and remote, but limited by scalability and resources.",
+      "strengths": [
+        "Natural defensibility",
+        "Remote location"
+      ],
+      "weaknesses": [
+        "Limited expansion",
+        "Resource constraints"
+      ]
+    }
   },
   {
     "name": "Fort Copacabana",
@@ -3600,7 +3640,27 @@
     "region": "south_america",
     "country": "Brazil",
     "lat": -22.9886,
-    "long": -43.1916
+    "long": -43.1916,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 5,
+        "isolation": 3,
+        "accessibility": 7
+      }
+    },
+    "description": {
+      "summary": "Well-defended but located in a highly populated and exposed urban environment.",
+      "strengths": [
+        "Military-grade defenses",
+        "Strong structure"
+      ],
+      "weaknesses": [
+        "Urban exposure",
+        "High population pressure"
+      ]
+    }
   },
   {
     "name": "San Felipe Fortress",
@@ -3609,7 +3669,27 @@
     "region": "south_america",
     "country": "Colombia",
     "lat": 10.4236,
-    "long": -75.5514
+    "long": -75.5514,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 5,
+        "accessibility": 6
+      }
+    },
+    "description": {
+      "summary": "Strong defensive structure with moderate long-term viability.",
+      "strengths": [
+        "Fortified design",
+        "Strategic position"
+      ],
+      "weaknesses": [
+        "Limited resources",
+        "Moderate exposure"
+      ]
+    }
   },
   {
     "name": "Itaipu Dam",
@@ -3618,7 +3698,27 @@
     "region": "south_america",
     "country": "Brazil/Paraguay",
     "lat": -25.4078,
-    "long": -54.5882
+    "long": -54.5882,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 8,
+        "isolation": 4,
+        "accessibility": 7
+      }
+    },
+    "description": {
+      "summary": "Massive infrastructure asset with strong energy potential but difficult to secure.",
+      "strengths": [
+        "Power generation",
+        "Water access"
+      ],
+      "weaknesses": [
+        "Strategic target",
+        "Large and exposed"
+      ]
+    }
   },
   {
     "name": "Bunge Soy Processing Plant (Santos)",
@@ -3627,7 +3727,27 @@
     "region": "south_america",
     "country": "Brazil",
     "lat": -23.9608,
-    "long": -46.3336
+    "long": -46.3336,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 6,
+        "isolation": 3,
+        "accessibility": 7
+      }
+    },
+    "description": {
+      "summary": "Industrial-scale food processing is useful but highly exposed and dependent on supply chains.",
+      "strengths": [
+        "Food processing capability",
+        "Existing infrastructure"
+      ],
+      "weaknesses": [
+        "Highly visible",
+        "Difficult to defend"
+      ]
+    }
   },
   {
     "name": "Amazon Tall Tower Observatory",
@@ -3636,7 +3756,27 @@
     "region": "south_america",
     "country": "Brazil",
     "lat": -2.145,
-    "long": -59.005
+    "long": -59.005,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 9,
+        "isolation": 7,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Deep Amazon location offers unmatched natural resources but is difficult to defend and operate within.",
+      "strengths": [
+        "Abundant natural resources",
+        "Low population density"
+      ],
+      "weaknesses": [
+        "Extremely difficult terrain",
+        "Hard to secure or control"
+      ]
+    }
   },
   {
     "name": "Tambopata Research Center",
@@ -3645,7 +3785,27 @@
     "region": "south_america",
     "country": "Peru",
     "lat": -12.836,
-    "long": -69.296
+    "long": -69.296,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 8,
+        "isolation": 7,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Deep jungle location offers strong sustainability with moderate defensibility.",
+      "strengths": [
+        "Rich ecosystem",
+        "Remote setting"
+      ],
+      "weaknesses": [
+        "Difficult terrain",
+        "Limited defense options"
+      ]
+    }
   },
   {
     "name": "Chiloé Island",
@@ -3654,7 +3814,27 @@
     "region": "south_america",
     "country": "Chile",
     "lat": -42.64,
-    "long": -73.99
+    "long": -73.99,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 8,
+        "isolation": 7,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "One of the strongest all-round survival locations, balancing isolation with livable conditions.",
+      "strengths": [
+        "Island defensibility",
+        "Good agricultural potential"
+      ],
+      "weaknesses": [
+        "Weather exposure",
+        "Limited scalability"
+      ]
+    }
   },
   {
     "name": "Galápagos Islands",
@@ -3663,7 +3843,27 @@
     "region": "south_america",
     "country": "Ecuador",
     "lat": -0.9538,
-    "long": -90.9656
+    "long": -90.9656,
+    "scores": {
+      "overall": 9,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 8,
+        "isolation": 9,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "One of the best survival locations globally, combining isolation, resources, and defensibility.",
+      "strengths": [
+        "Extreme isolation",
+        "Rich natural ecosystem"
+      ],
+      "weaknesses": [
+        "Limited access",
+        "Environmental fragility"
+      ]
+    }
   },
   {
     "name": "Christ the Redeemer",
@@ -3672,7 +3872,27 @@
     "region": "south_america",
     "country": "Brazil",
     "lat": -22.9519,
-    "long": -43.2105
+    "long": -43.2105,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 1,
+        "isolation": 2,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "Iconic but completely impractical as a survival base.",
+      "strengths": [
+        "High vantage point",
+        "Symbolic location"
+      ],
+      "weaknesses": [
+        "No shelter or resources",
+        "Highly exposed"
+      ]
+    }
   },
   {
     "name": "Lighthouse Punta Del Este",
@@ -3681,7 +3901,27 @@
     "region": "south_america",
     "country": "Uruguay",
     "lat": -34.9671,
-    "long": -54.9503
+    "long": -54.9503,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 2,
+        "isolation": 4,
+        "accessibility": 7
+      }
+    },
+    "description": {
+      "summary": "Visually strategic but offers minimal practical survival value.",
+      "strengths": [
+        "Visibility",
+        "Coastal access"
+      ],
+      "weaknesses": [
+        "No infrastructure",
+        "Hard to defend"
+      ]
+    }
   },
   {
     "name": "Cusco Highlands Village",
@@ -3690,7 +3930,27 @@
     "region": "south_america",
     "country": "Peru",
     "lat": -13.5319,
-    "long": -71.9675
+    "long": -71.9675,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 8,
+        "isolation": 6,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "High-altitude settlements provide strong survivability with manageable isolation.",
+      "strengths": [
+        "Agricultural traditions",
+        "Defensive terrain"
+      ],
+      "weaknesses": [
+        "Altitude challenges",
+        "Limited infrastructure"
+      ]
+    }
   },
   {
     "name": "Patagonian Village",
@@ -3699,7 +3959,27 @@
     "region": "south_america",
     "country": "Argentina",
     "lat": -49.3315,
-    "long": -72.8863
+    "long": -72.8863,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 7,
+        "isolation": 8,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Remote and low population pressure with reasonable survivability.",
+      "strengths": [
+        "Isolation",
+        "Manageable living conditions"
+      ],
+      "weaknesses": [
+        "Harsh weather",
+        "Limited infrastructure"
+      ]
+    }
   },
   {
     "name": "Cueva de las Manos",
@@ -3708,7 +3988,27 @@
     "region": "south_america",
     "country": "Argentina",
     "lat": -47.1556,
-    "long": -70.6608
+    "long": -70.6608,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 4,
+        "isolation": 7,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Remote cave system offers some protection but lacks long-term viability.",
+      "strengths": [
+        "Natural shelter",
+        "Remote location"
+      ],
+      "weaknesses": [
+        "Limited resources",
+        "Small-scale capacity"
+      ]
+    }
   },
   {
     "name": "Potosí Silver Mine (Cerro Rico)",
@@ -3717,7 +4017,27 @@
     "region": "south_america",
     "country": "Bolivia",
     "lat": -19.585,
-    "long": -65.753
+    "long": -65.753,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 4,
+        "isolation": 6,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Subterranean advantage but limited long-term viability.",
+      "strengths": [
+        "Underground shelter",
+        "Defensible structure"
+      ],
+      "weaknesses": [
+        "Poor living conditions",
+        "Resource limitations"
+      ]
+    }
   },
   {
     "name": "Panama Canal Zone",
@@ -3726,7 +4046,27 @@
     "region": "south_america",
     "country": "Panama",
     "lat": 9.08,
-    "long": -79.68
+    "long": -79.68,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 6,
+        "isolation": 3,
+        "accessibility": 9
+      }
+    },
+    "description": {
+      "summary": "Critical infrastructure but extremely exposed and strategically vulnerable.",
+      "strengths": [
+        "Logistical importance",
+        "Infrastructure"
+      ],
+      "weaknesses": [
+        "High exposure",
+        "Difficult to defend"
+      ]
+    }
   },
   {
     "name": "São Paulo Airport",
@@ -3735,7 +4075,27 @@
     "region": "south_america",
     "country": "Brazil",
     "lat": -23.4356,
-    "long": -46.4731
+    "long": -46.4731,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 5,
+        "isolation": 2,
+        "accessibility": 10
+      }
+    },
+    "description": {
+      "summary": "Highly functional but completely unsuitable as a survival base.",
+      "strengths": [
+        "Infrastructure",
+        "Access"
+      ],
+      "weaknesses": [
+        "Extremely exposed",
+        "Impossible to defend"
+      ]
+    }
   },
   {
     "name": "Hilltop Fort Rajasthan",
