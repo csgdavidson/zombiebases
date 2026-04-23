@@ -78,6 +78,8 @@ main > * {
   color: var(--text);
   padding: 0.45rem 0.85rem;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .toggle-button[aria-pressed="true"] {
@@ -257,7 +259,7 @@ input[type="search"] {
   padding: 1rem;
 }
 
-.detail-hero h2 {
+.detail-hero h1 {
   margin: 0;
   font-size: clamp(1.5rem, 2.4vw, 2rem);
 }
@@ -349,6 +351,12 @@ input[type="search"] {
   color: var(--accent);
 }
 
+
+.site-brand {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+}
 .home-link {
   color: inherit;
   text-decoration: none;
