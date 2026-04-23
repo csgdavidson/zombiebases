@@ -1050,7 +1050,27 @@
     "region": "eastern_europe",
     "country": "Slovenia",
     "lat": 45.815,
-    "long": 14.1275
+    "long": 14.1275,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 5,
+        "isolation": 5,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Predjama Castle is one of the most naturally defensible sites in Europe, combining fortification with cliff-backed terrain. It is excellent as a stronghold, though still limited by scale and sustainability.",
+      "strengths": [
+        "Exceptional natural and built defensive combination",
+        "Hard to approach and hard to assault"
+      ],
+      "weaknesses": [
+        "Limited expansion potential",
+        "Long-term viability depends on surrounding resource access"
+      ]
+    }
   },
   {
     "name": "Sigiriya",
@@ -1068,7 +1088,27 @@
     "region": "eastern_europe",
     "country": "Poland",
     "lat": 54.039,
-    "long": 19.0266
+    "long": 19.0266,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 5,
+        "isolation": 4,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Malbork Castle is one of the strongest fortified-structure candidates in Europe, with massive defensive architecture and strong control over access. Its limitation is that it still relies on the surrounding region for long-term viability.",
+      "strengths": [
+        "Exceptional fortification and durable structure",
+        "Strong control over entry points and defensive depth"
+      ],
+      "weaknesses": [
+        "Located in a relatively accessible populated region",
+        "Long-term sustainability depends on surrounding land and systems"
+      ]
+    }
   },
   {
     "name": "Suomenlinna Fortress",
@@ -1077,7 +1117,27 @@
     "region": "eastern_europe",
     "country": "Finland",
     "lat": 60.1462,
-    "long": 24.9884
+    "long": 24.9884,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 5,
+        "isolation": 6,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "A highly credible fortress-island candidate with real defensive logic and separation from the mainland. Its main weakness is proximity to Helsinki and the challenge of sustaining a large population.",
+      "strengths": [
+        "Fortress design and island separation work strongly together",
+        "Better defensive logic than most coastal heritage sites"
+      ],
+      "weaknesses": [
+        "Too close to a major urban centre to feel truly remote",
+        "Limited long-term sustainability at scale"
+      ]
+    }
   },
   {
     "name": "Gdańsk Shipyard",
@@ -1086,7 +1146,27 @@
     "region": "eastern_europe",
     "country": "Poland",
     "lat": 54.352,
-    "long": 18.6466
+    "long": 18.6466,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 5,
+        "isolation": 3,
+        "accessibility": 7
+      }
+    },
+    "description": {
+      "summary": "The shipyard offers industrial infrastructure and maritime utility, but it is still a large exposed site inside a populated region. Better as a resource hub than a final refuge.",
+      "strengths": [
+        "Large industrial footprint with salvage and repair potential",
+        "Maritime access could support evacuation or supply"
+      ],
+      "weaknesses": [
+        "Difficult to secure at full scale",
+        "Urban exposure undermines long-term safety"
+      ]
+    }
   },
   {
     "name": "Norilsk",
@@ -1095,7 +1175,27 @@
     "region": "eastern_europe",
     "country": "Russia",
     "lat": 69.3558,
-    "long": 88.1893
+    "long": 88.1893,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 3,
+        "isolation": 9,
+        "accessibility": 1
+      }
+    },
+    "description": {
+      "summary": "Norilsk scores highly on isolation but poorly on livability. It is the kind of place that is hard for others to reach, but also hard for you to survive in for the long haul.",
+      "strengths": [
+        "Extreme remoteness sharply limits outside pressure",
+        "Industrial base may provide salvage opportunities"
+      ],
+      "weaknesses": [
+        "Brutal environment undermines long-term viability",
+        "Very poor accessibility and resupply"
+      ]
+    }
   },
   {
     "name": "Chernobyl Exclusion Zone Facility",
@@ -1104,7 +1204,27 @@
     "region": "eastern_europe",
     "country": "Ukraine",
     "lat": 51.2766,
-    "long": 30.2219
+    "long": 30.2219,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 3,
+        "isolation": 8,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "The exclusion zone offers exceptional isolation and low population pressure, but contamination risk and weak long-term livability hold it back. It works better as a remote refuge than a true endgame base.",
+      "strengths": [
+        "Very low human pressure compared with most of Europe",
+        "Large exclusion area creates natural buffer from chaos"
+      ],
+      "weaknesses": [
+        "Radiation and contamination risks complicate long-term survival",
+        "Limited comfort and sustainable living potential"
+      ]
+    }
   },
   {
     "name": "Olenya Air Base",
@@ -1113,7 +1233,27 @@
     "region": "eastern_europe",
     "country": "Russia",
     "lat": 68.15,
-    "long": 33.45
+    "long": 33.45,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 4,
+        "isolation": 5,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "A hardened military-style compound with real defensive value and lower population pressure than southern air bases. Strong tactically, but not ideal for long-term independence.",
+      "strengths": [
+        "Strong perimeter-control potential",
+        "Existing military infrastructure supports organised defence"
+      ],
+      "weaknesses": [
+        "Strategic target value remains high",
+        "Sustainability depends on broader systems and stockpiles"
+      ]
+    }
   },
   {
     "name": "Faroe Islands",
@@ -1122,7 +1262,27 @@
     "region": "eastern_europe",
     "country": "Faroe Islands",
     "lat": 62.0,
-    "long": -6.7833
+    "long": -6.7833,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 7,
+        "isolation": 9,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "The Faroe Islands are one of the best island options in Europe, combining real isolation with a credible living environment. Their biggest drawback is remoteness once external transport systems fail.",
+      "strengths": [
+        "Exceptional separation from mainland collapse dynamics",
+        "Real long-term habitation and fishing potential"
+      ],
+      "weaknesses": [
+        "Hard to reach and reinforce once cut off",
+        "Harsh weather adds logistical strain"
+      ]
+    }
   },
   {
     "name": "Gotland",
@@ -1131,7 +1291,27 @@
     "region": "eastern_europe",
     "country": "Sweden",
     "lat": 57.6348,
-    "long": 18.2948
+    "long": 18.2948,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 7,
+        "isolation": 8,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Gotland is a very strong island base candidate, balancing separation, infrastructure, and a realistic long-term living environment. Its main weakness is that it is large enough to be difficult to fully control.",
+      "strengths": [
+        "Strong island separation from mainland threat flow",
+        "Good balance of livability, agriculture, and infrastructure"
+      ],
+      "weaknesses": [
+        "Large area is hard to secure comprehensively",
+        "Strategic visibility may attract competition"
+      ]
+    }
   },
   {
     "name": "Kizhi Pogost",
@@ -1140,7 +1320,27 @@
     "region": "eastern_europe",
     "country": "Russia",
     "lat": 62.0667,
-    "long": 35.2333
+    "long": 35.2333,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 4,
+        "sustainability": 4,
+        "isolation": 7,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Kizhi Pogost has remoteness and a degree of island separation, but it is more atmospheric than practical as a zombie base. It lacks the infrastructure and defensive logic needed for serious long-term survival.",
+      "strengths": [
+        "Remote location reduces immediate population pressure",
+        "Water separation adds some defensive value"
+      ],
+      "weaknesses": [
+        "Limited habitation and survival infrastructure",
+        "Not designed for defensive occupation"
+      ]
+    }
   },
   {
     "name": "Ostankino Tower",
@@ -1149,7 +1349,27 @@
     "region": "eastern_europe",
     "country": "Russia",
     "lat": 55.8197,
-    "long": 37.6116
+    "long": 37.6116,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 2,
+        "isolation": 1,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "A landmark rather than a viable base. High visibility and symbolic value make it one of the weaker entries in the region.",
+      "strengths": [
+        "Strong visibility over surrounding area",
+        "Central landmark value"
+      ],
+      "weaknesses": [
+        "No meaningful long-term habitation value",
+        "Extremely exposed and strategically obvious"
+      ]
+    }
   },
   {
     "name": "Longyearbyen",
@@ -1158,7 +1378,27 @@
     "region": "eastern_europe",
     "country": "Norway",
     "lat": 78.2232,
-    "long": 15.6469
+    "long": 15.6469,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 4,
+        "isolation": 10,
+        "accessibility": 1
+      }
+    },
+    "description": {
+      "summary": "Longyearbyen is almost unmatched for isolation, making it a compelling extreme refuge. Its weakness is that the same remoteness and climate make long-term survival extraordinarily demanding.",
+      "strengths": [
+        "Exceptional isolation from wider population collapse",
+        "Harsh location sharply limits external threat flow"
+      ],
+      "weaknesses": [
+        "Very poor accessibility and resupply potential",
+        "Extreme climate reduces sustainability"
+      ]
+    }
   },
   {
     "name": "Visby",
@@ -1167,7 +1407,27 @@
     "region": "eastern_europe",
     "country": "Sweden",
     "lat": 57.6409,
-    "long": 18.296
+    "long": 18.296,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 6,
+        "isolation": 7,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Visby is a strong walled settlement with island geography on its side, making it a balanced and believable medium-to-long-term base candidate. It is less extreme than the very top entries, but more livable than many fortress sites.",
+      "strengths": [
+        "Walled settlement with real defensive value",
+        "Island context improves separation and survivability"
+      ],
+      "weaknesses": [
+        "Not isolated enough to eliminate all outside pressure",
+        "Still limited compared with larger, more sustainable islands"
+      ]
+    }
   },
   {
     "name": "Ligatne Bunker",
@@ -1176,7 +1436,27 @@
     "region": "eastern_europe",
     "country": "Latvia",
     "lat": 57.2558,
-    "long": 25.069
+    "long": 25.069,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 4,
+        "isolation": 5,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "A purpose-built survival bunker with strong defensive logic and good concealment. It is well suited to short- and medium-term refuge, but weaker as a scalable long-term base.",
+      "strengths": [
+        "Built for continuity and protected occupation",
+        "Hardened underground form is difficult to penetrate"
+      ],
+      "weaknesses": [
+        "Limited long-term expansion potential",
+        "Sustainability depends on what survives above ground"
+      ]
+    }
   },
   {
     "name": "Derinkuyu Underground City",
@@ -1185,7 +1465,27 @@
     "region": "eastern_europe",
     "country": "Turkey",
     "lat": 38.3746,
-    "long": 34.735
+    "long": 34.735,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 5,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Derinkuyu is one of the strongest subterranean survival sites in the project so far, combining concealment, layered defence, and historical proof of refuge use. Its main weakness is limited expansion and dependence on surrounding resources.",
+      "strengths": [
+        "Deep underground structure is extremely hard to overrun",
+        "Built specifically for long-term concealment and protection"
+      ],
+      "weaknesses": [
+        "Limited scalability for large populations",
+        "Long-term sustainability still depends on external land and supply"
+      ]
+    }
   },
   {
     "name": "Helsinki Airport",
@@ -1194,7 +1494,27 @@
     "region": "eastern_europe",
     "country": "Finland",
     "lat": 60.3172,
-    "long": 24.9633
+    "long": 24.9633,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 3,
+        "isolation": 2,
+        "accessibility": 9
+      }
+    },
+    "description": {
+      "summary": "Excellent transport infrastructure but fundamentally poor as a survival base because it is open, visible, and tied to dense regional systems. Useful for movement, not for settling.",
+      "strengths": [
+        "Major logistics and transport capacity",
+        "Large built environment with storage potential"
+      ],
+      "weaknesses": [
+        "Extremely exposed and difficult to defend",
+        "High traffic location makes it an early flashpoint"
+      ]
+    }
   },
   {
     "name": "Murmansk Port",
@@ -1203,7 +1523,27 @@
     "region": "eastern_europe",
     "country": "Russia",
     "lat": 68.9585,
-    "long": 33.0827
+    "long": 33.0827,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 4,
+        "sustainability": 4,
+        "isolation": 5,
+        "accessibility": 7
+      }
+    },
+    "description": {
+      "summary": "Murmansk Port benefits from remoteness compared with major southern ports, but it remains a large exposed transport node. Better for logistics than secure habitation.",
+      "strengths": [
+        "Maritime and storage utility in a relatively remote location",
+        "Industrial infrastructure could be repurposed"
+      ],
+      "weaknesses": [
+        "Difficult to defend effectively",
+        "Long-term living conditions are harsh and exposed"
+      ]
+    }
   },
   {
     "name": "Cappadocia Highlands",
