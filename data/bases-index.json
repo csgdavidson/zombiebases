@@ -1079,7 +1079,27 @@
     "region": "south_asia",
     "country": "Sri Lanka",
     "lat": 7.957,
-    "long": 80.7603
+    "long": 80.7603,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 6,
+        "isolation": 6,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Exceptionally defensible elevated stronghold with decent long-term viability.",
+      "strengths": [
+        "Natural fortress",
+        "Elevated control"
+      ],
+      "weaknesses": [
+        "Limited expansion",
+        "Moderate resource limits"
+      ]
+    }
   },
   {
     "name": "Malbork Castle",
@@ -4104,7 +4124,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 26.9124,
-    "long": 75.7873
+    "long": 75.7873,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 5,
+        "isolation": 5,
+        "accessibility": 6
+      }
+    },
+    "description": {
+      "summary": "Highly defensible historic fort but limited by sustainability in a harsh climate.",
+      "strengths": [
+        "Strong fortifications",
+        "Elevated position"
+      ],
+      "weaknesses": [
+        "Water scarcity",
+        "Heat and environment challenges"
+      ]
+    }
   },
   {
     "name": "Tiger’s Nest Monastery",
@@ -4113,7 +4153,27 @@
     "region": "south_asia",
     "country": "Bhutan",
     "lat": 27.4916,
-    "long": 89.363
+    "long": 89.363,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 5,
+        "isolation": 7,
+        "accessibility": 2
+      }
+    },
+    "description": {
+      "summary": "Extremely defensible but difficult to sustain due to remoteness.",
+      "strengths": [
+        "Near-impossible access",
+        "Defensive position"
+      ],
+      "weaknesses": [
+        "Logistical difficulty",
+        "Limited sustainability"
+      ]
+    }
   },
   {
     "name": "Mehrangarh Fort",
@@ -4122,7 +4182,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 26.2986,
-    "long": 73.0183
+    "long": 73.0183,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 6,
+        "isolation": 5,
+        "accessibility": 6
+      }
+    },
+    "description": {
+      "summary": "One of the strongest fort-based options, combining defense with usable infrastructure.",
+      "strengths": [
+        "Exceptional fortifications",
+        "Established structure"
+      ],
+      "weaknesses": [
+        "Heat and environment",
+        "Moderate exposure"
+      ]
+    }
   },
   {
     "name": "KRBL Rice Mill (Dhuri)",
@@ -4131,7 +4211,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 30.368,
-    "long": 75.873
+    "long": 75.873,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 7,
+        "isolation": 2,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "Strong food processing capability but located in highly exposed territory.",
+      "strengths": [
+        "Food production capacity",
+        "Industrial scale"
+      ],
+      "weaknesses": [
+        "Highly visible",
+        "Difficult to defend"
+      ]
+    }
   },
   {
     "name": "Tiruppur Textile Cluster",
@@ -4140,7 +4240,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 11.1085,
-    "long": 77.3411
+    "long": 77.3411,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 6,
+        "isolation": 2,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "Industrial capacity but highly exposed and not suited for defense.",
+      "strengths": [
+        "Manufacturing capability",
+        "Infrastructure"
+      ],
+      "weaknesses": [
+        "High exposure",
+        "Difficult to secure"
+      ]
+    }
   },
   {
     "name": "Pathankot Air Force Station",
@@ -4149,7 +4269,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 32.233,
-    "long": 75.634
+    "long": 75.634,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 5,
+        "isolation": 5,
+        "accessibility": 7
+      }
+    },
+    "description": {
+      "summary": "Defensible military site with moderate survivability but exposed position.",
+      "strengths": [
+        "Military infrastructure",
+        "Defensive capability"
+      ],
+      "weaknesses": [
+        "Strategic target",
+        "Limited independence"
+      ]
+    }
   },
   {
     "name": "Hanle Observatory",
@@ -4158,7 +4298,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 32.7794,
-    "long": 78.9642
+    "long": 78.9642,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 6,
+        "isolation": 8,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Remote high-altitude site with strong isolation and moderate survivability.",
+      "strengths": [
+        "Low population pressure",
+        "Clear defensible terrain"
+      ],
+      "weaknesses": [
+        "Harsh environment",
+        "Limited resources"
+      ]
+    }
   },
   {
     "name": "Andaman Islands",
@@ -4167,7 +4327,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 11.7401,
-    "long": 92.6586
+    "long": 92.6586,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 7,
+        "isolation": 9,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Strong island option combining isolation with viable long-term survival conditions.",
+      "strengths": [
+        "High isolation",
+        "Natural food sources"
+      ],
+      "weaknesses": [
+        "Difficult access",
+        "Limited infrastructure"
+      ]
+    }
   },
   {
     "name": "Lakshadweep",
@@ -4176,7 +4356,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 10.5667,
-    "long": 72.6417
+    "long": 72.6417,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 6,
+        "isolation": 9,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Highly isolated island chain with good defensive potential and moderate sustainability.",
+      "strengths": [
+        "Extreme isolation",
+        "Marine resources"
+      ],
+      "weaknesses": [
+        "Limited land area",
+        "Supply constraints"
+      ]
+    }
   },
   {
     "name": "Lighthouse Mahabalipuram",
@@ -4185,7 +4385,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 12.617,
-    "long": 80.1945
+    "long": 80.1945,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 2,
+        "isolation": 3,
+        "accessibility": 7
+      }
+    },
+    "description": {
+      "summary": "Minimal survival value despite coastal positioning.",
+      "strengths": [
+        "Visibility",
+        "Coastal location"
+      ],
+      "weaknesses": [
+        "No infrastructure",
+        "Hard to defend"
+      ]
+    }
   },
   {
     "name": "Qutub Minar",
@@ -4194,7 +4414,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 28.5245,
-    "long": 77.1855
+    "long": 77.1855,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 1,
+        "isolation": 1,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "Historic landmark with no real survival value.",
+      "strengths": [
+        "Visibility",
+        "Structural height"
+      ],
+      "weaknesses": [
+        "No resources",
+        "No defensive capability"
+      ]
+    }
   },
   {
     "name": "Kibber Village",
@@ -4203,7 +4443,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 32.332,
-    "long": 78.011
+    "long": 78.011,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 6,
+        "isolation": 8,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Remote Himalayan village with strong isolation and moderate long-term viability.",
+      "strengths": [
+        "Low population density",
+        "Adapted local living"
+      ],
+      "weaknesses": [
+        "Extreme weather",
+        "Limited infrastructure"
+      ]
+    }
   },
   {
     "name": "Kuttanad Village",
@@ -4212,7 +4472,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 9.405,
-    "long": 76.42
+    "long": 76.42,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 4,
+        "sustainability": 8,
+        "isolation": 5,
+        "accessibility": 6
+      }
+    },
+    "description": {
+      "summary": "Highly fertile region offering strong sustainability but moderate exposure.",
+      "strengths": [
+        "Agricultural richness",
+        "Water access"
+      ],
+      "weaknesses": [
+        "Flood risk",
+        "Hard to defend"
+      ]
+    }
   },
   {
     "name": "Ajanta Caves",
@@ -4221,7 +4501,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 20.5519,
-    "long": 75.7033
+    "long": 75.7033,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 4,
+        "isolation": 6,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Naturally protected cave complex with defensive potential but limited sustainability.",
+      "strengths": [
+        "Rock-cut shelter",
+        "Defensible layout"
+      ],
+      "weaknesses": [
+        "Limited resources",
+        "Not scalable long term"
+      ]
+    }
   },
   {
     "name": "Kargil War Bunkers",
@@ -4230,7 +4530,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 34.553,
-    "long": 76.1348
+    "long": 76.1348,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 4,
+        "isolation": 8,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Military-grade defensive positions with extreme isolation but low sustainability.",
+      "strengths": [
+        "Built for defense",
+        "Remote terrain"
+      ],
+      "weaknesses": [
+        "Harsh living conditions",
+        "Supply dependent"
+      ]
+    }
   },
   {
     "name": "Delhi Airport",
@@ -4239,7 +4559,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 28.5562,
-    "long": 77.1
+    "long": 77.1,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 1,
+        "sustainability": 4,
+        "isolation": 1,
+        "accessibility": 10
+      }
+    },
+    "description": {
+      "summary": "Highly functional but completely exposed and unsustainable as a base.",
+      "strengths": [
+        "Infrastructure",
+        "Access"
+      ],
+      "weaknesses": [
+        "Extremely exposed",
+        "Impossible to defend"
+      ]
+    }
   },
   {
     "name": "Mumbai Port",
@@ -4248,7 +4588,27 @@
     "region": "south_asia",
     "country": "India",
     "lat": 18.9488,
-    "long": 72.8354
+    "long": 72.8354,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 6,
+        "isolation": 1,
+        "accessibility": 10
+      }
+    },
+    "description": {
+      "summary": "High infrastructure but extreme exposure and population pressure.",
+      "strengths": [
+        "Logistics capability",
+        "Infrastructure"
+      ],
+      "weaknesses": [
+        "Extremely exposed",
+        "High competition"
+      ]
+    }
   },
   {
     "name": "Ha Long Bay Cliffs",
