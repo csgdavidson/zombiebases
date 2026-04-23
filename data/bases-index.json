@@ -1552,7 +1552,27 @@
     "region": "middle_east",
     "country": "Turkey",
     "lat": 38.6431,
-    "long": 34.83
+    "long": 34.83,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 5,
+        "isolation": 7,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Cappadocia combines difficult terrain, concealment potential, and relatively low population pressure. It is a strong regional option, though weaker than true subterranean or island endgame sites.",
+      "strengths": [
+        "Terrain and rock formations create natural defensive complexity",
+        "Relative remoteness reduces outside pressure"
+      ],
+      "weaknesses": [
+        "Sustainability depends on wider local resources",
+        "Not all positions are equally secure or habitable"
+      ]
+    }
   },
   {
     "name": "Petra",
@@ -1561,7 +1581,27 @@
     "region": "middle_east",
     "country": "Jordan",
     "lat": 30.3285,
-    "long": 35.4444
+    "long": 35.4444,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 4,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Petra combines terrain, concealment, and controlled access in a way that makes it a strong survival candidate. It is weaker than the best fortress or island sites because livability and scalability remain limited.",
+      "strengths": [
+        "Rock-cut terrain offers natural protection and concealment",
+        "Access routes can be constrained and monitored"
+      ],
+      "weaknesses": [
+        "Limited long-term sustainability",
+        "Historic layout is not ideal for modern survival use at scale"
+      ]
+    }
   },
   {
     "name": "Krak des Chevaliers",
@@ -1570,7 +1610,27 @@
     "region": "middle_east",
     "country": "Syria",
     "lat": 34.7594,
-    "long": 36.308
+    "long": 36.308,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 5,
+        "isolation": 5,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "One of the strongest fortress sites in the entire project, with exceptional defensive architecture and clear control over approach routes. Its main limitation is long-term sustainability rather than protection.",
+      "strengths": [
+        "Exceptional fortification and defensive depth",
+        "Strong elevated control over access routes"
+      ],
+      "weaknesses": [
+        "Limited long-term living and agricultural capacity",
+        "Sustainability depends on surrounding land and support"
+      ]
+    }
   },
   {
     "name": "Masada",
@@ -1579,7 +1639,27 @@
     "region": "middle_east",
     "country": "Israel",
     "lat": 31.3156,
-    "long": 35.353
+    "long": 35.353,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 10,
+        "sustainability": 4,
+        "isolation": 6,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Masada is one of the most defensible sites in the project, with extreme terrain advantage and a highly controlled approach. Its weakness is that it is harder to live on than to defend.",
+      "strengths": [
+        "Near-ideal natural defensive position",
+        "Very limited and controllable access routes"
+      ],
+      "weaknesses": [
+        "Long-term sustainability is weak",
+        "Difficult logistics cut both ways"
+      ]
+    }
   },
   {
     "name": "Abqaiq Oil Processing Facility",
@@ -1588,7 +1668,27 @@
     "region": "middle_east",
     "country": "Saudi Arabia",
     "lat": 25.937,
-    "long": 49.668
+    "long": 49.668,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 3,
+        "isolation": 4,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Abqaiq has industrial scale and some hardened infrastructure, but it is too strategically important and too dependent on complex systems to rank highly. Better as a temporary resource site than a long-term base.",
+      "strengths": [
+        "Large industrial footprint with useful infrastructure",
+        "Some defensive value through controlled industrial access"
+      ],
+      "weaknesses": [
+        "High strategic visibility and conflict risk",
+        "Heavy dependence on complex systems and maintenance"
+      ]
+    }
   },
   {
     "name": "Ras Al Khair Desalination Plant",
@@ -1597,7 +1697,27 @@
     "region": "middle_east",
     "country": "Saudi Arabia",
     "lat": 27.527,
-    "long": 49.192
+    "long": 49.192,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 5,
+        "isolation": 4,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "The desalination plant has clear survival logic because water infrastructure matters enormously, but it is also highly system-dependent and strategically valuable. A potentially useful asset, not an easy refuge.",
+      "strengths": [
+        "Water production has obvious survival value",
+        "Industrial site may support controlled occupation"
+      ],
+      "weaknesses": [
+        "Highly dependent on ongoing maintenance and power",
+        "Strategic importance makes it a likely target"
+      ]
+    }
   },
   {
     "name": "Al Udeid Air Base",
@@ -1606,7 +1726,27 @@
     "region": "middle_east",
     "country": "Qatar",
     "lat": 25.117,
-    "long": 51.314
+    "long": 51.314,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 4,
+        "isolation": 4,
+        "accessibility": 6
+      }
+    },
+    "description": {
+      "summary": "Al Udeid is a serious military-style compound with strong defensive potential and organised infrastructure. Its weakness is that it would be an obvious target and is still dependent on outside systems for long-term survival.",
+      "strengths": [
+        "Strong perimeter security and controlled access",
+        "Existing infrastructure supports organised defence"
+      ],
+      "weaknesses": [
+        "High-value strategic target in any wider collapse",
+        "Long-term sustainability depends on stockpiles and systems"
+      ]
+    }
   },
   {
     "name": "Ghawar Oil Field Central Processing",
@@ -1615,7 +1755,27 @@
     "region": "middle_east",
     "country": "Saudi Arabia",
     "lat": 25.4,
-    "long": 49.6
+    "long": 49.6,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 3,
+        "isolation": 5,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Remote and industrial, with some defensive advantages from scale and low population density, but too dependent on fragile systems to rank highly.",
+      "strengths": [
+        "Lower surrounding population pressure than urban industrial sites",
+        "Industrial infrastructure may offer salvage value"
+      ],
+      "weaknesses": [
+        "Complex operational dependency undermines long-term viability",
+        "Strategic energy importance increases risk of conflict"
+      ]
+    }
   },
   {
     "name": "Qeshm Island",
@@ -1624,7 +1784,27 @@
     "region": "middle_east",
     "country": "Iran",
     "lat": 26.8118,
-    "long": 55.8919
+    "long": 55.8919,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 6,
+        "isolation": 8,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Qeshm is a strong island option with meaningful separation and better long-term viability than many harsher sites. Its main weakness is that its size makes total control difficult.",
+      "strengths": [
+        "Strong island separation from mainland collapse",
+        "Better sustainability potential than smaller exposed outposts"
+      ],
+      "weaknesses": [
+        "Large area is hard to fully secure",
+        "Strategic location may attract competition"
+      ]
+    }
   },
   {
     "name": "Socotra Island",
@@ -1633,7 +1813,27 @@
     "region": "middle_east",
     "country": "Yemen",
     "lat": 12.4634,
-    "long": 53.8236
+    "long": 53.8236,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 6,
+        "isolation": 10,
+        "accessibility": 1
+      }
+    },
+    "description": {
+      "summary": "Socotra is one of the strongest isolation plays in the entire project. Its main challenge is that the same remoteness that protects it also makes long-term logistics and resilience difficult.",
+      "strengths": [
+        "Exceptional isolation from wider collapse dynamics",
+        "Island separation greatly reduces external threat flow"
+      ],
+      "weaknesses": [
+        "Extremely difficult to access and reinforce",
+        "Long-term sustainability is limited by remoteness and scale"
+      ]
+    }
   },
   {
     "name": "Burj Khalifa",
@@ -1642,7 +1842,27 @@
     "region": "middle_east",
     "country": "United Arab Emirates",
     "lat": 25.1972,
-    "long": 55.2744
+    "long": 55.2744,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 2,
+        "isolation": 1,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "Iconic, vertical, and dramatic, but fundamentally poor as a survival base. It is too exposed, too urban, and too dependent on advanced systems to be viable.",
+      "strengths": [
+        "Strong visibility over surrounding area",
+        "Large internal built space"
+      ],
+      "weaknesses": [
+        "Located in one of the worst possible urban contexts for collapse",
+        "Dependent on lifts, power, and complex infrastructure"
+      ]
+    }
   },
   {
     "name": "Lighthouse Hormuz",
@@ -1651,7 +1871,27 @@
     "region": "middle_east",
     "country": "Iran",
     "lat": 26.954,
-    "long": 56.272
+    "long": 56.272,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 3,
+        "isolation": 7,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Hormuz offers island separation and a degree of remoteness, but the lighthouse itself is too small and too exposed to count as a top-tier base. Better as a lookout or fallback refuge than a settlement anchor.",
+      "strengths": [
+        "Strong separation from mainland threat flow",
+        "Coastal visibility and early-warning value"
+      ],
+      "weaknesses": [
+        "Limited living capacity",
+        "Harsh environment and poor sustainability"
+      ]
+    }
   },
   {
     "name": "Siwa Oasis",
@@ -1660,7 +1900,27 @@
     "region": "middle_east",
     "country": "Egypt",
     "lat": 29.2044,
-    "long": 25.5195
+    "long": 25.5195,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 7,
+        "isolation": 8,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Siwa Oasis is one of the stronger remote settlement candidates in the region because it balances remoteness with real habitation potential. It is not an impregnable fortress, but it feels like a believable long-term refuge.",
+      "strengths": [
+        "Strong remoteness reduces external pressure",
+        "Real water and settlement logic improve survivability"
+      ],
+      "weaknesses": [
+        "Limited defensive hardening",
+        "Resupply and reinforcement would be difficult"
+      ]
+    }
   },
   {
     "name": "Wadi Musa",
@@ -1669,7 +1929,27 @@
     "region": "middle_east",
     "country": "Jordan",
     "lat": 30.3225,
-    "long": 35.4789
+    "long": 35.4789,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 5,
+        "sustainability": 6,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Wadi Musa is a decent remote settlement candidate with workable long-term habitation logic and reduced population pressure. It is more practical than spectacular, and lacks the hard defensive edge of the region’s best sites.",
+      "strengths": [
+        "Lower population pressure than major regional hubs",
+        "Better day-to-day habitability than many extreme sites"
+      ],
+      "weaknesses": [
+        "Defensive strength is only moderate",
+        "Limited scalability and strategic depth"
+      ]
+    }
   },
   {
     "name": "Derinkuyu",
@@ -1678,7 +1958,27 @@
     "region": "middle_east",
     "country": "Turkey",
     "lat": 38.3746,
-    "long": 34.735
+    "long": 34.735,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 5,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Derinkuyu is one of the strongest subterranean candidates in the project, with exceptional defensive logic and proven refuge value. Its main limitation is scale and dependence on the surrounding environment for long-term viability.",
+      "strengths": [
+        "Deep underground structure is extremely hard to overrun",
+        "Built specifically for concealment and protection"
+      ],
+      "weaknesses": [
+        "Limited scalability for large groups",
+        "Long-term sustainability still depends on external land and supply"
+      ]
+    }
   },
   {
     "name": "Gaza Tunnel Network",
@@ -1687,7 +1987,27 @@
     "region": "middle_east",
     "country": "Gaza Strip",
     "lat": 31.5017,
-    "long": 34.4668
+    "long": 34.4668,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 3,
+        "isolation": 5,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "The tunnel network offers concealment, survivability, and tactical protection, but it is not a strong long-term civil base. It works better as a hidden refuge system than a sustainable settlement.",
+      "strengths": [
+        "Strong concealment and underground protection",
+        "Difficult to overrun directly from the surface"
+      ],
+      "weaknesses": [
+        "Very poor long-term living conditions",
+        "Sustainability and expansion are limited"
+      ]
+    }
   },
   {
     "name": "Dubai Airport",
@@ -1696,7 +2016,27 @@
     "region": "middle_east",
     "country": "United Arab Emirates",
     "lat": 25.2532,
-    "long": 55.3657
+    "long": 55.3657,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 2,
+        "isolation": 1,
+        "accessibility": 9
+      }
+    },
+    "description": {
+      "summary": "A perfect transit node and an awful apocalypse base. It is exposed, urban, strategically obvious, and impossible to secure long-term.",
+      "strengths": [
+        "Massive logistics and transport infrastructure",
+        "Large built environment with storage potential"
+      ],
+      "weaknesses": [
+        "Extremely high population and traffic exposure",
+        "Very difficult to defend effectively"
+      ]
+    }
   },
   {
     "name": "Jebel Ali Port",
@@ -1705,7 +2045,27 @@
     "region": "middle_east",
     "country": "United Arab Emirates",
     "lat": 25.0113,
-    "long": 55.0606
+    "long": 55.0606,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 4,
+        "isolation": 2,
+        "accessibility": 9
+      }
+    },
+    "description": {
+      "summary": "Strong on logistics and storage, but fundamentally too exposed and too embedded in a dense system to function as a serious final base.",
+      "strengths": [
+        "Huge port infrastructure and maritime access",
+        "Strong resource and storage potential"
+      ],
+      "weaknesses": [
+        "Extremely difficult to secure at full scale",
+        "High visibility and traffic make it a flashpoint"
+      ]
+    }
   },
   {
     "name": "Mesa Verde",
