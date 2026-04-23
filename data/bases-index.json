@@ -133,7 +133,7 @@
       }
     },
     "description": {
-      "summary": "Kimberley’s mining complex has some defensive and industrial logic, especially where terrain shapes movement, but it carries significant practical downsides. It feels more like a difficult fallback site than a truly desirable stronghold.",
+      "summary": "Kimberley\u2019s mining complex has some defensive and industrial logic, especially where terrain shapes movement, but it carries significant practical downsides. It feels more like a difficult fallback site than a truly desirable stronghold.",
       "strengths": [
         "Terrain and infrastructure could help channel movement",
         "Industrial remnants may offer salvage value"
@@ -319,7 +319,7 @@
     }
   },
   {
-    "name": "Great Mosque of Djenné",
+    "name": "Great Mosque of Djenn\u00e9",
     "slug": "djenne",
     "type": "landmark_structure",
     "region": "africa",
@@ -336,7 +336,7 @@
       }
     },
     "description": {
-      "summary": "The Great Mosque of Djenné is iconic but not especially strong as a zombie base. It lacks the defensive, logistical, and long-term survival advantages needed to compete with more practical sites.",
+      "summary": "The Great Mosque of Djenn\u00e9 is iconic but not especially strong as a zombie base. It lacks the defensive, logistical, and long-term survival advantages needed to compete with more practical sites.",
       "strengths": [
         "Central landmark with some structural mass and visibility",
         "Could serve as a rally point or temporary refuge"
@@ -348,7 +348,7 @@
     }
   },
   {
-    "name": "Aït Benhaddou",
+    "name": "A\u00eft Benhaddou",
     "slug": "ait-benhaddou",
     "type": "remote_settlement",
     "region": "africa",
@@ -365,7 +365,7 @@
       }
     },
     "description": {
-      "summary": "Aït Benhaddou is a remote fortified settlement in Morocco whose compact historic form and defensible layout would make it a credible short-to-medium-term refuge. Its biggest challenge is long-term sustainability in a harsh environment with limited local productivity.",
+      "summary": "A\u00eft Benhaddou is a remote fortified settlement in Morocco whose compact historic form and defensible layout would make it a credible short-to-medium-term refuge. Its biggest challenge is long-term sustainability in a harsh environment with limited local productivity.",
       "strengths": [
         "Naturally defensive built form with strong control over entry points",
         "Lower surrounding population pressure than major urban sites"
@@ -452,7 +452,7 @@
       }
     },
     "description": {
-      "summary": "Matmata’s underground dwellings are one of the more interesting survival candidates in Africa because they combine concealment, passive protection, and environmental shelter. Their main limitation is scale and dependence on wider local resources.",
+      "summary": "Matmata\u2019s underground dwellings are one of the more interesting survival candidates in Africa because they combine concealment, passive protection, and environmental shelter. Their main limitation is scale and dependence on wider local resources.",
       "strengths": [
         "Excellent concealment and natural thermal protection",
         "Harder to overrun than exposed surface settlements"
@@ -1160,7 +1160,7 @@
     }
   },
   {
-    "name": "Gdańsk Shipyard",
+    "name": "Gda\u0144sk Shipyard",
     "slug": "gdansk-shipyard",
     "type": "industrial_site",
     "region": "eastern_europe",
@@ -1960,7 +1960,7 @@
       }
     },
     "description": {
-      "summary": "Wadi Musa is a decent remote settlement candidate with workable long-term habitation logic and reduced population pressure. It is more practical than spectacular, and lacks the hard defensive edge of the region’s best sites.",
+      "summary": "Wadi Musa is a decent remote settlement candidate with workable long-term habitation logic and reduced population pressure. It is more practical than spectacular, and lacks the hard defensive edge of the region\u2019s best sites.",
       "strengths": [
         "Lower population pressure than major regional hubs",
         "Better day-to-day habitability than many extreme sites"
@@ -3828,7 +3828,7 @@
     }
   },
   {
-    "name": "Chiloé Island",
+    "name": "Chilo\u00e9 Island",
     "slug": "chiloe",
     "type": "isolated_landmass",
     "region": "south_america",
@@ -3857,7 +3857,7 @@
     }
   },
   {
-    "name": "Galápagos Islands",
+    "name": "Gal\u00e1pagos Islands",
     "slug": "galapagos",
     "type": "isolated_landmass",
     "region": "south_america",
@@ -4031,7 +4031,7 @@
     }
   },
   {
-    "name": "Potosí Silver Mine (Cerro Rico)",
+    "name": "Potos\u00ed Silver Mine (Cerro Rico)",
     "slug": "potosi-mine",
     "type": "subterranean",
     "region": "south_america",
@@ -4089,7 +4089,7 @@
     }
   },
   {
-    "name": "São Paulo Airport",
+    "name": "S\u00e3o Paulo Airport",
     "slug": "sao-paulo-airport",
     "type": "transit_hub",
     "region": "south_america",
@@ -4147,7 +4147,7 @@
     }
   },
   {
-    "name": "Tiger’s Nest Monastery",
+    "name": "Tiger\u2019s Nest Monastery",
     "slug": "tigers-nest",
     "type": "elevated_stronghold",
     "region": "south_asia",
@@ -4617,7 +4617,27 @@
     "region": "southeast_asia",
     "country": "Vietnam",
     "lat": 20.9101,
-    "long": 107.1839
+    "long": 107.1839,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 6,
+        "isolation": 7,
+        "accessibility": 5
+      }
+    },
+    "description": {
+      "summary": "Natural maze-like terrain offering strong defensive and isolation advantages.",
+      "strengths": [
+        "Difficult terrain",
+        "Natural chokepoints"
+      ],
+      "weaknesses": [
+        "Weather exposure",
+        "Limited infrastructure"
+      ]
+    }
   },
   {
     "name": "Rice Terrace Highlands",
@@ -4626,7 +4646,27 @@
     "region": "southeast_asia",
     "country": "Philippines",
     "lat": 16.912,
-    "long": 121.056
+    "long": 121.056,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 9,
+        "isolation": 6,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Excellent sustainability base with strong agricultural resilience.",
+      "strengths": [
+        "Food production",
+        "Elevated terrain"
+      ],
+      "weaknesses": [
+        "Moderate exposure",
+        "Limited infrastructure"
+      ]
+    }
   },
   {
     "name": "Hue Citadel",
@@ -4635,7 +4675,27 @@
     "region": "southeast_asia",
     "country": "Vietnam",
     "lat": 16.4637,
-    "long": 107.5909
+    "long": 107.5909,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 6,
+        "isolation": 5,
+        "accessibility": 6
+      }
+    },
+    "description": {
+      "summary": "Historic fortified complex with strong defensive layout and moderate viability.",
+      "strengths": [
+        "Fortified structure",
+        "Urban support potential"
+      ],
+      "weaknesses": [
+        "Population nearby",
+        "Requires control"
+      ]
+    }
   },
   {
     "name": "Intramuros Manila",
@@ -4644,7 +4704,27 @@
     "region": "southeast_asia",
     "country": "Philippines",
     "lat": 14.5896,
-    "long": 120.975
+    "long": 120.975,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 4,
+        "isolation": 2,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "Defensible historic core but overwhelmed by surrounding population density.",
+      "strengths": [
+        "Walled defense",
+        "Central infrastructure"
+      ],
+      "weaknesses": [
+        "Extreme population pressure",
+        "Hard to isolate"
+      ]
+    }
   },
   {
     "name": "General Santos Fish Port",
@@ -4653,7 +4733,27 @@
     "region": "southeast_asia",
     "country": "Philippines",
     "lat": 6.0922,
-    "long": 125.1716
+    "long": 125.1716,
+    "scores": {
+      "overall": 4,
+      "categories": {
+        "defensibility": 3,
+        "sustainability": 7,
+        "isolation": 2,
+        "accessibility": 8
+      }
+    },
+    "description": {
+      "summary": "Strong food production but highly exposed coastal location.",
+      "strengths": [
+        "Food supply potential",
+        "Industrial scale"
+      ],
+      "weaknesses": [
+        "Highly visible",
+        "Hard to defend"
+      ]
+    }
   },
   {
     "name": "Sime Darby Palm Oil Estate (Sabah)",
@@ -4662,7 +4762,27 @@
     "region": "southeast_asia",
     "country": "Malaysia",
     "lat": 5.98,
-    "long": 117.85
+    "long": 117.85,
+    "scores": {
+      "overall": 6,
+      "categories": {
+        "defensibility": 4,
+        "sustainability": 8,
+        "isolation": 5,
+        "accessibility": 6
+      }
+    },
+    "description": {
+      "summary": "Strong agricultural output but exposed and hard to secure.",
+      "strengths": [
+        "Food production",
+        "Large land area"
+      ],
+      "weaknesses": [
+        "Hard to defend",
+        "Visibility"
+      ]
+    }
   },
   {
     "name": "Kota Kinabalu Naval Base",
@@ -4671,7 +4791,27 @@
     "region": "southeast_asia",
     "country": "Malaysia",
     "lat": 6.0,
-    "long": 116.071
+    "long": 116.071,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 8,
+        "sustainability": 6,
+        "isolation": 5,
+        "accessibility": 7
+      }
+    },
+    "description": {
+      "summary": "Strong military infrastructure with moderate long-term viability.",
+      "strengths": [
+        "Defensive capability",
+        "Access to resources"
+      ],
+      "weaknesses": [
+        "Strategic target",
+        "Moderate exposure"
+      ]
+    }
   },
   {
     "name": "Danum Valley Field Centre",
@@ -4680,7 +4820,27 @@
     "region": "southeast_asia",
     "country": "Malaysia",
     "lat": 4.96,
-    "long": 117.8
+    "long": 117.8,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 8,
+        "isolation": 7,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Dense jungle location with strong natural sustainability and isolation.",
+      "strengths": [
+        "Rich ecosystem",
+        "Low human density"
+      ],
+      "weaknesses": [
+        "Harsh environment",
+        "Limited infrastructure"
+      ]
+    }
   },
   {
     "name": "Komodo Island",
@@ -4689,7 +4849,27 @@
     "region": "southeast_asia",
     "country": "Indonesia",
     "lat": -8.55,
-    "long": 119.49
+    "long": 119.49,
+    "scores": {
+      "overall": 9,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 7,
+        "isolation": 10,
+        "accessibility": 2
+      }
+    },
+    "description": {
+      "summary": "Elite island base with extreme isolation and strong survival potential.",
+      "strengths": [
+        "Extreme isolation",
+        "Low population"
+      ],
+      "weaknesses": [
+        "Limited infrastructure",
+        "Logistical difficulty"
+      ]
+    }
   },
   {
     "name": "Palawan",
@@ -4698,7 +4878,27 @@
     "region": "southeast_asia",
     "country": "Philippines",
     "lat": 9.8349,
-    "long": 118.7384
+    "long": 118.7384,
+    "scores": {
+      "overall": 9,
+      "categories": {
+        "defensibility": 7,
+        "sustainability": 8,
+        "isolation": 9,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "One of the best regional options combining isolation, resources, and livability.",
+      "strengths": [
+        "Island separation",
+        "Natural resources"
+      ],
+      "weaknesses": [
+        "Limited infrastructure",
+        "Supply challenges"
+      ]
+    }
   },
   {
     "name": "Petronas Towers",
@@ -4707,7 +4907,27 @@
     "region": "southeast_asia",
     "country": "Malaysia",
     "lat": 3.1579,
-    "long": 101.7115
+    "long": 101.7115,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 1,
+        "isolation": 1,
+        "accessibility": 9
+      }
+    },
+    "description": {
+      "summary": "Iconic but completely unsuitable for survival.",
+      "strengths": [
+        "Visibility",
+        "Structure"
+      ],
+      "weaknesses": [
+        "No sustainability",
+        "Impossible to defend"
+      ]
+    }
   },
   {
     "name": "Phu Quoc Lighthouse",
@@ -4716,7 +4936,27 @@
     "region": "southeast_asia",
     "country": "Vietnam",
     "lat": 10.2897,
-    "long": 103.984
+    "long": 103.984,
+    "scores": {
+      "overall": 5,
+      "categories": {
+        "defensibility": 4,
+        "sustainability": 5,
+        "isolation": 7,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Moderately isolated coastal site with limited long-term potential.",
+      "strengths": [
+        "Island location",
+        "Visibility"
+      ],
+      "weaknesses": [
+        "Limited resources",
+        "Small footprint"
+      ]
+    }
   },
   {
     "name": "Banda Neira",
@@ -4725,7 +4965,27 @@
     "region": "southeast_asia",
     "country": "Indonesia",
     "lat": -4.5233,
-    "long": 129.8958
+    "long": 129.8958,
+    "scores": {
+      "overall": 8,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 7,
+        "isolation": 9,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Highly isolated island with strong long-term survivability potential.",
+      "strengths": [
+        "Extreme isolation",
+        "Marine resources"
+      ],
+      "weaknesses": [
+        "Limited infrastructure",
+        "Difficult resupply"
+      ]
+    }
   },
   {
     "name": "Banlung",
@@ -4734,7 +4994,27 @@
     "region": "southeast_asia",
     "country": "Cambodia",
     "lat": 13.7394,
-    "long": 106.9873
+    "long": 106.9873,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 6,
+        "sustainability": 7,
+        "isolation": 7,
+        "accessibility": 4
+      }
+    },
+    "description": {
+      "summary": "Remote jungle settlement with good sustainability and manageable isolation.",
+      "strengths": [
+        "Low population pressure",
+        "Natural resources"
+      ],
+      "weaknesses": [
+        "Limited infrastructure",
+        "Disease risk"
+      ]
+    }
   },
   {
     "name": "Cu Chi Tunnels",
@@ -4743,7 +5023,27 @@
     "region": "southeast_asia",
     "country": "Vietnam",
     "lat": 10.8327,
-    "long": 106.4713
+    "long": 106.4713,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 4,
+        "isolation": 6,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Highly defensible underground system but difficult to sustain long term.",
+      "strengths": [
+        "Built for guerrilla defense",
+        "Hidden infrastructure"
+      ],
+      "weaknesses": [
+        "Limited living capacity",
+        "Ventilation and supply challenges"
+      ]
+    }
   },
   {
     "name": "Vietnam Tunnel Systems",
@@ -4752,7 +5052,27 @@
     "region": "southeast_asia",
     "country": "Vietnam",
     "lat": 10.8327,
-    "long": 106.4713
+    "long": 106.4713,
+    "scores": {
+      "overall": 7,
+      "categories": {
+        "defensibility": 9,
+        "sustainability": 4,
+        "isolation": 6,
+        "accessibility": 3
+      }
+    },
+    "description": {
+      "summary": "Highly defensible underground networks but difficult to sustain over time.",
+      "strengths": [
+        "Defensive design",
+        "Hidden networks"
+      ],
+      "weaknesses": [
+        "Limited comfort",
+        "Supply dependent"
+      ]
+    }
   },
   {
     "name": "Bangkok Airport",
@@ -4761,7 +5081,27 @@
     "region": "southeast_asia",
     "country": "Thailand",
     "lat": 13.69,
-    "long": 100.7501
+    "long": 100.7501,
+    "scores": {
+      "overall": 2,
+      "categories": {
+        "defensibility": 1,
+        "sustainability": 4,
+        "isolation": 1,
+        "accessibility": 10
+      }
+    },
+    "description": {
+      "summary": "High infrastructure but completely exposed and unsustainable.",
+      "strengths": [
+        "Transport infrastructure",
+        "Resource access"
+      ],
+      "weaknesses": [
+        "Massive exposure",
+        "Impossible to secure"
+      ]
+    }
   },
   {
     "name": "Singapore Port",
@@ -4770,7 +5110,27 @@
     "region": "southeast_asia",
     "country": "Singapore",
     "lat": 1.2644,
-    "long": 103.82
+    "long": 103.82,
+    "scores": {
+      "overall": 3,
+      "categories": {
+        "defensibility": 2,
+        "sustainability": 7,
+        "isolation": 2,
+        "accessibility": 10
+      }
+    },
+    "description": {
+      "summary": "Highly advanced infrastructure but extreme exposure and density.",
+      "strengths": [
+        "Logistics",
+        "Resources"
+      ],
+      "weaknesses": [
+        "Extreme population density",
+        "High conflict risk"
+      ]
+    }
   },
   {
     "name": "Edinburgh Castle",
@@ -5016,7 +5376,7 @@
     "long": 7.885
   },
   {
-    "name": "Île d’Yeu",
+    "name": "\u00cele d\u2019Yeu",
     "slug": "ile-dyeu",
     "type": "isolated_landmass",
     "region": "western_europe",
@@ -5034,7 +5394,7 @@
     "long": 2.2945
   },
   {
-    "name": "Phare du Créac'h",
+    "name": "Phare du Cr\u00e9ac'h",
     "slug": "creach",
     "type": "landmark_structure",
     "region": "western_europe",
