@@ -170,10 +170,46 @@ function setBackLink(params) {
   elements.backLink.textContent = text;
 }
 
+function buildBaseDescription(base) {
+  const summary = getSummary(base);
+  const description = getDescription(base);
+  const fallback = 'Read details for this zombie survival base, including region, type, and preparedness notes.';
+  return window.seo?.truncateDescription(summary || description || fallback, 160) || fallback;
+}
+
+function applyDetailMetadata(base) {
+  if (!window.seo) {
+    return;
+  }
+
+  const canonicalParams = new URLSearchParams();
+  canonicalParams.set('slug', base.slug);
+
+  window.seo.applyPageMetadata({
+    title: `${base.name} | ${window.seo.BRAND_NAME}`,
+    description: buildBaseDescription(base),
+    canonicalPath: '/base.html',
+    canonicalParams
+  });
+}
+
+function applyNotFoundMetadata() {
+  if (!window.seo) {
+    return;
+  }
+
+  window.seo.applyPageMetadata({
+    title: `Base Not Found | ${window.seo.BRAND_NAME}`,
+    description: 'The requested base page could not be found in the Zombie Bases directory.',
+    canonicalPath: '/base.html'
+  });
+}
+
 function showNotFound() {
   elements.status.textContent = '';
   elements.detail.hidden = true;
   elements.notFound.hidden = false;
+  applyNotFoundMetadata();
 }
 
 function renderMetaRow(base) {
@@ -353,6 +389,7 @@ function renderRelatedBases(base, bases, params) {
 
 function showBase(base, bases, params) {
   elements.name.textContent = base.name;
+  applyDetailMetadata(base);
   elements.meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
   renderMetaRow(base);
   renderHero(base);

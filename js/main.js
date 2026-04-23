@@ -38,6 +38,95 @@ const SORT_OPTIONS = {
   type: 'Type'
 };
 
+function summarizeActiveFilters(region, type) {
+  const parts = [];
+
+  if (region) {
+    parts.push(labelFor('region', region));
+  }
+
+  if (type) {
+    parts.push(labelFor('type', type));
+  }
+
+  return parts;
+}
+
+function updateViewToggleLinks() {
+  const listParams = new URLSearchParams();
+  const mapParams = new URLSearchParams();
+
+  const region = elements.regionFilter.value;
+  const type = elements.typeFilter.value;
+  const sort = state.sort !== 'highest_score' ? state.sort : '';
+
+  if (region) {
+    listParams.set('region', region);
+    mapParams.set('region', region);
+  }
+
+  if (type) {
+    listParams.set('type', type);
+    mapParams.set('type', type);
+  }
+
+  if (state.search) {
+    listParams.set('q', state.search);
+    mapParams.set('q', state.search);
+  }
+
+  if (sort) {
+    listParams.set('sort', sort);
+    mapParams.set('sort', sort);
+  }
+
+  mapParams.set('view', 'map');
+
+  const listQuery = listParams.toString();
+  const mapQuery = mapParams.toString();
+
+  elements.listViewButton.href = listQuery ? `./index.html?${listQuery}` : './index.html';
+  elements.mapViewButton.href = mapQuery ? `./index.html?${mapQuery}` : './index.html?view=map';
+}
+
+function updateHomepageMetadata() {
+  if (!window.seo) {
+    return;
+  }
+
+  const region = elements.regionFilter.value;
+  const type = elements.typeFilter.value;
+  const filters = summarizeActiveFilters(region, type);
+  const filterLabel = filters.length ? `${filters.join(' · ')} ` : '';
+  const isMapView = state.view === 'map';
+
+  const titlePrefix = isMapView ? 'Zombie Bases Map' : 'Zombie Bases';
+  const title = `${titlePrefix}${filterLabel ? ` | ${filterLabel.trim()}` : ''} | Survival Base Directory`;
+
+  const viewLabel = isMapView ? 'map' : 'list';
+  const description = filters.length
+    ? `Browse ${viewLabel} view zombie survival bases for ${filters.join(' and ')}.`
+    : `Explore zombie survival base locations by region and type in ${viewLabel} and map views.`;
+
+  const canonicalParams = new URLSearchParams();
+  if (isMapView) {
+    canonicalParams.set('view', 'map');
+  }
+  if (region) {
+    canonicalParams.set('region', region);
+  }
+  if (type) {
+    canonicalParams.set('type', type);
+  }
+
+  window.seo.applyPageMetadata({
+    title,
+    description,
+    canonicalPath: '/index.html',
+    canonicalParams: canonicalParams.toString() ? canonicalParams : null
+  });
+}
+
 const state = {
   bases: [],
   visibleBases: [],
@@ -284,6 +373,7 @@ function updateUrlFromState() {
   const query = params.toString();
   const nextUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
   window.history.replaceState({}, '', nextUrl);
+  updateViewToggleLinks();
 }
 
 function updateResultCount(count) {
@@ -478,12 +568,14 @@ function applyFilters() {
   renderFeaturedBases(state.featuredBases);
   renderCurrentView();
   updateUrlFromState();
+  updateHomepageMetadata();
 }
 
 function setView(nextView) {
   state.view = nextView === 'map' ? 'map' : 'list';
   renderCurrentView();
   updateUrlFromState();
+  updateHomepageMetadata();
 }
 
 function resetFilters() {
@@ -546,7 +638,13 @@ if (elements.searchInput && elements.regionFilter && elements.typeFilter && elem
     applyFilters();
   });
   elements.resetFilters?.addEventListener('click', resetFilters);
-  elements.listViewButton.addEventListener('click', () => setView('list'));
-  elements.mapViewButton.addEventListener('click', () => setView('map'));
+  elements.listViewButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    setView('list');
+  });
+  elements.mapViewButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    setView('map');
+  });
   loadBases();
 }
