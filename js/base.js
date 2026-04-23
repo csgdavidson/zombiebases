@@ -86,6 +86,18 @@ function isNonEmptyString(value) {
   return typeof value === 'string' && value.trim().length > 0;
 }
 
+function getNonEmptyStringArray(value) {
+  if (Array.isArray(value)) {
+    return value.filter((item) => isNonEmptyString(item)).map((item) => item.trim());
+  }
+
+  if (isNonEmptyString(value)) {
+    return [value.trim()];
+  }
+
+  return [];
+}
+
 function isValidScoreValue(value) {
   return Number.isFinite(value);
 }
@@ -124,15 +136,15 @@ function getStructuredDescription(base) {
   if (!description || typeof description !== 'object') {
     return {
       summary,
-      strengths: '',
-      weaknesses: ''
+      strengths: [],
+      weaknesses: []
     };
   }
 
   return {
     summary: isNonEmptyString(description.summary) ? description.summary : summary,
-    strengths: isNonEmptyString(description.strengths) ? description.strengths : '',
-    weaknesses: isNonEmptyString(description.weaknesses) ? description.weaknesses : ''
+    strengths: getNonEmptyStringArray(description.strengths),
+    weaknesses: getNonEmptyStringArray(description.weaknesses)
   };
 }
 
@@ -308,8 +320,12 @@ function renderSummary(base) {
 function renderDescription(base) {
   const description = getStructuredDescription(base);
   elements.descriptionSummary.textContent = description.summary || DESCRIPTION_FALLBACKS.summary;
-  elements.descriptionStrengths.textContent = description.strengths || DESCRIPTION_FALLBACKS.strengths;
-  elements.descriptionWeaknesses.textContent = description.weaknesses || DESCRIPTION_FALLBACKS.weaknesses;
+  elements.descriptionStrengths.textContent = description.strengths.length
+    ? description.strengths.join(' • ')
+    : DESCRIPTION_FALLBACKS.strengths;
+  elements.descriptionWeaknesses.textContent = description.weaknesses.length
+    ? description.weaknesses.join(' • ')
+    : DESCRIPTION_FALLBACKS.weaknesses;
 }
 
 function renderScoreBreakdown(scoreObject) {
