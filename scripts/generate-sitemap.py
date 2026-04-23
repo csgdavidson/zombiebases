@@ -17,19 +17,13 @@ def iter_indexable_slugs() -> list[str]:
   with DATA_PATH.open("r", encoding="utf-8") as file:
     records = json.load(file)
 
-  slugs: list[str] = []
-  for item in records:
-    slug = (item.get("slug") or "").strip()
-    if not slug:
-      continue
-    if slug in slugs:
-      continue
-    slugs.append(slug)
-  return slugs
+  slugs = {((item.get("slug") or "").strip()) for item in records}
+  slugs.discard("")
+  return sorted(slugs)
 
 
 def build_urls() -> list[str]:
-  urls = [f"{BASE_URL}/", f"{BASE_URL}/index.html"]
+  urls = [f"{BASE_URL}/"]
   urls.extend(f"{BASE_URL}/base.html?slug={slug}" for slug in iter_indexable_slugs())
   return urls
 

@@ -1,96 +1,99 @@
 # Zombie Bases
 
-Zombie Bases is a static, GitHub Pages-friendly directory of fictional and real-world survival locations, with list and map browsing, filtering, scoring, and base detail pages.
+Zombie Bases is a static, GitHub Pages-friendly directory of fictional and real-world survival locations.
+It currently provides a browseable homepage (list + map), query-parameter-driven detail pages,
+and a small set of standalone proof-of-concept dedicated pages under `bases/`.
 
-## Current feature set (alpha)
+## Current status
 
-- Homepage list/map toggle
-- Featured bases section
-- Search by name, region, country, and type
-- Region and type filters
-- Sort options (score, name, region, type)
-- Overall score display on cards/details
-- Interactive Leaflet map with popups
-- Dedicated detail pages via `base.html`
-- Related bases on detail pages
-- URL state persistence for view, filters, sort, and search
+- **Framework stage:** alpha-complete (core browsing, filtering, map, and detail flows are in place).
+- **Data stage:** cleanup/normalization is still in progress.
+- **Design stage:** a full visual design pass is still deferred.
+- **Dedicated base pages:** currently partial proof-of-concept content and intentionally not indexable.
 
-## Roadmap (next epics)
+## Site structure
 
-The core alpha framework is in place. The next phase focuses on improving data quality and refining the user experience.
+- `index.html` — homepage entry point with featured bases, controls, list view, and map view.
+- `base.html` — dynamic detail template loaded by `slug` query parameter.
+- `bases/*.html` — static dedicated-page proof-of-concept files (not production-indexed yet).
+- `js/main.js` — homepage data loading, filtering, sorting, URL-state syncing, metadata updates.
+- `js/map.js` — Leaflet map + marker clustering renderer.
+- `js/base.js` — detail-page data loading, rendering, related bases, metadata updates.
+- `js/seo.js` — shared metadata/canonical helpers.
+- `data/bases-index.json` — normalized dataset consumed by the frontend.
+- `scripts/generate-sitemap.py` — deterministic sitemap generation from base slugs.
+- `robots.txt` and `sitemap.xml` — crawl/index controls.
 
-1. **Data Cleaning** — normalize base records, resolve inconsistent fields, tighten scoring inputs, and improve summary/metadata quality across the dataset.
-2. **Security** — harden static-site inputs and rendering paths (especially JSON/content handling) and add basic safeguards to reduce abuse and injection risks.
-3. **SEO** — improve discoverability with stronger metadata, page titles/descriptions, and crawl-friendly detail/list content for search engines.
-4. **Web Design** — refine visual hierarchy, spacing, typography, and map/list presentation so the site feels more cohesive and readable.
-5. **UX Polish** — smooth interaction details (filter/search/sort feedback, loading states, empty states, and mobile ergonomics) for a cleaner browsing flow.
+## Purpose of index, list, map, and detail pages
 
-## Project structure
+- **Index / list view (`/`):** primary crawlable landing page for the directory and broad discovery.
+- **Map view (`/index.html?view=map`):** interactive exploration mode for users; not separately canonicalized.
+- **Detail view (`/base.html?slug=...`):** canonical per-base landing route for indexable base detail content.
+- **Dedicated static pages (`/bases/*.html`):** content experiments/templates only, currently excluded from indexing.
 
-- `index.html` — homepage with featured, controls, list, and map views
-- `base.html` — shared detail page template loaded by `slug`
-- `css/` — site styles (`styles.css`)
-- `js/` — homepage, map, and detail logic (`main.js`, `map.js`, `base.js`)
-- `bases/` — generated/curated static base content pages
-- `data/base-matrix-source.json` — source matrix and editorial input data
-- `data/bases-index.json` — normalized index consumed by homepage/detail scripts
-- `CNAME` — custom domain config for GitHub Pages
+## SEO baseline (current)
 
-## Data model overview
+- Homepage has a stable default `<title>`, meta description, and canonical URL.
+- Runtime metadata updates for homepage view/filter context while keeping canonical pinned to `/`.
+- Detail pages set per-base title, description, and canonical URL as `/base.html?slug=...`.
+- Query-parameter UX state (`view`, `region`, `type`, `sort`, `q`) is intentionally excluded from canonicals.
+- `robots.txt` allows site crawl but disallows `/bases/` proof-of-concept pages.
+- `sitemap.xml` is generated from `data/bases-index.json` slugs (plus homepage root).
 
-Each base entry in `data/bases-index.json` includes core fields used by filters, cards, map markers, and detail rendering:
+## Security baseline (current)
 
-- Identity: `slug`, `name`, `status`
-- Location/classification: `region`, `country`, `type`, `coordinates`
-- Content: `summary`, `description`, `highlights`, `pros`, `cons`
-- Scoring: `score` and/or category `scores`
-- Relationships: `related` (for detail-page recommendations)
+- Rendering paths use DOM node APIs (`textContent`, `createElement`) for user/data-driven content.
+- No `target="_blank"` links are currently used.
+- No inline scripts are used in HTML templates.
+- External dependencies currently required by frontend:
+  - `https://unpkg.com` (Leaflet + MarkerCluster JS/CSS)
+  - `https://{s}.tile.openstreetmap.org` (tile images)
+  - `https://zombiebases.com` (canonical origin)
+- No private secrets/tokens are expected in this static repo; baseline scan should remain clean.
 
-## Run locally
+See `SECURITY.md` for deferred post-design hardening items.
 
-Because this project uses browser `fetch()` for JSON, run it from a local HTTP server (not `file://`).
+## Robots and sitemap behavior
 
-Examples:
+### `robots.txt`
 
-```bash
-python3 -m http.server 8080
-# then open http://localhost:8080
-```
+- Allows crawl of the public site.
+- Disallows `/bases/` (template/POC pages).
+- Declares sitemap location at `https://zombiebases.com/sitemap.xml`.
 
-or
+### `sitemap.xml`
 
-```bash
-npx serve .
-```
+- **Generated (not hand-maintained).**
+- Built from:
+  - homepage root (`https://zombiebases.com/`)
+  - each unique slug in `data/bases-index.json` as `https://zombiebases.com/base.html?slug=<slug>`
 
-## Deployment (GitHub Pages + custom domain)
-
-1. Push the repo to GitHub.
-2. In repository settings, enable **GitHub Pages** for the main branch root (or your configured pages branch).
-3. Keep `CNAME` in the repo root for your custom domain.
-4. Point your DNS records to GitHub Pages per GitHub documentation.
-
-## Crawl/indexing baseline (robots + sitemap)
-
-- Production canonical origin is `https://zombiebases.com`.
-- `robots.txt` allows crawling for public pages and points crawlers to the sitemap.
-- `sitemap.xml` is generated from `data/bases-index.json` and includes:
-  - Homepage (`/` and `/index.html`)
-  - Detail routes (`/base.html?slug=...`) for each unique base slug
-- Query-param filter/sort/search states are intentionally excluded from sitemap entries and canonicalized to `/index.html` to avoid duplicate indexing.
-
-To regenerate the sitemap after data updates:
+Regenerate after slug/data changes:
 
 ```bash
 python3 scripts/generate-sitemap.py
 ```
 
-## Alpha/curation note
+## Adding a new dedicated base page (current workflow)
 
-The dataset is currently curated for alpha and still being refined. Expect scoring, summaries, and base metadata to evolve as content quality and consistency improve.
+Dedicated static pages are still experimental. If you add one under `bases/`:
 
-## Security baseline
+1. Start from `bases/template.html`.
+2. Keep `meta name="robots" content="noindex, nofollow"` unless and until the project decides to make these pages production-indexable.
+3. Keep links/styles static-site safe (relative paths, no server-only behavior).
+4. Do **not** add dedicated POC pages to sitemap while this section remains deferred.
 
-A lightweight pre-design client-side security baseline is documented in
-`SECURITY.md`, including current external domain dependencies relevant to CSP,
-current secret/public-key posture, and deferred hardening follow-ups.
+If the new page corresponds to a production base entry, prefer adding/updating the record in `data/bases-index.json` so the `base.html?slug=` route becomes the canonical searchable detail page.
+
+## Cloudflare assumptions
+
+The project assumes Cloudflare is in front of GitHub Pages for production routing/caching.
+Security/header hardening is expected to be enforced at Cloudflare (or equivalent edge config) in a later phase, including CSP and related headers.
+
+## Intentionally deferred (post-design / later hardening)
+
+- Strict production security headers (full CSP, Permissions-Policy, etc.).
+- Self-hosting third-party map assets and completing SRI coverage for all third-party files.
+- Final indexability decision for static dedicated pages in `bases/`.
+- Broad data cleanup and consistency improvements across all base records.
+- Major UX and visual design refinements.

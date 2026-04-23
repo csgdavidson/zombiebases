@@ -111,7 +111,7 @@ function updateHomepageMetadata() {
   window.seo.applyPageMetadata({
     title,
     description,
-    canonicalPath: '/index.html',
+    canonicalPath: '/',
     canonicalParams: null
   });
 }
