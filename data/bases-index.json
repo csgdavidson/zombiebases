@@ -5,6 +5,23 @@
     "type": "elevated_stronghold",
     "region": "africa",
     "country": "Ethiopia",
+    "description": {
+      "summary": "A high-altitude escarpment with natural choke points and panoramic visibility.",
+      "strengths": "Steep terrain and narrow approaches simplify perimeter defense.",
+      "weaknesses": "Harsh weather and difficult logistics can disrupt supply stability."
+    },
+    "scores": {
+      "overall": 8.2,
+      "categories": {
+        "defensibility": 8.8,
+        "food": 6.7,
+        "water": 7.6,
+        "isolation": 8.9,
+        "escape": 6.5,
+        "sustainability": 7.2,
+        "human_risk": 7.4
+      }
+    },
     "lat": 13.1807,
     "long": 38.065
   },
@@ -14,6 +31,23 @@
     "type": "elevated_stronghold",
     "region": "africa",
     "country": "South Africa",
+    "description": {
+      "summary": "A flat-topped mountain stronghold near urban infrastructure and coastal routes.",
+      "strengths": "Excellent overlook and constrained ascent paths aid early threat detection.",
+      "weaknesses": "Proximity to dense population zones raises long-term encounter risk."
+    },
+    "scores": {
+      "overall": 7.3,
+      "categories": {
+        "defensibility": 8.1,
+        "food": 5.4,
+        "water": 6.2,
+        "isolation": 5.9,
+        "escape": 8.4,
+        "sustainability": 6.3,
+        "human_risk": 4.6
+      }
+    },
     "lat": -33.9628,
     "long": 18.4098
   },
@@ -671,6 +705,23 @@
     "type": "fortified_structure",
     "region": "north_america",
     "country": "United States",
+    "description": {
+      "summary": "An island prison complex with hardened structures and naturally limited access points.",
+      "strengths": "Water barrier and fortified buildings create a strong first line of defense.",
+      "weaknesses": "Limited arable land and dependence on marine resupply constrain autonomy."
+    },
+    "scores": {
+      "overall": 7.9,
+      "categories": {
+        "defensibility": 8.7,
+        "food": 4.9,
+        "water": 5.8,
+        "isolation": 8.8,
+        "escape": 5.1,
+        "sustainability": 5.6,
+        "human_risk": 7.3
+      }
+    },
     "lat": 37.8267,
     "long": -122.423
   },
@@ -779,6 +830,23 @@
     "type": "subterranean",
     "region": "north_america",
     "country": "United States",
+    "description": {
+      "summary": "A hardened mountain bunker system engineered for continuity under extreme conditions.",
+      "strengths": "Massive blast protection and controlled access points support resilient defense.",
+      "weaknesses": "Heavy reliance on power, maintenance, and specialized systems raises fragility."
+    },
+    "scores": {
+      "overall": 8.6,
+      "categories": {
+        "defensibility": 9.5,
+        "food": 6.1,
+        "water": 7.4,
+        "isolation": 8.2,
+        "escape": 5.3,
+        "sustainability": 7.6,
+        "human_risk": 8.0
+      }
+    },
     "lat": 38.7444,
     "long": -104.8719
   },
