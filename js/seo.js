@@ -1,4 +1,5 @@
 (function () {
+  const PRODUCTION_ORIGIN = 'https://zombiebases.com';
   const BRAND_NAME = 'Zombie Bases';
   const DEFAULT_TITLE = 'Zombie Bases | Survival Base Directory';
   const DEFAULT_DESCRIPTION = 'Explore zombie survival base locations by region and type, with list and map views for quick comparison.';
@@ -28,7 +29,7 @@
   }
 
   function buildCanonicalUrl(pathname, params = null) {
-    const url = new URL(window.location.href);
+    const url = new URL(PRODUCTION_ORIGIN);
     url.pathname = pathname;
     url.search = params ? params.toString() : '';
     url.hash = '';
@@ -56,6 +57,7 @@
   }
 
   window.seo = {
+    PRODUCTION_ORIGIN,
     BRAND_NAME,
     DEFAULT_TITLE,
     DEFAULT_DESCRIPTION,

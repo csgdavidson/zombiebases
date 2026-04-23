@@ -108,22 +108,11 @@ function updateHomepageMetadata() {
     ? `Browse ${viewLabel} view zombie survival bases for ${filters.join(' and ')}.`
     : `Explore zombie survival base locations by region and type in ${viewLabel} and map views.`;
 
-  const canonicalParams = new URLSearchParams();
-  if (isMapView) {
-    canonicalParams.set('view', 'map');
-  }
-  if (region) {
-    canonicalParams.set('region', region);
-  }
-  if (type) {
-    canonicalParams.set('type', type);
-  }
-
   window.seo.applyPageMetadata({
     title,
     description,
     canonicalPath: '/index.html',
-    canonicalParams: canonicalParams.toString() ? canonicalParams : null
+    canonicalParams: null
   });
 }
 
