@@ -38,6 +38,12 @@ const SCORE_LABELS = {
   human_risk: 'Human Risk'
 };
 
+const DESCRIPTION_FALLBACKS = {
+  summary: 'Summary coming soon.',
+  strengths: 'Strengths not available yet.',
+  weaknesses: 'Weaknesses not available yet.'
+};
+
 const elements = {
   status: document.getElementById('detail-status'),
   detail: document.getElementById('base-detail'),
@@ -50,7 +56,9 @@ const elements = {
   heroSection: document.getElementById('hero-section'),
   heroImage: document.getElementById('base-hero-image'),
   descriptionSection: document.getElementById('description-section'),
-  description: document.getElementById('base-description'),
+  descriptionSummary: document.getElementById('base-description-summary'),
+  descriptionStrengths: document.getElementById('base-description-strengths'),
+  descriptionWeaknesses: document.getElementById('base-description-weaknesses'),
   scoreSection: document.getElementById('score-section'),
   scoreEmpty: document.getElementById('score-empty'),
   scoreOverall: document.getElementById('base-score-overall'),
@@ -86,13 +94,44 @@ function firstAvailableValue(base, keys) {
 }
 
 function getDescription(base) {
+  if (base && typeof base.description === 'object' && base.description) {
+    const value = base.description.summary;
+    return isNonEmptyString(value) ? value : '';
+  }
+
   const value = firstAvailableValue(base, ['description', 'details', 'long_description']);
   return isNonEmptyString(value) ? value : '';
 }
 
 function getSummary(base) {
+  if (base && typeof base.description === 'object' && base.description) {
+    const value = base.description.summary;
+    if (isNonEmptyString(value)) {
+      return value;
+    }
+  }
+
   const value = firstAvailableValue(base, ['summary', 'short_description']);
   return isNonEmptyString(value) ? value : '';
+}
+
+function getStructuredDescription(base) {
+  const description = base?.description;
+  const summary = getSummary(base) || getDescription(base);
+
+  if (!description || typeof description !== 'object') {
+    return {
+      summary,
+      strengths: '',
+      weaknesses: ''
+    };
+  }
+
+  return {
+    summary: isNonEmptyString(description.summary) ? description.summary : summary,
+    strengths: isNonEmptyString(description.strengths) ? description.strengths : '',
+    weaknesses: isNonEmptyString(description.weaknesses) ? description.weaknesses : ''
+  };
 }
 
 function getHeroImage(base) {
@@ -101,15 +140,20 @@ function getHeroImage(base) {
 }
 
 function getScoreObject(base) {
-  if (!base || typeof base.scores !== 'object' || !base.scores) {
+  const source = base?.scores?.categories ?? base?.scores;
+  if (!source || typeof source !== 'object') {
     return null;
   }
 
-  const entries = Object.entries(base.scores).filter(([key, value]) => SCORE_LABELS[key] && isValidScoreValue(value));
+  const entries = Object.entries(source).filter(([key, value]) => SCORE_LABELS[key] && isValidScoreValue(value));
   return entries.length ? Object.fromEntries(entries) : null;
 }
 
 function computeOverallScore(base) {
+  if (isValidScoreValue(base?.scores?.overall)) {
+    return base.scores.overall;
+  }
+
   if (isValidScoreValue(base?.score)) {
     return base.score;
   }
@@ -260,8 +304,10 @@ function renderSummary(base) {
 }
 
 function renderDescription(base) {
-  const description = getDescription(base);
-  elements.description.textContent = description || 'Description coming soon.';
+  const description = getStructuredDescription(base);
+  elements.descriptionSummary.textContent = description.summary || DESCRIPTION_FALLBACKS.summary;
+  elements.descriptionStrengths.textContent = description.strengths || DESCRIPTION_FALLBACKS.strengths;
+  elements.descriptionWeaknesses.textContent = description.weaknesses || DESCRIPTION_FALLBACKS.weaknesses;
 }
 
 function renderScoreBreakdown(scoreObject) {
@@ -288,6 +334,14 @@ function renderStrengthsAndWeaknesses(scoreObject) {
   const topTwo = sortedScores.slice(0, 2).map(([key, value]) => `${SCORE_LABELS[key]} (${value.toFixed(1)})`);
   const bottomTwo = [...sortedScores].reverse().slice(0, 2).map(([key, value]) => `${SCORE_LABELS[key]} (${value.toFixed(1)})`);
 
+  if (!topTwo.length || !bottomTwo.length) {
+    elements.scoreStrengths.parentElement.hidden = true;
+    elements.scoreWeaknesses.parentElement.hidden = true;
+    return;
+  }
+
+  elements.scoreStrengths.parentElement.hidden = false;
+  elements.scoreWeaknesses.parentElement.hidden = false;
   elements.scoreStrengths.textContent = topTwo.join(' • ');
   elements.scoreWeaknesses.textContent = bottomTwo.join(' • ');
 }
@@ -298,7 +352,7 @@ function renderScore(base) {
 
   elements.scoreSection.hidden = false;
 
-  if (!scoreObject || overall === null) {
+  if (!scoreObject && overall === null) {
     elements.scoreEmpty.hidden = false;
     elements.scoreOverall.hidden = true;
     elements.scoreList.hidden = true;
@@ -308,11 +362,17 @@ function renderScore(base) {
   }
 
   elements.scoreEmpty.hidden = true;
-  elements.scoreOverall.hidden = false;
-  elements.scoreOverall.textContent = `${overall.toFixed(1)}/10`;
-  elements.scoreList.hidden = false;
-  elements.scoreStrengths.parentElement.hidden = false;
-  elements.scoreWeaknesses.parentElement.hidden = false;
+  elements.scoreOverall.hidden = overall === null;
+  if (overall !== null) {
+    elements.scoreOverall.textContent = `${overall.toFixed(1)}/10`;
+  }
+
+  elements.scoreList.hidden = !scoreObject;
+  if (!scoreObject) {
+    elements.scoreStrengths.parentElement.hidden = true;
+    elements.scoreWeaknesses.parentElement.hidden = true;
+    return;
+  }
 
   renderScoreBreakdown(scoreObject);
   renderStrengthsAndWeaknesses(scoreObject);
@@ -438,6 +498,16 @@ async function loadBase() {
   }
 }
 
-if (elements.status && elements.detail && elements.notFound && elements.name && elements.meta && elements.backLink) {
+if (
+  elements.status
+  && elements.detail
+  && elements.notFound
+  && elements.name
+  && elements.meta
+  && elements.backLink
+  && elements.descriptionSummary
+  && elements.descriptionStrengths
+  && elements.descriptionWeaknesses
+) {
   loadBase();
 }

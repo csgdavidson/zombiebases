@@ -25,6 +25,20 @@ and a small set of standalone proof-of-concept dedicated pages under `bases/`.
 - `.github/workflows/sitemap.yml` — GitHub Actions automation that regenerates and commits `sitemap.xml` on relevant changes.
 - `robots.txt` and `sitemap.xml` — crawl/index controls.
 
+## Detail data schema (current)
+
+`base.html?slug=...` reads detail content directly from `data/bases-index.json`.
+
+- `description` supports either a legacy string or a structured object:
+  - `description.summary`
+  - `description.strengths`
+  - `description.weaknesses`
+- `scores` supports either a legacy flat object or a structured object:
+  - `scores.overall`
+  - `scores.categories.<metric>` for metric keys such as `defensibility`, `food`, `water`, `isolation`, `escape`, `sustainability`, and `human_risk`
+
+Fallback behavior remains in place for incomplete records (for example, missing description parts or missing scores).
+
 ## Purpose of index, list, map, and detail pages
 
 - **Index / list view (`/`):** primary crawlable landing page for the directory and broad discovery.
