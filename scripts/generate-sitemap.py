@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""Generate a static sitemap.xml for Zombie Bases."""
+"""Generate sitemap.xml for Zombie Bases."""
 
 from __future__ import annotations
 
 import json
+import re
+import subprocess
+from dataclasses import dataclass
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
@@ -11,6 +14,36 @@ BASE_URL = "https://zombiebases.com"
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = REPO_ROOT / "data" / "bases-index.json"
 SITEMAP_PATH = REPO_ROOT / "sitemap.xml"
+
+NOINDEX_PATTERN = re.compile(
+  r"<meta[^>]*name=[\"']robots[\"'][^>]*content=[\"'][^\"']*noindex",
+  re.IGNORECASE,
+)
+
+
+@dataclass(frozen=True)
+class SitemapEntry:
+  loc: str
+  source_path: Path
+
+
+def git_lastmod(path: Path) -> str | None:
+  try:
+    result = subprocess.run(
+      ["git", "log", "-1", "--format=%cI", "--", str(path.relative_to(REPO_ROOT))],
+      cwd=REPO_ROOT,
+      check=False,
+      capture_output=True,
+      text=True,
+    )
+  except OSError:
+    return None
+
+  if result.returncode != 0:
+    return None
+
+  value = result.stdout.strip()
+  return value or None
 
 
 def iter_indexable_slugs() -> list[str]:
@@ -22,19 +55,52 @@ def iter_indexable_slugs() -> list[str]:
   return sorted(slugs)
 
 
-def build_urls() -> list[str]:
-  urls = [f"{BASE_URL}/"]
-  urls.extend(f"{BASE_URL}/base.html?slug={slug}" for slug in iter_indexable_slugs())
-  return urls
+def iter_indexable_dedicated_pages() -> list[Path]:
+  pages: list[Path] = []
+  for page in sorted((REPO_ROOT / "bases").glob("*.html")):
+    content = page.read_text(encoding="utf-8")
+    if NOINDEX_PATTERN.search(content):
+      continue
+    pages.append(page)
+  return pages
 
 
-def write_sitemap(urls: list[str]) -> None:
+def build_entries() -> list[SitemapEntry]:
+  entries: list[SitemapEntry] = [
+    SitemapEntry(loc=f"{BASE_URL}/", source_path=REPO_ROOT / "index.html"),
+  ]
+
+  entries.extend(
+    SitemapEntry(
+      loc=f"{BASE_URL}/base.html?slug={slug}",
+      source_path=DATA_PATH,
+    )
+    for slug in iter_indexable_slugs()
+  )
+
+  entries.extend(
+    SitemapEntry(
+      loc=f"{BASE_URL}/{page.relative_to(REPO_ROOT).as_posix()}",
+      source_path=page,
+    )
+    for page in iter_indexable_dedicated_pages()
+  )
+
+  return entries
+
+
+def write_sitemap(entries: list[SitemapEntry]) -> None:
   urlset = ET.Element("urlset", attrib={"xmlns": "http://www.sitemaps.org/schemas/sitemap/0.9"})
 
-  for url in urls:
+  for entry in entries:
     url_node = ET.SubElement(urlset, "url")
     location = ET.SubElement(url_node, "loc")
-    location.text = url
+    location.text = entry.loc
+
+    lastmod = git_lastmod(entry.source_path)
+    if lastmod:
+      lastmod_node = ET.SubElement(url_node, "lastmod")
+      lastmod_node.text = lastmod
 
   tree = ET.ElementTree(urlset)
   ET.indent(tree, space="  ")
@@ -42,5 +108,6 @@ def write_sitemap(urls: list[str]) -> None:
 
 
 if __name__ == "__main__":
-  write_sitemap(build_urls())
-  print(f"Wrote {SITEMAP_PATH.relative_to(REPO_ROOT)}")
+  sitemap_entries = build_entries()
+  write_sitemap(sitemap_entries)
+  print(f"Wrote {SITEMAP_PATH.relative_to(REPO_ROOT)} with {len(sitemap_entries)} URLs")
