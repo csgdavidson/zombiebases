@@ -203,14 +203,22 @@ function getScoreObject(base) {
     return null;
   }
 
+  const source = (typeof base.scores.categories === 'object' && base.scores.categories)
+    ? base.scores.categories
+    : base.scores;
+
   const entries = SCORE_KEYS
-    .map((key) => [key, base.scores[key]])
+    .map((key) => [key, source[key]])
     .filter(([, value]) => isValidScoreValue(value));
 
   return entries.length ? Object.fromEntries(entries) : null;
 }
 
 function computeOverallScore(base) {
+  if (isValidScoreValue(base?.scores?.overall)) {
+    return base.scores.overall;
+  }
+
   if (isValidScoreValue(base?.score)) {
     return base.score;
   }
