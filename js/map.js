@@ -69,14 +69,28 @@
 
       mappableBases.forEach((base) => {
         const marker = window.L.marker([base.lat, base.long]);
-        const popupHtml = `
-          <strong>${base.name}</strong><br>
-          ${labelFor('type', base.type)} • ${labelFor('region', base.region)}<br>
-          ${base.country ? `${base.country}<br>` : ''}
-          <a href="${createBaseUrl(base.slug)}">View base details</a>
-        `;
+        const popupContent = document.createElement('div');
 
-        marker.bindPopup(popupHtml);
+        const title = document.createElement('strong');
+        title.textContent = base.name;
+        popupContent.appendChild(title);
+        popupContent.appendChild(document.createElement('br'));
+
+        const typeAndRegion = document.createTextNode(`${labelFor('type', base.type)} • ${labelFor('region', base.region)}`);
+        popupContent.appendChild(typeAndRegion);
+        popupContent.appendChild(document.createElement('br'));
+
+        if (base.country) {
+          popupContent.appendChild(document.createTextNode(base.country));
+          popupContent.appendChild(document.createElement('br'));
+        }
+
+        const detailsLink = document.createElement('a');
+        detailsLink.href = createBaseUrl(base.slug);
+        detailsLink.textContent = 'View base details';
+        popupContent.appendChild(detailsLink);
+
+        marker.bindPopup(popupContent);
         markers.addLayer(marker);
         bounds.push([base.lat, base.long]);
       });

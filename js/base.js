@@ -273,7 +273,9 @@ function renderScoreBreakdown(scoreObject) {
     }
 
     const item = document.createElement('li');
-    item.innerHTML = `<strong>${label}:</strong> ${scoreObject[key].toFixed(1)}/10`;
+    const itemLabel = document.createElement('strong');
+    itemLabel.textContent = `${label}:`;
+    item.append(itemLabel, ` ${scoreObject[key].toFixed(1)}/10`);
     elements.scoreList.appendChild(item);
   });
 }
