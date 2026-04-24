@@ -7,9 +7,74 @@ and a small set of standalone proof-of-concept dedicated pages under `bases/`.
 ## Current status
 
 - **Framework stage:** alpha-complete (core browsing, filtering, map, and detail flows are in place).
-- **Data stage:** cleanup/normalization is still in progress.
-- **Design stage:** a full visual design pass is still deferred.
+- **Data stage:** core data layer is complete; content depth/consistency upgrades are now the focus.
+- **Design stage:** full visual design framework is intentionally deferred until content and knowledge phases are complete.
 - **Dedicated base pages:** currently partial proof-of-concept content and intentionally not indexable.
+
+## Roadmap (content-first execution order)
+
+### Phase 1 — Base V2 content template execution (immediate priority)
+
+Apply the V2 template across every base record in `data/bases-index.json` before starting new feature work or visual redesign.
+
+For each base, execute this 8-step review/update template:
+
+1. **Verdict** — best use case and failure mode.
+2. **Summary** — decisive, outcome-focused, and non-generic.
+3. **Scores** — sharpen scoring distribution, avoid flat 6–7 clustering, use stronger contrast, and include optional Exposure when useful.
+4. **Strengths and weaknesses** — translate traits into real-world survival implications.
+5. **Survival Profile** — initial viability, short-term viability, and long-term viability.
+6. **Best Use Case and Key Risk** — explicit scenario fit and primary downside.
+7. **Reality Check and Assumptions** — constraints, dependencies, and situational caveats.
+8. **Score Narrative** — dominant strength, dominant weakness, and the core trade-off/tension.
+
+### Phase 1.5 — Lean “Submit a Base” intake
+
+After Phase 1, add a deliberately lightweight submission flow to capture candidate bases for manual review and curation.
+
+Suggested submission fields:
+
+- Base name
+- Location
+- Base type
+- Why it would work
+- Optional source/link
+
+Scope guardrails for this stage:
+
+- Manual review/curation only
+- No accounts
+- No voting
+- No auto-publishing
+- No complex moderation system
+
+### Phase 2 — Pillar content extraction into product knowledge
+
+Reuse older long-form pillar material by decomposing it into modular knowledge units that support the product UX, not by re-publishing full articles unchanged.
+
+Initial extraction targets:
+
+- Base category explanations
+- Type-level pros and cons
+- Survival principles
+- Attack/defence considerations
+
+Intended product uses include tooltips, filter descriptions, inline explanations, and hidden scoring logic.
+
+### Phase 3 — Design framework
+
+Apply the visual design framework only after Phases 1 and 2 are complete so design decisions are shaped by the finalized content model and knowledge layer.
+
+Potential design-forward outcomes later:
+
+- Stronger page hierarchy
+- Improved base detail layouts
+- Richer map/list presentation
+- Potential Google Earth-style location zooms for selected bases
+
+### Feature gating note
+
+Before Phase 3, add new features only when they directly support the V2 content model or unblock core usage. Avoid feature creep until the content and knowledge system is stable.
 
 ## Site structure
 
@@ -127,5 +192,5 @@ Security/header hardening is expected to be enforced at Cloudflare (or equivalen
 <!-- redeploy trigger -->
 - Self-hosting third-party map assets and completing SRI coverage for all third-party files.
 - Final indexability decision for static dedicated pages in `bases/`.
-- Broad data cleanup and consistency improvements across all base records.
-- Major UX and visual design refinements.
+- Remaining content QA pass after full Phase 1 rollout.
+- Major UX/visual refinements after Phase 3 starts.
