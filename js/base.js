@@ -56,15 +56,35 @@ const elements = {
   heroSection: document.getElementById('hero-section'),
   heroImage: document.getElementById('base-hero-image'),
   descriptionSection: document.getElementById('description-section'),
-  descriptionSummary: document.getElementById('base-description-summary'),
   descriptionStrengths: document.getElementById('base-description-strengths'),
   descriptionWeaknesses: document.getElementById('base-description-weaknesses'),
+  verdictSection: document.getElementById('verdict-section'),
+  verdictBestUseCaseRow: document.getElementById('base-verdict-best-use-case-row'),
+  verdictBestUseCase: document.getElementById('base-verdict-best-use-case'),
+  verdictFailureModeRow: document.getElementById('base-verdict-failure-mode-row'),
+  verdictFailureMode: document.getElementById('base-verdict-failure-mode'),
   scoreSection: document.getElementById('score-section'),
   scoreEmpty: document.getElementById('score-empty'),
   scoreOverall: document.getElementById('base-score-overall'),
   scoreList: document.getElementById('base-score-list'),
   scoreStrengths: document.getElementById('base-score-strengths'),
   scoreWeaknesses: document.getElementById('base-score-weaknesses'),
+  survivalProfileSection: document.getElementById('survival-profile-section'),
+  survivalInitialRow: document.getElementById('base-survival-initial-row'),
+  survivalInitial: document.getElementById('base-survival-initial'),
+  survivalShortTermRow: document.getElementById('base-survival-short-term-row'),
+  survivalShortTerm: document.getElementById('base-survival-short-term'),
+  survivalLongTermRow: document.getElementById('base-survival-long-term-row'),
+  survivalLongTerm: document.getElementById('base-survival-long-term'),
+  useCaseRiskSection: document.getElementById('use-case-risk-section'),
+  useCaseRow: document.getElementById('base-use-case-row'),
+  useCaseText: document.getElementById('base-use-case'),
+  keyRiskRow: document.getElementById('base-key-risk-row'),
+  keyRiskText: document.getElementById('base-key-risk'),
+  realityCheckSection: document.getElementById('reality-check-section'),
+  realityCheckText: document.getElementById('base-reality-check'),
+  scoreNarrativeSection: document.getElementById('score-narrative-section'),
+  scoreNarrativeText: document.getElementById('base-score-narrative'),
   relatedSection: document.getElementById('related-section'),
   relatedList: document.getElementById('related-bases-list')
 };
@@ -117,6 +137,31 @@ function isValidScoreValue(value) {
 function firstAvailableValue(base, keys) {
   const matchedKey = keys.find((key) => base[key] !== undefined && base[key] !== null);
   return matchedKey ? base[matchedKey] : null;
+}
+
+function valueForPath(source, path) {
+  if (!source || typeof source !== 'object') {
+    return null;
+  }
+
+  return path.split('.').reduce((current, key) => {
+    if (!current || typeof current !== 'object') {
+      return undefined;
+    }
+
+    return current[key];
+  }, source);
+}
+
+function firstAvailablePathValue(base, paths) {
+  for (const path of paths) {
+    const value = valueForPath(base, path);
+    if (value !== undefined && value !== null) {
+      return value;
+    }
+  }
+
+  return null;
 }
 
 function getDescription(base) {
@@ -333,7 +378,6 @@ function renderSummary(base) {
 
 function renderDescription(base) {
   const description = getStructuredDescription(base);
-  elements.descriptionSummary.textContent = description.summary || DESCRIPTION_FALLBACKS.summary;
   elements.descriptionStrengths.textContent = description.strengths.length
     ? description.strengths.join(' • ')
     : DESCRIPTION_FALLBACKS.strengths;
@@ -359,23 +403,139 @@ function renderScoreBreakdown(scoreObject) {
 }
 
 function renderStrengthsAndWeaknesses(scoreObject) {
-  const sortedScores = Object.entries(scoreObject)
+  const rankedScores = Object.entries(scoreObject)
     .filter(([key, value]) => SCORE_LABELS[key] && isValidScoreValue(value))
     .sort((a, b) => b[1] - a[1]);
 
-  const topTwo = sortedScores.slice(0, 2).map(([key, value]) => `${SCORE_LABELS[key]} (${value.toFixed(1)})`);
-  const bottomTwo = [...sortedScores].reverse().slice(0, 2).map(([key, value]) => `${SCORE_LABELS[key]} (${value.toFixed(1)})`);
+  const topTwoEntries = rankedScores.slice(0, 2);
+  const topTwo = topTwoEntries.map(([key, value]) => `${SCORE_LABELS[key]} (${value.toFixed(1)})`);
 
-  if (!topTwo.length || !bottomTwo.length) {
-    elements.scoreStrengths.parentElement.hidden = true;
-    elements.scoreWeaknesses.parentElement.hidden = true;
+  const topKeys = new Set(topTwoEntries.map(([key]) => key));
+  const remainingLowestFirst = rankedScores
+    .filter(([key]) => !topKeys.has(key))
+    .sort((a, b) => a[1] - b[1]);
+  const remainingBelowEight = remainingLowestFirst.filter(([, value]) => value < 8);
+  const bottomCandidates = remainingBelowEight.length >= 2
+    ? remainingBelowEight.slice(0, 2)
+    : remainingLowestFirst.slice(0, 2);
+  const bottomTwo = bottomCandidates.map(([key, value]) => `${SCORE_LABELS[key]} (${value.toFixed(1)})`);
+
+  elements.scoreStrengths.parentElement.hidden = !topTwo.length;
+  elements.scoreWeaknesses.parentElement.hidden = !bottomTwo.length;
+  if (topTwo.length) {
+    elements.scoreStrengths.textContent = topTwo.join(' • ');
+  }
+  if (bottomTwo.length) {
+    elements.scoreWeaknesses.textContent = bottomTwo.join(' • ');
+  }
+}
+
+function getVerdict(base) {
+  return {
+    bestUseCase: firstAvailablePathValue(base, ['verdict.bestUseCase', 'verdict.best_use_case', 'description.verdict.bestUseCase', 'description.verdict.best_use_case']),
+    failureMode: firstAvailablePathValue(base, ['verdict.failureMode', 'verdict.failure_mode', 'description.verdict.failureMode', 'description.verdict.failure_mode'])
+  };
+}
+
+function getSurvivalProfile(base) {
+  return {
+    initial: firstAvailablePathValue(base, ['survivalProfile.initial', 'survival_profile.initial', 'description.survivalProfile.initial', 'description.survival_profile.initial']),
+    shortTerm: firstAvailablePathValue(base, ['survivalProfile.shortTerm', 'survivalProfile.short_term', 'survival_profile.shortTerm', 'survival_profile.short_term', 'description.survivalProfile.shortTerm', 'description.survivalProfile.short_term', 'description.survival_profile.shortTerm', 'description.survival_profile.short_term']),
+    longTerm: firstAvailablePathValue(base, ['survivalProfile.longTerm', 'survivalProfile.long_term', 'survival_profile.longTerm', 'survival_profile.long_term', 'description.survivalProfile.longTerm', 'description.survivalProfile.long_term', 'description.survival_profile.longTerm', 'description.survival_profile.long_term'])
+  };
+}
+
+function getUseCaseAndRisk(base) {
+  return {
+    bestUseCase: firstAvailablePathValue(base, ['useCaseAndRisk.bestUseCase', 'use_case_and_risk.bestUseCase', 'useCaseAndRisk.best_use_case', 'use_case_and_risk.best_use_case', 'description.useCaseAndRisk.bestUseCase', 'description.useCaseAndRisk.best_use_case', 'description.best_use_case']),
+    keyRisk: firstAvailablePathValue(base, ['useCaseAndRisk.keyRisk', 'use_case_and_risk.keyRisk', 'useCaseAndRisk.key_risk', 'use_case_and_risk.key_risk', 'description.useCaseAndRisk.keyRisk', 'description.useCaseAndRisk.key_risk', 'description.key_risk'])
+  };
+}
+
+function getRealityCheck(base) {
+  return firstAvailablePathValue(base, ['realityCheck', 'reality_check', 'description.realityCheck', 'description.reality_check_assumptions']);
+}
+
+function getScoreNarrative(base) {
+  return firstAvailablePathValue(base, ['scoreNarrative', 'score_narrative', 'description.scoreNarrative', 'description.score_narrative']);
+}
+
+function renderVerdict(base) {
+  const verdict = getVerdict(base);
+  const bestUseCase = isNonEmptyString(verdict.bestUseCase) ? verdict.bestUseCase : '';
+  const failureMode = isNonEmptyString(verdict.failureMode) ? verdict.failureMode : '';
+
+  const hasContent = Boolean(bestUseCase || failureMode);
+  elements.verdictSection.hidden = !hasContent;
+  if (!hasContent) {
     return;
   }
 
-  elements.scoreStrengths.parentElement.hidden = false;
-  elements.scoreWeaknesses.parentElement.hidden = false;
-  elements.scoreStrengths.textContent = topTwo.join(' • ');
-  elements.scoreWeaknesses.textContent = bottomTwo.join(' • ');
+  elements.verdictBestUseCase.textContent = bestUseCase;
+  elements.verdictFailureMode.textContent = failureMode;
+  elements.verdictBestUseCaseRow.hidden = !bestUseCase;
+  elements.verdictFailureModeRow.hidden = !failureMode;
+}
+
+function renderSurvivalProfile(base) {
+  const profile = getSurvivalProfile(base);
+  const initial = isNonEmptyString(profile.initial) ? profile.initial : '';
+  const shortTerm = isNonEmptyString(profile.shortTerm) ? profile.shortTerm : '';
+  const longTerm = isNonEmptyString(profile.longTerm) ? profile.longTerm : '';
+
+  const hasContent = Boolean(initial || shortTerm || longTerm);
+  elements.survivalProfileSection.hidden = !hasContent;
+  if (!hasContent) {
+    return;
+  }
+
+  elements.survivalInitial.textContent = initial;
+  elements.survivalShortTerm.textContent = shortTerm;
+  elements.survivalLongTerm.textContent = longTerm;
+  elements.survivalInitialRow.hidden = !initial;
+  elements.survivalShortTermRow.hidden = !shortTerm;
+  elements.survivalLongTermRow.hidden = !longTerm;
+}
+
+function renderUseCaseAndRisk(base) {
+  const useCaseAndRisk = getUseCaseAndRisk(base);
+  const bestUseCase = isNonEmptyString(useCaseAndRisk.bestUseCase) ? useCaseAndRisk.bestUseCase : '';
+  const keyRisk = isNonEmptyString(useCaseAndRisk.keyRisk) ? useCaseAndRisk.keyRisk : '';
+
+  const hasContent = Boolean(bestUseCase || keyRisk);
+  elements.useCaseRiskSection.hidden = !hasContent;
+  if (!hasContent) {
+    return;
+  }
+
+  elements.useCaseText.textContent = bestUseCase;
+  elements.keyRiskText.textContent = keyRisk;
+  elements.useCaseRow.hidden = !bestUseCase;
+  elements.keyRiskRow.hidden = !keyRisk;
+}
+
+function renderRealityCheck(base) {
+  const realityCheck = getRealityCheck(base);
+  const content = isNonEmptyString(realityCheck) ? realityCheck : '';
+
+  elements.realityCheckSection.hidden = !content;
+  if (!content) {
+    return;
+  }
+
+  elements.realityCheckText.textContent = content;
+}
+
+function renderScoreNarrative(base) {
+  const scoreNarrative = getScoreNarrative(base);
+  const content = isNonEmptyString(scoreNarrative) ? scoreNarrative : '';
+
+  elements.scoreNarrativeSection.hidden = !content;
+  if (!content) {
+    return;
+  }
+
+  elements.scoreNarrativeText.textContent = content;
 }
 
 function renderScore(base) {
@@ -489,8 +649,13 @@ function showBase(base, bases, params) {
   renderMetaRow(base);
   renderHero(base);
   renderSummary(base);
+  renderVerdict(base);
   renderDescription(base);
   renderScore(base);
+  renderSurvivalProfile(base);
+  renderUseCaseAndRisk(base);
+  renderRealityCheck(base);
+  renderScoreNarrative(base);
   renderRelatedBases(base, bases, params);
   elements.status.textContent = '';
   elements.notFound.hidden = true;
@@ -540,7 +705,6 @@ if (
   && elements.name
   && elements.meta
   && elements.backLink
-  && elements.descriptionSummary
   && elements.descriptionStrengths
   && elements.descriptionWeaknesses
 ) {

@@ -6,7 +6,7 @@
     "region": "africa",
     "country": "Ethiopia",
     "description": {
-      "summary": "The Simien Mountains are a naturally defensible high-altitude stronghold, where sheer cliffs, limited access routes, and extreme isolation significantly reduce external threat pressure.\n\nHowever, that same isolation severely limits long-term survivability, with constrained food production, harsh living conditions, and difficult resupply. Over time, the balance shifts from protection to restriction, making it better suited to short-term refuge than permanent settlement.",
+      "summary": "The Simien Mountains are a naturally defensible high-altitude stronghold, where sheer cliffs, limited access routes, and extreme isolation significantly reduce external threat pressure. However, that same isolation severely limits long-term survivability, with constrained food production, harsh living conditions, and difficult resupply. Over time, the balance shifts from protection to restriction, making it better suited to short-term refuge than permanent settlement.",
       "strengths": [
         "Natural choke points and steep terrain reduce attack vectors",
         "Extreme remoteness lowers both human and zombie pressure",
@@ -17,28 +17,29 @@
         "Harsh climate increases physical strain and energy demand",
         "Isolation makes medical support and recovery difficult",
         "Resupply is slow, risky, or unavailable in collapse scenarios"
-      ],
-      "verdict": {
-        "best_use_case": "Small, well-prepared group prioritising isolation over sustainability",
-        "failure_mode": "Resource depletion leads to entrapment with no viable exit"
-      },
-      "survival_profile": {
-        "initial": "Strong",
-        "short_term": "Stable with preparation",
-        "long_term": "Weak without external support"
-      },
-      "best_use_case": "Remote fallback for a small, mobile, prepared group",
-      "key_risk": "Gradual resource depletion with no recovery path",
-      "reality_check_assumptions": "Assumes arrival with supplies and no large-scale agriculture. External trade or resupply is limited or unreliable.",
-      "score_narrative": "The Simien Mountains excel in isolation and natural defensibility, making them highly effective at keeping threats out. However, that same isolation significantly limits long-term survival, creating a clear trade-off between security and sustainability that becomes more severe over time."
+      ]
     },
+    "verdict": {
+      "bestUseCase": "Small, well-prepared group prioritising isolation over sustainability",
+      "failureMode": "Resource depletion leads to entrapment with no viable exit"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Stable with preparation",
+      "longTerm": "Weak without external support"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Remote fallback for a small, mobile, prepared group",
+      "keyRisk": "Gradual resource depletion with no recovery path"
+    },
+    "realityCheck": "Assumes arrival with supplies and no large-scale agriculture. External trade or resupply is limited or unreliable.",
+    "scoreNarrative": "The Simien Mountains excel in isolation and natural defensibility, making them highly effective at keeping threats out. However, that same isolation significantly limits long-term survival, creating a clear trade-off between security and sustainability that becomes more severe over time.",
     "scores": {
       "overall": 7.5,
       "categories": {
         "defensibility": 9.0,
         "sustainability": 3.5,
-        "isolation": 9.5,
-        "accessibility": 3
+        "isolation": 9.5
       }
     },
     "lat": 13.1807,
