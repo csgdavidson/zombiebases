@@ -20,8 +20,8 @@
       ]
     },
     "verdict": {
-      "bestUseCase": "Small, well-prepared group prioritising isolation over sustainability",
-      "failureMode": "Resource depletion leads to entrapment with no viable exit"
+      "bestUseCase": "Emergency fallback for a small, prepared group",
+      "failureMode": "Isolation becomes a trap once supplies run down"
     },
     "survivalProfile": {
       "initial": "Strong",
@@ -29,11 +29,11 @@
       "longTerm": "Weak without external support"
     },
     "useCaseAndRisk": {
-      "bestUseCase": "Remote fallback for a small, mobile, prepared group",
-      "keyRisk": "Gradual resource depletion with no recovery path"
+      "bestUseCase": "Short- to medium-term refuge where avoiding contact matters more than building a permanent settlement",
+      "keyRisk": "Food, medical needs, and resupply fail before external threats ever reach the base"
     },
     "realityCheck": "Assumes arrival with supplies and no large-scale agriculture. External trade or resupply is limited or unreliable.",
-    "scoreNarrative": "The Simien Mountains excel in isolation and natural defensibility, making them highly effective at keeping threats out. However, that same isolation significantly limits long-term survival, creating a clear trade-off between security and sustainability that becomes more severe over time.",
+    "scoreNarrative": "The Simien Mountains score highly due to exceptional isolation and natural defensibility, but are heavily constrained by low sustainability. The base performs best in the early stages of a collapse, where avoiding threats is critical, but becomes increasingly difficult to maintain over time as resources run down.",
     "scores": {
       "overall": 7.5,
       "categories": {
