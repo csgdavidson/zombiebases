@@ -1025,25 +1025,39 @@
     "lat": 35.5045,
     "long": 129.3889,
     "scores": {
-      "overall": 5,
+      "overall": 4.8,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 5,
-        "isolation": 3,
-        "accessibility": 7
+        "defensibility": 5.6,
+        "sustainability": 3.6,
+        "isolation": 2.4
       }
     },
     "description": {
-      "summary": "Industrial scale and infrastructure offer potential, but exposure and scale make defence and long-term control difficult.",
+      "summary": "Hyundai Shipyard has steel, machinery, and hard structures, but the footprint is too large and system-dependent to hold after logistics collapse. What kills you here is perimeter failure followed by cascading utility loss across an industrial maze.",
       "strengths": [
-        "Massive industrial resources and facilities",
-        "Access to maritime routes"
+        "Heavy infrastructure and materials support short-term fortification and repair",
+        "Port layout provides some controllable chokepoints in specific sectors"
       ],
       "weaknesses": [
-        "Difficult to secure large open areas",
-        "High visibility and strategic importance"
+        "Massive perimeter and multiple approaches exceed realistic manpower",
+        "Power, fuel, and water-system dependence makes habitability collapse quickly"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-term salvage and staging site, not a permanent refuge",
+      "failureMode": "Overextended perimeter plus utility failure turns the yard into a fragmented kill zone"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Fragile",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Extract equipment and supplies while using hardened sections as temporary cover",
+      "keyRisk": "Teams get trapped in a sprawling industrial complex once power, pumps, and coordination break down"
+    },
+    "realityCheck": "Assumes early access to fuel and skilled operators. Without continuous maintenance, cranes, gates, lighting, and water systems degrade fast.",
+    "scoreNarrative": "Defensibility is only moderate because usable strongpoints exist but the overall site is too large to secure. Isolation is low in a coastal industrial corridor, and sustainability is weak due to heavy infrastructure dependence. The dominant failure mode is control loss at scale."
   },
   {
     "name": "Wuhan Institute of Virology",
@@ -1054,25 +1068,39 @@
     "lat": 30.5436,
     "long": 114.3625,
     "scores": {
-      "overall": 5,
+      "overall": 4.6,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 4,
-        "isolation": 3,
-        "accessibility": 6
+        "defensibility": 6.0,
+        "sustainability": 3.9,
+        "isolation": 1.9
       }
     },
     "description": {
-      "summary": "Secure institutional compound with infrastructure, but highly visible and tied to dense urban systems.",
+      "summary": "The Wuhan Institute of Virology offers a controlled campus with hardened buildings, but it sits inside a dense megacity ecosystem. What kills you here is sustained urban pressure that outlasts your supplies and manpower.",
       "strengths": [
-        "Controlled facility with security measures",
-        "Advanced infrastructure"
+        "Institutional security layout supports access control better than civilian blocks",
+        "Laboratory-grade utilities provide short-term water and power resilience"
       ],
       "weaknesses": [
-        "High visibility and risk of targeting",
-        "Dependent on surrounding systems"
+        "Very low isolation inside a high-density urban threat field",
+        "Site operations rely on technical systems and supply chains that fail under prolonged disruption"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Briefly defensible urban strongpoint during early chaos",
+      "failureMode": "Encirclement and attrition overwhelm a static compound in a megacity"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Controlled shelter and triage node while planning evacuation",
+      "keyRisk": "Continuous contact pressure and resupply interruption grind down defenses faster than they can recover"
+    },
+    "realityCheck": "Assumes immediate control of the campus and disciplined occupancy. Long-term independent survival in central urban terrain is unlikely.",
+    "scoreNarrative": "Defensibility starts above average due to institutional design, but isolation is extremely poor and sustainability declines as technical systems fail. Overall score stays below 5 because the core failure mode is urban encirclement, not wall strength."
   },
   {
     "name": "Ryongsong Residence Compound",
@@ -1083,25 +1111,39 @@
     "lat": 39.049,
     "long": 125.793,
     "scores": {
-      "overall": 6,
+      "overall": 5.7,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 4,
-        "isolation": 3,
-        "accessibility": 5
+        "defensibility": 7.4,
+        "sustainability": 3.7,
+        "isolation": 2.6
       }
     },
     "description": {
-      "summary": "Highly controlled institutional compound with strong perimeter security, but limited independence from wider systems.",
+      "summary": "Ryongsong Compound has strong perimeter control and internal zoning, but it remains a politically obvious fixed site in an urban state core. What kills you here is siege pressure once external support and movement options collapse.",
       "strengths": [
-        "Strongly secured and controlled environment",
-        "Designed for protection of high-value occupants"
+        "Layered security geometry gives high short-term defensibility",
+        "Controlled entrances enable disciplined internal movement and screening"
       ],
       "weaknesses": [
-        "High strategic visibility",
-        "Dependent on external systems"
+        "Low isolation and high visibility attract sustained attention",
+        "Weak long-run self-sufficiency without external logistics and utilities"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short- to medium-term command enclave for a trained group",
+      "failureMode": "Static siege conditions exhaust supplies and flexibility"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Stable with discipline",
+      "longTerm": "Weak to moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary fortified headquarters while establishing external supply nodes",
+      "keyRisk": "A fixed, famous compound becomes a magnet target and is slowly starved rather than stormed"
+    },
+    "realityCheck": "Assumes occupants can enforce strict access and rationing. Survival drops sharply if surrounding routes are cut for weeks.",
+    "scoreNarrative": "High defensibility keeps the score above average, but low isolation and poor self-sufficiency cap long-term viability. The model penalizes siege vulnerability as the dominant kill mechanism."
   },
   {
     "name": "Jeju Island",
@@ -1112,25 +1154,39 @@
     "lat": 33.892,
     "long": 130.875,
     "scores": {
-      "overall": 7,
+      "overall": 7.1,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 7,
-        "isolation": 8,
-        "accessibility": 5
+        "defensibility": 6.4,
+        "sustainability": 7.2,
+        "isolation": 7.8
       }
     },
     "description": {
-      "summary": "Strong island candidate combining isolation with a viable living environment, though not immune to population pressures.",
+      "summary": "Jeju is a strong island refuge with usable farmland, water access, and natural maritime separation from mainland spillover. What kills you here is maritime choke failure: if ports and fuel fail, an island-scale population can out-consume local capacity.",
       "strengths": [
-        "Good balance of isolation and livability",
-        "Established infrastructure and resources"
+        "Strong island isolation reduces uncontrolled overland threat flow",
+        "Better sustainability potential than most islands due to climate, land, and infrastructure"
       ],
       "weaknesses": [
-        "Population density could create pressure",
-        "Not fully defensible coastline"
+        "Population concentration can strain food, water, and governance under blockade",
+        "Dependence on maritime logistics and fuel creates a critical single-system vulnerability"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Long-duration regional refuge with coordinated island governance",
+      "failureMode": "Blockade-driven shortages destabilize the island before defenses fail"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Stable",
+      "longTerm": "Strong with coordination"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Managed island network focused on rationing, agriculture expansion, and port security",
+      "keyRisk": "A prolonged shipping disruption turns isolation from protection into a supply trap"
+    },
+    "realityCheck": "Assumes early population control measures and rapid shift to local food production. Without coordinated governance, demand shock can break the system.",
+    "scoreNarrative": "Jeju scores high because isolation and sustainability are both above average for a macro-base. Defensibility is solid but not elite. The key failure mode is logistical choke: maritime disruption can convert a strong island into a stressed one."
   },
   {
     "name": "Okinawa",
@@ -1141,25 +1197,39 @@
     "lat": 26.2124,
     "long": 127.6809,
     "scores": {
-      "overall": 7,
+      "overall": 6.2,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 7,
-        "isolation": 8,
-        "accessibility": 5
+        "defensibility": 6.0,
+        "sustainability": 6.5,
+        "isolation": 6.4
       }
     },
     "description": {
-      "summary": "Large island with good sustainability potential and isolation, though strategic importance makes it a likely contested zone.",
+      "summary": "Okinawa offers meaningful island separation and workable living conditions, but dense infrastructure and strategic visibility increase contest pressure. What kills you here is competition over ports, fuel, and transport hubs that fractures island stability.",
       "strengths": [
-        "Strong island separation",
-        "Established infrastructure and agriculture"
+        "Island geography limits casual mainland spillover compared with continental sites",
+        "Reasonable agricultural and infrastructure base supports medium-term continuity"
       ],
       "weaknesses": [
-        "Strategic visibility and conflict risk",
-        "Large area hard to fully secure"
+        "Strategic transport nodes become focal points for conflict and crowding",
+        "Sustainability remains tied to fuel, shipping, and coordinated civil order"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Medium-term island hold with strict control of key logistics nodes",
+      "failureMode": "Strategic contest over infrastructure outpaces local recovery capacity"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate to stable",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Distributed settlement model that avoids single-point dependence on major ports",
+      "keyRisk": "If hub infrastructure is disrupted or contested, cascading shortages trigger internal instability"
+    },
+    "realityCheck": "Assumes rapid decentralization from high-density zones and enforceable rationing. A centralized strategy is more brittle under stress.",
+    "scoreNarrative": "Okinawa sits in the upper-middle tier: decent isolation and sustainability, but only moderate defensibility at scale. The score is constrained by strategic contest risk around critical infrastructure."
   },
   {
     "name": "Great Buddha Leshan",
@@ -1170,25 +1240,39 @@
     "lat": 29.5447,
     "long": 103.7734,
     "scores": {
-      "overall": 3,
+      "overall": 2.9,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 3,
-        "isolation": 3,
-        "accessibility": 4
+        "defensibility": 2.7,
+        "sustainability": 2.4,
+        "isolation": 2.1
       }
     },
     "description": {
-      "summary": "Iconic but not functionally useful as a survival base. Lacks defensibility, infrastructure, and long-term viability.",
+      "summary": "Leshan’s landmark setting is symbolic, not survivable: it lacks perimeter control, shelter depth, and production capacity. What kills you here is exposure—too many approaches, too little infrastructure, no endurance.",
       "strengths": [
-        "Elevated position offers limited visibility",
-        "Remote relative to dense urban cores"
+        "Elevated terrain offers limited observation value",
+        "Nearby river access may provide short-term water collection options"
       ],
       "weaknesses": [
-        "No meaningful defensive structure",
-        "Not suitable for habitation or sustainability"
+        "No defensible enclosed footprint for sustained occupation",
+        "Very weak sustainability and no meaningful long-term life-support systems"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Temporary waypoint or lookout, not a base",
+      "failureMode": "Rapid overexposure and resource depletion force abandonment"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Very weak",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Brief scouting stop while moving to a real settlement",
+      "keyRisk": "Occupants are fixed in an open tourist terrain that cannot be secured or supplied"
+    },
+    "realityCheck": "Assumes minimal occupancy and immediate onward movement. Treating Leshan as a permanent refuge is unrealistic.",
+    "scoreNarrative": "All core categories score low because the site is a landmark rather than a fortified or self-sustaining habitat. The defining failure mode is immediate exposure, so overall viability is poor."
   },
   {
     "name": "Tokyo Tower",
@@ -1199,25 +1283,39 @@
     "lat": 35.6586,
     "long": 139.7454,
     "scores": {
-      "overall": 2,
+      "overall": 1.7,
       "categories": {
-        "defensibility": 2,
-        "sustainability": 2,
-        "isolation": 1,
-        "accessibility": 8
+        "defensibility": 1.8,
+        "sustainability": 1.2,
+        "isolation": 1.0
       }
     },
     "description": {
-      "summary": "Iconic but completely impractical as a survival base.",
+      "summary": "Tokyo Tower is an urban observation structure, not a survivable refuge. What kills you here is instant concentration risk: extreme visibility, no self-sufficiency, and no controllable defensive envelope.",
       "strengths": [
-        "Visibility",
-        "Central landmark"
+        "Excellent line-of-sight for short-duration surveillance",
+        "Strong steel structure resists weather better than light buildings"
       ],
       "weaknesses": [
-        "No defensibility",
-        "No sustainability or habitation value"
+        "Located in one of the densest urban environments possible",
+        "No realistic food, water, sanitation, or protected living capacity"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Minutes-to-hours observation point only",
+      "failureMode": "Immediate urban encirclement and total resource failure"
+    },
+    "survivalProfile": {
+      "initial": "Very weak",
+      "shortTerm": "Collapse-prone",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Quick visual recon before relocating",
+      "keyRisk": "Staying in place turns visibility advantage into target fixation with no sustainment path"
+    },
+    "realityCheck": "Assumes zero intent to occupy long-term. Any prolonged hold at this site is strategically unsound.",
+    "scoreNarrative": "Tokyo Tower ranks near the bottom because it fails every survival pillar: no isolation, negligible sustainability, and almost no practical defensibility. The base fails by design, not by bad execution."
   },
   {
     "name": "Shaxi Ancient Town",
@@ -1228,25 +1326,39 @@
     "lat": 25.248,
     "long": 100.162,
     "scores": {
-      "overall": 6,
+      "overall": 5.8,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 6,
-        "isolation": 7,
-        "accessibility": 4
+        "defensibility": 4.9,
+        "sustainability": 6.1,
+        "isolation": 6.3
       }
     },
     "description": {
-      "summary": "Remote and relatively self-contained settlement with decent sustainability, but limited defensive strength.",
+      "summary": "Shaxi is a remote town with manageable scale and decent local living potential, but it lacks hard defensive geometry. What kills you here is slow attrition from repeated incursions that drain manpower and stores.",
       "strengths": [
-        "Lower population pressure",
-        "Some level of local sustainability"
+        "Lower-density setting improves early warning and social control",
+        "Agricultural surroundings support better food prospects than urban compounds"
       ],
       "weaknesses": [
-        "Weak defensive structures",
-        "Limited scalability"
+        "Limited fortification makes perimeter integrity manpower-intensive",
+        "Medical and technical redundancy is thin if roads and trade fail"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Community-scale rural refuge with active patrol doctrine",
+      "failureMode": "Security attrition erodes a lightly fortified settlement over time"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Stable with organization",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Small-group settlement anchored by local agriculture and layered watch points",
+      "keyRisk": "Without strong external barriers, recurring probes and raids steadily wear down defenders"
+    },
+    "realityCheck": "Assumes disciplined governance and quick conversion of buildings for defense. Passive defense alone is insufficient.",
+    "scoreNarrative": "Shaxi is carried by decent sustainability and isolation for a rural site, but defensibility remains below average. The score reflects an attritional failure mode rather than a single catastrophic breach."
   },
   {
     "name": "Shirakawa-go",
@@ -1257,25 +1369,39 @@
     "lat": 36.26,
     "long": 136.905,
     "scores": {
-      "overall": 6,
+      "overall": 6.0,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 6,
-        "isolation": 7,
-        "accessibility": 4
+        "defensibility": 5.2,
+        "sustainability": 6.0,
+        "isolation": 6.8
       }
     },
     "description": {
-      "summary": "Remote mountain village with sustainability potential and isolation, though not strongly defensible.",
+      "summary": "Shirakawa-go benefits from mountain remoteness and small-settlement cohesion, but severe winters and limited redundancy constrain endurance. What kills you here is winter logistics failure: heat, medicine, and mobility collapse before threats do.",
       "strengths": [
-        "Strong local living model",
-        "Remote location reduces pressure"
+        "Mountain isolation reduces immediate external pressure",
+        "Local settlement pattern supports coordinated community defense and rationing"
       ],
       "weaknesses": [
-        "Limited defensive capability",
-        "Harsh seasonal conditions"
+        "Cold-season energy and heating demands strain sustainability",
+        "Road disruption and snow conditions can cut medical and supply access for long periods"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Seasonally managed mountain refuge with strong pre-winter stockpiling",
+      "failureMode": "Winter isolation converts remoteness into a deadly supply trap"
+    },
+    "survivalProfile": {
+      "initial": "Moderate to strong",
+      "shortTerm": "Stable in fair seasons",
+      "longTerm": "Moderate with strict planning"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Small resilient community model built around fuel, food, and winterization planning",
+      "keyRisk": "If winter prep is insufficient, cold-weather shortages cascade into health and security failures"
+    },
+    "realityCheck": "Assumes high pre-winter preparation and reliable local fuel strategy. Underprepared groups fail here seasonally, not tactically.",
+    "scoreNarrative": "Shirakawa-go scores as a balanced but climate-constrained refuge: isolation is good, sustainability moderate, and defensibility modest. The model centers winter logistics as the core kill factor."
   },
   {
     "name": "Iwo Jima Underground Bunkers",
@@ -1286,25 +1412,39 @@
     "lat": 24.784,
     "long": 141.322,
     "scores": {
-      "overall": 8,
+      "overall": 7.0,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 4,
-        "isolation": 8,
-        "accessibility": 2
+        "defensibility": 8.9,
+        "sustainability": 3.2,
+        "isolation": 8.6
       }
     },
     "description": {
-      "summary": "A hardened, battle-tested subterranean network with excellent defensive qualities and isolation, but limited long-term sustainability.",
+      "summary": "Iwo Jima’s bunker network is exceptionally hard to assault and highly isolated, but it is austere and resource-poor. What kills you here is life-support collapse underground: water, ventilation, and medical limits outrun defensive advantages.",
       "strengths": [
-        "Deep, fortified underground system",
-        "Extremely hard to access and overrun"
+        "Elite defensibility from hardened subterranean terrain and chokepoints",
+        "High ocean isolation minimizes routine external threat contact"
       ],
       "weaknesses": [
-        "Limited resupply and expansion potential",
-        "Harsh island environment"
+        "Very low sustainability due to scarce freshwater, arable land, and medical support",
+        "Underground habitability depends on ventilation, maintenance, and strict resource discipline"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short- to medium-term hardened fallback for a small prepared team",
+      "failureMode": "Resource and life-support depletion in a static bunker environment"
+    },
+    "survivalProfile": {
+      "initial": "Very strong",
+      "shortTerm": "Moderate with stocks",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Defensive hide site during peak threat periods before relocation to a productive base",
+      "keyRisk": "If occupants cannot rotate out or restore supplies, bunker endurance fails from inside-out"
+    },
+    "realityCheck": "Assumes pre-positioned supplies, water discipline, and engineering capability. The site is defensive gold but not a self-sustaining ecosystem.",
+    "scoreNarrative": "Iwo Jima earns high marks for defensibility and isolation, pushing overall score to the lower 7s. Sustainability is decisively weak, and that weakness defines the failure mode: you are protected until you run out of life support."
   },
   {
     "name": "Beijing Underground City",
