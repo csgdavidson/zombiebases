@@ -1455,25 +1455,40 @@
     "lat": 39.9042,
     "long": 116.4074,
     "scores": {
-      "overall": 7,
+      "overall": 6,
       "categories": {
         "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 5,
+        "sustainability": 4,
+        "isolation": 4,
         "accessibility": 6
       }
     },
     "description": {
-      "summary": "A vast subterranean network built for wartime survival, offering strong defensive and concealment advantages. Its main limitation is long-term sustainability and dependence on surface systems.",
+      "summary": "Beijing Underground City is hard to clear and hard to spot, but it is still a buried extension of a megacity. What kills you here is ventilation and water-system failure once surface utilities, filters, and spare parts stop flowing.",
       "strengths": [
-        "Extensive underground shelter network difficult to overrun",
-        "Built with survival scenarios in mind"
+        "Large subterranean footprint with concealment and layered defensive movement options",
+        "Multiple internal corridors and compartments can delay or channel intruders"
       ],
       "weaknesses": [
-        "Reliant on surface supply chains",
-        "Ventilation and resource constraints over time"
+        "Life support is mechanically fragile: airflow, pumping, sanitation, and power are constant burdens",
+        "Urban dependence means contamination, smoke, and infrastructure collapse propagate underground"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-term covert shelter and staging node during acute instability",
+      "failureMode": "Air, water, and sanitation systems degrade faster than defenders can maintain them"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Hide and reorganize for weeks while preparing relocation to a surface-productive site",
+      "keyRisk": "If filters, pumps, or power chains fail, the bunker becomes a sealed hazard instead of a refuge"
+    },
+    "realityCheck": "Assumes pre-stocked spares, disciplined maintenance crews, water treatment capability, and strict occupancy control in a dense urban crisis zone.",
+    "scoreNarrative": "Defensibility keeps Beijing Underground City competitive, but sustainability drags the score down. The decisive failure mode is internal systems collapse: you do not get overrun first, you run out of breathable and safe living conditions."
   },
   {
     "name": "Shanghai Port",
@@ -1484,25 +1499,40 @@
     "lat": 31.2304,
     "long": 121.4737,
     "scores": {
-      "overall": 3,
+      "overall": 3.8,
       "categories": {
-        "defensibility": 3,
+        "defensibility": 2,
         "sustainability": 4,
         "isolation": 2,
         "accessibility": 9
       }
     },
     "description": {
-      "summary": "Massive logistical hub with resources, but extremely exposed and unsuitable as a defensive base.",
+      "summary": "Shanghai Port has extraordinary logistics but zero survivable perimeter once order breaks down. What kills you here is endless contact pressure from people, fire, and conflict converging on critical cargo nodes.",
       "strengths": [
-        "Huge storage and logistics potential",
-        "Maritime access"
+        "Massive fuel, storage, heavy equipment, and maritime throughput in one location",
+        "Multiple dock systems offer temporary evacuation and salvage options"
       ],
       "weaknesses": [
-        "Extremely high population and exposure",
-        "Impossible to defend effectively"
+        "Flat open terrain and crane-field geometry are extremely hard to secure against large groups",
+        "High strategic value guarantees repeated raids and organized takeover attempts"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Fast scavenging and maritime extraction point, not a holdout base",
+      "failureMode": "Attrition from continuous human pressure strips security, supplies, and safe movement"
+    },
+    "survivalProfile": {
+      "initial": "Moderate for prepared teams",
+      "shortTerm": "Weak",
+      "longTerm": "Very weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Conduct brief, high-tempo retrieval operations before departing by water",
+      "keyRisk": "Staying to defend fixed infrastructure turns your group into a static target in a converging urban battlespace"
+    },
+    "realityCheck": "Assumes early access, marine competence, and enough force to load and leave quickly; assumes no prolonged siege posture.",
+    "scoreNarrative": "Access and material abundance inflate tactical opportunity but not survivability. The core failure mode is persistent exposure: the port attracts too many actors to defend long enough for stability."
   },
   {
     "name": "Tokyo Airport",
@@ -1513,25 +1543,40 @@
     "lat": 35.5494,
     "long": 139.7798,
     "scores": {
-      "overall": 3,
+      "overall": 4.1,
       "categories": {
         "defensibility": 3,
-        "sustainability": 3,
+        "sustainability": 4,
         "isolation": 2,
         "accessibility": 9
       }
     },
     "description": {
-      "summary": "High-access infrastructure but fundamentally unsuitable as a survival base due to exposure and scale.",
+      "summary": "Tokyo Airport gives mobility and infrastructure, but it concentrates traffic and threat. What kills you here is runway-scale exposure: you can move fast, but you cannot secure the footprint long enough to live there.",
       "strengths": [
-        "Logistics and infrastructure",
-        "Large built environment"
+        "Fuel, hangars, vehicles, and transport systems support rapid movement and evacuation",
+        "Operational facilities can briefly coordinate triage, cargo sorting, and outbound flights"
       ],
       "weaknesses": [
-        "Extremely exposed",
-        "Impossible to secure long-term"
+        "Open airfields and long sightlines create multiple uncontrolled approach axes",
+        "Large hard-to-fence perimeter and high symbolic value invite recurrent conflict"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Transit-and-launch hub for early evacuation windows",
+      "failureMode": "Perimeter collapse from overwhelming multi-direction intrusion and crowd pressure"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Very weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use briefly to refuel, consolidate teams, and depart to lower-signature locations",
+      "keyRisk": "If sortie timing fails, the airport's scale and visibility trap defenders in an unwinnable static defense"
+    },
+    "realityCheck": "Assumes available aircraft or convoy plans, disciplined timing, and immediate fallback routes once congestion and security degrade.",
+    "scoreNarrative": "Tokyo Airport scores slightly above major ports on organized mobility, but defensibility remains poor. The fatal trade-off is clear: great movement node, terrible place to stay."
   },
   {
     "name": "Predjama Castle",
@@ -1542,25 +1587,40 @@
     "lat": 45.815,
     "long": 14.1275,
     "scores": {
-      "overall": 8,
+      "overall": 6.9,
       "categories": {
         "defensibility": 9,
-        "sustainability": 5,
-        "isolation": 5,
+        "sustainability": 4,
+        "isolation": 6,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "Predjama Castle is one of the most naturally defensible sites in Europe, combining fortification with cliff-backed terrain. It is excellent as a stronghold, though still limited by scale and sustainability.",
+      "summary": "Predjama is a superb cliff fortress with choke-point control, but fortress geometry does not make food or medicine. What kills you here is siege starvation: you can deny entry for a long time and still lose to depletion.",
       "strengths": [
-        "Exceptional natural and built defensive combination",
-        "Hard to approach and hard to assault"
+        "Outstanding cliff-backed defense with constrained assault routes",
+        "Compact structure allows small disciplined teams to hold against larger forces"
       ],
       "weaknesses": [
-        "Limited expansion potential",
-        "Long-term viability depends on surrounding resource access"
+        "Minimal agricultural and industrial capacity on site forces external dependence",
+        "Small internal volume limits water storage, medical resilience, and redundancy"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Defensive redoubt for short sieges and regional deterrence",
+      "failureMode": "Supply exhaustion during prolonged isolation"
+    },
+    "survivalProfile": {
+      "initial": "Very strong",
+      "shortTerm": "Strong",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Anchor point while mobile teams secure surrounding farmland and logistics lines",
+      "keyRisk": "If surrounding networks are cut, static defenders consume stocks and lose without being breached"
+    },
+    "realityCheck": "Assumes pre-stocked reserves, secure nearby production zones, and disciplined rationing under intermittent siege.",
+    "scoreNarrative": "Predjama keeps elite defensibility but drops below the top tier because sustainability is structurally limited. Its core failure mode is starvation by encirclement, not direct assault."
   },
   {
     "name": "Sigiriya",
@@ -1571,25 +1631,40 @@
     "lat": 7.957,
     "long": 80.7603,
     "scores": {
-      "overall": 8,
+      "overall": 7.1,
       "categories": {
-        "defensibility": 9,
+        "defensibility": 8,
         "sustainability": 6,
         "isolation": 6,
         "accessibility": 5
       }
     },
     "description": {
-      "summary": "Exceptionally defensible elevated stronghold with decent long-term viability.",
+      "summary": "Sigiriya offers commanding elevation and early warning, but summit living is logistically thin. What kills you here is water and sustainment failure after stored supplies run dry.",
       "strengths": [
-        "Natural fortress",
-        "Elevated control"
+        "High-ground dominance gives surveillance and defensive reaction time",
+        "Approach routes are naturally channelled, helping small teams delay attackers"
       ],
       "weaknesses": [
-        "Limited expansion",
-        "Moderate resource limits"
+        "Daily hauling burden for water, fuel, and heavy goods is severe",
+        "Limited summit space constrains agriculture, workshops, and medical redundancy"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "High-visibility watch fortress with rotational occupancy",
+      "failureMode": "Chronic resupply strain erodes health and readiness"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate to weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use as command-and-observation node linked to lower-elevation production sites",
+      "keyRisk": "If lift chains fail during bad weather or conflict, dehydration and fatigue collapse defense quality"
+    },
+    "realityCheck": "Assumes secure lower-base support, reliable water logistics, and team rotation instead of permanent large-population occupation.",
+    "scoreNarrative": "Sigiriya clears the 7.0 line on defensive geometry and situational control. It stays out of elite range because the sustaining burden of summit life becomes the long-term kill mechanism."
   },
   {
     "name": "Malbork Castle",
@@ -1600,25 +1675,40 @@
     "lat": 54.039,
     "long": 19.0266,
     "scores": {
-      "overall": 8,
+      "overall": 7,
       "categories": {
-        "defensibility": 9,
+        "defensibility": 8,
         "sustainability": 5,
-        "isolation": 4,
+        "isolation": 5,
         "accessibility": 5
       }
     },
     "description": {
-      "summary": "Malbork Castle is one of the strongest fortified-structure candidates in Europe, with massive defensive architecture and strong control over access. Its limitation is that it still relies on the surrounding region for long-term viability.",
+      "summary": "Malbork provides exceptional masonry defense and layered gates, but it sits in a reachable lowland region. What kills you here is siege attrition: repeated encirclement and supply disruption grind down even a strong fortress.",
       "strengths": [
-        "Exceptional fortification and durable structure",
-        "Strong control over entry points and defensive depth"
+        "Massive defensive architecture with strong compartmentalized fallback lines",
+        "Durable construction tolerates weather and assault better than modern light structures"
       ],
       "weaknesses": [
-        "Located in a relatively accessible populated region",
-        "Long-term sustainability depends on surrounding land and systems"
+        "Regional accessibility means hostile groups can return repeatedly over time",
+        "Long-term survival still depends on external food, fuel, and medical supply webs"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Regional fortified headquarters with distributed external support",
+      "failureMode": "Operational exhaustion from recurring sieges and interrupted logistics"
+    },
+    "survivalProfile": {
+      "initial": "Very strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Defensive anchor while mobile teams maintain rural production and convoy routes",
+      "keyRisk": "Without persistent external resource capture, defenders become static and gradually out-consumed"
+    },
+    "realityCheck": "Assumes trained defenders, nearby cooperative territory, and sustained convoy security through a contested region.",
+    "scoreNarrative": "Malbork reaches 7.0 on fortress quality and defensive depth. It does not score higher because the decisive failure mode is external-logistics attrition rather than structural weakness."
   },
   {
     "name": "Suomenlinna Fortress",
@@ -1629,25 +1719,40 @@
     "lat": 60.1462,
     "long": 24.9884,
     "scores": {
-      "overall": 8,
+      "overall": 6.6,
       "categories": {
         "defensibility": 8,
-        "sustainability": 5,
+        "sustainability": 4,
         "isolation": 6,
         "accessibility": 5
       }
     },
     "description": {
-      "summary": "A highly credible fortress-island candidate with real defensive logic and separation from the mainland. Its main weakness is proximity to Helsinki and the challenge of sustaining a large population.",
+      "summary": "Suomenlinna has real island-fortress defensive logic, but it is tied to nearby urban waters and maritime supply. What kills you here is blockade-driven depletion when fuel, food, and treatment capacity cannot be replenished.",
       "strengths": [
-        "Fortress design and island separation work strongly together",
-        "Better defensive logic than most coastal heritage sites"
+        "Island separation and fortification channels attackers into predictable maritime approaches",
+        "Historic defensive layout supports layered sectors and fallback positions"
       ],
       "weaknesses": [
-        "Too close to a major urban centre to feel truly remote",
-        "Limited long-term sustainability at scale"
+        "Proximity to a major city raises contact pressure and surveillance risk",
+        "Limited local production means long-duration occupation depends on sea-linked resupply"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Medium-term island bastion for controlled population and coastal monitoring",
+      "failureMode": "Maritime choke and resource depletion under sustained pressure"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate to strong",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use as defended waypoint integrated with dispersed mainland and archipelago supply sites",
+      "keyRisk": "If sea lanes are denied, the fortress consumes reserves faster than it can replace critical inputs"
+    },
+    "realityCheck": "Assumes control of boats, fuel stores, water treatment, and secure off-island partners for food and repairs.",
+    "scoreNarrative": "Suomenlinna remains defensible but lands in the mid-6s because sustainability is externally coupled. The failure mode is blockade attrition, not immediate tactical collapse."
   },
   {
     "name": "Gdańsk Shipyard",
@@ -1658,25 +1763,40 @@
     "lat": 54.352,
     "long": 18.6466,
     "scores": {
-      "overall": 5,
+      "overall": 5.4,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 5,
+        "defensibility": 4,
+        "sustainability": 6,
         "isolation": 3,
         "accessibility": 7
       }
     },
     "description": {
-      "summary": "The shipyard offers industrial infrastructure and maritime utility, but it is still a large exposed site inside a populated region. Better as a resource hub than a final refuge.",
+      "summary": "Gdańsk Shipyard is a high-value industrial toolkit, not a survivable sanctuary. What kills you here is perimeter overstretch: too much open infrastructure to guard, too many approach paths, too many competing groups.",
       "strengths": [
-        "Large industrial footprint with salvage and repair potential",
-        "Maritime access could support evacuation or supply"
+        "Heavy fabrication and repair capacity can restore vehicles, generators, and hulls",
+        "Water access supports evacuation, trade, and distributed staging"
       ],
       "weaknesses": [
-        "Difficult to secure at full scale",
-        "Urban exposure undermines long-term safety"
+        "Facility scale and line-of-sight complexity make full security manpower-intensive",
+        "Urban-adjacent location guarantees recurrent raids, theft, and sabotage pressure"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Industrial recovery node feeding smaller defensible outposts",
+      "failureMode": "Security dilution across oversized infrastructure leads to cascading losses"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Run short production cycles, then disperse output to hardened sites inland or offshore",
+      "keyRisk": "Treating the whole shipyard as a live-in fortress exhausts personnel and collapses sector control"
+    },
+    "realityCheck": "Assumes skilled labor, spare parts, and convoy or marine security to move produced assets quickly.",
+    "scoreNarrative": "Gdańsk gains points on practical industry but loses heavily on defendable footprint and exposure. The dominant kill mechanism is not scarcity; it is overstretched security."
   },
   {
     "name": "Norilsk",
@@ -1687,25 +1807,40 @@
     "lat": 69.3558,
     "long": 88.1893,
     "scores": {
-      "overall": 6,
+      "overall": 5.8,
       "categories": {
-        "defensibility": 5,
+        "defensibility": 4,
         "sustainability": 3,
         "isolation": 9,
         "accessibility": 1
       }
     },
     "description": {
-      "summary": "Norilsk scores highly on isolation but poorly on livability. It is the kind of place that is hard for others to reach, but also hard for you to survive in for the long haul.",
+      "summary": "Norilsk is remote enough to avoid mass contact, but the environment itself is hostile to human endurance. What kills you here is infrastructure-coupled cold exposure: once heat, shelter integrity, or medical capability slip, mortality spikes fast.",
       "strengths": [
-        "Extreme remoteness sharply limits outside pressure",
-        "Industrial base may provide salvage opportunities"
+        "Extreme remoteness greatly reduces sustained external human pressure",
+        "Existing heavy industry offers salvageable machinery and structural materials"
       ],
       "weaknesses": [
-        "Brutal environment undermines long-term viability",
-        "Very poor accessibility and resupply"
+        "Arctic climate and pollution load create chronic health and maintenance stress",
+        "Resupply, evacuation, and specialist care are difficult during prolonged disruption"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Remote exclusion refuge for hardened teams with cold-weather logistics",
+      "failureMode": "Thermal and medical system failure in extreme climate conditions"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate to weak",
+      "longTerm": "Very weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Operate as low-contact fallback while building redundant heat, shelter, and treatment systems",
+      "keyRisk": "If power and heating chains are not redundant, routine winter failures become lethal events"
+    },
+    "realityCheck": "Assumes cold-weather expertise, large fuel buffers, indoor agriculture plans, and reliable maintenance teams.",
+    "scoreNarrative": "Norilsk's isolation is elite, but isolation alone does not keep people alive. Its core failure mode is environmental lethality once critical systems degrade."
   },
   {
     "name": "Chernobyl Exclusion Zone Facility",
@@ -1716,25 +1851,40 @@
     "lat": 51.2766,
     "long": 30.2219,
     "scores": {
-      "overall": 5,
+      "overall": 5.2,
       "categories": {
-        "defensibility": 5,
+        "defensibility": 4,
         "sustainability": 3,
         "isolation": 8,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "The exclusion zone offers exceptional isolation and low population pressure, but contamination risk and weak long-term livability hold it back. It works better as a remote refuge than a true endgame base.",
+      "summary": "Chernobyl offers rare low-population isolation in Europe, but contamination and decaying infrastructure impose a slow-burn survival tax. What kills you here is cumulative exposure and medical degradation, not immediate assault.",
       "strengths": [
-        "Very low human pressure compared with most of Europe",
-        "Large exclusion area creates natural buffer from chaos"
+        "Large restricted zone suppresses routine human traffic and opportunistic settlement pressure",
+        "Existing structures and roads can support controlled movement and temporary sheltering"
       ],
       "weaknesses": [
-        "Radiation and contamination risks complicate long-term survival",
-        "Limited comfort and sustainable living potential"
+        "Contamination pathways complicate food, water, and dust safety over long timelines",
+        "Aging facilities and specialist-equipment dependence strain long-term maintenance"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short- to medium-term remote buffer zone with strict contamination controls",
+      "failureMode": "Long-horizon health decline from exposure, stress, and weak medical depth"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Operate small screened teams while maintaining clean external supply and treatment links",
+      "keyRisk": "If decontamination and medical monitoring lapse, invisible cumulative hazards erode group capability"
+    },
+    "realityCheck": "Assumes dosimetry discipline, contamination-aware agriculture choices, and access to diagnostics and specialist medicine.",
+    "scoreNarrative": "Chernobyl scores better than dense urban hubs on isolation but remains capped by chronic health risk. The key failure mode is cumulative biological damage under constrained medical support."
   },
   {
     "name": "Olenya Air Base",
