@@ -100,25 +100,42 @@
     "lat": 5.0847,
     "long": -1.3509,
     "scores": {
-      "overall": 6,
+      "overall": 6.2,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 4,
-        "isolation": 4,
-        "accessibility": 5
+        "defensibility": 8.5,
+        "sustainability": 4.8,
+        "isolation": 2.8
       }
     },
     "description": {
-      "summary": "Elmina Castle is one of the more defensible historic sites in the region, with thick walls and a layout built around control and protection. Its weakness is that it lacks the broader land, flexibility, and resource base needed for long-term resilience.",
+      "summary": "Elmina Castle is a heavily fortified coastal stronghold with thick walls, controlled internal spaces, and clear defensive advantages. However, its position within a populated coastal town and direct access from land and sea significantly reduce its long-term viability, making it better suited to temporary defence than sustained survival.",
       "strengths": [
-        "Strong defensive architecture and durable construction",
-        "High control over access compared with most historic sites"
+        "Thick stone walls provide strong physical defence",
+        "Controlled entry points allow managed access",
+        "Internal layout supports shelter and coordination"
       ],
       "weaknesses": [
-        "Limited long-term food and water independence",
-        "Coastal position may create exposure without major resupply advantage"
+        "Located within a populated coastal settlement with high threat pressure",
+        "Accessible from both land and sea",
+        "Limited capacity for food and water production",
+        "Highly visible and historically known location"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-term fortified hold in a structured defensive position",
+      "failureMode": "Overrun due to surrounding population pressure and multiple access routes"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary defensive hold or fallback position during early collapse",
+      "keyRisk": "External pressure builds faster than the structure can compensate for"
+    },
+    "realityCheck": "Assumes the structure remains defensible and not immediately overrun. Long-term survival would require external supply or relocation due to limited self-sufficiency.",
+    "scoreNarrative": "Elmina Castle scores highly for defensibility due to its strong physical structure and controlled layout. However, its low isolation and coastal location significantly reduce long-term viability. The base performs best as a short-term defensive position, but struggles to sustain occupants as external pressure increases."
   },
   {
     "name": "Fasil Ghebbi",
