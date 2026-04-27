@@ -146,25 +146,40 @@
     "lat": 12.6075,
     "long": 37.4689,
     "scores": {
-      "overall": 7,
+      "overall": 6.9,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 5,
-        "accessibility": 5
+        "defensibility": 8.4,
+        "sustainability": 5.6,
+        "isolation": 6.7
       }
     },
     "description": {
-      "summary": "Fasil Ghebbi combines serious fortification value with a more adaptable inland setting than many heritage compounds. It looks like a credible medium-term holdout site, though it would still need broader support systems for real long-term survival.",
+      "summary": "Fasil Ghebbi is a fortified royal compound with thick masonry, layered courtyards, and strong internal control, giving it above-average defensive potential in an inland setting. It is more balanced than many heritage landmarks, but long-term survival still depends on building reliable food, water, and medical systems beyond the walls.",
       "strengths": [
-        "Strong walls and inherently defensive historic design",
-        "Inland setting gives it better survival logic than coastal heritage sites"
+        "Strong fortification layout with defensible walls and chokeable access",
+        "Inland position offers better strategic separation than exposed coastal forts",
+        "Reasonable isolation from major megacity pressure compared with regional capitals"
       ],
       "weaknesses": [
-        "Historic structures may constrain modern adaptation",
-        "Sustainability still depends on surrounding land and systems"
+        "Limited built-in food and utility systems for multi-year self-sufficiency",
+        "Heritage construction constraints can slow large-scale adaptation and repairs"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Medium-term fortified hub for an organized inland group",
+      "failureMode": "Resource strain inside a static fortress undermines long-term viability"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Stable with planning",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Defensible command post and protected shelter while nearby land is developed for supply",
+      "keyRisk": "Defenses remain strong while sustainability improvements lag behind consumption"
+    },
+    "realityCheck": "Assumes surrounding farmland and water access can be secured without constant conflict. The compound alone does not provide full long-term life support.",
+    "scoreNarrative": "Fasil Ghebbi scores highest in defensibility, supported by strong historic fortification geometry. Isolation is moderate-to-strong for a non-island site, but sustainability is the limiting factor because self-sufficient infrastructure is not intrinsic to the complex."
   },
   {
     "name": "Kimberley Big Hole & Mining Complex",
@@ -175,25 +190,40 @@
     "lat": -28.7383,
     "long": 24.7586,
     "scores": {
-      "overall": 5,
+      "overall": 4.8,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 4,
-        "isolation": 5,
-        "accessibility": 5
+        "defensibility": 5.4,
+        "sustainability": 3.8,
+        "isolation": 5.1
       }
     },
     "description": {
-      "summary": "Kimberley’s mining complex has some defensive and industrial logic, especially where terrain shapes movement, but it carries significant practical downsides. It feels more like a difficult fallback site than a truly desirable stronghold.",
+      "summary": "The Kimberley Big Hole complex offers some terrain-control advantages and salvage potential, but it is fundamentally an industrial ruin rather than a resilient settlement platform. It can function as a temporary fallback zone, yet poor livability and weak food-water fundamentals heavily constrain long-term survival.",
       "strengths": [
-        "Terrain and infrastructure could help channel movement",
-        "Industrial remnants may offer salvage value"
+        "Engineered terrain and excavation edges can help channel movement",
+        "Industrial remnants may provide short-term salvage materials and hard cover",
+        "Moderate isolation from core coastal megacity corridors"
       ],
       "weaknesses": [
-        "Mining environments can be hazardous and hard to maintain",
-        "Weak agricultural and lifestyle potential for long-term habitation"
+        "Low sustainability due to limited food production and high maintenance burden",
+        "Hazardous mining environment increases injury, contamination, and infrastructure risk"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-term fallback and scavenging base",
+      "failureMode": "Environmental hazards and supply shortfalls degrade the position faster than threats do"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Fragile",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Transit strongpoint while relocating to a more sustainable location",
+      "keyRisk": "Occupants burn resources managing hazards instead of building durable self-sufficiency"
+    },
+    "realityCheck": "Assumes safe zones can be established inside a partially degraded industrial landscape. Long-term habitation requires major remediation and external inputs.",
+    "scoreNarrative": "Kimberley scores modestly in defensibility and isolation because terrain and location can reduce direct pressure. Its low sustainability score drives the overall rating down, as mining infrastructure does not translate into reliable food, water, and health security."
   },
   {
     "name": "Bonny Island LNG Terminal",
@@ -204,25 +234,39 @@
     "lat": 4.4297,
     "long": 7.17,
     "scores": {
-      "overall": 4,
+      "overall": 4.9,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 3,
-        "isolation": 7,
-        "accessibility": 4
+        "defensibility": 5.2,
+        "sustainability": 3.2,
+        "isolation": 8.1
       }
     },
     "description": {
-      "summary": "Bonny Island LNG Terminal benefits from island separation and industrial infrastructure, but it is poorly suited to long-term survival without complex technical support. It works better as a temporary strongpoint than a true endgame base.",
+      "summary": "Bonny Island LNG Terminal benefits from strong geographic separation and hardened industrial perimeter logic, but it is heavily dependent on complex systems that are unlikely to remain operable in prolonged collapse. It is defensible as a temporary node, not a self-sustaining end-state base.",
       "strengths": [
-        "Island geography limits casual access",
-        "Industrial footprint may offer useful hard infrastructure"
+        "Excellent island isolation significantly reduces unstructured overland threat flow",
+        "Controlled industrial footprint can support perimeter management and access denial"
       ],
       "weaknesses": [
-        "Highly dependent on complex systems and supply chains",
-        "Industrial hazards and maintenance burden are major liabilities"
+        "Very low sustainability without continuous technical support, fuel, and spare parts",
+        "Industrial safety hazards create persistent high-impact failure risks for residents"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-term maritime-isolated hold with strict perimeter control",
+      "failureMode": "Technical system failure collapses water, power, and safety faster than defenses can compensate"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary secure staging site during early disruption in coastal regions",
+      "keyRisk": "A high-isolation site becomes untenable once specialized infrastructure fails"
+    },
+    "realityCheck": "Assumes initial access to trained operators and stored supplies. Without industrial continuity, habitability declines quickly despite isolation.",
+    "scoreNarrative": "Bonny scores highest in isolation by a wide margin, reflecting island separation. Defensibility is only moderate, and sustainability is the clear limiting factor, keeping the overall score below long-term viable standards."
   },
   {
     "name": "Camp Lemonnier",
@@ -233,25 +277,39 @@
     "lat": 11.5473,
     "long": 43.1595,
     "scores": {
-      "overall": 7,
+      "overall": 6.6,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 4,
-        "accessibility": 6
+        "defensibility": 8.6,
+        "sustainability": 5.4,
+        "isolation": 4.2
       }
     },
     "description": {
-      "summary": "Camp Lemonnier is one of the stronger institutional compounds in Africa thanks to its hardened perimeter, military-grade layout, and established infrastructure. Its weakness is that it would be an obvious strategic target in any wider collapse.",
+      "summary": "Camp Lemonnier is a hardened military-grade compound with strong perimeter control, organized logistics space, and immediate defensive credibility. Its strategic visibility and location near a major port-urban corridor reduce isolation, making it effective early but increasingly contested over time.",
       "strengths": [
-        "Strong perimeter security and controlled access",
-        "Existing infrastructure suited to organised occupation"
+        "High defensibility from layered security design and controlled entry points",
+        "Established base infrastructure supports coordinated operations and rapid response"
       ],
       "weaknesses": [
-        "Low stealth value and high likelihood of competition",
-        "Long-term sustainability depends on maintaining supply systems"
+        "Low isolation near strategic transport and population corridors increases competition risk",
+        "Sustainability is limited without continued fuel, maintenance, and external supply chains"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Early-phase defensive command compound for organized groups",
+      "failureMode": "Persistent attention from external actors erodes security and supply resilience"
+    },
+    "survivalProfile": {
+      "initial": "Very strong",
+      "shortTerm": "Stable with discipline",
+      "longTerm": "Moderate to weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Structured security hub and logistics node during initial regional breakdown",
+      "keyRisk": "The base remains tactically strong but strategically exposed to sustained contestation"
+    },
+    "realityCheck": "Assumes occupants can retain control of key systems and perimeter manpower. Long-term autonomy is difficult without dependable supply inflow.",
+    "scoreNarrative": "Camp Lemonnier earns one of the strongest defensibility scores in the set, supported by military compound design. Overall performance is pulled down by low isolation and only moderate sustainability, which increase long-horizon attrition risk."
   },
   {
     "name": "UN Base in Juba (UNMISS HQ, South Sudan)",
@@ -262,25 +320,39 @@
     "lat": 4.8517,
     "long": 31.5825,
     "scores": {
-      "overall": 6,
+      "overall": 5.9,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 4,
-        "isolation": 3,
-        "accessibility": 5
+        "defensibility": 8.0,
+        "sustainability": 4.3,
+        "isolation": 3.6
       }
     },
     "description": {
-      "summary": "The UN base in Juba has the perimeter control and infrastructure of a serious institutional compound, but it suffers from being visible, contested, and tied to a fragile urban environment. Strong tactically, weaker strategically.",
+      "summary": "UNMISS HQ in Juba offers robust perimeter logic and institutional infrastructure, but its urban-adjacent context and high visibility make it difficult to hold quietly over long periods. It performs as a defensive refuge in the short term, then declines as local pressure and supply dependency intensify.",
       "strengths": [
-        "Hardened compound logic with controlled access",
-        "Existing facilities support organised occupation"
+        "Strong compound defensibility with established perimeter control",
+        "Existing facilities support organized shelter, coordination, and triage functions"
       ],
       "weaknesses": [
-        "High competition risk in a crisis",
-        "Limited long-term independence from surrounding systems"
+        "Low isolation in a high-pressure urban security environment",
+        "Weak sustainability without stable external logistics and resource flow"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-term protected civilian and operations enclave",
+      "failureMode": "Urban competition and supply disruption outpace defensive advantages"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Defensive humanitarian or command enclave during acute instability",
+      "keyRisk": "Strategic exposure and dependence on outside systems steadily degrade survivability"
+    },
+    "realityCheck": "Assumes disciplined management and finite-duration occupation. Permanent independent survival is unlikely in this setting.",
+    "scoreNarrative": "UNMISS Juba scores high in defensibility due to compound structure and control. However, low isolation and low sustainability dominate long-term outcomes, pulling the overall score into the mid tier."
   },
   {
     "name": "Seychelles",
@@ -291,25 +363,38 @@
     "lat": -4.6796,
     "long": 55.492,
     "scores": {
-      "overall": 8,
+      "overall": 8.0,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 7,
-        "isolation": 9,
-        "accessibility": 3
+        "defensibility": 6.9,
+        "sustainability": 7.3,
+        "isolation": 9.2
       }
     },
     "description": {
-      "summary": "Seychelles is one of the strongest island-based options in Africa because it combines real isolation with a credible long-term habitation environment. Its main challenge is that access and resupply would become difficult once systems break down.",
+      "summary": "Seychelles is one of the strongest African macro-base options because exceptional island isolation combines with a livable climate and realistic long-term habitation potential. The main constraint is coordination and resupply across dispersed islands once external systems weaken.",
       "strengths": [
-        "Exceptional isolation from mainland collapse dynamics",
-        "Better lifestyle and sustainability potential than harsher islands"
+        "Exceptional isolation sharply reduces mainland threat spillover",
+        "Strong sustainability potential from habitable conditions and mixed local resource options"
       ],
       "weaknesses": [
-        "Hard to reach and reinforce once cut off",
-        "Fragmented geography may complicate coordination and defence"
+        "Defensibility varies by island and coastline complexity, complicating unified perimeter control"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Long-term island network refuge with managed inter-island logistics",
+      "failureMode": "Fragmented geography and maritime dependency fracture coordination under stress"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Stable",
+      "longTerm": "Strong with organization"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Distributed archipelago survival strategy emphasizing distance and redundancy",
+      "keyRisk": "Maritime transport and inter-island governance become the critical bottleneck"
+    },
+    "realityCheck": "Assumes access to boats, fuel alternatives, and governance capacity across multiple islands. Benefits fall quickly if mobility between islands collapses.",
+    "scoreNarrative": "Seychelles scores highest in isolation and also performs well in sustainability, producing a top-tier overall rating. Defensibility is comparatively lower due to dispersed coastlines, but not low enough to undermine long-term viability."
   },
   {
     "name": "Zanzibar Island",
@@ -320,25 +405,38 @@
     "lat": -6.1659,
     "long": 39.2026,
     "scores": {
-      "overall": 7,
+      "overall": 7.2,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 6,
-        "isolation": 8,
-        "accessibility": 5
+        "defensibility": 6.8,
+        "sustainability": 6.4,
+        "isolation": 8.0
       }
     },
     "description": {
-      "summary": "Zanzibar Island is one of the stronger balanced options in Africa because it combines island separation with an established human environment and better long-term viability than many remote extremes. Its main weakness is that it is not isolated enough to be effortless.",
+      "summary": "Zanzibar balances meaningful island separation with established settlement infrastructure, making it a credible medium-to-long-term refuge if governance and resource management remain coherent. Its challenge is that it is populated and close enough to mainland dynamics to face persistent pressure.",
       "strengths": [
-        "Strong island separation from mainland threat flow",
-        "More credible long-term habitation base than many harsher sites"
+        "High isolation relative to mainland sites reduces direct overland threat flow",
+        "Solid defensibility from chokepointable maritime access and concentrated settlements"
       ],
       "weaknesses": [
-        "Existing population pressures would complicate control",
-        "Coastline scale makes total defence difficult"
+        "Sustainability is only moderate under prolonged disruption due to population-resource pressure"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Managed island refuge with controlled ports and rationed resources",
+      "failureMode": "Population demand and supply strain erode stability faster than security measures can adapt"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Stable with control",
+      "longTerm": "Moderate to strong"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Regional island fallback where separation and existing infrastructure are both needed",
+      "keyRisk": "Resource governance fails before isolation advantages can be fully leveraged"
+    },
+    "realityCheck": "Assumes early control of key ports, storage, and distribution systems. Without disciplined governance, density turns into vulnerability.",
+    "scoreNarrative": "Zanzibar scores best in isolation and remains solid in defensibility, creating a strong overall profile. Sustainability is the lowest category, so long-term success depends on disciplined food, water, and public-order management."
   },
   {
     "name": "Cape Point Lighthouse",
@@ -349,25 +447,38 @@
     "lat": -34.3568,
     "long": 18.4897,
     "scores": {
-      "overall": 5,
+      "overall": 5.1,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 4,
-        "isolation": 6,
-        "accessibility": 4
+        "defensibility": 6.0,
+        "sustainability": 3.9,
+        "isolation": 5.4
       }
     },
     "description": {
-      "summary": "Cape Point Lighthouse offers useful geographic separation and strong visibility, but it is too limited in scale and long-term resource depth to function as a top-tier apocalypse base. It is better viewed as a lookout position than a settlement anchor.",
+      "summary": "Cape Point Lighthouse has tactical lookout value and some geographic separation, but it lacks the carrying capacity and resource depth needed for sustained habitation. It works best as an observation and signaling outpost rather than a primary survival settlement.",
       "strengths": [
-        "Coastal position provides visibility and natural defensive edges",
-        "Relative remoteness reduces immediate pressure"
+        "Good defensibility from elevation, terrain edges, and limited direct approaches",
+        "Moderate isolation at the peninsula edge reduces immediate inland pressure"
       ],
       "weaknesses": [
-        "Limited living and agricultural capacity",
-        "Exposure to weather and supply constraints"
+        "Low sustainability due to minimal food, water, shelter expansion, and weather resilience"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-term watchpost and early-warning node",
+      "failureMode": "Resource scarcity forces abandonment despite manageable threat levels"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Forward observation site supporting a larger inland or coastal network",
+      "keyRisk": "Teams overcommit to a scenic defensive point that cannot sustain residency"
+    },
+    "realityCheck": "Assumes the site is used as a support outpost, not a standalone settlement. Endurance depends on external supply from better-positioned bases.",
+    "scoreNarrative": "Cape Point performs best in defensibility, with isolation in the mid range. Sustainability is clearly the weakest category, which limits its role to temporary operations and reconnaissance support."
   },
   {
     "name": "Great Mosque of Djenné",
@@ -378,25 +489,39 @@
     "lat": 13.905,
     "long": -4.555,
     "scores": {
-      "overall": 4,
+      "overall": 4.2,
       "categories": {
-        "defensibility": 4,
-        "sustainability": 4,
-        "isolation": 4,
-        "accessibility": 4
+        "defensibility": 4.4,
+        "sustainability": 4.0,
+        "isolation": 4.1
       }
     },
     "description": {
-      "summary": "The Great Mosque of Djenné is iconic but not especially strong as a zombie base. It lacks the defensive, logistical, and long-term survival advantages needed to compete with more practical sites.",
+      "summary": "The Great Mosque of Djenné is culturally significant but offers limited survival advantages as a dedicated apocalypse base. It can provide temporary shelter value, yet defensive depth, isolation, and self-sufficiency are all too modest for durable long-term occupation.",
       "strengths": [
-        "Central landmark with some structural mass and visibility",
-        "Could serve as a rally point or temporary refuge"
+        "Slightly stronger defensibility than surrounding open urban fabric due to consolidated structure",
+        "Moderate isolation from major coastal megacities compared with high-density hub locations"
       ],
       "weaknesses": [
-        "Limited defensive suitability for prolonged occupation",
-        "Not designed for self-sustaining settlement use"
+        "Low sustainability with limited capacity for autonomous food, water, and medical continuity",
+        "Defensive performance remains modest against prolonged coordinated pressure"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Temporary refuge and coordination landmark during short disruptions",
+      "failureMode": "Extended pressure exposes limited defensive depth and resource autonomy"
+    },
+    "survivalProfile": {
+      "initial": "Limited",
+      "shortTerm": "Fragile",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Short-duration shelter point while transitioning to a more viable base",
+      "keyRisk": "Symbolic value encourages overuse of a site not built for sustained survival operations"
+    },
+    "realityCheck": "Assumes respectful, minimal-impact use of a heritage landmark. Practical survival planning should prioritize purpose-built or resource-rich alternatives.",
+    "scoreNarrative": "Djenné receives low-to-mid scores across all categories, with no dominant strength offsetting weaknesses. Sustainability is the lowest score and defensibility is only marginally better, resulting in a low overall ranking."
   },
   {
     "name": "Aït Benhaddou",
@@ -407,25 +532,39 @@
     "lat": 31.047,
     "long": -7.13,
     "scores": {
-      "overall": 6,
+      "overall": 6.1,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 5,
-        "isolation": 6,
-        "accessibility": 5
+        "defensibility": 7.2,
+        "sustainability": 4.9,
+        "isolation": 6.3
       }
     },
     "description": {
-      "summary": "Aït Benhaddou is a remote fortified settlement in Morocco whose compact historic form and defensible layout would make it a credible short-to-medium-term refuge. Its biggest challenge is long-term sustainability in a harsh environment with limited local productivity.",
+      "summary": "Aït Benhaddou is a compact fortified settlement with clear defensive geometry and moderate remoteness, making it a credible short-to-medium-term refuge. Long-term survivability is constrained by arid conditions and limited built-in resource systems, so it must be paired with robust external production plans.",
       "strengths": [
-        "Naturally defensive built form with strong control over entry points",
-        "Lower surrounding population pressure than major urban sites"
+        "High defensibility from fortified form, elevation, and controllable access paths",
+        "Moderate isolation reduces immediate pressure compared with major urban corridors"
       ],
       "weaknesses": [
-        "Arid conditions reduce long-term self-sufficiency",
-        "Heritage-style structures may be hard to adapt at scale"
+        "Low sustainability in arid conditions with constrained local food-water productivity",
+        "Historic fabric limits rapid expansion of modern utilities and sanitation systems"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Medium-term defended settlement for disciplined small groups",
+      "failureMode": "Environmental and infrastructure limits outlast the site’s defensive advantages"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate to strong",
+      "longTerm": "Moderate to weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Fortified fallback base while establishing off-site agriculture and water security",
+      "keyRisk": "Teams rely on structural defense but underinvest in sustainability infrastructure"
+    },
+    "realityCheck": "Assumes access to nearby water management and cultivated support zones. The ksar alone is not a complete long-horizon survival system.",
+    "scoreNarrative": "Aït Benhaddou scores highest in defensibility, with isolation as a secondary advantage. Sustainability is the clear weak point, so overall success depends on how quickly external resource systems can be built and maintained."
   },
   {
     "name": "Kolmanskop",
