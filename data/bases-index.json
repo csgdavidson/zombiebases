@@ -1895,25 +1895,40 @@
     "lat": 68.15,
     "long": 33.45,
     "scores": {
-      "overall": 6,
+      "overall": 5.8,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 4,
-        "isolation": 5,
+        "defensibility": 7,
+        "sustainability": 3,
+        "isolation": 6,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "A hardened military-style compound with real defensive value and lower population pressure than southern air bases. Strong tactically, but not ideal for long-term independence.",
+      "summary": "Olenya can absorb early shock thanks to military-grade hardening and Arctic distance, but what kills you here is fuel-and-spares collapse in extreme cold once central logistics break.",
       "strengths": [
-        "Strong perimeter-control potential",
-        "Existing military infrastructure supports organised defence"
+        "Hardened air base layout supports layered access control and disciplined perimeter defense",
+        "Remote northern position reduces immediate refugee and horde pressure versus major southern hubs"
       ],
       "weaknesses": [
-        "Strategic target value remains high",
-        "Sustainability depends on broader systems and stockpiles"
+        "Heating, power, and vehicle readiness are maintenance-heavy and depend on reliable fuel chains",
+        "High strategic profile can attract state-level contest rather than low-intensity civilian pressure"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short- to medium-term fortified command outpost with strict fuel governance",
+      "failureMode": "Critical systems fail in winter after logistics attrition and technical team losses"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Stage disciplined teams and mobile patrols while conserving aviation and generator hours",
+      "keyRisk": "If fuel purity, spare parts, or heating redundancy fail, exposure and immobility cascade quickly"
+    },
+    "realityCheck": "Assumes cold-weather mechanics, large fuel buffers, and enough trained maintainers to keep heat and power online.",
+    "scoreNarrative": "Olenya scores well on defensibility but loses long-term points on sustainability. Its core failure mode is not breach, but technical freeze-out after supply-chain breakdown."
   },
   {
     "name": "Faroe Islands",
@@ -1924,25 +1939,40 @@
     "lat": 62.0,
     "long": -6.7833,
     "scores": {
-      "overall": 8,
+      "overall": 7.4,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 7,
+        "defensibility": 6,
+        "sustainability": 6,
         "isolation": 9,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "The Faroe Islands are one of the best island options in Europe, combining real isolation with a credible living environment. Their biggest drawback is remoteness once external transport systems fail.",
+      "summary": "Faroe is one of Europe's strongest isolation plays, but what kills you here is maritime bottleneck failure when storms, fuel limits, and fleet wear cut food and medical imports.",
       "strengths": [
-        "Exceptional separation from mainland collapse dynamics",
-        "Real long-term habitation and fishing potential"
+        "North Atlantic separation sharply lowers spillover pressure from mainland population centers",
+        "Existing fishing culture and distributed settlements support practical adaptation"
       ],
       "weaknesses": [
-        "Hard to reach and reinforce once cut off",
-        "Harsh weather adds logistical strain"
+        "Weather windows and port dependency create fragile resupply timing",
+        "Arable limits and import dependence constrain autonomous calorie and medicine production"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Regional island holdout with disciplined rationing and maritime control",
+      "failureMode": "Import disruption and fleet degradation drive slow nutritional and medical collapse"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Secure ports, prioritize fisheries, and reserve fuel for medicine and winter logistics",
+      "keyRisk": "If boats, diesel, or harbor operations fail, isolation shifts from shield to starvation trap"
+    },
+    "realityCheck": "Assumes seafaring crews, engine maintenance capacity, and coordinated ration policy across settlements.",
+    "scoreNarrative": "Faroe stays high due to excellent isolation, but sustainability is capped by maritime dependence. The core failure mode is a shipping and fuel bottleneck, not direct overrun."
   },
   {
     "name": "Gotland",
@@ -1953,25 +1983,40 @@
     "lat": 57.6348,
     "long": 18.2948,
     "scores": {
-      "overall": 8,
+      "overall": 7.1,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 7,
+        "defensibility": 6,
+        "sustainability": 6,
         "isolation": 8,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "Gotland is a very strong island base candidate, balancing separation, infrastructure, and a realistic long-term living environment. Its main weakness is that it is large enough to be difficult to fully control.",
+      "summary": "Gotland is a robust island option with workable infrastructure, but what kills you here is coastline overextension: too many access points for too few defenders over time.",
       "strengths": [
-        "Strong island separation from mainland threat flow",
-        "Good balance of livability, agriculture, and infrastructure"
+        "Island geography filters mainland spillover and buys warning time",
+        "Useful agriculture, roads, and settlements offer better living depth than most fortress-style sites"
       ],
       "weaknesses": [
-        "Large area is hard to secure comprehensively",
-        "Strategic visibility may attract competition"
+        "Long perimeter and dispersed landing points dilute manpower and surveillance",
+        "Strategic Baltic position can attract organized competitors, not just random survivors"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Island district defense with selective denial zones and population concentration",
+      "failureMode": "Defender fatigue and perimeter leakage eventually create cascading local breaches"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Abandon low-value coastline, fortify key ports, and centralize food production and command",
+      "keyRisk": "If teams try to hold the full island footprint, attrition outruns recruitment and repair"
+    },
+    "realityCheck": "Assumes unified command, coastal surveillance, and willingness to cede terrain to preserve force density.",
+    "scoreNarrative": "Gotland earns a high score from isolation and livability, but not elite due to scale-control friction. The core failure mode is operational overstretch rather than instant collapse."
   },
   {
     "name": "Kizhi Pogost",
@@ -1982,25 +2027,40 @@
     "lat": 62.0667,
     "long": 35.2333,
     "scores": {
-      "overall": 5,
+      "overall": 4.4,
       "categories": {
-        "defensibility": 4,
-        "sustainability": 4,
+        "defensibility": 3,
+        "sustainability": 2,
         "isolation": 7,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "Kizhi Pogost has remoteness and a degree of island separation, but it is more atmospheric than practical as a zombie base. It lacks the infrastructure and defensive logic needed for serious long-term survival.",
+      "summary": "Kizhi is remote and scenic, but what kills you here is infrastructure poverty: you run out of heat, medicine, and repair capacity before threats ever need to storm the site.",
       "strengths": [
-        "Remote location reduces immediate population pressure",
-        "Water separation adds some defensive value"
+        "Lake separation lowers casual traffic and buys some standoff distance",
+        "Small footprint is easier to patrol than large mixed-use settlements"
       ],
       "weaknesses": [
-        "Limited habitation and survival infrastructure",
-        "Not designed for defensive occupation"
+        "Heritage structures provide little modern shelter, storage, or hardened utility space",
+        "Minimal local production and technical depth make long-duration habitation brittle"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Temporary hide site or observation post, not a core colony location",
+      "failureMode": "Resource exhaustion and exposure-driven health decline force abandonment"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Very Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use as a short fallback cache node linked to a better mainland logistics base",
+      "keyRisk": "If isolated there for winter without reserves, cold and medical scarcity become fatal"
+    },
+    "realityCheck": "Assumes pre-stocked supplies, boat reliability, and external support for anything beyond short stays.",
+    "scoreNarrative": "Kizhi keeps some points for isolation, but sustainability is fundamentally low. Its core failure mode is slow systems starvation, not tactical defeat."
   },
   {
     "name": "Ostankino Tower",
@@ -2011,25 +2071,40 @@
     "lat": 55.8197,
     "long": 37.6116,
     "scores": {
-      "overall": 2,
+      "overall": 2.4,
       "categories": {
         "defensibility": 2,
-        "sustainability": 2,
+        "sustainability": 1,
         "isolation": 1,
         "accessibility": 8
       }
     },
     "description": {
-      "summary": "A landmark rather than a viable base. High visibility and symbolic value make it one of the weaker entries in the region.",
+      "summary": "Ostankino is a symbolic vertical landmark, not a survival base; what kills you here is siege and fire in a high-visibility trap with no resilient life-support depth.",
       "strengths": [
-        "Strong visibility over surrounding area",
-        "Central landmark value"
+        "Excellent observation altitude for temporary intelligence gathering",
+        "Concrete core offers limited short-duration hard cover"
       ],
       "weaknesses": [
-        "No meaningful long-term habitation value",
-        "Extremely exposed and strategically obvious"
+        "Urban location guarantees sustained human pressure and rapid encirclement",
+        "Vertical egress chokepoints become lethal if smoke, fire, or structural damage occurs"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Brief lookout or relay point only, never primary shelter",
+      "failureMode": "Entrapment during fire or siege with no sustainable evacuation lane"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Very Weak",
+      "longTerm": "Nonviable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Exploit elevation for short scans, then rotate to low-signature fallback shelters",
+      "keyRisk": "If teams treat it as a fortress, visibility and choke-point exits convert it into a kill box"
+    },
+    "realityCheck": "Assumes controlled access windows and preplanned exfil routes; otherwise casualty risk spikes fast.",
+    "scoreNarrative": "Ostankino remains near the floor because it concentrates people in an obvious vertical trap. The core failure mode is catastrophic entrapment under urban pressure."
   },
   {
     "name": "Longyearbyen",
@@ -2040,25 +2115,40 @@
     "lat": 78.2232,
     "long": 15.6469,
     "scores": {
-      "overall": 7,
+      "overall": 6.9,
       "categories": {
         "defensibility": 6,
-        "sustainability": 4,
+        "sustainability": 3,
         "isolation": 10,
         "accessibility": 1
       }
     },
     "description": {
-      "summary": "Longyearbyen is almost unmatched for isolation, making it a compelling extreme refuge. Its weakness is that the same remoteness and climate make long-term survival extraordinarily demanding.",
+      "summary": "Longyearbyen's isolation is exceptional, but what kills you here is energy-and-calorie failure in polar conditions when imports and heavy maintenance chains degrade.",
       "strengths": [
-        "Exceptional isolation from wider population collapse",
-        "Harsh location sharply limits external threat flow"
+        "Extreme remoteness dramatically reduces contact-driven outbreak and raider pressure",
+        "Compact settlement and existing cold-weather operations provide an organized starting platform"
       ],
       "weaknesses": [
-        "Very poor accessibility and resupply potential",
-        "Extreme climate reduces sustainability"
+        "Heating, power, and food security are import-dependent and technically intensive",
+        "Polar climate punishes any lapse in shelter integrity, fuel quality, or equipment uptime"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "High-isolation refuge for a small, technically skilled, pre-stocked group",
+      "failureMode": "Infrastructure attrition in winter causes irreversible exposure and metabolic collapse"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Maintain strict fuel budgeting, redundant heat systems, and greenhouse or fish-protein plans",
+      "keyRisk": "If generator chains or food imports miss multiple cycles, survival drops off abruptly"
+    },
+    "realityCheck": "Assumes cold-region specialists, redundant heating hardware, and robust preventive maintenance culture.",
+    "scoreNarrative": "Longyearbyen scores high on isolation but is constrained by severe sustainability exposure. The core failure mode is technical and metabolic breakdown in extreme cold."
   },
   {
     "name": "Visby",
@@ -2072,22 +2162,37 @@
       "overall": 7,
       "categories": {
         "defensibility": 7,
-        "sustainability": 6,
+        "sustainability": 5,
         "isolation": 7,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "Visby is a strong walled settlement with island geography on its side, making it a balanced and believable medium-to-long-term base candidate. It is less extreme than the very top entries, but more livable than many fortress sites.",
+      "summary": "Visby is a balanced walled island town, but what kills you here is population-and-water strain if too many survivors concentrate behind finite historic defenses.",
       "strengths": [
-        "Walled settlement with real defensive value",
-        "Island context improves separation and survivability"
+        "Historic walls and compact urban core support coherent perimeter management",
+        "Island position reduces random mainland spillover and supports controlled maritime access"
       ],
       "weaknesses": [
-        "Not isolated enough to eliminate all outside pressure",
-        "Still limited compared with larger, more sustainable islands"
+        "Tourism-era infrastructure is not sized for prolonged siege-level population density",
+        "Freshwater, sanitation, and medical throughput can bottleneck before defenses fail"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Medium-term civic enclave with strict intake limits and ration governance",
+      "failureMode": "Internal resource saturation triggers disease, unrest, and defensive fragmentation"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Cap population, secure wells and treatment, and maintain maritime trade corridors",
+      "keyRisk": "If intake is unmanaged, sanitation and water stress erode survivability from inside"
+    },
+    "realityCheck": "Assumes disciplined governance, enforceable ration policy, and rapid infrastructure triage capability.",
+    "scoreNarrative": "Visby remains a high-tier balanced site, but not elite because carrying capacity is finite. Its core failure mode is internal systems overload rather than perimeter collapse."
   },
   {
     "name": "Ligatne Bunker",
@@ -2098,25 +2203,40 @@
     "lat": 57.2558,
     "long": 25.069,
     "scores": {
-      "overall": 7,
+      "overall": 5.6,
       "categories": {
         "defensibility": 8,
-        "sustainability": 4,
+        "sustainability": 2,
         "isolation": 5,
         "accessibility": 5
       }
     },
     "description": {
-      "summary": "A purpose-built survival bunker with strong defensive logic and good concealment. It is well suited to short- and medium-term refuge, but weaker as a scalable long-term base.",
+      "summary": "Ligatne's bunker geometry is excellent for sheltering, but what kills you here is air-power-water dependency: once life-support systems degrade, underground becomes a coffin.",
       "strengths": [
-        "Built for continuity and protected occupation",
-        "Hardened underground form is difficult to penetrate"
+        "Subterranean hardening and concealment are effective against short-term external violence",
+        "Controlled entry architecture supports tight security with small defending teams"
       ],
       "weaknesses": [
-        "Limited long-term expansion potential",
-        "Sustainability depends on what survives above ground"
+        "Confined volume and utility dependence limit long-term habitability and morale",
+        "Sustainable food, clean water, and replacement parts still rely on above-ground operations"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-duration hardened shelter and continuity-of-command node",
+      "failureMode": "Life-support degradation creates toxic indoor conditions and forced exposure"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Cycle occupancy, cache critical spares, and maintain protected above-ground supply micro-sites",
+      "keyRisk": "If ventilation, filtration, or pumping fails for long periods, shelter turns nonviable quickly"
+    },
+    "realityCheck": "Assumes preventive maintenance discipline and redundant systems for air, water, and waste handling.",
+    "scoreNarrative": "Ligatne scores high on defensibility but is pulled down by severe sustainability constraints. The core failure mode is internal systems failure in a closed environment."
   },
   {
     "name": "Derinkuyu Underground City",
@@ -2127,25 +2247,40 @@
     "lat": 38.3746,
     "long": 34.735,
     "scores": {
-      "overall": 8,
+      "overall": 7.3,
       "categories": {
         "defensibility": 9,
-        "sustainability": 5,
+        "sustainability": 4,
         "isolation": 6,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "Derinkuyu is one of the strongest subterranean survival sites in the project so far, combining concealment, layered defence, and historical proof of refuge use. Its main weakness is limited expansion and dependence on surrounding resources.",
+      "summary": "Derinkuyu offers rare layered underground defense, but what kills you here is subterranean throughput limits: air, sanitation, and food logistics fail before walls do.",
       "strengths": [
-        "Deep underground structure is extremely hard to overrun",
-        "Built specifically for long-term concealment and protection"
+        "Historically proven multi-level refuge design is difficult to assault directly",
+        "Narrow passages and defensible chokepoints allow force multiplication"
       ],
       "weaknesses": [
-        "Limited scalability for large populations",
-        "Long-term sustainability still depends on external land and supply"
+        "Large populations create ventilation, waste, and disease management stress quickly",
+        "Long-term calories and medicine remain dependent on secure external production zones"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Defensive refuge hub paired with protected surface agriculture and rotating occupancy",
+      "failureMode": "Overcrowding and utility bottlenecks trigger sanitation collapse and forced dispersal"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use deep levels for shelter and command, while keeping population and waste load capped",
+      "keyRisk": "If leadership overpacks the site, disease and air-quality decline negate defensive advantage"
+    },
+    "realityCheck": "Assumes strict occupancy control, medical triage, and continuous external farming support.",
+    "scoreNarrative": "Derinkuyu remains high-tier due to exceptional defensibility, but not top-tier because closed-system limits dominate long horizons. The core failure mode is internal throughput collapse."
   },
   {
     "name": "Helsinki Airport",
@@ -2156,25 +2291,40 @@
     "lat": 60.3172,
     "long": 24.9633,
     "scores": {
-      "overall": 3,
+      "overall": 3.1,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 3,
+        "defensibility": 2,
+        "sustainability": 2,
         "isolation": 2,
         "accessibility": 9
       }
     },
     "description": {
-      "summary": "Excellent transport infrastructure but fundamentally poor as a survival base because it is open, visible, and tied to dense regional systems. Useful for movement, not for settling.",
+      "summary": "Helsinki Airport is a movement asset, not a sanctuary; what kills you here is continuous mass ingress that overwhelms perimeter control and resource security.",
       "strengths": [
-        "Major logistics and transport capacity",
-        "Large built environment with storage potential"
+        "Runways, fuel systems, and warehouses support rapid staging and evacuation operations",
+        "Strong navigation and communication infrastructure helps coordinate regional movement"
       ],
       "weaknesses": [
-        "Extremely exposed and difficult to defend",
-        "High traffic location makes it an early flashpoint"
+        "Wide open geometry and many approach vectors are manpower-intensive to secure",
+        "As a known transit node, it attracts desperate crowds and organized predation early"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-window logistics and extraction hub under strict time limits",
+      "failureMode": "Perimeter saturation and insider chaos collapse control faster than supplies can move"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Nonviable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use for brief throughput operations, then relocate personnel to lower-signature sites",
+      "keyRisk": "If treated as a static base, crowd pressure and infiltration rapidly become unmanageable"
+    },
+    "realityCheck": "Assumes temporary military-grade security presence and preplanned relocation routes.",
+    "scoreNarrative": "Helsinki Airport gains points for mobility utility, but settlement viability is very low. The core failure mode is control collapse under continuous inbound pressure."
   },
   {
     "name": "Murmansk Port",
