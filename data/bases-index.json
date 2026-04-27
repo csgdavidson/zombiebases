@@ -575,25 +575,41 @@
     "lat": -26.7033,
     "long": 15.2283,
     "scores": {
-      "overall": 4,
+      "overall": 5.6,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 2,
-        "isolation": 8,
-        "accessibility": 2
+        "defensibility": 6.0,
+        "sustainability": 2.5,
+        "isolation": 8.4
       }
     },
     "description": {
-      "summary": "Kolmanskop is highly isolated and atmospherically ideal for the concept, but in practical survival terms it is too resource-poor and too decayed to rank highly. It is strong on remoteness and weak on almost everything else.",
+      "summary": "Kolmanskop buys time through remoteness and clear sightlines, but it cannot feed or hydrate a group for long. The dominant trade-off is safety from people versus total dependence on imported water and food.",
       "strengths": [
-        "Very low surrounding population pressure",
-        "Desert isolation reduces external threat flow"
+        "Remote desert location sharply lowers early human and zombie contact",
+        "Open surroundings and sparse approach routes support early warning and controlled watches",
+        "Hardened masonry shells provide limited short-term shelter from weather and intruders"
       ],
       "weaknesses": [
-        "Minimal long-term sustainability",
-        "Decayed structures and harsh conditions reduce viability"
+        "No reliable on-site freshwater source makes daily survival logistics the core constraint",
+        "Little arable capacity and salt-fog desert conditions prevent meaningful local food production",
+        "Aging, sand-filled structures raise maintenance burden as supplies and labor decline"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-term hide site for a small, supply-heavy team avoiding population centers",
+      "failureMode": "Thirst and supply exhaustion kill occupants before perimeter threats do"
+    },
+    "survivalProfile": {
+      "initial": "Moderate to strong",
+      "shortTerm": "Moderate with stocked reserves",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary isolation refuge while relocating to a base with renewable water",
+      "keyRisk": "Water dependence creates a hard timeline that defense quality cannot extend"
+    },
+    "realityCheck": "Assumes prepositioned stores, transport fuel, and strict consumption discipline. Without scheduled resupply, the site fails predictably.",
+    "scoreNarrative": "Kolmanskop scores well on isolation but very low on sustainability, which defines the kill condition. This is a hideout, not a self-sustaining settlement: what kills you here is water failure."
   },
   {
     "name": "Waw an Namus Cave System",
@@ -604,25 +620,41 @@
     "lat": 24.92,
     "long": 17.88,
     "scores": {
-      "overall": 4,
+      "overall": 5.8,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 2,
-        "isolation": 9,
-        "accessibility": 1
+        "defensibility": 7.1,
+        "sustainability": 2.7,
+        "isolation": 9.0
       }
     },
     "description": {
-      "summary": "Waw an Namus is extremely isolated and naturally hard to reach, but that same remoteness works against it as a practical survival site. It is compelling as an extreme refuge, not as a sustainable base.",
+      "summary": "Waw an Namus is one of the hardest places to reach, which dramatically lowers threat pressure. The same isolation becomes the fatal weakness because survival systems are almost entirely import-dependent.",
       "strengths": [
-        "Exceptional remoteness and low traffic",
-        "Hard terrain provides natural protection"
+        "Extreme remoteness minimizes encounter rates and opportunistic raids",
+        "Rugged volcanic terrain creates natural barriers and narrow movement corridors",
+        "Low ambient traffic supports concealment and low-signature occupation"
       ],
       "weaknesses": [
-        "Very poor accessibility and resupply potential",
-        "Minimal long-term habitability without major preparation"
+        "Resupply routes are long, fragile, and fuel-intensive",
+        "Local food and water capacity is insufficient for sustained group habitation",
+        "Medical evacuation and equipment replacement are slow to impossible in collapse conditions"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Last-ditch remote refuge for a highly prepared micro-group",
+      "failureMode": "Logistics collapse isolates occupants beyond their consumable reserves"
+    },
+    "survivalProfile": {
+      "initial": "Strong if stocked",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Low-signature fallback while avoiding all major corridors",
+      "keyRisk": "Distance from everything turns routine shortages into terminal events"
+    },
+    "realityCheck": "Assumes substantial pre-staged stores, spare parts, and transport redundancy. Without those, isolation turns from shield to trap.",
+    "scoreNarrative": "Waw an Namus rates elite in isolation and good in defensibility, but sustainability remains critically low. What kills you here is not breach risk; it is being too far from resilient water, food, and medical chains."
   },
   {
     "name": "Matmata Underground Dwellings",
@@ -633,25 +665,41 @@
     "lat": 33.5444,
     "long": 9.9711,
     "scores": {
-      "overall": 7,
+      "overall": 7.2,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 7,
-        "accessibility": 4
+        "defensibility": 8.1,
+        "sustainability": 6.0,
+        "isolation": 7.3
       }
     },
     "description": {
-      "summary": "Matmata’s underground dwellings are one of the more interesting survival candidates in Africa because they combine concealment, passive protection, and environmental shelter. Their main limitation is scale and dependence on wider local resources.",
+      "summary": "Matmata offers a strong concealment-defense package with naturally insulated subterranean housing and manageable access points. Its core trade-off is protected living space versus limited scale and external dependence for growth.",
       "strengths": [
-        "Excellent concealment and natural thermal protection",
-        "Harder to overrun than exposed surface settlements"
+        "Subterranean courtyards reduce visibility and improve thermal stability year-round",
+        "Compartmentalized layouts and chokable entries favor layered defense",
+        "Moderate regional isolation lowers constant pressure compared with major urban hubs"
       ],
       "weaknesses": [
-        "Limited expansion capacity",
-        "Long-term viability depends on surrounding land and water access"
+        "Expansion and sanitation upgrades are constrained by excavation and structural limits",
+        "Sustained food and water capacity depends on secure surrounding land use",
+        "Ventilation and maintenance failure can degrade habitability faster than surface sites"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Medium-term defensive settlement for a disciplined group with nearby production zones",
+      "failureMode": "Population growth outpaces water, ventilation, and food support systems"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Stable",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Protected residential core paired with external agriculture and water capture",
+      "keyRisk": "If external resource loops are disrupted, underground shelter quality cannot compensate"
+    },
+    "realityCheck": "Assumes control of nearby land and technical upkeep of subterranean systems. The dwellings are an excellent shell, not a complete autonomous ecosystem.",
+    "scoreNarrative": "Matmata clears the 7+ tier by combining high defensibility with useful isolation and better-than-average sustainability for this category. The failure mode is system strain: what kills you here is resource and infrastructure overload, not immediate overruns."
   },
   {
     "name": "Cape Town Airport",
@@ -662,25 +710,41 @@
     "lat": -33.9696,
     "long": 18.5972,
     "scores": {
-      "overall": 3,
+      "overall": 4.2,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 3,
-        "isolation": 2,
-        "accessibility": 9
+        "defensibility": 3.2,
+        "sustainability": 4.8,
+        "isolation": 1.9
       }
     },
     "description": {
-      "summary": "Cape Town Airport is extremely accessible and logistically useful, but it is weak as a survival base because it is open, highly visible, and tied to dense population systems. In a zombie scenario it is more liability than sanctuary.",
+      "summary": "Cape Town Airport has impressive infrastructure but fails the base test because it concentrates movement, visibility, and conflict. The dominant trade-off is logistics access versus uncontrollable exposure.",
       "strengths": [
-        "Excellent transport and logistics infrastructure",
-        "Large built environment with storage potential"
+        "Large fuel, storage, and maintenance footprint can support short-term operations",
+        "Runway and road links provide rapid outbound mobility in early phases",
+        "Existing facilities offer temporary shelter, power routing, and staging areas"
       ],
       "weaknesses": [
-        "Very difficult to defend effectively",
-        "High human traffic exposure makes it an early flashpoint"
+        "Open tarmac and multiple perimeter vectors are extremely hard to secure",
+        "Proximity to dense metro populations drives constant threat inflow",
+        "High strategic visibility attracts armed competition for assets"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Brief extraction and logistics node, not a settlement base",
+      "failureMode": "Continuous inbound pressure overwhelms perimeter control"
+    },
+    "survivalProfile": {
+      "initial": "Moderate for organized teams",
+      "shortTerm": "Weakening quickly",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Staging point for evacuation, cargo transfer, and rapid redeployment",
+      "keyRisk": "High-traffic geometry ensures you spend all capacity on defense and still lose ground"
+    },
+    "realityCheck": "Assumes temporary mission focus with preplanned exit routes. Holding the site as a permanent refuge is strategically unsound.",
+    "scoreNarrative": "Cape Town Airport remains below 5 because isolation and defensibility are structurally weak despite decent infrastructure. What kills you here is relentless exposure: the location is too connected to survive as a static base."
   },
   {
     "name": "Mombasa Port",
@@ -691,25 +755,41 @@
     "lat": -4.0435,
     "long": 39.6682,
     "scores": {
-      "overall": 3,
+      "overall": 4.8,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 4,
-        "isolation": 3,
-        "accessibility": 8
+        "defensibility": 3.8,
+        "sustainability": 5.3,
+        "isolation": 2.4
       }
     },
     "description": {
-      "summary": "Mombasa Port has infrastructure and access but suffers from the same problems as most major transport hubs: exposure, scale, and intense competition. It makes sense as a transit node, not as a final base.",
+      "summary": "Mombasa Port provides throughput and maritime options, but as a permanent base it is dominated by exposure and contestability. The core trade-off is supply access versus impossible perimeter demand.",
       "strengths": [
-        "Strong logistics and storage potential",
-        "Maritime access could be useful in controlled conditions"
+        "Port infrastructure supports short-run stockpiling, repair, and cargo handling",
+        "Sea access can widen evacuation and procurement options when routes are open",
+        "Industrial utilities provide better baseline capability than improvised camps"
       ],
       "weaknesses": [
-        "Extremely exposed and hard to secure",
-        "High strategic visibility would attract conflict"
+        "Large, porous waterfront geometry is difficult to harden end-to-end",
+        "Dense surrounding population and economic importance drive persistent conflict",
+        "Operational dependence on external crews and fuel chains undermines autonomy"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Transit and redistribution hub under tight time limits",
+      "failureMode": "Security burden scales faster than manpower and supplies"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Fragile",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Controlled maritime relay point while relocating people and assets inland",
+      "keyRisk": "The site drains defenders through constant perimeter incidents and strategic competition"
+    },
+    "realityCheck": "Assumes maritime lanes remain usable and group command is disciplined. Without continuous throughput, the port becomes a high-risk target without upside.",
+    "scoreNarrative": "Mombasa Port scores below 5 because low isolation and weak defendability outweigh decent infrastructure. What kills you here is attrition from nonstop exposure and contested access."
   },
   {
     "name": "Mount Huashan",
@@ -720,25 +800,41 @@
     "lat": 34.4836,
     "long": 110.084,
     "scores": {
-      "overall": 7,
+      "overall": 7.1,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 4,
-        "isolation": 7,
-        "accessibility": 3
+        "defensibility": 9.0,
+        "sustainability": 4.2,
+        "isolation": 8.1
       }
     },
     "description": {
-      "summary": "Extreme terrain creates natural defence and isolation, but limits long-term habitability and logistics.",
+      "summary": "Mount Huashan is an elite defensive perch with severe access control and strong natural isolation. The decisive trade-off is near-unmatched protection versus chronic logistical fragility.",
       "strengths": [
-        "Exceptional natural defensive position",
-        "Difficult access routes"
+        "Narrow, high-risk approach routes create exceptional choke-point defense",
+        "Elevation and sightlines improve early detection and response timing",
+        "Relative remoteness reduces continuous population pressure"
       ],
       "weaknesses": [
-        "Very limited living capacity",
-        "Harsh environment for sustained habitation"
+        "Limited flat space restricts shelter expansion, storage, and agriculture",
+        "Vertical logistics for water, fuel, and medical support are labor-intensive and failure-prone",
+        "Weather and terrain injuries can degrade team capacity quickly"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Defensive redoubt for small, trained teams prioritizing avoidance and control",
+      "failureMode": "Sustainment breakdown on a hard-to-supply peak"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Stable with planning",
+      "longTerm": "Moderate to weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Secure fallback outpost with cached supplies and strict population limits",
+      "keyRisk": "The mountain stays defensible while daily life systems become the bottleneck"
+    },
+    "realityCheck": "Assumes disciplined load planning, ropeway alternatives, and low occupancy. High occupancy or frequent casualties rapidly destabilize the site.",
+    "scoreNarrative": "Huashan ranks above 7 because defensibility and isolation are genuinely top-tier. What kills you here is logistics: if lift, water, or medical chains fail, the defensive advantage cannot save the group."
   },
   {
     "name": "Tiger Leaping Gorge Cliffs",
@@ -749,25 +845,41 @@
     "lat": 27.1788,
     "long": 100.095,
     "scores": {
-      "overall": 7,
+      "overall": 6.9,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 3,
-        "isolation": 7,
-        "accessibility": 2
+        "defensibility": 9.1,
+        "sustainability": 3.4,
+        "isolation": 7.9
       }
     },
     "description": {
-      "summary": "Incredible terrain advantage and defensibility, but extremely poor for long-term living.",
+      "summary": "Tiger Leaping Gorge offers extraordinary terrain defense and low approach density, but daily survival is constrained by space and supply movement. The central trade-off is tactical dominance versus unworkable sustainment at scale.",
       "strengths": [
-        "Near-impenetrable terrain",
-        "Natural choke points"
+        "Sheer cliffs and narrow passes create highly defensible chokepoints",
+        "Strong elevation variation reduces the likelihood of mass overruns",
+        "Distance from major megacity cores lowers immediate influx rates"
       ],
       "weaknesses": [
-        "Minimal sustainability",
-        "Extremely difficult logistics"
+        "Minimal cultivation area limits reliable long-term food output",
+        "Transporting water, equipment, and casualties through steep terrain is high risk",
+        "A single route disruption can isolate sections of the base"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short- to medium-term fortified refuge for small teams",
+      "failureMode": "Terrain-imposed logistics failure starves and fragments the group"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "High-security fallback while planning migration to a productive valley base",
+      "keyRisk": "Sustainability deficits accumulate faster than defensive incidents"
+    },
+    "realityCheck": "Assumes light occupancy and pre-cached essentials. Treating the gorge as a permanent settlement is a common planning error.",
+    "scoreNarrative": "Tiger Gorge stays just under 7: defensibility is exceptional, but sustainability drags the total down. What kills you here is not breach probability; it is supply and mobility breakdown in extreme terrain."
   },
   {
     "name": "Great Wall Fortress Sections",
@@ -778,25 +890,41 @@
     "lat": 40.4319,
     "long": 116.5704,
     "scores": {
-      "overall": 7,
+      "overall": 7.0,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 4,
-        "isolation": 6,
-        "accessibility": 4
+        "defensibility": 8.8,
+        "sustainability": 4.6,
+        "isolation": 6.3
       }
     },
     "description": {
-      "summary": "Purpose-built defensive infrastructure with strong terrain advantage. Excellent for control and defence, but weaker for long-term living.",
+      "summary": "Great Wall fortress sections provide strong engineered defense lines and terrain leverage, but they are fragmented assets rather than turnkey settlements. The dominant trade-off is excellent barrier control versus poor self-sustaining living capacity.",
       "strengths": [
-        "Exceptional defensive positioning and choke points",
-        "Built specifically for defence across terrain"
+        "Fortified walls, towers, and ridge lines support surveillance and layered defense",
+        "Historic choke corridors can be selectively held with small teams",
+        "Segment choice allows some flexibility in tactical positioning"
       ],
       "weaknesses": [
-        "Limited sustainability and living infrastructure",
-        "Spread-out structure hard to fully control"
+        "Long, discontinuous sections are manpower-intensive to secure continuously",
+        "Built-in water, sanitation, and food systems are inadequate for multi-year occupancy",
+        "Many sections are exposed to weather and require significant retrofit effort"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Defensive control line and observation network, not a standalone colony",
+      "failureMode": "Manpower and sustainment deficits hollow out control of dispersed sections"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate to strong",
+      "longTerm": "Moderate to weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary defensive spine linked to nearby villages or support farms",
+      "keyRisk": "Teams become overextended defending static infrastructure without enough supply depth"
+    },
+    "realityCheck": "Assumes selecting and fortifying a limited segment, not attempting to hold broad continuous wall systems.",
+    "scoreNarrative": "Great Wall sections reach the 7 range through very high defensibility, but only if occupation is tightly scoped. What kills you here is overextension: too much wall, not enough sustainment."
   },
   {
     "name": "Himeji Castle",
@@ -807,25 +935,41 @@
     "lat": 34.8394,
     "long": 134.6939,
     "scores": {
-      "overall": 7,
+      "overall": 6.8,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 4,
-        "isolation": 3,
-        "accessibility": 5
+        "defensibility": 8.7,
+        "sustainability": 5.0,
+        "isolation": 3.6
       }
     },
     "description": {
-      "summary": "One of the most refined defensive castles ever built, offering strong protection but limited modern survival capability.",
+      "summary": "Himeji Castle delivers high-quality fortress geometry and controlled internal defense, but its urban context limits long-term security. The key trade-off is superb structure versus low isolation.",
       "strengths": [
-        "Highly sophisticated defensive design",
-        "Strong control over entry points"
+        "Layered gates, elevation shifts, and courtyards create strong defensive depth",
+        "Compact fortified core is easier to command than sprawling modern complexes",
+        "Robust construction offers reliable short-term shelter and morale value"
       ],
       "weaknesses": [
-        "Located in populated region",
-        "Limited adaptability for long-term survival"
+        "Dense surrounding population keeps external pressure persistently high",
+        "Heritage constraints reduce rapid retrofitting for utilities and sanitation",
+        "Limited agricultural footprint forces dependence on outside supply zones"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short- to medium-term fortified headquarters in a managed urban perimeter",
+      "failureMode": "Urban pressure and supply dependency outlast defensive endurance"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak to moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Command and shelter node while establishing external production and evacuation routes",
+      "keyRisk": "The castle can repel attacks, but cannot isolate itself from city-scale attrition"
+    },
+    "realityCheck": "Assumes coordinated outer security and controlled access corridors. Alone, the castle is a hard shell in a high-pressure basin.",
+    "scoreNarrative": "Himeji remains a strong defensive site but below 7 overall due to low isolation. What kills you here is sustained urban attrition, not immediate wall breach."
   },
   {
     "name": "Foxconn Shenzhen Factory",
@@ -836,25 +980,41 @@
     "lat": 22.5431,
     "long": 114.0579,
     "scores": {
-      "overall": 4,
+      "overall": 5.4,
       "categories": {
-        "defensibility": 4,
-        "sustainability": 4,
-        "isolation": 2,
-        "accessibility": 8
+        "defensibility": 4.6,
+        "sustainability": 6.2,
+        "isolation": 1.8
       }
     },
     "description": {
-      "summary": "Massive industrial scale with infrastructure and resources, but highly exposed and deeply embedded in dense population systems.",
+      "summary": "The Shenzhen factory complex has unusual infrastructure depth and short-term resource potential, but it sits inside one of the world’s densest urban-industrial corridors. The dominant trade-off is internal capability versus catastrophic exposure.",
       "strengths": [
-        "Large-scale infrastructure and potential resource stockpiles",
-        "Self-contained industrial footprint"
+        "Large enclosed facilities provide power distribution, workshops, and storage potential",
+        "Industrial tooling supports fabrication, repair, and adaptive hardening tasks",
+        "Campus-like layout can support coordinated operations better than ad hoc shelters"
       ],
       "weaknesses": [
-        "Extremely high population exposure",
-        "Difficult to secure perimeter at scale"
+        "Metro-scale population pressure creates continuous external threat and competition",
+        "Huge perimeter and multiple ingress points are expensive to defend persistently",
+        "Complex systems depend on specialist staff and supply chains that may collapse quickly"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-duration production and staging enclave with planned withdrawal",
+      "failureMode": "Perimeter attrition and urban convergence overwhelm site control"
+    },
+    "survivalProfile": {
+      "initial": "Moderate to strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Rapid manufacturing and stock consolidation before relocation to lower-density terrain",
+      "keyRisk": "Operational complexity and exposure consume manpower faster than systems can be maintained"
+    },
+    "realityCheck": "Assumes immediate lockdown capability, skilled operators, and strong command discipline. Without fast consolidation, the site becomes an attritional trap.",
+    "scoreNarrative": "Factory Shenzhen lands mid-low overall: sustainability potential is real, but isolation is near-bottom and decisively caps survivability. What kills you here is urban perimeter attrition, not lack of equipment."
   },
   {
     "name": "Hyundai Heavy Industries Shipyard",
