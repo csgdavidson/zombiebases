@@ -52,23 +52,40 @@
     "region": "africa",
     "country": "South Africa",
     "description": {
-      "summary": "Table Mountain Plateau has obvious terrain advantages, but its proximity to Cape Town limits its value in a high-collapse scenario. It is dramatic and defensible in theory, yet weaker as a long-term refuge than it first appears.",
+      "summary": "Table Mountain Plateau is a highly defensible elevated position with steep cliffs, strong visibility, and usable space on top. However, its direct proximity to Cape Town, multiple access routes, and high visibility make it far less secure than more remote mountain strongholds. It is better suited to short-term defence and staging than long-term isolation.",
       "strengths": [
-        "Elevated position with strong natural defensive edges",
-        "Good visibility over surrounding approaches"
+        "Steep cliffs create strong natural defensive edges",
+        "Flat summit area supports movement, staging, and observation",
+        "Nearby urban resources offer early access to supplies"
       ],
       "weaknesses": [
-        "Too close to a major urban centre",
-        "Limited self-sustaining settlement potential on the plateau itself"
+        "Close proximity to Cape Town increases threat pressure",
+        "Multiple hiking routes and access points reduce perimeter control",
+        "High visibility makes the base difficult to conceal",
+        "Weather exposure and limited shelter reduce long-term comfort"
       ]
     },
+    "verdict": {
+      "bestUseCase": "Short-term defensive position above an urban area",
+      "failureMode": "Population pressure and multiple access routes overwhelm the plateau"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Stable if access points are controlled",
+      "longTerm": "Moderate to weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary refuge, lookout, or staging area where access to city resources still matters",
+      "keyRisk": "The plateau is too visible and too accessible to remain secure once urban pressure rises"
+    },
+    "realityCheck": "Assumes the group can control key access routes and use nearby resources before the surrounding city becomes too dangerous. Long-term survival depends on keeping movement routes open without attracting sustained attention.",
+    "scoreNarrative": "Table Mountain Plateau scores well for defensibility because the terrain offers strong natural barriers and visibility. Its overall score is held back by low isolation, because it sits directly above a major urban population and has multiple established access routes. Compared with remote mountain bases, it is easier to use but harder to secure over time.",
     "scores": {
-      "overall": 5,
+      "overall": 6.5,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 4,
-        "isolation": 4,
-        "accessibility": 4
+        "defensibility": 8.0,
+        "sustainability": 6.0,
+        "isolation": 4.0
       }
     },
     "lat": -33.9628,
