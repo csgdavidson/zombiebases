@@ -160,7 +160,6 @@
         { "name": "Qeshm Island", "slug": "qeshm", "type": "isolated_landmass" },
         { "name": "Petra", "slug": "petra", "type": "elevated_stronghold" },
         { "name": "Cappadocia Highlands", "slug": "cappadocia", "type": "elevated_stronghold" },
-        { "name": "Derinkuyu", "slug": "derinkuyu-me", "type": "subterranean" },
         { "name": "Gaza Tunnel Network", "slug": "gaza-tunnels", "type": "subterranean" },
         { "name": "Desert Military Base", "slug": "desert-base", "type": "institutional_compound" },
         { "name": "Oil Field Compound", "slug": "oil-compound", "type": "institutional_compound" },

@@ -2612,35 +2612,6 @@
     }
   },
   {
-    "name": "Derinkuyu",
-    "slug": "derinkuyu-me",
-    "type": "subterranean",
-    "region": "middle_east",
-    "country": "Turkey",
-    "lat": 38.3746,
-    "long": 34.735,
-    "scores": {
-      "overall": 8,
-      "categories": {
-        "defensibility": 9,
-        "sustainability": 5,
-        "isolation": 6,
-        "accessibility": 4
-      }
-    },
-    "description": {
-      "summary": "Derinkuyu is one of the strongest subterranean candidates in the project, with exceptional defensive logic and proven refuge value. Its main limitation is scale and dependence on the surrounding environment for long-term viability.",
-      "strengths": [
-        "Deep underground structure is extremely hard to overrun",
-        "Built specifically for concealment and protection"
-      ],
-      "weaknesses": [
-        "Limited scalability for large groups",
-        "Long-term sustainability still depends on external land and supply"
-      ]
-    }
-  },
-  {
     "name": "Gaza Tunnel Network",
     "slug": "gaza-tunnels",
     "type": "subterranean",
