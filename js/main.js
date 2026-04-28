@@ -28,7 +28,7 @@ const LABELS = {
   }
 };
 
-const SCORE_KEYS = ['defensibility', 'food', 'water', 'isolation', 'escape', 'sustainability', 'human_risk'];
+const SCORE_KEYS = ['defensibility', 'isolation', 'sustainability'];
 
 const SORT_OPTIONS = {
   highest_score: 'Highest score',
@@ -199,16 +199,12 @@ function isValidScoreValue(value) {
 }
 
 function getScoreObject(base) {
-  if (!base || typeof base.scores !== 'object' || !base.scores) {
+  if (!base || typeof base.scores?.categories !== 'object' || !base.scores.categories) {
     return null;
   }
 
-  const source = (typeof base.scores.categories === 'object' && base.scores.categories)
-    ? base.scores.categories
-    : base.scores;
-
   const entries = SCORE_KEYS
-    .map((key) => [key, source[key]])
+    .map((key) => [key, base.scores.categories[key]])
     .filter(([, value]) => isValidScoreValue(value));
 
   return entries.length ? Object.fromEntries(entries) : null;
@@ -218,19 +214,7 @@ function computeOverallScore(base) {
   if (isValidScoreValue(base?.scores?.overall)) {
     return base.scores.overall;
   }
-
-  if (isValidScoreValue(base?.score)) {
-    return base.score;
-  }
-
-  const scoreObject = getScoreObject(base);
-  if (!scoreObject) {
-    return null;
-  }
-
-  const values = Object.values(scoreObject);
-  const total = values.reduce((sum, value) => sum + value, 0);
-  return Number((total / values.length).toFixed(1));
+  return null;
 }
 
 function formatOverallScore(base) {

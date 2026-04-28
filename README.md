@@ -90,19 +90,30 @@ Before Phase 3, add new features only when they directly support the V2 content 
 - `.github/workflows/sitemap.yml` — GitHub Actions automation that regenerates and commits `sitemap.xml` on relevant changes.
 - `robots.txt` and `sitemap.xml` — crawl/index controls.
 
-## Detail data schema (current)
+## Detail data schema (V2 canonical)
 
 `base.html?slug=...` reads detail content directly from `data/bases-index.json`.
 
-- `description` supports either a legacy string or a structured object:
-  - `description.summary`
-  - `description.strengths`
-  - `description.weaknesses`
-- `scores` supports either a legacy flat object or a structured object:
+- Required content fields:
+  - `summary`
+  - `strengths`
+  - `weaknesses`
+  - `verdict`
+  - `survivalProfile`
+  - `useCaseAndRisk`
+  - `realityCheck`
+  - `scoreNarrative`
+- Required score fields:
   - `scores.overall`
-  - `scores.categories.<metric>` for metric keys such as `defensibility`, `food`, `water`, `isolation`, `escape`, `sustainability`, and `human_risk`
+  - `scores.categories.defensibility`
+  - `scores.categories.isolation`
+  - `scores.categories.sustainability`
 
-Fallback behavior remains in place for incomplete records (for example, missing description parts or missing scores).
+Validation command:
+
+```bash
+python3 scripts/validate-bases.py
+```
 
 ## Purpose of index, list, map, and detail pages
 
