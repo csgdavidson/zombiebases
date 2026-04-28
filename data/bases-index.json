@@ -2115,28 +2115,28 @@
     "lat": 78.2232,
     "long": 15.6469,
     "scores": {
-      "overall": 6.9,
+      "overall": 6.4,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 3,
-        "isolation": 10,
+        "defensibility": 6.5,
+        "sustainability": 3.5,
+        "isolation": 9.0,
         "accessibility": 1
       }
     },
     "description": {
-      "summary": "Longyearbyen's isolation is exceptional, but what kills you here is energy-and-calorie failure in polar conditions when imports and heavy maintenance chains degrade.",
+      "summary": "A remote Arctic settlement with strong isolation, infrastructure, and controlled access. However, extreme climate and supply-chain reliance constrain long-term resilience.",
       "strengths": [
-        "Extreme remoteness dramatically reduces contact-driven outbreak and raider pressure",
-        "Compact settlement and existing cold-weather operations provide an organized starting platform"
+        "Remote location and controlled entry routes limit sudden external pressure",
+        "Existing settlement infrastructure provides shelter, storage, and organized operations"
       ],
       "weaknesses": [
-        "Heating, power, and food security are import-dependent and technically intensive",
-        "Polar climate punishes any lapse in shelter integrity, fuel quality, or equipment uptime"
+        "Fuel, food, and technical parts remain heavily dependent on external supply lines",
+        "Arctic weather turns heating or power interruption into rapid survival failure"
       ]
     },
     "verdict": {
-      "bestUseCase": "High-isolation refuge for a small, technically skilled, pre-stocked group",
-      "failureMode": "Infrastructure attrition in winter causes irreversible exposure and metabolic collapse"
+      "bestUseCase": "Managed Arctic refuge for disciplined groups with robust stockpiles and maintenance skills",
+      "failureMode": "Supply-chain disruption causes cascading heat, power, and food instability"
     },
     "survivalProfile": {
       "initial": "Strong",
@@ -2144,11 +2144,11 @@
       "longTerm": "Weak"
     },
     "useCaseAndRisk": {
-      "bestUseCase": "Maintain strict fuel budgeting, redundant heat systems, and greenhouse or fish-protein plans",
-      "keyRisk": "If generator chains or food imports miss multiple cycles, survival drops off abruptly"
+      "bestUseCase": "Use existing infrastructure while aggressively rationing fuel and building local backup food systems",
+      "keyRisk": "What kills you here is prolonged logistics breakdown that strips heat and calories in deep cold"
     },
-    "realityCheck": "Assumes cold-region specialists, redundant heating hardware, and robust preventive maintenance culture.",
-    "scoreNarrative": "Longyearbyen scores high on isolation but is constrained by severe sustainability exposure. The core failure mode is technical and metabolic breakdown in extreme cold."
+    "realityCheck": "Longyearbyen only holds if teams can maintain critical systems through repeated resupply shocks.",
+    "scoreNarrative": "Longyearbyen grades well on isolation and workable infrastructure, but sustainability drag remains decisive: when imports stall, survival margins collapse fast."
   },
   {
     "name": "Visby",
@@ -4705,7 +4705,7 @@
   {
     "name": "Crevasse Field Glacier",
     "slug": "ice-shelf",
-    "type": "elevated_stronghold",
+    "type": "polar_extreme",
     "region": "polar_extreme",
     "country": "Antarctica",
     "lat": -75.0,
@@ -4802,28 +4802,28 @@
     "lat": -77.8419,
     "long": 166.6863,
     "scores": {
-      "overall": 5.2,
+      "overall": 6.5,
       "categories": {
-        "defensibility": 4.9,
-        "sustainability": 3.8,
-        "isolation": 8.8,
+        "defensibility": 7.0,
+        "sustainability": 4.0,
+        "isolation": 9.0,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "McMurdo has the deepest Antarctic infrastructure footprint, but its long-term viability is still constrained by import-heavy technical dependency.",
+      "summary": "A large Antarctic research station with infrastructure, shelter, and operational capacity. However, harsh conditions and dependence on supply chains limit true long-term independence.",
       "strengths": [
-        "Largest polar logistics platform offers greater repair and storage depth than most Antarctic sites",
-        "Operational redundancy is higher than smaller stations during early and mid phases"
+        "Large station footprint provides more shelter, equipment, and operational depth than most Antarctic sites",
+        "Established logistics and maintenance systems support stronger short-to-mid-term continuity"
       ],
       "weaknesses": [
-        "Core systems still rely on fuel, parts, and coordinated maritime/air throughput",
-        "Harsh climate and maintenance burden steadily erode autonomy under prolonged disruption"
+        "Most critical systems still depend on fuel, parts, and external technical throughput",
+        "Severe weather and environmental stress accelerate wear and increase failure consequences"
       ]
     },
     "verdict": {
-      "bestUseCase": "Mid-duration polar hub with planned downshift and eventual relocation strategy",
-      "failureMode": "Infrastructure degradation after sustained logistics interruption"
+      "bestUseCase": "Primary Antarctic operations hub for well-coordinated teams with staged contingencies",
+      "failureMode": "Extended supply interruption turns complex infrastructure into unsupportable liabilities"
     },
     "survivalProfile": {
       "initial": "Moderate",
@@ -4831,11 +4831,11 @@
       "longTerm": "Weak"
     },
     "useCaseAndRisk": {
-      "bestUseCase": "Leverage scale for controlled operations while building external fallback options early",
-      "keyRisk": "Assuming bigger polar infrastructure equals indefinite independence"
+      "bestUseCase": "Exploit infrastructure scale early while prebuilding lower-complexity fallback habitats",
+      "keyRisk": "What kills you here is logistics collapse that leaves high-demand systems without fuel or parts"
     },
-    "realityCheck": "What kills you here is supply-chain decay that turns complex infrastructure into dead weight.",
-    "scoreNarrative": "McMurdo is mid-tier: better than most polar sites on infrastructure depth, but still capped by sustainability fragility."
+    "realityCheck": "McMurdo is strong by Antarctic standards, but it is not a closed-loop settlement and cannot ignore external sustainment.",
+    "scoreNarrative": "McMurdo lands in the upper mid-tier because its infrastructure and defensibility are unusually strong; the ceiling is still set by long-run dependence on supply chains."
   },
   {
     "name": "Prudhoe Bay Oil Field",
@@ -4890,25 +4890,40 @@
     "lat": 68.9585,
     "long": 33.0827,
     "scores": {
-      "overall": 5,
+      "overall": 6.3,
       "categories": {
-        "defensibility": 4,
-        "sustainability": 5,
-        "isolation": 6,
+        "defensibility": 6.5,
+        "sustainability": 5.5,
+        "isolation": 6.5,
         "accessibility": 7
       }
     },
     "description": {
-      "summary": "Industrial and functional, but exposed and strategically visible.",
+      "summary": "A polar maritime hub with specialist icebreaker infrastructure and Arctic access. However, port exposure, supply dependency, and harsh operating conditions limit long-term security.",
       "strengths": [
-        "Operational infrastructure",
-        "Cold-region adaptability"
+        "Specialist maritime infrastructure provides strong logistics and engineering capability",
+        "Arctic operations experience supports organized cold-environment continuity"
       ],
       "weaknesses": [
-        "Highly visible",
-        "Difficult to defend"
+        "Open port profile is highly visible and difficult to conceal or fully harden",
+        "Long-term viability depends on uninterrupted fuel, parts, and maritime supply flow"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Regional maritime logistics node supporting shorter-horizon polar operations",
+      "failureMode": "Attritional disruption of port throughput and utilities degrades survivability"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use dock and repair capacity aggressively while dispersing critical supplies inland",
+      "keyRisk": "What kills you here is prolonged infrastructure exposure at a visible port chokepoint"
+    },
+    "realityCheck": "Murmansk performs best with secure maritime flow; without it, complexity outruns local resilience.",
+    "scoreNarrative": "Murmansk rises on defensibility and practical infrastructure, but its dominant failure mode remains exposed port dependence under Arctic strain."
   },
   {
     "name": "Nagurskoye Air Base",
@@ -4919,25 +4934,40 @@
     "lat": 80.8032,
     "long": 47.6636,
     "scores": {
-      "overall": 6,
+      "overall": 6.7,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 4,
-        "isolation": 8,
+        "defensibility": 7.5,
+        "sustainability": 3.5,
+        "isolation": 8.5,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "Remote military installation with strong defensibility but limited long-term sustainability.",
+      "summary": "A remote Arctic military airbase with controlled access and strong strategic positioning. However, extreme climate, visibility, and dependence on supply chains reduce independent survivability.",
       "strengths": [
-        "Controlled access",
-        "Low population pressure"
+        "Military-grade perimeter control supports strong access management",
+        "Remote Arctic position limits population pressure and opportunistic intrusion"
       ],
       "weaknesses": [
-        "Supply dependency",
-        "Harsh conditions"
+        "Sustainment relies on ongoing aviation and logistics throughput for essentials",
+        "Exposure and weather place continuous stress on equipment and personnel"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Controlled strategic outpost for trained crews with strict resupply discipline",
+      "failureMode": "Supply-chain interruption in extreme conditions triggers rapid system degradation"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Operate as a tightly staffed hardpoint with redundant stores and maintenance cycles",
+      "keyRisk": "What kills you here is sustainment failure after weather or logistics disruption"
+    },
+    "realityCheck": "Nagurskoye can control access well, but it cannot self-produce enough to survive prolonged isolation from supply networks.",
+    "scoreNarrative": "Nagurskoye scores high on defensibility and isolation, then loses ground hard on sustainability where Arctic logistics become the decisive weakness."
   },
   {
     "name": "Amundsen-Scott South Pole Station",
@@ -4948,25 +4978,40 @@
     "lat": -90.0,
     "long": 0.0,
     "scores": {
-      "overall": 5,
+      "overall": 6.4,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 3,
+        "defensibility": 7.5,
+        "sustainability": 3.0,
         "isolation": 10,
         "accessibility": 1
       }
     },
     "description": {
-      "summary": "Maximum isolation but completely dependent on advanced systems and supply chains. Survival without support is extremely difficult.",
+      "summary": "An extremely isolated scientific station with controlled infrastructure and almost no external threat pressure. However, total dependence on life-support systems and resupply makes long-term independence impossible.",
       "strengths": [
-        "Extreme isolation eliminates external threat",
-        "Purpose-built survival infrastructure"
+        "Absolute geographic isolation minimizes direct hostile pressure",
+        "Purpose-built station systems provide disciplined life-support control"
       ],
       "weaknesses": [
-        "Total reliance on supplies and systems",
-        "Environment is inherently hostile to life"
+        "Total dependence on mechanical life-support and scheduled resupply",
+        "Environmental conditions allow almost no recovery margin after technical failure"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Highly controlled specialist outpost for finite missions with deep redundancy",
+      "failureMode": "Life-support breakdown in a zero-forgiveness environment"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Maintain minimal occupancy with strict preventive maintenance and layered backup systems",
+      "keyRisk": "What kills you here is cascading life-support failure when resupply or repairs stop"
+    },
+    "realityCheck": "South Pole Station is secure from attackers, but not from thermodynamic reality when critical systems fail.",
+    "scoreNarrative": "South Pole Station rates high on isolation and defensibility, yet stays constrained because sustainability is structurally dependent on complex support chains."
   },
   {
     "name": "Antarctic Peninsula",
@@ -4977,25 +5022,40 @@
     "lat": -63.0,
     "long": -57.0,
     "scores": {
-      "overall": 6,
+      "overall": 6.2,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 4,
-        "isolation": 9,
+        "defensibility": 6.5,
+        "sustainability": 3.0,
+        "isolation": 9.0,
         "accessibility": 2
       }
     },
     "description": {
-      "summary": "One of the more viable Antarctic regions, but still extremely challenging for long-term survival.",
+      "summary": "A remote polar region with natural isolation and access to coastal landing points. However, severe weather, limited infrastructure, and scarce sustainable resources make survival highly fragile.",
       "strengths": [
-        "High isolation",
-        "Relatively milder Antarctic conditions"
+        "Remote geography and terrain provide strong natural separation",
+        "Coastal access points can support controlled landing and staged movement"
       ],
       "weaknesses": [
-        "Limited resources",
-        "Harsh environment"
+        "Infrastructure is sparse, distributed, and difficult to maintain at scale",
+        "Local food and energy production capacity remains extremely limited"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Low-density regional refuge for mobile teams with maritime logistics support",
+      "failureMode": "Resource scarcity and weather attrition outlast planned stockpiles"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use dispersed coastal nodes while minimizing fixed high-maintenance installations",
+      "keyRisk": "What kills you here is slow starvation and exposure when weather blocks replenishment"
+    },
+    "realityCheck": "Antarctic Peninsula offers options for movement, but not abundant autonomous life-support resources.",
+    "scoreNarrative": "Antarctic Peninsula keeps strong isolation value, yet long-run outcomes are capped by thin infrastructure and persistent sustainability deficits."
   },
   {
     "name": "Greenland",
@@ -5006,25 +5066,40 @@
     "lat": 71.7069,
     "long": -42.6043,
     "scores": {
-      "overall": 7,
+      "overall": 6.8,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 6,
-        "isolation": 8,
+        "defensibility": 6.5,
+        "sustainability": 5.5,
+        "isolation": 8.5,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "A rare balance in extreme regions, combining isolation with pockets of real survivability.",
+      "summary": "A vast Arctic island with extreme isolation, natural resources, and scattered settlements. However, harsh climate, huge scale, and infrastructure dependency make it difficult to control or sustain.",
       "strengths": [
-        "Low population pressure",
-        "Some viable coastal resources"
+        "Large landmass and sparse population provide strategic depth and isolation",
+        "Selected coastal zones offer fisheries and limited resource extraction opportunities"
       ],
       "weaknesses": [
-        "Harsh climate",
-        "Limited infrastructure"
+        "Distance and scale make coordination, defense, and logistics management difficult",
+        "Critical infrastructure remains concentrated and vulnerable to supply disruptions"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Distributed Arctic refuge network anchored by a few viable coastal hubs",
+      "failureMode": "Fragmented infrastructure and distance-driven logistics collapse"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Prioritize defensible coastal micro-hubs linked by planned seasonal supply movement",
+      "keyRisk": "What kills you here is overextension across vast terrain with insufficient logistics density"
+    },
+    "realityCheck": "Greenland has more resource potential than most polar sites, but exploiting it reliably requires sustained technical and transport capacity.",
+    "scoreNarrative": "Greenland remains one of the stronger polar options due to scale and resource pockets, yet still loses points where climate and infrastructure fragility meet distance."
   },
   {
     "name": "Antarctic Lighthouse",
@@ -5035,25 +5110,40 @@
     "lat": -64.0,
     "long": -60.0,
     "scores": {
-      "overall": 2,
+      "overall": 5.0,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 1,
-        "isolation": 9,
+        "defensibility": 5.0,
+        "sustainability": 1.5,
+        "isolation": 8.5,
         "accessibility": 2
       }
     },
     "description": {
-      "summary": "Visually interesting but functionally useless as a survival base.",
+      "summary": "A small polar outpost with visibility and isolation. However, exposure, limited shelter, and lack of resources make it unsuitable for long-term survival.",
       "strengths": [
-        "Extreme remoteness",
-        "Simple structure"
+        "Remote location reduces immediate human conflict pressure",
+        "Simple outpost footprint is easy to assess and manage short term"
       ],
       "weaknesses": [
-        "No infrastructure",
-        "No sustainability"
+        "Minimal enclosed space and poor protection against prolonged polar weather",
+        "No realistic local food, energy, or medical sustainment base"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-duration lookout or waypoint, never a primary survival anchor",
+      "failureMode": "Exposure and resource exhaustion overrun limited shelter capacity"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use only as a temporary observation point before rotating to hardened facilities",
+      "keyRisk": "What kills you here is exposure plus depletion in a structure that cannot support long-duration living"
+    },
+    "realityCheck": "Antarctic Lighthouse can buy time briefly, but it cannot absorb prolonged weather or sustain occupants independently.",
+    "scoreNarrative": "Antarctic Lighthouse stays low because isolation alone cannot offset severe shelter and sustainability deficits."
   },
   {
     "name": "Polar Observation Tower",
@@ -5064,25 +5154,40 @@
     "lat": -75.0,
     "long": 0.0,
     "scores": {
-      "overall": 2,
+      "overall": 4.9,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 1,
-        "isolation": 9,
+        "defensibility": 4.5,
+        "sustainability": 2.0,
+        "isolation": 8.0,
         "accessibility": 2
       }
     },
     "description": {
-      "summary": "Observation only. No viable survival use.",
+      "summary": "A high-visibility observation structure in an extreme polar environment. However, limited usable space, exposure, and system dependency make it a poor survival base.",
       "strengths": [
-        "Visibility",
-        "Isolation"
+        "High vantage improves surveillance and early warning in clear conditions",
+        "Remote setting lowers short-term crowd and contact pressure"
       ],
       "weaknesses": [
-        "No resources",
-        "No shelter capacity"
+        "Structure is exposed and offers limited habitable volume for sustained occupancy",
+        "No meaningful local resource base to support food, heat, or medical continuity"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Temporary surveillance node tied to better-protected support sites",
+      "failureMode": "Exposure and capacity limits cause fast operational collapse"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Deploy for short observation windows, then withdraw to enclosed, sustainable shelters",
+      "keyRisk": "What kills you here is exposure after short-term utility ends and sustainment demand begins"
+    },
+    "realityCheck": "Polar Tower can observe, but observation does not substitute for life-support depth.",
+    "scoreNarrative": "Polar Tower remains low-scoring because its tactical visibility is outweighed by poor shelter, low sustainability, and high environmental exposure."
   },
   {
     "name": "Olavsvern Naval Base",
@@ -5093,25 +5198,40 @@
     "lat": 69.6817,
     "long": 18.9826,
     "scores": {
-      "overall": 8,
+      "overall": 6.8,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 6,
-        "isolation": 7,
+        "defensibility": 8.5,
+        "sustainability": 4.5,
+        "isolation": 7.0,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "One of the strongest overall bases in extreme regions, combining subterranean protection with real infrastructure.",
+      "summary": "A hardened underground naval base with strong concealment and protected infrastructure. However, confined systems, external supply needs, and limited scalability restrict long-term survival.",
       "strengths": [
-        "Subterranean naval facility",
-        "Highly defensible"
+        "Underground hardened design offers strong protection and concealment against direct attack",
+        "Existing engineered infrastructure supports disciplined operations in severe conditions"
       ],
       "weaknesses": [
-        "Limited scalability",
-        "Cold environment constraints"
+        "Closed-system dependence creates vulnerability to utility and maintenance failures",
+        "Expansion capacity is limited, constraining long-duration population support"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Defensible command-and-shelter node for skilled teams with external support links",
+      "failureMode": "Supply and systems attrition in confined infrastructure undermines long-term viability"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Exploit hardened protection for security while limiting occupancy to sustainable maintenance loads",
+      "keyRisk": "What kills you here is slow systems dependency failure inside a finite underground envelope"
+    },
+    "realityCheck": "Olavsvern is excellent for protection, but not immune to long-horizon sustainment math.",
+    "scoreNarrative": "Olavsvern scores high on defensibility but settles in upper-mid range overall because confined, supply-dependent systems cap long-term resilience."
   },
   {
     "name": "Camp Century Ice Tunnels",
