@@ -1,4 +1,5 @@
 const DATA_URL = './data/bases-index.json';
+const STATS_URL = './data/base-stats.json';
 
 const LABELS = {
   type: {
@@ -66,6 +67,9 @@ const elements = {
   scoreList: document.getElementById('base-score-list'),
   scoreStrengths: document.getElementById('base-score-strengths'),
   scoreWeaknesses: document.getElementById('base-score-weaknesses'),
+  comparisonSection: document.getElementById('comparison-section'),
+  comparisonOverallList: document.getElementById('comparison-overall-list'),
+  comparisonCategoryList: document.getElementById('comparison-category-list'),
   survivalProfileSection: document.getElementById('survival-profile-section'),
   survivalInitialRow: document.getElementById('base-survival-initial-row'),
   survivalInitial: document.getElementById('base-survival-initial'),
@@ -508,6 +512,67 @@ function renderScore(base) {
   renderStrengthsAndWeaknesses(scoreObject);
 }
 
+function classifyComparison(value, average) {
+  if (!isValidScoreValue(value) || !isValidScoreValue(average)) {
+    return '';
+  }
+
+  const difference = value - average;
+  if (difference >= 0.25) {
+    return 'Above average';
+  }
+  if (difference <= -0.25) {
+    return 'Below average';
+  }
+  return 'Average';
+}
+
+function appendComparisonItem(list, label, value, average) {
+  if (!isValidScoreValue(value) || !isValidScoreValue(average)) {
+    return;
+  }
+
+  const item = document.createElement('li');
+  const title = document.createElement('strong');
+  const comparison = classifyComparison(value, average);
+  title.textContent = `${label}: `;
+  item.append(title, `${comparison} (${value.toFixed(1)} vs ${average.toFixed(1)})`);
+  list.appendChild(item);
+}
+
+function renderComparison(base, stats) {
+  if (!elements.comparisonSection || !elements.comparisonOverallList || !elements.comparisonCategoryList) {
+    return;
+  }
+
+  if (!stats || typeof stats !== 'object') {
+    elements.comparisonSection.hidden = true;
+    return;
+  }
+
+  const scoreObject = getScoreObject(base);
+  const overall = computeOverallScore(base);
+  const regionStats = stats.byRegion?.[base.region];
+  const typeStats = stats.byType?.[base.type];
+  const globalStats = stats.global;
+
+  elements.comparisonOverallList.innerHTML = '';
+  elements.comparisonCategoryList.innerHTML = '';
+
+  appendComparisonItem(elements.comparisonOverallList, 'Overall vs global', overall, globalStats?.averages?.overall);
+  appendComparisonItem(elements.comparisonOverallList, 'Overall vs region', overall, regionStats?.averages?.overall);
+  appendComparisonItem(elements.comparisonOverallList, 'Overall vs type', overall, typeStats?.averages?.overall);
+
+  if (scoreObject && typeStats?.averages) {
+    Object.entries(SCORE_LABELS).forEach(([key, label]) => {
+      appendComparisonItem(elements.comparisonCategoryList, `${label} vs type`, scoreObject[key], typeStats.averages[key]);
+    });
+  }
+
+  const hasContent = elements.comparisonOverallList.children.length > 0 || elements.comparisonCategoryList.children.length > 0;
+  elements.comparisonSection.hidden = !hasContent;
+}
+
 function createBaseUrl(slug, sourceParams) {
   const resolvedSlug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(slug) : slug;
   const params = new URLSearchParams();
@@ -580,7 +645,7 @@ function renderRelatedBases(base, bases, params) {
   elements.relatedSection.hidden = false;
 }
 
-function showBase(base, bases, params) {
+function showBase(base, bases, params, stats) {
   elements.name.textContent = base.name;
   applyDetailMetadata(base);
   elements.meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
@@ -590,6 +655,7 @@ function showBase(base, bases, params) {
   renderVerdict(base);
   renderDescription(base);
   renderScore(base);
+  renderComparison(base, stats);
   renderSurvivalProfile(base);
   renderUseCaseAndRisk(base);
   renderRealityCheck(base);
@@ -614,12 +680,16 @@ async function loadBase() {
   elements.status.textContent = 'Loading base details...';
 
   try {
-    const response = await fetch(DATA_URL);
-    if (!response.ok) {
-      throw new Error(`Failed to load bases data (${response.status})`);
+    const [basesResponse, statsResponse] = await Promise.all([
+      fetch(DATA_URL),
+      fetch(STATS_URL)
+    ]);
+    if (!basesResponse.ok) {
+      throw new Error(`Failed to load bases data (${basesResponse.status})`);
     }
 
-    const bases = await response.json();
+    const bases = await basesResponse.json();
+    const stats = statsResponse.ok ? await statsResponse.json() : null;
     const matchedBase = slugHelper?.resolveBaseBySlug
       ? slugHelper.resolveBaseBySlug(bases, slug)
       : bases.find((base) => base.slug === slug);
@@ -629,7 +699,7 @@ async function loadBase() {
       return;
     }
 
-    showBase(matchedBase, bases, params);
+    showBase(matchedBase, bases, params, stats);
   } catch (error) {
     console.error(error);
     showNotFound();
