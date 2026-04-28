@@ -3615,21 +3615,36 @@
       "categories": {
         "defensibility": 3,
         "sustainability": 2,
-        "isolation": 5,
+        "isolation": 6,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "Visually striking but functionally weak as a base. It offers limited shelter and poor long-term viability in a harsh coastal environment.",
+      "summary": "Excellent sightline tower in a hostile coastal strip; useful for watch duty, not for living.",
       "strengths": [
-        "Coastal visibility and early warning potential",
-        "Relative isolation compared to urban sites"
+        "Long-range coastal visibility for early warning",
+        "Low inland crowd pressure compared with major metros"
       ],
       "weaknesses": [
-        "Minimal living space and infrastructure",
-        "Exposure to extreme weather and erosion"
+        "Storm surge and erosion can remove access overnight",
+        "No meaningful food, water, or shelter depth for prolonged stay"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short observation post supporting evacuation timing and route selection",
+      "failureMode": "You get pinned by weather and run out of essentials in an exposed structure"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Failing"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use as a temporary lookout, then relocate inland before conditions turn",
+      "keyRisk": "Treating visibility advantage as if it were sustainment"
+    },
+    "realityCheck": "What kills you here is weather plus supply fragility, not direct assault.",
+    "scoreNarrative": "Cape Hatteras stays low overall: isolation is decent, but defensibility and sustainability are both poor in repeated storm conditions."
   },
   {
     "name": "Telluride",
@@ -3642,23 +3657,38 @@
     "scores": {
       "overall": 7,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 7,
+        "defensibility": 7,
+        "sustainability": 6,
         "isolation": 7,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "A remote mountain settlement with strong livability and moderate defensibility, making it a credible long-term refuge.",
+      "summary": "Mountain terrain and manageable scale make Telluride a credible holdout if you prepare for winter logistics.",
       "strengths": [
-        "Low population pressure",
-        "Good long-term living conditions"
+        "Single-valley approach routes are easier to monitor and control",
+        "Existing housing and utilities support medium-term group survival"
       ],
       "weaknesses": [
-        "Moderate defensibility",
-        "Limited scalability"
+        "Winter closures can choke medical and supply access",
+        "Limited arable land and storage cap long-duration independence"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Medium-term mountain redoubt for organized groups with stockpiles",
+      "failureMode": "Isolation flips from protection to entrapment when roads close and stores deplete"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Defend narrow approaches and ration early through winter cycles",
+      "keyRisk": "Underestimating how fast cold-season logistics collapse"
+    },
+    "realityCheck": "What kills you here is winter supply failure before any perimeter breach.",
+    "scoreNarrative": "Telluride rates strong-mid: terrain and isolation are high value, while sustainment is bounded by winter and limited production capacity."
   },
   {
     "name": "Utqiagvik",
@@ -3669,25 +3699,40 @@
     "lat": 71.2906,
     "long": -156.7886,
     "scores": {
-      "overall": 6,
+      "overall": 5,
       "categories": {
         "defensibility": 5,
-        "sustainability": 5,
+        "sustainability": 3,
         "isolation": 9,
         "accessibility": 1
       }
     },
     "description": {
-      "summary": "Extreme isolation provides safety, but harsh conditions significantly reduce long-term viability.",
+      "summary": "Extreme remoteness sharply reduces contact risk, but Arctic dependence makes long survival brittle.",
       "strengths": [
-        "Very low population pressure",
-        "Extreme remoteness"
+        "Very low population pressure and minimal through-traffic",
+        "Open approaches give early detection across flat terrain"
       ],
       "weaknesses": [
-        "Harsh climate limits sustainability",
-        "Very difficult logistics"
+        "Food, fuel, and spare-part chains are hard to replace locally",
+        "Cold and darkness drive constant energy and maintenance demand"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Low-contact refuge for well-provisioned teams with robust fuel reserves",
+      "failureMode": "Critical fuel or equipment loss cascades into exposure and system failure"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Leverage remoteness while aggressively protecting heat and power systems",
+      "keyRisk": "Assuming isolation alone solves survivability"
+    },
+    "realityCheck": "What kills you here is energy failure in Arctic conditions.",
+    "scoreNarrative": "Utqiagvik lands mid-tier: isolation is elite, but sustainability is constrained by extreme climate and logistics dependency."
   },
   {
     "name": "Cheyenne Mountain Complex",
@@ -3696,14 +3741,14 @@
     "region": "north_america",
     "country": "United States",
     "description": {
-      "summary": "One of the strongest purpose-built survival facilities imaginable, combining hardened underground design with real infrastructure. Its only limitation is reliance on complex systems over very long timeframes.",
+      "summary": "Purpose-built hardened infrastructure makes this one of the most defensible options on the board.",
       "strengths": [
-        "Extremely hardened subterranean structure",
-        "Designed for continuity and command resilience"
+        "Deep hardened underground design with controlled access layers",
+        "Engineered continuity systems and protected internal space"
       ],
       "weaknesses": [
-        "Dependent on long-term system maintenance",
-        "Limited scalability beyond intended capacity"
+        "Complex systems require skilled maintenance and spares",
+        "Finite capacity limits long-term population growth"
       ]
     },
     "scores": {
@@ -3716,7 +3761,22 @@
       }
     },
     "lat": 38.7444,
-    "long": -104.8719
+    "long": -104.8719,
+    "verdict": {
+      "bestUseCase": "High-security command-and-shelter node for structured, technical teams",
+      "failureMode": "Maintenance debt breaks life-support chains that the site depends on"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Operate as a tightly managed technical facility with strict capacity control",
+      "keyRisk": "Believing hardened walls remove infrastructure risk"
+    },
+    "realityCheck": "What kills you here is systems failure, not attackers at the gate.",
+    "scoreNarrative": "Cheyenne remains top-tier overall because defensibility is maximal; long-run risk comes from technical sustainment complexity."
   },
   {
     "name": "Titan Missile Museum (Silo 571-7)",
@@ -3727,25 +3787,40 @@
     "lat": 31.8876,
     "long": -110.9965,
     "scores": {
-      "overall": 8,
+      "overall": 7,
       "categories": {
         "defensibility": 9,
-        "sustainability": 5,
+        "sustainability": 4,
         "isolation": 5,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "A hardened underground site with strong defensive characteristics, though not designed for long-term habitation.",
+      "summary": "A tough underground shell with real protective value, but limited habitability without major adaptation.",
       "strengths": [
-        "Highly reinforced underground structure",
-        "Strong protection from external threats"
+        "Hardened structure is highly resistant to direct external threats",
+        "Compact footprint is easier to secure than open compounds"
       ],
       "weaknesses": [
-        "Limited living space",
-        "Requires adaptation for sustainability"
+        "Constrained living space and airflow margin for larger groups",
+        "Dependence on retrofitted utilities for water, sanitation, and power"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-to-medium duration hardened shelter for a small disciplined team",
+      "failureMode": "Life-support bottlenecks outpace defensive advantages"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Exploit structural hardening while capping occupancy and consumption",
+      "keyRisk": "Overfilling a bunker that cannot sustain that load"
+    },
+    "realityCheck": "What kills you here is sustainment choke points inside a sealed site.",
+    "scoreNarrative": "Titan Silo is high-mid overall: elite defensibility is offset by limited long-term habitability and utility depth."
   },
   {
     "name": "Corwith Intermodal Yard",
@@ -3758,23 +3833,38 @@
     "scores": {
       "overall": 3,
       "categories": {
-        "defensibility": 3,
+        "defensibility": 2,
         "sustainability": 4,
-        "isolation": 2,
+        "isolation": 1,
         "accessibility": 9
       }
     },
     "description": {
-      "summary": "A logistics-heavy site with strong resource potential, but far too exposed and difficult to secure to act as a viable base.",
+      "summary": "Huge logistics surface with salvage value, but fundamentally indefensible as a survival base.",
       "strengths": [
-        "Extensive logistics and storage infrastructure",
-        "Strong transport connectivity"
+        "Large material stock and transport equipment footprint",
+        "Multiple access corridors for rapid extraction operations"
       ],
       "weaknesses": [
-        "Highly exposed and difficult to defend",
-        "High population and traffic pressure"
+        "Flat, open terrain creates severe perimeter control problems",
+        "Urban adjacency drives persistent contact and conflict pressure"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Rapid scavenging and transfer point, not a place to hold",
+      "failureMode": "Perimeter collapse from continuous exposure and traffic"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Failing"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Stage short raids for supplies and depart before fixation",
+      "keyRisk": "Trying to fortify a site designed for throughput, not defense"
+    },
+    "realityCheck": "What kills you here is exposure saturation from every direction.",
+    "scoreNarrative": "Corwith Yard scores low because accessibility and resources cannot compensate for near-zero isolation and weak defensibility."
   },
   {
     "name": "LAX Airport",
@@ -3785,25 +3875,40 @@
     "lat": 33.9416,
     "long": -118.4085,
     "scores": {
-      "overall": 2,
+      "overall": 1,
       "categories": {
-        "defensibility": 2,
+        "defensibility": 1,
         "sustainability": 2,
         "isolation": 1,
         "accessibility": 10
       }
     },
     "description": {
-      "summary": "One of the worst possible base locations due to scale, exposure, and population density.",
+      "summary": "Massive infrastructure in the worst possible density context; viable only as a brief transit objective.",
       "strengths": [
-        "Massive infrastructure and storage",
-        "Transport connectivity"
+        "Large short-term supply and equipment pools",
+        "Clear navigation landmark and route nexus"
       ],
       "weaknesses": [
-        "Extreme exposure and population pressure",
-        "Impossible to secure effectively"
+        "Extreme population convergence and visibility",
+        "Too many entry points to secure at any practical scale"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Fast extraction waypoint during early movement windows",
+      "failureMode": "Immediate overrun and entrapment in a high-traffic kill zone"
+    },
+    "survivalProfile": {
+      "initial": "Failing",
+      "shortTerm": "Failing",
+      "longTerm": "Failing"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Touch briefly for specific supplies, then exit immediately",
+      "keyRisk": "Confusing infrastructure size with defendable survivability"
+    },
+    "realityCheck": "What kills you here is sheer human pressure before plans can stabilize.",
+    "scoreNarrative": "LAX is bottom-tier: maximum accessibility combines with minimal isolation and defensibility, producing near-immediate failure risk."
   },
   {
     "name": "Blue Mountains Cliffs",
@@ -3814,25 +3919,40 @@
     "lat": -33.7,
     "long": 150.3,
     "scores": {
-      "overall": 7,
+      "overall": 6,
       "categories": {
         "defensibility": 8,
-        "sustainability": 5,
+        "sustainability": 4,
         "isolation": 6,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "A strong terrain-based refuge with serious defensive value and lower population pressure than coastal cities.",
+      "summary": "Excellent terrain defense and standoff distance, with sustainment limited by wildfire and infrastructure thinness.",
       "strengths": [
-        "Strong natural defensive terrain",
-        "Difficult access routes"
+        "Rugged escarpments and chokepoints favor small defensive teams",
+        "Lower baseline density than coastal urban centers"
       ],
       "weaknesses": [
-        "Limited infrastructure",
-        "Long-term livability is uneven"
+        "Wildfire and smoke events can abruptly deny terrain advantages",
+        "Patchy utilities and supply lines constrain long-duration operations"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Terrain-led defensive refuge with seasonal risk planning",
+      "failureMode": "Fire-weather events force displacement and sever support routes"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Hold high-ground approaches while preplanning alternate fire-season fallback sites",
+      "keyRisk": "Overcommitting to fixed positions during escalating fire conditions"
+    },
+    "realityCheck": "What kills you here is fire and smoke, not direct assault.",
+    "scoreNarrative": "Blue Mountains sits in the upper mid-range: defensibility is strong, but sustainability is inconsistent under recurring fire stress."
   },
   {
     "name": "Uluru Surroundings",
@@ -3843,25 +3963,40 @@
     "lat": -25.3444,
     "long": 131.0369,
     "scores": {
-      "overall": 6,
+      "overall": 4,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 3,
+        "defensibility": 5,
+        "sustainability": 2,
         "isolation": 9,
         "accessibility": 2
       }
     },
     "description": {
-      "summary": "Strong on remoteness, weaker on sustainability.",
+      "summary": "Remote desert standoff lowers contact risk, but water and heat realities make it hard to sustain life.",
       "strengths": [
-        "Extreme isolation",
-        "Terrain presence"
+        "Extreme remoteness reduces human threat frequency",
+        "Open terrain supports long-range detection"
       ],
       "weaknesses": [
-        "Limited resources",
-        "Very difficult logistics"
+        "Severe water scarcity and heat load dominate planning",
+        "Minimal local infrastructure for medical and repair resilience"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Low-contact hide area for short-duration operations with carried supplies",
+      "failureMode": "Dehydration and heat stress outpace defensive concerns"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Failing"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use remoteness for concealment while maintaining strict water discipline and exit windows",
+      "keyRisk": "Assuming isolation offsets fundamental environmental limits"
+    },
+    "realityCheck": "What kills you here is water failure in extreme heat.",
+    "scoreNarrative": "Uluru remains low-mid: isolation is excellent, but sustainability is critically weak in arid conditions."
   },
   {
     "name": "Fort Denison",
@@ -3872,25 +4007,40 @@
     "lat": -33.8568,
     "long": 151.2253,
     "scores": {
-      "overall": 6,
+      "overall": 5,
       "categories": {
         "defensibility": 8,
-        "sustainability": 3,
-        "isolation": 5,
-        "accessibility": 4
+        "sustainability": 2,
+        "isolation": 4,
+        "accessibility": 3
       }
     },
     "description": {
-      "summary": "A compact fortified island site with strong defence but limited long-term viability.",
+      "summary": "A compact fortified island position with controllable access but almost no independent sustainment depth.",
       "strengths": [
-        "Strong defensive structure",
-        "Controlled access"
+        "Historic fort layout provides clear defensive geometry",
+        "Water-separated position limits direct approach vectors"
       ],
       "weaknesses": [
-        "Very small capacity",
-        "Urban proximity"
+        "Tiny footprint and capacity cap any prolonged occupancy",
+        "Harbor-city proximity keeps external pressure and visibility high"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-horizon defensive hold or checkpoint near harbor approaches",
+      "failureMode": "Supply exhaustion in a confined site surrounded by urban demand"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Failing"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use for temporary control tasks with prearranged resupply and timed withdrawal",
+      "keyRisk": "Attempting permanent habitation on a micro-footprint island fort"
+    },
+    "realityCheck": "What kills you here is sustainment collapse before defenses fail.",
+    "scoreNarrative": "Fort Denison grades mid-low: defensibility is high, but sustainability and isolation are too limited for durable survival."
   },
   {
     "name": "Maori Pa Fortifications",
