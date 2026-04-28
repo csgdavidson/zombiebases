@@ -279,7 +279,6 @@
       "name": "Polar & Extreme",
       "bases": [
         { "name": "McMurdo Station", "slug": "mcmurdo", "type": "fortified_structure" },
-        { "name": "Amundsen-Scott Station", "slug": "amundsen", "type": "fortified_structure" },
         { "name": "Greenland", "slug": "greenland", "type": "isolated_landmass" },
         { "name": "Antarctic Peninsula", "slug": "antarctic-peninsula", "type": "isolated_landmass" },
         { "name": "Crevasse Field Glacier", "slug": "ice-shelf", "type": "polar_extreme" },

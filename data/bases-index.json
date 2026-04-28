@@ -4750,50 +4750,6 @@
     "scoreNarrative": "Crevasse Field Glacier scores highly for isolation because few threats could reach it easily. Its overall score remains low because movement is dangerous, resources are effectively absent, and the terrain can kill occupants faster than external threats."
   },
   {
-    "name": "Amundsen-Scott Station",
-    "slug": "amundsen",
-    "type": "fortified_structure",
-    "region": "polar_extreme",
-    "country": "Antarctica",
-    "lat": -90.0,
-    "long": 0.0,
-    "scores": {
-      "overall": 4.4,
-      "categories": {
-        "defensibility": 5.9,
-        "sustainability": 2.2,
-        "isolation": 10.0,
-        "accessibility": 1
-      }
-    },
-    "description": {
-      "summary": "Amundsen-Scott offers engineered shelter in the most isolated location on Earth, but remains highly dependent on technical systems and resupply.",
-      "strengths": [
-        "Purpose-built polar infrastructure supports controlled habitation in extreme cold",
-        "Maximum geographic isolation sharply reduces direct external conflict risk"
-      ],
-      "weaknesses": [
-        "Long-horizon survival depends on fragile fuel, parts, and specialist maintenance chains",
-        "No local agricultural or broad material base for autonomous scaling"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Specialist outpost for small, disciplined teams with deep prepositioned support",
-      "failureMode": "Technical sustainment failure in a no-margin environment"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Moderate",
-      "longTerm": "Weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Maintain minimal occupancy with strict redundancy for power, heat, and medical systems",
-      "keyRisk": "Overestimating station engineering as proof of autonomous long-term survivability"
-    },
-    "realityCheck": "What kills you here is systems failure in an environment that forgives nothing.",
-    "scoreNarrative": "Amundsen sits lower-mid: isolation is unmatched, but sustainability constraints dominate outcome quality."
-  },
-  {
     "name": "McMurdo Station",
     "slug": "mcmurdo",
     "type": "fortified_structure",
