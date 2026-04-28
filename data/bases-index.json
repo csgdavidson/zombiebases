@@ -7344,25 +7344,42 @@
     "lat": 10.2897,
     "long": 103.984,
     "scores": {
-      "overall": 5,
+      "overall": 5.2,
       "categories": {
-        "defensibility": 4,
-        "sustainability": 5,
-        "isolation": 7,
-        "accessibility": 4
+        "defensibility": 5.5,
+        "isolation": 6.5,
+        "sustainability": 2.5
       }
     },
     "description": {
-      "summary": "Moderately isolated coastal site with limited long-term potential.",
+      "summary": "A coastal lighthouse with visibility, limited access, and some island separation. It offers short-term observation value, but exposure, lack of resources, and dependence on nearby settlement make it weak as a base.",
       "strengths": [
-        "Island location",
-        "Visibility"
+        "Excellent coastal visibility for early warning",
+        "Limited approach routes simplify short-term control",
+        "Partial island separation reduces immediate spillover pressure"
       ],
       "weaknesses": [
-        "Limited resources",
-        "Small footprint"
-      ]
-    }
+        "No meaningful food or freshwater base",
+        "Severe weather exposure and minimal protected space",
+        "Dependence on nearby settlement creates brittle logistics"
+      ],
+      "analysis": "The core trade-off is early warning versus survivability. You can spot threats, but the site cannot feed, shelter, or medically support a group for long without constant mainland dependence."
+    },
+    "verdict": {
+      "bestUseCase": "Short-term lookout and signal post",
+      "failureMode": "Sustainment collapse forces risky relocation"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak to moderate",
+      "longTerm": "Poor"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Observation node paired with a separate inland shelter",
+      "keyRisk": "What kills you here is depletion: water, food, and medical margins run out before threats do."
+    },
+    "realityCheck": "Viable only with frequent resupply and strict low headcount discipline.",
+    "scoreNarrative": "Isolation is decent for a coastal node, but sustainability is critically low. This is a watcher position, not a durable base."
   },
   {
     "name": "Banda Neira",
@@ -7373,25 +7390,42 @@
     "lat": -4.5233,
     "long": 129.8958,
     "scores": {
-      "overall": 8,
+      "overall": 6.8,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 7,
-        "isolation": 9,
-        "accessibility": 3
+        "defensibility": 6.5,
+        "isolation": 8.0,
+        "sustainability": 6.0
       }
     },
     "description": {
-      "summary": "Highly isolated island with strong long-term survivability potential.",
+      "summary": "A small island settlement with strong maritime separation, historic fortifications, and access to coastal resources. It works best as a low-profile island refuge, but limited scale and supply dependence cap long-term resilience.",
       "strengths": [
-        "Extreme isolation",
-        "Marine resources"
+        "Strong maritime isolation lowers direct pressure",
+        "Historic defensive positions support layered local control",
+        "Coastal resources support fishing-based sustainment"
       ],
       "weaknesses": [
-        "Limited infrastructure",
-        "Difficult resupply"
-      ]
-    }
+        "Small settlement scale limits growth capacity",
+        "Inter-island logistics remain weather and fuel dependent",
+        "Medical and technical depth is thin for prolonged crises"
+      ],
+      "analysis": "Banda Neira balances strong separation with workable settlement infrastructure. Its limit is throughput: once population or demand rises, imports, storage, and medical capability become the choke points."
+    },
+    "verdict": {
+      "bestUseCase": "Low-profile island refuge for a disciplined small community",
+      "failureMode": "Capacity ceilings and supply shocks degrade stability"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Compact island holdout prioritizing isolation over expansion",
+      "keyRisk": "What kills you here is scale failure: shortages arrive faster than replacement systems can grow."
+    },
+    "realityCheck": "Performs best with low headcount, fishing competence, and conservative consumption.",
+    "scoreNarrative": "Isolation is the decisive advantage, while defensibility and sustainability are solid but not elite. Long-term survival depends on staying small and disciplined."
   },
   {
     "name": "Banlung",
@@ -7402,25 +7436,42 @@
     "lat": 13.7394,
     "long": 106.9873,
     "scores": {
-      "overall": 7,
+      "overall": 6.1,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 7,
-        "isolation": 7,
-        "accessibility": 4
+        "defensibility": 5.5,
+        "isolation": 7.0,
+        "sustainability": 6.0
       }
     },
     "description": {
-      "summary": "Remote jungle settlement with good sustainability and manageable isolation.",
+      "summary": "A remote inland town with surrounding terrain, forest cover, and regional resource access. It offers more livability than a pure wilderness refuge, but weak defensibility and difficult logistics limit its ceiling.",
       "strengths": [
-        "Low population pressure",
-        "Natural resources"
+        "Remote location reduces dense population spillover",
+        "Forest and local land support mixed resource options",
+        "Town infrastructure improves habitability versus wilderness camps"
       ],
       "weaknesses": [
-        "Limited infrastructure",
-        "Disease risk"
-      ]
-    }
+        "Perimeter is diffuse and difficult to harden",
+        "Road dependency complicates fuel and supply continuity",
+        "Tropical disease and healthcare limits raise attrition risk"
+      ],
+      "analysis": "Banlung offers a practical middle ground between remoteness and everyday livability. The weakness is control: spread settlement edges and road-linked logistics are hard to defend under sustained pressure."
+    },
+    "verdict": {
+      "bestUseCase": "Regional inland refuge with mobility options",
+      "failureMode": "Security dilution and logistics drag erode stability"
+    },
+    "survivalProfile": {
+      "initial": "Moderate to strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Small networked community base with local production focus",
+      "keyRisk": "What kills you here is attrition from porous security plus medical and logistics strain."
+    },
+    "realityCheck": "Best outcomes require perimeter zoning, route control, and low reliance on external fuel chains.",
+    "scoreNarrative": "Isolation and livability are workable, but defensibility is the limiting factor. Banlung survives through management quality, not fortress geometry."
   },
   {
     "name": "Cu Chi Tunnels",
@@ -7431,25 +7482,42 @@
     "lat": 10.8327,
     "long": 106.4713,
     "scores": {
-      "overall": 7,
+      "overall": 6.6,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 4,
-        "isolation": 6,
-        "accessibility": 3
+        "defensibility": 8.5,
+        "isolation": 6.5,
+        "sustainability": 3.5
       }
     },
     "description": {
-      "summary": "Highly defensible underground system but difficult to sustain long term.",
+      "summary": "A purpose-built tunnel network with concealment, restricted access, and strong defensive history. It is highly effective for short-term evasion, but confinement, ventilation, and resource limits make permanent survival difficult.",
       "strengths": [
-        "Built for guerrilla defense",
-        "Hidden infrastructure"
+        "Exceptional concealment and ambush potential",
+        "Narrow access points are easy to defend",
+        "Subsurface movement reduces direct line-of-sight exposure"
       ],
       "weaknesses": [
-        "Limited living capacity",
-        "Ventilation and supply challenges"
-      ]
-    }
+        "Ventilation and humidity create chronic health risks",
+        "Severe space limits cap population and supplies",
+        "Fire, flooding, or gas events are catastrophic underground"
+      ],
+      "analysis": "The tunnels excel at denial and concealment against larger forces. Their core trade-off is survivability under stress: air quality, sanitation, and medical response degrade quickly with time and headcount."
+    },
+    "verdict": {
+      "bestUseCase": "Short-duration evasion and resistance node",
+      "failureMode": "Environmental and medical collapse underground"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate to strong",
+      "longTerm": "Poor"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary concealed refuge during high-threat phases",
+      "keyRisk": "What kills you here is confinement failure: air, water, hygiene, and injuries compound faster than recovery."
+    },
+    "realityCheck": "Use only with strict rotation plans and an external sustainment site.",
+    "scoreNarrative": "Defensibility is outstanding, but sustainability is fundamentally weak. The tunnels win fights, not decades."
   },
   {
     "name": "Vietnam Tunnel Systems",
@@ -7460,25 +7528,42 @@
     "lat": 10.8327,
     "long": 106.4713,
     "scores": {
-      "overall": 7,
+      "overall": 6.4,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 4,
-        "isolation": 6,
-        "accessibility": 3
+        "defensibility": 8.0,
+        "isolation": 6.5,
+        "sustainability": 3.5
       }
     },
     "description": {
-      "summary": "Highly defensible underground networks but difficult to sustain over time.",
+      "summary": "A broader tunnel-system concept with strong concealment and movement control across difficult terrain. It provides tactical advantage, but fragmented infrastructure and poor long-term livability keep it below true stronghold status.",
       "strengths": [
-        "Defensive design",
-        "Hidden networks"
+        "Strong concealment across multiple linked positions",
+        "Terrain and tunnels enable controlled local movement",
+        "Defensive history validates denial-oriented tactics"
       ],
       "weaknesses": [
-        "Limited comfort",
-        "Supply dependent"
-      ]
-    }
+        "Fragmented network complicates command and logistics",
+        "Long-term habitation quality is consistently poor",
+        "Medical evacuation and sanitation are persistent weak points"
+      ],
+      "analysis": "At area scale, Cu Chi offers flexible concealment and local maneuver advantage. The penalty is fragmented support: disconnected nodes, inconsistent conditions, and weak sustainment integration over time."
+    },
+    "verdict": {
+      "bestUseCase": "Distributed tactical refuge and movement network",
+      "failureMode": "Fragmentation and sustainment shortfalls break cohesion"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Poor"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Concealed regional fallback during active threat periods",
+      "keyRisk": "What kills you here is cumulative degradation from poor living conditions and fragmented support lines."
+    },
+    "realityCheck": "Needs surface support hubs and disciplined rotation to remain viable.",
+    "scoreNarrative": "Defensive utility is high, but long-term living quality remains the structural weakness. This is a tactical system, not a complete settlement."
   },
   {
     "name": "Bangkok Airport",
@@ -7489,25 +7574,42 @@
     "lat": 13.69,
     "long": 100.7501,
     "scores": {
-      "overall": 2,
+      "overall": 5.8,
       "categories": {
-        "defensibility": 1,
-        "sustainability": 4,
-        "isolation": 1,
-        "accessibility": 10
+        "defensibility": 6.0,
+        "isolation": 1.5,
+        "sustainability": 6.5
       }
     },
     "description": {
-      "summary": "High infrastructure but completely exposed and unsustainable.",
+      "summary": "A major transport hub with huge space, supplies, and infrastructure. It fails as a base because urban proximity, scale, and uncontrolled entry points make it impossible to secure.",
       "strengths": [
-        "Transport infrastructure",
-        "Resource access"
+        "Large stock and equipment footprint for early operations",
+        "Runway-scale space supports staging and movement",
+        "Existing power, water, and storage systems boost short-term capacity"
       ],
       "weaknesses": [
-        "Massive exposure",
-        "Impossible to secure"
-      ]
-    }
+        "Too many access vectors to fully control",
+        "Urban proximity drives continuous threat pressure",
+        "System-heavy infrastructure fails hard when utilities degrade"
+      ],
+      "analysis": "Airports offer immediate material advantage but catastrophic perimeter problems. In collapse conditions, sheer size and surrounding density turn every terminal and service road into a liability."
+    },
+    "verdict": {
+      "bestUseCase": "Short-term resource extraction and transit hub",
+      "failureMode": "Perimeter breach saturation overwhelms defenders"
+    },
+    "survivalProfile": {
+      "initial": "Moderate to strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary logistics node feeding smaller defended sites",
+      "keyRisk": "What kills you here is perimeter exhaustion: too much frontage, too many entries, nonstop pressure."
+    },
+    "realityCheck": "Treat as a scavenging platform, not a residence, once urban movement destabilizes.",
+    "scoreNarrative": "Sustainment assets are strong on paper, but isolation is near-zero. Security math fails before supplies do."
   },
   {
     "name": "Singapore Port",
@@ -7518,25 +7620,42 @@
     "lat": 1.2644,
     "long": 103.82,
     "scores": {
-      "overall": 3,
+      "overall": 5.9,
       "categories": {
-        "defensibility": 2,
-        "sustainability": 7,
-        "isolation": 2,
-        "accessibility": 10
+        "defensibility": 5.5,
+        "isolation": 1.5,
+        "sustainability": 7.0
       }
     },
     "description": {
-      "summary": "Highly advanced infrastructure but extreme exposure and density.",
+      "summary": "A globally significant port with exceptional logistics, maritime access, and infrastructure. Those strengths become liabilities in collapse, as exposure, density, and strategic importance make it almost impossible to hold.",
       "strengths": [
-        "Logistics",
-        "Resources"
+        "Exceptional logistics infrastructure and storage capacity",
+        "Strong maritime connectivity for movement and sourcing",
+        "Heavy equipment supports repair and industrial improvisation"
       ],
       "weaknesses": [
-        "Extreme population density",
-        "High conflict risk"
-      ]
-    }
+        "High-density surroundings create relentless pressure",
+        "Large open waterfront is difficult to secure",
+        "Strategic visibility attracts organized human competition"
+      ],
+      "analysis": "The port is a superb supply engine in normal conditions but a strategic magnet in collapse. Its openness, complexity, and contested value make durable control unlikely without state-level capability."
+    },
+    "verdict": {
+      "bestUseCase": "Rapid logistics exploitation under temporary control",
+      "failureMode": "Escalation and overexposure lead to displacement"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Short-duration maritime supply node with planned withdrawal",
+      "keyRisk": "What kills you here is contestation: the site is too valuable and too exposed to remain yours."
+    },
+    "realityCheck": "Only workable with superior force, clear extraction plans, and low static commitment.",
+    "scoreNarrative": "Infrastructure and sustainment potential are excellent, but isolation and holdability are poor. Control is temporary by default."
   },
   {
     "name": "Edinburgh Castle",
@@ -7547,25 +7666,42 @@
     "lat": 55.9486,
     "long": -3.1999,
     "scores": {
-      "overall": 8,
+      "overall": 6.5,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 5,
-        "isolation": 4,
-        "accessibility": 6
+        "defensibility": 8.5,
+        "isolation": 4.5,
+        "sustainability": 5.5
       }
     },
     "description": {
-      "summary": "One of the strongest fortress candidates in the region, combining commanding terrain with serious defensive history.",
+      "summary": "A highly defensible urban castle on elevated rock, with strong visibility and controlled approaches. It is excellent as a symbolic redoubt, but urban exposure and limited sustainability reduce long-term value.",
       "strengths": [
-        "Exceptional elevated defensive position",
-        "Strong fortification and visibility"
+        "Elevated rock position channels approach routes",
+        "Strong walls and choke points favor defenders",
+        "Excellent observation over surrounding approaches"
       ],
       "weaknesses": [
-        "Urban setting increases pressure",
-        "Long-term sustainability is only moderate"
-      ]
-    }
+        "Central urban location increases sustained threat load",
+        "Limited internal growing and storage capacity",
+        "Heritage layout constrains modern hardening adaptations"
+      ],
+      "analysis": "The castle’s terrain and structure provide genuine defensive leverage. The limiting factor is urban embedding: pressure, fire risk, and supply dependence from the surrounding city erode long-term viability."
+    },
+    "verdict": {
+      "bestUseCase": "Defensible urban redoubt for disciplined small groups",
+      "failureMode": "Urban attrition and supply stress degrade holdability"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate to strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Short- to medium-term defensive strongpoint during city instability",
+      "keyRisk": "What kills you here is urban attrition: siege pressure outlasts internal sustainment."
+    },
+    "realityCheck": "Best used with external supply links and fallback positions outside the city core.",
+    "scoreNarrative": "Defensibility is elite, but isolation is only moderate in an urban context. Long-term performance depends on external sustainment discipline."
   },
   {
     "name": "The Roaches",
@@ -7576,25 +7712,42 @@
     "lat": 53.171,
     "long": -1.996,
     "scores": {
-      "overall": 6,
+      "overall": 5.9,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 4,
-        "isolation": 5,
-        "accessibility": 5
+        "defensibility": 7.0,
+        "isolation": 6.0,
+        "sustainability": 3.5
       }
     },
     "description": {
-      "summary": "Strong terrain and elevation give it real defensive interest, but it lacks the infrastructure and sustainability of stronger regional contenders.",
+      "summary": "A rocky elevated ridge with natural defensibility, visibility, and difficult approaches. It works as a temporary fallback point, but exposure and lack of infrastructure make it unsuitable for long-term occupation.",
       "strengths": [
-        "Natural rocky defensive terrain",
-        "Good local visibility and control of approach"
+        "Steep rocky approaches reduce direct assault options",
+        "High vantage supports early detection and route watching",
+        "Low local density reduces immediate contact pressure"
       ],
       "weaknesses": [
-        "Limited shelter and infrastructure",
-        "Weak long-term sustainability"
-      ]
-    }
+        "Little built shelter against weather extremes",
+        "Limited water and food capacity on-site",
+        "Open terrain makes sustained occupation physically costly"
+      ],
+      "analysis": "The Roaches gives tactical terrain advantage with minimal construction. The trade-off is pure exposure: shelter, water reliability, and medical resilience are too weak for prolonged static living."
+    },
+    "verdict": {
+      "bestUseCase": "Temporary elevated fallback and observation point",
+      "failureMode": "Exposure and resource scarcity force abandonment"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Poor"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Short-term hold while relocating to a sustainment-capable base",
+      "keyRisk": "What kills you here is exposure-driven attrition before enemies even breach your position."
+    },
+    "realityCheck": "Keep occupancy low and duration short; pre-stage supplies off-site.",
+    "scoreNarrative": "Natural defensibility is useful, but sustainability is too low for permanence. It is a position to pass through, not settle."
   },
   {
     "name": "Caerphilly Castle",
@@ -7605,25 +7758,42 @@
     "lat": 51.5744,
     "long": -3.218,
     "scores": {
-      "overall": 7,
+      "overall": 6.8,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 5,
-        "accessibility": 5
+        "defensibility": 8.5,
+        "isolation": 5.5,
+        "sustainability": 5.5
       }
     },
     "description": {
-      "summary": "A highly defensible medieval fortress with strong water and wall defenses, but only moderate long-term viability.",
+      "summary": "A large moated castle with strong defensive design and layered barriers. It is one of the stronger historic fortifications, but modern exposure and limited self-sufficiency keep it from elite status.",
       "strengths": [
-        "Excellent fortification and defensive layout",
-        "Strong control over access"
+        "Layered water barriers and walls slow assaults",
+        "Clear defensive lines support controlled access",
+        "Large enclosed footprint allows structured internal zoning"
       ],
       "weaknesses": [
-        "Limited modern infrastructure",
-        "Dependent on surrounding support systems"
-      ]
-    }
+        "Surrounding settlement limits true isolation",
+        "Internal production capacity is modest without adaptation",
+        "Historic fabric constrains heavy retrofitting"
+      ],
+      "analysis": "Caerphilly’s layered moat-and-wall geometry gives real stand-off advantage. Its weakness is modern sustainment: it remains a fixed heritage shell requiring external food, fuel, and medical throughput."
+    },
+    "verdict": {
+      "bestUseCase": "Defensive regional strongpoint with controlled occupancy",
+      "failureMode": "Supply dependency and external pressure outlast defenses"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Fortified holdout paired with external production nodes",
+      "keyRisk": "What kills you here is siege-by-shortage: supplies thin out before defenses fail."
+    },
+    "realityCheck": "Success depends on disciplined stock management and off-site food systems.",
+    "scoreNarrative": "Defensibility is a major asset, while isolation and sustainability are moderate. Strong in conflict phases, less robust in prolonged austerity."
   },
   {
     "name": "Fort George",
@@ -7634,25 +7804,42 @@
     "lat": 57.623,
     "long": -3.87,
     "scores": {
-      "overall": 7,
+      "overall": 6.6,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 5,
-        "accessibility": 5
+        "defensibility": 8.0,
+        "isolation": 6.0,
+        "sustainability": 5.0
       }
     },
     "description": {
-      "summary": "A strong military fortress with real defensive depth, though still constrained by scale and dependence on surrounding support.",
+      "summary": "A purpose-built coastal military fort with strong walls, controlled access, and organised internal space. It has real defensive value, but exposure and reliance on external supplies limit long-term independence.",
       "strengths": [
-        "Purpose-built defensive design",
-        "Strong perimeter control"
+        "Purpose-built defensive layout with controllable entries",
+        "Robust structures support layered internal security",
+        "Coastal position enables selective maritime access"
       ],
       "weaknesses": [
-        "Limited long-term independence",
-        "Not isolated enough to avoid outside pressure"
-      ]
-    }
+        "Open coastal exposure increases weather and detection risk",
+        "Long-term sustainment still depends on outside inputs",
+        "Large footprint increases staffing and maintenance burden"
+      ],
+      "analysis": "Fort George is designed for orderly defense and internal control. The key trade-off is that military geometry does not solve food, fuel, and medical self-production over long durations."
+    },
+    "verdict": {
+      "bestUseCase": "Defensive headquarters for a trained medium-sized group",
+      "failureMode": "Supply drag and exposure reduce operational tempo"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate to strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Structured defensive base with planned maritime logistics",
+      "keyRisk": "What kills you here is logistics fatigue: maintaining the fort outpaces local production."
+    },
+    "realityCheck": "Works best with skilled maintenance teams and preplanned resupply cycles.",
+    "scoreNarrative": "Defensibility is high and isolation is decent, but sustainability remains constrained. The fort is credible, not self-sufficient."
   },
   {
     "name": "Port Talbot Steelworks",
@@ -7663,25 +7850,42 @@
     "lat": 51.5885,
     "long": -3.7806,
     "scores": {
-      "overall": 4,
+      "overall": 5.6,
       "categories": {
-        "defensibility": 4,
-        "sustainability": 5,
-        "isolation": 2,
-        "accessibility": 7
+        "defensibility": 5.5,
+        "isolation": 2.5,
+        "sustainability": 6.0
       }
     },
     "description": {
-      "summary": "Industrial scale brings useful material infrastructure, but it is too exposed and too dependent on complex systems to rank highly.",
+      "summary": "A major industrial site with infrastructure, materials, and repair potential. It is useful as a resource node, but pollution, exposure, and system dependency make it weak as a secure living base.",
       "strengths": [
-        "Large industrial footprint and salvage potential",
-        "Strong built infrastructure"
+        "Substantial material stock and industrial tooling",
+        "Repair and fabrication potential for nearby communities",
+        "Transport links support short-term movement and salvage"
       ],
       "weaknesses": [
-        "Hard to secure and highly visible",
-        "System dependence undermines survivability"
-      ]
-    }
+        "Low isolation and broad access routes",
+        "Environmental and pollution risks degrade health",
+        "Complex systems fail quickly without specialist staffing"
+      ],
+      "analysis": "Industrial capacity gives Port Talbot practical repair and fabrication value. As a residence, however, exposure, contamination, and high infrastructure dependency create a persistent survival tax."
+    },
+    "verdict": {
+      "bestUseCase": "Industrial resource extraction hub, not primary shelter",
+      "failureMode": "Health attrition and perimeter pressure make occupation untenable"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Strip useful materials while housing core population elsewhere",
+      "keyRisk": "What kills you here is cumulative exposure: contamination, injuries, and security drag."
+    },
+    "realityCheck": "Use in timed operations with clear withdrawal thresholds.",
+    "scoreNarrative": "Sustainment utility exists through industry, but isolation is poor and defensibility is average. It is a node to exploit, not hold."
   },
   {
     "name": "Amazon BHX4 Fulfilment Centre",
@@ -7692,25 +7896,42 @@
     "lat": 52.483,
     "long": -1.718,
     "scores": {
-      "overall": 4,
+      "overall": 5.7,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 6,
-        "isolation": 2,
-        "accessibility": 8
+        "defensibility": 5.5,
+        "isolation": 2.5,
+        "sustainability": 6.5
       }
     },
     "description": {
-      "summary": "Strong logistics and storage capacity but far too exposed and system-dependent to serve as a serious long-term base.",
+      "summary": "A huge logistics warehouse with stored goods, space, and controlled internal areas. It gives a strong early advantage, but weak defensibility, dependence on systems, and surrounding access routes make it decay quickly.",
       "strengths": [
-        "Large warehousing and supply space",
-        "Existing operational infrastructure"
+        "Large initial stock and storage volume",
+        "Internal compartmentalization helps short-term control",
+        "Loading infrastructure supports rapid redistribution"
       ],
       "weaknesses": [
-        "Difficult to defend at scale",
-        "Located in a high-pressure populated region"
-      ]
-    }
+        "Perimeter and access roads are hard to secure",
+        "Power and systems dependency is high",
+        "Predictable high-value target for looters and groups"
+      ],
+      "analysis": "A distribution center provides immediate inventory and staging benefits. The downside is strategic fragility: once power, staffing, and perimeter control degrade, the site turns from asset to trap."
+    },
+    "verdict": {
+      "bestUseCase": "Short-term logistics cache and redistribution point",
+      "failureMode": "Perimeter erosion and system failure collapse operations"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Rapid stock capture feeding smaller hardened sites",
+      "keyRisk": "What kills you here is concentration risk: once breached, losses are sudden and decisive."
+    },
+    "realityCheck": "Do not centralize whole-group residency; split stocks across secondary caches.",
+    "scoreNarrative": "Early sustainment value is high, but isolation and holdability are poor. Warehouses are accelerators, not end-state bases."
   },
   {
     "name": "HM Prison Dartmoor",
@@ -7721,25 +7942,42 @@
     "lat": 50.596,
     "long": -3.9157,
     "scores": {
-      "overall": 7,
+      "overall": 6.6,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 7,
-        "accessibility": 4
+        "defensibility": 8.0,
+        "isolation": 6.5,
+        "sustainability": 4.5
       }
     },
     "description": {
-      "summary": "A naturally isolated prison complex with strong containment logic and a better setting than most carceral sites.",
+      "summary": "A remote prison complex with secure walls, controlled movement, and strong internal containment. It offers a credible short-term defensive shell, but harsh exposure and limited self-sufficiency constrain long-term survival.",
       "strengths": [
-        "Built for control and restricted access",
-        "Remote moorland location reduces pressure"
+        "High-security perimeter and controlled internal circulation",
+        "Remote setting reduces casual external pressure",
+        "Existing secure compartments aid zoning and quarantine"
       ],
       "weaknesses": [
-        "Harsh setting and limited comfort",
-        "Long-term sustainability is moderate at best"
-      ]
-    }
+        "Harsh weather and exposure increase operating burden",
+        "Limited internal production capacity for food and fuel",
+        "Institutional layout can hinder adaptive community living"
+      ],
+      "analysis": "Prison architecture gives immediate control advantages under stress. The trade-off is livability and production: confinement infrastructure does not naturally support long-term health, agriculture, or resilience."
+    },
+    "verdict": {
+      "bestUseCase": "Short- to medium-term defensive shell during regional instability",
+      "failureMode": "Sustainment and morale decline undermine security gains"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate to strong",
+      "longTerm": "Moderate to weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Controlled refuge with strict governance and phased adaptation",
+      "keyRisk": "What kills you here is slow attrition from poor livability and insufficient self-production."
+    },
+    "realityCheck": "Requires rapid transition from custody layout to settlement logistics.",
+    "scoreNarrative": "Defensibility is strong and isolation helpful, but sustainability lags. It buys time, not indefinite autonomy."
   },
   {
     "name": "Porton Down",
@@ -7750,25 +7988,42 @@
     "lat": 51.129,
     "long": -1.803,
     "scores": {
-      "overall": 6,
+      "overall": 6.1,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 5,
-        "isolation": 4,
-        "accessibility": 6
+        "defensibility": 7.5,
+        "isolation": 5.5,
+        "sustainability": 4.5
       }
     },
     "description": {
-      "summary": "A secure institutional site with real infrastructure and defensive promise, but still too visible and system-linked to be elite.",
+      "summary": "A secure research facility with controlled access, specialist infrastructure, and perimeter discipline. It has defensive value, but technical dependency, contamination risk, and strategic visibility create serious long-term weakness.",
       "strengths": [
-        "Controlled access and secure compound logic",
-        "Established infrastructure"
+        "Controlled perimeter and disciplined site design",
+        "Specialist infrastructure supports high-end operations",
+        "Compartmented zones aid containment and incident response"
       ],
       "weaknesses": [
-        "Strategic visibility and target value",
-        "Moderate dependence on wider systems"
-      ]
-    }
+        "Technical systems require expert staffing and parts",
+        "Potential contamination events carry outsized consequences",
+        "Strategic profile increases likelihood of human contestation"
+      ],
+      "analysis": "Porton Down offers strong control architecture and specialist capability. Its core risk is complexity: advanced systems, hazardous contexts, and high visibility are difficult to sustain safely in collapse."
+    },
+    "verdict": {
+      "bestUseCase": "Specialized secured site for short-duration technical operations",
+      "failureMode": "Complexity and hazard risk overwhelm maintainers"
+    },
+    "survivalProfile": {
+      "initial": "Moderate to strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak to moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Controlled operations hub linked to simpler off-site living bases",
+      "keyRisk": "What kills you here is technical failure under stress, amplified by contamination and visibility."
+    },
+    "realityCheck": "Keep mission scope narrow and avoid overcommitting population on-site.",
+    "scoreNarrative": "Defensibility is good, but sustainability is constrained by complexity and hazard. Strong procedures are mandatory, not optional."
   },
   {
     "name": "Lindisfarne",
@@ -7779,25 +8034,42 @@
     "lat": 55.669,
     "long": -1.799,
     "scores": {
-      "overall": 7,
+      "overall": 6.9,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 5,
-        "isolation": 8,
-        "accessibility": 3
+        "defensibility": 7.5,
+        "isolation": 8.0,
+        "sustainability": 5.0
       }
     },
     "description": {
-      "summary": "Tidal isolation gives Lindisfarne real defensive interest, though its small scale limits long-term survivability.",
+      "summary": "A tidal island with natural separation, limited access windows, and a defensible settlement pattern. It works well for a disciplined small group, but tide dependency and resource limits cap long-term resilience.",
       "strengths": [
-        "Natural separation improves control of access",
-        "Low population footprint"
+        "Tidal causeway creates predictable access windows",
+        "Compact settlement form aids perimeter management",
+        "Strong separation from mainland routine traffic"
       ],
       "weaknesses": [
-        "Limited resources and infrastructure",
-        "Too small for large-scale long-term occupation"
-      ]
-    }
+        "Tide and weather disruptions can isolate critical supplies",
+        "Limited land and freshwater constrain growth",
+        "Evacuation and medical timing are highly constrained"
+      ],
+      "analysis": "Lindisfarne’s tidal timing creates natural control over movement and approach. The trade-off is throughput fragility: weather and tide windows can bottleneck food, fuel, and emergency response."
+    },
+    "verdict": {
+      "bestUseCase": "Disciplined small-group island refuge with strict timing control",
+      "failureMode": "Access-window disruptions cause cascading shortages"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Low-headcount defensible holdout with planned resupply cycles",
+      "keyRisk": "What kills you here is timing failure: miss windows and essential systems fall behind."
+    },
+    "realityCheck": "Needs tide-aware logistics planning and conservative reserve buffers.",
+    "scoreNarrative": "Isolation and defensibility are strong, but sustainability has hard limits. It rewards discipline and punishes schedule failure."
   },
   {
     "name": "St Kilda",
@@ -7808,25 +8080,42 @@
     "lat": 57.814,
     "long": -8.583,
     "scores": {
-      "overall": 8,
+      "overall": 6.8,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 5,
-        "isolation": 10,
-        "accessibility": 1
+        "defensibility": 6.5,
+        "isolation": 9.5,
+        "sustainability": 4.0
       }
     },
     "description": {
-      "summary": "One of the most isolated sites in the region, with extraordinary separation from the mainland but serious challenges for long-term living.",
+      "summary": "An extremely remote island archipelago with exceptional isolation and low external threat pressure. Its weakness is sustainment: weather, landing difficulty, and limited resources make survival fragile over time.",
       "strengths": [
-        "Near-maximum isolation",
-        "Very low risk of outside pressure"
+        "Extreme remoteness sharply reduces external pressure",
+        "Difficult approaches limit opportunistic incursions",
+        "Low baseline human traffic improves concealment over time"
       ],
       "weaknesses": [
-        "Extremely difficult access and resupply",
-        "Long-term sustainability is limited"
-      ]
-    }
+        "Landing and resupply are weather-constrained",
+        "Limited production options under harsh conditions",
+        "Medical evacuation is slow and high risk"
+      ],
+      "analysis": "St Kilda minimizes contact risk better than almost anywhere in the region. That advantage is offset by punishing logistics, harsh conditions, and weak margin for medical or agricultural failure."
+    },
+    "verdict": {
+      "bestUseCase": "Ultra-remote refuge for highly prepared low-headcount teams",
+      "failureMode": "Logistics and health shocks outpace recovery capacity"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak to moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Isolation-first fallback when avoiding contact outweighs comfort",
+      "keyRisk": "What kills you here is sustainment fragility under severe weather and isolation delays."
+    },
+    "realityCheck": "Requires prepositioned stores, robust seamanship, and strict contingency planning.",
+    "scoreNarrative": "Isolation is exceptional, but sustainability is structurally weak. Survival depends on preparation depth, not site abundance."
   },
   {
     "name": "Fastnet Lighthouse",
@@ -7837,25 +8126,42 @@
     "lat": 51.388,
     "long": -9.602,
     "scores": {
-      "overall": 4,
+      "overall": 5.1,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 2,
-        "isolation": 9,
-        "accessibility": 1
+        "defensibility": 5.5,
+        "isolation": 9.0,
+        "sustainability": 1.5
       }
     },
     "description": {
-      "summary": "Exceptionally isolated but too small and too resource-poor to rank as a serious survival base.",
+      "summary": "A remote offshore lighthouse with extreme separation and strong visibility. It is nearly useless as a survival base because space, shelter, food, water, and evacuation options are all critically limited.",
       "strengths": [
-        "Extreme separation from mainland threat",
-        "Excellent visibility and early warning value"
+        "Very high maritime isolation from land threats",
+        "Excellent visibility for sea and weather monitoring",
+        "Single-structure footprint simplifies immediate control"
       ],
       "weaknesses": [
-        "Tiny footprint and no scalability",
-        "Very weak long-term sustainability"
-      ]
-    }
+        "Negligible space for people, stores, or redundancy",
+        "No meaningful food or freshwater production capacity",
+        "Evacuation and resupply are weather-limited and dangerous"
+      ],
+      "analysis": "Fastnet is an observation post, not a living system. Extreme isolation protects from intrusion but removes nearly every pathway for sustained human survival."
+    },
+    "verdict": {
+      "bestUseCase": "Emergency short-duration lookout only",
+      "failureMode": "Resource exhaustion and weather entrapment"
+    },
+    "survivalProfile": {
+      "initial": "Weak to moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Nonviable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary offshore hide during acute mainland spikes",
+      "keyRisk": "What kills you here is simple depletion: you run out of essentials with nowhere to recover."
+    },
+    "realityCheck": "Do not plan static occupancy beyond brief emergency intervals.",
+    "scoreNarrative": "Isolation is extreme, but sustainability is near-zero. This is a temporary bolt-hole at best."
   },
   {
     "name": "Spinnaker Tower",
@@ -7866,25 +8172,42 @@
     "lat": 50.795,
     "long": -1.108,
     "scores": {
-      "overall": 2,
+      "overall": 4.3,
       "categories": {
-        "defensibility": 2,
-        "sustainability": 1,
-        "isolation": 1,
-        "accessibility": 8
+        "defensibility": 4.5,
+        "isolation": 1.5,
+        "sustainability": 3.0
       }
     },
     "description": {
-      "summary": "An observation landmark rather than a viable base, offering visibility but almost no meaningful survival value.",
+      "summary": "A tall urban landmark with excellent visibility but almost no practical survival value. It is exposed, space-limited, and surrounded by urban threat pressure, making it a poor base despite its height.",
       "strengths": [
-        "Strong visibility over local area",
-        "Central landmark value"
+        "High vantage point for short-term surveillance",
+        "Vertical structure can delay immediate ground intrusion",
+        "Recognizable landmark supports navigation and signaling"
       ],
       "weaknesses": [
-        "No real habitation or sustainability",
-        "Extremely exposed urban setting"
-      ]
-    }
+        "Urban location creates constant pressure and visibility",
+        "Minimal usable living and storage space",
+        "Limited routes in and out create evacuation traps"
+      ],
+      "analysis": "Spinnaker’s height offers surveillance value but no viable settlement envelope. In collapse, urban density and constrained internal capacity quickly overwhelm any observational advantage."
+    },
+    "verdict": {
+      "bestUseCase": "Brief observation and signaling position",
+      "failureMode": "Encirclement and supply starvation in place"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Nonviable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary lookout while relocating to a real base",
+      "keyRisk": "What kills you here is entrapment: visibility without survivable logistics."
+    },
+    "realityCheck": "Use for hours or days, not as a standing residence.",
+    "scoreNarrative": "Visibility is the only major asset; isolation and sustainability are poor. Height does not compensate for urban exposure."
   },
   {
     "name": "Clovelly",
@@ -7895,25 +8218,42 @@
     "lat": 50.989,
     "long": -4.399,
     "scores": {
-      "overall": 6,
+      "overall": 6.5,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 6,
-        "isolation": 6,
-        "accessibility": 4
+        "defensibility": 7.0,
+        "isolation": 6.5,
+        "sustainability": 5.5
       }
     },
     "description": {
-      "summary": "A small and relatively self-contained coastal settlement with decent survivability, but not a naturally dominant defensive site.",
+      "summary": "A steep coastal village with constrained access routes, natural defensibility, and small-scale shelter. It is viable as a compact refuge, but limited expansion, coastal exposure, and supply dependence restrict long-term survival.",
       "strengths": [
-        "Low scale and manageable population footprint",
-        "Some local sustainability potential"
+        "Steep approach routes support access control",
+        "Compact village form is easier to secure than sprawl",
+        "Coastal setting enables selective small-boat logistics"
       ],
       "weaknesses": [
-        "Limited defensive hardening",
-        "Coastal exposure reduces resilience"
-      ]
-    }
+        "Limited expansion space caps population resilience",
+        "Coastal weather exposure disrupts movement and supplies",
+        "Dependence on imported essentials remains significant"
+      ],
+      "analysis": "Clovelly benefits from terrain-constrained movement and manageable settlement scale. Its constraint is growth: limited footprint and coastal logistics make expansion and redundancy difficult."
+    },
+    "verdict": {
+      "bestUseCase": "Compact coastal refuge for a small organized community",
+      "failureMode": "Capacity and supply ceilings trigger decline"
+    },
+    "survivalProfile": {
+      "initial": "Moderate to strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Small defended settlement with strict population and supply discipline",
+      "keyRisk": "What kills you here is capacity overrun: demand outgrows terrain and logistics limits."
+    },
+    "realityCheck": "Works best with low headcount, stored reserves, and backup inland links.",
+    "scoreNarrative": "Defensibility and isolation are solid for a village-scale base, but sustainability remains moderate. Success depends on staying within its narrow capacity envelope."
   },
   {
     "name": "Isle of Eigg Village",
