@@ -84,8 +84,19 @@ def top_and_low_keys(categories: dict) -> tuple[str, str]:
         low_key = ranked_low[1]
     return top_key, low_key
 
+
+def is_landmark_like(base_type: str) -> bool:
+    return base_type in {"landmark_structure", "transit_hub", "urban_structure", "tower"}
+
+
+def category_spread(categories: dict) -> float:
+    values = [float(categories[key]) for key in REQUIRED_KEYS]
+    return max(values) - min(values)
+
+
 def pick_archetype(base: dict) -> tuple[str, str]:
     categories = base["scores"]["categories"]
+    base_type = str(base.get("type", "")).strip().lower()
     overall = float(base["scores"]["overall"])
     defensibility = float(categories["defensibility"])
     isolation = float(categories["isolation"])
@@ -96,31 +107,50 @@ def pick_archetype(base: dict) -> tuple[str, str]:
     optional_logistics = categories.get("logistics")
 
     top_key, low_key = top_and_low_keys(categories)
+    spread = category_spread(categories)
+    low_pair = min(defensibility, isolation)
+    support_pair = max(float(optional_access or 0), float(optional_supplies or 0), float(optional_logistics or 0))
 
-    spread = max(defensibility, isolation, sustainability) - min(defensibility, isolation, sustainability)
-
-    if overall < 3.5 or all(float(categories[key]) <= 4.2 for key in REQUIRED_KEYS):
+    if overall < 3.5 and is_landmark_like(base_type):
         return (
             "Symbolic trap",
-            "Looks defensible on paper, but core survival systems fail too fast.",
+            "Visually imposing, but survival fundamentals collapse almost immediately.",
         )
 
-    if top_key == "defensibility" and defensibility >= 8.0 and sustainability <= 5.6:
+    if overall < 4.4 and low_pair <= 4.6 and support_pair >= 6.8:
+        return (
+            "Logistics trap",
+            "Throughput looks attractive, but weak defence and weak isolation make it hard to hold.",
+        )
+
+    if defensibility >= 8.2 and isolation >= 7.5 and sustainability <= 5.4:
+        return (
+            "Defensive-isolation stronghold",
+            "Outstanding protection and separation, but long-term success hinges on fixing sustainability.",
+        )
+
+    if top_key == "defensibility" and defensibility >= 8.0 and sustainability <= 5.8:
         return (
             "Defensive stronghold",
             "Outstanding protection, but long-term success depends on fixing sustainability.",
         )
 
-    if top_key == "isolation" and isolation >= 8.0 and (sustainability <= 6.2 or (is_number(optional_access) and optional_access < 4.5)):
+    if isolation >= 8.4 and sustainability >= 7.0 and defensibility <= 7.6:
+        return (
+            "Isolation settlement",
+            "Built around elite isolation and strong sustainability; defence is secondary.",
+        )
+
+    if top_key == "isolation" and isolation >= 8.0 and (sustainability <= 6.3 or (is_number(optional_access) and optional_access < 4.6)):
         return (
             "Isolation refuge",
             "Separation is a major advantage, but sustaining people and flow is the pressure point.",
         )
 
-    if top_key == "sustainability" and sustainability >= 7.4 and overall >= 6.8:
+    if sustainability >= 7.5 and overall >= 6.8 and spread <= 1.6:
         return (
             "Long-term settlement",
-            "Built for endurance with a workable long-horizon survival profile.",
+            "Built for endurance, with balanced support for sustained multi-season survival.",
         )
 
     if any(is_number(value) and float(value) >= 7.5 for value in (optional_supplies, optional_logistics)) and overall >= 6.0:
@@ -133,6 +163,12 @@ def pick_archetype(base: dict) -> tuple[str, str]:
         return (
             "Resource base",
             "Useful stock and infrastructure capacity, but requires protective discipline.",
+        )
+
+    if overall >= 8.0 and spread >= 2.2:
+        return (
+            "Specialist survivor",
+            "Top-tier outcome driven by standout strengths, but the profile is highly specialized.",
         )
 
     if overall >= 6.4 and spread >= 2.8 and float(categories[low_key]) <= 5.0:
@@ -153,9 +189,28 @@ def pick_archetype(base: dict) -> tuple[str, str]:
             "Best used as a stopgap while moving toward a stronger base.",
         )
 
+    dominant_gap = float(categories[top_key]) - float(categories[low_key])
+    if overall >= 6.6 and spread <= 1.4 and dominant_gap <= 1.4 and min(defensibility, isolation, sustainability) >= 6.0:
+        return (
+            "Balanced survivor",
+            "Strong all-round performance with no extreme weakness.",
+        )
+
+    if top_key == "sustainability" and sustainability >= 6.8:
+        return (
+            "Sustainability-leaning refuge",
+            "Durability is the core advantage, but defensive and isolation gaps still define risk.",
+        )
+
+    if top_key == "isolation" and isolation >= 6.8:
+        return (
+            "Isolation-leaning refuge",
+            "Distance and separation help, but resilience depends on stronger supporting systems.",
+        )
+
     return (
-        "Balanced survivor",
-        "No single elite trait, but a workable all-round profile for adaptive groups.",
+        "Defence-leaning refuge",
+        "Protective strength is the main edge, but weaker support traits cap long-term reliability.",
     )
 
 
@@ -170,13 +225,20 @@ def build_shape_summary(base: dict) -> str:
         "isolation": "isolation",
         "sustainability": "long-term viability",
     }
+    top_value = float(categories[top_key])
+    low_value = float(categories[low_key])
+    spread = category_spread(categories)
 
-    if overall >= 7.5:
-        return f"Built around elite {noun[top_key]}, with {noun[low_key]} as the main constraint."
-    if overall >= 6.0:
-        return f"Leans on {noun[top_key]} for stability, but {noun[low_key]} remains the decisive weakness."
+    if overall >= 8.0 and spread >= 2.2:
+        return f"Exceptional outcome powered by {noun[top_key]}, but performance still bends around weak {noun[low_key]}."
+    if overall >= 7.4 and low_value <= 5.5:
+        return f"Built around elite {noun[top_key]}; {noun[low_key]} is the main constraint."
+    if overall >= 7.0:
+        return f"High-function profile with strong {noun[top_key]}, while {noun[low_key]} remains the critical upgrade target."
+    if overall >= 6.0 and top_value >= 7.0:
+        return f"Leans on {noun[top_key]} for stability, but weak {noun[low_key]} still dictates failure risk."
     if overall >= 4.5:
-        return f"Shows partial strength in {noun[top_key]}, yet repeated pressure exposes weak {noun[low_key]}."
+        return f"Partial strength in {noun[top_key]} cannot fully offset recurring {noun[low_key]} pressure."
     return f"Any edge in {noun[top_key]} is overwhelmed by severe {noun[low_key]} weakness."
 
 
