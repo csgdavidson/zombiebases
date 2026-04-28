@@ -1,5 +1,6 @@
 const DATA_URL = './data/bases-index.json';
 const STATS_URL = './data/base-stats.json';
+const RANKINGS_URL = './data/rankings.json';
 
 const LABELS = {
   type: {
@@ -67,6 +68,8 @@ const elements = {
   scoreList: document.getElementById('base-score-list'),
   scoreStrengths: document.getElementById('base-score-strengths'),
   scoreWeaknesses: document.getElementById('base-score-weaknesses'),
+  rankingSection: document.getElementById('ranking-section'),
+  rankingList: document.getElementById('ranking-list'),
   comparisonSection: document.getElementById('comparison-section'),
   comparisonInsight: document.getElementById('comparison-insight'),
   comparisonOverallList: document.getElementById('comparison-overall-list'),
@@ -619,6 +622,70 @@ function renderComparisonInsight(comparisons) {
   elements.comparisonInsight.textContent = sentence;
 }
 
+
+function buildRankingsLinks(base, rankings) {
+  if (!rankings || typeof rankings !== 'object') {
+    return [];
+  }
+
+  const globalEntry = (rankings.global || []).find((entry) => entry.slug === base.slug);
+  const regionEntry = (rankings.byRegion?.[base.region] || []).find((entry) => entry.slug === base.slug);
+  const typeEntry = (rankings.byType?.[base.type] || []).find((entry) => entry.slug === base.slug);
+
+  const entries = [];
+
+  if (globalEntry) {
+    const topPercent = Math.max(1, Math.round(globalEntry.percentile));
+    entries.push({
+      text: `Top ${topPercent}% globally`,
+      href: './rankings.html'
+    });
+  }
+
+  if (regionEntry) {
+    const regionLabel = labelFor('region', base.region);
+    entries.push({
+      text: `#${regionEntry.rank} in ${regionLabel}`,
+      href: `./rankings-region.html?region=${encodeURIComponent(base.region)}`
+    });
+  }
+
+  if (typeEntry) {
+    const typeLabel = labelFor('type', base.type);
+    entries.push({
+      text: `Top ${typeEntry.rank} in ${typeLabel}`,
+      href: `./rankings-type.html?type=${encodeURIComponent(base.type)}`
+    });
+  }
+
+  return entries;
+}
+
+function renderRankingPosition(base, rankings) {
+  if (!elements.rankingSection || !elements.rankingList) {
+    return;
+  }
+
+  const rankingLinks = buildRankingsLinks(base, rankings);
+  elements.rankingList.innerHTML = '';
+
+  if (!rankingLinks.length) {
+    elements.rankingSection.hidden = true;
+    return;
+  }
+
+  rankingLinks.forEach((item) => {
+    const li = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = item.href;
+    link.textContent = item.text;
+    li.appendChild(link);
+    elements.rankingList.appendChild(li);
+  });
+
+  elements.rankingSection.hidden = false;
+}
+
 function renderComparison(base, stats) {
   if (!elements.comparisonSection || !elements.comparisonOverallList || !elements.comparisonCategoryList) {
     return;
@@ -733,7 +800,7 @@ function renderRelatedBases(base, bases, params) {
   elements.relatedSection.hidden = false;
 }
 
-function showBase(base, bases, params, stats) {
+function showBase(base, bases, params, stats, rankings) {
   elements.name.textContent = base.name;
   applyDetailMetadata(base);
   elements.meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
@@ -743,6 +810,7 @@ function showBase(base, bases, params, stats) {
   renderVerdict(base);
   renderDescription(base);
   renderScore(base);
+  renderRankingPosition(base, rankings);
   renderComparison(base, stats);
   renderSurvivalProfile(base);
   renderUseCaseAndRisk(base);
@@ -768,9 +836,10 @@ async function loadBase() {
   elements.status.textContent = 'Loading base details...';
 
   try {
-    const [basesResponse, statsResponse] = await Promise.all([
+    const [basesResponse, statsResponse, rankingsResponse] = await Promise.all([
       fetch(DATA_URL),
-      fetch(STATS_URL)
+      fetch(STATS_URL),
+      fetch(RANKINGS_URL)
     ]);
     if (!basesResponse.ok) {
       throw new Error(`Failed to load bases data (${basesResponse.status})`);
@@ -778,6 +847,7 @@ async function loadBase() {
 
     const bases = await basesResponse.json();
     const stats = statsResponse.ok ? await statsResponse.json() : null;
+    const rankings = rankingsResponse.ok ? await rankingsResponse.json() : null;
     const matchedBase = slugHelper?.resolveBaseBySlug
       ? slugHelper.resolveBaseBySlug(bases, slug)
       : bases.find((base) => base.slug === slug);
@@ -787,7 +857,7 @@ async function loadBase() {
       return;
     }
 
-    showBase(matchedBase, bases, params, stats);
+    showBase(matchedBase, bases, params, stats, rankings);
   } catch (error) {
     console.error(error);
     showNotFound();

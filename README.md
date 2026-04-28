@@ -83,10 +83,11 @@ Before Phase 3, add new features only when they directly support the V2 content 
 - `bases/*.html` — static dedicated-page proof-of-concept files (not production-indexed yet).
 - `js/main.js` — homepage data loading, filtering, sorting, URL-state syncing, metadata updates.
 - `js/map.js` — Leaflet map + marker clustering renderer.
-- `js/base.js` — detail-page data loading, rendering, related bases, metadata updates.
+- `js/base.js` — detail-page data loading, rendering, related bases, metadata updates, and ranking positioning links.
 - `js/seo.js` — shared metadata/canonical helpers.
 - `data/bases-index.json` — normalized dataset consumed by the frontend.
 - `scripts/generate-sitemap.py` — deterministic sitemap generation for canonical/indexable URLs.
+- `scripts/generate-rankings.py` — deterministic ranking generation from `data/bases-index.json`.
 - `.github/workflows/sitemap.yml` — GitHub Actions automation that regenerates and commits `sitemap.xml` on relevant changes.
 - `robots.txt` and `sitemap.xml` — crawl/index controls.
 
