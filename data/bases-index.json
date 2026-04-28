@@ -7521,22 +7521,37 @@
       "overall": 7,
       "categories": {
         "defensibility": 8,
-        "sustainability": 6,
+        "sustainability": 5,
         "isolation": 6,
         "accessibility": 5
       }
     },
-    "description": {
-      "summary": "Military-grade infrastructure with strong defensive capability and moderate isolation.",
-      "strengths": [
-        "Trained defensive layout",
-        "Controlled access environment"
-      ],
-      "weaknesses": [
-        "Strategic target risk",
-        "Limited long-term independence"
-      ]
-    }
+    "summary": "2e REP Calvi is a hard military compound with disciplined layout and perimeter control, but it sits on a populated island with finite local capacity. What kills you here is prolonged resupply failure after the initial defensive advantage burns off.",
+    "strengths": [
+      "Military-grade perimeter and internal control",
+      "Experienced defensive infrastructure",
+      "Island separation lowers random overland pressure"
+    ],
+    "weaknesses": [
+      "Finite fuel, medical, and technical stock depth",
+      "Island population pressure can rise fast",
+      "Long-term autonomy depends on maritime logistics"
+    ],
+    "verdict": {
+      "bestUseCase": "Short-to-mid-term fortified command post",
+      "failureMode": "Logistics attrition and island demand overload"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong if stores are controlled",
+      "longTerm": "Moderate; declines without stable sea resupply"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Disciplined defensive holdout with planned rotation",
+      "keyRisk": "Supply-chain break turns a fortress into a rationing crisis"
+    },
+    "realityCheck": "Assumes early control of stores, water treatment, and port access. Without shipping continuity, endurance falls sharply.",
+    "scoreNarrative": "Calvi scores high on defensibility, mid on isolation, and weaker on sustainability. It is a capable holdout, not a self-contained island civilization."
   },
   {
     "name": "NATO Airbase Geilenkirchen",
@@ -7547,25 +7562,40 @@
     "lat": 50.96,
     "long": 6.042,
     "scores": {
-      "overall": 7,
+      "overall": 6,
       "categories": {
         "defensibility": 8,
-        "sustainability": 6,
-        "isolation": 4,
+        "sustainability": 5,
+        "isolation": 3,
         "accessibility": 7
       }
     },
-    "description": {
-      "summary": "Highly capable military installation with strong infrastructure and defense.",
-      "strengths": [
-        "Military-grade security",
-        "Operational infrastructure"
-      ],
-      "weaknesses": [
-        "High-value target",
-        "Limited isolation"
-      ]
-    }
+    "summary": "Geilenkirchen offers serious NATO-grade infrastructure and layered security, but it is embedded in dense mainland networks. What kills you here is constant contact pressure once perimeter staffing and logistics slip.",
+    "strengths": [
+      "Robust hardened facilities and controlled access points",
+      "Large operational footprint for staging and triage",
+      "Strong immediate defensive posture"
+    ],
+    "weaknesses": [
+      "Very low isolation in a connected region",
+      "Large perimeter demands sustained manpower",
+      "High system dependence for power, maintenance, and fuel"
+    ],
+    "verdict": {
+      "bestUseCase": "Regional operations hub, not permanent sanctuary",
+      "failureMode": "Perimeter fatigue under continuous external pressure"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate-to-strong",
+      "longTerm": "Weak-to-moderate without external support"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Command-and-control base for organized groups",
+      "keyRisk": "Contact frequency and staffing burnout erode security faster than expected"
+    },
+    "realityCheck": "Assumes trained personnel, spare parts, and reliable fuel reserves. Civilian spillover and road access drive persistent threat load.",
+    "scoreNarrative": "High defensibility is offset by low isolation and only moderate sustainability. Geilenkirchen performs as a mission base, not a low-signature refuge."
   },
   {
     "name": "Heligoland",
@@ -7584,17 +7614,32 @@
         "accessibility": 3
       }
     },
-    "description": {
-      "summary": "Highly isolated island offering strong defensive and survival advantages.",
-      "strengths": [
-        "Extreme isolation",
-        "Clear perimeter control"
-      ],
-      "weaknesses": [
-        "Limited infrastructure",
-        "Resupply challenges"
-      ]
-    }
+    "summary": "Heligoland is one of the strongest isolation plays in Western Europe: remote, compact, and easier to monitor than mainland sites. What kills you here is maritime dependency when weather or fuel cuts the lifeline.",
+    "strengths": [
+      "Exceptional island isolation and controllable approaches",
+      "Small footprint improves surveillance and perimeter efficiency",
+      "Low casual traffic compared with mainland refuges"
+    ],
+    "weaknesses": [
+      "Food, medicine, and spare-part depth is limited",
+      "Sea-state and fuel constraints can interrupt movement",
+      "Medical evacuation and redundancy are fragile"
+    ],
+    "verdict": {
+      "bestUseCase": "High-isolation refuge with strict consumption control",
+      "failureMode": "Supply isolation cascade after maritime disruption"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate if stocks and fishing are managed well"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Low-signature island holdout for small groups",
+      "keyRisk": "A transport gap quickly becomes a food and medical crisis"
+    },
+    "realityCheck": "Assumes boat access, maintenance capability, and disciplined rationing. Isolation helps security but punishes planning errors.",
+    "scoreNarrative": "Heligoland ranks as a strong base because isolation is elite and defensibility is solid. Sustainability is adequate but remains the deciding ceiling."
   },
   {
     "name": "Île d’Yeu",
@@ -7613,17 +7658,32 @@
         "accessibility": 4
       }
     },
-    "description": {
-      "summary": "Strong island option with good isolation and moderate sustainability.",
-      "strengths": [
-        "Island separation",
-        "Manageable population"
-      ],
-      "weaknesses": [
-        "Limited resources",
-        "Dependent on supply routes"
-      ]
-    }
+    "summary": "Île d’Yeu is a balanced island refuge with useful separation and livable conditions, but it lacks deep strategic depth. What kills you here is slow resource depletion under prolonged isolation.",
+    "strengths": [
+      "Good island isolation without extreme remoteness",
+      "Usable settlement footprint for community-scale survival",
+      "Approaches are finite and monitorable"
+    ],
+    "weaknesses": [
+      "Limited expansion room and storage depth",
+      "Dependence on maritime logistics for critical items",
+      "Population concentration can strain local systems"
+    ],
+    "verdict": {
+      "bestUseCase": "Medium-term island community refuge",
+      "failureMode": "Resource drawdown outpaces replenishment"
+    },
+    "survivalProfile": {
+      "initial": "Moderate-to-strong",
+      "shortTerm": "Strong with governance",
+      "longTerm": "Moderate under tight resource discipline"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Organized island settlement with controlled intake",
+      "keyRisk": "Demand growth and interrupted imports degrade resilience"
+    },
+    "realityCheck": "Assumes early governance, stock accounting, and shoreline control. Without demand management, sustainability decays steadily.",
+    "scoreNarrative": "Île d’Yeu performs well through strong isolation and balanced core scores, but no category is elite enough to absorb major planning failures."
   },
   {
     "name": "Eiffel Tower",
@@ -7642,17 +7702,31 @@
         "accessibility": 9
       }
     },
-    "description": {
-      "summary": "Iconic landmark with no realistic survival application.",
-      "strengths": [
-        "High visibility",
-        "Strong structure"
-      ],
-      "weaknesses": [
-        "No sustainability",
-        "Impossible to defend"
-      ]
-    }
+    "summary": "The Eiffel Tower is a visibility trap, not a survival base. What kills you here is immediate exposure and zero self-sufficiency.",
+    "strengths": [
+      "Excellent observation height for short-duration reconnaissance",
+      "Strong symbolic wayfinding point"
+    ],
+    "weaknesses": [
+      "No defensible living footprint",
+      "No food-water autonomy",
+      "Extreme urban density and visibility"
+    ],
+    "verdict": {
+      "bestUseCase": "Brief observation waypoint only",
+      "failureMode": "Rapid overrun from concentrated urban contact"
+    },
+    "survivalProfile": {
+      "initial": "Very weak",
+      "shortTerm": "Very weak",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary lookout before immediate relocation",
+      "keyRisk": "Every signal and movement attracts attention in a dense city core"
+    },
+    "realityCheck": "Assumes access is even possible in a collapse scenario. The site cannot function as a sustained refuge.",
+    "scoreNarrative": "All core survival categories are near-minimum. High accessibility is a liability here, not an advantage."
   },
   {
     "name": "Phare du Créac'h",
@@ -7663,7 +7737,7 @@
     "lat": 48.459,
     "long": -4.785,
     "scores": {
-      "overall": 5,
+      "overall": 4,
       "categories": {
         "defensibility": 4,
         "sustainability": 3,
@@ -7671,17 +7745,32 @@
         "accessibility": 3
       }
     },
-    "description": {
-      "summary": "Isolated lighthouse with visibility advantages but limited survival capacity.",
-      "strengths": [
-        "Remote coastal position",
-        "High visibility"
-      ],
-      "weaknesses": [
-        "Very limited resources",
-        "Small footprint"
-      ]
-    }
+    "summary": "Phare du Créac’h provides remote coastal isolation and observation value, but it is too small and brittle for extended habitation. What kills you here is capacity failure once stores run thin.",
+    "strengths": [
+      "Strong geographic separation and low background traffic",
+      "Excellent sightlines for early warning",
+      "Simple perimeter geometry"
+    ],
+    "weaknesses": [
+      "Minimal living and storage capacity",
+      "Poor long-term food and medical resilience",
+      "High weather exposure in a coastal environment"
+    ],
+    "verdict": {
+      "bestUseCase": "Outpost and monitoring node, not primary base",
+      "failureMode": "Resource exhaustion in a confined site"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak-to-moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Recon support tied to a larger parent base",
+      "keyRisk": "Tiny capacity means small planning errors become fatal quickly"
+    },
+    "realityCheck": "Assumes support from nearby settlements or relay supply. Standalone operation is time-limited.",
+    "scoreNarrative": "Isolation is strong, but defensibility and sustainability are too low for independent long-horizon survival."
   },
   {
     "name": "Eguisheim",
@@ -7692,25 +7781,40 @@
     "lat": 48.042,
     "long": 7.307,
     "scores": {
-      "overall": 6,
+      "overall": 5,
       "categories": {
-        "defensibility": 5,
+        "defensibility": 4,
         "sustainability": 6,
-        "isolation": 5,
+        "isolation": 4,
         "accessibility": 5
       }
     },
-    "description": {
-      "summary": "Small village with moderate sustainability but limited defensive advantage.",
-      "strengths": [
-        "Low population density",
-        "Local resource potential"
-      ],
-      "weaknesses": [
-        "Minimal fortification",
-        "Limited scale"
-      ]
-    }
+    "summary": "Eguisheim is a workable village-scale fallback with manageable density and access to surrounding land. What kills you here is perimeter dilution once pressure exceeds what a small settlement can police.",
+    "strengths": [
+      "Existing housing and basic civic infrastructure",
+      "Nearby agricultural support potential",
+      "Human-scale layout for local coordination"
+    ],
+    "weaknesses": [
+      "Limited hard defensive structure",
+      "Low isolation in a connected region",
+      "Security depends on continuous manpower"
+    ],
+    "verdict": {
+      "bestUseCase": "Community resilience node with local agriculture",
+      "failureMode": "Security collapse from prolonged perimeter overstretch"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Moderate if governance remains cohesive"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Managed small-town survival network",
+      "keyRisk": "Conflict spillover and staffing fatigue outpace local control"
+    },
+    "realityCheck": "Assumes social cohesion, land access, and tool continuity. Without coordinated defense, settlement advantages erode fast.",
+    "scoreNarrative": "Eguisheim sits in the middle tier: sustainability is decent, but low defensibility and isolation cap overall performance."
   },
   {
     "name": "Hallstatt",
@@ -7723,23 +7827,38 @@
     "scores": {
       "overall": 7,
       "categories": {
-        "defensibility": 6,
+        "defensibility": 7,
         "sustainability": 7,
         "isolation": 6,
         "accessibility": 4
       }
     },
-    "description": {
-      "summary": "Naturally constrained alpine settlement with solid survivability potential.",
-      "strengths": [
-        "Geographic defensibility",
-        "Water and local resources"
-      ],
-      "weaknesses": [
-        "Tourism exposure",
-        "Limited expansion"
-      ]
-    }
+    "summary": "Hallstatt combines constrained access with strong local livability, making it one of the better balanced settlement options. What kills you here is chokepoint failure that traps residents against terrain.",
+    "strengths": [
+      "Terrain creates natural approach constraints",
+      "Established settlement systems improve habitability",
+      "Good balance between defense and daily survivability"
+    ],
+    "weaknesses": [
+      "Limited evacuation options if routes are cut",
+      "Tourism-era infrastructure may not scale under crisis",
+      "Resource imports still matter for medicine and specialized goods"
+    ],
+    "verdict": {
+      "bestUseCase": "Longer-term mountain-lake community holdout",
+      "failureMode": "Entrapment after route denial and supply interruption"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate-to-strong with disciplined governance"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Defensible alpine settlement with controlled access",
+      "keyRisk": "Single-route dependency can convert defensive terrain into a trap"
+    },
+    "realityCheck": "Assumes control of key approaches, lake logistics, and winter planning. Seasonal stress testing is essential.",
+    "scoreNarrative": "Hallstatt scores well because no core category is weak; defensibility and sustainability jointly carry it above average."
   },
   {
     "name": "Maginot Line Bunkers",
@@ -7750,25 +7869,40 @@
     "lat": 49.925,
     "long": 2.142,
     "scores": {
-      "overall": 8,
+      "overall": 6,
       "categories": {
         "defensibility": 9,
-        "sustainability": 4,
+        "sustainability": 3,
         "isolation": 6,
         "accessibility": 4
       }
     },
-    "description": {
-      "summary": "Deep defensive bunker systems with exceptional protection but limited adaptability.",
-      "strengths": [
-        "Hardened underground defenses",
-        "Designed for prolonged defense"
-      ],
-      "weaknesses": [
-        "Low sustainability",
-        "Static design limitations"
-      ]
-    }
+    "summary": "The Maginot bunkers are elite for hard protection but poor at independent endurance. What kills you here is subsystem failure underground: air, water, power, and sanitation.",
+    "strengths": [
+      "Exceptional hardened defensive architecture",
+      "Controlled ingress and layered internal compartments",
+      "High resistance to direct assault"
+    ],
+    "weaknesses": [
+      "Very low long-term sustainability without technical upkeep",
+      "Underground life-support dependencies create brittle failure points",
+      "Limited adaptability to changing population needs"
+    ],
+    "verdict": {
+      "bestUseCase": "Short-to-mid-term siege shelter",
+      "failureMode": "Life-support breakdown in sealed infrastructure"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate-to-strong",
+      "longTerm": "Weak unless heavily retrofitted"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Defensive refuge during peak threat windows",
+      "keyRisk": "Technical degradation turns protection into entombment risk"
+    },
+    "realityCheck": "Assumes functioning ventilation, drainage, power alternatives, and maintenance crews. Static fortification is not the same as autonomous settlement.",
+    "scoreNarrative": "Defensibility is top-tier, but sustainability is decisively weak, pulling the overall score down to mid-tier."
   },
   {
     "name": "Naours Underground City",
@@ -7779,25 +7913,40 @@
     "lat": 50.951,
     "long": 2.133,
     "scores": {
-      "overall": 7,
+      "overall": 5,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 6,
+        "defensibility": 7,
+        "sustainability": 4,
+        "isolation": 5,
         "accessibility": 4
       }
     },
-    "description": {
-      "summary": "Extensive underground refuge system with strong defensive advantages.",
-      "strengths": [
-        "Hidden subterranean network",
-        "Protected environment"
-      ],
-      "weaknesses": [
-        "Limited sustainability",
-        "Ventilation constraints"
-      ]
-    }
+    "summary": "Naours gives useful subterranean concealment and controlled entry, but it was never built as a full independent city. What kills you here is prolonged underground strain: air quality, hygiene, and supply depletion.",
+    "strengths": [
+      "Concealed underground spaces reduce immediate exposure",
+      "Defensible access points support controlled entry",
+      "Thermal stability improves short-term shelter conditions"
+    ],
+    "weaknesses": [
+      "Limited capacity for sanitation and long-term habitation",
+      "Weak food-water autonomy",
+      "Extended underground occupancy degrades health and morale"
+    ],
+    "verdict": {
+      "bestUseCase": "Temporary concealment shelter during high-threat periods",
+      "failureMode": "Habitation systems collapse during prolonged occupancy"
+    },
+    "survivalProfile": {
+      "initial": "Moderate-to-strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Fallback hide site linked to surface support",
+      "keyRisk": "Staying too long underground creates compounding health failures"
+    },
+    "realityCheck": "Assumes regular rotation, external supply, and strict occupancy limits. As a permanent base, it is structurally mismatched.",
+    "scoreNarrative": "Naours is stronger defensively than it is sustainable. It works as a shelter layer, not as the final survival architecture."
   },
   {
     "name": "Charles de Gaulle Airport",
@@ -7811,22 +7960,36 @@
       "overall": 2,
       "categories": {
         "defensibility": 1,
-        "sustainability": 4,
+        "sustainability": 3,
         "isolation": 1,
         "accessibility": 10
       }
     },
-    "description": {
-      "summary": "Extensive infrastructure but completely exposed and impossible to secure.",
-      "strengths": [
-        "Logistics and supply access",
-        "Large infrastructure"
-      ],
-      "weaknesses": [
-        "Extreme exposure",
-        "High population density"
-      ]
-    }
+    "summary": "Charles de Gaulle Airport is a giant logistics surface but a catastrophic survival refuge. What kills you here is relentless exposure from scale, visibility, and traffic convergence.",
+    "strengths": [
+      "Large storage and transport infrastructure",
+      "Multiple movement corridors for rapid evacuation"
+    ],
+    "weaknesses": [
+      "Impossible perimeter burden",
+      "Zero isolation in a major metro network",
+      "High dependence on complex systems and fuel"
+    ],
+    "verdict": {
+      "bestUseCase": "Short-duration extraction and transit only",
+      "failureMode": "Continuous contact attrition overwhelms any defensive effort"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Very weak",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Transit node with immediate exit plan",
+      "keyRisk": "Exposure is constant and multidirectional; static defense fails fast"
+    },
+    "realityCheck": "Assumes temporary use before relocation. Treating CDG as a permanent base is strategically unsound.",
+    "scoreNarrative": "CDG remains near the bottom because defensibility and isolation are minimal. Infrastructure scale cannot compensate for exposure."
   },
   {
     "name": "Schiphol Airport",
@@ -7840,21 +8003,35 @@
       "overall": 2,
       "categories": {
         "defensibility": 1,
-        "sustainability": 4,
+        "sustainability": 3,
         "isolation": 1,
         "accessibility": 10
       }
     },
-    "description": {
-      "summary": "Highly advanced transport hub but completely unsuitable for survival.",
-      "strengths": [
-        "Infrastructure",
-        "Connectivity"
-      ],
-      "weaknesses": [
-        "Extreme exposure",
-        "Unmanageable scale"
-      ]
-    }
+    "summary": "Schiphol has modern infrastructure but shares the same fatal profile as other mega-airports. What kills you here is nonstop exposure across open, high-traffic approach vectors.",
+    "strengths": [
+      "Robust logistics and warehousing footprint",
+      "Strong transport connectivity for short-window movement"
+    ],
+    "weaknesses": [
+      "Open, sprawling layout that is hard to secure",
+      "Very low isolation in a dense urban region",
+      "Dependence on energy, staffing, and technical continuity"
+    ],
+    "verdict": {
+      "bestUseCase": "Evacuation waypoint, not refuge",
+      "failureMode": "Perimeter collapse under constant multidirectional pressure"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Very weak",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Brief staging for relocation operations",
+      "keyRisk": "High visibility and connectivity ensure persistent conflict contact"
+    },
+    "realityCheck": "Assumes mission-oriented use with strict time limits. Long-term occupation is a losing proposition.",
+    "scoreNarrative": "Despite strong infrastructure, Schiphol scores very low where survival matters most: defensibility, isolation, and endurance."
   }
 ]
