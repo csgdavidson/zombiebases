@@ -209,6 +209,19 @@ function formatOverallScore(base) {
   return score === null ? '' : (slugHelper?.formatScore?.(score) || `${score.toFixed(1)}/10`);
 }
 
+function scoreToneClass(value) {
+  if (!isValidScoreValue(value)) {
+    return '';
+  }
+  if (value >= 8) {
+    return 'score-high';
+  }
+  if (value >= 5) {
+    return 'score-medium';
+  }
+  return 'score-low';
+}
+
 function compareByName(a, b) {
   return a.name.localeCompare(b.name);
 }
@@ -427,13 +440,14 @@ function createBaseUrl(baseOrSlug) {
 }
 
 function appendCardScore(container, base) {
+  const scoreValue = computeOverallScore(base);
   const scoreText = formatOverallScore(base);
   if (!scoreText) {
     return;
   }
 
   const score = document.createElement('span');
-  score.className = 'base-score-pill';
+  score.className = `base-score-pill ${scoreToneClass(scoreValue)}`.trim();
   score.textContent = scoreText.replace('/10', '');
   container.appendChild(score);
 }
@@ -505,16 +519,12 @@ function renderBaseList(items) {
 
     const meta = document.createElement('p');
     meta.className = 'base-meta';
-    meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
+    const location = base.country
+      ? `${base.country}, ${labelFor('region', base.region)}`
+      : labelFor('region', base.region);
+    meta.textContent = `${location} • ${labelFor('type', base.type)}`;
 
     link.append(header, meta);
-
-    if (base.country) {
-      const country = document.createElement('p');
-      country.className = 'base-country';
-      country.textContent = base.country;
-      link.appendChild(country);
-    }
 
     appendCardBadges(link, base);
 
