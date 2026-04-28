@@ -6517,7 +6517,7 @@
       "keyRisk": "Maritime disruption breaks resupply, medevac, and command continuity"
     },
     "realityCheck": "Assumes seaworthy transport, fuel discipline, and managed freshwater systems across multiple inhabited points.",
-    "scoreNarrative": "Lakshadweep’s dominant strength is hard geographic separation that filters random contact and buys reaction time. Its dominant weakness is cross-island logistics fragility: once weather, fuel, or boat readiness degrades, the network stops functioning as one system. The core trade-off is security through remoteness versus constant dependence on maritime mobility to keep people, water, and care connected."
+    "scoreNarrative": "Lakshadweep works only when multiple islands operate as one coordinated network, with boats, fuel, and scheduling linking food, water, and care between nodes. The core dependency is maritime logistics discipline; when weather windows close or vessel readiness drops, the archipelago fragments into isolated pockets with uneven survival odds. Over time that fragmentation compounds, because every missed transfer erodes medical resilience, command coherence, and trust between islands."
   },
   {
     "name": "Lighthouse Mahabalipuram",
@@ -6561,7 +6561,7 @@
       "keyRisk": "Rapid exposure and depletion force abandonment quickly"
     },
     "realityCheck": "Assumes no protected logistics tail and no scalable support infrastructure on site.",
-    "scoreNarrative": "The main strength is short-range observation from a simple elevated structure. The dominant weakness is total sustainment dependence: once external supply stops, the site fails quickly regardless of tactics. The trade-off is temporary visibility value versus near-zero endurance under sustained pressure."
+    "scoreNarrative": "Mahabalipuram is viable only as a lookout-and-routing point that feeds intelligence into a separate sustainment base, not as a standalone holdout. Its core dependency is uninterrupted external support for food, water, shelter depth, and security manpower. Once that support thins, observation value remains but survival capacity collapses first, turning the site into a liability."
   },
   {
     "name": "Qutub Minar",
@@ -6605,7 +6605,7 @@
       "keyRisk": "Crowd convergence overwhelms any defensive attempt"
     },
     "realityCheck": "Assumes city-scale disruption and no protected exclusion perimeter around the site.",
-    "scoreNarrative": "Qutub’s only meaningful strength is waypoint utility from its visibility. Its dominant weakness is unavoidable metropolitan exposure combined with no sustainment base. The core trade-off is navigation value versus instant encirclement risk and rapid depletion."
+    "scoreNarrative": "Qutub functions as a navigation marker and temporary coordination beacon inside a dense urban battlespace, not as a defensible settlement system. The core dependency is continuous mobility and external resupply because the site has no intrinsic production or protected living depth. If movement corridors close, encirclement and depletion happen faster than any tactical benefit from elevation."
   },
   {
     "name": "Kibber Village",
@@ -6649,7 +6649,7 @@
       "keyRisk": "Weather and altitude attrition outpace local recovery"
     },
     "realityCheck": "Assumes cold-weather readiness, stocked stores, and acclimatized population.",
-    "scoreNarrative": "Kibber’s dominant strength is deep isolation backed by controllable mountain access lines. Its dominant weakness is climate-driven sustainment strain, especially winter fuel, health, and transport interruptions. The trade-off is low contact pressure in exchange for high environmental attrition and logistics risk."
+    "scoreNarrative": "Kibber stays viable by trading contact risk for altitude control: limited approach routes reduce threat volume while tight community scale supports basic governance. The core dependency is winter logistics—fuel, medical access, and route clearance must remain reliable through long cold cycles. When that chain slips, attrition from cold exposure and delayed treatment outpaces any defensive gains from remoteness."
   },
   {
     "name": "Kuttanad Village",
@@ -6693,7 +6693,7 @@
       "keyRisk": "Defense fails when flood stress and access pressure align"
     },
     "realityCheck": "Assumes flood management, boat mobility, and protected storage for staples.",
-    "scoreNarrative": "Kuttanad’s dominant strength is food productivity from its water-managed agricultural system. Its dominant weakness is control failure in flood-prone, low-elevation terrain with porous access. The trade-off is strong feeding capacity versus persistent exposure to hydrological disruption and perimeter leakage."
+    "scoreNarrative": "Kuttanad works as a food engine only if water management, embankments, and movement corridors are governed as one continuous control system. Its core dependency is hydraulic stability: once flood defenses or pump discipline fail, fields, storage, and transit degrade together. That matters over time because even short water-control breakdowns can erase surplus and force a population shift from production to recovery."
   },
   {
     "name": "Ajanta Caves",
@@ -6737,7 +6737,7 @@
       "keyRisk": "Confinement and resource depletion degrade survivability"
     },
     "realityCheck": "Assumes pre-stocked stores and strict occupancy limits to prevent sanitation collapse.",
-    "scoreNarrative": "Ajanta’s dominant strength is defensive geometry: hard rock shelter plus controllable entry lines. Its dominant weakness is sustainment inside confined spaces, where sanitation and supplies deteriorate over time. The trade-off is strong short-term protection versus poor long-term livability."
+    "scoreNarrative": "Ajanta is viable as a choke-point shelter network where rock-cut geometry reduces breach probability and manpower requirements. Its core dependency is internal life-support discipline—ventilation, sanitation, water handling, and rationing must stay consistent in confined space. If that discipline slips, health failure and contamination emerge before perimeter failure, making duration the primary kill factor."
   },
   {
     "name": "Kargil War Bunkers",
@@ -6781,7 +6781,7 @@
       "keyRisk": "Sustainment failure collapses combat value over time"
     },
     "realityCheck": "Assumes winterized equipment, fuel, and medical chains are partially prepositioned.",
-    "scoreNarrative": "The dominant strength is elite defensibility from hardened military infrastructure in restrictive terrain. The dominant weakness is sustainment under high-altitude climate load, where fuel, medicine, and resupply become the bottleneck. The core trade-off is superior holding power versus a logistics clock that keeps running."
+    "scoreNarrative": "Kargil bunkers function as a high-control defense system where hardened positions and terrain channel any approach into predictable fire corridors. The core dependency is cold-weather sustainment throughput: fuel, power, medevac, and high-altitude spares must arrive on schedule. Once that throughput degrades, combat readiness falls faster than defensive geometry can compensate."
   },
   {
     "name": "Delhi Airport",
@@ -6825,7 +6825,7 @@
       "keyRisk": "Contact pressure and perimeter chaos overwhelm defenses"
     },
     "realityCheck": "Assumes metropolitan stress, contested access roads, and no durable air-operations control.",
-    "scoreNarrative": "Delhi Airport’s dominant strength is short-term salvage potential from major infrastructure density. Its dominant weakness is uncontrollable exposure: too many entry vectors and too much ground to secure. The trade-off is high immediate resource value versus near-impossible static survivability."
+    "scoreNarrative": "Delhi Airport is viable only as a rapid extraction-and-salvage hub that converts infrastructure density into short-term mobility and material gain. Its core dependency is perimeter control tempo across vast open surfaces and multiple ingress points. As staffing and fuel decline, control collapses first and the same connectivity that provides value drives relentless pressure."
   },
   {
     "name": "Mumbai Port",
@@ -6869,7 +6869,7 @@
       "keyRisk": "Security demand outpaces manpower and depletes stores"
     },
     "realityCheck": "Assumes contested shoreline, disrupted shipping rhythm, and unstable labor/security balance.",
-    "scoreNarrative": "Mumbai Port’s dominant strength is high-throughput logistics infrastructure that can be exploited briefly. Its dominant weakness is industrial-scale perimeter attrition in a high-pressure urban-maritime environment. The trade-off is strong short-term resource access versus rapid security and operations breakdown."
+    "scoreNarrative": "Mumbai Port works as a throughput machine when cranes, yards, and channels are synchronized under firm command and security zoning. Its core dependency is uninterrupted operational coordination across labor, fuel, and waterfront access control. The first break is usually perimeter and workflow fragmentation, after which stockpiles become contested faster than they can be redistributed."
   },
   {
     "name": "Ha Long Bay Cliffs",
@@ -6913,7 +6913,7 @@
       "keyRisk": "Storm disruption repeatedly breaks sustainment rhythm"
     },
     "realityCheck": "Assumes boat readiness, fuel reserves, and hardened storage against monsoon conditions.",
-    "scoreNarrative": "Ha Long’s dominant strength is terrain-enabled concealment with defensible maritime chokepoints. Its dominant weakness is weather-driven logistics volatility across a fragmented island network. The trade-off is tactical ambiguity and separation versus fragile sustainment rhythm under storm stress."
+    "scoreNarrative": "Ha Long is viable as a dispersed maritime system where limestone cover, narrow channels, and distributed anchor points reduce detection and concentrate approach routes. The core dependency is weather-tolerant boat logistics linking water, food, and maintenance between separated positions. Monsoon disruption is the early failure mode, because once transfer rhythm breaks, isolated nodes consume reserves unevenly and lose coordination."
   },
   {
     "name": "Rice Terrace Highlands",
@@ -6958,7 +6958,7 @@
       "keyRisk": "Overcrowding breaks food, hygiene, and governance balance"
     },
     "realityCheck": "Assumes terrace systems remain maintained and population stays within carrying limits.",
-    "scoreNarrative": "The dominant strength is food-system resilience anchored by established terrace agriculture and water control. The dominant weakness is finite carrying capacity combined with fragile mountain access for non-food essentials. The trade-off is excellent staple security versus limited scalability and external dependency for complex needs."
+    "scoreNarrative": "Rice-terrace highlands remain viable when irrigation, labor cycles, and storage are coordinated as a single production calendar rather than isolated farms. The core dependency is access to non-food essentials—medicine, tools, and fuel still depend on fragile mountain logistics. Over time, food stability can mask strategic decline until one transport break creates cascading shortages outside calories."
   },
   {
     "name": "Hue Citadel",
@@ -7002,7 +7002,7 @@
       "keyRisk": "Siege attrition depletes supplies and morale"
     },
     "realityCheck": "Assumes controlled gateways and nearby districts remain contested rather than fully denied.",
-    "scoreNarrative": "Hue’s dominant strength is defensible built form with layered internal control. Its dominant weakness is low isolation within an active urban envelope that can sustain siege pressure. The trade-off is strong short-term holding geometry versus long-term supply attrition."
+    "scoreNarrative": "Hue Citadel works as a layered urban strongpoint where walls, gates, and internal compartments can absorb shocks and delay penetration. The core dependency is external sustainment under city-scale pressure, because the site cannot outproduce prolonged siege demand. What fails first is endurance, not fortification, and that turns a tactical advantage into a slow depletion trap."
   },
   {
     "name": "Intramuros Manila",
@@ -7046,7 +7046,7 @@
       "keyRisk": "Encirclement erodes supplies faster than defense can recover"
     },
     "realityCheck": "Assumes external districts remain unstable and movement corridors are intermittently denied.",
-    "scoreNarrative": "Intramuros’ dominant strength is short-term defensive channeling via walls and gate control. Its dominant weakness is metropolitan encirclement risk paired with minimal autonomous sustainment. The trade-off is tactical delay value versus rapid exhaustion once supply lines tighten."
+    "scoreNarrative": "Intramuros is viable as a delay-and-control pocket that channels movement through gates and predictable street geometry. The core dependency is continuous import of essentials from outside the walls, since internal production depth is thin. Once surrounding districts become hostile or unstable, the enclave shifts from defensible to exhaustible in a short cycle."
   },
   {
     "name": "General Santos Fish Port",
@@ -7090,7 +7090,7 @@
       "keyRisk": "Fuel, labor, and security breakdown stop throughput quickly"
     },
     "realityCheck": "Assumes contested fuel access and unstable staffing under crisis conditions.",
-    "scoreNarrative": "The dominant strength is high food-processing throughput during early stable phases. The dominant weakness is brittle operations: fuel, labor, and security failures can halt output in days. The trade-off is strong production potential versus very low defensive endurance."
+    "scoreNarrative": "General Santos Port functions as a conversion node, turning incoming catch and cargo into concentrated calories and tradable goods at speed. Its core dependency is uninterrupted industrial rhythm—fuel, cold chain, labor coordination, and berth security must all hold simultaneously. The first failure is process stoppage, and once lines idle, spoilage and disorder erase its strategic value quickly."
   },
   {
     "name": "Sime Darby Palm Oil Estate (Sabah)",
@@ -7134,7 +7134,7 @@
       "keyRisk": "Overstretch causes cascading theft, sabotage, and output loss"
     },
     "realityCheck": "Assumes phased contraction to defendable sectors rather than full-estate control.",
-    "scoreNarrative": "The dominant strength is sustained calorie production from large agro-industrial land. The dominant weakness is security overstretch across a vast, asset-dense perimeter. The trade-off is high food throughput versus constant protection and maintenance burden."
+    "scoreNarrative": "Sime Darby Sabah is viable as a large-scale food-and-material production system only when estate logistics, workforce discipline, and perimeter governance stay synchronized. Its core dependency is control at scale across roads, mills, fields, and storage nodes spread over a broad footprint. Security dilution is the first break, and once routes or facilities are intermittently lost, output declines faster than recovery can keep pace."
   },
   {
     "name": "Kota Kinabalu Naval Base",
@@ -7178,7 +7178,7 @@
       "keyRisk": "Contest intensity overwhelms sustainment and repair cycles"
     },
     "realityCheck": "Assumes adversarial attention to naval assets and intermittent maritime disruption.",
-    "scoreNarrative": "Kota Kinabalu’s dominant strength is professional-grade defensive infrastructure and command control. Its dominant weakness is strategic visibility that turns the site into a contested objective. The trade-off is strong tactical resilience versus high sustainment burn under persistent pressure."
+    "scoreNarrative": "Kota Kinabalu base works as a command-centered defense platform where structured security, communications, and organized response create short-term stability. Its core dependency is sustained resupply and maintenance under constant attention from competing actors. Strategic visibility is the failure trigger: prolonged contest raises consumption and damage rates until readiness falls below protection needs."
   },
   {
     "name": "Danum Valley Field Centre",
@@ -7222,7 +7222,7 @@
       "keyRisk": "Treatable injuries become fatal when evacuation fails"
     },
     "realityCheck": "Assumes disease control, field medicine capability, and controlled occupancy size.",
-    "scoreNarrative": "Danum Valley’s dominant strength is deep isolation in difficult rainforest terrain. Its dominant weakness is medical and operational fragility in a high-disease, high-maintenance environment. The trade-off is low visibility and contact risk versus hard limits on scalable, reliable sustainment."
+    "scoreNarrative": "Danum Valley is viable by minimizing contact through terrain difficulty and low signature, effectively trading access for concealment. Its core dependency is field medicine, equipment upkeep, and disciplined movement in a biologically hostile environment. The first break is usually health-and-maintenance attrition, which compounds quietly until operating capacity drops below survival demand."
   },
   {
     "name": "Komodo Island",
@@ -7266,7 +7266,7 @@
       "keyRisk": "Maritime disruption triggers cascading shortages"
     },
     "realityCheck": "Assumes rain capture, storage management, and protected boat/fuel capacity.",
-    "scoreNarrative": "Komodo’s dominant strength is elite isolation that filters threat volume better than most sites. Its dominant weakness is thin sustainment depth, especially water and technical dependency on sea logistics. The trade-off is strong separation security versus a tight carrying-capacity and resupply ceiling."
+    "scoreNarrative": "Komodo works as a low-contact refuge because sea separation sharply limits random incursions and narrows approach routes. Its core dependency is water assurance and maritime resupply for everything the island cannot reliably produce. As demand grows or sea transport degrades, carrying-capacity limits are hit early and force destabilizing ration or evacuation decisions."
   },
   {
     "name": "Palawan",
@@ -7311,7 +7311,7 @@
       "keyRisk": "Demand and shipping disruption outpace replenishment"
     },
     "realityCheck": "Assumes controlled population growth and protected coastal logistics nodes.",
-    "scoreNarrative": "Palawan’s dominant strength is balanced resilience: meaningful isolation plus broader sustainment options than most islands. Its dominant weakness is governance and logistics complexity across a long, fragmented coastline. The trade-off is high strategic flexibility versus rising coordination burden as demand scales."
+    "scoreNarrative": "Palawan remains viable when distributed settlements, coastal transport, and inland resource zones are governed as one coordinated island system. Its core dependency is administrative and logistics coherence across distance, not just raw resource availability. The first failure is coordination fracture—once routes and authority desynchronize, local surpluses cannot offset regional shortages."
   },
   {
     "name": "Petronas Towers",
@@ -7355,7 +7355,7 @@
       "keyRisk": "Encirclement and utility collapse make prolonged stay fatal"
     },
     "realityCheck": "Assumes prolonged urban disruption with no protected utility restoration.",
-    "scoreNarrative": "Petronas’ dominant strength is only momentary observation and waypoint utility. Its dominant weakness is absolute dependence on an unstable urban support grid in a high-exposure location. The trade-off is brief tactical visibility versus immediate collapse of long-term survivability."
+    "scoreNarrative": "Petronas functions only as a short-lived observation and signaling platform within a dense urban network. Its core dependency is a live city support grid for power, access control, and safe movement, none of which is durable in collapse conditions. Grid instability is the first failure mode, and once services degrade the tower loses utility faster than it can be defended."
   },
   {
     "name": "Phu Quoc Lighthouse",

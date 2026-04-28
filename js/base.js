@@ -58,6 +58,7 @@ const elements = {
   descriptionSection: document.getElementById('description-section'),
   descriptionStrengths: document.getElementById('base-description-strengths'),
   descriptionWeaknesses: document.getElementById('base-description-weaknesses'),
+  descriptionAnalysis: document.getElementById('base-description-analysis'),
   verdictSection: document.getElementById('verdict-section'),
   verdictBestUseCaseRow: document.getElementById('base-verdict-best-use-case-row'),
   verdictBestUseCase: document.getElementById('base-verdict-best-use-case'),
@@ -189,12 +190,14 @@ function getSummary(base) {
 function getStructuredDescription(base) {
   const description = base?.description;
   const summary = getSummary(base) || getDescription(base);
+  const analysis = getScoreNarrative(base);
   const strengths = getNormalizedListValue(base, 'strengths', 'strengths');
   const weaknesses = getNormalizedListValue(base, 'weaknesses', 'weaknesses');
 
   if (!description || typeof description !== 'object') {
     return {
       summary,
+      analysis,
       strengths,
       weaknesses
     };
@@ -202,6 +205,7 @@ function getStructuredDescription(base) {
 
   return {
     summary: isNonEmptyString(description.summary) ? description.summary : summary,
+    analysis: isNonEmptyString(description.analysis) ? description.analysis : analysis,
     strengths,
     weaknesses
   };
@@ -378,6 +382,11 @@ function renderSummary(base) {
 
 function renderDescription(base) {
   const description = getStructuredDescription(base);
+  if (elements.descriptionAnalysis) {
+    const analysis = isNonEmptyString(description.analysis) ? description.analysis : '';
+    elements.descriptionAnalysis.hidden = !analysis;
+    elements.descriptionAnalysis.textContent = analysis;
+  }
   elements.descriptionStrengths.textContent = description.strengths.length
     ? description.strengths.join(' • ')
     : DESCRIPTION_FALLBACKS.strengths;
