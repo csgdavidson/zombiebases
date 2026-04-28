@@ -4703,7 +4703,7 @@
     "scoreNarrative": "Glacier scores poorly overall because elite isolation cannot compensate for near-zero sustainability."
   },
   {
-    "name": "Ice Shelf Ridge",
+    "name": "Crevasse Field Glacier",
     "slug": "ice-shelf",
     "type": "elevated_stronghold",
     "region": "polar_extreme",
@@ -4711,40 +4711,43 @@
     "lat": -75.0,
     "long": -100.0,
     "scores": {
-      "overall": 1.8,
+      "overall": 5.7,
       "categories": {
-        "defensibility": 4.4,
-        "sustainability": 0.6,
-        "isolation": 10,
+        "defensibility": 6.5,
+        "sustainability": 1.5,
+        "isolation": 9.5,
         "accessibility": 1
       }
     },
     "description": {
-      "summary": "Ice shelf positions maximize isolation but are among the least survivable environments for long-duration human settlement.",
+      "summary": "A fractured glacial terrain filled with deep crevasses, offering extreme isolation and natural barriers. However, unstable footing, concealed crevasse risk, and lack of resources make long-term survival nearly impossible.",
       "strengths": [
-        "Near-total remoteness drastically reduces external human threat",
-        "Approach routes are limited and highly weather-constrained"
+        "Extreme isolation reduces external threat pressure",
+        "Broken terrain creates natural movement barriers",
+        "Low visibility and difficult access limit casual approach"
       ],
       "weaknesses": [
-        "Ice dynamics, crevasse risk, and weather volatility undermine site stability",
-        "There is effectively no local food, energy, or medical resilience base"
+        "Hidden crevasses make movement dangerous",
+        "No meaningful food, shelter, or water resilience",
+        "Rescue, retreat, or resupply would be extremely difficult",
+        "Weather and terrain can kill occupants before external threats arrive"
       ]
     },
     "verdict": {
-      "bestUseCase": "Do not use as a settlement base; emergency transit only",
-      "failureMode": "Environmental instability and total sustainment dependency"
+      "bestUseCase": "Temporary emergency crossing point or last-resort hiding place",
+      "failureMode": "Movement across unstable ice becomes fatal before the base can sustain anyone"
     },
     "survivalProfile": {
-      "initial": "Weak",
+      "initial": "Dangerous",
       "shortTerm": "Weak",
-      "longTerm": "Weak"
+      "longTerm": "Non-viable"
     },
     "useCaseAndRisk": {
-      "bestUseCase": "Traverse only with preplanned extraction and redundant cold-weather logistics",
-      "keyRisk": "Assuming isolation alone can substitute for habitable infrastructure"
+      "bestUseCase": "Short-term concealment in an extreme environment where pursuit is unlikely",
+      "keyRisk": "The terrain itself is the primary threat, with concealed crevasses and no sustainable resources"
     },
-    "realityCheck": "What kills you here is the environment itself before any adversary arrives.",
-    "scoreNarrative": "Ice Shelf is bottom-tier because the strongest possible isolation coincides with effectively nonexistent sustainability."
+    "realityCheck": "Assumes occupants have specialist glacier travel skills and equipment. Without ropes, navigation, shelter, and cold-weather capability, this location is more hazard than refuge.",
+    "scoreNarrative": "Crevasse Field Glacier scores highly for isolation because few threats could reach it easily. Its overall score remains low because movement is dangerous, resources are effectively absent, and the terrain can kill occupants faster than external threats."
   },
   {
     "name": "Amundsen-Scott Station",
