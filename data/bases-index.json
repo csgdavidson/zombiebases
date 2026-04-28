@@ -6484,21 +6484,24 @@
     "lat": 10.5667,
     "long": 72.6417,
     "scores": {
-      "overall": 8.0,
+      "overall": 6.5,
       "categories": {
-        "defensibility": 7,
-        "isolation": 9,
-        "sustainability": 6
+        "defensibility": 6,
+        "isolation": 8,
+        "sustainability": 5
       }
     },
     "summary": "Remote island chain with high separation and decent resources, but fragile inter-island logistics.",
     "strengths": [
-      "High geographic isolation limits random contact.",
-      "Marine food potential supports medium-term sustainment."
+      "Island-chain geography forces attackers into predictable sea approaches that can be monitored with small patrol assets.",
+      "Lagoon fisheries and reef zones provide recurring protein if boats, nets, and preservation routines are maintained.",
+      "Multiple inhabited islands allow redundancy by splitting people, stores, and command nodes instead of one brittle hub."
     ],
     "weaknesses": [
-      "Inter-island coordination is hard under disruption.",
-      "Freshwater and medical capacity are limited."
+      "Freshwater depends on fragile rain capture and thin aquifers, so one failed monsoon cycle rapidly creates potable-water deficits.",
+      "Inter-island movement relies on boats, fuel, and weather windows; when that chain breaks, medical transfer and resupply stop.",
+      "Most islands have small footprints, limiting protected storage, repair capacity, and fallback shelter during storms.",
+      "Healthcare and technical maintenance are shallow, so treatable injuries and equipment failures escalate into strategic losses."
     ],
     "verdict": {
       "bestUseCase": "Distributed island refuge for small coordinated cells",
@@ -6514,7 +6517,7 @@
       "keyRisk": "Maritime disruption breaks resupply, medevac, and command continuity"
     },
     "realityCheck": "Assumes seaworthy transport, fuel discipline, and managed freshwater systems across multiple inhabited points.",
-    "scoreNarrative": "Isolation and sustainability carry Lakshadweep into the strong tier; defensibility is solid but secondary. What kills you here is maritime fragmentation, not immediate overrun."
+    "scoreNarrative": "Lakshadweep’s dominant strength is hard geographic separation that filters random contact and buys reaction time. Its dominant weakness is cross-island logistics fragility: once weather, fuel, or boat readiness degrades, the network stops functioning as one system. The core trade-off is security through remoteness versus constant dependence on maritime mobility to keep people, water, and care connected."
   },
   {
     "name": "Lighthouse Mahabalipuram",
@@ -6534,12 +6537,15 @@
     },
     "summary": "Coastal landmark with visibility but almost no durable survival function.",
     "strengths": [
-      "Good line-of-sight for short reconnaissance.",
-      "Simple structure offers brief shelter."
+      "Tower elevation gives fast visual scanning of nearby shoreline and road approach corridors.",
+      "Stone structure offers brief weather cover and a clear rendezvous point for moving teams.",
+      "Compact footprint is easy to occupy for short observation rotations with minimal setup."
     ],
     "weaknesses": [
-      "No meaningful food-water base.",
-      "Open approaches make holding position costly."
+      "There is no embedded food, freshwater, or sanitation system, so basic survival relies on external supply from day one.",
+      "Coastal tourist-zone exposure creates predictable ingress routes that cannot be screened at depth.",
+      "Small internal volume prevents stockpiling enough fuel, medicine, or spares for extended holdout.",
+      "Any defensive posture is line-of-sight exposed, turning even minor pressure into rapid attrition."
     ],
     "verdict": {
       "bestUseCase": "Short observation point or rendezvous marker",
@@ -6555,7 +6561,7 @@
       "keyRisk": "Rapid exposure and depletion force abandonment quickly"
     },
     "realityCheck": "Assumes no protected logistics tail and no scalable support infrastructure on site.",
-    "scoreNarrative": "Defensibility and isolation stay low, and sustainability is the clear floor. What kills you here is exposure followed by rapid resource failure."
+    "scoreNarrative": "The main strength is short-range observation from a simple elevated structure. The dominant weakness is total sustainment dependence: once external supply stops, the site fails quickly regardless of tactics. The trade-off is temporary visibility value versus near-zero endurance under sustained pressure."
   },
   {
     "name": "Qutub Minar",
@@ -6575,12 +6581,15 @@
     },
     "summary": "Urban monument that cannot be converted into a survivable base.",
     "strengths": [
-      "Strong visual landmark for navigation.",
-      "Minor short-term vertical observation advantage."
+      "Highly recognizable vertical landmark can support navigation and time-boxed team coordination.",
+      "Stone construction provides limited short-duration shelter from weather.",
+      "Elevation offers brief local situational awareness during movement windows."
     ],
     "weaknesses": [
-      "Zero self-sustaining capacity.",
-      "Immediate urban exposure on all sides."
+      "Located inside dense urban fabric, it receives immediate contact pressure from every direction.",
+      "No on-site food, water, power, or waste systems means zero autonomous survival capacity.",
+      "Heritage layout is not designed for fortification, with inadequate internal zones for layered defense.",
+      "Crowd convergence risk is extreme because the site is obvious, symbolic, and easy to locate."
     ],
     "verdict": {
       "bestUseCase": "Emergency waypoint only, not a holdout",
@@ -6596,7 +6605,7 @@
       "keyRisk": "Crowd convergence overwhelms any defensive attempt"
     },
     "realityCheck": "Assumes city-scale disruption and no protected exclusion perimeter around the site.",
-    "scoreNarrative": "All core survival scores are near minimum. What kills you here is direct urban contact pressure, not lack of visibility."
+    "scoreNarrative": "Qutub’s only meaningful strength is waypoint utility from its visibility. Its dominant weakness is unavoidable metropolitan exposure combined with no sustainment base. The core trade-off is navigation value versus instant encirclement risk and rapid depletion."
   },
   {
     "name": "Kibber Village",
@@ -6607,21 +6616,24 @@
     "lat": 32.332,
     "long": 78.011,
     "scores": {
-      "overall": 6.7,
+      "overall": 6.5,
       "categories": {
         "defensibility": 6,
         "isolation": 8,
-        "sustainability": 6
+        "sustainability": 5
       }
     },
     "summary": "High-altitude remote village with strong isolation but persistent climate burden.",
     "strengths": [
-      "Low access volume reduces external pressure.",
-      "Existing settlement pattern supports basic continuity."
+      "Extreme altitude and remoteness sharply reduce outsider traffic and opportunistic encroachment.",
+      "Existing village housing and social layout support organized shelter, rationing, and role assignment.",
+      "Narrow approach roads create natural control points that can be monitored with small teams."
     ],
     "weaknesses": [
-      "Severe winter and altitude degrade output.",
-      "Medical evacuation and resupply are slow."
+      "High-altitude cold shortens growing seasons and increases caloric burn, stressing food math over winter.",
+      "Road closures from snow or slides can isolate the settlement for long periods without warning.",
+      "Medical emergencies are hard to evacuate, so survivable trauma or infection can become fatal.",
+      "Fuel and spare-part dependency for heating, vehicles, and power creates recurring external supply exposure."
     ],
     "verdict": {
       "bestUseCase": "Cold-climate fallback for prepared low-footprint groups",
@@ -6637,7 +6649,7 @@
       "keyRisk": "Weather and altitude attrition outpace local recovery"
     },
     "realityCheck": "Assumes cold-weather readiness, stocked stores, and acclimatized population.",
-    "scoreNarrative": "Isolation is Kibber’s strongest lever, with moderate defensibility and sustainability. What kills you here is winter logistics and altitude attrition."
+    "scoreNarrative": "Kibber’s dominant strength is deep isolation backed by controllable mountain access lines. Its dominant weakness is climate-driven sustainment strain, especially winter fuel, health, and transport interruptions. The trade-off is low contact pressure in exchange for high environmental attrition and logistics risk."
   },
   {
     "name": "Kuttanad Village",
@@ -6657,12 +6669,15 @@
     },
     "summary": "Food-rich lowland basin that feeds people well but is hard to secure.",
     "strengths": [
-      "High agricultural output supports population.",
-      "Water network enables local movement and irrigation."
+      "Intensive paddy cultivation supports high staple output for sustained community feeding.",
+      "Canal and backwater networks allow local transport even when roads are blocked.",
+      "Wetland ecology provides fish and supplementary food streams beyond crop harvest cycles."
     ],
     "weaknesses": [
-      "Low terrain control and broad approach lines.",
-      "Flood and waterborne disruption threaten continuity."
+      "Flat low-lying terrain offers poor standoff depth and too many approach vectors to seal effectively.",
+      "Seasonal flooding can destroy stores, contaminate water, and interrupt planting or harvest timing.",
+      "Waterlogged conditions accelerate disease transmission and complicate sanitation management.",
+      "Defense resources are diluted across dispersed settlements, making coordinated perimeter control difficult."
     ],
     "verdict": {
       "bestUseCase": "Production-heavy support base rather than final fortress",
@@ -6678,7 +6693,7 @@
       "keyRisk": "Defense fails when flood stress and access pressure align"
     },
     "realityCheck": "Assumes flood management, boat mobility, and protected storage for staples.",
-    "scoreNarrative": "Sustainability is clearly dominant while defensibility is weak. What kills you here is not hunger first; it is flood-linked control failure."
+    "scoreNarrative": "Kuttanad’s dominant strength is food productivity from its water-managed agricultural system. Its dominant weakness is control failure in flood-prone, low-elevation terrain with porous access. The trade-off is strong feeding capacity versus persistent exposure to hydrological disruption and perimeter leakage."
   },
   {
     "name": "Ajanta Caves",
@@ -6698,12 +6713,15 @@
     },
     "summary": "Defensible cave complex suited to short protected shelter, not long autonomous living.",
     "strengths": [
-      "Rock-cut spaces are hard to breach quickly.",
-      "Limited entry geometry favors chokepoint control."
+      "Rock-cut chambers and limited access points provide strong passive protection without major construction.",
+      "Chokepoint geometry enables small teams to delay entry and manage controlled occupancy.",
+      "Subterranean shelter reduces weather exposure and visual signature during short crisis windows."
     ],
     "weaknesses": [
-      "Ventilation, sanitation, and scaling are constrained.",
-      "Food-water production near site is limited."
+      "Confined spaces constrain ventilation, waste handling, and disease control as headcount rises.",
+      "Near-site agriculture and water yield are insufficient for long autonomous population support.",
+      "Lighting, hygiene, and maintenance demands increase steadily but local technical support is limited.",
+      "Extended habitation degrades morale and operational effectiveness due to cramped static conditions."
     ],
     "verdict": {
       "bestUseCase": "Short-term hardened refuge during peak threat periods",
@@ -6719,7 +6737,7 @@
       "keyRisk": "Confinement and resource depletion degrade survivability"
     },
     "realityCheck": "Assumes pre-stocked stores and strict occupancy limits to prevent sanitation collapse.",
-    "scoreNarrative": "Defensibility leads clearly, isolation is moderate, and sustainability is the limiting axis. What kills you here is confined sustainment failure."
+    "scoreNarrative": "Ajanta’s dominant strength is defensive geometry: hard rock shelter plus controllable entry lines. Its dominant weakness is sustainment inside confined spaces, where sanitation and supplies deteriorate over time. The trade-off is strong short-term protection versus poor long-term livability."
   },
   {
     "name": "Kargil War Bunkers",
@@ -6730,7 +6748,7 @@
     "lat": 34.553,
     "long": 76.1348,
     "scores": {
-      "overall": 7.0,
+      "overall": 7.1,
       "categories": {
         "defensibility": 9,
         "isolation": 8,
@@ -6739,12 +6757,15 @@
     },
     "summary": "Military-hardened positions with elite defense and isolation but punishing sustainment limits.",
     "strengths": [
-      "Prepared defensive geometry and hard cover.",
-      "Remote terrain limits casual contact and approach."
+      "Purpose-built hardened positions provide excellent cover, fields of fire, and defensive staying power.",
+      "High-altitude terrain limits approach options and raises adversary movement costs.",
+      "Existing military layout supports disciplined watch rotations and layered fallback points."
     ],
     "weaknesses": [
-      "Harsh climate raises continuous life-support demand.",
-      "Long supply lines and medical fragility."
+      "Extreme cold and altitude drive constant fuel, heating, and medical demand that stockpiles must absorb.",
+      "Long, weather-sensitive supply lines make replenishment unreliable during prolonged disruption.",
+      "Limited local food and repair ecosystems force dependence on prepositioned stores and imported parts.",
+      "Casualty evacuation and specialist care are slow, increasing fatality risk from otherwise manageable injuries."
     ],
     "verdict": {
       "bestUseCase": "Defensive holdout for disciplined teams with prepositioned stores",
@@ -6760,7 +6781,7 @@
       "keyRisk": "Sustainment failure collapses combat value over time"
     },
     "realityCheck": "Assumes winterized equipment, fuel, and medical chains are partially prepositioned.",
-    "scoreNarrative": "Defensibility and isolation are top-tier; sustainability is the decisive ceiling. What kills you here is logistics starvation, not wall breach."
+    "scoreNarrative": "The dominant strength is elite defensibility from hardened military infrastructure in restrictive terrain. The dominant weakness is sustainment under high-altitude climate load, where fuel, medicine, and resupply become the bottleneck. The core trade-off is superior holding power versus a logistics clock that keeps running."
   },
   {
     "name": "Delhi Airport",
@@ -6780,12 +6801,15 @@
     },
     "summary": "Massive infrastructure node that is too exposed to survive as a static base.",
     "strengths": [
-      "Large built infrastructure and storage footprint.",
-      "Potential short-term salvage of fuel and equipment."
+      "Large storage, vehicle, and utility infrastructure offers brief salvage opportunities.",
+      "Multiple service buildings provide temporary compartmentalization for short operations.",
+      "Fuel and mechanical assets may support rapid extraction if seized early."
     ],
     "weaknesses": [
-      "Near-zero isolation with continuous inbound vectors.",
-      "Too large to secure with realistic manpower."
+      "Airport scale is too large for realistic perimeter control with crisis-level manpower.",
+      "Road, rail, and urban feeder networks create nonstop inbound pressure and unpredictable contact.",
+      "Critical systems depend on specialized staff and stable power chains that collapse quickly in disorder.",
+      "Open tarmac and terminal geometry expose defenders to long sightlines and multi-direction approach."
     ],
     "verdict": {
       "bestUseCase": "Brief extraction/logistics node, never a fixed refuge",
@@ -6801,7 +6825,7 @@
       "keyRisk": "Contact pressure and perimeter chaos overwhelm defenses"
     },
     "realityCheck": "Assumes metropolitan stress, contested access roads, and no durable air-operations control.",
-    "scoreNarrative": "Accessibility is a liability here; defensibility and isolation remain near-bottom. What kills you here is nonstop inflow pressure."
+    "scoreNarrative": "Delhi Airport’s dominant strength is short-term salvage potential from major infrastructure density. Its dominant weakness is uncontrollable exposure: too many entry vectors and too much ground to secure. The trade-off is high immediate resource value versus near-impossible static survivability."
   },
   {
     "name": "Mumbai Port",
@@ -6821,12 +6845,15 @@
     },
     "summary": "High-throughput port useful for salvage, but strategically exposed and difficult to hold.",
     "strengths": [
-      "Strong logistics assets and maritime handling capacity.",
-      "Short-term access to supplies and repair facilities."
+      "Port machinery, warehousing, and docking systems can generate short bursts of logistics output.",
+      "Maritime access allows opportunistic intake of fuel, tools, and bulk materials when routes are open.",
+      "Industrial repair spaces provide temporary maintenance capability for vehicles and equipment."
     ],
     "weaknesses": [
-      "Extreme exposure to population and maritime contest.",
-      "Perimeter complexity exceeds typical security manpower."
+      "Open waterfront plus dense city adjacency creates persistent contact pressure from land and sea.",
+      "Perimeter complexity across piers, gates, and storage yards overwhelms limited security teams.",
+      "Operations rely on skilled labor, power continuity, and fuel throughput that are hard to stabilize.",
+      "Infrastructure visibility makes the site a high-priority target for theft, sabotage, and crowd surges."
     ],
     "verdict": {
       "bestUseCase": "Temporary logistics exploitation under armed control",
@@ -6842,7 +6869,7 @@
       "keyRisk": "Security demand outpaces manpower and depletes stores"
     },
     "realityCheck": "Assumes contested shoreline, disrupted shipping rhythm, and unstable labor/security balance.",
-    "scoreNarrative": "Sustainability potential is real, but isolation and defensibility are both low. What kills you here is perimeter attrition at industrial scale."
+    "scoreNarrative": "Mumbai Port’s dominant strength is high-throughput logistics infrastructure that can be exploited briefly. Its dominant weakness is industrial-scale perimeter attrition in a high-pressure urban-maritime environment. The trade-off is strong short-term resource access versus rapid security and operations breakdown."
   },
   {
     "name": "Ha Long Bay Cliffs",
@@ -6853,7 +6880,7 @@
     "lat": 20.9101,
     "long": 107.1839,
     "scores": {
-      "overall": 6.7,
+      "overall": 6.6,
       "categories": {
         "defensibility": 7,
         "isolation": 7,
@@ -6862,12 +6889,15 @@
     },
     "summary": "Karst-island maze with strong concealment and chokepoints, constrained by weathered logistics.",
     "strengths": [
-      "Complex terrain slows and channels approach.",
-      "Good concealment opportunities across islands and coves."
+      "Karst islands and narrow channels create natural chokepoints that complicate hostile movement.",
+      "Cove networks and broken sightlines support concealment and dispersed low-signature camps.",
+      "Marine resources can supplement calories when fishing and storage systems are organized."
     ],
     "weaknesses": [
-      "Storm cycles and marine weather disrupt operations.",
-      "Distributed geography complicates command and resupply."
+      "Frequent storms and rough sea states interrupt boat movement, patrol cycles, and resupply timing.",
+      "Distributed island positions fragment command and require reliable communication discipline.",
+      "Freshwater and medical capacity are uneven across sites, forcing constant redistribution logistics.",
+      "Boat, engine, and fuel dependence creates cascading failure when maintenance slips."
     ],
     "verdict": {
       "bestUseCase": "Medium-term dispersed refuge emphasizing concealment",
@@ -6883,7 +6913,7 @@
       "keyRisk": "Storm disruption repeatedly breaks sustainment rhythm"
     },
     "realityCheck": "Assumes boat readiness, fuel reserves, and hardened storage against monsoon conditions.",
-    "scoreNarrative": "Defensibility and isolation are strong, with sustainability in the mid band. What kills you here is recurring maritime logistics disruption."
+    "scoreNarrative": "Ha Long’s dominant strength is terrain-enabled concealment with defensible maritime chokepoints. Its dominant weakness is weather-driven logistics volatility across a fragmented island network. The trade-off is tactical ambiguity and separation versus fragile sustainment rhythm under storm stress."
   },
   {
     "name": "Rice Terrace Highlands",
@@ -6894,7 +6924,7 @@
     "lat": 16.912,
     "long": 121.056,
     "scores": {
-      "overall": 7.3,
+      "overall": 7.2,
       "categories": {
         "defensibility": 7,
         "isolation": 6,
@@ -6903,12 +6933,16 @@
     },
     "summary": "Agricultural highlands with excellent food resilience and defensible terrain, but limited capacity growth.",
     "strengths": [
-      "Reliable staple production and water management legacy.",
-      "Elevated terrain provides practical defensive depth."
+      "Terraced agriculture delivers reliable staple output with proven gravity-fed irrigation practices.",
+      "Elevated valley geometry provides workable defensive depth and observation over access routes.",
+      "Community farming traditions support labor coordination for planting, repair, and ration planning.",
+      "Diverse microclimates across elevations improve crop resilience to localized shocks."
     ],
     "weaknesses": [
-      "Expansion capacity is finite and labor intensive.",
-      "Route disruption can isolate sub-valleys."
+      "Terrace upkeep is labor intensive; if workforce drops, erosion and irrigation failure quickly cut yields.",
+      "Narrow mountain roads create bottlenecks where landslides can isolate whole sectors.",
+      "Carrying capacity is finite, so population surge degrades food balance and sanitation rapidly.",
+      "Specialized medicine, tools, and inputs still require external procurement despite food strength."
     ],
     "verdict": {
       "bestUseCase": "Longer-horizon agrarian refuge for disciplined population size",
@@ -6924,7 +6958,7 @@
       "keyRisk": "Overcrowding breaks food, hygiene, and governance balance"
     },
     "realityCheck": "Assumes terrace systems remain maintained and population stays within carrying limits.",
-    "scoreNarrative": "Sustainability is the dominant strength, with solid defensibility and moderate isolation. What kills you here is capacity overshoot, not immediate breach."
+    "scoreNarrative": "The dominant strength is food-system resilience anchored by established terrace agriculture and water control. The dominant weakness is finite carrying capacity combined with fragile mountain access for non-food essentials. The trade-off is excellent staple security versus limited scalability and external dependency for complex needs."
   },
   {
     "name": "Hue Citadel",
@@ -6935,7 +6969,7 @@
     "lat": 16.4637,
     "long": 107.5909,
     "scores": {
-      "overall": 6.3,
+      "overall": 6.6,
       "categories": {
         "defensibility": 8,
         "isolation": 5,
@@ -6944,12 +6978,15 @@
     },
     "summary": "Fortified urban citadel with strong defensive form but persistent external pressure.",
     "strengths": [
-      "Walls and geometry support layered defense.",
-      "Urban resources can support short-term operations."
+      "Fortified walls, gates, and internal layers support structured defense and controlled movement.",
+      "Compact historic core allows command concentration and clear sector assignment.",
+      "Existing urban infrastructure provides short-term shelter, storage, and workshop potential."
     ],
     "weaknesses": [
-      "Low isolation in populated surroundings.",
-      "Static defense invites attritional siege dynamics."
+      "Surrounding population density keeps contact pressure high and limits true isolation.",
+      "Static fortification can be fixed and pressured over time through repeated siege cycles.",
+      "Food, fuel, and medical sustainment remain dependent on corridors outside the walls.",
+      "Water and utility disruption quickly degrades conditions for any prolonged occupancy."
     ],
     "verdict": {
       "bestUseCase": "Short- to medium-term fortified command enclave",
@@ -6965,7 +7002,7 @@
       "keyRisk": "Siege attrition depletes supplies and morale"
     },
     "realityCheck": "Assumes controlled gateways and nearby districts remain contested rather than fully denied.",
-    "scoreNarrative": "Defensibility is clearly highest; isolation is the limiting weakness. What kills you here is sustained urban siege attrition."
+    "scoreNarrative": "Hue’s dominant strength is defensible built form with layered internal control. Its dominant weakness is low isolation within an active urban envelope that can sustain siege pressure. The trade-off is strong short-term holding geometry versus long-term supply attrition."
   },
   {
     "name": "Intramuros Manila",
@@ -6985,12 +7022,15 @@
     },
     "summary": "Historic walled core with tactical defensive value but severe metropolitan exposure.",
     "strengths": [
-      "Compact walls and chokepoints aid local control.",
-      "Existing structures support temporary staging."
+      "Walled perimeter and constrained gates allow temporary channeling of movement.",
+      "Compact district layout simplifies short-duration command and checkpoint setup.",
+      "Historic masonry structures offer immediate shelter for staged withdrawal operations."
     ],
     "weaknesses": [
-      "Very low isolation inside dense megacity pressure.",
-      "Utility dependence and crowd proximity strain defenses."
+      "Embedded position inside Metro Manila means extremely low isolation and constant external pressure.",
+      "Small enclosed area cannot support long-term food production or scalable sanitation.",
+      "Surrounding bridges and roads create encirclement risk that can sever inbound supplies quickly.",
+      "High civilian proximity complicates security rules and accelerates disorder at gate points."
     ],
     "verdict": {
       "bestUseCase": "Short defensive redoubt during transit or evacuation",
@@ -7006,7 +7046,7 @@
       "keyRisk": "Encirclement erodes supplies faster than defense can recover"
     },
     "realityCheck": "Assumes external districts remain unstable and movement corridors are intermittently denied.",
-    "scoreNarrative": "Defensibility is respectable, but isolation is near-floor and sustainability is weak. What kills you here is city-scale encirclement."
+    "scoreNarrative": "Intramuros’ dominant strength is short-term defensive channeling via walls and gate control. Its dominant weakness is metropolitan encirclement risk paired with minimal autonomous sustainment. The trade-off is tactical delay value versus rapid exhaustion once supply lines tighten."
   },
   {
     "name": "General Santos Fish Port",
@@ -7026,12 +7066,15 @@
     },
     "summary": "Fish-port production hub with useful food throughput but low survivability as a defended base.",
     "strengths": [
-      "Strong protein supply potential while operations run.",
-      "Cold-chain and processing assets offer short-term leverage."
+      "Fish processing and cold-chain assets can generate significant protein output while systems run.",
+      "Marine landing infrastructure enables bulk intake and distribution on short notice.",
+      "Industrial workspace supports temporary repair and packaging operations for relief logistics."
     ],
     "weaknesses": [
-      "Open coastal exposure and predictable access lines.",
-      "Security manpower demand is high and continuous."
+      "Continuous fuel and power demand makes throughput collapse likely when utilities destabilize.",
+      "Open coastal layout and predictable entry points are hard to defend against persistent raiding.",
+      "Skilled labor dependence means absenteeism quickly cripples processing and maintenance lines.",
+      "No meaningful isolation from nearby urban and maritime traffic keeps threat levels elevated."
     ],
     "verdict": {
       "bestUseCase": "Temporary food-processing node supporting nearby safer sites",
@@ -7047,7 +7090,7 @@
       "keyRisk": "Fuel, labor, and security breakdown stop throughput quickly"
     },
     "realityCheck": "Assumes contested fuel access and unstable staffing under crisis conditions.",
-    "scoreNarrative": "Sustainability is the only strong axis; defensibility and isolation remain low. What kills you here is operational collapse of the supply chain."
+    "scoreNarrative": "The dominant strength is high food-processing throughput during early stable phases. The dominant weakness is brittle operations: fuel, labor, and security failures can halt output in days. The trade-off is strong production potential versus very low defensive endurance."
   },
   {
     "name": "Sime Darby Palm Oil Estate (Sabah)",
@@ -7058,21 +7101,24 @@
     "lat": 5.98,
     "long": 117.85,
     "scores": {
-      "overall": 5.7,
+      "overall": 6.1,
       "categories": {
         "defensibility": 4,
-        "isolation": 5,
+        "isolation": 6,
         "sustainability": 8
       }
     },
     "summary": "Large agro-industrial estate with strong production potential but difficult perimeter security.",
     "strengths": [
-      "High-calorie output and land-use flexibility.",
-      "Distance from dense cores reduces sudden surge pressure."
+      "Large cultivated acreage can deliver sustained calorie production if milling and transport are functioning.",
+      "Distance from major city cores lowers sudden mass-inflow pressure compared with urban sites.",
+      "Internal roads and estate facilities allow staging of defended core sectors and logistics hubs."
     ],
     "weaknesses": [
-      "Estate scale is hard to secure comprehensively.",
-      "Industrial inputs and transport links remain dependencies."
+      "Estate scale is too large for full perimeter control, creating chronic theft and sabotage exposure.",
+      "Output depends on machinery, spare parts, and fuel that are difficult to replace locally.",
+      "Monocrop structure reduces dietary diversity and resilience if processing chain is interrupted.",
+      "Dispersed worker housing and assets complicate unified command and rapid incident response."
     ],
     "verdict": {
       "bestUseCase": "Regional food backbone with defended core zones",
@@ -7088,7 +7134,7 @@
       "keyRisk": "Overstretch causes cascading theft, sabotage, and output loss"
     },
     "realityCheck": "Assumes phased contraction to defendable sectors rather than full-estate control.",
-    "scoreNarrative": "Sustainability drives the profile, while defensibility is the limiting factor. What kills you here is perimeter overstretch across too much land."
+    "scoreNarrative": "The dominant strength is sustained calorie production from large agro-industrial land. The dominant weakness is security overstretch across a vast, asset-dense perimeter. The trade-off is high food throughput versus constant protection and maintenance burden."
   },
   {
     "name": "Kota Kinabalu Naval Base",
@@ -7099,7 +7145,7 @@
     "lat": 6.0,
     "long": 116.071,
     "scores": {
-      "overall": 6.3,
+      "overall": 6.2,
       "categories": {
         "defensibility": 8,
         "isolation": 5,
@@ -7108,12 +7154,15 @@
     },
     "summary": "Naval compound with strong tactical defense but exposed strategic position.",
     "strengths": [
-      "Hardened security posture and controlled access points.",
-      "Useful logistics and maritime support infrastructure."
+      "Military-grade access control and hardened sections support disciplined defensive operations.",
+      "On-site maritime facilities provide short-term mobility, repair, and logistics coordination.",
+      "Command infrastructure enables rapid decision cycles and organized sector defense."
     ],
     "weaknesses": [
-      "High-visibility strategic target.",
-      "Dependence on steady fuel, maintenance, and supply chain."
+      "As a known naval asset, it attracts strategic targeting and sustained contest pressure.",
+      "High operational tempo consumes fuel, munitions, and parts faster than local regeneration can match.",
+      "Dependence on sea lanes and technical maintenance chains exposes long-term continuity to disruption.",
+      "Urban-coastal proximity limits isolation and increases intelligence leakage and contact risk."
     ],
     "verdict": {
       "bestUseCase": "Operational command base for controlled short-medium campaigns",
@@ -7129,7 +7178,7 @@
       "keyRisk": "Contest intensity overwhelms sustainment and repair cycles"
     },
     "realityCheck": "Assumes adversarial attention to naval assets and intermittent maritime disruption.",
-    "scoreNarrative": "Defensibility is the standout category, with mid isolation and sustainability. What kills you here is strategic contest pressure, not immediate base layout failure."
+    "scoreNarrative": "Kota Kinabalu’s dominant strength is professional-grade defensive infrastructure and command control. Its dominant weakness is strategic visibility that turns the site into a contested objective. The trade-off is strong tactical resilience versus high sustainment burn under persistent pressure."
   },
   {
     "name": "Danum Valley Field Centre",
@@ -7140,21 +7189,24 @@
     "lat": 4.96,
     "long": 117.8,
     "scores": {
-      "overall": 7.0,
+      "overall": 6.3,
       "categories": {
-        "defensibility": 6,
-        "isolation": 7,
-        "sustainability": 8
+        "defensibility": 5,
+        "isolation": 8,
+        "sustainability": 6
       }
     },
     "summary": "Remote jungle research base with strong isolation and ecology, limited by medical and mobility constraints.",
     "strengths": [
-      "Low-density environment reduces direct contact risk.",
-      "Biodiversity and water access support foraging-backed sustainment."
+      "Remote rainforest location significantly reduces routine contact and detection likelihood.",
+      "Year-round water access and biodiversity provide supplementary sustainment options for small groups.",
+      "Existing field-centre facilities offer a ready framework for organized shelter and operations."
     ],
     "weaknesses": [
-      "Medical emergencies are hard to manage.",
-      "Mobility and communications degrade in severe weather."
+      "Tropical disease load and injury risk are high, while advanced care and evacuation are slow.",
+      "Heavy rain and terrain can cut routes and communications, isolating teams at critical moments.",
+      "Food production at scale is limited without major land conversion and sustained labor.",
+      "Equipment degradation in humid jungle conditions raises maintenance burden for power and mobility assets."
     ],
     "verdict": {
       "bestUseCase": "Low-signature refuge for trained small groups",
@@ -7170,7 +7222,7 @@
       "keyRisk": "Treatable injuries become fatal when evacuation fails"
     },
     "realityCheck": "Assumes disease control, field medicine capability, and controlled occupancy size.",
-    "scoreNarrative": "Isolation and sustainability are strong; defensibility is moderate due to terrain complexity. What kills you here is medical attrition more than hostile breach."
+    "scoreNarrative": "Danum Valley’s dominant strength is deep isolation in difficult rainforest terrain. Its dominant weakness is medical and operational fragility in a high-disease, high-maintenance environment. The trade-off is low visibility and contact risk versus hard limits on scalable, reliable sustainment."
   },
   {
     "name": "Komodo Island",
@@ -7181,21 +7233,24 @@
     "lat": -8.55,
     "long": 119.49,
     "scores": {
-      "overall": 8.0,
+      "overall": 6.5,
       "categories": {
-        "defensibility": 7,
-        "isolation": 10,
-        "sustainability": 7
+        "defensibility": 6,
+        "isolation": 9,
+        "sustainability": 5
       }
     },
     "summary": "Highly isolated island base with excellent separation and strong overall survivability, bounded by logistics.",
     "strengths": [
-      "Extreme isolation sharply limits random contact.",
-      "Manageable terrain for controlled small-settlement defense."
+      "Extreme insular separation sharply limits spontaneous contact and buys early warning time.",
+      "Coastal topography allows selective control of landing points with small defensive teams.",
+      "Marine harvesting can supplement diet when weather and equipment permit regular sorties."
     ],
     "weaknesses": [
-      "Resupply, healthcare, and parts replacement are fragile.",
-      "Water and carrying capacity require strict discipline."
+      "Freshwater availability is constrained and requires disciplined capture, storage, and distribution systems.",
+      "Medical care, specialized tools, and replacement parts depend on vulnerable maritime links.",
+      "Harsh dry-season conditions and limited arable land cap carrying capacity for larger populations.",
+      "Boat and fuel failures can rapidly isolate subgroups and trigger cascading shortages."
     ],
     "verdict": {
       "bestUseCase": "Long-horizon low-population island refuge",
@@ -7211,7 +7266,7 @@
       "keyRisk": "Maritime disruption triggers cascading shortages"
     },
     "realityCheck": "Assumes rain capture, storage management, and protected boat/fuel capacity.",
-    "scoreNarrative": "Isolation is elite and drives the high score; defensibility and sustainability are solid but not limitless. What kills you here is maritime supply cascade."
+    "scoreNarrative": "Komodo’s dominant strength is elite isolation that filters threat volume better than most sites. Its dominant weakness is thin sustainment depth, especially water and technical dependency on sea logistics. The trade-off is strong separation security versus a tight carrying-capacity and resupply ceiling."
   },
   {
     "name": "Palawan",
@@ -7222,21 +7277,25 @@
     "lat": 9.8349,
     "long": 118.7384,
     "scores": {
-      "overall": 8.0,
+      "overall": 7.3,
       "categories": {
         "defensibility": 7,
-        "isolation": 9,
-        "sustainability": 8
+        "isolation": 8,
+        "sustainability": 7
       }
     },
     "summary": "Large island option with rare balance of isolation and sustainment, but still sea-logistics dependent.",
     "strengths": [
-      "Strong isolation with multiple fallback zones.",
-      "Good natural resource base supports diversified sustainment."
+      "Large island scale provides multiple fallback zones and redundancy across settlements.",
+      "Mixed ecosystems support diversified food options beyond single-source dependence.",
+      "Mountain and coastal terrain combinations allow layered defense and relocation flexibility.",
+      "Compared with smaller islands, there is better room for distributed agriculture and storage."
     ],
     "weaknesses": [
-      "Maritime routes remain critical for specialized supplies.",
-      "Dispersed geography can fragment governance and security."
+      "Long coastline is difficult to monitor comprehensively, enabling infiltration and smuggling pressure.",
+      "Inter-municipal distances complicate unified command, rapid reinforcement, and resource balancing.",
+      "Specialized medicine, machinery, and fuel still require external maritime supply corridors.",
+      "Population influx can outpace local governance and degrade security-food balance."
     ],
     "verdict": {
       "bestUseCase": "Regional anchor base for sustained island survival",
@@ -7252,7 +7311,7 @@
       "keyRisk": "Demand and shipping disruption outpace replenishment"
     },
     "realityCheck": "Assumes controlled population growth and protected coastal logistics nodes.",
-    "scoreNarrative": "Palawan is strong across all core categories, led by isolation and sustainability. What kills you here is demand overload combined with maritime attrition."
+    "scoreNarrative": "Palawan’s dominant strength is balanced resilience: meaningful isolation plus broader sustainment options than most islands. Its dominant weakness is governance and logistics complexity across a long, fragmented coastline. The trade-off is high strategic flexibility versus rising coordination burden as demand scales."
   },
   {
     "name": "Petronas Towers",
@@ -7272,12 +7331,15 @@
     },
     "summary": "Iconic high-rise complex with near-zero survival viability in a collapse scenario.",
     "strengths": [
-      "Robust vertical structure for brief observation.",
-      "Initial access to urban stored materials."
+      "Tall structure provides temporary observation and communications vantage within the immediate district.",
+      "Complex interior can offer short-duration shelter during movement between safer zones.",
+      "Initial access to office-stocked materials may support brief emergency staging."
     ],
     "weaknesses": [
-      "No autonomous food-water-energy system.",
-      "Total exposure inside dense city threat envelope."
+      "Located in dense city core with constant convergence risk and no practical isolation.",
+      "No internal food, water, or waste system suitable for autonomous multi-day survival.",
+      "Vertical evacuation bottlenecks and lift dependence create severe mobility failure points.",
+      "High-profile landmark status attracts attention, accelerating encirclement and resource exhaustion."
     ],
     "verdict": {
       "bestUseCase": "Momentary waypoint only during transit",
@@ -7293,7 +7355,7 @@
       "keyRisk": "Encirclement and utility collapse make prolonged stay fatal"
     },
     "realityCheck": "Assumes prolonged urban disruption with no protected utility restoration.",
-    "scoreNarrative": "All three core pillars are at or near minimum. What kills you here is immediate urban encirclement plus resource failure."
+    "scoreNarrative": "Petronas’ dominant strength is only momentary observation and waypoint utility. Its dominant weakness is absolute dependence on an unstable urban support grid in a high-exposure location. The trade-off is brief tactical visibility versus immediate collapse of long-term survivability."
   },
   {
     "name": "Phu Quoc Lighthouse",
