@@ -282,7 +282,7 @@
         { "name": "Amundsen-Scott Station", "slug": "amundsen", "type": "fortified_structure" },
         { "name": "Greenland", "slug": "greenland", "type": "isolated_landmass" },
         { "name": "Antarctic Peninsula", "slug": "antarctic-peninsula", "type": "isolated_landmass" },
-        { "name": "Ice Shelf Ridge", "slug": "ice-shelf", "type": "elevated_stronghold" },
+        { "name": "Crevasse Field Glacier", "slug": "ice-shelf", "type": "elevated_stronghold" },
         { "name": "Glacier Plateau", "slug": "glacier", "type": "elevated_stronghold" },
         { "name": "Ice Tunnel Systems", "slug": "ice-tunnels", "type": "subterranean" },
         { "name": "Arctic Bunker", "slug": "arctic-bunker", "type": "subterranean" },
