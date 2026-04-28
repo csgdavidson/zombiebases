@@ -54,17 +54,14 @@ const elements = {
   heroStrengths: document.getElementById('base-hero-strengths'),
   heroWeaknessesRow: document.getElementById('base-hero-weaknesses-row'),
   heroWeaknesses: document.getElementById('base-hero-weaknesses'),
+  bestUseRow: document.getElementById('base-best-use-row'),
+  bestUseText: document.getElementById('base-best-use'),
+  keyRiskRow: document.getElementById('base-key-risk-row'),
+  keyRiskText: document.getElementById('base-key-risk'),
   metaRow: document.getElementById('base-meta-row'),
   backLink: document.getElementById('back-link'),
   heroSection: document.getElementById('hero-section'),
   heroImage: document.getElementById('base-hero-image'),
-  verdictSection: document.getElementById('verdict-section'),
-  verdictBestUseCaseRow: document.getElementById('base-verdict-best-use-case-row'),
-  verdictBestUseCase: document.getElementById('base-verdict-best-use-case'),
-  verdictFailureModeRow: document.getElementById('base-verdict-failure-mode-row'),
-  verdictFailureMode: document.getElementById('base-verdict-failure-mode'),
-  verdictKeyRiskRow: document.getElementById('base-verdict-key-risk-row'),
-  verdictKeyRisk: document.getElementById('base-verdict-key-risk'),
   scoreSection: document.getElementById('score-section'),
   scoreEmpty: document.getElementById('score-empty'),
   scoreOverall: document.getElementById('base-score-overall'),
@@ -179,6 +176,19 @@ function getStructuredDescription(base) {
   };
 }
 
+function firstSentence(value) {
+  if (!isNonEmptyString(value)) {
+    return '';
+  }
+  return value.trim().split(/(?<=[.!?])\s+/)[0];
+}
+
+function normalizeComparisonText(value) {
+  return isNonEmptyString(value)
+    ? value.trim().toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, ' ')
+    : '';
+}
+
 function getHeroImage(base) {
   const value = firstAvailableValue(base, ['hero_image', 'heroImage', 'image', 'image_url']);
   return isNonEmptyString(value) ? value : '';
@@ -199,10 +209,6 @@ function computeOverallScore(base) {
     return base.scores.overall;
   }
   return null;
-}
-
-function normalizeStatus(base) {
-  return isNonEmptyString(base.status) ? base.status.trim().toLowerCase() : '';
 }
 
 function buildBackLink(params) {
@@ -301,8 +307,7 @@ function renderMetaRow(base) {
   const items = [
     { label: 'Type', value: labelFor('type', base.type) },
     { label: 'Region', value: labelFor('region', base.region) },
-    { label: 'Country', value: isNonEmptyString(base.country) ? base.country : null },
-    { label: 'Status', value: normalizeStatus(base) ? toTitleCaseSlug(normalizeStatus(base)) : null }
+    { label: 'Country', value: isNonEmptyString(base.country) ? base.country : null }
   ];
 
   items.forEach((item) => {
@@ -483,7 +488,7 @@ function getSurvivalLevel(value) {
   const strongest = ['very strong', 'very high', 'high', 'strong'];
   const medium = ['moderate', 'medium'];
   const low = ['weak', 'low'];
-  const weakest = ['very weak', 'very low', 'nonviable', 'non viable'];
+  const weakest = ['very weak', 'very low', 'nonviable', 'non viable', 'failing'];
 
   if (strongest.includes(normalized) || ((normalized.includes('very') || normalized.includes('high')) && normalized.includes('strong'))) {
     return 4;
@@ -491,7 +496,7 @@ function getSurvivalLevel(value) {
   if (medium.includes(normalized) || normalized.includes('moderate') || normalized.includes('medium')) {
     return 3;
   }
-  if (weakest.includes(normalized) || normalized.includes('non viable') || normalized.includes('nonviable') || normalized.includes('very weak') || normalized.includes('very low')) {
+  if (weakest.includes(normalized) || normalized.includes('non viable') || normalized.includes('nonviable') || normalized.includes('very weak') || normalized.includes('very low') || normalized.includes('failing')) {
     return 1;
   }
   if (low.includes(normalized) || normalized.includes('weak') || normalized.includes('low')) {
@@ -531,30 +536,40 @@ function getTrajectoryLabel(levels) {
   return 'Variable profile';
 }
 
-function renderVerdict(base) {
+function renderUseCaseAndRisk(base) {
   const verdict = getVerdict(base);
   const useCaseAndRisk = getUseCaseAndRisk(base);
-  const bestUseCase = isNonEmptyString(verdict.bestUseCase) ? verdict.bestUseCase : '';
-  const failureMode = isNonEmptyString(verdict.failureMode) ? verdict.failureMode : '';
+  const bestUseCase = firstSentence(verdict.bestUseCase);
+  const failureMode = firstSentence(verdict.failureMode);
   const fallbackBestUseCase = isNonEmptyString(useCaseAndRisk.bestUseCase) ? useCaseAndRisk.bestUseCase : '';
-  const bestUseCaseText = bestUseCase || fallbackBestUseCase;
-  const keyRisk = isNonEmptyString(useCaseAndRisk.keyRisk) ? useCaseAndRisk.keyRisk : '';
+  const bestUseCaseText = bestUseCase || firstSentence(fallbackBestUseCase);
+  const keyRisk = firstSentence(useCaseAndRisk.keyRisk);
   const failureModeNorm = failureMode.trim().toLowerCase();
   const keyRiskNorm = keyRisk.trim().toLowerCase();
-  const dedupedKeyRisk = keyRiskNorm && keyRiskNorm !== failureModeNorm ? keyRisk : '';
+  const mergedKeyRisk = keyRiskNorm && keyRiskNorm !== failureModeNorm ? keyRisk : '';
+  const riskText = mergedKeyRisk || failureMode;
 
-  const hasContent = Boolean(bestUseCaseText || failureMode || dedupedKeyRisk);
-  elements.verdictSection.hidden = !hasContent;
-  if (!hasContent) {
-    return;
+  const description = getStructuredDescription(base);
+  const repeatedTexts = new Set([
+    normalizeComparisonText(buildIntroSummary(base)),
+    normalizeComparisonText(getRealityCheck(base)),
+    ...description.strengths.map((item) => normalizeComparisonText(item)),
+    ...description.weaknesses.map((item) => normalizeComparisonText(item))
+  ]);
+  const bestUseNormalized = normalizeComparisonText(bestUseCaseText);
+  const riskNormalized = normalizeComparisonText(riskText);
+  const showBestUse = Boolean(bestUseCaseText) && !repeatedTexts.has(bestUseNormalized);
+  const showRisk = Boolean(riskText) && !repeatedTexts.has(riskNormalized);
+
+  elements.bestUseRow.hidden = !showBestUse;
+  if (showBestUse) {
+    elements.bestUseText.textContent = bestUseCaseText;
   }
 
-  elements.verdictBestUseCase.textContent = bestUseCaseText;
-  elements.verdictFailureMode.textContent = failureMode;
-  elements.verdictKeyRisk.textContent = dedupedKeyRisk;
-  elements.verdictBestUseCaseRow.hidden = !bestUseCaseText;
-  elements.verdictFailureModeRow.hidden = !failureMode;
-  elements.verdictKeyRiskRow.hidden = !dedupedKeyRisk;
+  elements.keyRiskRow.hidden = !showRisk;
+  if (showRisk) {
+    elements.keyRiskText.textContent = riskText;
+  }
 }
 
 function renderSurvivalProfile(base) {
@@ -591,8 +606,18 @@ function renderSurvivalProfile(base) {
     const level = getSurvivalLevel(value);
     if (level !== null) {
       row.style.setProperty('--survival-level', String(level));
+      row.setAttribute('data-survival-level', String(level));
       stageLevels.push(level);
     }
+  });
+
+  const visibleRows = stageRows.filter(({ value }) => Boolean(value));
+  visibleRows.forEach((entry, index) => {
+    const next = visibleRows[index + 1];
+    const level = getSurvivalLevel(entry.value);
+    const nextLevel = next ? getSurvivalLevel(next.value) : null;
+    const segmentState = !next ? 'end' : nextLevel < level ? 'decline' : nextLevel > level ? 'improve' : 'flat';
+    entry.row.setAttribute('data-segment', segmentState);
   });
 
   const trajectoryLabel = getTrajectoryLabel(stageLevels);
@@ -602,9 +627,7 @@ function renderSurvivalProfile(base) {
 
 function renderRealityCheck(base) {
   const realityCheck = getRealityCheck(base);
-  const content = isNonEmptyString(realityCheck)
-    ? realityCheck.trim().split(/(?<=[.!?])\s+/)[0]
-    : '';
+  const content = firstSentence(realityCheck);
 
   elements.realityCheckRow.hidden = !content;
   if (!content) {
@@ -961,13 +984,13 @@ function showBase(base, bases, params, stats, rankings, discovery) {
   renderHero(base);
   renderSummary(base);
   renderHeroTraits(base);
-  renderVerdict(base);
+  renderUseCaseAndRisk(base);
   renderScore(base);
   renderRankingPosition(base, rankings);
   renderComparison(base, stats);
-  renderSimilarBases(base, discovery, params);
   renderSurvivalProfile(base);
   renderRealityCheck(base);
+  renderSimilarBases(base, discovery, params);
   elements.status.textContent = '';
   elements.notFound.hidden = true;
   elements.detail.hidden = false;
