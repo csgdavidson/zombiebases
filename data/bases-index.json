@@ -1631,40 +1631,40 @@
     "lat": 7.957,
     "long": 80.7603,
     "scores": {
-      "overall": 7.1,
+      "overall": 7.2,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 6,
-        "isolation": 6,
-        "accessibility": 5
+        "defensibility": 8.8,
+        "sustainability": 4.8,
+        "isolation": 7.1,
+        "accessibility": 2.9
       }
     },
-    "description": {
-      "summary": "Sigiriya offers commanding elevation and early warning, but summit living is logistically thin. What kills you here is water and sustainment failure after stored supplies run dry.",
-      "strengths": [
-        "High-ground dominance gives surveillance and defensive reaction time",
-        "Approach routes are naturally channelled, helping small teams delay attackers"
-      ],
-      "weaknesses": [
-        "Daily hauling burden for water, fuel, and heavy goods is severe",
-        "Limited summit space constrains agriculture, workshops, and medical redundancy"
-      ]
-    },
     "verdict": {
-      "bestUseCase": "High-visibility watch fortress with rotational occupancy",
-      "failureMode": "Chronic resupply strain erodes health and readiness"
+      "bestUseCase": "Defensive overwatch strongpoint with tightly capped resident population",
+      "failureMode": "Support network failure below the rock cuts off water, food, and operational flexibility"
     },
     "survivalProfile": {
       "initial": "Strong",
-      "shortTerm": "Strong",
+      "shortTerm": "Stable with prepared logistics",
       "longTerm": "Moderate to weak"
     },
     "useCaseAndRisk": {
-      "bestUseCase": "Use as command-and-observation node linked to lower-elevation production sites",
-      "keyRisk": "If lift chains fail during bad weather or conflict, dehydration and fatigue collapse defense quality"
+      "bestUseCase": "High-ground command and surveillance base paired with distributed support camps",
+      "keyRisk": "Overconcentration on the summit creates a brittle single-point dependency"
     },
-    "realityCheck": "Assumes secure lower-base support, reliable water logistics, and team rotation instead of permanent large-population occupation.",
-    "scoreNarrative": "Sigiriya clears the 7.0 line on defensive geometry and situational control. It stays out of elite range because the sustaining burden of summit life becomes the long-term kill mechanism."
+    "realityCheck": "Assumes protected lower-zone supply operations and controlled ascent routes; summit-only survival is not realistic at scale.",
+    "scoreNarrative": "Defensibility is high and isolation is solid, but sustainability is the governing weakness. Sigiriya wins the fight for position, not the fight for duration.",
+    "summary": "Sigiriya offers rare rock-fortress defensibility and visibility, but constrained top-plateau capacity limits how long a group can live there without strong external support.",
+    "strengths": [
+      "Sheer rock elevation creates excellent denial of mass assault routes",
+      "Clear observation advantages support early threat detection and route planning",
+      "Symbolic and geographic prominence can aid navigation and regional signaling"
+    ],
+    "weaknesses": [
+      "Limited usable plateau area restricts agriculture, sanitation expansion, and population growth",
+      "Dependence on lower-ground systems makes sustained siege conditions risky",
+      "High visibility can attract both desperate civilians and organized hostile groups"
+    ]
   },
   {
     "name": "Malbork Castle",
@@ -6088,25 +6088,40 @@
     "lat": -23.4356,
     "long": -46.4731,
     "scores": {
-      "overall": 3,
+      "overall": 2.8,
       "categories": {
-        "defensibility": 2,
-        "sustainability": 5,
-        "isolation": 2,
-        "accessibility": 10
+        "defensibility": 1.8,
+        "sustainability": 3.6,
+        "isolation": 1.5,
+        "accessibility": 9.8
       }
     },
-    "description": {
-      "summary": "Highly functional but completely unsuitable as a survival base.",
-      "strengths": [
-        "Infrastructure",
-        "Access"
-      ],
-      "weaknesses": [
-        "Extremely exposed",
-        "Impossible to defend"
-      ]
-    }
+    "summary": "São Paulo Airport is a logistics giant but a survival dead end: it offers short-lived salvage value and almost no defensible, low-pressure living profile.",
+    "strengths": [
+      "Large fuel, storage, and utility footprint can be exploited in the first 24–72 hours",
+      "Runway and hangar infrastructure supports rapid staging, triage, and extraction",
+      "High equipment density increases chance of finding tools, vehicles, and comms assets early"
+    ],
+    "weaknesses": [
+      "Hyper-connected urban location drives relentless human and zombie pressure",
+      "Open geometry and multiple ingress points make perimeter control unsustainable",
+      "Dependency on complex power, staffing, and supply systems causes fast degradation"
+    ],
+    "verdict": {
+      "bestUseCase": "One-time rapid scavenging and evacuation staging point",
+      "failureMode": "Continuous inflow pressure collapses perimeter control long before resources can be stabilized"
+    },
+    "survivalProfile": {
+      "initial": "Moderate for hours, not days",
+      "shortTerm": "Weak",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Hit-and-move logistics raid with strict exit deadline",
+      "keyRisk": "The base becomes a magnet: accessibility amplifies threat faster than defenses can scale"
+    },
+    "realityCheck": "Assumes immediate organized arrival, preplanned extraction routes, and no attempt to hold terminal complexes as a settlement.",
+    "scoreNarrative": "Accessibility is the dominant advantage but also the fatal flaw. Defensibility and isolation are near-bottom, so even moderate supplies cannot convert this site into a survivable base."
   },
   {
     "name": "Hilltop Fort Rajasthan",
@@ -6117,25 +6132,40 @@
     "lat": 26.9124,
     "long": 75.7873,
     "scores": {
-      "overall": 7,
+      "overall": 7.4,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 5,
-        "isolation": 5,
-        "accessibility": 6
+        "defensibility": 9.1,
+        "sustainability": 5.1,
+        "isolation": 6.4,
+        "accessibility": 3.4
       }
     },
-    "description": {
-      "summary": "Highly defensible historic fort but limited by sustainability in a harsh climate.",
-      "strengths": [
-        "Strong fortifications",
-        "Elevated position"
-      ],
-      "weaknesses": [
-        "Water scarcity",
-        "Heat and environment challenges"
-      ]
-    }
+    "summary": "A Rajasthan hill fort is a classic high-control stronghold with excellent wall geometry, but water and heat stress define whether it thrives or slowly fails.",
+    "strengths": [
+      "Layered gates, elevation, and choke points create top-tier defensive control",
+      "Stone mass and compartmentalized interiors support fallback-in-depth defense",
+      "Height and sightlines improve early warning and reduce surprise breaches"
+    ],
+    "weaknesses": [
+      "Water reliability is the dominant long-horizon constraint in arid conditions",
+      "Summer heat increases dehydration risk and daily labor burden",
+      "Static heritage layouts can limit rapid retrofitting for modern sanitation and agriculture"
+    ],
+    "verdict": {
+      "bestUseCase": "Fortified regional command hold for a disciplined medium-sized group",
+      "failureMode": "Water scarcity and climate strain erode survivability even if walls hold"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Stable with rationing discipline",
+      "longTerm": "Moderate and water-limited"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Defensive anchor while nearby valleys are developed for supply lines",
+      "keyRisk": "Defensive success masks a slower collapse in water and habitability capacity"
+    },
+    "realityCheck": "Assumes access to cistern restoration, external collection routes, and strict population control relative to stored resources.",
+    "scoreNarrative": "Defensibility clearly dominates and pulls the base high, while sustainability is the decisive weakness. This is a fortress first, settlement second."
   },
   {
     "name": "Tiger’s Nest Monastery",
@@ -6146,25 +6176,40 @@
     "lat": 27.4916,
     "long": 89.363,
     "scores": {
-      "overall": 7,
+      "overall": 6.9,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 5,
-        "isolation": 7,
-        "accessibility": 2
+        "defensibility": 9.3,
+        "sustainability": 3.7,
+        "isolation": 8.2,
+        "accessibility": 1.6
       }
     },
-    "description": {
-      "summary": "Extremely defensible but difficult to sustain due to remoteness.",
-      "strengths": [
-        "Near-impossible access",
-        "Defensive position"
-      ],
-      "weaknesses": [
-        "Logistical difficulty",
-        "Limited sustainability"
-      ]
-    }
+    "summary": "Tiger’s Nest is an extreme cliffside redoubt with elite access denial, but its tiny carrying capacity and severe logistics ceiling cap long-term survival.",
+    "strengths": [
+      "Near-vertical approach routes create exceptional natural access control",
+      "High isolation reduces random encounter pressure and opportunistic incursions",
+      "Compact footprint is easier to secure with a small, trained team"
+    ],
+    "weaknesses": [
+      "Very limited space for food production, storage expansion, and medical redundancy",
+      "Difficult access slows all resupply, casualty movement, and infrastructure repair",
+      "Weather and altitude can rapidly degrade performance and evacuation options"
+    ],
+    "verdict": {
+      "bestUseCase": "Small-team emergency redoubt prioritizing concealment and denial",
+      "failureMode": "Logistics starvation: supplies, medical care, and replacement capacity fail before defenses do"
+    },
+    "survivalProfile": {
+      "initial": "Strong for prepared teams",
+      "shortTerm": "Fragile but workable",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Last-resort fallback with pre-cached stores and strict occupancy limits",
+      "keyRisk": "The same inaccessibility that protects the site also blocks recovery once systems degrade"
+    },
+    "realityCheck": "Assumes caches are prepositioned and occupants are acclimatized; ad hoc relocation here under pressure is usually too late.",
+    "scoreNarrative": "Defensibility and isolation are elite, but sustainability is distinctly low. The core trade-off is protection versus endurance capacity."
   },
   {
     "name": "Mehrangarh Fort",
@@ -6175,25 +6220,40 @@
     "lat": 26.2986,
     "long": 73.0183,
     "scores": {
-      "overall": 8,
+      "overall": 7.8,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 6,
-        "isolation": 5,
-        "accessibility": 6
+        "defensibility": 9.4,
+        "sustainability": 6.0,
+        "isolation": 5.3,
+        "accessibility": 4.1
       }
     },
-    "description": {
-      "summary": "One of the strongest fort-based options, combining defense with usable infrastructure.",
-      "strengths": [
-        "Exceptional fortifications",
-        "Established structure"
-      ],
-      "weaknesses": [
-        "Heat and environment",
-        "Moderate exposure"
-      ]
-    }
+    "summary": "Mehrangarh combines exceptional fortification geometry with workable internal scale, making it one of the stronger fortress options if surrounding pressure is actively managed.",
+    "strengths": [
+      "Massive walls, elevation, and layered approaches provide elite defensive depth",
+      "Internal area is large enough for structured shelter, storage, and role separation",
+      "Historic water architecture gives better adaptation potential than many similar forts"
+    ],
+    "weaknesses": [
+      "Urban adjacency keeps isolation only moderate and sustains external pressure",
+      "Large footprint increases manpower needed for continuous perimeter discipline",
+      "Heat and seasonal water variability still impose hard sustainability constraints"
+    ],
+    "verdict": {
+      "bestUseCase": "Primary fortified hub for organized regional defense and governance",
+      "failureMode": "External attrition from surrounding population pressure overwhelms manpower and utilities"
+    },
+    "survivalProfile": {
+      "initial": "Very strong",
+      "shortTerm": "Stable",
+      "longTerm": "Moderate to strong with active resource planning"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Central command fortress linked to controlled outer farming and water systems",
+      "keyRisk": "If outer security collapses, the fort becomes a besieged static shell"
+    },
+    "realityCheck": "Assumes coordinated external buffer zones and strict access governance; walls alone cannot offset prolonged urban spillover.",
+    "scoreNarrative": "Defensibility is the dominant strength and clearly tops the profile. Isolation is the weak axis, so long-term success depends on controlling surrounding approach corridors."
   },
   {
     "name": "KRBL Rice Mill (Dhuri)",
@@ -6204,25 +6264,40 @@
     "lat": 30.368,
     "long": 75.873,
     "scores": {
-      "overall": 4,
+      "overall": 5.1,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 7,
-        "isolation": 2,
-        "accessibility": 8
+        "defensibility": 3.2,
+        "sustainability": 7.6,
+        "isolation": 2.4,
+        "accessibility": 8.1
       }
     },
-    "description": {
-      "summary": "Strong food processing capability but located in highly exposed territory.",
-      "strengths": [
-        "Food production capacity",
-        "Industrial scale"
-      ],
-      "weaknesses": [
-        "Highly visible",
-        "Difficult to defend"
-      ]
-    }
+    "summary": "KRBL Dhuri has serious food-processing upside, but as a fixed base it is exposed, labor-dependent, and hard to secure against persistent pressure.",
+    "strengths": [
+      "Large grain storage and processing capability improves short- to medium-term food continuity",
+      "Industrial logistics layout supports packaging, rationing, and distribution workflows",
+      "Road and rail access can accelerate early procurement and evacuation"
+    ],
+    "weaknesses": [
+      "Low defensibility across wide, open industrial geometry",
+      "Low isolation in a populous agricultural corridor raises contact frequency",
+      "Complex machinery and power dependencies degrade fast without technical support"
+    ],
+    "verdict": {
+      "bestUseCase": "Supply-production node feeding more defensible satellite shelters",
+      "failureMode": "Perimeter attrition and staffing shortfalls collapse output and security simultaneously"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Useful but exposed",
+      "longTerm": "Weak as a standalone refuge"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Controlled processing and ration hub with strict movement security",
+      "keyRisk": "High accessibility drives constant pressure that outpaces defensive capacity"
+    },
+    "realityCheck": "Assumes preexisting workforce skills, spare parts scavenging, and armed outer security; without these, output falls rapidly.",
+    "scoreNarrative": "Sustainability potential is the clear strength, while defensibility is the clear weakness. The site works as a production asset, not a final fortress."
   },
   {
     "name": "Tiruppur Textile Cluster",
@@ -6233,25 +6308,40 @@
     "lat": 11.1085,
     "long": 77.3411,
     "scores": {
-      "overall": 4,
+      "overall": 4.7,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 6,
-        "isolation": 2,
-        "accessibility": 8
+        "defensibility": 2.9,
+        "sustainability": 6.2,
+        "isolation": 2.1,
+        "accessibility": 8.7
       }
     },
-    "description": {
-      "summary": "Industrial capacity but highly exposed and not suited for defense.",
-      "strengths": [
-        "Manufacturing capability",
-        "Infrastructure"
-      ],
-      "weaknesses": [
-        "High exposure",
-        "Difficult to secure"
-      ]
-    }
+    "summary": "Tiruppur’s textile cluster offers manufacturing utility but poor survival geometry; it is better treated as a salvage-and-fabrication zone than a residential base.",
+    "strengths": [
+      "Strong fabrication potential for clothing, insulation, bandaging, and basic protective gear",
+      "Dense industrial ecosystem increases odds of finding tools, generators, and spares",
+      "Transport connectivity supports rapid movement of goods during early-phase operations"
+    ],
+    "weaknesses": [
+      "Very low isolation in an urban-industrial belt with heavy movement pressure",
+      "Factory sprawl and multiple entry points make sustained defense manpower-intensive",
+      "Water and power stress can halt production quickly under disruption"
+    ],
+    "verdict": {
+      "bestUseCase": "Temporary fabrication corridor supporting mobile teams and nearby defensible outposts",
+      "failureMode": "Security burden and infrastructure outages shut down utility before stability is achieved"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Fragile",
+      "longTerm": "Poor"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Short-window industrial extraction and gear production",
+      "keyRisk": "Operational value attracts attention faster than the area can be hardened"
+    },
+    "realityCheck": "Assumes immediate access to inventories and ability to relocate outputs; holding the cluster as a settlement is unrealistic.",
+    "scoreNarrative": "Manufacturing gives some sustainability upside, but isolation and defensibility are both low. The base is useful for output, not survivable for static occupation."
   },
   {
     "name": "Pathankot Air Force Station",
@@ -6262,25 +6352,40 @@
     "lat": 32.233,
     "long": 75.634,
     "scores": {
-      "overall": 6,
+      "overall": 6.6,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 5,
-        "isolation": 5,
-        "accessibility": 7
+        "defensibility": 7.8,
+        "sustainability": 5.4,
+        "isolation": 4.1,
+        "accessibility": 6.9
       }
     },
-    "description": {
-      "summary": "Defensible military site with moderate survivability but exposed position.",
-      "strengths": [
-        "Military infrastructure",
-        "Defensive capability"
-      ],
-      "weaknesses": [
-        "Strategic target",
-        "Limited independence"
-      ]
-    }
+    "summary": "Pathankot AFS is a hardened operational compound with meaningful defensive structure, but its strategic visibility keeps pressure high and long-term autonomy uncertain.",
+    "strengths": [
+      "Military-grade perimeter logic and controlled zones improve immediate security posture",
+      "Airfield infrastructure can support fast logistics, medevac, and reconnaissance operations",
+      "Existing command-and-control layout enables disciplined team organization"
+    ],
+    "weaknesses": [
+      "Strategic value makes the site a likely target for both organized and opportunistic actors",
+      "Moderate isolation means surrounding pressure remains persistent",
+      "High fuel, maintenance, and technical dependencies challenge long-horizon independence"
+    ],
+    "verdict": {
+      "bestUseCase": "Regional security and coordination base during early-to-mid collapse",
+      "failureMode": "Becomes a contested strategic node where conflict load exceeds sustainment capacity"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Stable with command discipline",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Protected operations hub linked to distributed civilian fallback sites",
+      "keyRisk": "Targeting pressure rises because the base is visible, capable, and symbolically important"
+    },
+    "realityCheck": "Assumes trained operators, fuel management, and layered outer security; without operational continuity, advantage erodes quickly.",
+    "scoreNarrative": "Defensibility leads and keeps the base above average, but isolation is the limiting weakness. This is an operations platform, not a low-signature sanctuary."
   },
   {
     "name": "Hanle Observatory",
@@ -6291,25 +6396,40 @@
     "lat": 32.7794,
     "long": 78.9642,
     "scores": {
-      "overall": 7,
+      "overall": 7.1,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 6,
-        "isolation": 8,
-        "accessibility": 3
+        "defensibility": 6.2,
+        "sustainability": 4.9,
+        "isolation": 9.1,
+        "accessibility": 1.9
       }
     },
-    "description": {
-      "summary": "Remote high-altitude site with strong isolation and moderate survivability.",
-      "strengths": [
-        "Low population pressure",
-        "Clear defensible terrain"
-      ],
-      "weaknesses": [
-        "Harsh environment",
-        "Limited resources"
-      ]
-    }
+    "summary": "Hanle Observatory is an isolation-dominant survival option with low encounter pressure, but extreme altitude and remoteness impose severe physiological and logistics penalties.",
+    "strengths": [
+      "Exceptional remoteness dramatically reduces random threat frequency",
+      "Sparse approach routes simplify monitoring and early warning",
+      "Existing scientific facilities provide a foothold for power, shelter, and disciplined operations"
+    ],
+    "weaknesses": [
+      "Altitude and climate create chronic medical and labor performance risks",
+      "Resupply and evacuation are slow, weather-sensitive, and often non-redundant",
+      "Limited local production capacity constrains long-term population carrying capacity"
+    ],
+    "verdict": {
+      "bestUseCase": "Low-signature refuge for a small acclimatized team with caches",
+      "failureMode": "Environmental strain and medical/logistics failure degrade viability faster than enemy pressure"
+    },
+    "survivalProfile": {
+      "initial": "Moderate unless acclimatized",
+      "shortTerm": "Stable for prepared teams",
+      "longTerm": "Moderate and health-limited"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Remote fallback node prioritizing avoidance over engagement",
+      "keyRisk": "Isolation solves security but magnifies every supply and health mistake"
+    },
+    "realityCheck": "Assumes altitude adaptation, winterized systems, and backup comms. Unacclimatized populations will underperform rapidly.",
+    "scoreNarrative": "Isolation is the dominant strength and sharply distinguishes Hanle. Sustainability is the weakness, because environment and logistics tax every long-term function."
   },
   {
     "name": "Andaman Islands",
@@ -6320,25 +6440,40 @@
     "lat": 11.7401,
     "long": 92.6586,
     "scores": {
-      "overall": 8,
+      "overall": 8.3,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 7,
-        "isolation": 9,
-        "accessibility": 4
+        "defensibility": 7.1,
+        "sustainability": 8.0,
+        "isolation": 9.0,
+        "accessibility": 3.1
       }
     },
-    "description": {
-      "summary": "Strong island option combining isolation with viable long-term survival conditions.",
-      "strengths": [
-        "High isolation",
-        "Natural food sources"
-      ],
-      "weaknesses": [
-        "Difficult access",
-        "Limited infrastructure"
-      ]
-    }
+    "summary": "The Andamans are one of the strongest long-horizon options: maritime isolation and resource diversity create resilience if governance and inter-island logistics stay coherent.",
+    "strengths": [
+      "High island isolation limits uncontrolled overland threat flow",
+      "Marine and tropical resource base supports diversified food strategies",
+      "Distributed geography enables multi-node fallback instead of single-point collapse"
+    ],
+    "weaknesses": [
+      "Storm, shipping, and fuel disruptions can fracture inter-island coordination",
+      "Coastal perimeter length increases surveillance and response burden",
+      "Medical specialization and high-end repairs may remain externally dependent"
+    ],
+    "verdict": {
+      "bestUseCase": "Regional island network for long-term survival with layered governance",
+      "failureMode": "Logistics fragmentation between islands turns strategic depth into disconnected vulnerable pockets"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Very stable with coordination",
+      "longTerm": "Strongest when maritime mobility is maintained"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Distributed island survival system with primary and secondary settlements",
+      "keyRisk": "Mobility collapse (boats, fuel, weather windows) undermines the network advantage"
+    },
+    "realityCheck": "Assumes maritime skill, boat maintenance, and disciplined resource governance across settlements rather than single-island overconcentration.",
+    "scoreNarrative": "Isolation and sustainability jointly drive this base into top-tier range. Defensibility is solid but secondary; the main challenge is governing a dispersed maritime system."
   },
   {
     "name": "Lakshadweep",
