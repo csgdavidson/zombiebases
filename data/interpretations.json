@@ -1,0 +1,1900 @@
+{
+  "generatedAt": "2026-04-28T16:22:43Z",
+  "source": {
+    "bases": "data/bases-index.json",
+    "schemaVersion": 1,
+    "hash": "d5a1e99c6c93502b2b5d19418bf087b684c3aecd2e6079a073b05be19c47ae45"
+  },
+  "interpretations": [
+    {
+      "slug": "2rep-calvi",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "abqaiq",
+      "scoreBandLabel": "High-risk base",
+      "scoreBandDescription": "Failure risk is consistently high across core survival conditions.",
+      "scoreBandClass": "score-band-high-risk",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "ait-benhaddou",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "High-risk / high-reward",
+      "archetypeDescription": "Elite strengths are real, but one weak axis can collapse the whole setup.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "ajanta",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "al-udeid",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "alcatraz",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "andaman",
+      "scoreBandLabel": "Exceptional base",
+      "scoreBandDescription": "Strong survival potential with clear strengths, but not without failure risks.",
+      "scoreBandClass": "score-band-exceptional",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Built around elite isolation, with defence as the main constraint."
+    },
+    {
+      "slug": "anna-creek",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "High-risk / high-reward",
+      "archetypeDescription": "Elite strengths are real, but one weak axis can collapse the whole setup.",
+      "scoreShapeSummary": "Leans on isolation for stability, but defence remains the decisive weakness."
+    },
+    {
+      "slug": "antarctic-light",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "antarctic-peninsula",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "area-51",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "atto",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Leans on isolation for stability, but defence remains the decisive weakness."
+    },
+    {
+      "slug": "auckland-port",
+      "scoreBandLabel": "Poor survival choice",
+      "scoreBandDescription": "Weak protection and weak endurance make this a bad bet.",
+      "scoreBandClass": "score-band-poor",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "banda-neira",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "bangkok-airport",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in long-term viability, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "banlung",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on isolation for stability, but defence remains the decisive weakness."
+    },
+    {
+      "slug": "beijing-underground",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "bhx4-amazon",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in long-term viability, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "blue-mountains",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "bonny-lng-terminal",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Leans on defence for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "bunge-santos",
+      "scoreBandLabel": "High-risk base",
+      "scoreBandDescription": "Failure risk is consistently high across core survival conditions.",
+      "scoreBandClass": "score-band-high-risk",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "burj",
+      "scoreBandLabel": "Poor survival choice",
+      "scoreBandDescription": "Weak protection and weak endurance make this a bad bet.",
+      "scoreBandClass": "score-band-poor",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "burlington-bunker",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "byron-light",
+      "scoreBandLabel": "Poor survival choice",
+      "scoreBandDescription": "Weak protection and weak endurance make this a bad bet.",
+      "scoreBandClass": "score-band-poor",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in isolation is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "caerphilly-castle",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "camp-century",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "camp-lemonnier",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "cape-hatteras",
+      "scoreBandLabel": "High-risk base",
+      "scoreBandDescription": "Failure risk is consistently high across core survival conditions.",
+      "scoreBandClass": "score-band-high-risk",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in isolation is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "cape-point",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "cape-town-airport",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "cappadocia",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "carcassonne",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "cdg",
+      "scoreBandLabel": "Poor survival choice",
+      "scoreBandDescription": "Weak protection and weak endurance make this a bad bet.",
+      "scoreBandClass": "score-band-poor",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "cheddar-gorge",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "chernobyl",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "cheyenne",
+      "scoreBandLabel": "Elite stronghold",
+      "scoreBandDescription": "Top-tier survival profile with very few structural weaknesses.",
+      "scoreBandClass": "score-band-elite",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Built around elite defence, with isolation as the main constraint."
+    },
+    {
+      "slug": "chiloe",
+      "scoreBandLabel": "Exceptional base",
+      "scoreBandDescription": "Strong survival potential with clear strengths, but not without failure risks.",
+      "scoreBandClass": "score-band-exceptional",
+      "archetypeLabel": "Long-term settlement",
+      "archetypeDescription": "Built for endurance with a workable long-horizon survival profile.",
+      "scoreShapeSummary": "Built around elite long-term viability, with isolation as the main constraint."
+    },
+    {
+      "slug": "christ-redeemer",
+      "scoreBandLabel": "Non-viable",
+      "scoreBandDescription": "Breaks down quickly under realistic survival pressure.",
+      "scoreBandClass": "score-band-non-viable",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "clovelly",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "cn-tower",
+      "scoreBandLabel": "Non-viable",
+      "scoreBandDescription": "Breaks down quickly under realistic survival pressure.",
+      "scoreBandClass": "score-band-non-viable",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "coober-pedy",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "copacabana-fort",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "corwith-yard",
+      "scoreBandLabel": "High-risk base",
+      "scoreBandDescription": "Failure risk is consistently high across core survival conditions.",
+      "scoreBandClass": "score-band-high-risk",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "creach",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Any edge in isolation is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "cu-chi",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "cu-chi-tunnels",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "cueva-de-las-manos",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Any edge in isolation is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "cusco-highlands",
+      "scoreBandLabel": "Exceptional base",
+      "scoreBandDescription": "Strong survival potential with clear strengths, but not without failure risks.",
+      "scoreBandClass": "score-band-exceptional",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Built around elite defence, with isolation as the main constraint."
+    },
+    {
+      "slug": "danum-valley",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but defence remains the decisive weakness."
+    },
+    {
+      "slug": "dartmoor-prison",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "delhi-airport",
+      "scoreBandLabel": "Poor survival choice",
+      "scoreBandDescription": "Weak protection and weak endurance make this a bad bet.",
+      "scoreBandClass": "score-band-poor",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "derinkuyu",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "djenne",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "dubai-airport",
+      "scoreBandLabel": "Poor survival choice",
+      "scoreBandDescription": "Weak protection and weak endurance make this a bad bet.",
+      "scoreBandClass": "score-band-poor",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "edinburgh-castle",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "eguisheim",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in long-term viability, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "eiffel",
+      "scoreBandLabel": "Non-viable",
+      "scoreBandDescription": "Breaks down quickly under realistic survival pressure.",
+      "scoreBandClass": "score-band-non-viable",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "eigg",
+      "scoreBandLabel": "Exceptional base",
+      "scoreBandDescription": "Strong survival potential with clear strengths, but not without failure risks.",
+      "scoreBandClass": "score-band-exceptional",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Built around elite isolation, with defence as the main constraint."
+    },
+    {
+      "slug": "elmina",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "factory-shenzhen",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in long-term viability, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "faroe",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "fasil-ghebbi",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "fastnet",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "fiji",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on isolation for stability, but defence remains the decisive weakness."
+    },
+    {
+      "slug": "fort-denison",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "fort-george",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "fort-jefferson",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "galapagos",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "gaza-tunnels",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "gdansk-shipyard",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in long-term viability, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "geilenkirchen",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "gen-santos-port",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "ghawar-processing",
+      "scoreBandLabel": "High-risk base",
+      "scoreBandDescription": "Failure risk is consistently high across core survival conditions.",
+      "scoreBandClass": "score-band-high-risk",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Any edge in isolation is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "glacier",
+      "scoreBandLabel": "Poor survival choice",
+      "scoreBandDescription": "Weak protection and weak endurance make this a bad bet.",
+      "scoreBandClass": "score-band-poor",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in isolation is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "gotland",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "great-wall",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "greenland",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "guantanamo",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "hallstatt",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on defence for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "halong",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "hanle-observatory",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "harbour-bridge",
+      "scoreBandLabel": "Non-viable",
+      "scoreBandDescription": "Breaks down quickly under realistic survival pressure.",
+      "scoreBandClass": "score-band-non-viable",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "heathrow",
+      "scoreBandLabel": "Poor survival choice",
+      "scoreBandDescription": "Weak protection and weak endurance make this a bad bet.",
+      "scoreBandClass": "score-band-poor",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "heligoland",
+      "scoreBandLabel": "Exceptional base",
+      "scoreBandDescription": "Strong survival potential with clear strengths, but not without failure risks.",
+      "scoreBandClass": "score-band-exceptional",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Built around elite isolation, with long-term viability as the main constraint."
+    },
+    {
+      "slug": "helsinki-airport",
+      "scoreBandLabel": "High-risk base",
+      "scoreBandDescription": "Failure risk is consistently high across core survival conditions.",
+      "scoreBandClass": "score-band-high-risk",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "himeji",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "hormuz-light",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "huashan",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "hue",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "High-risk / high-reward",
+      "archetypeDescription": "Elite strengths are real, but one weak axis can collapse the whole setup.",
+      "scoreShapeSummary": "Leans on defence for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "hutchinson-salt",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "hyundai-shipyard",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "ice-shelf",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "ile-dyeu",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "intramuros",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "itaipu-dam",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Long-term settlement",
+      "archetypeDescription": "Built for endurance with a workable long-horizon survival profile.",
+      "scoreShapeSummary": "Leans on long-term viability for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "iwo-jima-bunkers",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "jebel-ali",
+      "scoreBandLabel": "High-risk base",
+      "scoreBandDescription": "Failure risk is consistently high across core survival conditions.",
+      "scoreBandClass": "score-band-high-risk",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "jeju",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on isolation for stability, but defence remains the decisive weakness."
+    },
+    {
+      "slug": "kargil-bunkers",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "kibber",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "kimberley-big-hole",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "kizhi",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Any edge in isolation is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "kodiak",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "kolmanskop",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "komodo",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "kota-kinabalu-base",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on defence for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "krak",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "krbl-dhuri",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in long-term viability, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "kuttanad",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in long-term viability, yet repeated pressure exposes weak defence."
+    },
+    {
+      "slug": "la-rinconada",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "lakshadweep",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "lax",
+      "scoreBandLabel": "Non-viable",
+      "scoreBandDescription": "Breaks down quickly under realistic survival pressure.",
+      "scoreBandClass": "score-band-non-viable",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "leshan",
+      "scoreBandLabel": "Poor survival choice",
+      "scoreBandDescription": "Weak protection and weak endurance make this a bad bet.",
+      "scoreBandClass": "score-band-poor",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "ligatne-bunker",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "lindisfarne",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "longyearbyen",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "machu-picchu",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Built around elite defence, with long-term viability as the main constraint."
+    },
+    {
+      "slug": "maginot-line",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "mahabalipuram",
+      "scoreBandLabel": "Poor survival choice",
+      "scoreBandDescription": "Weak protection and weak endurance make this a bad bet.",
+      "scoreBandClass": "score-band-poor",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "malbork",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "maori-pa",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "masada",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "matmata",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "mcmurdo",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "mehrangarh",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Built around elite defence, with isolation as the main constraint."
+    },
+    {
+      "slug": "mesa-verde",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "mombasa",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in long-term viability, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "mont-saint-michel",
+      "scoreBandLabel": "Exceptional base",
+      "scoreBandDescription": "Strong survival potential with clear strengths, but not without failure risks.",
+      "scoreBandClass": "score-band-exceptional",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Built around elite defence, with long-term viability as the main constraint."
+    },
+    {
+      "slug": "mumbai-port",
+      "scoreBandLabel": "High-risk base",
+      "scoreBandDescription": "Failure risk is consistently high across core survival conditions.",
+      "scoreBandClass": "score-band-high-risk",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "murmansk",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "murmansk-icebreaker",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "murmansk-port",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe defence weakness."
+    },
+    {
+      "slug": "nagurskoye",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "naours",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "neuschwanstein",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "norilsk",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "north-head-bunker",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "okinawa",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on long-term viability for stability, but defence remains the decisive weakness."
+    },
+    {
+      "slug": "olavsvern",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "olenya-airbase",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "ostankino",
+      "scoreBandLabel": "Poor survival choice",
+      "scoreBandDescription": "Weak protection and weak endurance make this a bad bet.",
+      "scoreBandClass": "score-band-poor",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "palawan",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "panama-canal",
+      "scoreBandLabel": "High-risk base",
+      "scoreBandDescription": "Failure risk is consistently high across core survival conditions.",
+      "scoreBandClass": "score-band-high-risk",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "patagonia-village",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but defence remains the decisive weakness."
+    },
+    {
+      "slug": "pathankot-afs",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "High-risk / high-reward",
+      "archetypeDescription": "Elite strengths are real, but one weak axis can collapse the whole setup.",
+      "scoreShapeSummary": "Leans on defence for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "petra",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "High-risk / high-reward",
+      "archetypeDescription": "Elite strengths are real, but one weak axis can collapse the whole setup.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "petronas",
+      "scoreBandLabel": "Non-viable",
+      "scoreBandDescription": "Breaks down quickly under realistic survival pressure.",
+      "scoreBandClass": "score-band-non-viable",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "phoenix-airfield",
+      "scoreBandLabel": "High-risk base",
+      "scoreBandDescription": "Failure risk is consistently high across core survival conditions.",
+      "scoreBandClass": "score-band-high-risk",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in isolation is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "phuquoc-light",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "pine-gap",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "polar-tower",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "port-arthur-refinery",
+      "scoreBandLabel": "High-risk base",
+      "scoreBandDescription": "Failure risk is consistently high across core survival conditions.",
+      "scoreBandClass": "score-band-high-risk",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "port-talbot",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in long-term viability, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "port-vila",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak defence."
+    },
+    {
+      "slug": "porton-down",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "portsmouth-harbour",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "potosi-mine",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "predjama",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "prudhoe-bay",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Any edge in isolation is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "punta-lighthouse",
+      "scoreBandLabel": "Poor survival choice",
+      "scoreBandDescription": "Weak protection and weak endurance make this a bad bet.",
+      "scoreBandClass": "score-band-poor",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in isolation is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "qeshm",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but defence remains the decisive weakness."
+    },
+    {
+      "slug": "qutub",
+      "scoreBandLabel": "Non-viable",
+      "scoreBandDescription": "Breaks down quickly under realistic survival pressure.",
+      "scoreBandClass": "score-band-non-viable",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "rajasthan-fort",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "ras-al-khair",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in long-term viability, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "rice-terraces",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Long-term settlement",
+      "archetypeDescription": "Built for endurance with a workable long-horizon survival profile.",
+      "scoreShapeSummary": "Leans on long-term viability for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "rocamadour",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "rotterdam-port",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "ruhr",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in long-term viability, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "ryongsong-compound",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "san-felipe",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "sao-paulo-airport",
+      "scoreBandLabel": "Poor survival choice",
+      "scoreBandDescription": "Weak protection and weak endurance make this a bad bet.",
+      "scoreBandClass": "score-band-poor",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "schiphol",
+      "scoreBandLabel": "Poor survival choice",
+      "scoreBandDescription": "Weak protection and weak endurance make this a bad bet.",
+      "scoreBandClass": "score-band-poor",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "seychelles",
+      "scoreBandLabel": "Exceptional base",
+      "scoreBandDescription": "Strong survival potential with clear strengths, but not without failure risks.",
+      "scoreBandClass": "score-band-exceptional",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Built around elite isolation, with defence as the main constraint."
+    },
+    {
+      "slug": "shanghai-port",
+      "scoreBandLabel": "High-risk base",
+      "scoreBandDescription": "Failure risk is consistently high across core survival conditions.",
+      "scoreBandClass": "score-band-high-risk",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "shaxi",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak defence."
+    },
+    {
+      "slug": "shirakawa-go",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on isolation for stability, but defence remains the decisive weakness."
+    },
+    {
+      "slug": "sigiriya",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "sime-darby-sabah",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Leans on long-term viability for stability, but defence remains the decisive weakness."
+    },
+    {
+      "slug": "simien",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Built around elite isolation, with long-term viability as the main constraint."
+    },
+    {
+      "slug": "singapore-port",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in long-term viability, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "siwa-oasis",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on isolation for stability, but defence remains the decisive weakness."
+    },
+    {
+      "slug": "socotra",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "south-pole-station",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "spinnaker",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "st-kilda",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "suomenlinna",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "super-pit",
+      "scoreBandLabel": "High-risk base",
+      "scoreBandDescription": "Failure risk is consistently high across core survival conditions.",
+      "scoreBandClass": "score-band-high-risk",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Any edge in isolation is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "sydney-airport",
+      "scoreBandLabel": "Non-viable",
+      "scoreBandDescription": "Breaks down quickly under realistic survival pressure.",
+      "scoreBandClass": "score-band-non-viable",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "table-mountain",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "High-risk / high-reward",
+      "archetypeDescription": "Elite strengths are real, but one weak axis can collapse the whole setup.",
+      "scoreShapeSummary": "Leans on defence for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "table-rock",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on defence for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "tambopata",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Leans on isolation for stability, but defence remains the decisive weakness."
+    },
+    {
+      "slug": "tasmania",
+      "scoreBandLabel": "Exceptional base",
+      "scoreBandDescription": "Strong survival potential with clear strengths, but not without failure risks.",
+      "scoreBandClass": "score-band-exceptional",
+      "archetypeLabel": "Long-term settlement",
+      "archetypeDescription": "Built for endurance with a workable long-horizon survival profile.",
+      "scoreShapeSummary": "Built around elite long-term viability, with defence as the main constraint."
+    },
+    {
+      "slug": "telluride",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "the-roaches",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "tiger-gorge",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "tigers-nest",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "tindal-base",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "tiruppur-textiles",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in long-term viability, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "titan-silo",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Defensive stronghold",
+      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "tokyo-airport",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "tokyo-tower",
+      "scoreBandLabel": "Non-viable",
+      "scoreBandDescription": "Breaks down quickly under realistic survival pressure.",
+      "scoreBandClass": "score-band-non-viable",
+      "archetypeLabel": "Symbolic trap",
+      "archetypeDescription": "Looks defensible on paper, but core survival systems fail too fast.",
+      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe isolation weakness."
+    },
+    {
+      "slug": "uluru",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Any edge in isolation is overwhelmed by severe long-term viability weakness."
+    },
+    {
+      "slug": "unmiss-juba",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Temporary fallback",
+      "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "utqiagvik",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "vancouver-island",
+      "scoreBandLabel": "Viable but flawed",
+      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
+      "scoreBandClass": "score-band-viable",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on long-term viability for stability, but isolation remains the decisive weakness."
+    },
+    {
+      "slug": "visby",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on defence for stability, but long-term viability remains the decisive weakness."
+    },
+    {
+      "slug": "wadi-musa",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak defence."
+    },
+    {
+      "slug": "waw-namus",
+      "scoreBandLabel": "Situational refuge",
+      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
+      "scoreBandClass": "score-band-situational",
+      "archetypeLabel": "Isolation refuge",
+      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
+      "scoreShapeSummary": "Shows partial strength in isolation, yet repeated pressure exposes weak long-term viability."
+    },
+    {
+      "slug": "wuhan-institute-of-virology",
+      "scoreBandLabel": "Fragile option",
+      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
+      "scoreBandClass": "score-band-fragile",
+      "archetypeLabel": "Fragile shelter",
+      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
+      "scoreShapeSummary": "Shows partial strength in defence, yet repeated pressure exposes weak isolation."
+    },
+    {
+      "slug": "zanzibar",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
+      "archetypeLabel": "Balanced survivor",
+      "archetypeDescription": "No single elite trait, but a workable all-round profile for adaptive groups.",
+      "scoreShapeSummary": "Leans on isolation for stability, but long-term viability remains the decisive weakness."
+    }
+  ]
+}

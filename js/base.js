@@ -2,6 +2,7 @@ const DATA_URL = './data/bases-index.json';
 const STATS_URL = './data/base-stats.json';
 const RANKINGS_URL = './data/rankings.json';
 const DISCOVERY_URL = './data/discovery.json';
+const INTERPRETATIONS_URL = './data/interpretations.json';
 
 const LABELS = {
   type: {
@@ -69,6 +70,13 @@ const elements = {
   scoreList: document.getElementById('base-score-list'),
   scoreStrengths: document.getElementById('base-score-strengths'),
   scoreWeaknesses: document.getElementById('base-score-weaknesses'),
+  scoreMeaningPanel: document.getElementById('score-meaning-panel'),
+  scoreBandLabel: document.getElementById('base-score-band-label'),
+  scoreBandDescription: document.getElementById('base-score-band-description'),
+  archetypeLabel: document.getElementById('base-archetype-label'),
+  archetypeDescription: document.getElementById('base-archetype-description'),
+  scoreShapeSummary: document.getElementById('base-score-shape-summary'),
+  scoreLegend: document.getElementById('score-legend'),
   rankingSection: document.getElementById('ranking-section'),
   rankingList: document.getElementById('ranking-list'),
   comparisonSection: document.getElementById('comparison-section'),
@@ -348,6 +356,61 @@ function renderScoreBreakdown(scoreObject) {
     item.append(itemLabel, ` ${scoreObject[key].toFixed(1)}/10`);
     elements.scoreList.appendChild(item);
   });
+}
+
+function getInterpretationRecord(base, interpretations) {
+  const items = interpretations?.interpretations;
+  if (!Array.isArray(items)) {
+    return null;
+  }
+
+  return items.find((item) => item?.slug === base.slug) ?? null;
+}
+
+function renderScoreMeaning(base, interpretations) {
+  if (!elements.scoreMeaningPanel || !elements.scoreBandLabel || !elements.scoreBandDescription || !elements.archetypeLabel || !elements.archetypeDescription || !elements.scoreShapeSummary) {
+    return;
+  }
+
+  const interpretation = getInterpretationRecord(base, interpretations);
+  if (!interpretation) {
+    elements.scoreMeaningPanel.hidden = true;
+    if (elements.scoreLegend) {
+      elements.scoreLegend.hidden = true;
+    }
+    return;
+  }
+
+  const bandLabel = isNonEmptyString(interpretation.scoreBandLabel) ? interpretation.scoreBandLabel.trim() : '';
+  const bandDescription = isNonEmptyString(interpretation.scoreBandDescription) ? interpretation.scoreBandDescription.trim() : '';
+  const archetypeLabel = isNonEmptyString(interpretation.archetypeLabel) ? interpretation.archetypeLabel.trim() : '';
+  const archetypeDescription = isNonEmptyString(interpretation.archetypeDescription) ? interpretation.archetypeDescription.trim() : '';
+  const scoreShapeSummary = isNonEmptyString(interpretation.scoreShapeSummary) ? interpretation.scoreShapeSummary.trim() : '';
+
+  const hasContent = Boolean(bandLabel || bandDescription || archetypeLabel || archetypeDescription || scoreShapeSummary);
+  elements.scoreMeaningPanel.hidden = !hasContent;
+  if (!hasContent) {
+    if (elements.scoreLegend) {
+      elements.scoreLegend.hidden = true;
+    }
+    return;
+  }
+
+  elements.scoreBandLabel.textContent = bandLabel;
+  elements.scoreBandDescription.textContent = bandDescription;
+  elements.archetypeLabel.textContent = archetypeLabel;
+  elements.archetypeDescription.textContent = archetypeDescription;
+  elements.scoreShapeSummary.textContent = scoreShapeSummary;
+
+  if (isNonEmptyString(interpretation.scoreBandClass)) {
+    elements.scoreMeaningPanel.dataset.bandClass = interpretation.scoreBandClass.trim();
+  } else {
+    delete elements.scoreMeaningPanel.dataset.bandClass;
+  }
+
+  if (elements.scoreLegend) {
+    elements.scoreLegend.hidden = false;
+  }
 }
 
 function renderStrengthsAndWeaknesses(scoreObject) {
@@ -824,7 +887,7 @@ function renderSimilarBases(base, discovery, params) {
   elements.similarSection.hidden = false;
 }
 
-function showBase(base, bases, params, stats, rankings, discovery) {
+function showBase(base, bases, params, stats, rankings, discovery, interpretations) {
   elements.name.textContent = base.name;
   applyDetailMetadata(base);
   elements.meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
@@ -834,6 +897,7 @@ function showBase(base, bases, params, stats, rankings, discovery) {
   renderVerdict(base);
   renderDescription(base);
   renderScore(base);
+  renderScoreMeaning(base, interpretations);
   renderRankingPosition(base, rankings);
   renderComparison(base, stats);
   renderSimilarBases(base, discovery, params);
@@ -860,11 +924,12 @@ async function loadBase() {
   elements.status.textContent = 'Loading base details...';
 
   try {
-    const [basesResponse, statsResponse, rankingsResponse, discoveryResponse] = await Promise.all([
+    const [basesResponse, statsResponse, rankingsResponse, discoveryResponse, interpretationsResponse] = await Promise.all([
       fetch(DATA_URL),
       fetch(STATS_URL),
       fetch(RANKINGS_URL),
-      fetch(DISCOVERY_URL)
+      fetch(DISCOVERY_URL),
+      fetch(INTERPRETATIONS_URL)
     ]);
     if (!basesResponse.ok) {
       throw new Error(`Failed to load bases data (${basesResponse.status})`);
@@ -874,6 +939,7 @@ async function loadBase() {
     const stats = statsResponse.ok ? await statsResponse.json() : null;
     const rankings = rankingsResponse.ok ? await rankingsResponse.json() : null;
     const discovery = discoveryResponse.ok ? await discoveryResponse.json() : null;
+    const interpretations = interpretationsResponse.ok ? await interpretationsResponse.json() : null;
     const matchedBase = slugHelper?.resolveBaseBySlug
       ? slugHelper.resolveBaseBySlug(bases, slug)
       : bases.find((base) => base.slug === slug);
@@ -883,7 +949,7 @@ async function loadBase() {
       return;
     }
 
-    showBase(matchedBase, bases, params, stats, rankings, discovery);
+    showBase(matchedBase, bases, params, stats, rankings, discovery, interpretations);
   } catch (error) {
     console.error(error);
     showNotFound();
