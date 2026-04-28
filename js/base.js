@@ -86,6 +86,7 @@ const elements = {
   survivalShortTerm: document.getElementById('base-survival-short-term'),
   survivalLongTermRow: document.getElementById('base-survival-long-term-row'),
   survivalLongTerm: document.getElementById('base-survival-long-term'),
+  survivalTrajectoryLabel: document.getElementById('survival-trajectory-label'),
   realityCheckRow: document.getElementById('base-reality-check-row'),
   realityCheckText: document.getElementById('base-reality-check')
 };
@@ -468,6 +469,68 @@ function getRealityCheck(base) {
   return base?.realityCheck ?? null;
 }
 
+function getSurvivalLevel(value) {
+  if (!isNonEmptyString(value)) {
+    return null;
+  }
+
+  const normalized = value
+    .trim()
+    .toLowerCase()
+    .replace(/[_-]+/g, ' ')
+    .replace(/\s+/g, ' ');
+
+  const strongest = ['very strong', 'very high', 'high', 'strong'];
+  const medium = ['moderate', 'medium'];
+  const low = ['weak', 'low'];
+  const weakest = ['very weak', 'very low', 'nonviable', 'non viable'];
+
+  if (strongest.includes(normalized) || ((normalized.includes('very') || normalized.includes('high')) && normalized.includes('strong'))) {
+    return 4;
+  }
+  if (medium.includes(normalized) || normalized.includes('moderate') || normalized.includes('medium')) {
+    return 3;
+  }
+  if (weakest.includes(normalized) || normalized.includes('non viable') || normalized.includes('nonviable') || normalized.includes('very weak') || normalized.includes('very low')) {
+    return 1;
+  }
+  if (low.includes(normalized) || normalized.includes('weak') || normalized.includes('low')) {
+    return 2;
+  }
+
+  return 3;
+}
+
+function getTrajectoryLabel(levels) {
+  if (levels.length < 3) {
+    return '';
+  }
+
+  const [initial, shortTerm, longTerm] = levels;
+  const allSame = initial === shortTerm && shortTerm === longTerm;
+  const improves = initial <= shortTerm && shortTerm <= longTerm && (initial < longTerm || shortTerm < longTerm);
+  const gradualDecline = initial >= shortTerm && shortTerm >= longTerm && (initial > longTerm);
+  const overallDrop = initial - longTerm;
+
+  if (allSame) {
+    return 'Stable profile';
+  }
+  if (improves) {
+    return 'Improves over time';
+  }
+  if (initial >= 4 && longTerm <= 1) {
+    return 'Late-stage collapse';
+  }
+  if (overallDrop >= 2) {
+    return 'Sharp drop-off';
+  }
+  if (gradualDecline) {
+    return 'Gradual decline';
+  }
+
+  return 'Variable profile';
+}
+
 function renderVerdict(base) {
   const verdict = getVerdict(base);
   const useCaseAndRisk = getUseCaseAndRisk(base);
@@ -512,6 +575,29 @@ function renderSurvivalProfile(base) {
   elements.survivalInitialRow.hidden = !initial;
   elements.survivalShortTermRow.hidden = !shortTerm;
   elements.survivalLongTermRow.hidden = !longTerm;
+
+  const stageRows = [
+    { row: elements.survivalInitialRow, value: initial },
+    { row: elements.survivalShortTermRow, value: shortTerm },
+    { row: elements.survivalLongTermRow, value: longTerm }
+  ];
+
+  const stageLevels = [];
+  stageRows.forEach(({ row, value }) => {
+    if (!row || !value) {
+      return;
+    }
+
+    const level = getSurvivalLevel(value);
+    if (level !== null) {
+      row.style.setProperty('--survival-level', String(level));
+      stageLevels.push(level);
+    }
+  });
+
+  const trajectoryLabel = getTrajectoryLabel(stageLevels);
+  elements.survivalTrajectoryLabel.textContent = trajectoryLabel;
+  elements.survivalTrajectoryLabel.hidden = !trajectoryLabel;
 }
 
 function renderRealityCheck(base) {

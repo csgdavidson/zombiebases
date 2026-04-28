@@ -62,9 +62,25 @@
 
       <section id="survival-profile-section" class="content-section" aria-label="Survival profile section" hidden>
         <h3>Survival Profile</h3>
-        <p id="base-survival-initial-row"><strong>Initial:</strong> <span id="base-survival-initial"></span></p>
-        <p id="base-survival-short-term-row"><strong>Short-term:</strong> <span id="base-survival-short-term"></span></p>
-        <p id="base-survival-long-term-row"><strong>Long-term:</strong> <span id="base-survival-long-term"></span></p>
+        <p id="survival-trajectory-label" class="survival-trajectory-label" hidden></p>
+        <div class="survival-timeline" aria-label="Survival timeline">
+          <div class="survival-connector" aria-hidden="true"></div>
+          <div id="base-survival-initial-row" class="survival-stage">
+            <span class="survival-stage-node" aria-hidden="true"></span>
+            <span class="survival-stage-label">Initial</span>
+            <span id="base-survival-initial" class="survival-stage-value"></span>
+          </div>
+          <div id="base-survival-short-term-row" class="survival-stage">
+            <span class="survival-stage-node" aria-hidden="true"></span>
+            <span class="survival-stage-label">Short-term</span>
+            <span id="base-survival-short-term" class="survival-stage-value"></span>
+          </div>
+          <div id="base-survival-long-term-row" class="survival-stage">
+            <span class="survival-stage-node" aria-hidden="true"></span>
+            <span class="survival-stage-label">Long-term</span>
+            <span id="base-survival-long-term" class="survival-stage-value"></span>
+          </div>
+        </div>
       </section>
 
       <section id="verdict-section" class="content-section" aria-label="Verdict section" hidden>
