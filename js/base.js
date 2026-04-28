@@ -514,17 +514,23 @@ function renderScore(base) {
 
 function classifyComparison(value, average) {
   if (!isValidScoreValue(value) || !isValidScoreValue(average)) {
-    return '';
+    return null;
   }
 
   const difference = value - average;
-  if (difference >= 0.25) {
-    return 'Above average';
+  if (difference >= 2.0) {
+    return { label: 'Elite', marker: '▲', tone: 'positive' };
   }
-  if (difference <= -0.25) {
-    return 'Below average';
+  if (difference >= 0.75) {
+    return { label: 'Strong', marker: '▲', tone: 'positive' };
   }
-  return 'Average';
+  if (difference > -0.75) {
+    return { label: 'Average', marker: '▬', tone: 'neutral' };
+  }
+  if (difference > -2.0) {
+    return { label: 'Weak', marker: '▼', tone: 'negative' };
+  }
+  return { label: 'Critical', marker: '▼', tone: 'negative' };
 }
 
 function appendComparisonItem(list, label, value, average) {
@@ -532,11 +538,35 @@ function appendComparisonItem(list, label, value, average) {
     return;
   }
 
-  const item = document.createElement('li');
-  const title = document.createElement('strong');
   const comparison = classifyComparison(value, average);
-  title.textContent = `${label}: `;
-  item.append(title, `${comparison} (${value.toFixed(1)} vs ${average.toFixed(1)})`);
+  if (!comparison) {
+    return;
+  }
+
+  const item = document.createElement('li');
+  item.className = 'comparison-row';
+
+  const rowLabel = document.createElement('span');
+  rowLabel.className = 'comparison-label';
+  rowLabel.textContent = label;
+
+  const judgement = document.createElement('span');
+  judgement.className = `comparison-judgement comparison-judgement-${comparison.tone}`;
+  judgement.textContent = `${comparison.marker} ${comparison.label}`;
+
+  const values = document.createElement('span');
+  values.className = 'comparison-values';
+  values.textContent = `${value.toFixed(1)} vs ${average.toFixed(1)}`;
+
+  const bar = document.createElement('span');
+  bar.className = 'comparison-bar';
+  const barFill = document.createElement('span');
+  barFill.className = 'comparison-bar-fill';
+  barFill.style.width = `${Math.max(0, Math.min(100, (value / 10) * 100))}%`;
+  barFill.setAttribute('aria-hidden', 'true');
+  bar.appendChild(barFill);
+
+  item.append(rowLabel, judgement, values, bar);
   list.appendChild(item);
 }
 
@@ -559,13 +589,13 @@ function renderComparison(base, stats) {
   elements.comparisonOverallList.innerHTML = '';
   elements.comparisonCategoryList.innerHTML = '';
 
-  appendComparisonItem(elements.comparisonOverallList, 'Overall vs global', overall, globalStats?.averages?.overall);
-  appendComparisonItem(elements.comparisonOverallList, 'Overall vs region', overall, regionStats?.averages?.overall);
-  appendComparisonItem(elements.comparisonOverallList, 'Overall vs type', overall, typeStats?.averages?.overall);
+  appendComparisonItem(elements.comparisonOverallList, 'Global', overall, globalStats?.averages?.overall);
+  appendComparisonItem(elements.comparisonOverallList, 'Region', overall, regionStats?.averages?.overall);
+  appendComparisonItem(elements.comparisonOverallList, 'Type', overall, typeStats?.averages?.overall);
 
   if (scoreObject && typeStats?.averages) {
     Object.entries(SCORE_LABELS).forEach(([key, label]) => {
-      appendComparisonItem(elements.comparisonCategoryList, `${label} vs type`, scoreObject[key], typeStats.averages[key]);
+      appendComparisonItem(elements.comparisonCategoryList, label, scoreObject[key], typeStats.averages[key]);
     });
   }
 
