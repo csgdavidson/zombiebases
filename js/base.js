@@ -68,9 +68,7 @@ const elements = {
   scoreEmpty: document.getElementById('score-empty'),
   scoreOverall: document.getElementById('base-score-overall'),
   scoreBadges: document.getElementById('base-score-badges'),
-  scoreSummary: document.getElementById('base-score-summary'),
   scoreList: document.getElementById('base-score-list'),
-  scoreInterpretation: document.getElementById('base-score-interpretation'),
   rankingSection: document.getElementById('ranking-section'),
   rankingList: document.getElementById('ranking-list'),
   comparisonSection: document.getElementById('comparison-section'),
@@ -87,7 +85,7 @@ const elements = {
   survivalShortTerm: document.getElementById('base-survival-short-term'),
   survivalLongTermRow: document.getElementById('base-survival-long-term-row'),
   survivalLongTerm: document.getElementById('base-survival-long-term'),
-  realityCheckSection: document.getElementById('reality-check-section'),
+  realityCheckRow: document.getElementById('base-reality-check-row'),
   realityCheckText: document.getElementById('base-reality-check')
 };
 
@@ -368,29 +366,6 @@ function renderScoreBreakdown(scoreObject) {
   });
 }
 
-function getStrengthWeakness(scoreObject) {
-  const rankedScores = Object.entries(scoreObject)
-    .filter(([key, value]) => SCORE_LABELS[key] && isValidScoreValue(value))
-    .sort((a, b) => b[1] - a[1]);
-
-  const topTwoEntries = rankedScores.slice(0, 2);
-  const topTwo = topTwoEntries.map(([key, value]) => `${SCORE_LABELS[key]} (${value.toFixed(1)})`);
-
-  const topKeys = new Set(topTwoEntries.map(([key]) => key));
-  const remainingLowestFirst = rankedScores
-    .filter(([key]) => !topKeys.has(key))
-    .sort((a, b) => a[1] - b[1]);
-  const remainingBelowEight = remainingLowestFirst.filter(([, value]) => value < 8);
-  const bottomCandidates = remainingBelowEight.length >= 2
-    ? remainingBelowEight.slice(0, 2)
-    : remainingLowestFirst.slice(0, 2);
-  return {
-    topTwo,
-    topEntry: topTwoEntries[0] ?? null,
-    weakEntry: bottomCandidates[0] ?? null
-  };
-}
-
 function getTierBadge(overall) {
   if (!isValidScoreValue(overall)) {
     return null;
@@ -458,34 +433,6 @@ function renderScoreBadges(scoreObject, overall) {
   });
 
   elements.scoreBadges.hidden = badges.length === 0;
-}
-
-function renderScoreSummary(scoreObject) {
-  if (!elements.scoreSummary) {
-    return;
-  }
-
-  const rankedScores = Object.entries(scoreObject)
-    .filter(([key, value]) => SCORE_LABELS[key] && isValidScoreValue(value))
-    .sort((a, b) => b[1] - a[1]);
-  const topTwo = rankedScores.slice(0, 2).map(([key]) => SCORE_LABELS[key]);
-  const weakest = rankedScores.length ? SCORE_LABELS[rankedScores[rankedScores.length - 1][0]] : '';
-  const line = topTwo.length
-    ? `Top: ${topTwo.join(' • ')}\nWeakest: ${weakest}`
-    : '';
-  elements.scoreSummary.textContent = line;
-  elements.scoreSummary.hidden = !line;
-}
-
-function renderScoreInterpretation(scoreObject) {
-  if (!elements.scoreInterpretation) {
-    return;
-  }
-  const strengths = getStrengthWeakness(scoreObject);
-  const dominant = strengths.topEntry ? `${SCORE_LABELS[strengths.topEntry[0]].toLowerCase()} (${strengths.topEntry[1].toFixed(1)})` : 'core strengths';
-  const constraint = strengths.weakEntry ? `${SCORE_LABELS[strengths.weakEntry[0]].toLowerCase()} (${strengths.weakEntry[1].toFixed(1)})` : 'exposure';
-  elements.scoreInterpretation.textContent = `Built around ${dominant}, with ${constraint} as the key constraint.`;
-  elements.scoreInterpretation.hidden = false;
 }
 
 function getVerdict(base) {
@@ -566,7 +513,7 @@ function renderRealityCheck(base) {
     ? realityCheck.trim().split(/(?<=[.!?])\s+/)[0]
     : '';
 
-  elements.realityCheckSection.hidden = !content;
+  elements.realityCheckRow.hidden = !content;
   if (!content) {
     return;
   }
@@ -584,9 +531,7 @@ function renderScore(base) {
     elements.scoreEmpty.hidden = false;
     elements.scoreOverall.hidden = true;
     elements.scoreBadges.hidden = true;
-    elements.scoreSummary.hidden = true;
     elements.scoreList.hidden = true;
-    elements.scoreInterpretation.hidden = true;
     return;
   }
 
@@ -599,15 +544,11 @@ function renderScore(base) {
   elements.scoreList.hidden = !scoreObject;
   if (!scoreObject) {
     elements.scoreBadges.hidden = true;
-    elements.scoreSummary.hidden = true;
-    elements.scoreInterpretation.hidden = true;
     return;
   }
 
   renderScoreBreakdown(scoreObject);
   renderScoreBadges(scoreObject, overall);
-  renderScoreSummary(scoreObject);
-  renderScoreInterpretation(scoreObject);
 }
 
 function classifyComparison(value, average) {
