@@ -46,19 +46,18 @@
         <p class="score-insight" hidden><strong>Top strengths:</strong> <span id="base-score-strengths"></span></p>
         <p class="score-insight" hidden><strong>Weakest areas:</strong> <span id="base-score-weaknesses"></span></p>
         <div id="score-meaning-panel" class="score-meaning-panel" hidden>
-          <p class="score-meaning-line"><strong>Score meaning:</strong> <span id="base-score-band-label"></span> <span id="base-score-band-description"></span></p>
-          <p class="score-meaning-line"><strong>Survival identity:</strong> <span id="base-archetype-label"></span> <span id="base-archetype-description"></span></p>
+          <section class="score-meaning-block" aria-label="Score meaning">
+            <p class="score-meaning-label">Score meaning</p>
+            <p id="base-score-band-label" class="score-meaning-title"></p>
+            <p id="base-score-band-description" class="score-meaning-copy"></p>
+          </section>
+          <section class="score-meaning-block" aria-label="Survival identity">
+            <p class="score-meaning-label">Survival identity</p>
+            <p id="base-archetype-label" class="score-meaning-title"></p>
+            <p id="base-archetype-description" class="score-meaning-copy"></p>
+          </section>
           <p id="base-score-shape-summary" class="score-meaning-shape"></p>
         </div>
-        <details class="score-legend" id="score-legend" hidden>
-          <summary>What the scores mean</summary>
-          <ul>
-            <li>8+ = strong survival candidate</li>
-            <li>6–7 = viable but flawed</li>
-            <li>4–5 = situational or fragile</li>
-            <li>Below 4 = poor survival choice</li>
-          </ul>
-        </details>
       </section>
 
       <section id="ranking-section" class="content-section" aria-label="Rankings section" hidden>

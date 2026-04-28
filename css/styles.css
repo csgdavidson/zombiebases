@@ -468,36 +468,41 @@ input[type="search"] {
   padding-top: 0.65rem;
   border-top: 1px solid var(--border);
   display: grid;
-  gap: 0.45rem;
+  gap: 0.55rem;
 }
 
-.score-meaning-line {
-  color: #1e293b;
-  font-size: 0.93rem;
+.score-meaning-block {
+  display: grid;
+  gap: 0.15rem;
 }
 
-.score-meaning-shape {
+.score-meaning-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.score-meaning-title {
+  margin: 0;
+  color: #0f172a;
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.score-meaning-copy {
+  margin: 0;
   color: #334155;
   font-size: 0.9rem;
 }
 
-.score-legend {
-  margin-top: 0.55rem;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-.score-legend summary {
-  cursor: pointer;
-}
-
-.score-legend ul {
-  margin: 0.4rem 0 0;
-  padding-left: 1.1rem;
-}
-
-.score-legend li {
-  margin: 0.15rem 0;
+.score-meaning-shape {
+  margin: 0.1rem 0 0;
+  color: #334155;
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .comparison-panel {

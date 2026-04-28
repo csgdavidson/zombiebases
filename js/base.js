@@ -76,7 +76,6 @@ const elements = {
   archetypeLabel: document.getElementById('base-archetype-label'),
   archetypeDescription: document.getElementById('base-archetype-description'),
   scoreShapeSummary: document.getElementById('base-score-shape-summary'),
-  scoreLegend: document.getElementById('score-legend'),
   rankingSection: document.getElementById('ranking-section'),
   rankingList: document.getElementById('ranking-list'),
   comparisonSection: document.getElementById('comparison-section'),
@@ -375,9 +374,6 @@ function renderScoreMeaning(base, interpretations) {
   const interpretation = getInterpretationRecord(base, interpretations);
   if (!interpretation) {
     elements.scoreMeaningPanel.hidden = true;
-    if (elements.scoreLegend) {
-      elements.scoreLegend.hidden = true;
-    }
     return;
   }
 
@@ -390,9 +386,6 @@ function renderScoreMeaning(base, interpretations) {
   const hasContent = Boolean(bandLabel || bandDescription || archetypeLabel || archetypeDescription || scoreShapeSummary);
   elements.scoreMeaningPanel.hidden = !hasContent;
   if (!hasContent) {
-    if (elements.scoreLegend) {
-      elements.scoreLegend.hidden = true;
-    }
     return;
   }
 
@@ -406,10 +399,6 @@ function renderScoreMeaning(base, interpretations) {
     elements.scoreMeaningPanel.dataset.bandClass = interpretation.scoreBandClass.trim();
   } else {
     delete elements.scoreMeaningPanel.dataset.bandClass;
-  }
-
-  if (elements.scoreLegend) {
-    elements.scoreLegend.hidden = false;
   }
 }
 
