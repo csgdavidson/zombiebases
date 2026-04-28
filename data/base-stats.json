@@ -1,0 +1,451 @@
+{
+  "generatedAt": "2026-04-28T14:55:16.615486+00:00",
+  "totalBases": 210,
+  "scoreCategories": [
+    "overall",
+    "defensibility",
+    "isolation",
+    "sustainability"
+  ],
+  "global": {
+    "count": 210,
+    "averages": {
+      "overall": 5.59,
+      "defensibility": 5.94,
+      "isolation": 5.54,
+      "sustainability": 4.47
+    },
+    "highest": {
+      "slug": "cheyenne",
+      "name": "Cheyenne Mountain Complex",
+      "overall": 9.0
+    },
+    "lowest": {
+      "slug": "lax",
+      "name": "LAX Airport",
+      "overall": 1.0
+    }
+  },
+  "byRegion": {
+    "africa": {
+      "count": 18,
+      "averages": {
+        "overall": 6.16,
+        "defensibility": 6.94,
+        "isolation": 5.56,
+        "sustainability": 4.69
+      },
+      "highest": {
+        "slug": "seychelles",
+        "name": "Seychelles",
+        "overall": 8.0
+      },
+      "lowest": {
+        "slug": "cape-town-airport",
+        "name": "Cape Town Airport",
+        "overall": 4.2
+      }
+    },
+    "east_asia": {
+      "count": 18,
+      "averages": {
+        "overall": 5.49,
+        "defensibility": 6.01,
+        "isolation": 4.53,
+        "sustainability": 4.4
+      },
+      "highest": {
+        "slug": "huashan",
+        "name": "Mount Huashan",
+        "overall": 7.1
+      },
+      "lowest": {
+        "slug": "tokyo-tower",
+        "name": "Tokyo Tower",
+        "overall": 1.7
+      }
+    },
+    "eastern_europe": {
+      "count": 17,
+      "averages": {
+        "overall": 5.75,
+        "defensibility": 5.72,
+        "isolation": 6.06,
+        "sustainability": 3.67
+      },
+      "highest": {
+        "slug": "faroe",
+        "name": "Faroe Islands",
+        "overall": 7.4
+      },
+      "lowest": {
+        "slug": "ostankino",
+        "name": "Ostankino Tower",
+        "overall": 2.4
+      }
+    },
+    "middle_east": {
+      "count": 17,
+      "averages": {
+        "overall": 5.45,
+        "defensibility": 5.72,
+        "isolation": 5.15,
+        "sustainability": 4.18
+      },
+      "highest": {
+        "slug": "socotra",
+        "name": "Socotra Island",
+        "overall": 7.4
+      },
+      "lowest": {
+        "slug": "burj",
+        "name": "Burj Khalifa",
+        "overall": 2.2
+      }
+    },
+    "north_america": {
+      "count": 18,
+      "averages": {
+        "overall": 5.54,
+        "defensibility": 6.1,
+        "isolation": 5.64,
+        "sustainability": 4.42
+      },
+      "highest": {
+        "slug": "cheyenne",
+        "name": "Cheyenne Mountain Complex",
+        "overall": 9.0
+      },
+      "lowest": {
+        "slug": "lax",
+        "name": "LAX Airport",
+        "overall": 1.0
+      }
+    },
+    "oceania": {
+      "count": 17,
+      "averages": {
+        "overall": 5.14,
+        "defensibility": 5.58,
+        "isolation": 5.62,
+        "sustainability": 4.01
+      },
+      "highest": {
+        "slug": "tasmania",
+        "name": "Tasmania",
+        "overall": 8.1
+      },
+      "lowest": {
+        "slug": "sydney-airport",
+        "name": "Sydney Airport",
+        "overall": 1.5
+      }
+    },
+    "polar_extreme": {
+      "count": 15,
+      "averages": {
+        "overall": 5.45,
+        "defensibility": 6.0,
+        "isolation": 8.19,
+        "sustainability": 3.16
+      },
+      "highest": {
+        "slug": "greenland",
+        "name": "Greenland",
+        "overall": 6.8
+      },
+      "lowest": {
+        "slug": "glacier",
+        "name": "Glacier Plateau",
+        "overall": 2.9
+      }
+    },
+    "south_america": {
+      "count": 18,
+      "averages": {
+        "overall": 5.22,
+        "defensibility": 5.12,
+        "isolation": 5.23,
+        "sustainability": 5.04
+      },
+      "highest": {
+        "slug": "chiloe",
+        "name": "Chilo\u00e9 Island",
+        "overall": 8.0
+      },
+      "lowest": {
+        "slug": "christ-redeemer",
+        "name": "Christ the Redeemer",
+        "overall": 1.0
+      }
+    },
+    "south_asia": {
+      "count": 18,
+      "averages": {
+        "overall": 5.64,
+        "defensibility": 5.77,
+        "isolation": 5.26,
+        "sustainability": 5.04
+      },
+      "highest": {
+        "slug": "andaman",
+        "name": "Andaman Islands",
+        "overall": 8.3
+      },
+      "lowest": {
+        "slug": "qutub",
+        "name": "Qutub Minar",
+        "overall": 1.3
+      }
+    },
+    "southeast_asia": {
+      "count": 18,
+      "averages": {
+        "overall": 5.84,
+        "defensibility": 6.08,
+        "isolation": 5.36,
+        "sustainability": 5.56
+      },
+      "highest": {
+        "slug": "palawan",
+        "name": "Palawan",
+        "overall": 7.3
+      },
+      "lowest": {
+        "slug": "petronas",
+        "name": "Petronas Towers",
+        "overall": 1.3
+      }
+    },
+    "uk_ireland": {
+      "count": 18,
+      "averages": {
+        "overall": 5.89,
+        "defensibility": 6.51,
+        "isolation": 5.43,
+        "sustainability": 4.55
+      },
+      "highest": {
+        "slug": "eigg",
+        "name": "Isle of Eigg Village",
+        "overall": 8.1
+      },
+      "lowest": {
+        "slug": "heathrow",
+        "name": "Heathrow Airport",
+        "overall": 2.0
+      }
+    },
+    "western_europe": {
+      "count": 18,
+      "averages": {
+        "overall": 5.44,
+        "defensibility": 5.74,
+        "isolation": 4.94,
+        "sustainability": 4.64
+      },
+      "highest": {
+        "slug": "mont-saint-michel",
+        "name": "Mont Saint-Michel",
+        "overall": 8.2
+      },
+      "lowest": {
+        "slug": "eiffel",
+        "name": "Eiffel Tower",
+        "overall": 1.0
+      }
+    }
+  },
+  "byType": {
+    "elevated_stronghold": {
+      "count": 23,
+      "averages": {
+        "overall": 6.41,
+        "defensibility": 7.75,
+        "isolation": 6.78,
+        "sustainability": 4.53
+      },
+      "highest": {
+        "slug": "machu-picchu",
+        "name": "Machu Picchu",
+        "overall": 7.6
+      },
+      "lowest": {
+        "slug": "glacier",
+        "name": "Glacier Plateau",
+        "overall": 2.9
+      }
+    },
+    "fortified_structure": {
+      "count": 22,
+      "averages": {
+        "overall": 6.61,
+        "defensibility": 8.3,
+        "isolation": 5.61,
+        "sustainability": 4.67
+      },
+      "highest": {
+        "slug": "mont-saint-michel",
+        "name": "Mont Saint-Michel",
+        "overall": 8.2
+      },
+      "lowest": {
+        "slug": "intramuros",
+        "name": "Intramuros Manila",
+        "overall": 4.3
+      }
+    },
+    "industrial_site": {
+      "count": 24,
+      "averages": {
+        "overall": 5.21,
+        "defensibility": 4.62,
+        "isolation": 3.99,
+        "sustainability": 5.32
+      },
+      "highest": {
+        "slug": "anna-creek",
+        "name": "Anna Creek Station",
+        "overall": 6.8
+      },
+      "lowest": {
+        "slug": "port-arthur-refinery",
+        "name": "Port Arthur Refinery",
+        "overall": 3.7
+      }
+    },
+    "institutional_compound": {
+      "count": 24,
+      "averages": {
+        "overall": 6.11,
+        "defensibility": 6.82,
+        "isolation": 6.0,
+        "sustainability": 4.61
+      },
+      "highest": {
+        "slug": "hanle-observatory",
+        "name": "Hanle Observatory",
+        "overall": 7.1
+      },
+      "lowest": {
+        "slug": "ghawar-processing",
+        "name": "Ghawar Oil Field Central Processing",
+        "overall": 3.9
+      }
+    },
+    "isolated_landmass": {
+      "count": 24,
+      "averages": {
+        "overall": 7.16,
+        "defensibility": 6.5,
+        "isolation": 8.33,
+        "sustainability": 6.14
+      },
+      "highest": {
+        "slug": "andaman",
+        "name": "Andaman Islands",
+        "overall": 8.3
+      },
+      "lowest": {
+        "slug": "okinawa",
+        "name": "Okinawa",
+        "overall": 6.2
+      }
+    },
+    "landmark_structure": {
+      "count": 24,
+      "averages": {
+        "overall": 3.18,
+        "defensibility": 3.29,
+        "isolation": 3.77,
+        "sustainability": 1.97
+      },
+      "highest": {
+        "slug": "hormuz-light",
+        "name": "Lighthouse Hormuz",
+        "overall": 5.4
+      },
+      "lowest": {
+        "slug": "christ-redeemer",
+        "name": "Christ the Redeemer",
+        "overall": 1.0
+      }
+    },
+    "polar_extreme": {
+      "count": 1,
+      "averages": {
+        "overall": 5.7,
+        "defensibility": 6.5,
+        "isolation": 9.5,
+        "sustainability": 1.5
+      },
+      "highest": {
+        "slug": "ice-shelf",
+        "name": "Crevasse Field Glacier",
+        "overall": 5.7
+      },
+      "lowest": {
+        "slug": "ice-shelf",
+        "name": "Crevasse Field Glacier",
+        "overall": 5.7
+      }
+    },
+    "remote_settlement": {
+      "count": 22,
+      "averages": {
+        "overall": 6.43,
+        "defensibility": 6.0,
+        "isolation": 7.15,
+        "sustainability": 5.77
+      },
+      "highest": {
+        "slug": "eigg",
+        "name": "Isle of Eigg Village",
+        "overall": 8.1
+      },
+      "lowest": {
+        "slug": "utqiagvik",
+        "name": "Utqiagvik",
+        "overall": 5.0
+      }
+    },
+    "subterranean": {
+      "count": 22,
+      "averages": {
+        "overall": 6.14,
+        "defensibility": 8.09,
+        "isolation": 6.23,
+        "sustainability": 3.56
+      },
+      "highest": {
+        "slug": "cheyenne",
+        "name": "Cheyenne Mountain Complex",
+        "overall": 9.0
+      },
+      "lowest": {
+        "slug": "cueva-de-las-manos",
+        "name": "Cueva de las Manos",
+        "overall": 4.0
+      }
+    },
+    "transit_hub": {
+      "count": 24,
+      "averages": {
+        "overall": 3.27,
+        "defensibility": 2.56,
+        "isolation": 2.12,
+        "sustainability": 3.85
+      },
+      "highest": {
+        "slug": "singapore-port",
+        "name": "Singapore Port",
+        "overall": 5.9
+      },
+      "lowest": {
+        "slug": "lax",
+        "name": "LAX Airport",
+        "overall": 1.0
+      }
+    }
+  }
+}
