@@ -67,8 +67,7 @@ function updateQueryParameter(key, value) {
 }
 
 function createBaseUrl(slug) {
-  const resolvedSlug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(slug) : slug;
-  return `./${encodeURIComponent(resolvedSlug)}`;
+  return slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(slug) : `/${encodeURIComponent(slug)}`;
 }
 
 function summarize(entry) {

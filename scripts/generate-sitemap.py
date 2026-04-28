@@ -68,11 +68,15 @@ def iter_indexable_dedicated_pages() -> list[Path]:
 def build_entries() -> list[SitemapEntry]:
   entries: list[SitemapEntry] = [
     SitemapEntry(loc=f"{BASE_URL}/", source_path=REPO_ROOT / "index.html"),
+    SitemapEntry(loc=f"{BASE_URL}/rankings.html", source_path=REPO_ROOT / "rankings.html"),
+    SitemapEntry(loc=f"{BASE_URL}/rankings-region.html", source_path=REPO_ROOT / "rankings-region.html"),
+    SitemapEntry(loc=f"{BASE_URL}/rankings-type.html", source_path=REPO_ROOT / "rankings-type.html"),
+    SitemapEntry(loc=f"{BASE_URL}/scenarios.html", source_path=REPO_ROOT / "scenarios.html"),
   ]
 
   entries.extend(
     SitemapEntry(
-      loc=f"{BASE_URL}/base.html?slug={slug}",
+      loc=f"{BASE_URL}/{slug}",
       source_path=DATA_PATH,
     )
     for slug in iter_indexable_slugs()
