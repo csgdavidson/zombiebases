@@ -30,12 +30,8 @@ const LABELS = {
 
 const SCORE_LABELS = {
   defensibility: 'Defensibility',
-  food: 'Food',
-  water: 'Water',
   isolation: 'Isolation',
-  escape: 'Escape',
-  sustainability: 'Sustainability',
-  human_risk: 'Human Risk'
+  sustainability: 'Sustainability'
 };
 
 const DESCRIPTION_FALLBACKS = {
@@ -119,18 +115,6 @@ function getNonEmptyStringArray(value) {
   return [];
 }
 
-function getNormalizedListValue(base, nestedKey, rootKey) {
-  const nestedValue = base?.description && typeof base.description === 'object'
-    ? base.description[nestedKey]
-    : undefined;
-
-  if (nestedValue !== undefined && nestedValue !== null) {
-    return getNonEmptyStringArray(nestedValue);
-  }
-
-  return getNonEmptyStringArray(base?.[rootKey]);
-}
-
 function isValidScoreValue(value) {
   return Number.isFinite(value);
 }
@@ -140,72 +124,29 @@ function firstAvailableValue(base, keys) {
   return matchedKey ? base[matchedKey] : null;
 }
 
-function valueForPath(source, path) {
-  if (!source || typeof source !== 'object') {
-    return null;
-  }
-
-  return path.split('.').reduce((current, key) => {
-    if (!current || typeof current !== 'object') {
-      return undefined;
-    }
-
-    return current[key];
-  }, source);
-}
-
-function firstAvailablePathValue(base, paths) {
-  for (const path of paths) {
-    const value = valueForPath(base, path);
-    if (value !== undefined && value !== null) {
-      return value;
-    }
-  }
-
-  return null;
-}
-
 function getDescription(base) {
-  if (base && typeof base.description === 'object' && base.description) {
-    const value = base.description.summary;
-    return isNonEmptyString(value) ? value : '';
-  }
-
-  const value = firstAvailableValue(base, ['description', 'details', 'long_description']);
+  const value = isNonEmptyString(base?.summary)
+    ? base.summary
+    : base?.description?.summary;
   return isNonEmptyString(value) ? value : '';
 }
 
 function getSummary(base) {
-  if (base && typeof base.description === 'object' && base.description) {
-    const value = base.description.summary;
-    if (isNonEmptyString(value)) {
-      return value;
-    }
-  }
-
-  const value = firstAvailableValue(base, ['summary', 'short_description']);
+  const value = isNonEmptyString(base?.summary)
+    ? base.summary
+    : base?.description?.summary;
   return isNonEmptyString(value) ? value : '';
 }
 
 function getStructuredDescription(base) {
-  const description = base?.description;
   const summary = getSummary(base) || getDescription(base);
   const analysis = getScoreNarrative(base);
-  const strengths = getNormalizedListValue(base, 'strengths', 'strengths');
-  const weaknesses = getNormalizedListValue(base, 'weaknesses', 'weaknesses');
-
-  if (!description || typeof description !== 'object') {
-    return {
-      summary,
-      analysis,
-      strengths,
-      weaknesses
-    };
-  }
+  const strengths = getNonEmptyStringArray(base?.strengths ?? base?.description?.strengths);
+  const weaknesses = getNonEmptyStringArray(base?.weaknesses ?? base?.description?.weaknesses);
 
   return {
-    summary: isNonEmptyString(description.summary) ? description.summary : summary,
-    analysis: isNonEmptyString(description.analysis) ? description.analysis : analysis,
+    summary,
+    analysis,
     strengths,
     weaknesses
   };
@@ -217,7 +158,7 @@ function getHeroImage(base) {
 }
 
 function getScoreObject(base) {
-  const source = base?.scores?.categories ?? base?.scores;
+  const source = base?.scores?.categories;
   if (!source || typeof source !== 'object') {
     return null;
   }
@@ -230,19 +171,7 @@ function computeOverallScore(base) {
   if (isValidScoreValue(base?.scores?.overall)) {
     return base.scores.overall;
   }
-
-  if (isValidScoreValue(base?.score)) {
-    return base.score;
-  }
-
-  const scoreObject = getScoreObject(base);
-  if (!scoreObject) {
-    return null;
-  }
-
-  const values = Object.values(scoreObject);
-  const average = values.reduce((sum, value) => sum + value, 0) / values.length;
-  return Number(average.toFixed(1));
+  return null;
 }
 
 function normalizeStatus(base) {
@@ -441,32 +370,32 @@ function renderStrengthsAndWeaknesses(scoreObject) {
 
 function getVerdict(base) {
   return {
-    bestUseCase: firstAvailablePathValue(base, ['verdict.bestUseCase', 'verdict.best_use_case', 'description.verdict.bestUseCase', 'description.verdict.best_use_case']),
-    failureMode: firstAvailablePathValue(base, ['verdict.failureMode', 'verdict.failure_mode', 'description.verdict.failureMode', 'description.verdict.failure_mode'])
+    bestUseCase: base?.verdict?.bestUseCase ?? null,
+    failureMode: base?.verdict?.failureMode ?? null
   };
 }
 
 function getSurvivalProfile(base) {
   return {
-    initial: firstAvailablePathValue(base, ['survivalProfile.initial', 'survival_profile.initial', 'description.survivalProfile.initial', 'description.survival_profile.initial']),
-    shortTerm: firstAvailablePathValue(base, ['survivalProfile.shortTerm', 'survivalProfile.short_term', 'survival_profile.shortTerm', 'survival_profile.short_term', 'description.survivalProfile.shortTerm', 'description.survivalProfile.short_term', 'description.survival_profile.shortTerm', 'description.survival_profile.short_term']),
-    longTerm: firstAvailablePathValue(base, ['survivalProfile.longTerm', 'survivalProfile.long_term', 'survival_profile.longTerm', 'survival_profile.long_term', 'description.survivalProfile.longTerm', 'description.survivalProfile.long_term', 'description.survival_profile.longTerm', 'description.survival_profile.long_term'])
+    initial: base?.survivalProfile?.initial ?? null,
+    shortTerm: base?.survivalProfile?.shortTerm ?? null,
+    longTerm: base?.survivalProfile?.longTerm ?? null
   };
 }
 
 function getUseCaseAndRisk(base) {
   return {
-    bestUseCase: firstAvailablePathValue(base, ['useCaseAndRisk.bestUseCase', 'use_case_and_risk.bestUseCase', 'useCaseAndRisk.best_use_case', 'use_case_and_risk.best_use_case', 'description.useCaseAndRisk.bestUseCase', 'description.useCaseAndRisk.best_use_case', 'description.best_use_case']),
-    keyRisk: firstAvailablePathValue(base, ['useCaseAndRisk.keyRisk', 'use_case_and_risk.keyRisk', 'useCaseAndRisk.key_risk', 'use_case_and_risk.key_risk', 'description.useCaseAndRisk.keyRisk', 'description.useCaseAndRisk.key_risk', 'description.key_risk'])
+    bestUseCase: base?.useCaseAndRisk?.bestUseCase ?? null,
+    keyRisk: base?.useCaseAndRisk?.keyRisk ?? null
   };
 }
 
 function getRealityCheck(base) {
-  return firstAvailablePathValue(base, ['realityCheck', 'reality_check', 'description.realityCheck', 'description.reality_check_assumptions']);
+  return base?.realityCheck ?? null;
 }
 
 function getScoreNarrative(base) {
-  return firstAvailablePathValue(base, ['scoreNarrative', 'score_narrative', 'description.scoreNarrative', 'description.score_narrative']);
+  return base?.scoreNarrative ?? null;
 }
 
 function renderVerdict(base) {
