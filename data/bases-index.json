@@ -4051,25 +4051,40 @@
     "lat": -38.1368,
     "long": 176.2497,
     "scores": {
-      "overall": 7,
+      "overall": 6.6,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 6,
+        "defensibility": 7.5,
+        "sustainability": 5.0,
+        "isolation": 6.0,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "Historically defensive sites with strong terrain advantage but limited modern infrastructure.",
+      "summary": "Strong terrain-first fortifications can stop early incursions, but most pa sites fail once stocks and water run thin.",
       "strengths": [
-        "Terrain-based defence",
-        "Controlled approaches"
+        "Elevated earthworks and chokepoints give efficient defensive leverage",
+        "Small perimeter is manageable for a disciplined, low-headcount group"
       ],
       "weaknesses": [
-        "Limited infrastructure",
-        "Moderate sustainability"
+        "Limited modern shelter, water storage, and medical capacity",
+        "Short sustainment runway under prolonged pressure"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-to-mid duration defensive hold in broken terrain",
+      "failureMode": "Siege-style depletion of water, food, and treatment capacity"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use as a hardened fallback node while mobile teams secure external supply loops",
+      "keyRisk": "Treating a heritage fortification as a self-sustaining settlement"
+    },
+    "realityCheck": "What kills you here is slow sustainment collapse, not the first assault wave.",
+    "scoreNarrative": "Maori pa scores as defense-forward but sustainment-limited: it wins opening phases, then degrades if isolation turns into siege."
   },
   {
     "name": "Super Pit Gold Mine",
@@ -4080,25 +4095,40 @@
     "lat": -30.7485,
     "long": 121.516,
     "scores": {
-      "overall": 5,
+      "overall": 3.8,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 3,
-        "isolation": 6,
+        "defensibility": 4.0,
+        "sustainability": 2.0,
+        "isolation": 5.5,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "Industrial and remote but not suited to long-term habitation.",
+      "summary": "A giant pit gives visibility and machinery access, but it is an exposure trap with almost no resilient living envelope.",
       "strengths": [
-        "Remote location",
-        "Industrial resources"
+        "Remote industrial zone with useful heavy equipment and fuel systems",
+        "Open sightlines make approach detection straightforward"
       ],
       "weaknesses": [
-        "Hazardous environment",
-        "Poor livability"
+        "Extreme exposure, dust, and heat rapidly erode health",
+        "Water, shelter, and defensible habitation are structurally weak"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Temporary salvage and logistics staging site",
+      "failureMode": "Environmental attrition and infrastructure dependence overwhelm occupants"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Failing"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Strip critical equipment and depart before static occupancy costs escalate",
+      "keyRisk": "Attempting to live in an industrial extraction void as if it were a settlement"
+    },
+    "realityCheck": "What kills you here is exposure and water vulnerability before any organized attack.",
+    "scoreNarrative": "Super Pit ranks weak overall: remoteness helps, but livability and sustainability are too poor for durable survival."
   },
   {
     "name": "Anna Creek Station",
@@ -4109,25 +4139,40 @@
     "lat": -28.8667,
     "long": 136.5,
     "scores": {
-      "overall": 6,
+      "overall": 6.8,
       "categories": {
-        "defensibility": 4,
-        "sustainability": 7,
-        "isolation": 8,
+        "defensibility": 4.5,
+        "sustainability": 7.2,
+        "isolation": 8.5,
         "accessibility": 2
       }
     },
     "description": {
-      "summary": "Anna Creek Station offers huge scale, remoteness, and genuine long-term land-use potential. Its weakness is that it is hard to defend in a traditional fortress sense and difficult to support logistically.",
+      "summary": "Exceptional scale and remoteness support long-run survival potential, but the footprint is too vast to secure conventionally.",
       "strengths": [
-        "Exceptional remoteness reduces outside pressure",
-        "Real long-term land and livestock potential"
+        "Huge land area supports grazing, fallback dispersion, and low contact density",
+        "Isolation reduces immediate population-pressure shocks"
       ],
       "weaknesses": [
-        "Very large area is hard to secure",
-        "Resupply and access are difficult"
+        "Perimeter control is unrealistic without significant manpower",
+        "Distance and transport friction complicate critical resupply"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Distributed pastoral enclave with mobile security doctrine",
+      "failureMode": "Sparse manpower fails to secure critical water and logistics nodes"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Strong"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Operate as a network of defended micro-sites rather than one centralized compound",
+      "keyRisk": "Overextending into static perimeter defense across impossible distances"
+    },
+    "realityCheck": "What kills you here is overextension: too much ground, not enough people on key points.",
+    "scoreNarrative": "Anna Creek sits upper-mid: isolation and sustainability are strong, but defensibility drags because scale outpaces control."
   },
   {
     "name": "RAAF Base Tindal",
@@ -4138,25 +4183,40 @@
     "lat": -14.5211,
     "long": 132.3783,
     "scores": {
-      "overall": 7,
+      "overall": 6.9,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 7,
+        "defensibility": 8.0,
+        "sustainability": 4.8,
+        "isolation": 6.8,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "A remote military compound with strong defensive capability and moderate sustainability.",
+      "summary": "High-grade military infrastructure gives strong initial control, but strategic visibility and supply dependence limit endurance.",
       "strengths": [
-        "Controlled military infrastructure",
-        "Low population pressure"
+        "Purpose-built security layout and hardened operating systems",
+        "Remote location keeps civilian pressure comparatively low"
       ],
       "weaknesses": [
-        "Strategic visibility",
-        "Dependent on supply chains"
+        "Recognizable strategic profile increases deliberate targeting risk",
+        "Sustainment depends on complex technical and fuel supply chains"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Disciplined regional command hub for controlled operations",
+      "failureMode": "Becoming a high-value target after external supply degradation"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use for protected coordination and phased relocation planning",
+      "keyRisk": "Assuming military-grade hardening equals long-term self-sufficiency"
+    },
+    "realityCheck": "What kills you here is target visibility once logistics stop being reliable.",
+    "scoreNarrative": "Tindal is defense-strong but endurance-mid: impressive hardening cannot fully offset strategic exposure and sustainment dependence."
   },
   {
     "name": "Pine Gap Facility",
@@ -4167,25 +4227,40 @@
     "lat": -23.799,
     "long": 133.737,
     "scores": {
-      "overall": 7,
+      "overall": 6.3,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 8,
+        "defensibility": 7.8,
+        "sustainability": 3.5,
+        "isolation": 8.2,
         "accessibility": 2
       }
     },
     "description": {
-      "summary": "Remote and secure with real infrastructure, but dependent on systems and potentially strategic.",
+      "summary": "Extreme remoteness and hardened controls are offset by acute system dependency and top-tier strategic exposure.",
       "strengths": [
-        "Extreme remoteness",
-        "Secure facility design"
+        "Very high isolation reduces random contact and crowd pressure",
+        "Secure compound design supports tight access control"
       ],
       "weaknesses": [
-        "System dependency",
-        "Strategic target risk"
+        "Critical operations rely on specialized technical systems",
+        "Global strategic profile makes it a priority target in escalation"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-horizon secure coordination node under strict threat awareness",
+      "failureMode": "Loss of technical sustainment coincides with concentrated external targeting"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Failing"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Leverage hardening for controlled transition, not permanent refuge",
+      "keyRisk": "Confusing isolation with survivability when strategic salience is extreme"
+    },
+    "realityCheck": "What kills you here is being too important while too system-dependent.",
+    "scoreNarrative": "Pine Gap is high-control but brittle: isolation and security are excellent, yet long-run sustainability is weak under strategic stress."
   },
   {
     "name": "Fiji Islands",
@@ -4196,25 +4271,40 @@
     "lat": -17.7134,
     "long": 178.065,
     "scores": {
-      "overall": 8,
+      "overall": 7.3,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 7,
-        "isolation": 9,
+        "defensibility": 6.2,
+        "sustainability": 7.1,
+        "isolation": 8.4,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "A strong island candidate balancing isolation with livability and resource availability.",
+      "summary": "Fiji balances isolation and livability better than most island options, but cyclone and maritime dependence cap reliability.",
       "strengths": [
-        "Island separation",
-        "Good resource base"
+        "Ocean separation limits land-based incursion pathways",
+        "Viable agriculture and fisheries support distributed food options"
       ],
       "weaknesses": [
-        "Difficult reinforcement",
-        "Distributed geography"
+        "Storm exposure can cripple infrastructure and harvest cycles",
+        "Inter-island logistics and imports remain critical risk points"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Regional island network with mixed coastal and inland fallback sites",
+      "failureMode": "Compounded cyclone damage and maritime supply disruption"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Build redundancy across islands, crops, and water systems before disruption",
+      "keyRisk": "Overreliance on ports and imported inputs during severe weather cycles"
+    },
+    "realityCheck": "What kills you here is storm-shocked logistics, not immediate invasion pressure.",
+    "scoreNarrative": "Fiji rates strong-mid: isolation and natural productivity are good, but weather and maritime dependency prevent top-tier resilience."
   },
   {
     "name": "Tasmania",
@@ -4225,25 +4315,40 @@
     "lat": -41.4545,
     "long": 145.9707,
     "scores": {
-      "overall": 8,
+      "overall": 8.1,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 8,
-        "isolation": 8,
+        "defensibility": 6.8,
+        "sustainability": 8.6,
+        "isolation": 7.6,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "One of the best balanced survival options, combining isolation with real sustainability.",
+      "summary": "Tasmania is one of the strongest balanced options: durable food-water-energy potential with enough separation to reduce pressure.",
       "strengths": [
-        "Strong resource base",
-        "Island separation"
+        "Robust agricultural and freshwater base supports long-run continuity",
+        "Island geography creates controllable entry corridors"
       ],
       "weaknesses": [
-        "Hard to fully secure",
-        "Not fully isolated"
+        "Key ports and transport chokepoints remain strategic liabilities",
+        "Not remote enough to avoid all inbound migration pressure"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Primary long-term refuge with layered coastal and inland defense planning",
+      "failureMode": "Port disruption and governance overload during high inbound demand"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Strong"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Anchor a long-duration regional base with distributed production and protected infrastructure",
+      "keyRisk": "Assuming island status alone solves migration, bottleneck, and governance stress"
+    },
+    "realityCheck": "What kills you here is systems overload at critical chokepoints, not resource scarcity.",
+    "scoreNarrative": "Tasmania remains top-tier: sustainability leads, isolation is meaningful, and weaknesses are mostly management and throughput risks."
   },
   {
     "name": "Cape Byron Lighthouse",
@@ -4254,25 +4359,40 @@
     "lat": -28.638,
     "long": 153.638,
     "scores": {
-      "overall": 3,
+      "overall": 2.9,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 2,
-        "isolation": 4,
+        "defensibility": 3.4,
+        "sustainability": 1.9,
+        "isolation": 3.8,
         "accessibility": 5
       }
     },
     "description": {
-      "summary": "Good as a lookout, poor as a survival base. It lacks the scale and resource base needed for anything beyond temporary refuge.",
+      "summary": "Excellent lookout value does not translate into base value: this is an exposed observation point, not a survivable settlement.",
       "strengths": [
-        "Coastal visibility",
-        "Some separation from dense population"
+        "Wide coastal visibility for early warning and signaling",
+        "Simple high-ground position aids short-duration monitoring"
       ],
       "weaknesses": [
-        "Minimal capacity",
-        "Exposed environment"
+        "Minimal shelter, storage, and production capacity",
+        "Highly exposed winds and visibility make concealment impossible"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Temporary observation and relay point",
+      "failureMode": "Rapid exposure-driven depletion with no sustainment depth"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Failing",
+      "longTerm": "Failing"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use for reconnaissance windows, then rotate to a real support site",
+      "keyRisk": "Trying to defend and inhabit a landmark with no logistical base"
+    },
+    "realityCheck": "What kills you here is exposure and depletion because lookout is not livability.",
+    "scoreNarrative": "Byron Light stays low-tier: strong visibility cannot compensate for almost nonexistent sustainability and capacity."
   },
   {
     "name": "Sydney Harbour Bridge",
@@ -4283,25 +4403,40 @@
     "lat": -33.8523,
     "long": 151.2108,
     "scores": {
-      "overall": 2,
+      "overall": 1.8,
       "categories": {
-        "defensibility": 2,
-        "sustainability": 1,
-        "isolation": 1,
+        "defensibility": 2.0,
+        "sustainability": 1.0,
+        "isolation": 1.0,
         "accessibility": 9
       }
     },
     "description": {
-      "summary": "Strategically visible but not a viable base.",
+      "summary": "As a landmark chokepoint it has tactical relevance, but as a survival base it is functionally non-viable.",
       "strengths": [
-        "Control point",
-        "Visibility"
+        "High symbolic and traffic-control value in urban movement networks",
+        "Extreme visibility gives strong situational awareness"
       ],
       "weaknesses": [
-        "No habitation value",
-        "Highly exposed"
+        "No organic shelter, water, food, or defensible living envelope",
+        "Maximum exposure and congestion in a dense urban battlespace"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Transient movement-control objective only",
+      "failureMode": "Immediate attrition from exposure, congestion, and zero sustainment"
+    },
+    "survivalProfile": {
+      "initial": "Failing",
+      "shortTerm": "Failing",
+      "longTerm": "Failing"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Cross quickly or control briefly, then disengage to habitable terrain",
+      "keyRisk": "Treating infrastructure symbolism as actual survivability"
+    },
+    "realityCheck": "What kills you here is instant overexposure in the least sustainable environment possible.",
+    "scoreNarrative": "Harbour Bridge remains near-bottom: operational relevance exists, but base viability is effectively zero."
   },
   {
     "name": "Port Vila",
@@ -4312,25 +4447,40 @@
     "lat": -17.7333,
     "long": 168.3273,
     "scores": {
-      "overall": 6,
+      "overall": 5.9,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 6,
-        "isolation": 7,
+        "defensibility": 4.8,
+        "sustainability": 5.5,
+        "isolation": 7.0,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "A balanced island settlement with real livability and moderate isolation.",
+      "summary": "Port Vila offers real settlement infrastructure and island separation, but limited depth makes it fragile under prolonged disruption.",
       "strengths": [
-        "Island separation",
-        "Existing settlement"
+        "Existing port-town systems provide immediate shelter and organization",
+        "Island geography lowers uncontrolled overland influx"
       ],
       "weaknesses": [
-        "Limited defence",
-        "Modest infrastructure"
+        "Infrastructure scale is modest for sustained high-stress operations",
+        "Cyclone risk and import dependence can cascade quickly"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-to-mid duration island municipal hub",
+      "failureMode": "Infrastructure shock from storms plus constrained resupply capacity"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Stabilize essentials fast, then decentralize to less concentrated supporting sites",
+      "keyRisk": "Assuming urban port infrastructure can absorb prolonged regional stress"
+    },
+    "realityCheck": "What kills you here is infrastructure fragility when weather and imports fail together.",
+    "scoreNarrative": "Port Vila lands mid-tier: better than improvised sites, but too infrastructure-sensitive for elite long-term resilience."
   },
   {
     "name": "Coober Pedy Underground Settlement",
