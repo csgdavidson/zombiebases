@@ -223,7 +223,7 @@
       "keyRisk": "Entrapment risk: once exits, water, or supply flow are compromised, defenders are pinned in a degrading pit complex."
     },
     "realityCheck": "Assumes safe zones can be established inside a partially degraded industrial landscape. Long-term habitation requires major remediation and external inputs.",
-    "scoreNarrative": "Kimberley now scores high in defensibility because the pit and surrounding works can channel and slow attacks. Isolation is moderate, but sustainability is decisively weak: water, food, and safe long-term habitability are poor. The dominant failure mode is entrapment\u2014if lifelines fail, the same terrain that protects you can trap you."
+    "scoreNarrative": "Kimberley now scores high in defensibility because the pit and surrounding works can channel and slow attacks. Isolation is moderate, but sustainability is decisively weak: water, food, and safe long-term habitability are poor. The dominant failure mode is entrapment—if lifelines fail, the same terrain that protects you can trap you."
   },
   {
     "name": "Bonny Island LNG Terminal",
@@ -481,7 +481,7 @@
     "scoreNarrative": "Cape Point performs best in defensibility, with isolation in the mid range. Sustainability is clearly the weakest category, which limits its role to temporary operations and reconnaissance support."
   },
   {
-    "name": "Great Mosque of Djenn\u00e9",
+    "name": "Great Mosque of Djenné",
     "slug": "djenne",
     "type": "landmark_structure",
     "region": "africa",
@@ -497,7 +497,7 @@
       }
     },
     "description": {
-      "summary": "The Great Mosque of Djenn\u00e9 is visually imposing and culturally significant, but materially fragile for sustained defensive use. It may serve as a symbolic shelter point, yet structural vulnerability and limited isolation make it unsuitable as a serious long-term survival base.",
+      "summary": "The Great Mosque of Djenné is visually imposing and culturally significant, but materially fragile for sustained defensive use. It may serve as a symbolic shelter point, yet structural vulnerability and limited isolation make it unsuitable as a serious long-term survival base.",
       "strengths": [
         "Slightly stronger defensibility than surrounding open urban fabric due to consolidated structure",
         "Moderate isolation from major coastal megacities compared with high-density hub locations"
@@ -521,10 +521,10 @@
       "keyRisk": "Material fragility: a culturally iconic structure can look strong but lacks the durability and defensive utility needed for sustained conflict conditions."
     },
     "realityCheck": "Assumes respectful, minimal-impact use of a heritage landmark. Practical survival planning should prioritize purpose-built or resource-rich alternatives.",
-    "scoreNarrative": "Djenn\u00e9 remains a weak base overall: defensibility is limited, isolation is low, and sustainability is modest at best. The dominant failure mode is fragility\u2014its heritage construction and symbolic prominence do not translate into robust, long-duration defensive performance."
+    "scoreNarrative": "Djenné remains a weak base overall: defensibility is limited, isolation is low, and sustainability is modest at best. The dominant failure mode is fragility—its heritage construction and symbolic prominence do not translate into robust, long-duration defensive performance."
   },
   {
-    "name": "A\u00eft Benhaddou",
+    "name": "Aït Benhaddou",
     "slug": "ait-benhaddou",
     "type": "remote_settlement",
     "region": "africa",
@@ -540,7 +540,7 @@
       }
     },
     "description": {
-      "summary": "A\u00eft Benhaddou is a strong niche base: its fortified settlement form and relative isolation support controlled defense and lower immediate pressure. Its long-term ceiling is set by arid constraints, where limited water and food capacity become the decisive bottleneck.",
+      "summary": "Aït Benhaddou is a strong niche base: its fortified settlement form and relative isolation support controlled defense and lower immediate pressure. Its long-term ceiling is set by arid constraints, where limited water and food capacity become the decisive bottleneck.",
       "strengths": [
         "High defensibility from fortified form, elevation, and controllable access paths",
         "Moderate isolation reduces immediate pressure compared with major urban corridors"
@@ -552,7 +552,7 @@
     },
     "verdict": {
       "bestUseCase": "Medium-term defended settlement for disciplined small groups",
-      "failureMode": "Environmental and infrastructure limits outlast the site\u2019s defensive advantages"
+      "failureMode": "Environmental and infrastructure limits outlast the site’s defensive advantages"
     },
     "survivalProfile": {
       "initial": "Strong",
@@ -564,7 +564,7 @@
       "keyRisk": "Water scarcity is the primary long-horizon threat, with food limits compounding endurance risk in prolonged disruption."
     },
     "realityCheck": "Assumes access to nearby water management and cultivated support zones. The ksar alone is not a complete long-horizon survival system.",
-    "scoreNarrative": "A\u00eft Benhaddou scores as a high-performing niche option, with strong defensibility and strong isolation working together. Sustainability remains the limiting category because water and food expansion are constrained in an arid environment. The base can excel with tight planning, but water scarcity defines the long-term kill condition."
+    "scoreNarrative": "Aït Benhaddou scores as a high-performing niche option, with strong defensibility and strong isolation working together. Sustainability remains the limiting category because water and food expansion are constrained in an arid environment. The base can excel with tight planning, but water scarcity defines the long-term kill condition."
   },
   {
     "name": "Kolmanskop",
@@ -988,7 +988,7 @@
       }
     },
     "description": {
-      "summary": "The Shenzhen factory complex has unusual infrastructure depth and short-term resource potential, but it sits inside one of the world\u2019s densest urban-industrial corridors. The dominant trade-off is internal capability versus catastrophic exposure.",
+      "summary": "The Shenzhen factory complex has unusual infrastructure depth and short-term resource potential, but it sits inside one of the world’s densest urban-industrial corridors. The dominant trade-off is internal capability versus catastrophic exposure.",
       "strengths": [
         "Large enclosed facilities provide power distribution, workshops, and storage potential",
         "Industrial tooling supports fabrication, repair, and adaptive hardening tasks",
@@ -1248,7 +1248,7 @@
       }
     },
     "description": {
-      "summary": "Leshan\u2019s landmark setting is symbolic, not survivable: it lacks perimeter control, shelter depth, and production capacity. What kills you here is exposure\u2014too many approaches, too little infrastructure, no endurance.",
+      "summary": "Leshan’s landmark setting is symbolic, not survivable: it lacks perimeter control, shelter depth, and production capacity. What kills you here is exposure—too many approaches, too little infrastructure, no endurance.",
       "strengths": [
         "Elevated terrain offers limited observation value",
         "Nearby river access may provide short-term water collection options"
@@ -1420,7 +1420,7 @@
       }
     },
     "description": {
-      "summary": "Iwo Jima\u2019s bunker network is exceptionally hard to assault and highly isolated, but it is austere and resource-poor. What kills you here is life-support collapse underground: water, ventilation, and medical limits outrun defensive advantages.",
+      "summary": "Iwo Jima’s bunker network is exceptionally hard to assault and highly isolated, but it is austere and resource-poor. What kills you here is life-support collapse underground: water, ventilation, and medical limits outrun defensive advantages.",
       "strengths": [
         "Elite defensibility from hardened subterranean terrain and chokepoints",
         "High ocean isolation minimizes routine external threat contact"
@@ -1755,7 +1755,7 @@
     "scoreNarrative": "Suomenlinna remains defensible but lands in the mid-6s because sustainability is externally coupled. The failure mode is blockade attrition, not immediate tactical collapse."
   },
   {
-    "name": "Gda\u0144sk Shipyard",
+    "name": "Gdańsk Shipyard",
     "slug": "gdansk-shipyard",
     "type": "industrial_site",
     "region": "eastern_europe",
@@ -1772,7 +1772,7 @@
       }
     },
     "description": {
-      "summary": "Gda\u0144sk Shipyard is a high-value industrial toolkit, not a survivable sanctuary. What kills you here is perimeter overstretch: too much open infrastructure to guard, too many approach paths, too many competing groups.",
+      "summary": "Gdańsk Shipyard is a high-value industrial toolkit, not a survivable sanctuary. What kills you here is perimeter overstretch: too much open infrastructure to guard, too many approach paths, too many competing groups.",
       "strengths": [
         "Heavy fabrication and repair capacity can restore vehicles, generators, and hulls",
         "Water access supports evacuation, trade, and distributed staging"
@@ -1796,7 +1796,7 @@
       "keyRisk": "Treating the whole shipyard as a live-in fortress exhausts personnel and collapses sector control"
     },
     "realityCheck": "Assumes skilled labor, spare parts, and convoy or marine security to move produced assets quickly.",
-    "scoreNarrative": "Gda\u0144sk gains points on practical industry but loses heavily on defendable footprint and exposure. The dominant kill mechanism is not scarcity; it is overstretched security."
+    "scoreNarrative": "Gdańsk gains points on practical industry but loses heavily on defendable footprint and exposure. The dominant kill mechanism is not scarcity; it is overstretched security."
   },
   {
     "name": "Norilsk",
@@ -2247,16 +2247,16 @@
     "lat": 38.3746,
     "long": 34.735,
     "scores": {
-      "overall": 7.3,
+      "overall": 7.1,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 4,
+        "defensibility": 8.8,
+        "sustainability": 3.9,
         "isolation": 6,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "Derinkuyu offers rare layered underground defense, but what kills you here is subterranean throughput limits: air, sanitation, and food logistics fail before walls do.",
+      "summary": "Derinkuyu is an elite hide-and-hold refuge, but what kills you here is subterranean throughput collapse: ventilation, waste handling, and calorie flow fail before defenses do.",
       "strengths": [
         "Historically proven multi-level refuge design is difficult to assault directly",
         "Narrow passages and defensible chokepoints allow force multiplication"
@@ -2268,7 +2268,7 @@
     },
     "verdict": {
       "bestUseCase": "Defensive refuge hub paired with protected surface agriculture and rotating occupancy",
-      "failureMode": "Overcrowding and utility bottlenecks trigger sanitation collapse and forced dispersal"
+      "failureMode": "Closed-system overload drives air and sanitation failure, forcing dangerous evacuation"
     },
     "survivalProfile": {
       "initial": "Strong",
@@ -2277,10 +2277,10 @@
     },
     "useCaseAndRisk": {
       "bestUseCase": "Use deep levels for shelter and command, while keeping population and waste load capped",
-      "keyRisk": "If leadership overpacks the site, disease and air-quality decline negate defensive advantage"
+      "keyRisk": "If leadership overpacks the site, internal life-support stress compounds into disease and panic"
     },
     "realityCheck": "Assumes strict occupancy control, medical triage, and continuous external farming support.",
-    "scoreNarrative": "Derinkuyu remains high-tier due to exceptional defensibility, but not top-tier because closed-system limits dominate long horizons. The core failure mode is internal throughput collapse."
+    "scoreNarrative": "Derinkuyu stays above 7 because its defensive geometry is exceptional, but sustainability drag keeps it out of top tier. The core failure mode is closed-environment systems overload."
   },
   {
     "name": "Helsinki Airport",
@@ -2388,7 +2388,7 @@
       }
     },
     "description": {
-      "summary": "Cappadocia\u2019s broken terrain and concealment options make it a strong defensive refuge, but what kills you here is water-and-agriculture throughput: dispersed hideouts can outlast attacks, not prolonged scarcity.",
+      "summary": "Cappadocia’s broken terrain and concealment options make it a strong defensive refuge, but what kills you here is water-and-agriculture throughput: dispersed hideouts can outlast attacks, not prolonged scarcity.",
       "strengths": [
         "Complex valleys and rock formations create layered observation, concealment, and chokepoint defense",
         "Distributed cave and ridge positions support fallback depth during localized breaches"
@@ -2608,7 +2608,7 @@
       }
     },
     "description": {
-      "summary": "Ras Al Khair\u2019s water output is uniquely valuable, but what kills you here is power-chain fragility: once energy input or specialist maintenance fails, the core survival advantage disappears fast.",
+      "summary": "Ras Al Khair’s water output is uniquely valuable, but what kills you here is power-chain fragility: once energy input or specialist maintenance fails, the core survival advantage disappears fast.",
       "strengths": [
         "Desalination capability can temporarily support large populations and downstream agriculture",
         "Industrial footprint provides sheltered workspace and controlled internal routing"
@@ -2775,25 +2775,40 @@
     "lat": 12.4634,
     "long": 53.8236,
     "scores": {
-      "overall": 8,
+      "overall": 7.4,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 6,
-        "isolation": 10,
+        "defensibility": 6.6,
+        "sustainability": 4.8,
+        "isolation": 9.6,
         "accessibility": 1
       }
     },
     "description": {
-      "summary": "Socotra is one of the strongest isolation plays in the entire project. Its main challenge is that the same remoteness that protects it also makes long-term logistics and resilience difficult.",
+      "summary": "Socotra gives outstanding separation from collapse corridors, but what kills you here is maritime supply fracture: once sea links fail, medicine, tools, and replacement goods run out faster than local systems can adapt.",
       "strengths": [
-        "Exceptional isolation from wider collapse dynamics",
-        "Island separation greatly reduces external threat flow"
+        "Exceptional offshore isolation suppresses random inflow and mass-surge pressure",
+        "Coastline chokepoints make controlled landing policy realistic for organized groups"
       ],
       "weaknesses": [
-        "Extremely difficult to access and reinforce",
-        "Long-term sustainability is limited by remoteness and scale"
+        "Critical spares and medical supplies depend on long, disruption-prone maritime logistics",
+        "Water, agriculture, and industry capacity are limited relative to prolonged population growth"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Strictly governed island enclave with low population targets and redundant coastal watch",
+      "failureMode": "Supply-chain isolation degrades healthcare and maintenance until attrition outpaces recovery"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Prioritize fisheries, rain capture, and repair culture while rationing high-value imports",
+      "keyRisk": "Assuming periodic resupply will continue leads to delayed rationing and hard supply cliffs"
+    },
+    "realityCheck": "Assumes disciplined maritime governance, pre-positioned medical stock, and conservative population caps.",
+    "scoreNarrative": "Socotra earns a strong 7+ on isolation value, but sustainability friction keeps it below elite tier. The core failure mode is slow logistic starvation rather than direct assault."
   },
   {
     "name": "Burj Khalifa",
@@ -2804,25 +2819,40 @@
     "lat": 25.1972,
     "long": 55.2744,
     "scores": {
-      "overall": 2,
+      "overall": 2.2,
       "categories": {
-        "defensibility": 2,
-        "sustainability": 2,
+        "defensibility": 2.1,
+        "sustainability": 1.9,
         "isolation": 1,
         "accessibility": 8
       }
     },
     "description": {
-      "summary": "Iconic, vertical, and dramatic, but fundamentally poor as a survival base. It is too exposed, too urban, and too dependent on advanced systems to be viable.",
+      "summary": "Burj Khalifa looks defensible on paper, but what kills you here is infrastructure dependency cascade: elevators, pumping, cooling, and sanitation failures turn vertical shelter into a trapped population stack.",
       "strengths": [
-        "Strong visibility over surrounding area",
-        "Large internal built space"
+        "High elevation gives broad observation and early-warning potential",
+        "Large enclosed floor area offers short-term stockpile and triage space"
       ],
       "weaknesses": [
-        "Located in one of the worst possible urban contexts for collapse",
-        "Dependent on lifts, power, and complex infrastructure"
+        "Dense urban surroundings create constant approach pressure and no true buffer zone",
+        "Vertical life support requires uninterrupted power and specialist maintenance"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Very short-duration rally point for evacuation coordination",
+      "failureMode": "Building systems failure strands occupants and drives lethal internal bottlenecks"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Nonviable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Exploit visibility and stores briefly, then relocate to lower-complexity terrain",
+      "keyRisk": "Trying to permanently occupy upper floors after grid loss creates evacuation deadlocks"
+    },
+    "realityCheck": "Assumes immediate fallback routes, stairwell control, and no expectation of full-system restoration.",
+    "scoreNarrative": "Burj remains near-bottom despite scale advantages. The core failure mode is vertical infrastructure collapse inside a high-pressure urban basin."
   },
   {
     "name": "Lighthouse Hormuz",
@@ -2833,25 +2863,40 @@
     "lat": 26.954,
     "long": 56.272,
     "scores": {
-      "overall": 5,
+      "overall": 5.4,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 3,
-        "isolation": 7,
+        "defensibility": 5.6,
+        "sustainability": 3.2,
+        "isolation": 7.2,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "Hormuz offers island separation and a degree of remoteness, but the lighthouse itself is too small and too exposed to count as a top-tier base. Better as a lookout or fallback refuge than a settlement anchor.",
+      "summary": "Hormuz lighthouse has useful separation and surveillance value, but what kills you here is capacity exhaustion: the site is too small and too harsh to sustain a community once short-term stores are depleted.",
       "strengths": [
-        "Strong separation from mainland threat flow",
-        "Coastal visibility and early-warning value"
+        "Island separation reduces spontaneous land-route incursions",
+        "Excellent coastal sightlines support maritime early warning"
       ],
       "weaknesses": [
-        "Limited living capacity",
-        "Harsh environment and poor sustainability"
+        "Very limited habitable footprint constrains rotation, care, and storage",
+        "Harsh conditions and low local production force heavy resupply dependence"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Observation outpost and emergency hide site linked to a larger base",
+      "failureMode": "Space and resource limits trigger rapid depletion and forced abandonment"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Nonviable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use as a sensor node with cached essentials and scheduled rotation",
+      "keyRisk": "Treating it as a primary settlement causes overcrowding and fast consumable burn"
+    },
+    "realityCheck": "Assumes dependable boat access, strict occupancy caps, and preplanned evacuation windows.",
+    "scoreNarrative": "Hormuz-light sits mid-lower tier: isolation helps, but tiny carrying capacity dominates outcomes. The core failure mode is resource exhaustion in an undersized site."
   },
   {
     "name": "Siwa Oasis",
@@ -2862,25 +2907,40 @@
     "lat": 29.2044,
     "long": 25.5195,
     "scores": {
-      "overall": 7,
+      "overall": 7.1,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 7,
-        "isolation": 8,
+        "defensibility": 5.9,
+        "sustainability": 7.2,
+        "isolation": 8.1,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "Siwa Oasis is one of the stronger remote settlement candidates in the region because it balances remoteness with real habitation potential. It is not an impregnable fortress, but it feels like a believable long-term refuge.",
+      "summary": "Siwa Oasis is one of the more credible long-horizon refuges in the region, but what kills you here is water-system fragility: contamination, overdraw, or pump failure can collapse the settlement’s carrying capacity.",
       "strengths": [
-        "Strong remoteness reduces external pressure",
-        "Real water and settlement logic improve survivability"
+        "Distance from major corridors lowers sustained external pressure",
+        "Existing oasis settlement pattern supports agriculture and local continuity"
       ],
       "weaknesses": [
-        "Limited defensive hardening",
-        "Resupply and reinforcement would be difficult"
+        "Defensive hardening is moderate and depends on perimeter discipline",
+        "Groundwater dependence creates single-system vulnerability under stress"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Water-managed oasis town with layered perimeter control and strict extraction quotas",
+      "failureMode": "Aquifer stress or contamination undermines food production and public health"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Center governance on water accounting, crop planning, and contamination monitoring",
+      "keyRisk": "Population growth beyond recharge limits causes irreversible water decline"
+    },
+    "realityCheck": "Assumes robust well maintenance, conservative irrigation, and enforceable drawdown limits.",
+    "scoreNarrative": "Siwa stays above 7 by combining remoteness with real habitation potential. The core failure mode is hydrology collapse, not direct invasion."
   },
   {
     "name": "Wadi Musa",
@@ -2891,25 +2951,40 @@
     "lat": 30.3225,
     "long": 35.4789,
     "scores": {
-      "overall": 6,
+      "overall": 5.9,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 6,
-        "isolation": 6,
+        "defensibility": 5.2,
+        "sustainability": 5.8,
+        "isolation": 5.9,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "Wadi Musa is a decent remote settlement candidate with workable long-term habitation logic and reduced population pressure. It is more practical than spectacular, and lacks the hard defensive edge of the region\u2019s best sites.",
+      "summary": "Wadi Musa is workable but fragile; what kills you here is corridor squeeze: limited approach routes become contested chokepoints that choke trade, movement, and medical evacuation.",
       "strengths": [
-        "Lower population pressure than major regional hubs",
-        "Better day-to-day habitability than many extreme sites"
+        "Lower baseline density than major metro hubs reduces immediate surge pressure",
+        "Existing settlement fabric supports practical day-to-day habitation"
       ],
       "weaknesses": [
-        "Defensive strength is only moderate",
-        "Limited scalability and strategic depth"
+        "Route dependence makes supply and casualty transport vulnerable to blockade",
+        "Moderate defensive depth leaves little margin once approaches are disrupted"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Small regional hub with route security and conservative population targets",
+      "failureMode": "Approach-route disruption isolates the town and degrades care and resupply"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Fortify key road nodes and hold a mobile reserve for convoy continuity",
+      "keyRisk": "Overcommitting to static defense allows route interdiction to starve the settlement"
+    },
+    "realityCheck": "Assumes persistent patrol capability and fuel reserves for route clearance operations.",
+    "scoreNarrative": "Wadi Musa falls just under 6 because habitability is offset by transport fragility. The core failure mode is chokepoint isolation."
   },
   {
     "name": "Gaza Tunnel Network",
@@ -2920,25 +2995,40 @@
     "lat": 31.5017,
     "long": 34.4668,
     "scores": {
-      "overall": 7,
+      "overall": 4.8,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 3,
-        "isolation": 5,
+        "defensibility": 7.6,
+        "sustainability": 1.8,
+        "isolation": 4.7,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "The tunnel network offers concealment, survivability, and tactical protection, but it is not a strong long-term civil base. It works better as a hidden refuge system than a sustainable settlement.",
+      "summary": "The Gaza tunnel network is formidable for concealment, but what kills you here is habitability collapse: air quality, sanitation, and medical limits degrade faster than tactical protection can compensate.",
       "strengths": [
-        "Strong concealment and underground protection",
-        "Difficult to overrun directly from the surface"
+        "Concealment and hard-to-target geometry can preserve forces during acute violence",
+        "Segmented underground routes provide fallback movement when surface routes fail"
       ],
       "weaknesses": [
-        "Very poor long-term living conditions",
-        "Sustainability and expansion are limited"
+        "Long-term living conditions are severe, with high respiratory and infection burden",
+        "Civil-scale food, water, and waste systems are structurally inadequate underground"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-cycle concealment network supporting rapid relocation to surface-safe zones",
+      "failureMode": "Prolonged underground living triggers health, sanitation, and morale breakdown"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Weak",
+      "longTerm": "Nonviable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use tunnels for transit and shelter bursts, not as a permanent civilian habitat",
+      "keyRisk": "Normalizing continuous underground residency creates accelerating public-health collapse"
+    },
+    "realityCheck": "Assumes frequent rotation, reliable ventilation maintenance, and alternative surface logistics.",
+    "scoreNarrative": "Despite high tactical defensibility, Gaza tunnels score below 5 for settlement viability. The core failure mode is underground habitability collapse."
   },
   {
     "name": "Dubai Airport",
@@ -2949,25 +3039,40 @@
     "lat": 25.2532,
     "long": 55.3657,
     "scores": {
-      "overall": 2,
+      "overall": 2.4,
       "categories": {
-        "defensibility": 2,
-        "sustainability": 2,
+        "defensibility": 2.2,
+        "sustainability": 2.1,
         "isolation": 1,
         "accessibility": 9
       }
     },
     "description": {
-      "summary": "A perfect transit node and an awful apocalypse base. It is exposed, urban, strategically obvious, and impossible to secure long-term.",
+      "summary": "Dubai Airport has infrastructure abundance, but what kills you here is convergence pressure: every route, crowd, and claimant converges on the same open, high-value terrain.",
       "strengths": [
-        "Massive logistics and transport infrastructure",
-        "Large built environment with storage potential"
+        "Massive logistics footprint offers short-term salvage and stockpile opportunities",
+        "Runway and warehouse space can stage emergency sorting operations"
       ],
       "weaknesses": [
-        "Extremely high population and traffic exposure",
-        "Very difficult to defend effectively"
+        "Open geometry and visibility make perimeter control manpower-prohibitive",
+        "Urban adjacency drives recurring crowd pressure and conflict risk"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Brief extraction and redistribution node during early collapse phase",
+      "failureMode": "Unmanageable inflow and perimeter overstretch collapse site security rapidly"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Nonviable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Recover priority supplies under tight timelines, then displace to less visible terrain",
+      "keyRisk": "Attempting fixed long-term occupation invites sieges and internal resource violence"
+    },
+    "realityCheck": "Assumes preplanned exit corridors and no dependence on continuous airport operations.",
+    "scoreNarrative": "Dubai Airport remains near-bottom despite scale and assets. The core failure mode is convergence overload at an obvious strategic node."
   },
   {
     "name": "Jebel Ali Port",
@@ -2978,25 +3083,40 @@
     "lat": 25.0113,
     "long": 55.0606,
     "scores": {
-      "overall": 3,
+      "overall": 3.3,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 4,
+        "defensibility": 3.1,
+        "sustainability": 4.2,
         "isolation": 2,
         "accessibility": 9
       }
     },
     "description": {
-      "summary": "Strong on logistics and storage, but fundamentally too exposed and too embedded in a dense system to function as a serious final base.",
+      "summary": "Jebel Ali carries huge logistics value, but what kills you here is strategic magnetism: ports attract organized competition, making stable governance and perimeter security unsustainable.",
       "strengths": [
-        "Huge port infrastructure and maritime access",
-        "Strong resource and storage potential"
+        "Deep storage, cranes, and maritime access support short-run procurement and fabrication",
+        "Waterfront layout can channel movement through controllable nodes in brief windows"
       ],
       "weaknesses": [
-        "Extremely difficult to secure at full scale",
-        "High visibility and traffic make it a flashpoint"
+        "Port-scale perimeter and waterfront complexity exceed typical defensive manpower",
+        "High-value cargo profile draws repeated raids and factional contest"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Time-limited salvage hub feeding inland fallback settlements",
+      "failureMode": "Persistent contest over port assets erodes security faster than replenishment"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Nonviable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Exploit port inventories quickly while building inland redundancy",
+      "keyRisk": "Treating the port as a permanent capital locks the group into constant conflict cycles"
+    },
+    "realityCheck": "Assumes maritime awareness, rapid convoy capability, and willingness to abandon fixed assets early.",
+    "scoreNarrative": "Jebel Ali scores slightly above airports on salvage upside, but remains low-tier for residence. The core failure mode is strategic overexposure."
   },
   {
     "name": "Mesa Verde",
@@ -3007,25 +3127,40 @@
     "lat": 37.2309,
     "long": -108.4618,
     "scores": {
-      "overall": 7,
+      "overall": 6.8,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 5,
-        "isolation": 7,
+        "defensibility": 7.4,
+        "sustainability": 5.1,
+        "isolation": 6.4,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "A strong elevated and semi-hidden settlement with defensible terrain and moderate sustainability.",
+      "summary": "Mesa Verde offers strong terrain defense, but what kills you here is carrying-capacity mismatch: protected positions can hold people, yet arable throughput and water logistics limit long-run population support.",
       "strengths": [
-        "Natural defensive positioning",
-        "Relative remoteness"
+        "Cliff and elevation geometry provide meaningful defensive advantage with limited manpower",
+        "Relative remoteness lowers routine external traffic compared with urban basins"
       ],
       "weaknesses": [
-        "Limited modern infrastructure",
-        "Sustainability is moderate"
+        "Agriculture and water hauling constraints cap sustainable population size",
+        "Harsh terrain complicates casualty evacuation and winter provisioning"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Medium-size defensible enclave with strict population and ration planning",
+      "failureMode": "Demand growth outpaces local food-water capacity and triggers attritional decline"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Pair defensive cliffs with distributed gardens, cistern storage, and seasonal load shedding",
+      "keyRisk": "Overconcentrating refugees without production expansion causes chronic shortages"
+    },
+    "realityCheck": "Assumes disciplined intake policy, water capture infrastructure, and cold-season stock planning.",
+    "scoreNarrative": "Mesa Verde remains upper-mid tier because defensibility is strong but carrying capacity is finite. The core failure mode is slow resource mismatch."
   },
   {
     "name": "Table Rock Plateau",
@@ -3036,25 +3171,40 @@
     "lat": 36.5395,
     "long": -93.4896,
     "scores": {
-      "overall": 7,
+      "overall": 6.1,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 6,
-        "isolation": 6,
+        "defensibility": 6.3,
+        "sustainability": 5.7,
+        "isolation": 5.4,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "A solid elevated position with balanced defensive and sustainability potential, though not exceptional in any one area.",
+      "summary": "Table Rock is a serviceable elevated fallback, but what kills you here is perimeter dilution: broad approach arcs and limited concealment stretch defenders until incidents become constant.",
       "strengths": [
-        "Strong elevation-based defence",
-        "Reasonable sustainability potential"
+        "Elevation supports line-of-sight security and some approach control",
+        "Nearby mixed terrain can support modest food and material gathering"
       ],
       "weaknesses": [
-        "Not fully isolated",
-        "Limited infrastructure"
+        "Incomplete isolation leaves multiple overland approach options to monitor",
+        "Infrastructure depth is limited for prolonged medical and industrial needs"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Regional watch-and-withdraw site with compact defended core",
+      "failureMode": "Perimeter overextension causes defender fatigue and progressive security erosion"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Hold a tight core, leave buffer zones thin, and plan periodic relocation routes",
+      "keyRisk": "Trying to secure all surrounding approaches drains manpower and invites penetration"
+    },
+    "realityCheck": "Assumes constant patrol discipline and willingness to abandon outer zones early.",
+    "scoreNarrative": "Table Rock sits just above 6: useful terrain, but no decisive isolation or sustainment edge. The core failure mode is perimeter dilution."
   },
   {
     "name": "Alcatraz Island",
@@ -4710,7 +4860,7 @@
     }
   },
   {
-    "name": "Chilo\u00e9 Island",
+    "name": "Chiloé Island",
     "slug": "chiloe",
     "type": "isolated_landmass",
     "region": "south_america",
@@ -4739,7 +4889,7 @@
     }
   },
   {
-    "name": "Gal\u00e1pagos Islands",
+    "name": "Galápagos Islands",
     "slug": "galapagos",
     "type": "isolated_landmass",
     "region": "south_america",
@@ -4913,7 +5063,7 @@
     }
   },
   {
-    "name": "Potos\u00ed Silver Mine (Cerro Rico)",
+    "name": "Potosí Silver Mine (Cerro Rico)",
     "slug": "potosi-mine",
     "type": "subterranean",
     "region": "south_america",
@@ -4971,7 +5121,7 @@
     }
   },
   {
-    "name": "S\u00e3o Paulo Airport",
+    "name": "São Paulo Airport",
     "slug": "sao-paulo-airport",
     "type": "transit_hub",
     "region": "south_america",
@@ -5029,7 +5179,7 @@
     }
   },
   {
-    "name": "Tiger\u2019s Nest Monastery",
+    "name": "Tiger’s Nest Monastery",
     "slug": "tigers-nest",
     "type": "elevated_stronghold",
     "region": "south_asia",
@@ -6612,7 +6762,7 @@
       }
     },
     "description": {
-      "summary": "One of Europe\u2019s strongest historic fortifications with excellent defensive potential.",
+      "summary": "One of Europe’s strongest historic fortifications with excellent defensive potential.",
       "strengths": [
         "Massive fortified walls",
         "Clear defensive structure"
@@ -6798,7 +6948,7 @@
     }
   },
   {
-    "name": "\u00cele d\u2019Yeu",
+    "name": "Île d’Yeu",
     "slug": "ile-dyeu",
     "type": "isolated_landmass",
     "region": "western_europe",
@@ -6856,7 +7006,7 @@
     }
   },
   {
-    "name": "Phare du Cr\u00e9ac'h",
+    "name": "Phare du Créac'h",
     "slug": "creach",
     "type": "landmark_structure",
     "region": "western_europe",
