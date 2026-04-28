@@ -582,6 +582,12 @@ input[type="search"] {
   font-size: 1.05rem;
 }
 
+.rankings-explore-subheading {
+  margin: 0.8rem 0 0.35rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
 .rankings-explore-links {
   list-style: none;
   margin: 0;
@@ -676,4 +682,19 @@ input[type="search"] {
   margin-left: auto;
   color: #0c4a6e;
   font-weight: 700;
+}
+
+.subtle-link-wrap {
+  margin-top: 0.6rem !important;
+}
+
+.subtle-link {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.subtle-link:hover,
+.subtle-link:focus-visible {
+  color: var(--accent);
 }

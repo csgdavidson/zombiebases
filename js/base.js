@@ -1,6 +1,7 @@
 const DATA_URL = './data/bases-index.json';
 const STATS_URL = './data/base-stats.json';
 const RANKINGS_URL = './data/rankings.json';
+const DISCOVERY_URL = './data/discovery.json';
 
 const LABELS = {
   type: {
@@ -74,6 +75,9 @@ const elements = {
   comparisonInsight: document.getElementById('comparison-insight'),
   comparisonOverallList: document.getElementById('comparison-overall-list'),
   comparisonCategoryList: document.getElementById('comparison-category-list'),
+  similarSection: document.getElementById('similar-section'),
+  similarList: document.getElementById('similar-bases-list'),
+  similarExploreLink: document.getElementById('similar-explore-link'),
   survivalProfileSection: document.getElementById('survival-profile-section'),
   survivalInitialRow: document.getElementById('base-survival-initial-row'),
   survivalInitial: document.getElementById('base-survival-initial'),
@@ -758,6 +762,50 @@ function createBaseUrl(slug, sourceParams) {
   return `./base.html?${params.toString()}`;
 }
 
+function renderSimilarBases(base, discovery, params) {
+  if (!elements.similarSection || !elements.similarList) {
+    return;
+  }
+
+  const similarEntries = discovery?.similarByBase?.[base.slug];
+  if (!Array.isArray(similarEntries) || similarEntries.length === 0) {
+    elements.similarSection.hidden = true;
+    return;
+  }
+
+  elements.similarList.innerHTML = '';
+
+  similarEntries.slice(0, 3).forEach((item) => {
+    const li = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = createBaseUrl(item.slug, params);
+    link.textContent = item.name;
+
+    const scoreMeta = document.createElement('p');
+    scoreMeta.className = 'base-meta';
+    scoreMeta.textContent = `${item.overall.toFixed(1)}/10 • ${labelFor('region', item.region)} • ${labelFor('type', item.type)}`;
+
+    const reason = document.createElement('p');
+    reason.className = 'base-summary';
+    reason.textContent = item.reason;
+
+    li.append(link, scoreMeta, reason);
+    elements.similarList.appendChild(li);
+  });
+
+  if (elements.similarExploreLink) {
+    const hint = discovery?.baseScenarioHints?.[base.slug];
+    if (hint?.scenario) {
+      elements.similarExploreLink.href = `./scenarios.html?scenario=${encodeURIComponent(hint.scenario)}`;
+      elements.similarExploreLink.hidden = false;
+    } else {
+      elements.similarExploreLink.hidden = true;
+    }
+  }
+
+  elements.similarSection.hidden = false;
+}
+
 function renderRelatedBases(base, bases, params) {
   elements.relatedList.innerHTML = '';
 
@@ -800,7 +848,7 @@ function renderRelatedBases(base, bases, params) {
   elements.relatedSection.hidden = false;
 }
 
-function showBase(base, bases, params, stats, rankings) {
+function showBase(base, bases, params, stats, rankings, discovery) {
   elements.name.textContent = base.name;
   applyDetailMetadata(base);
   elements.meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
@@ -812,6 +860,7 @@ function showBase(base, bases, params, stats, rankings) {
   renderScore(base);
   renderRankingPosition(base, rankings);
   renderComparison(base, stats);
+  renderSimilarBases(base, discovery, params);
   renderSurvivalProfile(base);
   renderUseCaseAndRisk(base);
   renderRealityCheck(base);
@@ -836,10 +885,11 @@ async function loadBase() {
   elements.status.textContent = 'Loading base details...';
 
   try {
-    const [basesResponse, statsResponse, rankingsResponse] = await Promise.all([
+    const [basesResponse, statsResponse, rankingsResponse, discoveryResponse] = await Promise.all([
       fetch(DATA_URL),
       fetch(STATS_URL),
-      fetch(RANKINGS_URL)
+      fetch(RANKINGS_URL),
+      fetch(DISCOVERY_URL)
     ]);
     if (!basesResponse.ok) {
       throw new Error(`Failed to load bases data (${basesResponse.status})`);
@@ -848,6 +898,7 @@ async function loadBase() {
     const bases = await basesResponse.json();
     const stats = statsResponse.ok ? await statsResponse.json() : null;
     const rankings = rankingsResponse.ok ? await rankingsResponse.json() : null;
+    const discovery = discoveryResponse.ok ? await discoveryResponse.json() : null;
     const matchedBase = slugHelper?.resolveBaseBySlug
       ? slugHelper.resolveBaseBySlug(bases, slug)
       : bases.find((base) => base.slug === slug);
@@ -857,7 +908,7 @@ async function loadBase() {
       return;
     }
 
-    showBase(matchedBase, bases, params, stats, rankings);
+    showBase(matchedBase, bases, params, stats, rankings, discovery);
   } catch (error) {
     console.error(error);
     showNotFound();
