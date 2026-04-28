@@ -52,6 +52,30 @@ function summarizeActiveFilters(region, type) {
   return parts;
 }
 
+function getTierBadge(overall) {
+  if (!isValidScoreValue(overall)) {
+    return null;
+  }
+
+  if (overall >= 8) return 'Exceptional';
+  if (overall < 4) return 'Trap';
+  return null;
+}
+
+function getIdentityBadge(scoreObject, overall) {
+  const defensibility = scoreObject?.defensibility ?? 0;
+  const isolation = scoreObject?.isolation ?? 0;
+  const sustainability = scoreObject?.sustainability ?? 0;
+  const values = [defensibility, isolation, sustainability].filter(isValidScoreValue);
+
+  if (overall < 4 || values.every((value) => value < 4)) return 'Trap';
+  if (isolation >= 8 && sustainability >= 8) return 'Long-term';
+  if (defensibility >= 8 && isolation >= 8) return 'Defensive';
+  if (isolation >= 8) return 'High isolation';
+
+  return null;
+}
+
 function updateViewToggleLinks() {
   const listParams = new URLSearchParams();
   const mapParams = new URLSearchParams();
@@ -143,7 +167,8 @@ const elements = {
   listViewButton: document.getElementById('view-list'),
   mapViewButton: document.getElementById('view-map'),
   featuredSection: document.getElementById('featured-section'),
-  featuredList: document.getElementById('featured-bases-list')
+  featuredList: document.getElementById('featured-bases-list'),
+  activeFilters: document.getElementById('active-filters')
 };
 
 const baseMap = (window.createBaseMap && elements.mapElement && elements.mapStatus)
@@ -361,7 +386,41 @@ function updateUrlFromState() {
 
 function updateResultCount(count) {
   const baseLabel = count === 1 ? 'base' : 'bases';
-  elements.resultCount.textContent = `${count} ${baseLabel} found`;
+  const hasActiveFilters = Boolean(elements.regionFilter.value || elements.typeFilter.value || state.search || state.sort !== 'highest_score');
+  elements.resultCount.textContent = hasActiveFilters
+    ? `${count} ${baseLabel} found for current filters`
+    : `${count} ${baseLabel} found`;
+}
+
+function updateActiveFilters() {
+  if (!elements.activeFilters) {
+    return;
+  }
+
+  const chips = [];
+  if (elements.regionFilter.value) {
+    chips.push(`Region: ${labelFor('region', elements.regionFilter.value)}`);
+  }
+  if (elements.typeFilter.value) {
+    chips.push(`Type: ${labelFor('type', elements.typeFilter.value)}`);
+  }
+  if (state.sort !== 'highest_score') {
+    chips.push(`Sort: ${SORT_OPTIONS[state.sort]}`);
+  }
+  if (state.search) {
+    chips.push(`Search: "${state.search}"`);
+  }
+
+  if (!chips.length) {
+    elements.activeFilters.hidden = true;
+    elements.activeFilters.textContent = '';
+    return;
+  }
+
+  elements.activeFilters.innerHTML = chips
+    .map((chip) => `<span class="filter-chip">${chip}</span>`)
+    .join('');
+  elements.activeFilters.hidden = false;
 }
 
 function preferredSlugFor(baseOrSlug) {
@@ -410,10 +469,34 @@ function appendCardScore(container, base) {
     return;
   }
 
-  const score = document.createElement('p');
-  score.className = 'base-overall-score';
-  score.textContent = `Overall score: ${scoreText}`;
+  const score = document.createElement('span');
+  score.className = 'base-score-pill';
+  score.textContent = scoreText.replace('/10', '');
   container.appendChild(score);
+}
+
+function appendCardBadges(container, base) {
+  const overall = computeOverallScore(base);
+  const scoreObject = getScoreObject(base);
+  const candidateBadges = [getTierBadge(overall), getIdentityBadge(scoreObject, overall)]
+    .filter(Boolean)
+    .slice(0, 2);
+
+  if (!candidateBadges.length) {
+    return;
+  }
+
+  const row = document.createElement('p');
+  row.className = 'card-badge-row';
+
+  candidateBadges.forEach((badgeLabel) => {
+    const badge = document.createElement('span');
+    badge.className = 'badge badge-trait';
+    badge.textContent = badgeLabel;
+    row.appendChild(badge);
+  });
+
+  container.appendChild(row);
 }
 
 function createEmptyState() {
@@ -457,13 +540,7 @@ function renderBaseList(items) {
     title.textContent = base.name;
 
     header.appendChild(title);
-
-    if (isFeatured(base)) {
-      const badge = document.createElement('span');
-      badge.className = `status-badge status-${normalizeStatus(base)}`;
-      badge.textContent = statusLabel(base);
-      header.appendChild(badge);
-    }
+    appendCardScore(header, base);
 
     const meta = document.createElement('p');
     meta.className = 'base-meta';
@@ -471,14 +548,14 @@ function renderBaseList(items) {
 
     link.append(header, meta);
 
-    appendCardScore(link, base);
-
     if (base.country) {
       const country = document.createElement('p');
       country.className = 'base-country';
       country.textContent = base.country;
       link.appendChild(country);
     }
+
+    appendCardBadges(link, base);
 
     if (base.summary) {
       const summary = document.createElement('p');
@@ -560,6 +637,7 @@ function applyFilters() {
   state.filteredBases = sortBases(filtered);
 
   updateResultCount(state.filteredBases.length);
+  updateActiveFilters();
   renderBaseList(state.filteredBases);
   renderFeaturedBases(state.featuredBases);
   renderCurrentView();

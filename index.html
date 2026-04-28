@@ -24,38 +24,41 @@
       <ul id="featured-bases-list" class="compact-base-list" aria-label="Featured zombie bases list"></ul>
     </section>
 
-    <section class="rankings-explore" aria-label="Explore by rankings">
-      <h2>Explore by rankings</h2>
-      <ul class="rankings-explore-links">
-        <li><a href="./rankings.html">Best overall</a></li>
-        <li><a href="./rankings-region.html">Best by region</a></li>
-        <li><a href="./rankings-type.html">Best by type</a></li>
-      </ul>
-      <h3 class="rankings-explore-subheading">Explore by scenario</h3>
-      <ul class="rankings-explore-links">
-        <li><a href="./scenarios.html?scenario=long_term_survival">Long-term survival</a></li>
-        <li><a href="./scenarios.html?scenario=short_term_refuge">Short-term refuge</a></li>
-        <li><a href="./scenarios.html?scenario=community_bases">Community bases</a></li>
-        <li><a href="./scenarios.html?scenario=high_risk_high_reward">High risk / high reward</a></li>
-      </ul>
-    </section>
-
-    <section class="view-toggle" aria-label="Select homepage view">
-      <span class="toggle-label">View</span>
-      <div class="toggle-buttons" role="group" aria-label="Homepage views">
-        <a id="view-list" class="toggle-button" href="./index.html" data-view="list" aria-pressed="true">List</a>
-        <a id="view-map" class="toggle-button" href="./index.html?view=map" data-view="map" aria-pressed="false">Map</a>
+    <section class="rankings-explore" aria-label="Explore zombie bases">
+      <h2>Explore</h2>
+      <div class="discovery-group">
+        <p class="discovery-heading">Rankings</p>
+        <ul class="rankings-explore-links">
+          <li><a href="./rankings.html">Best overall</a></li>
+          <li><a href="./rankings-region.html">By region</a></li>
+          <li><a href="./rankings-type.html">By type</a></li>
+        </ul>
+      </div>
+      <div class="discovery-group">
+        <p class="discovery-heading">Scenarios</p>
+        <ul class="rankings-explore-links">
+          <li><a href="./scenarios.html?scenario=long_term_survival">Long-term</a></li>
+          <li><a href="./scenarios.html?scenario=short_term_refuge">Short-term</a></li>
+          <li><a href="./scenarios.html?scenario=community_bases">Community</a></li>
+          <li><a href="./scenarios.html?scenario=high_risk_high_reward">High risk / reward</a></li>
+        </ul>
       </div>
     </section>
 
-    <section class="search" aria-label="Search zombie bases">
-      <label for="search-input">
+    <section class="controls-panel" aria-label="Search and filter zombie bases">
+      <label class="control-search" for="search-input">
         Search
         <input id="search-input" type="search" placeholder="Search by name, region, country, or type">
       </label>
-    </section>
 
-    <section class="filters" aria-label="Filter zombie bases">
+      <div class="view-toggle" aria-label="Select homepage view">
+        <span class="toggle-label">View</span>
+        <div class="toggle-buttons" role="group" aria-label="Homepage views">
+          <a id="view-list" class="toggle-button" href="./index.html" data-view="list" aria-pressed="true">List</a>
+          <a id="view-map" class="toggle-button" href="./index.html?view=map" data-view="map" aria-pressed="false">Map</a>
+        </div>
+      </div>
+
       <label for="region-filter">
         Region
         <select id="region-filter">
@@ -71,14 +74,15 @@
       </label>
 
       <label for="sort-select">
-        Sort by
+        Sort
         <select id="sort-select"></select>
       </label>
 
-      <button id="reset-filters" type="button" class="reset-filters">Reset filters</button>
+      <button id="reset-filters" type="button" class="reset-filters">Reset</button>
     </section>
 
     <p id="result-count" class="result-count" aria-live="polite"></p>
+    <p id="active-filters" class="active-filters" aria-live="polite" hidden></p>
     <p id="status" role="status" aria-live="polite"></p>
 
     <section id="list-view" aria-label="List view">
