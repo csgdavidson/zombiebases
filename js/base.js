@@ -205,6 +205,19 @@ function computeOverallScore(base) {
   return null;
 }
 
+function scoreToneClass(value) {
+  if (!isValidScoreValue(value)) {
+    return '';
+  }
+  if (value >= 8) {
+    return 'score-high';
+  }
+  if (value >= 5) {
+    return 'score-medium';
+  }
+  return 'score-low';
+}
+
 function buildBackLink(params) {
   const linkParams = new URLSearchParams();
   const view = params.get('view') === 'map' ? 'map' : 'list';
@@ -366,7 +379,10 @@ function renderScoreBreakdown(scoreObject) {
     const item = document.createElement('li');
     const itemLabel = document.createElement('strong');
     itemLabel.textContent = `${label}:`;
-    item.append(itemLabel, ` ${scoreObject[key].toFixed(1)}/10`);
+    const scoreValue = document.createElement('span');
+    scoreValue.className = `score-value ${scoreToneClass(scoreObject[key])}`.trim();
+    scoreValue.textContent = ` ${scoreObject[key].toFixed(1)}/10`;
+    item.append(itemLabel, scoreValue);
     elements.scoreList.appendChild(item);
   });
 }
@@ -596,6 +612,7 @@ function renderScore(base) {
   elements.scoreEmpty.hidden = true;
   elements.scoreOverall.hidden = overall === null;
   if (overall !== null) {
+    elements.scoreOverall.className = `detail-overall-score ${scoreToneClass(overall)}`.trim();
     elements.scoreOverall.textContent = `${overall.toFixed(1)}/10`;
   }
 

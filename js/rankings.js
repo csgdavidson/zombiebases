@@ -70,6 +70,19 @@ function createBaseUrl(slug) {
   return slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(slug) : `/${encodeURIComponent(slug)}`;
 }
 
+function scoreToneClass(value) {
+  if (!Number.isFinite(value)) {
+    return '';
+  }
+  if (value >= 8) {
+    return 'score-high';
+  }
+  if (value >= 5) {
+    return 'score-medium';
+  }
+  return 'score-low';
+}
+
 function summarize(entry) {
   if (typeof entry.summary === 'string' && entry.summary.trim()) {
     return entry.summary.trim();
@@ -98,7 +111,7 @@ function renderList(entries, mode) {
     nameLink.textContent = entry.name;
 
     const score = document.createElement('span');
-    score.className = 'ranking-score';
+    score.className = `ranking-score ${scoreToneClass(entry.overall)}`.trim();
     score.textContent = `${entry.overall.toFixed(1)}/10`;
 
     heading.append(rank, nameLink, score);
@@ -109,8 +122,10 @@ function renderList(entries, mode) {
     const qualifiers = [`Top ${topPercent}%`];
 
     if (mode === 'global') {
-      qualifiers.push(labelFor('region', entry.region));
-      qualifiers.push(labelFor('type', entry.type));
+      const location = entry.country
+        ? `${entry.country}, ${labelFor('region', entry.region)}`
+        : labelFor('region', entry.region);
+      qualifiers.unshift(`${location} • ${labelFor('type', entry.type)}`);
     }
 
     meta.textContent = qualifiers.join(' • ');
