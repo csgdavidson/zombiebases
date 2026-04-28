@@ -68,6 +68,7 @@ const elements = {
   scoreStrengths: document.getElementById('base-score-strengths'),
   scoreWeaknesses: document.getElementById('base-score-weaknesses'),
   comparisonSection: document.getElementById('comparison-section'),
+  comparisonInsight: document.getElementById('comparison-insight'),
   comparisonOverallList: document.getElementById('comparison-overall-list'),
   comparisonCategoryList: document.getElementById('comparison-category-list'),
   survivalProfileSection: document.getElementById('survival-profile-section'),
@@ -518,16 +519,16 @@ function classifyComparison(value, average) {
   }
 
   const difference = value - average;
-  if (difference >= 2.0) {
+  if (difference >= 1.5) {
     return { label: 'Elite', marker: '▲', tone: 'positive' };
   }
-  if (difference >= 0.75) {
+  if (difference >= 0.5) {
     return { label: 'Strong', marker: '▲', tone: 'positive' };
   }
-  if (difference > -0.75) {
+  if (difference > -0.5) {
     return { label: 'Average', marker: '▬', tone: 'neutral' };
   }
-  if (difference > -2.0) {
+  if (difference > -1.5) {
     return { label: 'Weak', marker: '▼', tone: 'negative' };
   }
   return { label: 'Critical', marker: '▼', tone: 'negative' };
@@ -540,8 +541,9 @@ function appendComparisonItem(list, label, value, average) {
 
   const comparison = classifyComparison(value, average);
   if (!comparison) {
-    return;
+    return null;
   }
+  const difference = value - average;
 
   const item = document.createElement('li');
   item.className = 'comparison-row';
@@ -560,14 +562,61 @@ function appendComparisonItem(list, label, value, average) {
 
   const bar = document.createElement('span');
   bar.className = 'comparison-bar';
+  bar.title = `Base score ${value.toFixed(1)} vs benchmark ${average.toFixed(1)}`;
+  bar.setAttribute('aria-label', `Base score ${value.toFixed(1)} out of 10. Benchmark ${average.toFixed(1)} out of 10.`);
   const barFill = document.createElement('span');
   barFill.className = 'comparison-bar-fill';
   barFill.style.width = `${Math.max(0, Math.min(100, (value / 10) * 100))}%`;
   barFill.setAttribute('aria-hidden', 'true');
-  bar.appendChild(barFill);
+  const barMarker = document.createElement('span');
+  barMarker.className = 'comparison-bar-marker';
+  barMarker.style.left = `${Math.max(0, Math.min(100, (average / 10) * 100))}%`;
+  barMarker.title = `Benchmark: ${average.toFixed(1)}`;
+  barMarker.setAttribute('aria-hidden', 'true');
+  bar.append(barFill, barMarker);
 
   item.append(rowLabel, judgement, values, bar);
   list.appendChild(item);
+  return { label, value, average, difference, comparison };
+}
+
+function comparisonOverallLabel(kind, base) {
+  if (kind === 'global') {
+    return 'Against all bases';
+  }
+  if (kind === 'region') {
+    return `Against ${labelFor('region', base.region)}`;
+  }
+  if (kind === 'type') {
+    return `Against ${labelFor('type', base.type)}`;
+  }
+  return '';
+}
+
+function renderComparisonInsight(comparisons) {
+  if (!elements.comparisonInsight) {
+    return;
+  }
+
+  if (!Array.isArray(comparisons) || !comparisons.length) {
+    elements.comparisonInsight.hidden = true;
+    elements.comparisonInsight.textContent = '';
+    return;
+  }
+
+  const overallEntry = comparisons.find((entry) => entry.label.includes('Against all bases'));
+  const strongestEntry = comparisons.reduce((best, current) => (!best || current.difference > best.difference ? current : best), null);
+  const weakestEntry = comparisons.reduce((worst, current) => (!worst || current.difference < worst.difference ? current : worst), null);
+
+  if (!overallEntry || !strongestEntry || !weakestEntry) {
+    elements.comparisonInsight.hidden = true;
+    elements.comparisonInsight.textContent = '';
+    return;
+  }
+
+  const sentence = `${overallEntry.comparison.label} overall. Best edge is ${strongestEntry.label.toLowerCase()}; weakest relative trait is ${weakestEntry.label.toLowerCase()}.`;
+  elements.comparisonInsight.hidden = false;
+  elements.comparisonInsight.textContent = sentence;
 }
 
 function renderComparison(base, stats) {
@@ -577,6 +626,7 @@ function renderComparison(base, stats) {
 
   if (!stats || typeof stats !== 'object') {
     elements.comparisonSection.hidden = true;
+    renderComparisonInsight([]);
     return;
   }
 
@@ -588,19 +638,27 @@ function renderComparison(base, stats) {
 
   elements.comparisonOverallList.innerHTML = '';
   elements.comparisonCategoryList.innerHTML = '';
+  const comparisonEntries = [];
 
-  appendComparisonItem(elements.comparisonOverallList, 'Global', overall, globalStats?.averages?.overall);
-  appendComparisonItem(elements.comparisonOverallList, 'Region', overall, regionStats?.averages?.overall);
-  appendComparisonItem(elements.comparisonOverallList, 'Type', overall, typeStats?.averages?.overall);
+  const overallEntries = [
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('global', base), overall, globalStats?.averages?.overall),
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('region', base), overall, regionStats?.averages?.overall),
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('type', base), overall, typeStats?.averages?.overall)
+  ].filter(Boolean);
+  comparisonEntries.push(...overallEntries);
 
   if (scoreObject && typeStats?.averages) {
     Object.entries(SCORE_LABELS).forEach(([key, label]) => {
-      appendComparisonItem(elements.comparisonCategoryList, label, scoreObject[key], typeStats.averages[key]);
+      const item = appendComparisonItem(elements.comparisonCategoryList, label, scoreObject[key], typeStats.averages[key]);
+      if (item) {
+        comparisonEntries.push(item);
+      }
     });
   }
 
   const hasContent = elements.comparisonOverallList.children.length > 0 || elements.comparisonCategoryList.children.length > 0;
   elements.comparisonSection.hidden = !hasContent;
+  renderComparisonInsight(hasContent ? comparisonEntries : []);
 }
 
 function createBaseUrl(slug, sourceParams) {

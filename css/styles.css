@@ -472,6 +472,12 @@ input[type="search"] {
   margin-bottom: 0;
 }
 
+.comparison-insight {
+  margin: 0;
+  font-size: 0.94rem;
+  color: #1e293b;
+}
+
 .comparison-section {
   display: grid;
   gap: 0.45rem;
@@ -491,7 +497,7 @@ input[type="search"] {
 
 .comparison-row {
   display: grid;
-  grid-template-columns: minmax(5.5rem, 1.1fr) minmax(6rem, 1fr) minmax(6.5rem, auto);
+  grid-template-columns: minmax(6.5rem, 1.2fr) minmax(5.5rem, 0.9fr) minmax(7rem, auto);
   column-gap: 0.75rem;
   row-gap: 0.25rem;
   align-items: center;
@@ -502,7 +508,8 @@ input[type="search"] {
 }
 
 .comparison-judgement {
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 .comparison-judgement-positive {
@@ -519,13 +526,16 @@ input[type="search"] {
 
 .comparison-values {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   justify-self: end;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 
 .comparison-bar {
+  position: relative;
   grid-column: 1 / -1;
-  height: 0.28rem;
+  height: 0.32rem;
   border-radius: 999px;
   background: #dbe3ea;
   overflow: hidden;
@@ -538,6 +548,17 @@ input[type="search"] {
   background: #0c4a6e;
 }
 
+.comparison-bar-marker {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  width: 2px;
+  transform: translateX(-1px);
+  background: #334155;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
 @media (max-width: 640px) {
   .comparison-row {
     grid-template-columns: minmax(4.5rem, 1fr) minmax(5.5rem, 1fr);
@@ -545,6 +566,6 @@ input[type="search"] {
 
   .comparison-values {
     grid-column: 1 / -1;
-    justify-self: start;
+    justify-self: end;
   }
 }
