@@ -1,4 +1,5 @@
 const DATA_URL = './data/bases-index.json';
+const LEGACY_DATA_URL = './data/bases.json';
 const STATS_URL = './data/base-stats.json';
 const RANKINGS_URL = './data/rankings.json';
 const DISCOVERY_URL = './data/discovery.json';
@@ -285,6 +286,12 @@ function showNotFound() {
   elements.detail.hidden = true;
   elements.notFound.hidden = false;
   applyNotFoundMetadata();
+}
+
+function showLoadError() {
+  elements.status.textContent = 'Unable to load base details right now. Please try again.';
+  elements.detail.hidden = true;
+  elements.notFound.hidden = true;
 }
 
 function renderMetaRow(base) {
@@ -894,17 +901,12 @@ async function loadBase() {
   elements.status.textContent = 'Loading base details...';
 
   try {
-    const [basesResponse, statsResponse, rankingsResponse, discoveryResponse] = await Promise.all([
-      fetch(DATA_URL),
+    const [bases, statsResponse, rankingsResponse, discoveryResponse] = await Promise.all([
+      loadBasesData(),
       fetch(STATS_URL),
       fetch(RANKINGS_URL),
       fetch(DISCOVERY_URL)
     ]);
-    if (!basesResponse.ok) {
-      throw new Error(`Failed to load bases data (${basesResponse.status})`);
-    }
-
-    const bases = await basesResponse.json();
     const stats = statsResponse.ok ? await statsResponse.json() : null;
     const rankings = rankingsResponse.ok ? await rankingsResponse.json() : null;
     const discovery = discoveryResponse.ok ? await discoveryResponse.json() : null;
@@ -920,8 +922,38 @@ async function loadBase() {
     showBase(matchedBase, bases, params, stats, rankings, discovery);
   } catch (error) {
     console.error(error);
-    showNotFound();
+    showLoadError();
   }
+}
+
+async function loadBasesData() {
+  const candidates = [DATA_URL, LEGACY_DATA_URL];
+  let lastError = null;
+
+  for (const url of candidates) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        lastError = new Error(`Failed to load base data from ${url} (${response.status})`);
+        continue;
+      }
+
+      const payload = await response.json();
+      if (Array.isArray(payload)) {
+        return payload;
+      }
+
+      if (Array.isArray(payload?.bases)) {
+        return payload.bases;
+      }
+
+      lastError = new Error(`Unexpected base data shape from ${url}`);
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  throw lastError || new Error('Failed to load base data.');
 }
 
 if (
