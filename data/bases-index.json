@@ -5198,25 +5198,41 @@
     "lat": 77.166,
     "long": -61.133,
     "scores": {
-      "overall": 6,
+      "overall": 5.8,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 3,
-        "isolation": 9,
-        "accessibility": 2
+        "defensibility": 8.8,
+        "sustainability": 2.0,
+        "isolation": 9.2
       }
     },
     "description": {
-      "summary": "Strong subterranean protection and isolation, but fundamentally unsustainable.",
+      "summary": "Camp Century is exceptionally hard to reach and hard to assault, but it fails as a settlement because the environment itself destroys long-term habitability.",
       "strengths": [
-        "Subsurface protection",
-        "Extreme remoteness"
+        "Subsurface structure and ice cover reduce direct attack risk",
+        "Extreme Arctic remoteness suppresses day-to-day external pressure",
+        "Controlled entry points simplify perimeter monitoring"
       ],
       "weaknesses": [
-        "Structural instability over time",
-        "No sustainable ecosystem"
+        "Ice movement and aging infrastructure create compounding structural risk",
+        "No local food base forces dependence on stored supplies",
+        "Severe climate turns routine maintenance into high-risk work"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-term hardened refuge for a trained, well-supplied team",
+      "failureMode": "You run out of sustainable life support before external threats breach the site"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Conditional",
+      "longTerm": "Very weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary shelter during peak instability when concealment and protection matter most",
+      "keyRisk": "What kills you here is system failure under Arctic conditions, not a frontal assault"
+    },
+    "realityCheck": "Viability assumes intact shelter systems, fuel, and technical personnel. Without steady maintenance, survival margins collapse quickly.",
+    "scoreNarrative": "Camp Century scores high in defensibility and isolation but collapses on sustainability. It is a bunker, not a durable community base."
   },
   {
     "name": "Phoenix Airfield (McMurdo)",
@@ -5227,25 +5243,41 @@
     "lat": -77.9564,
     "long": 166.7667,
     "scores": {
-      "overall": 4,
+      "overall": 3.4,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 3,
-        "isolation": 9,
-        "accessibility": 6
+        "defensibility": 2.5,
+        "sustainability": 1.8,
+        "isolation": 8.5
       }
     },
     "description": {
-      "summary": "Useful as a logistics node, not as a survivable base.",
+      "summary": "Phoenix Airfield is useful for movement and staging, but as a survival base it is a flat, exposed logistics point with almost no self-sustaining capacity.",
       "strengths": [
-        "Access point",
-        "Operational utility"
+        "Runway access supports rapid evacuation or resupply windows",
+        "Simple layout allows fast operational setup",
+        "Useful as a relay node between remote sectors"
       ],
       "weaknesses": [
-        "No defensive capability",
-        "No sustainability"
+        "Open terrain offers minimal natural defense depth",
+        "Infrastructure is fuel-dependent and fragile under disruption",
+        "No reliable food or water production base on site"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Transit hub and emergency extraction point",
+      "failureMode": "Sustainment fails first once fuel, parts, and flights stop"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Collapse-prone"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Brief stopover for movement, triage, and redistribution of people or supplies",
+      "keyRisk": "What kills you here is dependence on external logistics the moment air operations degrade"
+    },
+    "realityCheck": "Assumes runway operability, aircraft access, and security staffing. If any one of those fails, site value drops sharply.",
+    "scoreNarrative": "Phoenix Airfield earns points for access utility but remains poor as a defensive or sustainable holdout. It is a tool, not a sanctuary."
   },
   {
     "name": "Port of Murmansk",
@@ -5256,25 +5288,41 @@
     "lat": 68.9707,
     "long": 33.074,
     "scores": {
-      "overall": 4,
+      "overall": 4.2,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 5,
-        "isolation": 5,
-        "accessibility": 8
+        "defensibility": 3.0,
+        "sustainability": 5.0,
+        "isolation": 4.5
       }
     },
     "description": {
-      "summary": "Operational but exposed, functioning more as a transit hub than a defensible base.",
+      "summary": "Murmansk Port has strong maritime infrastructure and resource throughput, but high visibility and strategic exposure make it hard to secure in prolonged collapse.",
       "strengths": [
-        "Infrastructure",
-        "Supply access"
+        "Major port systems support storage and material handling",
+        "Cold-climate operations experience improves short-term resilience",
+        "Sea routes can diversify supply options when functioning"
       ],
       "weaknesses": [
-        "High exposure",
-        "Difficult to secure"
+        "High strategic value attracts sustained hostile attention",
+        "Large perimeter and industrial sprawl are difficult to lock down",
+        "Dependence on complex infrastructure increases cascading failure risk"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Regional logistics and repair node under active security control",
+      "failureMode": "Perimeter overstretch and repeated pressure degrade control faster than recovery"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Conditional",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Operational hub supporting wider coastal operations rather than isolated survival",
+      "keyRisk": "What kills you here is attrition from constant exposure, not immediate resource shortage"
+    },
+    "realityCheck": "Performance assumes coordinated security, functioning energy, and maintained port equipment. Fragmented command sharply reduces survivability.",
+    "scoreNarrative": "Murmansk is workable in organized phases but vulnerable to sustained pressure. It performs as infrastructure, not as a sealed refuge."
   },
   {
     "name": "La Rinconada",
@@ -5285,25 +5333,41 @@
     "lat": -14.6315,
     "long": -69.446,
     "scores": {
-      "overall": 5,
+      "overall": 5.1,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 3,
-        "isolation": 7,
-        "accessibility": 3
+        "defensibility": 5.8,
+        "sustainability": 2.6,
+        "isolation": 7.4
       }
     },
     "description": {
-      "summary": "Extreme altitude provides isolation but makes sustainable living very difficult.",
+      "summary": "La Rinconada gains protection from altitude and remoteness, but extreme living conditions and weak local systems limit survival duration.",
       "strengths": [
-        "Remote high-altitude location",
-        "Low external pressure"
+        "High elevation and difficult access reduce large-scale approach routes",
+        "Low strategic profile can reduce early targeting pressure",
+        "Existing settlement footprint offers immediate shelter options"
       ],
       "weaknesses": [
-        "Harsh living conditions",
-        "Limited sustainability"
+        "Chronic hypoxia and cold degrade labor capacity and health",
+        "Limited sanitation and health infrastructure raise mortality risk",
+        "Food and fuel logistics are fragile in bad weather"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "High-altitude fallback for small acclimatized groups",
+      "failureMode": "Human performance and health collapse before security pressure does"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Conditional",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Remote hideout where avoiding contact is more important than comfort or scale",
+      "keyRisk": "What kills you here is altitude stress and chronic medical degradation over time"
+    },
+    "realityCheck": "Assumes acclimatized occupants, cold-weather gear, and disciplined resource planning. Unprepared arrivals deteriorate quickly.",
+    "scoreNarrative": "La Rinconada is naturally hard to reach but biologically and logistically punishing. Isolation helps first; physiology hurts later."
   },
   {
     "name": "Machu Picchu",
@@ -5314,25 +5378,41 @@
     "lat": -13.1631,
     "long": -72.545,
     "scores": {
-      "overall": 8,
+      "overall": 7.6,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 6,
-        "isolation": 7,
-        "accessibility": 4
+        "defensibility": 8.7,
+        "sustainability": 5.2,
+        "isolation": 7.1
       }
     },
     "description": {
-      "summary": "Highly defensible and remote, but limited by scalability and resources.",
+      "summary": "Machu Picchu offers excellent terrain defense and controlled approach lines, but limited productive capacity prevents large, permanent survival communities.",
       "strengths": [
-        "Natural defensibility",
-        "Remote location"
+        "Steep terrain and narrow access routes create strong defensive geometry",
+        "High vantage improves early warning and force efficiency",
+        "Remote setting reduces random contact rates"
       ],
       "weaknesses": [
-        "Limited expansion",
-        "Resource constraints"
+        "Protected-site constraints and terrain limit scalable food systems",
+        "Tourism-era infrastructure is not designed for prolonged self-reliance",
+        "Evacuation and medical throughput remain slow under stress"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Defensible redoubt for a disciplined medium-sized group",
+      "failureMode": "Population pressure outgrows local sustainment capacity"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Conditional"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Structured defensive holdout prioritizing control of access and low contact frequency",
+      "keyRisk": "What kills you here is resource ceiling, not inability to repel early threats"
+    },
+    "realityCheck": "Works best with tight population control, prepositioned stores, and nearby production support outside core ruins.",
+    "scoreNarrative": "Machu Picchu scores near the top on defensibility and remains solid on isolation, but sustainability limits prevent true long-horizon expansion."
   },
   {
     "name": "Fort Copacabana",
@@ -5343,25 +5423,41 @@
     "lat": -22.9886,
     "long": -43.1916,
     "scores": {
-      "overall": 6,
+      "overall": 5.3,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 5,
-        "isolation": 3,
-        "accessibility": 7
+        "defensibility": 7.2,
+        "sustainability": 4.0,
+        "isolation": 2.4
       }
     },
     "description": {
-      "summary": "Well-defended but located in a highly populated and exposed urban environment.",
+      "summary": "Copacabana Fort is structurally robust and tactically defensible at the site level, but dense urban surroundings overwhelm long-term survivability.",
       "strengths": [
-        "Military-grade defenses",
-        "Strong structure"
+        "Fortified military construction withstands direct assault better than civilian structures",
+        "Clear firing arcs and hardened positions improve immediate defense",
+        "Coastal access can support short-term maritime movement"
       ],
       "weaknesses": [
-        "Urban exposure",
-        "High population pressure"
+        "High-density urban context generates constant external pressure",
+        "Limited internal production forces reliance on contested supply lines",
+        "High visibility makes the position a persistent target"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-term defensive bastion during urban breakdown",
+      "failureMode": "Encirclement and supply strangulation in a high-pressure city environment"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary hold point to stabilize, regroup, and launch evacuation or redistribution",
+      "keyRisk": "What kills you here is urban siege dynamics, not fortress wall failure"
+    },
+    "realityCheck": "Requires disciplined perimeter operations and external logistics. Without regular inflow, durability erodes fast.",
+    "scoreNarrative": "Copacabana Fort is tactically strong but strategically trapped by location. Strong walls cannot offset a sustained urban resource war."
   },
   {
     "name": "San Felipe Fortress",
@@ -5372,25 +5468,41 @@
     "lat": 10.4236,
     "long": -75.5514,
     "scores": {
-      "overall": 7,
+      "overall": 6.4,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 5,
-        "accessibility": 6
+        "defensibility": 8.0,
+        "sustainability": 5.6,
+        "isolation": 4.8
       }
     },
     "description": {
-      "summary": "Strong defensive structure with moderate long-term viability.",
+      "summary": "San Felipe combines historical fortification advantages with moderate operating feasibility, but limited local throughput caps long-term resilience.",
       "strengths": [
-        "Fortified design",
-        "Strategic position"
+        "Compact fort layout is easier to secure than open modern complexes",
+        "Defensive architecture supports layered close-range control",
+        "Coastal position can enable selective maritime access"
       ],
       "weaknesses": [
-        "Limited resources",
-        "Moderate exposure"
+        "On-site food and utility capacity are limited for prolonged occupation",
+        "Not isolated enough to avoid persistent regional pressure",
+        "Aging structure demands ongoing maintenance discipline"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Defensible medium-term shelter with controlled population size",
+      "failureMode": "Resource exhaustion from holding too many people too long"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Stable",
+      "longTerm": "Conditional"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Managed defensive enclave for a small-to-medium group with strict rationing",
+      "keyRisk": "What kills you here is slow sustainment drain rather than sudden breach"
+    },
+    "realityCheck": "Effective only with conservative headcount, maintenance capacity, and external supplementation for food and medicine.",
+    "scoreNarrative": "San Felipe sits in the middle-upper tier: good defensibility, workable operations, but not enough standalone production for indefinite survival."
   },
   {
     "name": "Itaipu Dam",
@@ -5401,25 +5513,41 @@
     "lat": -25.4078,
     "long": -54.5882,
     "scores": {
-      "overall": 7,
+      "overall": 6.8,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 8,
-        "isolation": 4,
-        "accessibility": 7
+        "defensibility": 5.4,
+        "sustainability": 8.8,
+        "isolation": 3.2
       }
     },
     "description": {
-      "summary": "Massive infrastructure asset with strong energy potential but difficult to secure.",
+      "summary": "Itaipu Dam has exceptional energy potential and water access, making it operationally powerful, but its scale and strategic value make defense extremely demanding.",
       "strengths": [
-        "Power generation",
-        "Water access"
+        "Massive generation capacity can power industry, water systems, and security networks",
+        "Critical infrastructure footprint supports broad regional operations",
+        "Water access and engineering assets improve system recovery options"
       ],
       "weaknesses": [
-        "Strategic target",
-        "Large and exposed"
+        "Large complex creates extensive defense and maintenance burden",
+        "High strategic significance attracts organized hostile action",
+        "Failure at key nodes can cascade into major functional loss"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Power-centered regional command base with strong manpower",
+      "failureMode": "Control failure across a vast perimeter causes cascading infrastructure shutdown"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong with organization",
+      "longTerm": "Conditional"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Anchor site for coordinated settlements that can exploit power and water at scale",
+      "keyRisk": "What kills you here is losing control complexity, not lacking raw resources"
+    },
+    "realityCheck": "Requires technical staff, layered security, and redundant maintenance teams. Understaffed operation turns strategic advantage into liability.",
+    "scoreNarrative": "Itaipu ranks high for sustainability potential but lower for defensibility due to scale and targeting risk. Powerful if governed; brittle if fragmented."
   },
   {
     "name": "Bunge Soy Processing Plant (Santos)",
@@ -5430,25 +5558,41 @@
     "lat": -23.9608,
     "long": -46.3336,
     "scores": {
-      "overall": 4,
+      "overall": 3.8,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 6,
-        "isolation": 3,
-        "accessibility": 7
+        "defensibility": 2.8,
+        "sustainability": 5.4,
+        "isolation": 2.5
       }
     },
     "description": {
-      "summary": "Industrial-scale food processing is useful but highly exposed and dependent on supply chains.",
+      "summary": "Bunge Santos provides useful food-processing infrastructure, but it is an exposed industrial site that depends on fragile upstream and downstream networks.",
       "strengths": [
-        "Food processing capability",
-        "Existing infrastructure"
+        "Existing processing and storage systems can extend food utility short-term",
+        "Industrial logistics footprint supports rapid throughput when supplied",
+        "Urban port proximity offers multiple transport interfaces"
       ],
       "weaknesses": [
-        "Highly visible",
-        "Difficult to defend"
+        "Site is difficult to fortify against persistent intrusion pressure",
+        "Operations rely on external inputs that fail in prolonged disruption",
+        "Dense surrounding activity raises conflict and contamination risk"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-term processing and redistribution node",
+      "failureMode": "Supply chain collapse turns infrastructure into an empty shell"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Very weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary conversion hub for existing stockpiles, not a permanent refuge",
+      "keyRisk": "What kills you here is dependency on external agricultural and fuel flows"
+    },
+    "realityCheck": "Performance assumes inbound raw materials, spare parts, and steady security staffing. Without those, utility drops quickly.",
+    "scoreNarrative": "Bunge Santos is operationally helpful early but structurally poor for isolated survival. It is logistics-heavy and resilience-light."
   },
   {
     "name": "Amazon Tall Tower Observatory",
@@ -5459,25 +5603,41 @@
     "lat": -2.145,
     "long": -59.005,
     "scores": {
-      "overall": 6,
+      "overall": 6.1,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 9,
-        "isolation": 7,
-        "accessibility": 3
+        "defensibility": 3.4,
+        "sustainability": 7.6,
+        "isolation": 8.2
       }
     },
     "description": {
-      "summary": "Deep Amazon location offers unmatched natural resources but is difficult to defend and operate within.",
+      "summary": "ATTO offers deep-rainforest isolation and strong natural resource potential, but terrain, disease burden, and mobility constraints make control and continuity difficult.",
       "strengths": [
-        "Abundant natural resources",
-        "Low population density"
+        "Extreme remoteness sharply lowers routine human threat contact",
+        "Rainforest ecosystem provides long-term biomass and water potential",
+        "Low infrastructure footprint reduces immediate strategic visibility"
       ],
       "weaknesses": [
-        "Extremely difficult terrain",
-        "Hard to secure or control"
+        "Jungle movement and extraction are physically slow and costly",
+        "Medical risk from tropical disease and injury is persistent",
+        "Security and logistics coordination degrade across dense terrain"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Low-signature long-horizon survival outpost for small expert teams",
+      "failureMode": "Medical attrition and logistics drag erode capability over time"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Conditional",
+      "longTerm": "Moderate with expertise"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Distributed survival model focused on concealment, local resource use, and low throughput",
+      "keyRisk": "What kills you here is cumulative health and mobility failure, not immediate attack pressure"
+    },
+    "realityCheck": "Requires jungle operations experience, medical preparedness, and decentralized planning. Untrained groups degrade fast.",
+    "scoreNarrative": "ATTO scores high on isolation and good on sustainability potential, but low control efficiency and medical fragility limit dependable performance."
   },
   {
     "name": "Tambopata Research Center",
