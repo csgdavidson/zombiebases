@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Bases by Region | Zombie Bases</title>
+  <meta name="description" content="Browse top-ranked zombie survival bases by region.">
+  <link rel="canonical" href="https://zombiebases.com/rankings-region.html">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body data-rankings-mode="region">
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="site-brand"><a class="home-link" href="./index.html">Zombie Bases</a></p>
+    </div>
+  </header>
+
+  <main>
+    <a class="back-link" href="./index.html">← Back to List</a>
+
+    <section class="content-section rankings-page-header">
+      <h1 id="rankings-title">Best Bases by Region</h1>
+      <p id="rankings-subtitle" class="base-meta">Select a region to view ranked bases.</p>
+      <div class="rankings-filter-wrap">
+        <label for="rankings-group-select">Region
+          <select id="rankings-group-select"></select>
+        </label>
+      </div>
+      <p id="rankings-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="content-section" aria-label="Rankings list">
+      <ol id="rankings-list" class="rankings-list-page"></ol>
+      <p id="rankings-empty" hidden>No rankings available for this region.</p>
+    </section>
+  </main>
+
+  <script src="./js/slug.js" defer></script>
+  <script src="./js/rankings.js" defer></script>
+</body>
+</html>
