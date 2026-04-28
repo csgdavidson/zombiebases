@@ -4491,25 +4491,40 @@
     "lat": -29.0139,
     "long": 134.7547,
     "scores": {
-      "overall": 7.4,
+      "overall": 7.1,
       "categories": {
-        "defensibility": 7.5,
-        "sustainability": 5.5,
-        "isolation": 8.0,
+        "defensibility": 7.2,
+        "sustainability": 6.2,
+        "isolation": 7.9,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "A remote desert settlement with extensive underground living that offers strong passive protection and practical long-term habitation in extreme conditions.",
+      "summary": "Coober Pedy is one of the few desert sites where underground habitation is already proven, but long-term success is limited by hard water and logistics ceilings.",
       "strengths": [
-        "Underground protection from heat and exposure",
-        "Very remote desert location reduces population pressure"
+        "Existing dugout housing provides passive thermal protection and concealment",
+        "Remote position lowers uncontrolled inflow and reduces early-phase pressure"
       ],
       "weaknesses": [
-        "Water and supply logistics remain challenging",
-        "Sustainability constrained by harsh arid environment"
+        "Water security is the dominant long-horizon constraint in an arid interior",
+        "Food, fuel, and medical continuity still rely on brittle overland logistics"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Long-duration desert redoubt for disciplined, low-growth populations",
+      "failureMode": "Chronic water stress and supply attrition outlast defensive advantages"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use existing underground stock as a core shelter while aggressively expanding water capture, storage, and ration discipline",
+      "keyRisk": "Assuming underground comfort equals full autonomy in a water-scarce biome"
+    },
+    "realityCheck": "What kills you here is water exhaustion before security fails.",
+    "scoreNarrative": "Coober Pedy scores as a strong-mid base: defensibility and isolation are high, but sustainability—not walls—is the long-run limiter."
   },
   {
     "name": "North Head Gun Emplacements",
@@ -4520,25 +4535,40 @@
     "lat": -33.82,
     "long": 151.305,
     "scores": {
-      "overall": 6,
+      "overall": 4.8,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 3,
-        "isolation": 4,
+        "defensibility": 7.4,
+        "sustainability": 2.7,
+        "isolation": 3.1,
         "accessibility": 5
       }
     },
     "description": {
-      "summary": "Strong as a defensive outpost, but limited as a full survival base.",
+      "summary": "North Head works as a hard defensive shell, but urban proximity and tiny sustainment depth make it a poor long-term base.",
       "strengths": [
-        "Military-style fortification",
-        "Strategic positioning"
+        "Fortified tunnel geometry creates strong chokepoints for short defensive holds",
+        "High ground and coastal sightlines support surveillance and early warning"
       ],
       "weaknesses": [
-        "Limited capacity",
-        "Urban proximity"
+        "Near-zero self-sufficiency for food, water, and energy under prolonged disruption",
+        "Metro-area proximity guarantees sustained human pressure and attention"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-duration fallback strongpoint during evacuation or corridor control",
+      "failureMode": "Encirclement and depletion inside a site built to resist attack, not sustain life"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Hold briefly to stage movement to more sustainable regional locations",
+      "keyRisk": "Treating a bunker complex as a settlement rather than a temporary tactical position"
+    },
+    "realityCheck": "What kills you here is siege-driven depletion in an exposed urban basin.",
+    "scoreNarrative": "North Head lands below mid-tier: excellent local defensibility cannot offset very weak sustainability and low isolation."
   },
   {
     "name": "Auckland Port",
@@ -4549,25 +4579,40 @@
     "lat": -36.844,
     "long": 174.7622,
     "scores": {
-      "overall": 3,
+      "overall": 2.6,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 4,
-        "isolation": 2,
+        "defensibility": 2.6,
+        "sustainability": 3.1,
+        "isolation": 1.8,
         "accessibility": 9
       }
     },
     "description": {
-      "summary": "Strong on logistics and storage, but fundamentally too exposed and urban to work as a serious survival base.",
+      "summary": "Auckland Port is useful for fast salvage and maritime movement, but it collapses quickly as a static survival base.",
       "strengths": [
-        "Major port infrastructure and storage potential",
-        "Strong maritime access"
+        "Large logistics footprint can yield high short-window recovery value",
+        "Direct maritime access supports rapid redistribution and dispersal"
       ],
       "weaknesses": [
-        "High population exposure",
-        "Very difficult to defend effectively"
+        "Dense urban interface creates constant perimeter pressure",
+        "Complex infrastructure dependency fails fast without coordinated industrial support"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Time-limited extraction and transit node, not a residency site",
+      "failureMode": "Persistent exposure and infrastructure overload cause control collapse"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Conduct tightly planned salvage operations and depart before sustained convergence",
+      "keyRisk": "Confusing logistics abundance with defensible long-term survivability"
+    },
+    "realityCheck": "What kills you here is nonstop human pressure long before resources run out.",
+    "scoreNarrative": "Auckland Port remains low-tier because accessibility and assets do not compensate for severe isolation and defensibility deficits."
   },
   {
     "name": "Sydney Airport",
@@ -4578,25 +4623,40 @@
     "lat": -33.9399,
     "long": 151.1753,
     "scores": {
-      "overall": 2,
+      "overall": 1.5,
       "categories": {
-        "defensibility": 2,
-        "sustainability": 2,
-        "isolation": 1,
+        "defensibility": 1.7,
+        "sustainability": 1.6,
+        "isolation": 1.0,
         "accessibility": 9
       }
     },
     "description": {
-      "summary": "Excellent for transport, terrible for survival.",
+      "summary": "Sydney Airport is a movement asset only; as a survival base it is structurally non-viable.",
       "strengths": [
-        "Infrastructure scale",
-        "Logistics hub"
+        "Large transport infrastructure can support rapid evacuation windows",
+        "Fuel, equipment, and warehousing may offer brief salvage opportunities"
       ],
       "weaknesses": [
-        "Highly exposed",
-        "Impossible to secure"
+        "Extreme visibility and centrality make it a magnet for convergence",
+        "Open, expansive layout is effectively impossible to secure at sustainable staffing levels"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Short-duration transit corridor for relocation, never fixed occupation",
+      "failureMode": "Immediate overexposure and perimeter collapse at metropolitan scale"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Exploit brief mobility value with strict exit triggers and no static defense plan",
+      "keyRisk": "Attempting to hold a globally obvious transit hub as a settlement"
+    },
+    "realityCheck": "What kills you here is convergence overload within hours, not months.",
+    "scoreNarrative": "Sydney Airport is near-bottom by design: accessibility is maximal while every survivability pillar is critically weak."
   },
   {
     "name": "Glacier Plateau",
@@ -4607,25 +4667,40 @@
     "lat": -82.8628,
     "long": 135.0,
     "scores": {
-      "overall": 4,
+      "overall": 2.9,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 2,
-        "isolation": 9,
+        "defensibility": 5.8,
+        "sustainability": 1.3,
+        "isolation": 9.2,
         "accessibility": 1
       }
     },
     "description": {
-      "summary": "Defensible through terrain and isolation, but almost impossible to live in long term.",
+      "summary": "Glacier terrain provides exceptional separation and approach control, but almost no independent life-support capacity.",
       "strengths": [
-        "Hard to access",
-        "Low external threat"
+        "Terrain and weather create formidable natural barriers to intrusion",
+        "Extreme remoteness minimizes direct conflict pressure"
       ],
       "weaknesses": [
-        "No natural resources",
-        "Extreme climate"
+        "Food, fuel, and medical support are almost entirely imported or pre-staged",
+        "Exposure risk from cold, storms, and mobility loss compounds over time"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Limited-duration concealment or scientific-style outpost with heavy prepositioning",
+      "failureMode": "Life-support chain collapse in a resource-null environment"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use only as a low-traffic hide site paired with stronger production-capable hubs",
+      "keyRisk": "Mistaking low attacker probability for true long-term survivability"
+    },
+    "realityCheck": "What kills you here is exposure and supply failure, not attackers.",
+    "scoreNarrative": "Glacier scores poorly overall because elite isolation cannot compensate for near-zero sustainability."
   },
   {
     "name": "Ice Shelf Ridge",
@@ -4636,25 +4711,40 @@
     "lat": -75.0,
     "long": -100.0,
     "scores": {
-      "overall": 3,
+      "overall": 1.8,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 1,
+        "defensibility": 4.4,
+        "sustainability": 0.6,
         "isolation": 10,
         "accessibility": 1
       }
     },
     "description": {
-      "summary": "Extreme isolation with almost zero survivability.",
+      "summary": "Ice shelf positions maximize isolation but are among the least survivable environments for long-duration human settlement.",
       "strengths": [
-        "Near-total isolation",
-        "Minimal threat exposure"
+        "Near-total remoteness drastically reduces external human threat",
+        "Approach routes are limited and highly weather-constrained"
       ],
       "weaknesses": [
-        "Unstable environment",
-        "No resource base"
+        "Ice dynamics, crevasse risk, and weather volatility undermine site stability",
+        "There is effectively no local food, energy, or medical resilience base"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Do not use as a settlement base; emergency transit only",
+      "failureMode": "Environmental instability and total sustainment dependency"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Traverse only with preplanned extraction and redundant cold-weather logistics",
+      "keyRisk": "Assuming isolation alone can substitute for habitable infrastructure"
+    },
+    "realityCheck": "What kills you here is the environment itself before any adversary arrives.",
+    "scoreNarrative": "Ice Shelf is bottom-tier because the strongest possible isolation coincides with effectively nonexistent sustainability."
   },
   {
     "name": "Amundsen-Scott Station",
@@ -4665,25 +4755,40 @@
     "lat": -90.0,
     "long": 0.0,
     "scores": {
-      "overall": 5,
+      "overall": 4.4,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 3,
-        "isolation": 10,
+        "defensibility": 5.9,
+        "sustainability": 2.2,
+        "isolation": 10.0,
         "accessibility": 1
       }
     },
     "description": {
-      "summary": "Similar to the South Pole station, offering isolation and structure but lacking independent sustainability.",
+      "summary": "Amundsen-Scott offers engineered shelter in the most isolated location on Earth, but remains highly dependent on technical systems and resupply.",
       "strengths": [
-        "Highly isolated",
-        "Engineered for extreme conditions"
+        "Purpose-built polar infrastructure supports controlled habitation in extreme cold",
+        "Maximum geographic isolation sharply reduces direct external conflict risk"
       ],
       "weaknesses": [
-        "Supply dependent",
-        "Not self-sustaining long term"
+        "Long-horizon survival depends on fragile fuel, parts, and specialist maintenance chains",
+        "No local agricultural or broad material base for autonomous scaling"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Specialist outpost for small, disciplined teams with deep prepositioned support",
+      "failureMode": "Technical sustainment failure in a no-margin environment"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Maintain minimal occupancy with strict redundancy for power, heat, and medical systems",
+      "keyRisk": "Overestimating station engineering as proof of autonomous long-term survivability"
+    },
+    "realityCheck": "What kills you here is systems failure in an environment that forgives nothing.",
+    "scoreNarrative": "Amundsen sits lower-mid: isolation is unmatched, but sustainability constraints dominate outcome quality."
   },
   {
     "name": "McMurdo Station",
@@ -4694,25 +4799,40 @@
     "lat": -77.8419,
     "long": 166.6863,
     "scores": {
-      "overall": 6,
+      "overall": 5.2,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 5,
-        "isolation": 9,
+        "defensibility": 4.9,
+        "sustainability": 3.8,
+        "isolation": 8.8,
         "accessibility": 3
       }
     },
     "description": {
-      "summary": "Largest Antarctic base with real infrastructure, but still dependent on supply chains.",
+      "summary": "McMurdo has the deepest Antarctic infrastructure footprint, but its long-term viability is still constrained by import-heavy technical dependency.",
       "strengths": [
-        "Established infrastructure",
-        "Relative operational capacity"
+        "Largest polar logistics platform offers greater repair and storage depth than most Antarctic sites",
+        "Operational redundancy is higher than smaller stations during early and mid phases"
       ],
       "weaknesses": [
-        "Supply dependent",
-        "Harsh environment limits autonomy"
+        "Core systems still rely on fuel, parts, and coordinated maritime/air throughput",
+        "Harsh climate and maintenance burden steadily erode autonomy under prolonged disruption"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Mid-duration polar hub with planned downshift and eventual relocation strategy",
+      "failureMode": "Infrastructure degradation after sustained logistics interruption"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Leverage scale for controlled operations while building external fallback options early",
+      "keyRisk": "Assuming bigger polar infrastructure equals indefinite independence"
+    },
+    "realityCheck": "What kills you here is supply-chain decay that turns complex infrastructure into dead weight.",
+    "scoreNarrative": "McMurdo is mid-tier: better than most polar sites on infrastructure depth, but still capped by sustainability fragility."
   },
   {
     "name": "Prudhoe Bay Oil Field",
@@ -4723,25 +4843,40 @@
     "lat": 70.255,
     "long": -148.337,
     "scores": {
-      "overall": 5,
+      "overall": 4.1,
       "categories": {
-        "defensibility": 4,
-        "sustainability": 4,
-        "isolation": 7,
+        "defensibility": 3.9,
+        "sustainability": 3.3,
+        "isolation": 6.9,
         "accessibility": 4
       }
     },
     "description": {
-      "summary": "Remote and industrial, offering some infrastructure but limited true survivability.",
+      "summary": "Prudhoe Bay provides remote industrial assets, but it is not configured as a resilient civilian survival ecosystem.",
       "strengths": [
-        "Remote location",
-        "Industrial capability"
+        "Arctic remoteness reduces casual influx and immediate crowd pressure",
+        "Industrial facilities offer short-window energy and equipment utility"
       ],
       "weaknesses": [
-        "Harsh conditions",
-        "Limited long-term viability"
+        "Extreme climate and hazard profile create persistent life-support strain",
+        "Site value depends on complex operations that degrade quickly without specialist labor and supply"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Temporary resource extraction and staging node supporting better settlement sites",
+      "failureMode": "Operational complexity and Arctic exposure outpace maintainable capability"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Strip high-value resources fast, then transition to lower-complexity habitation zones",
+      "keyRisk": "Treating an oilfield operations complex as a durable survival community"
+    },
+    "realityCheck": "What kills you here is Arctic systems failure after industrial support thins out.",
+    "scoreNarrative": "Prudhoe Bay stays low-mid: remoteness helps, but sustainability and defensibility remain too weak for durable occupation."
   },
   {
     "name": "Murmansk Icebreaker Port",
