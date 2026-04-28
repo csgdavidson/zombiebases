@@ -2,7 +2,6 @@ const DATA_URL = './data/bases-index.json';
 const STATS_URL = './data/base-stats.json';
 const RANKINGS_URL = './data/rankings.json';
 const DISCOVERY_URL = './data/discovery.json';
-const INTERPRETATIONS_URL = './data/interpretations.json';
 
 const LABELS = {
   type: {
@@ -67,15 +66,10 @@ const elements = {
   scoreSection: document.getElementById('score-section'),
   scoreEmpty: document.getElementById('score-empty'),
   scoreOverall: document.getElementById('base-score-overall'),
+  scoreBadges: document.getElementById('base-score-badges'),
+  scoreSummary: document.getElementById('base-score-summary'),
   scoreList: document.getElementById('base-score-list'),
-  scoreStrengths: document.getElementById('base-score-strengths'),
-  scoreWeaknesses: document.getElementById('base-score-weaknesses'),
-  scoreMeaningPanel: document.getElementById('score-meaning-panel'),
-  scoreBandLabel: document.getElementById('base-score-band-label'),
-  scoreBandDescription: document.getElementById('base-score-band-description'),
-  archetypeLabel: document.getElementById('base-archetype-label'),
-  archetypeDescription: document.getElementById('base-archetype-description'),
-  scoreShapeSummary: document.getElementById('base-score-shape-summary'),
+  scoreInterpretation: document.getElementById('base-score-interpretation'),
   rankingSection: document.getElementById('ranking-section'),
   rankingList: document.getElementById('ranking-list'),
   comparisonSection: document.getElementById('comparison-section'),
@@ -98,9 +92,7 @@ const elements = {
   keyRiskRow: document.getElementById('base-key-risk-row'),
   keyRiskText: document.getElementById('base-key-risk'),
   realityCheckSection: document.getElementById('reality-check-section'),
-  realityCheckText: document.getElementById('base-reality-check'),
-  scoreNarrativeSection: document.getElementById('score-narrative-section'),
-  scoreNarrativeText: document.getElementById('base-score-narrative')
+  realityCheckText: document.getElementById('base-reality-check')
 };
 
 const slugHelper = window.baseSlugHelper;
@@ -157,13 +149,11 @@ function getSummary(base) {
 
 function getStructuredDescription(base) {
   const summary = getSummary(base) || getDescription(base);
-  const analysis = getScoreNarrative(base);
   const strengths = getNonEmptyStringArray(base?.strengths ?? base?.description?.strengths);
   const weaknesses = getNonEmptyStringArray(base?.weaknesses ?? base?.description?.weaknesses);
 
   return {
     summary,
-    analysis,
     strengths,
     weaknesses
   };
@@ -329,9 +319,11 @@ function renderSummary(base) {
 function renderDescription(base) {
   const description = getStructuredDescription(base);
   if (elements.descriptionAnalysis) {
-    const analysis = isNonEmptyString(description.analysis) ? description.analysis : '';
-    elements.descriptionAnalysis.hidden = !analysis;
-    elements.descriptionAnalysis.textContent = analysis;
+    const sentence = isNonEmptyString(description.summary)
+      ? `${description.summary.trim().split(/(?<=[.!?])\s+/)[0]}`
+      : '';
+    elements.descriptionAnalysis.hidden = !sentence;
+    elements.descriptionAnalysis.textContent = sentence;
   }
   elements.descriptionStrengths.textContent = description.strengths.length
     ? description.strengths.join(' • ')
@@ -357,52 +349,7 @@ function renderScoreBreakdown(scoreObject) {
   });
 }
 
-function getInterpretationRecord(base, interpretations) {
-  const items = interpretations?.interpretations;
-  if (!Array.isArray(items)) {
-    return null;
-  }
-
-  return items.find((item) => item?.slug === base.slug) ?? null;
-}
-
-function renderScoreMeaning(base, interpretations) {
-  if (!elements.scoreMeaningPanel || !elements.scoreBandLabel || !elements.scoreBandDescription || !elements.archetypeLabel || !elements.archetypeDescription || !elements.scoreShapeSummary) {
-    return;
-  }
-
-  const interpretation = getInterpretationRecord(base, interpretations);
-  if (!interpretation) {
-    elements.scoreMeaningPanel.hidden = true;
-    return;
-  }
-
-  const bandLabel = isNonEmptyString(interpretation.scoreBandLabel) ? interpretation.scoreBandLabel.trim() : '';
-  const bandDescription = isNonEmptyString(interpretation.scoreBandDescription) ? interpretation.scoreBandDescription.trim() : '';
-  const archetypeLabel = isNonEmptyString(interpretation.archetypeLabel) ? interpretation.archetypeLabel.trim() : '';
-  const archetypeDescription = isNonEmptyString(interpretation.archetypeDescription) ? interpretation.archetypeDescription.trim() : '';
-  const scoreShapeSummary = isNonEmptyString(interpretation.scoreShapeSummary) ? interpretation.scoreShapeSummary.trim() : '';
-
-  const hasContent = Boolean(bandLabel || bandDescription || archetypeLabel || archetypeDescription || scoreShapeSummary);
-  elements.scoreMeaningPanel.hidden = !hasContent;
-  if (!hasContent) {
-    return;
-  }
-
-  elements.scoreBandLabel.textContent = bandLabel;
-  elements.scoreBandDescription.textContent = bandDescription;
-  elements.archetypeLabel.textContent = archetypeLabel;
-  elements.archetypeDescription.textContent = archetypeDescription;
-  elements.scoreShapeSummary.textContent = scoreShapeSummary;
-
-  if (isNonEmptyString(interpretation.scoreBandClass)) {
-    elements.scoreMeaningPanel.dataset.bandClass = interpretation.scoreBandClass.trim();
-  } else {
-    delete elements.scoreMeaningPanel.dataset.bandClass;
-  }
-}
-
-function renderStrengthsAndWeaknesses(scoreObject) {
+function getStrengthWeakness(scoreObject) {
   const rankedScores = Object.entries(scoreObject)
     .filter(([key, value]) => SCORE_LABELS[key] && isValidScoreValue(value))
     .sort((a, b) => b[1] - a[1]);
@@ -418,16 +365,108 @@ function renderStrengthsAndWeaknesses(scoreObject) {
   const bottomCandidates = remainingBelowEight.length >= 2
     ? remainingBelowEight.slice(0, 2)
     : remainingLowestFirst.slice(0, 2);
-  const bottomTwo = bottomCandidates.map(([key, value]) => `${SCORE_LABELS[key]} (${value.toFixed(1)})`);
+  return {
+    topTwo,
+    topEntry: topTwoEntries[0] ?? null,
+    weakEntry: bottomCandidates[0] ?? null
+  };
+}
 
-  elements.scoreStrengths.parentElement.hidden = !topTwo.length;
-  elements.scoreWeaknesses.parentElement.hidden = !bottomTwo.length;
-  if (topTwo.length) {
-    elements.scoreStrengths.textContent = topTwo.join(' • ');
+function getTierBadge(overall) {
+  if (!isValidScoreValue(overall)) {
+    return null;
   }
-  if (bottomTwo.length) {
-    elements.scoreWeaknesses.textContent = bottomTwo.join(' • ');
+  if (overall >= 9) return 'Elite';
+  if (overall >= 8) return 'Exceptional';
+  if (overall >= 7) return 'Strong';
+  if (overall >= 6) return 'Viable';
+  if (overall >= 4) return 'Fragile';
+  return 'Non-viable';
+}
+
+function getIdentityBadge(scoreObject, overall) {
+  const defensibility = scoreObject?.defensibility ?? 0;
+  const isolation = scoreObject?.isolation ?? 0;
+  const sustainability = scoreObject?.sustainability ?? 0;
+  const values = [defensibility, isolation, sustainability].filter(isValidScoreValue);
+  if (overall < 4 || values.every((value) => value < 4)) {
+    return 'Trap';
   }
+  if (sustainability < 5) {
+    return 'Fragile';
+  }
+  if (isolation >= 8 && sustainability >= 8) {
+    return 'Long-term';
+  }
+  if (defensibility >= 8 && isolation >= 8) {
+    return 'Defensive';
+  }
+  const spread = Math.max(...values) - Math.min(...values);
+  if (spread <= 1.25) {
+    return 'Balanced';
+  }
+  return 'Balanced';
+}
+
+function getTraitBadges(scoreObject) {
+  const badges = [];
+  if (scoreObject?.defensibility >= 8) badges.push('High defence');
+  if (scoreObject?.isolation >= 8) badges.push('High isolation');
+  if (scoreObject?.sustainability >= 8) badges.push('High sustainability');
+  return badges.slice(0, 2);
+}
+
+function renderScoreBadges(scoreObject, overall) {
+  if (!elements.scoreBadges) {
+    return;
+  }
+
+  elements.scoreBadges.innerHTML = '';
+  const tier = getTierBadge(overall);
+  const identity = getIdentityBadge(scoreObject, overall);
+  const traits = getTraitBadges(scoreObject);
+  const badges = [
+    tier ? { text: tier, tone: 'tier' } : null,
+    identity ? { text: identity, tone: 'identity' } : null,
+    ...traits.map((trait) => ({ text: trait, tone: 'trait' }))
+  ].filter(Boolean).slice(0, 4);
+
+  badges.forEach((badge) => {
+    const pill = document.createElement('span');
+    pill.className = `badge badge-${badge.tone}`;
+    pill.textContent = badge.text;
+    elements.scoreBadges.appendChild(pill);
+  });
+
+  elements.scoreBadges.hidden = badges.length === 0;
+}
+
+function renderScoreSummary(scoreObject) {
+  if (!elements.scoreSummary) {
+    return;
+  }
+
+  const rankedScores = Object.entries(scoreObject)
+    .filter(([key, value]) => SCORE_LABELS[key] && isValidScoreValue(value))
+    .sort((a, b) => b[1] - a[1]);
+  const topTwo = rankedScores.slice(0, 2).map(([key]) => SCORE_LABELS[key]);
+  const weakest = rankedScores.length ? SCORE_LABELS[rankedScores[rankedScores.length - 1][0]] : '';
+  const line = topTwo.length
+    ? `Top: ${topTwo.join(' • ')}\nWeakest: ${weakest}`
+    : '';
+  elements.scoreSummary.textContent = line;
+  elements.scoreSummary.hidden = !line;
+}
+
+function renderScoreInterpretation(scoreObject) {
+  if (!elements.scoreInterpretation) {
+    return;
+  }
+  const strengths = getStrengthWeakness(scoreObject);
+  const dominant = strengths.topEntry ? `${SCORE_LABELS[strengths.topEntry[0]].toLowerCase()} (${strengths.topEntry[1].toFixed(1)})` : 'core strengths';
+  const constraint = strengths.weakEntry ? `${SCORE_LABELS[strengths.weakEntry[0]].toLowerCase()} (${strengths.weakEntry[1].toFixed(1)})` : 'exposure';
+  elements.scoreInterpretation.textContent = `Built around ${dominant}, with ${constraint} as the key constraint.`;
+  elements.scoreInterpretation.hidden = false;
 }
 
 function getVerdict(base) {
@@ -454,10 +493,6 @@ function getUseCaseAndRisk(base) {
 
 function getRealityCheck(base) {
   return base?.realityCheck ?? null;
-}
-
-function getScoreNarrative(base) {
-  return base?.scoreNarrative ?? null;
 }
 
 function renderVerdict(base) {
@@ -516,7 +551,9 @@ function renderUseCaseAndRisk(base) {
 
 function renderRealityCheck(base) {
   const realityCheck = getRealityCheck(base);
-  const content = isNonEmptyString(realityCheck) ? realityCheck : '';
+  const content = isNonEmptyString(realityCheck)
+    ? realityCheck.trim().split(/(?<=[.!?])\s+/)[0]
+    : '';
 
   elements.realityCheckSection.hidden = !content;
   if (!content) {
@@ -524,18 +561,6 @@ function renderRealityCheck(base) {
   }
 
   elements.realityCheckText.textContent = content;
-}
-
-function renderScoreNarrative(base) {
-  const scoreNarrative = getScoreNarrative(base);
-  const content = isNonEmptyString(scoreNarrative) ? scoreNarrative : '';
-
-  elements.scoreNarrativeSection.hidden = !content;
-  if (!content) {
-    return;
-  }
-
-  elements.scoreNarrativeText.textContent = content;
 }
 
 function renderScore(base) {
@@ -547,9 +572,10 @@ function renderScore(base) {
   if (!scoreObject && overall === null) {
     elements.scoreEmpty.hidden = false;
     elements.scoreOverall.hidden = true;
+    elements.scoreBadges.hidden = true;
+    elements.scoreSummary.hidden = true;
     elements.scoreList.hidden = true;
-    elements.scoreStrengths.parentElement.hidden = true;
-    elements.scoreWeaknesses.parentElement.hidden = true;
+    elements.scoreInterpretation.hidden = true;
     return;
   }
 
@@ -561,13 +587,16 @@ function renderScore(base) {
 
   elements.scoreList.hidden = !scoreObject;
   if (!scoreObject) {
-    elements.scoreStrengths.parentElement.hidden = true;
-    elements.scoreWeaknesses.parentElement.hidden = true;
+    elements.scoreBadges.hidden = true;
+    elements.scoreSummary.hidden = true;
+    elements.scoreInterpretation.hidden = true;
     return;
   }
 
   renderScoreBreakdown(scoreObject);
-  renderStrengthsAndWeaknesses(scoreObject);
+  renderScoreBadges(scoreObject, overall);
+  renderScoreSummary(scoreObject);
+  renderScoreInterpretation(scoreObject);
 }
 
 function classifyComparison(value, average) {
@@ -662,10 +691,7 @@ function renderComparisonInsight(comparisons) {
   }
 
   const overallEntry = comparisons.find((entry) => entry.label.includes('Against all bases'));
-  const contextEntries = comparisons.filter((entry) => entry.label.startsWith('Against '));
   const traitEntries = comparisons.filter((entry) => !entry.label.startsWith('Against '));
-  const strongestContext = contextEntries.reduce((best, current) => (!best || current.difference > best.difference ? current : best), null);
-  const weakestContext = contextEntries.reduce((worst, current) => (!worst || current.difference < worst.difference ? current : worst), null);
   const weakestTrait = traitEntries.reduce((worst, current) => (!worst || current.difference < worst.difference ? current : worst), null);
 
   if (!overallEntry) {
@@ -674,24 +700,9 @@ function renderComparisonInsight(comparisons) {
     return;
   }
 
-  const contextPhrase = strongestContext && strongestContext.difference >= 0
-    ? `Performs best relative to ${strongestContext.label.replace('Against ', '')}`
-    : weakestContext
-      ? `Performs weakest relative to ${weakestContext.label.replace('Against ', '')}`
-      : null;
-
-  const traitPhrase = weakestTrait
-    ? `weakest relative trait is ${weakestTrait.label.toLowerCase()}`
-    : null;
-
-  let sentence = `${overallEntry.comparison.label} overall.`;
-  if (contextPhrase && traitPhrase) {
-    sentence = `${sentence} ${contextPhrase}; ${traitPhrase}.`;
-  } else if (contextPhrase) {
-    sentence = `${sentence} ${contextPhrase}.`;
-  } else if (traitPhrase) {
-    sentence = `${sentence} ${traitPhrase}.`;
-  }
+  const sentence = weakestTrait
+    ? `${overallEntry.comparison.label} overall • Weakest: ${weakestTrait.label}`
+    : `${overallEntry.comparison.label} overall`;
   elements.comparisonInsight.hidden = false;
   elements.comparisonInsight.textContent = sentence;
 }
@@ -855,11 +866,20 @@ function renderSimilarBases(base, discovery, params) {
     scoreMeta.className = 'base-meta';
     scoreMeta.textContent = `${item.overall.toFixed(1)}/10 • ${labelFor('region', item.region)} • ${labelFor('type', item.type)}`;
 
-    const reason = document.createElement('p');
-    reason.className = 'base-summary';
-    reason.textContent = item.reason;
+    const tags = deriveSimilarTags(item);
+    const tagRow = document.createElement('p');
+    tagRow.className = 'badge-row';
+    tags.forEach((tag) => {
+      const badge = document.createElement('span');
+      badge.className = 'badge badge-trait';
+      badge.textContent = tag;
+      tagRow.appendChild(badge);
+    });
 
-    li.append(link, scoreMeta, reason);
+    li.append(link, scoreMeta);
+    if (tags.length) {
+      li.appendChild(tagRow);
+    }
     elements.similarList.appendChild(li);
   });
 
@@ -876,7 +896,20 @@ function renderSimilarBases(base, discovery, params) {
   elements.similarSection.hidden = false;
 }
 
-function showBase(base, bases, params, stats, rankings, discovery, interpretations) {
+function deriveSimilarTags(item) {
+  const tags = [];
+  const reason = isNonEmptyString(item?.reason) ? item.reason.toLowerCase() : '';
+
+  if (reason.includes('protection') || reason.includes('defen')) tags.push('High defence');
+  if (reason.includes('sustainability')) tags.push('Lower sustainability');
+  if (reason.includes('isolat') || reason.includes('remote')) tags.push('Isolation-led');
+  if (reason.includes('balanced') || reason.includes('trade-off')) tags.push('Balanced');
+
+  if (!tags.length) tags.push('Balanced');
+  return tags.slice(0, 2);
+}
+
+function showBase(base, bases, params, stats, rankings, discovery) {
   elements.name.textContent = base.name;
   applyDetailMetadata(base);
   elements.meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
@@ -886,14 +919,12 @@ function showBase(base, bases, params, stats, rankings, discovery, interpretatio
   renderVerdict(base);
   renderDescription(base);
   renderScore(base);
-  renderScoreMeaning(base, interpretations);
   renderRankingPosition(base, rankings);
   renderComparison(base, stats);
   renderSimilarBases(base, discovery, params);
   renderSurvivalProfile(base);
   renderUseCaseAndRisk(base);
   renderRealityCheck(base);
-  renderScoreNarrative(base);
   elements.status.textContent = '';
   elements.notFound.hidden = true;
   elements.detail.hidden = false;
@@ -913,12 +944,11 @@ async function loadBase() {
   elements.status.textContent = 'Loading base details...';
 
   try {
-    const [basesResponse, statsResponse, rankingsResponse, discoveryResponse, interpretationsResponse] = await Promise.all([
+    const [basesResponse, statsResponse, rankingsResponse, discoveryResponse] = await Promise.all([
       fetch(DATA_URL),
       fetch(STATS_URL),
       fetch(RANKINGS_URL),
-      fetch(DISCOVERY_URL),
-      fetch(INTERPRETATIONS_URL)
+      fetch(DISCOVERY_URL)
     ]);
     if (!basesResponse.ok) {
       throw new Error(`Failed to load bases data (${basesResponse.status})`);
@@ -928,7 +958,6 @@ async function loadBase() {
     const stats = statsResponse.ok ? await statsResponse.json() : null;
     const rankings = rankingsResponse.ok ? await rankingsResponse.json() : null;
     const discovery = discoveryResponse.ok ? await discoveryResponse.json() : null;
-    const interpretations = interpretationsResponse.ok ? await interpretationsResponse.json() : null;
     const matchedBase = slugHelper?.resolveBaseBySlug
       ? slugHelper.resolveBaseBySlug(bases, slug)
       : bases.find((base) => base.slug === slug);
@@ -938,7 +967,7 @@ async function loadBase() {
       return;
     }
 
-    showBase(matchedBase, bases, params, stats, rankings, discovery, interpretations);
+    showBase(matchedBase, bases, params, stats, rankings, discovery);
   } catch (error) {
     console.error(error);
     showNotFound();

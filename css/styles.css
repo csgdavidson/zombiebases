@@ -249,7 +249,7 @@ input[type="search"] {
 
 .base-page {
   display: grid;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .detail-hero {
@@ -279,7 +279,7 @@ input[type="search"] {
   border: 1px solid var(--border);
   background: var(--surface);
   border-radius: 0.75rem;
-  padding: 1rem;
+  padding: 1rem 1rem 1.1rem;
 }
 
 .content-section h3 {
@@ -287,7 +287,7 @@ input[type="search"] {
 }
 
 .content-section p {
-  margin: 0;
+  margin: 0.35rem 0 0;
 }
 
 .hero-image {
@@ -444,7 +444,7 @@ input[type="search"] {
 
 .detail-overall-score {
   margin: 0 0 0.6rem;
-  font-size: 1.35rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #0c4a6e;
 }
@@ -457,52 +457,48 @@ input[type="search"] {
   gap: 0.3rem;
 }
 
+.badge-row {
+  margin-top: 0 !important;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 6px;
+  margin-top: 4px;
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.badge-tier {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.badge-identity {
+  background: #cbd5e1;
+  color: #0f172a;
+}
+
+.badge-trait {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
 .score-insight {
   margin-top: 0.65rem !important;
   color: var(--muted);
   font-size: 0.92rem;
+  white-space: pre-line;
 }
 
-.score-meaning-panel {
-  margin-top: 0.7rem;
-  padding-top: 0.65rem;
-  border-top: 1px solid var(--border);
-  display: grid;
-  gap: 0.55rem;
-}
-
-.score-meaning-block {
-  display: grid;
-  gap: 0.15rem;
-}
-
-.score-meaning-label {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.score-meaning-title {
-  margin: 0;
-  color: #0f172a;
-  font-size: 0.94rem;
-  font-weight: 700;
-}
-
-.score-meaning-copy {
-  margin: 0;
+.score-interpretation {
+  margin-top: 0.65rem !important;
   color: #334155;
   font-size: 0.9rem;
-}
-
-.score-meaning-shape {
-  margin: 0.1rem 0 0;
-  color: #334155;
-  font-size: 0.9rem;
-  font-style: italic;
 }
 
 .comparison-panel {
