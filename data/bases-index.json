@@ -3213,27 +3213,42 @@
     "region": "north_america",
     "country": "United States",
     "description": {
-      "summary": "Alcatraz is a classic island stronghold with natural separation and controlled access. It works well defensively, but long-term survival depends heavily on external supply and adaptation.",
+      "summary": "Alcatraz buys strong early security through water separation and choke-point access, but the decisive failure mode is supply starvation: once boat fuel, food inflow, and repair parts lapse, the island becomes a sealed deficit zone.",
       "strengths": [
-        "Strong island isolation reduces external threat",
-        "Highly controllable access points"
+        "Narrow landing options make approach and screening manageable",
+        "Existing hardened structures support layered internal fallback positions"
       ],
       "weaknesses": [
-        "Limited food and resource base",
-        "Long-term sustainability is constrained"
+        "Arable land and freshwater production are far below long-run demand",
+        "Marine resupply dependence creates a single logistical choke point"
       ]
     },
     "scores": {
-      "overall": 8,
+      "overall": 6.8,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 9,
-        "accessibility": 3
+        "defensibility": 8.4,
+        "sustainability": 3.8,
+        "isolation": 8.8,
+        "accessibility": 2.8
       }
     },
     "lat": 37.8267,
-    "long": -122.423
+    "long": -122.423,
+    "verdict": {
+      "bestUseCase": "Short-horizon quarantine stronghold for a disciplined, low-headcount group",
+      "failureMode": "Resupply collapse drives caloric and maintenance failure before perimeter breach"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Exploit strict access control for early stability while preparing an off-island transition plan",
+      "keyRisk": "Treating the island as permanent settlement instead of a time-limited holdout"
+    },
+    "realityCheck": "Without dependable desalination, fishing yield management, and marine logistics, endurance falls sharply after initial stockpiles.",
+    "scoreNarrative": "Alcatraz scores high in defensibility and isolation but is pulled under 7 by very low sustainability. The rating reflects a fortress that delays threats effectively yet fails when supply autonomy is tested."
   },
   {
     "name": "Fort Jefferson",
@@ -3244,25 +3259,40 @@
     "lat": 24.6285,
     "long": -82.8732,
     "scores": {
-      "overall": 8,
+      "overall": 6.6,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 5,
-        "isolation": 9,
-        "accessibility": 2
+        "defensibility": 9.0,
+        "sustainability": 3.4,
+        "isolation": 9.1,
+        "accessibility": 1.9
       }
     },
     "description": {
-      "summary": "A near-ideal island fortress combining isolation and strong defensive design. Sustainability remains the primary challenge.",
+      "summary": "Fort Jefferson is an exceptional sea-fortress with clear defensive geometry and extreme stand-off distance, but its dominant failure mode is water-energy fragility: if desalination and fuel chains degrade, habitability collapses quickly.",
       "strengths": [
-        "Exceptional defensive fortification",
-        "Strong island isolation"
+        "Massive masonry footprint enables deep defensive zoning",
+        "Remote ocean position suppresses casual encroachment and crowd pressure"
       ],
       "weaknesses": [
-        "Limited natural resources",
-        "Difficult to resupply or expand"
+        "No meaningful local agriculture to support medium population loads",
+        "Power and freshwater systems require parts, fuel, and specialist upkeep"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "High-security offshore bastion for short campaigns and controlled staging",
+      "failureMode": "Utility-system failure turns a fortress into an unlivable outpost"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use as a hard checkpoint and cache node, not as a permanent colony",
+      "keyRisk": "Overcommitting personnel to a site with no resilient water-energy base"
+    },
+    "realityCheck": "The fort can resist people better than it can resist infrastructure decay.",
+    "scoreNarrative": "The site earns elite defensibility and isolation scores, but sustainability is critically low, preventing a top overall tier. Its bottleneck is utilities, not security doctrine."
   },
   {
     "name": "Hutchinson Salt Storage Caverns",
@@ -3273,25 +3303,40 @@
     "lat": 38.0608,
     "long": -97.9298,
     "scores": {
-      "overall": 7,
+      "overall": 5.9,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 5,
-        "accessibility": 4
+        "defensibility": 7.6,
+        "sustainability": 4.2,
+        "isolation": 5.1,
+        "accessibility": 4.3
       }
     },
     "description": {
-      "summary": "Subterranean storage caverns provide strong protection and stability, though not originally designed for habitation.",
+      "summary": "Hutchinson salt caverns provide excellent blast/weather protection and concealment, yet the single dominant failure mode is ventilation-power dependency: lose airflow and pumping reliability, and the underground advantage becomes a liability.",
       "strengths": [
-        "Underground protection from external threats",
-        "Stable environmental conditions"
+        "Subsurface depth sharply reduces exposure to weather and direct assault",
+        "Large internal volume supports controlled storage and compartmentalization"
       ],
       "weaknesses": [
-        "Limited livability without modification",
-        "Sustainability depends on surface support"
+        "Life support depends on continuous ventilation, drainage, and power continuity",
+        "Food production and medical redundancy remain surface-dependent"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Protected cache-and-shelter complex paired with secure surface support zone",
+      "failureMode": "Ventilation or power disruption creates rapid habitability decline underground"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use caverns for protection and reserves while keeping core living systems topside",
+      "keyRisk": "Moving full-time habitation underground without redundant life-support engineering"
+    },
+    "realityCheck": "Underground shelter solves exposure risk, not metabolic needs; air, power, and water remain non-negotiable.",
+    "scoreNarrative": "Hutchinson grades as a defensive niche base: one strong category, two middling-to-weak categories. It misses 6+ because sustainment depends on fragile technical systems."
   },
   {
     "name": "Port Arthur Refinery",
@@ -3302,25 +3347,40 @@
     "lat": 29.8849,
     "long": -93.9399,
     "scores": {
-      "overall": 3,
+      "overall": 3.7,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 4,
-        "isolation": 2,
-        "accessibility": 7
+        "defensibility": 3.2,
+        "sustainability": 4.1,
+        "isolation": 1.8,
+        "accessibility": 7.1
       }
     },
     "description": {
-      "summary": "Industrial scale offers resource potential, but the site is far too exposed and system-dependent.",
+      "summary": "Port Arthur Refinery has immense industrial capacity, but its dominant failure mode is cascading industrial hazard: once maintenance and staffing quality drop, fire, toxic release, and perimeter chaos outpace any defensive benefit.",
       "strengths": [
-        "Large-scale industrial infrastructure",
-        "Resource potential"
+        "Large built footprint offers salvageable materials and short-term shelter pockets",
+        "Fuel and mechanical assets can be valuable during very early disruption"
       ],
       "weaknesses": [
-        "Highly exposed location",
-        "Dependent on complex systems"
+        "Dense hazard profile demands expert operations and continuous safety controls",
+        "Low isolation in a contested corridor makes sustained defense impractical"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Rapid scavenging and transient operations with strict time limits",
+      "failureMode": "Safety-system degradation triggers compounding industrial incidents"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Extract priority supplies quickly, then relocate to a lower-risk base",
+      "keyRisk": "Attempting static occupation inside a high-consequence industrial complex"
+    },
+    "realityCheck": "This is a resource site, not a survivable settlement; hazard management burden is too high.",
+    "scoreNarrative": "Port Arthur remains below 4 because isolation and defensibility are both poor in realistic collapse conditions. Utility value exists, but prolonged occupancy multiplies risk faster than resilience."
   },
   {
     "name": "Area 51",
@@ -3331,25 +3391,40 @@
     "lat": 37.235,
     "long": -115.8111,
     "scores": {
-      "overall": 7,
+      "overall": 6.9,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 6,
-        "isolation": 8,
-        "accessibility": 2
+        "defensibility": 7.8,
+        "sustainability": 5.3,
+        "isolation": 8.2,
+        "accessibility": 2.1
       }
     },
     "description": {
-      "summary": "Remote, controlled, and infrastructure-rich, Area 51 is a strong candidate for survival. Its secrecy works in its favour, but long-term viability depends on what remains operational.",
+      "summary": "Area 51 combines remoteness, controlled approaches, and hardened infrastructure, but its dominant failure mode is systems complexity debt: without specialized maintenance pipelines, high-tech capabilities decay into unusable overhead.",
       "strengths": [
-        "Extreme remoteness limits population pressure",
-        "Existing infrastructure and controlled access"
+        "Large exclusion distance reduces uncontrolled contact and opportunistic approach",
+        "Layered security design supports screening, zoning, and response depth"
       ],
       "weaknesses": [
-        "Unknown reliance on complex systems",
-        "Potential strategic target"
+        "Mission-critical systems likely rely on specialist parts and technical labor",
+        "Desert constraints limit local food-water autonomy without major adaptation"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Command-and-control enclave during early-to-mid disruption phases",
+      "failureMode": "Technical sustainment backlog erodes core utilities and operational readiness"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Prioritize low-tech, maintainable subsystems and shrink footprint over time",
+      "keyRisk": "Trying to preserve full peacetime capability with collapsing supply chains"
+    },
+    "realityCheck": "Remote security helps, but spare parts, water strategy, and maintainable power architecture decide endurance.",
+    "scoreNarrative": "Area 51 sits just under 7: strong defensibility and isolation are offset by only moderate sustainability. The rating assumes partial downshifting from complex systems to simpler, repairable operations."
   },
   {
     "name": "Guantanamo Bay",
@@ -3360,25 +3435,40 @@
     "lat": 19.9065,
     "long": -75.2071,
     "scores": {
-      "overall": 7,
+      "overall": 6.1,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 6,
-        "isolation": 6,
-        "accessibility": 4
+        "defensibility": 7.4,
+        "sustainability": 4.8,
+        "isolation": 5.9,
+        "accessibility": 3.7
       }
     },
     "description": {
-      "summary": "A controlled military compound with strong defensive capabilities and infrastructure, though still dependent on external systems.",
+      "summary": "Guantanamo offers strong perimeter control and organized facilities, yet the dominant failure mode is geopolitical encirclement: prolonged dependence on maritime logistics and contested sovereignty can choke continuity even before direct breach.",
       "strengths": [
-        "Strong perimeter control and security",
-        "Established infrastructure"
+        "Military-grade security layout supports controlled movement and defense in depth",
+        "Existing base infrastructure enables structured short-term operations"
       ],
       "weaknesses": [
-        "Strategic visibility",
-        "Dependent on resupply and maintenance"
+        "Long-run viability depends on external fuel, medical, and food pipelines",
+        "Political visibility raises blockade and disruption risk over extended timelines"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Disciplined regional strongpoint for temporary stabilization missions",
+      "failureMode": "Logistics and political isolation degrade capability faster than local defenses"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use as a controlled node while building independent inland/partner alternatives",
+      "keyRisk": "Assuming secure governance status guarantees uninterrupted resupply"
+    },
+    "realityCheck": "Perimeters can hold; strategic freedom of movement may not.",
+    "scoreNarrative": "Guantanamo remains above 6 on defensive quality, but sustainability and strategic isolation constraints prevent higher ranking. Its endurance problem is external dependency under political friction."
   },
   {
     "name": "Kodiak Island",
@@ -3389,25 +3479,40 @@
     "lat": 57.79,
     "long": -152.4072,
     "scores": {
-      "overall": 8,
+      "overall": 7.2,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 7,
-        "isolation": 9,
-        "accessibility": 2
+        "defensibility": 6.9,
+        "sustainability": 6.6,
+        "isolation": 8.7,
+        "accessibility": 2.4
       }
     },
     "description": {
-      "summary": "A strong island candidate combining isolation with real natural resources. Harsh conditions are both a strength and a weakness.",
+      "summary": "Kodiak is a high-isolation island with credible wild-resource potential, but its dominant failure mode is climate-logistics attrition: severe weather and seasonal bottlenecks steadily erode throughput, maintenance, and medical resilience.",
       "strengths": [
-        "Excellent isolation from mainland threats",
-        "Strong natural resource base"
+        "Distance from major population centers lowers sustained human pressure",
+        "Marine ecosystems and land area offer diversified subsistence options if managed"
       ],
       "weaknesses": [
-        "Harsh climate and environment",
-        "Difficult logistics and access"
+        "Storm cycles and winter constraints repeatedly disrupt transport and repairs",
+        "Healthcare and specialized equipment continuity are difficult at high remoteness"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Long-horizon island community for small, weather-adapted populations",
+      "failureMode": "Repeated weather-driven logistics gaps compound into infrastructure decline"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Build redundant cold-climate stores, marine transport options, and local fabrication",
+      "keyRisk": "Underestimating cumulative maintenance debt from extreme weather exposure"
+    },
+    "realityCheck": "Kodiak can work long-term, but only with disciplined winterization and realistic population limits.",
+    "scoreNarrative": "Kodiak clears 7 through top-tier isolation and above-average sustainability for a remote island. Defensibility is solid rather than elite, and long-run success depends on managing weather-driven attrition."
   },
   {
     "name": "Vancouver Island",
@@ -3418,25 +3523,40 @@
     "lat": 49.65,
     "long": -125.45,
     "scores": {
-      "overall": 8,
+      "overall": 6.7,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 8,
-        "isolation": 7,
-        "accessibility": 5
+        "defensibility": 6.4,
+        "sustainability": 7.3,
+        "isolation": 6.2,
+        "accessibility": 5.2
       }
     },
     "description": {
-      "summary": "One of the best balanced island options, combining livability, resources, and defensibility.",
+      "summary": "Vancouver Island is one of the most balanced large-island options, but its dominant failure mode is population-interface pressure: connected urban corridors and ferry chokepoints can overwhelm otherwise strong local resources.",
       "strengths": [
-        "Strong natural resources and sustainability",
-        "Island separation improves security"
+        "Robust freshwater, timber, and agricultural zones support multi-year habitation",
+        "Island geography provides selective choke points for movement control"
       ],
       "weaknesses": [
-        "Not fully isolated",
-        "Population presence in some areas"
+        "Large resident population and mainland linkage increase conflict and demand pressure",
+        "Complex grid and transport interdependence complicate rapid decentralization"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Regional self-reliance zone anchored in lower-density subregions",
+      "failureMode": "Infrastructure and migration pressure in populated corridors outruns governance capacity"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Prioritize rural nodes, food belts, and corridor control over urban holdout strategy",
+      "keyRisk": "Treating the whole island as equally defensible despite heavy population concentration"
+    },
+    "realityCheck": "Resource depth is real, but social load management is the deciding variable.",
+    "scoreNarrative": "Vancouver Island remains high-mid tier by combining strong sustainability with decent defensibility. It stays below 7 because isolation is only moderate once population and transport realities are included."
   },
   {
     "name": "CN Tower",
@@ -3447,25 +3567,40 @@
     "lat": 43.6426,
     "long": -79.3871,
     "scores": {
-      "overall": 2,
+      "overall": 1.9,
       "categories": {
-        "defensibility": 2,
-        "sustainability": 2,
-        "isolation": 1,
-        "accessibility": 8
+        "defensibility": 2.4,
+        "sustainability": 1.2,
+        "isolation": 1.0,
+        "accessibility": 8.4
       }
     },
     "description": {
-      "summary": "A vertical landmark in a dense urban centre, offering almost no realistic survival value beyond visibility.",
+      "summary": "The CN Tower has surveillance value but fails as a survival base; its dominant failure mode is vertical entrapment: limited exits, no resource base, and dense urban surround turn height into a dead end.",
       "strengths": [
-        "High vantage point for observation",
-        "Large internal structure"
+        "Exceptional line-of-sight for short-duration observation and signaling",
+        "Hardened concrete core offers brief shelter against limited threats"
       ],
       "weaknesses": [
-        "Located in a dense urban population centre",
-        "Impossible to defend or sustain"
+        "No realistic food, water, or sanitation autonomy for sustained occupancy",
+        "Urban center exposure and constrained egress create severe entrapment risk"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Temporary reconnaissance perch supporting evacuation timing",
+      "failureMode": "Exit denial and supply exhaustion trap occupants in a nonviable vertical site"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Failing"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Use briefly for observation only, then exfiltrate to viable ground base",
+      "keyRisk": "Confusing visibility advantage with actual survivability"
+    },
+    "realityCheck": "Tall structure does not equal defensible habitat; sustainment is effectively zero.",
+    "scoreNarrative": "CN Tower is sub-2 overall because all core survival categories are weak except access. It is an observation asset, not a defensible or sustainable base."
   },
   {
     "name": "Cape Hatteras Lighthouse",
