@@ -49,20 +49,21 @@ const elements = {
   notFound: document.getElementById('not-found'),
   name: document.getElementById('base-name'),
   summaryLead: document.getElementById('base-summary-lead'),
-  meta: document.getElementById('base-meta'),
+  heroStrengthsRow: document.getElementById('base-hero-strengths-row'),
+  heroStrengths: document.getElementById('base-hero-strengths'),
+  heroWeaknessesRow: document.getElementById('base-hero-weaknesses-row'),
+  heroWeaknesses: document.getElementById('base-hero-weaknesses'),
   metaRow: document.getElementById('base-meta-row'),
   backLink: document.getElementById('back-link'),
   heroSection: document.getElementById('hero-section'),
   heroImage: document.getElementById('base-hero-image'),
-  descriptionSection: document.getElementById('description-section'),
-  descriptionStrengths: document.getElementById('base-description-strengths'),
-  descriptionWeaknesses: document.getElementById('base-description-weaknesses'),
-  descriptionAnalysis: document.getElementById('base-description-analysis'),
   verdictSection: document.getElementById('verdict-section'),
   verdictBestUseCaseRow: document.getElementById('base-verdict-best-use-case-row'),
   verdictBestUseCase: document.getElementById('base-verdict-best-use-case'),
   verdictFailureModeRow: document.getElementById('base-verdict-failure-mode-row'),
   verdictFailureMode: document.getElementById('base-verdict-failure-mode'),
+  verdictKeyRiskRow: document.getElementById('base-verdict-key-risk-row'),
+  verdictKeyRisk: document.getElementById('base-verdict-key-risk'),
   scoreSection: document.getElementById('score-section'),
   scoreEmpty: document.getElementById('score-empty'),
   scoreOverall: document.getElementById('base-score-overall'),
@@ -86,11 +87,6 @@ const elements = {
   survivalShortTerm: document.getElementById('base-survival-short-term'),
   survivalLongTermRow: document.getElementById('base-survival-long-term-row'),
   survivalLongTerm: document.getElementById('base-survival-long-term'),
-  useCaseRiskSection: document.getElementById('use-case-risk-section'),
-  useCaseRow: document.getElementById('base-use-case-row'),
-  useCaseText: document.getElementById('base-use-case'),
-  keyRiskRow: document.getElementById('base-key-risk-row'),
-  keyRiskText: document.getElementById('base-key-risk'),
   realityCheckSection: document.getElementById('reality-check-section'),
   realityCheckText: document.getElementById('base-reality-check')
 };
@@ -134,9 +130,9 @@ function firstAvailableValue(base, keys) {
 }
 
 function getDescription(base) {
-  const value = isNonEmptyString(base?.summary)
-    ? base.summary
-    : base?.description?.summary;
+  const value = isNonEmptyString(base?.description?.summary)
+    ? base.description.summary
+    : base?.summary;
   return isNonEmptyString(value) ? value : '';
 }
 
@@ -145,6 +141,30 @@ function getSummary(base) {
     ? base.summary
     : base?.description?.summary;
   return isNonEmptyString(value) ? value : '';
+}
+
+function buildIntroSummary(base) {
+  const summary = getSummary(base);
+  const description = getDescription(base);
+  if (!summary && !description) {
+    return '';
+  }
+  if (!summary) {
+    return description;
+  }
+  if (!description) {
+    return summary;
+  }
+  if (summary.trim().toLowerCase() === description.trim().toLowerCase()) {
+    return summary;
+  }
+
+  const summaryFirstSentence = summary.trim().split(/(?<=[.!?])\s+/)[0];
+  const descriptionFirstSentence = description.trim().split(/(?<=[.!?])\s+/)[0];
+  if (summaryFirstSentence.toLowerCase() === descriptionFirstSentence.toLowerCase()) {
+    return summaryFirstSentence;
+  }
+  return `${summaryFirstSentence} ${descriptionFirstSentence}`.trim();
 }
 
 function getStructuredDescription(base) {
@@ -305,7 +325,7 @@ function renderHero(base) {
 }
 
 function renderSummary(base) {
-  const summary = getSummary(base);
+  const summary = buildIntroSummary(base);
   const hasLead = Boolean(elements.summaryLead);
 
   if (!hasLead) {
@@ -316,21 +336,20 @@ function renderSummary(base) {
   elements.summaryLead.textContent = summary;
 }
 
-function renderDescription(base) {
+function renderHeroTraits(base) {
   const description = getStructuredDescription(base);
-  if (elements.descriptionAnalysis) {
-    const sentence = isNonEmptyString(description.summary)
-      ? `${description.summary.trim().split(/(?<=[.!?])\s+/)[0]}`
-      : '';
-    elements.descriptionAnalysis.hidden = !sentence;
-    elements.descriptionAnalysis.textContent = sentence;
-  }
-  elements.descriptionStrengths.textContent = description.strengths.length
+
+  const strengthsText = description.strengths.length
     ? description.strengths.join(' • ')
     : DESCRIPTION_FALLBACKS.strengths;
-  elements.descriptionWeaknesses.textContent = description.weaknesses.length
+  const weaknessesText = description.weaknesses.length
     ? description.weaknesses.join(' • ')
     : DESCRIPTION_FALLBACKS.weaknesses;
+
+  elements.heroStrengths.textContent = strengthsText;
+  elements.heroWeaknesses.textContent = weaknessesText;
+  elements.heroStrengthsRow.hidden = !strengthsText;
+  elements.heroWeaknessesRow.hidden = !weaknessesText;
 }
 
 function renderScoreBreakdown(scoreObject) {
@@ -497,19 +516,28 @@ function getRealityCheck(base) {
 
 function renderVerdict(base) {
   const verdict = getVerdict(base);
+  const useCaseAndRisk = getUseCaseAndRisk(base);
   const bestUseCase = isNonEmptyString(verdict.bestUseCase) ? verdict.bestUseCase : '';
   const failureMode = isNonEmptyString(verdict.failureMode) ? verdict.failureMode : '';
+  const fallbackBestUseCase = isNonEmptyString(useCaseAndRisk.bestUseCase) ? useCaseAndRisk.bestUseCase : '';
+  const bestUseCaseText = bestUseCase || fallbackBestUseCase;
+  const keyRisk = isNonEmptyString(useCaseAndRisk.keyRisk) ? useCaseAndRisk.keyRisk : '';
+  const failureModeNorm = failureMode.trim().toLowerCase();
+  const keyRiskNorm = keyRisk.trim().toLowerCase();
+  const dedupedKeyRisk = keyRiskNorm && keyRiskNorm !== failureModeNorm ? keyRisk : '';
 
-  const hasContent = Boolean(bestUseCase || failureMode);
+  const hasContent = Boolean(bestUseCaseText || failureMode || dedupedKeyRisk);
   elements.verdictSection.hidden = !hasContent;
   if (!hasContent) {
     return;
   }
 
-  elements.verdictBestUseCase.textContent = bestUseCase;
+  elements.verdictBestUseCase.textContent = bestUseCaseText;
   elements.verdictFailureMode.textContent = failureMode;
-  elements.verdictBestUseCaseRow.hidden = !bestUseCase;
+  elements.verdictKeyRisk.textContent = dedupedKeyRisk;
+  elements.verdictBestUseCaseRow.hidden = !bestUseCaseText;
   elements.verdictFailureModeRow.hidden = !failureMode;
+  elements.verdictKeyRiskRow.hidden = !dedupedKeyRisk;
 }
 
 function renderSurvivalProfile(base) {
@@ -530,23 +558,6 @@ function renderSurvivalProfile(base) {
   elements.survivalInitialRow.hidden = !initial;
   elements.survivalShortTermRow.hidden = !shortTerm;
   elements.survivalLongTermRow.hidden = !longTerm;
-}
-
-function renderUseCaseAndRisk(base) {
-  const useCaseAndRisk = getUseCaseAndRisk(base);
-  const bestUseCase = isNonEmptyString(useCaseAndRisk.bestUseCase) ? useCaseAndRisk.bestUseCase : '';
-  const keyRisk = isNonEmptyString(useCaseAndRisk.keyRisk) ? useCaseAndRisk.keyRisk : '';
-
-  const hasContent = Boolean(bestUseCase || keyRisk);
-  elements.useCaseRiskSection.hidden = !hasContent;
-  if (!hasContent) {
-    return;
-  }
-
-  elements.useCaseText.textContent = bestUseCase;
-  elements.keyRiskText.textContent = keyRisk;
-  elements.useCaseRow.hidden = !bestUseCase;
-  elements.keyRiskRow.hidden = !keyRisk;
 }
 
 function renderRealityCheck(base) {
@@ -912,18 +923,16 @@ function deriveSimilarTags(item) {
 function showBase(base, bases, params, stats, rankings, discovery) {
   elements.name.textContent = base.name;
   applyDetailMetadata(base);
-  elements.meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
   renderMetaRow(base);
   renderHero(base);
   renderSummary(base);
+  renderHeroTraits(base);
   renderVerdict(base);
-  renderDescription(base);
   renderScore(base);
   renderRankingPosition(base, rankings);
   renderComparison(base, stats);
   renderSimilarBases(base, discovery, params);
   renderSurvivalProfile(base);
-  renderUseCaseAndRisk(base);
   renderRealityCheck(base);
   elements.status.textContent = '';
   elements.notFound.hidden = true;
@@ -979,10 +988,9 @@ if (
   && elements.detail
   && elements.notFound
   && elements.name
-  && elements.meta
   && elements.backLink
-  && elements.descriptionStrengths
-  && elements.descriptionWeaknesses
+  && elements.heroStrengths
+  && elements.heroWeaknesses
 ) {
   loadBase();
 }
