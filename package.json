@@ -1,0 +1,8 @@
+{
+  "name": "zombiebases",
+  "private": true,
+  "scripts": {
+    "generate:discovery": "python3 scripts/generate-discovery.py",
+    "validate:discovery": "python3 scripts/validate-discovery.py"
+  }
+}
