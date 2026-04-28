@@ -38,12 +38,6 @@ const SCORE_LABELS = {
   sustainability: 'Sustainability'
 };
 
-const DESCRIPTION_FALLBACKS = {
-  summary: 'Summary coming soon.',
-  strengths: 'Strengths not available yet.',
-  weaknesses: 'Weaknesses not available yet.'
-};
-
 const elements = {
   status: document.getElementById('detail-status'),
   detail: document.getElementById('base-detail'),
@@ -261,19 +255,21 @@ function buildBaseDescription(base) {
 }
 
 function applyDetailMetadata(base) {
-  if (!window.seo) {
-    return;
+  const title = `${base.name} | ${window.seo?.BRAND_NAME || 'Zombie Bases'}`;
+  const description = buildBaseDescription(base);
+  const canonicalUrl = `${window.seo?.PRODUCTION_ORIGIN || 'https://zombiebases.com'}${slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(base.slug) : `/${encodeURIComponent(base.slug)}`}`;
+
+  document.title = title;
+  if (description) {
+    slugHelper?.createOrUpdateMetaTag?.('meta[name="description"]', { name: 'description', content: description });
   }
-
-  const canonicalParams = new URLSearchParams();
-  canonicalParams.set('slug', base.slug);
-
-  window.seo.applyPageMetadata({
-    title: `${base.name} | ${window.seo.BRAND_NAME}`,
-    description: buildBaseDescription(base),
-    canonicalPath: '/base.html',
-    canonicalParams
-  });
+  slugHelper?.createOrUpdateCanonical?.(canonicalUrl);
+  slugHelper?.createOrUpdateMetaTag?.('meta[property="og:title"]', { property: 'og:title', content: title });
+  if (description) {
+    slugHelper?.createOrUpdateMetaTag?.('meta[property="og:description"]', { property: 'og:description', content: description });
+  }
+  slugHelper?.createOrUpdateMetaTag?.('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
+  slugHelper?.createOrUpdateMetaTag?.('meta[property="og:type"]', { property: 'og:type', content: 'article' });
 }
 
 function applyNotFoundMetadata() {
@@ -321,6 +317,7 @@ function renderMetaRow(base) {
     listItem.append(label, item.value);
     elements.metaRow.appendChild(listItem);
   });
+  elements.metaRow.hidden = elements.metaRow.children.length === 0;
 }
 
 function renderHero(base) {
@@ -349,13 +346,8 @@ function renderSummary(base) {
 
 function renderHeroTraits(base) {
   const description = getStructuredDescription(base);
-
-  const strengthsText = description.strengths.length
-    ? description.strengths.join(' • ')
-    : DESCRIPTION_FALLBACKS.strengths;
-  const weaknessesText = description.weaknesses.length
-    ? description.weaknesses.join(' • ')
-    : DESCRIPTION_FALLBACKS.weaknesses;
+  const strengthsText = description.strengths.length ? description.strengths.join(' • ') : '';
+  const weaknessesText = description.weaknesses.length ? description.weaknesses.join(' • ') : '';
 
   elements.heroStrengths.textContent = strengthsText;
   elements.heroWeaknesses.textContent = weaknessesText;
@@ -379,64 +371,14 @@ function renderScoreBreakdown(scoreObject) {
   });
 }
 
-function getTierBadge(overall) {
-  if (!isValidScoreValue(overall)) {
-    return null;
-  }
-  if (overall >= 9) return 'Elite';
-  if (overall >= 8) return 'Exceptional';
-  if (overall >= 7) return 'Strong';
-  if (overall >= 6) return 'Viable';
-  if (overall >= 4) return 'Fragile';
-  return 'Non-viable';
-}
-
-function getIdentityBadge(scoreObject, overall) {
-  const defensibility = scoreObject?.defensibility ?? 0;
-  const isolation = scoreObject?.isolation ?? 0;
-  const sustainability = scoreObject?.sustainability ?? 0;
-  const values = [defensibility, isolation, sustainability].filter(isValidScoreValue);
-  if (overall < 4 || values.every((value) => value < 4)) {
-    return 'Trap';
-  }
-  if (sustainability < 5) {
-    return 'Fragile';
-  }
-  if (isolation >= 8 && sustainability >= 8) {
-    return 'Long-term';
-  }
-  if (defensibility >= 8 && isolation >= 8) {
-    return 'Defensive';
-  }
-  const spread = Math.max(...values) - Math.min(...values);
-  if (spread <= 1.25) {
-    return 'Balanced';
-  }
-  return 'Balanced';
-}
-
-function getTraitBadges(scoreObject) {
-  const badges = [];
-  if (scoreObject?.defensibility >= 8) badges.push('High defence');
-  if (scoreObject?.isolation >= 8) badges.push('High isolation');
-  if (scoreObject?.sustainability >= 8) badges.push('High sustainability');
-  return badges.slice(0, 2);
-}
-
-function renderScoreBadges(scoreObject, overall) {
+function renderScoreBadges(base) {
   if (!elements.scoreBadges) {
     return;
   }
 
   elements.scoreBadges.innerHTML = '';
-  const tier = getTierBadge(overall);
-  const identity = getIdentityBadge(scoreObject, overall);
-  const traits = getTraitBadges(scoreObject);
-  const badges = [
-    tier ? { text: tier, tone: 'tier' } : null,
-    identity ? { text: identity, tone: 'identity' } : null,
-    ...traits.map((trait) => ({ text: trait, tone: 'trait' }))
-  ].filter(Boolean).slice(0, 4);
+  const badges = (slugHelper?.getBaseBadges ? slugHelper.getBaseBadges(base, 4) : [])
+    .map((text, index) => ({ text, tone: index === 0 ? 'tier' : (index === 1 ? 'identity' : 'trait') }));
 
   badges.forEach((badge) => {
     const pill = document.createElement('span');
@@ -664,7 +606,7 @@ function renderScore(base) {
   }
 
   renderScoreBreakdown(scoreObject);
-  renderScoreBadges(scoreObject, overall);
+  renderScoreBadges(base);
 }
 
 function classifyComparison(value, average) {
@@ -908,8 +850,8 @@ function createBaseUrl(slug, sourceParams) {
   }
 
   const queryString = params.toString();
-  const encodedSlug = encodeURIComponent(resolvedSlug);
-  return queryString ? `./${encodedSlug}?${queryString}` : `./${encodedSlug}`;
+  const cleanUrl = slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(resolvedSlug) : `/${encodeURIComponent(resolvedSlug)}`;
+  return queryString ? `${cleanUrl}?${queryString}` : cleanUrl;
 }
 
 function getSlugFromPathname(pathname) {
@@ -950,7 +892,12 @@ function renderSimilarBases(base, discovery, params) {
 
     const scoreMeta = document.createElement('p');
     scoreMeta.className = 'base-meta';
-    scoreMeta.textContent = `${item.overall.toFixed(1)}/10 • ${labelFor('region', item.region)} • ${labelFor('type', item.type)}`;
+    const summaryParts = [];
+    const formattedScore = slugHelper?.formatScore ? slugHelper.formatScore(item.overall) : (Number.isFinite(item.overall) ? `${item.overall.toFixed(1)}/10` : '');
+    if (formattedScore) summaryParts.push(formattedScore);
+    if (item.region) summaryParts.push(labelFor('region', item.region));
+    if (item.type) summaryParts.push(labelFor('type', item.type));
+    scoreMeta.textContent = summaryParts.join(' • ');
 
     const tags = deriveSimilarTags(item);
     const tagRow = document.createElement('p');
@@ -1016,10 +963,7 @@ function showBase(base, bases, params, stats, rankings, discovery) {
 
 async function loadBase() {
   const params = new URLSearchParams(window.location.search);
-  let slug = params.get('slug');
-  if (!slug) {
-    slug = getSlugFromPathname(window.location.pathname);
-  }
+  const slug = slugHelper?.getBaseSlugFromLocation ? slugHelper.getBaseSlugFromLocation(window.location) : (params.get('slug') || getSlugFromPathname(window.location.pathname));
 
   setBackLink(params);
 

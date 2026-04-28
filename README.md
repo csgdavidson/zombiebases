@@ -1,7 +1,7 @@
 # Zombie Bases
 
 Zombie Bases is a static, GitHub Pages-friendly directory of fictional and real-world survival locations.
-It currently provides a browseable homepage (list + map), query-parameter-driven detail pages,
+It currently provides a browseable homepage (list + map), clean-slug detail pages (with legacy query-parameter compatibility),
 and a small set of standalone proof-of-concept dedicated pages under `bases/`.
 
 ## Current status
@@ -79,7 +79,7 @@ Before Phase 3, add new features only when they directly support the V2 content 
 ## Site structure
 
 - `index.html` — homepage entry point with featured bases, controls, list view, and map view.
-- `base.html` — dynamic detail template loaded by `slug` query parameter.
+- `base.html` — dynamic detail template used for detail rendering and legacy `slug` query compatibility.
 - `bases/*.html` — static dedicated-page proof-of-concept files (not production-indexed yet).
 - `js/main.js` — homepage data loading, filtering, sorting, URL-state syncing, metadata updates.
 - `js/map.js` — Leaflet map + marker clustering renderer.
@@ -93,7 +93,7 @@ Before Phase 3, add new features only when they directly support the V2 content 
 
 ## Detail data schema (V2 canonical)
 
-`base.html?slug=...` reads detail content directly from `data/bases-index.json`.
+`/{slug}` reads detail content directly from `data/bases-index.json` (with legacy `base.html?slug=...` compatibility).
 
 - Required content fields:
   - `summary`
@@ -120,14 +120,15 @@ python3 scripts/validate-bases.py
 
 - **Index / list view (`/`):** primary crawlable landing page for the directory and broad discovery.
 - **Map view (`/index.html?view=map`):** interactive exploration mode for users; not separately canonicalized.
-- **Detail view (`/base.html?slug=...`):** canonical per-base landing route for indexable base detail content.
+- **Detail view (`/{slug}`):** canonical per-base landing route for indexable base detail content.
+- **Legacy detail view (`/base.html?slug=...`):** backward-compatible route preserved for existing links; not canonical.
 - **Dedicated static pages (`/bases/*.html`):** content experiments/templates only, currently excluded from indexing.
 
 ## SEO baseline (current)
 
 - Homepage has a stable default `<title>`, meta description, and canonical URL.
 - Runtime metadata updates for homepage view/filter context while keeping canonical pinned to `/`.
-- Detail pages set per-base title, description, and canonical URL as `/base.html?slug=...`.
+- Detail pages set per-base title, description, and canonical URL as `/{slug}`.
 - Query-parameter UX state (`view`, `region`, `type`, `sort`, `q`) is intentionally excluded from canonicals.
 - `robots.txt` allows site crawl but disallows `/bases/` proof-of-concept pages.
 - `sitemap.xml` is generated from canonical URL sources (homepage, data slugs, and indexable dedicated pages).
@@ -160,7 +161,7 @@ See `SECURITY.md` for deferred post-design hardening items.
 - Uses the production canonical origin `https://zombiebases.com` for every URL.
 - Includes:
   - homepage root (`https://zombiebases.com/`)
-  - each unique detail route from `data/bases-index.json` as `https://zombiebases.com/base.html?slug=<slug>`
+  - each unique detail route from `data/bases-index.json` as `https://zombiebases.com/<slug>`
   - dedicated pages under `/bases/*.html` only if they are indexable (pages with `meta robots` containing `noindex` are excluded)
 - Excludes non-canonical URL-state variants (filters/sort/search/map view query params such as `view`, `region`, `type`, `sort`, `q`).
 - Adds `<lastmod>` using `git log` timestamps when available (entry source file-based).
@@ -190,7 +191,7 @@ Dedicated static pages are still experimental. If you add one under `bases/`:
 3. Keep links/styles static-site safe (relative paths, no server-only behavior).
 4. Keep POC pages `noindex` while this section remains deferred so they stay out of sitemap and search indices.
 
-If the new page corresponds to a production base entry, prefer adding/updating the record in `data/bases-index.json` so the `base.html?slug=` route becomes the canonical searchable detail page.
+If the new page corresponds to a production base entry, prefer adding/updating the record in `data/bases-index.json` so the `/{slug}` route becomes the canonical searchable detail page (while `base.html?slug=` remains backward-compatible).
 
 ## Cloudflare assumptions
 

@@ -28,8 +28,6 @@ const LABELS = {
   }
 };
 
-const SCORE_KEYS = ['defensibility', 'isolation', 'sustainability'];
-
 const SORT_OPTIONS = {
   highest_score: 'Highest score',
   lowest_score: 'Lowest score',
@@ -50,30 +48,6 @@ function summarizeActiveFilters(region, type) {
   }
 
   return parts;
-}
-
-function getTierBadge(overall) {
-  if (!isValidScoreValue(overall)) {
-    return null;
-  }
-
-  if (overall >= 8) return 'Exceptional';
-  if (overall < 4) return 'Trap';
-  return null;
-}
-
-function getIdentityBadge(scoreObject, overall) {
-  const defensibility = scoreObject?.defensibility ?? 0;
-  const isolation = scoreObject?.isolation ?? 0;
-  const sustainability = scoreObject?.sustainability ?? 0;
-  const values = [defensibility, isolation, sustainability].filter(isValidScoreValue);
-
-  if (overall < 4 || values.every((value) => value < 4)) return 'Trap';
-  if (isolation >= 8 && sustainability >= 8) return 'Long-term';
-  if (defensibility >= 8 && isolation >= 8) return 'Defensive';
-  if (isolation >= 8) return 'High isolation';
-
-  return null;
 }
 
 function updateViewToggleLinks() {
@@ -223,18 +197,6 @@ function isValidScoreValue(value) {
   return Number.isFinite(value);
 }
 
-function getScoreObject(base) {
-  if (!base || typeof base.scores?.categories !== 'object' || !base.scores.categories) {
-    return null;
-  }
-
-  const entries = SCORE_KEYS
-    .map((key) => [key, base.scores.categories[key]])
-    .filter(([, value]) => isValidScoreValue(value));
-
-  return entries.length ? Object.fromEntries(entries) : null;
-}
-
 function computeOverallScore(base) {
   if (isValidScoreValue(base?.scores?.overall)) {
     return base.scores.overall;
@@ -244,7 +206,7 @@ function computeOverallScore(base) {
 
 function formatOverallScore(base) {
   const score = computeOverallScore(base);
-  return score === null ? '' : `${score.toFixed(1)}/10`;
+  return score === null ? '' : (slugHelper?.formatScore?.(score) || `${score.toFixed(1)}/10`);
 }
 
 function compareByName(a, b) {
@@ -460,8 +422,8 @@ function createBaseUrl(baseOrSlug) {
   }
 
   const query = params.toString();
-  const encodedSlug = encodeURIComponent(slug);
-  return query ? `./${encodedSlug}?${query}` : `./${encodedSlug}`;
+  const cleanUrl = slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(slug) : `/${encodeURIComponent(slug)}`;
+  return query ? `${cleanUrl}?${query}` : cleanUrl;
 }
 
 function appendCardScore(container, base) {
@@ -477,11 +439,9 @@ function appendCardScore(container, base) {
 }
 
 function appendCardBadges(container, base) {
-  const overall = computeOverallScore(base);
-  const scoreObject = getScoreObject(base);
-  const candidateBadges = [getTierBadge(overall), getIdentityBadge(scoreObject, overall)]
-    .filter(Boolean)
-    .slice(0, 2);
+  const candidateBadges = slugHelper?.getBaseBadges
+    ? slugHelper.getBaseBadges(base, 2)
+    : [];
 
   if (!candidateBadges.length) {
     return;

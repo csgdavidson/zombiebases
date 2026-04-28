@@ -3,6 +3,13 @@
     return typeof value === 'string' && value.trim().length > 0;
   }
 
+  function safeText(value) {
+    if (value === undefined || value === null) {
+      return '';
+    }
+    return String(value).trim();
+  }
+
   function normalizeSlugCandidate(value) {
     if (!isNonEmptyString(value)) {
       return '';
@@ -74,6 +81,29 @@
     return deriveSlug(base);
   }
 
+  function getBaseUrl(baseOrSlug) {
+    const slug = getPreferredSlug(baseOrSlug);
+    if (!slug) {
+      return '/';
+    }
+    return `/${encodeURIComponent(slug)}`;
+  }
+
+  function getBaseSlugFromLocation(location = window.location) {
+    const params = new URLSearchParams(location.search || '');
+    const fromQuery = normalizeSlugCandidate(params.get('slug') || '');
+    if (fromQuery) {
+      return fromQuery;
+    }
+
+    const path = safeText(location.pathname || '').replace(/^\/+|\/+$/g, '');
+    if (!path || path.toLowerCase() === 'base.html' || path.toLowerCase() === 'index.html') {
+      return '';
+    }
+
+    return normalizeSlugCandidate(decodeURIComponent(path.split('/').pop() || ''));
+  }
+
   function resolveBaseBySlug(bases, slugValue) {
     const target = normalizeSlugCandidate(slugValue);
     if (!target || !Array.isArray(bases) || !bases.length) {
@@ -89,10 +119,102 @@
     return byLegacyOrDerived || null;
   }
 
+  function formatScore(score) {
+    return Number.isFinite(score) ? `${score.toFixed(1)}/10` : '';
+  }
+
+  function getScoreTierBadge(base) {
+    const overall = base?.scores?.overall;
+    if (!Number.isFinite(overall)) return null;
+    if (overall >= 9) return 'Elite';
+    if (overall >= 8) return 'Exceptional';
+    if (overall >= 7) return 'Strong';
+    if (overall >= 6) return 'Viable';
+    if (overall >= 4) return 'Fragile';
+    return 'Non-viable';
+  }
+
+  function getIdentityBadge(base) {
+    const categories = base?.scores?.categories || {};
+    const overall = base?.scores?.overall;
+    const defensibility = Number.isFinite(categories.defensibility) ? categories.defensibility : 0;
+    const isolation = Number.isFinite(categories.isolation) ? categories.isolation : 0;
+    const sustainability = Number.isFinite(categories.sustainability) ? categories.sustainability : 0;
+    const values = [defensibility, isolation, sustainability].filter(Number.isFinite);
+
+    if (!Number.isFinite(overall) && !values.length) {
+      return null;
+    }
+    if (overall < 4 || values.every((value) => value < 4)) return 'Trap';
+    if (sustainability < 5) return 'Fragile';
+    if (isolation >= 8 && sustainability >= 8) return 'Long-term';
+    if (defensibility >= 8 && isolation >= 8) return 'Defensive';
+    return 'Balanced';
+  }
+
+  function getTraitBadges(base) {
+    const categories = base?.scores?.categories || {};
+    const badges = [];
+    if (categories.defensibility >= 8) badges.push('High defence');
+    if (categories.isolation >= 8) badges.push('High isolation');
+    if (categories.sustainability >= 8) badges.push('High sustainability');
+    return badges;
+  }
+
+  function getBaseBadges(base, max = 4) {
+    return [getScoreTierBadge(base), getIdentityBadge(base), ...getTraitBadges(base)]
+      .filter(Boolean)
+      .slice(0, max);
+  }
+
+  function renderBadges(badges) {
+    return (badges || [])
+      .map((badge) => `<span class=\"badge badge-trait\">${safeText(badge)}</span>`)
+      .join('');
+  }
+
+  function createOrUpdateMetaTag(selector, attributes) {
+    let tag = document.querySelector(selector);
+    if (!tag) {
+      tag = document.createElement('meta');
+      document.head.appendChild(tag);
+    }
+    Object.entries(attributes || {}).forEach(([key, value]) => {
+      if (isNonEmptyString(value)) {
+        tag.setAttribute(key, value);
+      }
+    });
+    return tag;
+  }
+
+  function createOrUpdateCanonical(url) {
+    let link = document.querySelector('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      document.head.appendChild(link);
+    }
+    if (isNonEmptyString(url)) {
+      link.setAttribute('href', url);
+    }
+    return link;
+  }
+
   window.baseSlugHelper = {
     deriveSlug,
     getPreferredSlug,
+    getBaseUrl,
+    getBaseSlugFromLocation,
     resolveBaseBySlug,
-    normalizeSlugCandidate
+    normalizeSlugCandidate,
+    formatScore,
+    getScoreTierBadge,
+    getIdentityBadge,
+    getTraitBadges,
+    getBaseBadges,
+    renderBadges,
+    safeText,
+    createOrUpdateMetaTag,
+    createOrUpdateCanonical
   };
 })();
