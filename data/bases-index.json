@@ -5648,25 +5648,40 @@
     "lat": -12.836,
     "long": -69.296,
     "scores": {
-      "overall": 7,
+      "overall": 6,
       "categories": {
-        "defensibility": 5,
-        "sustainability": 8,
-        "isolation": 7,
+        "defensibility": 4,
+        "sustainability": 7,
+        "isolation": 8,
         "accessibility": 4
       }
     },
-    "description": {
-      "summary": "Deep jungle location offers strong sustainability with moderate defensibility.",
-      "strengths": [
-        "Rich ecosystem",
-        "Remote setting"
-      ],
-      "weaknesses": [
-        "Difficult terrain",
-        "Limited defense options"
-      ]
-    }
+    "summary": "Tambopata gives concealment and food potential in deep jungle, but what kills you here is untreated injury or infection far from reliable care.",
+    "strengths": [
+      "Dense terrain limits fast hostile movement",
+      "Strong wild food and water collection potential",
+      "Low-signature footprint is feasible for small teams"
+    ],
+    "weaknesses": [
+      "Medical evacuation and advanced treatment are unrealistic",
+      "Humidity and disease pressure grind down health",
+      "River dependence creates mobility bottlenecks"
+    ],
+    "verdict": {
+      "bestUseCase": "Small, skilled jungle team prioritizing concealment over comfort",
+      "failureMode": "Medical attrition and mobility loss after preventable health events"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Strong for prepared field teams",
+      "longTerm": "Fragile without clinical capability"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Low-visibility jungle holdout with strict sanitation discipline",
+      "keyRisk": "What kills you here is one bad wound, one bad fever, or one bad fall that cannot be treated in time"
+    },
+    "realityCheck": "Works for expert field operators, not improvised groups. Environment punishes mistakes quickly.",
+    "scoreNarrative": "Isolation is high and sustainability is good, but defensibility and medical resilience keep Tambopata in the mid tier."
   },
   {
     "name": "Chiloé Island",
@@ -5685,17 +5700,32 @@
         "accessibility": 5
       }
     },
-    "description": {
-      "summary": "One of the strongest all-round survival locations, balancing isolation with livable conditions.",
-      "strengths": [
-        "Island defensibility",
-        "Good agricultural potential"
-      ],
-      "weaknesses": [
-        "Weather exposure",
-        "Limited scalability"
-      ]
-    }
+    "summary": "Chiloé is a strong all-round island base with workable agriculture and defensible approaches, but what kills you here is prolonged maritime cutoff during a hard winter.",
+    "strengths": [
+      "Island geography narrows avenues of approach",
+      "Established farming and fishing support continuity",
+      "Usable settlement network for distributed storage"
+    ],
+    "weaknesses": [
+      "Weather can stall transport for extended periods",
+      "Fuel and technical parts still depend on external supply",
+      "Population pressure can rise if mainland stability drops"
+    ],
+    "verdict": {
+      "bestUseCase": "Regional island redoubt with community-scale production",
+      "failureMode": "Logistics starvation after repeated storm and shipping disruption"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Strong if maritime links intermittently hold"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Managed island settlement with rationing and local food production",
+      "keyRisk": "What kills you here is supply isolation when weather and sea lanes fail together"
+    },
+    "realityCheck": "Chiloé is robust, not invulnerable. It needs disciplined stockpiles and winter planning.",
+    "scoreNarrative": "High sustainability plus good defensibility make Chiloé a strong option; dependence on sea logistics is the limiting factor."
   },
   {
     "name": "Galápagos Islands",
@@ -5706,25 +5736,40 @@
     "lat": -0.9538,
     "long": -90.9656,
     "scores": {
-      "overall": 9,
+      "overall": 7,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 8,
-        "isolation": 9,
-        "accessibility": 4
+        "defensibility": 7,
+        "sustainability": 5,
+        "isolation": 10,
+        "accessibility": 2
       }
     },
-    "description": {
-      "summary": "One of the best survival locations globally, combining isolation, resources, and defensibility.",
-      "strengths": [
-        "Extreme isolation",
-        "Rich natural ecosystem"
-      ],
-      "weaknesses": [
-        "Limited access",
-        "Environmental fragility"
-      ]
-    }
+    "summary": "Galápagos has extreme isolation and low random threat traffic, but what kills you here is supply collapse once imported essentials stop.",
+    "strengths": [
+      "Ocean distance sharply reduces overrun probability",
+      "Natural perimeter is easy to monitor",
+      "Low initial contact density in crisis scenarios"
+    ],
+    "weaknesses": [
+      "Food, fuel, medicine, and equipment rely on imports",
+      "Freshwater and arable constraints limit scale",
+      "Environmental limits restrict aggressive extraction"
+    ],
+    "verdict": {
+      "bestUseCase": "Short-to-mid-term isolated refuge with pre-positioned stocks",
+      "failureMode": "Essential resource depletion in a closed logistics loop"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak without external resupply"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Controlled island shelter optimized for low population and strict consumption",
+      "keyRisk": "What kills you here is running out of critical imports before replacement systems exist"
+    },
+    "realityCheck": "Isolation is excellent, autonomy is not. Success depends on stock depth and demand control from day one.",
+    "scoreNarrative": "Galápagos scores elite on isolation but notably lower on sustainability, preventing top-tier overall resilience."
   },
   {
     "name": "Christ the Redeemer",
@@ -5735,25 +5780,40 @@
     "lat": -22.9519,
     "long": -43.2105,
     "scores": {
-      "overall": 2,
+      "overall": 1,
       "categories": {
-        "defensibility": 2,
+        "defensibility": 1,
         "sustainability": 1,
-        "isolation": 2,
+        "isolation": 1,
         "accessibility": 8
       }
     },
-    "description": {
-      "summary": "Iconic but completely impractical as a survival base.",
-      "strengths": [
-        "High vantage point",
-        "Symbolic location"
-      ],
-      "weaknesses": [
-        "No shelter or resources",
-        "Highly exposed"
-      ]
-    }
+    "summary": "Christ the Redeemer is a landmark, not a base; what kills you here is immediate exposure with no sustainment capacity.",
+    "strengths": [
+      "High visibility for observation",
+      "Symbolic rally point value",
+      "Quick approach routes for short visits"
+    ],
+    "weaknesses": [
+      "No shelter depth for weather or attack",
+      "No food, water, or medical infrastructure",
+      "Predictable and heavily exposed position"
+    ],
+    "verdict": {
+      "bestUseCase": "Temporary lookout only",
+      "failureMode": "Rapid casualty risk from exposure and crowd convergence"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Brief observation and immediate relocation",
+      "keyRisk": "What kills you here is staying in place where everyone can see and reach you"
+    },
+    "realityCheck": "Treat as a waypoint, never as a survival site.",
+    "scoreNarrative": "All core survival dimensions are critically low; only accessibility is high, which increases threat exposure."
   },
   {
     "name": "Lighthouse Punta Del Este",
@@ -5764,25 +5824,40 @@
     "lat": -34.9671,
     "long": -54.9503,
     "scores": {
-      "overall": 3,
+      "overall": 2,
       "categories": {
-        "defensibility": 3,
+        "defensibility": 2,
         "sustainability": 2,
-        "isolation": 4,
+        "isolation": 3,
         "accessibility": 7
       }
     },
-    "description": {
-      "summary": "Visually strategic but offers minimal practical survival value.",
-      "strengths": [
-        "Visibility",
-        "Coastal access"
-      ],
-      "weaknesses": [
-        "No infrastructure",
-        "Hard to defend"
-      ]
-    }
+    "summary": "Punta lighthouse gives sightlines but almost no survivability; what kills you here is being fixed in a visible coastal choke point without supplies.",
+    "strengths": [
+      "Excellent visual range over nearby approaches",
+      "Simple structure usable as a short observation post",
+      "Immediate coastal orientation for navigation"
+    ],
+    "weaknesses": [
+      "No meaningful food or water base",
+      "High wind and storm exposure",
+      "Limited interior space and poor defensive depth"
+    ],
+    "verdict": {
+      "bestUseCase": "Short-duration lookout and signaling point",
+      "failureMode": "Exposure plus supply failure under sustained pressure"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Observation stop integrated into a larger evacuation route",
+      "keyRisk": "What kills you here is prolonged hold in a site designed for navigation, not habitation"
+    },
+    "realityCheck": "Use for minutes to hours, not days to weeks.",
+    "scoreNarrative": "The lighthouse has tactical visibility but fails core survival requirements, keeping it near-bottom tier."
   },
   {
     "name": "Cusco Highlands Village",
@@ -5795,23 +5870,38 @@
     "scores": {
       "overall": 8,
       "categories": {
-        "defensibility": 7,
+        "defensibility": 8,
         "sustainability": 8,
         "isolation": 6,
         "accessibility": 5
       }
     },
-    "description": {
-      "summary": "High-altitude settlements provide strong survivability with manageable isolation.",
-      "strengths": [
-        "Agricultural traditions",
-        "Defensive terrain"
-      ],
-      "weaknesses": [
-        "Altitude challenges",
-        "Limited infrastructure"
-      ]
-    }
+    "summary": "Cusco highlands villages combine terrain defense with proven local subsistence systems, but what kills you here is cold-altitude medical decline in unacclimated groups.",
+    "strengths": [
+      "Defensive elevation and constrained approach routes",
+      "Existing highland agriculture and water-use traditions",
+      "Community-scale settlement patterns support mutual aid"
+    ],
+    "weaknesses": [
+      "Altitude stress reduces labor and recovery",
+      "Cold-chain and advanced medicine are limited",
+      "External fuel and tools still matter over time"
+    ],
+    "verdict": {
+      "bestUseCase": "Community-based mountain holdout with disciplined resource planning",
+      "failureMode": "Health and productivity collapse from altitude and cold stress"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Strong with acclimatized population"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Defensive agrarian continuity in highland settlements",
+      "keyRisk": "What kills you here is chronic exposure and altitude-related health failures, not immediate attack"
+    },
+    "realityCheck": "Best for adapted populations; outside groups need acclimatization and winter readiness.",
+    "scoreNarrative": "High defensibility and sustainability place Cusco highlands among the strongest regional options, constrained mainly by altitude burden."
   },
   {
     "name": "Patagonian Village",
@@ -5822,25 +5912,40 @@
     "lat": -49.3315,
     "long": -72.8863,
     "scores": {
-      "overall": 7,
+      "overall": 6,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 7,
+        "defensibility": 5,
+        "sustainability": 6,
         "isolation": 8,
         "accessibility": 3
       }
     },
-    "description": {
-      "summary": "Remote and low population pressure with reasonable survivability.",
-      "strengths": [
-        "Isolation",
-        "Manageable living conditions"
-      ],
-      "weaknesses": [
-        "Harsh weather",
-        "Limited infrastructure"
-      ]
-    }
+    "summary": "Patagonian villages benefit from remoteness and low traffic, but what kills you here is wind-cold exposure when fuel and shelter maintenance fall behind.",
+    "strengths": [
+      "High distance from major population corridors",
+      "Low encounter rate reduces immediate threat load",
+      "Open terrain supports early detection"
+    ],
+    "weaknesses": [
+      "Severe weather drives constant heating demand",
+      "Sparse services and long-distance supply lines",
+      "Mechanical failures are hard to replace quickly"
+    ],
+    "verdict": {
+      "bestUseCase": "Small remote settlement with strict energy and maintenance discipline",
+      "failureMode": "Thermal and infrastructure failure during prolonged severe weather"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Conditional on fuel and repairs"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Low-density defensive living with prepared winter stocks",
+      "keyRisk": "What kills you here is cold, not crowds"
+    },
+    "realityCheck": "Isolation helps security, but climate turns small logistics errors into survival failures.",
+    "scoreNarrative": "Isolation is a major asset, while climate burden and support scarcity keep Patagonia in the mid band."
   },
   {
     "name": "Cueva de las Manos",
@@ -5851,25 +5956,40 @@
     "lat": -47.1556,
     "long": -70.6608,
     "scores": {
-      "overall": 5,
+      "overall": 4,
       "categories": {
         "defensibility": 6,
-        "sustainability": 4,
+        "sustainability": 2,
         "isolation": 7,
-        "accessibility": 3
+        "accessibility": 2
       }
     },
-    "description": {
-      "summary": "Remote cave system offers some protection but lacks long-term viability.",
-      "strengths": [
-        "Natural shelter",
-        "Remote location"
-      ],
-      "weaknesses": [
-        "Limited resources",
-        "Small-scale capacity"
-      ]
-    }
+    "summary": "Cueva de las Manos offers concealment and basic shelter, but what kills you here is resource starvation in a site that cannot scale into a living system.",
+    "strengths": [
+      "Natural cover with limited visible signature",
+      "Remote setting reduces random contact",
+      "Defensible choke-style access"
+    ],
+    "weaknesses": [
+      "No meaningful agricultural or water infrastructure",
+      "Very low carrying capacity for people and supplies",
+      "Poor sanitation and smoke management constraints"
+    ],
+    "verdict": {
+      "bestUseCase": "Emergency hide site, not a settlement",
+      "failureMode": "Supply depletion and health decline in confined conditions"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Short refuge during movement through remote terrain",
+      "keyRisk": "What kills you here is trying to turn a shelter into a self-sustaining base"
+    },
+    "realityCheck": "Useful as temporary cover only. Stay duration should be tightly limited.",
+    "scoreNarrative": "Defensibility and isolation are decent, but near-zero sustainability caps this site at low overall viability."
   },
   {
     "name": "Potosí Silver Mine (Cerro Rico)",
@@ -5880,25 +6000,40 @@
     "lat": -19.585,
     "long": -65.753,
     "scores": {
-      "overall": 6,
+      "overall": 5,
       "categories": {
         "defensibility": 7,
-        "sustainability": 4,
-        "isolation": 6,
+        "sustainability": 3,
+        "isolation": 5,
         "accessibility": 5
       }
     },
-    "description": {
-      "summary": "Subterranean advantage but limited long-term viability.",
-      "strengths": [
-        "Underground shelter",
-        "Defensible structure"
-      ],
-      "weaknesses": [
-        "Poor living conditions",
-        "Resource limitations"
-      ]
-    }
+    "summary": "Potosí mine has strong defensive geometry underground, but what kills you here is toxic air and chronic occupational health collapse.",
+    "strengths": [
+      "Underground network is difficult to assault directly",
+      "Multiple controlled points can be fortified",
+      "Existing extraction-era infrastructure can be repurposed"
+    ],
+    "weaknesses": [
+      "Dust, gas, and ventilation hazards are persistent",
+      "Water, sanitation, and light demand constant inputs",
+      "Long-term habitation degrades physical condition rapidly"
+    ],
+    "verdict": {
+      "bestUseCase": "Short-term hardened shelter with strict exposure limits",
+      "failureMode": "Respiratory and contamination-driven health breakdown"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Defensive fallback during acute conflict windows",
+      "keyRisk": "What kills you here is the mine environment itself before attackers do"
+    },
+    "realityCheck": "Without industrial-grade ventilation and hygiene controls, endurance is limited.",
+    "scoreNarrative": "High defensibility is offset by severe sustainability penalties from health and infrastructure burden."
   },
   {
     "name": "Panama Canal Zone",
@@ -5909,25 +6044,40 @@
     "lat": 9.08,
     "long": -79.68,
     "scores": {
-      "overall": 4,
+      "overall": 3,
       "categories": {
-        "defensibility": 3,
+        "defensibility": 2,
         "sustainability": 6,
-        "isolation": 3,
-        "accessibility": 9
+        "isolation": 2,
+        "accessibility": 10
       }
     },
-    "description": {
-      "summary": "Critical infrastructure but extremely exposed and strategically vulnerable.",
-      "strengths": [
-        "Logistical importance",
-        "Infrastructure"
-      ],
-      "weaknesses": [
-        "High exposure",
-        "Difficult to defend"
-      ]
-    }
+    "summary": "Panama Canal has infrastructure and throughput, but what kills you here is becoming a strategic flashpoint that cannot be isolated from conflict pressure.",
+    "strengths": [
+      "Large logistical infrastructure and utility footprint",
+      "Access to transport corridors and material flow",
+      "Potential short-term staging capacity"
+    ],
+    "weaknesses": [
+      "Extreme strategic visibility attracts competing forces",
+      "Constant movement makes perimeter control unrealistic",
+      "High dependency on functioning national systems"
+    ],
+    "verdict": {
+      "bestUseCase": "Brief logistics transit node during organized evacuation",
+      "failureMode": "Overrun risk from conflict concentration and uncontrollable traffic"
+    },
+    "survivalProfile": {
+      "initial": "Weak",
+      "shortTerm": "Weak",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Pass-through point, never static refuge",
+      "keyRisk": "What kills you here is strategic attention from everyone at once"
+    },
+    "realityCheck": "High infrastructure does not equal survivability when strategic contestation is inevitable.",
+    "scoreNarrative": "Sustainability assets are outweighed by near-zero isolation and poor defensibility in a globally contested corridor."
   },
   {
     "name": "São Paulo Airport",
