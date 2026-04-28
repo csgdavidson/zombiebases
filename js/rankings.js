@@ -68,7 +68,7 @@ function updateQueryParameter(key, value) {
 
 function createBaseUrl(slug) {
   const resolvedSlug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(slug) : slug;
-  return `./base.html?slug=${encodeURIComponent(resolvedSlug)}`;
+  return `./${encodeURIComponent(resolvedSlug)}`;
 }
 
 function summarize(entry) {
