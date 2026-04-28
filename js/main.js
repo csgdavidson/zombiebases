@@ -438,7 +438,6 @@ function preferredSlugFor(baseOrSlug) {
 function createBaseUrl(baseOrSlug) {
   const slug = preferredSlugFor(baseOrSlug);
   const params = new URLSearchParams();
-  params.set('slug', slug);
 
   if (state.view === 'map') {
     params.set('view', 'map');
@@ -460,7 +459,9 @@ function createBaseUrl(baseOrSlug) {
     params.set('sort', state.sort);
   }
 
-  return `./base.html?${params.toString()}`;
+  const query = params.toString();
+  const encodedSlug = encodeURIComponent(slug);
+  return query ? `./${encodedSlug}?${query}` : `./${encodedSlug}`;
 }
 
 function appendCardScore(container, base) {

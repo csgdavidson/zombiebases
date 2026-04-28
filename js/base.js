@@ -884,7 +884,6 @@ function renderComparison(base, stats) {
 function createBaseUrl(slug, sourceParams) {
   const resolvedSlug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(slug) : slug;
   const params = new URLSearchParams();
-  params.set('slug', resolvedSlug);
 
   const view = sourceParams.get('view');
   const region = sourceParams.get('region');
@@ -908,7 +907,26 @@ function createBaseUrl(slug, sourceParams) {
     params.set('q', query);
   }
 
-  return `./base.html?${params.toString()}`;
+  const queryString = params.toString();
+  const encodedSlug = encodeURIComponent(resolvedSlug);
+  return queryString ? `./${encodedSlug}?${queryString}` : `./${encodedSlug}`;
+}
+
+function getSlugFromPathname(pathname) {
+  if (typeof pathname !== 'string') {
+    return '';
+  }
+
+  const pathSegment = pathname
+    .split('/')
+    .filter(Boolean)
+    .pop() || '';
+
+  if (!pathSegment || pathSegment.toLowerCase() === 'base.html') {
+    return '';
+  }
+
+  return decodeURIComponent(pathSegment);
 }
 
 function renderSimilarBases(base, discovery, params) {
@@ -998,7 +1016,10 @@ function showBase(base, bases, params, stats, rankings, discovery) {
 
 async function loadBase() {
   const params = new URLSearchParams(window.location.search);
-  const slug = params.get('slug');
+  let slug = params.get('slug');
+  if (!slug) {
+    slug = getSlugFromPathname(window.location.pathname);
+  }
 
   setBackLink(params);
 
