@@ -57,6 +57,7 @@ main > * {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  min-height: 100%;
 }
 
 .toggle-label {
@@ -87,15 +88,15 @@ main > * {
   color: #fff;
 }
 
-.search {
-  margin-bottom: 0;
+.controls-panel {
+  display: grid;
+  grid-template-columns: 1.4fr auto repeat(3, minmax(140px, 1fr)) auto;
+  gap: 0.55rem;
+  align-items: end;
 }
 
-.filters {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.75rem;
-  margin-bottom: 0.15rem;
+.control-search {
+  min-width: 210px;
 }
 
 label {
@@ -133,7 +134,7 @@ input[type="search"] {
 
 .base-card-link {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.35rem;
   padding: 0.95rem 1rem;
   text-decoration: none;
   color: inherit;
@@ -156,6 +157,7 @@ input[type="search"] {
 .base-card-title {
   font-size: 1.05rem;
   font-weight: 600;
+  line-height: 1.25;
 }
 
 .base-card a,
@@ -186,14 +188,20 @@ input[type="search"] {
 .base-country {
   margin: 0;
   font-size: 0.84rem;
-  color: #334155;
-  font-weight: 500;
+  color: #1e293b;
+  font-weight: 600;
 }
 
 .base-summary {
   margin: 0;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .status-badge {
@@ -533,10 +541,11 @@ input[type="search"] {
   align-self: end;
   border: 1px solid var(--border);
   border-radius: 0.5rem;
-  padding: 0.55rem 0.8rem;
-  background: var(--surface);
-  color: var(--text);
+  padding: 0.55rem 0.75rem;
+  background: #f8fafc;
+  color: var(--muted);
   cursor: pointer;
+  font-size: 0.88rem;
 }
 
 .reset-filters:hover,
@@ -546,9 +555,25 @@ input[type="search"] {
 }
 
 .result-count {
-  margin: 0 0 0.75rem;
+  margin: 0;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
+}
+
+.active-filters {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.filter-chip {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.12rem 0.55rem;
+  font-size: 0.78rem;
+  color: #334155;
+  background: var(--surface);
 }
 
 .empty-state {
@@ -568,13 +593,6 @@ input[type="search"] {
 .empty-reset {
   justify-self: start;
   align-self: start;
-}
-
-.base-overall-score {
-  margin: 0;
-  font-size: 0.86rem;
-  font-weight: 600;
-  color: #0c4a6e;
 }
 
 .detail-overall-score {
@@ -820,18 +838,27 @@ input[type="search"] {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 0.75rem;
-  padding: 0.9rem 1rem;
+  padding: 0.75rem 0.9rem;
+  display: grid;
+  gap: 0.55rem;
 }
 
 .rankings-explore h2 {
-  margin: 0 0 0.45rem;
-  font-size: 1.05rem;
+  margin: 0;
+  font-size: 1rem;
 }
 
-.rankings-explore-subheading {
-  margin: 0.8rem 0 0.35rem;
-  font-size: 0.95rem;
+.discovery-group {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.discovery-heading {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
   color: var(--muted);
+  letter-spacing: 0.01em;
 }
 
 .rankings-explore-links {
@@ -840,18 +867,46 @@ input[type="search"] {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1rem;
+  gap: 0.45rem;
 }
 
 .rankings-explore-links a {
   text-decoration: none;
-  color: var(--text);
+  color: #1e293b;
   font-weight: 600;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.22rem 0.6rem;
+  background: #f8fafc;
+  font-size: 0.82rem;
 }
 
 .rankings-explore-links a:hover,
 .rankings-explore-links a:focus-visible {
   color: var(--accent);
+  border-color: #bae6fd;
+  background: #f0f9ff;
+}
+
+.base-score-pill {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0c4a6e;
+  border: 1px solid #bae6fd;
+  background: #f0f9ff;
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.card-badge-row {
+  margin: 0;
+}
+
+.card-badge-row .badge {
+  margin-top: 0;
 }
 
 .ranking-list {
@@ -898,6 +953,26 @@ input[type="search"] {
 .ranking-row:last-child {
   border-bottom: 0;
   padding-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .controls-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .control-search {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .controls-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .view-toggle {
+    justify-content: space-between;
+  }
 }
 
 .ranking-row-heading {
