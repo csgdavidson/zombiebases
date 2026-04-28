@@ -93,9 +93,7 @@ const elements = {
   realityCheckSection: document.getElementById('reality-check-section'),
   realityCheckText: document.getElementById('base-reality-check'),
   scoreNarrativeSection: document.getElementById('score-narrative-section'),
-  scoreNarrativeText: document.getElementById('base-score-narrative'),
-  relatedSection: document.getElementById('related-section'),
-  relatedList: document.getElementById('related-bases-list')
+  scoreNarrativeText: document.getElementById('base-score-narrative')
 };
 
 const slugHelper = window.baseSlugHelper;
@@ -612,16 +610,36 @@ function renderComparisonInsight(comparisons) {
   }
 
   const overallEntry = comparisons.find((entry) => entry.label.includes('Against all bases'));
-  const strongestEntry = comparisons.reduce((best, current) => (!best || current.difference > best.difference ? current : best), null);
-  const weakestEntry = comparisons.reduce((worst, current) => (!worst || current.difference < worst.difference ? current : worst), null);
+  const contextEntries = comparisons.filter((entry) => entry.label.startsWith('Against '));
+  const traitEntries = comparisons.filter((entry) => !entry.label.startsWith('Against '));
+  const strongestContext = contextEntries.reduce((best, current) => (!best || current.difference > best.difference ? current : best), null);
+  const weakestContext = contextEntries.reduce((worst, current) => (!worst || current.difference < worst.difference ? current : worst), null);
+  const weakestTrait = traitEntries.reduce((worst, current) => (!worst || current.difference < worst.difference ? current : worst), null);
 
-  if (!overallEntry || !strongestEntry || !weakestEntry) {
+  if (!overallEntry) {
     elements.comparisonInsight.hidden = true;
     elements.comparisonInsight.textContent = '';
     return;
   }
 
-  const sentence = `${overallEntry.comparison.label} overall. Best edge is ${strongestEntry.label.toLowerCase()}; weakest relative trait is ${weakestEntry.label.toLowerCase()}.`;
+  const contextPhrase = strongestContext && strongestContext.difference >= 0
+    ? `Performs best relative to ${strongestContext.label.replace('Against ', '')}`
+    : weakestContext
+      ? `Performs weakest relative to ${weakestContext.label.replace('Against ', '')}`
+      : null;
+
+  const traitPhrase = weakestTrait
+    ? `weakest relative trait is ${weakestTrait.label.toLowerCase()}`
+    : null;
+
+  let sentence = `${overallEntry.comparison.label} overall.`;
+  if (contextPhrase && traitPhrase) {
+    sentence = `${sentence} ${contextPhrase}; ${traitPhrase}.`;
+  } else if (contextPhrase) {
+    sentence = `${sentence} ${contextPhrase}.`;
+  } else if (traitPhrase) {
+    sentence = `${sentence} ${traitPhrase}.`;
+  }
   elements.comparisonInsight.hidden = false;
   elements.comparisonInsight.textContent = sentence;
 }
@@ -806,48 +824,6 @@ function renderSimilarBases(base, discovery, params) {
   elements.similarSection.hidden = false;
 }
 
-function renderRelatedBases(base, bases, params) {
-  elements.relatedList.innerHTML = '';
-
-  const related = bases
-    .filter((candidate) => candidate.slug !== base.slug && normalizeStatus(candidate) !== 'hidden')
-    .sort((a, b) => {
-      const aRegion = a.region === base.region ? 1 : 0;
-      const bRegion = b.region === base.region ? 1 : 0;
-      if (aRegion !== bRegion) {
-        return bRegion - aRegion;
-      }
-
-      const aType = a.type === base.type ? 1 : 0;
-      const bType = b.type === base.type ? 1 : 0;
-      if (aType !== bType) {
-        return bType - aType;
-      }
-
-      return a.name.localeCompare(b.name);
-    })
-    .slice(0, 3);
-
-  if (!related.length) {
-    elements.relatedSection.hidden = true;
-    return;
-  }
-
-  related.forEach((item) => {
-    const li = document.createElement('li');
-    const link = document.createElement('a');
-    link.href = createBaseUrl(item.slug, params);
-    link.textContent = item.name;
-    const meta = document.createElement('p');
-    meta.className = 'base-meta';
-    meta.textContent = `${labelFor('type', item.type)} • ${labelFor('region', item.region)}`;
-    li.append(link, meta);
-    elements.relatedList.appendChild(li);
-  });
-
-  elements.relatedSection.hidden = false;
-}
-
 function showBase(base, bases, params, stats, rankings, discovery) {
   elements.name.textContent = base.name;
   applyDetailMetadata(base);
@@ -865,7 +841,6 @@ function showBase(base, bases, params, stats, rankings, discovery) {
   renderUseCaseAndRisk(base);
   renderRealityCheck(base);
   renderScoreNarrative(base);
-  renderRelatedBases(base, bases, params);
   elements.status.textContent = '';
   elements.notFound.hidden = true;
   elements.detail.hidden = false;

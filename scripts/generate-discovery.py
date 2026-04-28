@@ -33,11 +33,7 @@ SCENARIO_CONFIG = {
     },
     "high_risk_high_reward": {
         "title": "Highest risk / highest reward",
-        "description": "Highlights high-overall bases with major strengths and notable weak spots—high upside with sharp trade-offs.",
-    },
-    "worst_bases": {
-        "title": "Worst bases",
-        "description": "Ranks bases with weak overall performance, especially where defensibility or sustainability are underpowered.",
+        "description": "Highlights high-performing bases that pair elite strengths with meaningful weak spots and harder trade-offs.",
     },
 }
 
@@ -93,24 +89,45 @@ def as_base_entry(base: dict) -> dict:
     }
 
 
-def similar_reason(source: dict[str, float], other: dict[str, float]) -> str:
+def similar_reason(source_base: dict, other_base: dict, source: dict[str, float], other: dict[str, float]) -> str:
     diffs = {key: other[key] - source[key] for key in SCORE_KEYS}
-    ordered = sorted(diffs.items(), key=lambda item: abs(item[1]), reverse=True)
+    strongest_source = max(SCORE_KEYS, key=lambda key: source[key])
+    weakest_source = min(SCORE_KEYS, key=lambda key: source[key])
 
-    close_dims = [key for key in SCORE_KEYS if abs(diffs[key]) <= 0.8]
-    if len(close_dims) >= 2:
-        first, second = close_dims[:2]
-        return f"Comparable {first} and {second}."
+    if abs(diffs["defensibility"]) <= 0.6 and diffs["sustainability"] <= -0.9:
+        return "Similar defensive profile with lower sustainability."
+    if abs(diffs["isolation"]) <= 0.6 and diffs["sustainability"] <= -0.8:
+        return "Comparable isolation, but weaker long-term viability."
 
-    dim, delta = ordered[0]
-    if delta >= 1.0:
-        return f"Similar profile with stronger {dim}."
-    if delta <= -1.0:
-        return f"Similar profile with weaker {dim}."
+    if abs(diffs["defensibility"]) <= 0.7 and abs(diffs["isolation"]) <= 0.7:
+        if diffs["sustainability"] >= 0.8:
+            return "Comparable frontline profile with stronger long-term viability."
+        if diffs["sustainability"] <= -0.8:
+            return "Comparable frontline profile, but weaker long-term viability."
+        return "Similar trade-off between protection and sustainability."
 
-    strongest = max(other, key=other.get)
-    weakest = min(other, key=other.get)
-    return f"Similar {strongest}-to-{weakest} trade-off."
+    if abs(diffs["defensibility"]) <= 0.8 and source_base.get("region") != other_base.get("region"):
+        return "Strong defence profile with a different regional context."
+
+    most_changed_key = max(SCORE_KEYS, key=lambda key: abs(diffs[key]))
+    most_changed_delta = diffs[most_changed_key]
+    key_label = {
+        "defensibility": "defensive coverage",
+        "isolation": "isolation",
+        "sustainability": "long-term viability",
+    }[most_changed_key]
+    if most_changed_delta >= 1.0:
+        return f"Comparable survival shape, but with stronger {key_label}."
+    if most_changed_delta <= -1.0:
+        return f"Comparable survival shape, but with weaker {key_label}."
+
+    if strongest_source == "defensibility":
+        return "Strong defence profile with a different regional context."
+    if strongest_source == "isolation":
+        return "Similar remote-survival profile with a different risk balance."
+    if weakest_source == "sustainability":
+        return "Similar protection-first profile with long-term trade-offs."
+    return "Comparable survival shape with a different balance across key traits."
 
 
 def build_similar_bases(bases: list[dict]) -> dict[str, list[dict]]:
@@ -155,7 +172,7 @@ def build_similar_bases(bases: list[dict]) -> dict[str, list[dict]]:
         similar[slug] = [
             {
                 **as_base_entry(candidate),
-                "reason": similar_reason(source_profile, profiles[candidate["slug"]]),
+                "reason": similar_reason(base, candidate, source_profile, profiles[candidate["slug"]]),
             }
             for _, candidate in selected[:SIMILAR_COUNT]
         ]
@@ -177,8 +194,7 @@ def scenario_scores(profile: dict[str, float]) -> dict[str, float]:
         "long_term_survival": sustainability * 0.55 + overall * 0.3 + isolation * 0.2 - max(0, 3.0 - isolation) * 0.8,
         "short_term_refuge": defensibility * 0.5 + isolation * 0.4 + overall * 0.1,
         "community_bases": sustainability * 0.5 + overall * 0.25 + access_score * 0.25 - max(0, isolation - 8.5) * 0.35,
-        "high_risk_high_reward": overall * 0.65 + spread * 0.7,
-        "worst_bases": (10 - overall) * 0.6 + max(0, 6 - defensibility) * 0.2 + max(0, 6 - sustainability) * 0.2,
+        "high_risk_high_reward": overall + spread,
     }
 
 
@@ -190,14 +206,16 @@ def scenario_reason(base: dict, scenario_id: str, profile: dict[str, float]) -> 
     spread = max(defn, iso, sus) - min(defn, iso, sus)
 
     if scenario_id == "long_term_survival":
-        return f"Strong sustainability ({sus:.1f}) with steady overall resilience ({overall:.1f})."
+        return "Strong long-term viability driven by high sustainability and stable overall performance."
     if scenario_id == "short_term_refuge":
-        return f"Fast-safety profile: defensibility {defn:.1f} and isolation {iso:.1f}."
+        return "Built for immediate shelter with strong defensive coverage and separation from fast-moving threats."
     if scenario_id == "community_bases":
-        return f"Balanced for groups with sustainability {sus:.1f} and workable access."
+        return "Supports group survival with durable infrastructure, manageable access, and steady resilience."
     if scenario_id == "high_risk_high_reward":
-        return f"High upside ({overall:.1f} overall) with a wide trait spread ({spread:.1f})."
-    return f"Low resilience profile: overall {overall:.1f}, defensibility {defn:.1f}, sustainability {sus:.1f}."
+        strongest = max(SCORE_KEYS, key=lambda key: profile[key])
+        weakest = min(SCORE_KEYS, key=lambda key: profile[key])
+        return f"High overall potential with a sharp trade-off between elite {strongest} and weaker {weakest}."
+    return f"Overall {overall:.1f} with defensibility {defn:.1f}, isolation {iso:.1f}, and sustainability {sus:.1f}."
 
 
 def build_scenarios(bases: list[dict]) -> tuple[dict[str, dict], dict[str, dict]]:
@@ -206,18 +224,18 @@ def build_scenarios(bases: list[dict]) -> tuple[dict[str, dict], dict[str, dict]
     base_ranks: dict[str, dict[str, int]] = {base["slug"]: {} for base in bases}
 
     for scenario_id, meta in SCENARIO_CONFIG.items():
+        ranked_candidates = bases
+        if scenario_id == "high_risk_high_reward":
+            ranked_candidates = [base for base in bases if profiles[base["slug"]]["overall"] >= 6.5]
+
         ranked = sorted(
-            bases,
+            ranked_candidates,
             key=lambda base: (
                 -scenario_scores(profiles[base["slug"]])[scenario_id],
                 base["name"],
             ),
         )
-
-        if scenario_id != "worst_bases":
-            ranked = ranked[:SCENARIO_LIMIT]
-        else:
-            ranked = ranked[:SCENARIO_LIMIT]
+        ranked = ranked[:SCENARIO_LIMIT]
 
         entries: list[dict] = []
         for index, base in enumerate(ranked):

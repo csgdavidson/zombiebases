@@ -34,7 +34,6 @@ const elements = {
   title: document.getElementById('scenario-title'),
   description: document.getElementById('scenario-description'),
   status: document.getElementById('scenario-status'),
-  select: document.getElementById('scenario-select'),
   list: document.getElementById('scenario-list'),
   empty: document.getElementById('scenario-empty')
 };
@@ -115,7 +114,7 @@ function setScenario(discovery, scenarioId) {
   renderList(scenario.entries || []);
 }
 
-function initScenarioPicker(discovery) {
+function initScenario(discovery) {
   const order = discovery.scenarioOrder || Object.keys(discovery.scenarios || {});
   const available = order.filter((id) => discovery.scenarios?.[id]);
 
@@ -125,35 +124,20 @@ function initScenarioPicker(discovery) {
     return;
   }
 
-  elements.select.innerHTML = '';
-  available.forEach((id) => {
-    const option = document.createElement('option');
-    option.value = id;
-    option.textContent = discovery.scenarios[id].title;
-    elements.select.appendChild(option);
-  });
-
   const params = new URLSearchParams(window.location.search);
   const requested = params.get('scenario');
   const active = available.includes(requested) ? requested : available[0];
 
-  elements.select.value = active;
   if (requested !== active) {
     updateScenarioParam(active);
   }
 
   setScenario(discovery, active);
   elements.status.textContent = '';
-
-  elements.select.addEventListener('change', () => {
-    const selected = elements.select.value;
-    updateScenarioParam(selected);
-    setScenario(discovery, selected);
-  });
 }
 
 async function init() {
-  if (!elements.list || !elements.status || !elements.select) {
+  if (!elements.list || !elements.status) {
     return;
   }
 
@@ -166,7 +150,7 @@ async function init() {
     }
 
     const discovery = await response.json();
-    initScenarioPicker(discovery);
+    initScenario(discovery);
   } catch (error) {
     console.error(error);
     elements.status.textContent = 'Unable to load scenario discovery right now.';
