@@ -3,6 +3,8 @@
   "private": true,
   "scripts": {
     "generate:discovery": "python3 scripts/generate-discovery.py",
-    "validate:discovery": "python3 scripts/validate-discovery.py"
+    "validate:discovery": "python3 scripts/validate-discovery.py",
+    "generate:interpretations": "python3 scripts/generate-interpretations.py",
+    "validate:interpretations": "python3 scripts/validate-interpretations.py"
   }
 }
