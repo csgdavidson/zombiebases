@@ -7644,25 +7644,54 @@
     "lat": 56.914,
     "long": -6.142,
     "scores": {
-      "overall": 8,
+      "overall": 8.2,
+      "defence": 6.6,
+      "supplies": 7.2,
+      "isolation": 8.7,
+      "sustainability": 8.1,
+      "access": 3.2,
       "categories": {
-        "defensibility": 6,
-        "sustainability": 8,
-        "isolation": 8,
-        "accessibility": 3
+        "defensibility": 6.6,
+        "food": 7.2,
+        "water": 6.8,
+        "isolation": 8.7,
+        "escape": 3.2,
+        "sustainability": 8.1
       }
     },
     "description": {
-      "summary": "One of the best balanced remote settlement options in the region, combining island separation with genuine community-scale survivability.",
+      "summary": "Eigg is one of the few UK island communities with proven off-grid capability, giving it rare long-horizon survival potential if a small group can secure maritime approaches and live within tight resource limits.",
       "strengths": [
-        "Strong island isolation",
-        "Credible long-term local living model"
+        "Community-scale renewable microgrid and local resilience culture",
+        "Sea separation reduces random overland contact",
+        "Small footprint is easier to coordinate and govern"
       ],
       "weaknesses": [
-        "Limited scale and infrastructure",
-        "Resupply is difficult once cut off"
+        "Limited arable capacity and storage depth",
+        "Weather and sea state can fully interrupt resupply",
+        "Medical and specialist support is thin under prolonged stress"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Best long-duration refuge for a disciplined small community",
+      "failureMode": "Resource bottlenecks and medical gaps erode viability before security collapses"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong with rationing",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Long-horizon island settlement where governance and low profile matter more than expansion speed",
+      "keyRisk": "A single bad season or casualty cluster can outpace local capacity"
+    },
+    "realityCheck": "Assumes pre-positioned stores, fishing access, and maintained local power assets.",
+    "assumptions": [
+      "Low inbound boat traffic after collapse",
+      "Core infrastructure remains operable",
+      "Group size stays within carrying capacity"
+    ],
+    "scoreNarrative": "Eigg scores highest on isolation-backed sustainability among small settlements. Its decisive weakness is scale: once demand exceeds local production and care capacity, decline is gradual but hard to reverse."
   },
   {
     "name": "Burlington Bunker",
@@ -7673,25 +7702,54 @@
     "lat": 51.356,
     "long": -2.317,
     "scores": {
-      "overall": 8,
+      "overall": 7.4,
+      "defence": 9.3,
+      "supplies": 4.8,
+      "isolation": 6.1,
+      "sustainability": 4.9,
+      "access": 3.6,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 5,
-        "isolation": 6,
-        "accessibility": 4
+        "defensibility": 9.3,
+        "food": 4.8,
+        "water": 4.4,
+        "isolation": 6.1,
+        "escape": 3.6,
+        "sustainability": 4.9
       }
     },
     "description": {
-      "summary": "One of the strongest bunker-style sites in the region, combining underground protection with purpose-built continuity logic.",
+      "summary": "Burlington Bunker offers elite blast-protected shelter and controlled access, but it is fundamentally a finite closed system that depends on preloaded logistics and strict internal management.",
       "strengths": [
-        "Hardened subterranean structure",
-        "Designed for protected occupation"
+        "Hardened underground envelope with minimal breach points",
+        "Compartmentalized internal layout supports security control",
+        "Low visual signature relative to surface compounds"
       ],
       "weaknesses": [
-        "Long-term sustainability is limited",
-        "Scalability and comfort are constrained"
+        "No organic food base and limited natural renewables",
+        "Psychological strain rises in prolonged enclosed living",
+        "Complex systems maintenance requires specialist skills"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Best continuity bunker for medium-term protected occupancy",
+      "failureMode": "Closed-system dependency causes failure when maintenance and consumables drift"
+    },
+    "survivalProfile": {
+      "initial": "Very strong",
+      "shortTerm": "Strong",
+      "longTerm": "Weak to moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Protected command-and-survival node during high-chaos early phases",
+      "keyRisk": "Technical or governance failure inside becomes more dangerous than outside threats"
+    },
+    "realityCheck": "Assumes access to stocked stores, water treatment, and functioning ventilation/power systems.",
+    "assumptions": [
+      "Initial occupancy is controlled and prepared",
+      "No catastrophic subsystem failure",
+      "Internal discipline remains high"
+    ],
+    "scoreNarrative": "Its dominant strength is hard protection; its dominant weakness is ecological incompleteness. Burlington performs extremely well early, then trends downward as maintenance burdens outrun replenishment."
   },
   {
     "name": "Cheddar Gorge Caves",
@@ -7702,25 +7760,54 @@
     "lat": 51.279,
     "long": -2.767,
     "scores": {
-      "overall": 6,
+      "overall": 5.6,
+      "defence": 7.1,
+      "supplies": 3.9,
+      "isolation": 6.0,
+      "sustainability": 3.8,
+      "access": 4.9,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 4,
-        "isolation": 6,
-        "accessibility": 5
+        "defensibility": 7.1,
+        "food": 3.9,
+        "water": 3.5,
+        "isolation": 6.0,
+        "escape": 4.9,
+        "sustainability": 3.8
       }
     },
     "description": {
-      "summary": "Natural cave shelter with strong defensive promise, though long-term living conditions and resources remain limited.",
+      "summary": "Cheddar Gorge caves provide rugged natural shelter and defensible terrain, but they are a harsh stopgap rather than a scalable survival base.",
       "strengths": [
-        "Natural subterranean protection",
-        "Difficult terrain improves defensibility"
+        "Natural chokepoints and concealment opportunities",
+        "Cool subterranean conditions aid short-term storage",
+        "High ground and broken terrain complicate pursuit"
       ],
       "weaknesses": [
-        "Poor long-term comfort and capacity",
-        "Limited sustainability without external support"
+        "Humidity, sanitation, and health management are persistent problems",
+        "Very limited space for agriculture or stable expansion",
+        "Water, lighting, and airflow reliability are inconsistent"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Best short-term hide site for small mobile groups",
+      "failureMode": "Livability constraints force relocation before threats do"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Temporary refuge and cache point while transitioning to a true settlement base",
+      "keyRisk": "Chronic environmental stress degrades people faster than conflict does"
+    },
+    "realityCheck": "Assumes low group size and frequent rotation to external resource runs.",
+    "assumptions": [
+      "Cave access remains uncontested",
+      "Nearby foraging routes are usable",
+      "No severe flooding or rockfall events"
+    ],
+    "scoreNarrative": "Cheddar is defined by defensive terrain, not survivable infrastructure. It scores as a tactical shelter with poor long-run habitability and supply resilience."
   },
   {
     "name": "Heathrow Airport",
@@ -7731,25 +7818,54 @@
     "lat": 51.47,
     "long": -0.4543,
     "scores": {
-      "overall": 2,
+      "overall": 1.9,
+      "defence": 1.2,
+      "supplies": 4.9,
+      "isolation": 0.8,
+      "sustainability": 1.4,
+      "access": 10.0,
       "categories": {
-        "defensibility": 1,
-        "sustainability": 3,
-        "isolation": 1,
-        "accessibility": 10
+        "defensibility": 1.2,
+        "food": 4.9,
+        "water": 4.5,
+        "isolation": 0.8,
+        "escape": 10.0,
+        "sustainability": 1.4
       }
     },
     "description": {
-      "summary": "One of the worst possible survival sites: enormous, exposed, and embedded in one of the densest transport systems in Europe.",
+      "summary": "Heathrow is a high-value logistics megasite that becomes a catastrophic magnet in collapse conditions: huge resources exist, but control and survivability are effectively impossible.",
       "strengths": [
-        "Massive infrastructure and storage",
-        "Excellent transport connectivity"
+        "Large initial stock and equipment footprint",
+        "Multiple transport assets for rapid extraction",
+        "Potential salvage value in very early windows"
       ],
       "weaknesses": [
-        "Impossible to defend effectively",
-        "Extreme population and conflict exposure"
+        "Extreme human pressure, visibility, and conflict probability",
+        "Massive perimeter and internal complexity prevent secure control",
+        "Dependency on large-scale systems that fail quickly without staff"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Best rapid salvage-and-exit location, not a base",
+      "failureMode": "Population convergence and uncontrollable perimeter collapse the site"
+    },
+    "survivalProfile": {
+      "initial": "Very weak",
+      "shortTerm": "Very weak",
+      "longTerm": "Non-viable"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Hours-to-days scavenging operation with preplanned exit corridors",
+      "keyRisk": "Teams get fixed in place by congestion, violence, and cascading system failures"
+    },
+    "realityCheck": "Assumes any operation occurs immediately and avoids prolonged hold attempts.",
+    "assumptions": [
+      "Extraction routes remain open",
+      "Group avoids terminal buildings chokepoints",
+      "No attempt at static defense"
+    ],
+    "scoreNarrative": "Heathrow has exceptional access and salvage potential, but those strengths are overwhelmed by uncontrollable exposure. It is the clearest example of resource-rich but survival-poor terrain."
   },
   {
     "name": "Portsmouth Harbour",
@@ -7760,25 +7876,54 @@
     "lat": 50.798,
     "long": -1.109,
     "scores": {
-      "overall": 4,
+      "overall": 3.8,
+      "defence": 3.9,
+      "supplies": 5.8,
+      "isolation": 2.3,
+      "sustainability": 4.2,
+      "access": 8.5,
       "categories": {
-        "defensibility": 4,
-        "sustainability": 5,
-        "isolation": 2,
-        "accessibility": 8
+        "defensibility": 3.9,
+        "food": 5.8,
+        "water": 5.4,
+        "isolation": 2.3,
+        "escape": 8.5,
+        "sustainability": 4.2
       }
     },
     "description": {
-      "summary": "Useful as a naval and logistics hub, but far too exposed and strategically obvious to function as a safe long-term refuge.",
+      "summary": "Portsmouth Harbour offers meaningful maritime mobility and salvage capacity, but as a strategic coastal hub it attracts sustained pressure and is difficult to harden end-to-end.",
       "strengths": [
-        "Strong maritime infrastructure",
-        "Resource and transport value"
+        "Sea access supports evacuation and route flexibility",
+        "Naval-industrial assets provide tools, fuel, and repair potential",
+        "Water barriers can shape movement if controlled"
       ],
       "weaknesses": [
-        "High population and strategic pressure",
-        "Difficult to defend comprehensively"
+        "Strategic importance draws organized human competition",
+        "Dense urban adjacency increases constant threat load",
+        "Open shoreline geometry creates many exposure angles"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Best maritime staging and evacuation node",
+      "failureMode": "Strategic visibility invites persistent contest and attrition"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Weak to moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Transit-oriented coastal operations with short dwell times",
+      "keyRisk": "Harbour control is lost through cumulative pressure rather than single breach events"
+    },
+    "realityCheck": "Assumes access to seaworthy craft, fuel discipline, and rotating watch coverage.",
+    "assumptions": [
+      "Maritime lanes remain passable",
+      "Weather windows allow movement",
+      "No long static siege"
+    ],
+    "scoreNarrative": "Portsmouth’s strongest edge is mobility, not fortress security. It can outperform inland hubs for evacuation but underperforms true refuges for sustained occupation."
   },
   {
     "name": "Neuschwanstein Castle",
@@ -7789,25 +7934,54 @@
     "lat": 47.5576,
     "long": 10.7498,
     "scores": {
-      "overall": 7,
+      "overall": 6.1,
+      "defence": 7.4,
+      "supplies": 4.6,
+      "isolation": 6.2,
+      "sustainability": 4.8,
+      "access": 4.1,
       "categories": {
-        "defensibility": 7,
-        "sustainability": 5,
-        "isolation": 6,
-        "accessibility": 4
+        "defensibility": 7.4,
+        "food": 4.6,
+        "water": 4.2,
+        "isolation": 6.2,
+        "escape": 4.1,
+        "sustainability": 4.8
       }
     },
     "description": {
-      "summary": "Elevated and visually defensive site, though not built for real conflict.",
+      "summary": "Neuschwanstein has elevation, chokepoints, and strong observation lines, yet its symbolic profile and limited practical infrastructure constrain it as a long-term survival base.",
       "strengths": [
-        "Strong elevation",
-        "Difficult access routes"
+        "Elevated terrain and approach funnels support perimeter control",
+        "Stone structure offers durable shelter envelope",
+        "Strong sightlines improve early warning"
       ],
       "weaknesses": [
-        "Not a true defensive structure",
-        "Tourism exposure"
+        "Tourist notoriety increases discoverability",
+        "Historic layout prioritizes heritage over logistics",
+        "Limited local production base for prolonged autonomy"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Best defensive hilltop hold for controlled group size",
+      "failureMode": "Visibility and logistics shortfall undermine long-term staying power"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Moderate",
+      "longTerm": "Moderate to weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Mid-duration elevated fallback with disciplined resupply planning",
+      "keyRisk": "Operational tempo shifts from defense to constant supply dependency"
+    },
+    "realityCheck": "Assumes routes are secured early before mass movement patterns harden.",
+    "assumptions": [
+      "Small team footprint",
+      "Access roads remain intermittently usable",
+      "No prolonged encirclement"
+    ],
+    "scoreNarrative": "Neuschwanstein’s core advantage is terrain-assisted defense; its core weakness is practical sustainment depth. It is viable as a defensive hold, not a self-sufficient enclave."
   },
   {
     "name": "Rocamadour",
@@ -7818,25 +7992,54 @@
     "lat": 44.8,
     "long": 1.616,
     "scores": {
-      "overall": 7,
+      "overall": 7.0,
+      "defence": 8.2,
+      "supplies": 5.7,
+      "isolation": 6.8,
+      "sustainability": 6.3,
+      "access": 4.0,
       "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 6,
-        "accessibility": 4
+        "defensibility": 8.2,
+        "food": 5.7,
+        "water": 5.3,
+        "isolation": 6.8,
+        "escape": 4.0,
+        "sustainability": 6.3
       }
     },
     "description": {
-      "summary": "Cliffside settlement with strong defensive terrain and moderate viability.",
+      "summary": "Rocamadour’s cliff-integrated form delivers excellent natural defense and route control, making it a stronger long-run option than most heritage strongholds when paired with nearby rural support.",
       "strengths": [
-        "Natural vertical defense",
-        "Controlled access routes"
+        "Vertical geography creates powerful natural barriers",
+        "Access can be channeled through a small number of controllable routes",
+        "Nearby hinterland offers better food integration than isolated castles"
       ],
       "weaknesses": [
-        "Limited expansion",
-        "Resource constraints"
+        "Expansion space is narrow and logistically awkward",
+        "Water and sanitation management become complex at higher occupancy",
+        "Visibility still attracts attention over time"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Best defensible cliff settlement for medium-to-long duration survival",
+      "failureMode": "Capacity ceilings and infrastructure strain cap long-term growth"
+    },
+    "survivalProfile": {
+      "initial": "Strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate to strong"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Cliffside community base balancing defense with regional agricultural linkage",
+      "keyRisk": "Population creep overwhelms terrain advantages and service capacity"
+    },
+    "realityCheck": "Assumes the group secures surrounding rural production, not only the cliff core.",
+    "assumptions": [
+      "Disciplined occupancy limits",
+      "Stable water logistics",
+      "Regional routes remain intermittently open"
+    ],
+    "scoreNarrative": "Rocamadour stands out for terrain-dominant defensibility with better rural linkage than iconic castle sites. Its limiting factor is not breach risk but carrying capacity."
   },
   {
     "name": "Carcassonne",
@@ -7847,25 +8050,54 @@
     "lat": 43.213,
     "long": 2.351,
     "scores": {
-      "overall": 8,
+      "overall": 7.6,
+      "defence": 9.1,
+      "supplies": 5.2,
+      "isolation": 5.4,
+      "sustainability": 5.7,
+      "access": 5.0,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 5,
-        "isolation": 5,
-        "accessibility": 5
+        "defensibility": 9.1,
+        "food": 5.2,
+        "water": 4.8,
+        "isolation": 5.4,
+        "escape": 5.0,
+        "sustainability": 5.7
       }
     },
     "description": {
-      "summary": "One of Europe’s strongest historic fortifications with excellent defensive potential.",
+      "summary": "Carcassonne is a premier fortified-shell base: outstanding perimeter depth and layered defense, but comparatively modest self-sufficiency unless integrated with external production zones.",
       "strengths": [
-        "Massive fortified walls",
-        "Clear defensive structure"
+        "Extensive fortification layers and defensive geometry",
+        "Clear internal zoning supports command and fallback lines",
+        "Durable structure tolerates prolonged external pressure"
       ],
       "weaknesses": [
-        "Limited modern sustainability",
-        "Tourism exposure"
+        "Urban-adjacent profile increases contact frequency",
+        "Internal agricultural and water independence are limited",
+        "Large defensive footprint demands manpower discipline"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Best large fortified hold for organized defensive groups",
+      "failureMode": "Sustainment lag behind defensive capacity causes long-term erosion"
+    },
+    "survivalProfile": {
+      "initial": "Very strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Regional defensive strongpoint anchored to secured nearby farmland",
+      "keyRisk": "Manpower and logistics fatigue degrade wall advantage over time"
+    },
+    "realityCheck": "Assumes integrated outer logistics ring rather than fortress-only living.",
+    "assumptions": [
+      "Group can field layered watch rotations",
+      "Nearby production zones are defended",
+      "Supply corridors are periodically restored"
+    ],
+    "scoreNarrative": "Carcassonne’s dominant strength is structural defense at scale. Its dominant weakness is sustainment depth, producing a classic fortress paradox: hard to take, hard to keep fed."
   },
   {
     "name": "Mont Saint-Michel",
@@ -7876,25 +8108,54 @@
     "lat": 48.636,
     "long": -1.511,
     "scores": {
-      "overall": 8,
+      "overall": 8.4,
+      "defence": 9.4,
+      "supplies": 4.7,
+      "isolation": 9.1,
+      "sustainability": 5.3,
+      "access": 2.6,
       "categories": {
-        "defensibility": 9,
-        "sustainability": 5,
-        "isolation": 8,
-        "accessibility": 3
+        "defensibility": 9.4,
+        "food": 4.7,
+        "water": 4.3,
+        "isolation": 9.1,
+        "escape": 2.6,
+        "sustainability": 5.3
       }
     },
     "description": {
-      "summary": "Exceptional tidal fortress with elite defensive characteristics.",
+      "summary": "Mont Saint-Michel combines fortress architecture with exceptional tidal separation, producing one of the most defensible micro-strongholds in Europe—if strict rationing and logistics discipline are maintained.",
       "strengths": [
-        "Natural tidal isolation",
-        "Strong defensive structure"
+        "Tidal access windows naturally restrict assault timing",
+        "Compact defensible footprint with strong elevation and walls",
+        "High approach visibility enables early threat detection"
       ],
       "weaknesses": [
-        "Limited living space",
-        "Supply constraints"
+        "Very limited living and production space",
+        "Supply dependency remains high without controlled maritime links",
+        "Severe bottlenecks during emergencies or medical events"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Best high-security island-fortress redoubt for small elite groups",
+      "failureMode": "Space and supply ceilings become the long-term failure driver"
+    },
+    "survivalProfile": {
+      "initial": "Very strong",
+      "shortTerm": "Strong",
+      "longTerm": "Moderate"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "High-security refuge prioritizing defense over growth",
+      "keyRisk": "Operational success in defense masks unsolved throughput and sustainment limits"
+    },
+    "realityCheck": "Assumes disciplined population cap and reliable small-boat logistics.",
+    "assumptions": [
+      "Tidal patterns remain exploitable",
+      "No prolonged blockade",
+      "Strict consumption control"
+    ],
+    "scoreNarrative": "Mont Saint-Michel’s standout edge is tidal defensibility unmatched by most land fortresses. Its limiting weakness is throughput: people, supplies, and medical response all bottleneck quickly."
   },
   {
     "name": "Rotterdam Port",
@@ -7905,25 +8166,54 @@
     "lat": 51.955,
     "long": 4.142,
     "scores": {
-      "overall": 4,
+      "overall": 4.6,
+      "defence": 2.8,
+      "supplies": 8.6,
+      "isolation": 1.9,
+      "sustainability": 4.6,
+      "access": 9.4,
       "categories": {
-        "defensibility": 3,
-        "sustainability": 7,
-        "isolation": 2,
-        "accessibility": 9
+        "defensibility": 2.8,
+        "food": 8.6,
+        "water": 8.2,
+        "isolation": 1.9,
+        "escape": 9.4,
+        "sustainability": 4.6
       }
     },
     "description": {
-      "summary": "Massive industrial logistics hub with resources but extreme exposure.",
+      "summary": "Rotterdam Port is a mega-logistics engine with huge salvage and industrial utility, but its openness, scale, and strategic visibility make it unsuitable as a static survival refuge.",
       "strengths": [
-        "Industrial scale resources",
-        "Logistics infrastructure"
+        "Massive equipment, fuel, and material inventory potential",
+        "Redundant transport modalities enable flexible movement",
+        "Industrial facilities can support repair and fabrication"
       ],
       "weaknesses": [
-        "Highly visible",
-        "Impossible to secure"
+        "Enormous perimeter is infeasible to secure comprehensively",
+        "Strategic prominence guarantees competition and conflict",
+        "Flood, fire, and hazardous-material risks compound crisis volatility"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Best industrial extraction and mobile logistics platform",
+      "failureMode": "Static defense fails under scale, visibility, and contest pressure"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Weak to moderate",
+      "longTerm": "Weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Resource harvest and convoy staging with strict no-settlement doctrine",
+      "keyRisk": "Teams overcommit to infrastructure value and become trapped in contested terrain"
+    },
+    "realityCheck": "Assumes high mobility, convoy security, and short operational cycles.",
+    "assumptions": [
+      "Fuel capture remains feasible",
+      "Key channels are navigable",
+      "No attempt to hold entire port complex"
+    ],
+    "scoreNarrative": "Rotterdam excels at supplies and movement, not protection. Its principal trade-off is clear: extraordinary material advantage bought at extreme exposure cost."
   },
   {
     "name": "Ruhr Industrial Complex",
@@ -7934,25 +8224,54 @@
     "lat": 51.4556,
     "long": 7.0116,
     "scores": {
-      "overall": 5,
+      "overall": 5.3,
+      "defence": 4.0,
+      "supplies": 8.1,
+      "isolation": 2.2,
+      "sustainability": 5.4,
+      "access": 8.8,
       "categories": {
-        "defensibility": 4,
-        "sustainability": 7,
-        "isolation": 2,
-        "accessibility": 8
+        "defensibility": 4.0,
+        "food": 8.1,
+        "water": 7.7,
+        "isolation": 2.2,
+        "escape": 8.8,
+        "sustainability": 5.4
       }
     },
     "description": {
-      "summary": "Resource-rich industrial region but heavily exposed and densely populated.",
+      "summary": "The Ruhr offers broad industrial depth and production potential, but dense settlement patterns and interconnected infrastructure create constant threat pressure that undermines stable long-term control.",
       "strengths": [
-        "Industrial production capacity",
-        "Resource availability"
+        "High regional manufacturing and repair capacity",
+        "Diverse salvage streams across multiple industrial nodes",
+        "Potential for distributed operations instead of single-site dependence"
       ],
       "weaknesses": [
-        "Dense population",
-        "Difficult to defend"
+        "Dense urban-industrial landscape drives persistent contact risk",
+        "Many approach vectors and transport links are hard to lock down",
+        "Pollution and infrastructure hazards degrade health resilience"
       ]
-    }
+    },
+    "verdict": {
+      "bestUseCase": "Best distributed industrial support region, not a singular fortress base",
+      "failureMode": "Security complexity across many nodes causes gradual systemic attrition"
+    },
+    "survivalProfile": {
+      "initial": "Moderate",
+      "shortTerm": "Moderate",
+      "longTerm": "Moderate to weak"
+    },
+    "useCaseAndRisk": {
+      "bestUseCase": "Networked production-and-repair corridor supporting external refuges",
+      "keyRisk": "Coordination burden and security sprawl exceed organizational capacity"
+    },
+    "realityCheck": "Assumes a federated model of smaller defensible hubs, not one centralized hold.",
+    "assumptions": [
+      "Inter-node transport remains possible",
+      "Groups can enforce route security",
+      "Industrial hazards are actively managed"
+    ],
+    "scoreNarrative": "Ruhr’s edge is scale and diversity of supply capability. Its weakness is security sprawl: the more territory leveraged, the harder coherent defense becomes."
   },
   {
     "name": "2e REP Barracks (Calvi)",
