@@ -3709,7 +3709,7 @@
     },
     "lat": 38.7444,
     "long": -104.8719,
-    "image": "/images/bases/cheyenne-mountain-complex.jpg",
+    "image": "/images/bases/cheyenne-mountain-complex.png",
     "verdict": {
       "bestUseCase": "High-security command-and-shelter node for structured, technical teams",
       "failureMode": "Maintenance debt breaks life-support chains that the site depends on"
