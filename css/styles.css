@@ -1,13 +1,13 @@
 :root {
-  --bg: #f3f4f6;
+  --bg: #e9edf2;
   --surface: #ffffff;
-  --surface-subtle: #f8fafc;
+  --surface-subtle: #f4f7fb;
   --text: #111827;
-  --text-secondary: #334155;
-  --muted: #6b7280;
-  --border: #d1d5db;
+  --text-secondary: #3f4a5a;
+  --muted: #7c8797;
+  --border: #c9d2dd;
   --accent: #0f172a;
-  --score-high: #166534;
+  --score-high: #15803d;
   --score-medium: #b45309;
   --score-low: #b91c1c;
   --space-1: 4px;
@@ -19,15 +19,15 @@
   --radius-sm: 6px;
   --radius-md: 8px;
   --radius-pill: 999px;
-  --fs-title: 18px;
-  --fs-h2: 16px;
+  --fs-title: 20px;
+  --fs-h2: 17px;
   --fs-body: 14px;
   --fs-meta: 12px;
   --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
   --lh-tight: 1.3;
-  --lh-body: 1.5;
+  --lh-body: 1.62;
 }
 
 * {
@@ -60,16 +60,16 @@ main {
 
 h1 {
   margin: 0;
-  font-size: clamp(1.35rem, 2vw, 1.6rem);
+  font-size: clamp(1.5rem, 2.2vw, 1.85rem);
   line-height: var(--lh-tight);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-bold);
 }
 
 h2 {
   margin: 0;
   font-size: var(--fs-h2);
   line-height: var(--lh-tight);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-semibold);
 }
 
 main {
@@ -165,6 +165,7 @@ input[type="search"] {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .base-card-link {
@@ -204,7 +205,7 @@ input[type="search"] {
 
 .base-meta {
   margin: 0;
-  color: var(--muted);
+  color: #8893a3;
   font-size: var(--fs-meta);
   line-height: var(--lh-body);
 }
@@ -218,13 +219,13 @@ input[type="search"] {
 .base-country {
   margin: 0;
   font-size: var(--fs-meta);
-  color: var(--muted);
+  color: #8d98a8;
   font-weight: 400;
 }
 
 .base-summary {
   margin: 0;
-  color: var(--muted);
+  color: var(--text-secondary);
   font-size: var(--fs-body);
   line-height: var(--lh-body);
   display: -webkit-box;
@@ -238,18 +239,24 @@ input[type="search"] {
   justify-self: start;
   margin-top: 0.2rem;
   display: inline-block;
-  padding: 0.12rem 0.55rem;
+  padding: 0.2rem 0.62rem;
   border-radius: var(--radius-pill);
   font-size: var(--fs-meta);
   font-weight: 400;
-  border: 1px solid var(--border);
-  background: var(--surface-subtle);
+  border: 1px solid #c8d3df;
+  background: #eef3f8;
 }
 
-.status-featured,
+.status-featured {
+  color: #155e75;
+  background: #e0f2fe;
+  border-color: #bae6fd;
+}
+
 .status-published {
-  color: var(--muted);
-  background: var(--surface);
+  color: #556172;
+  background: #eef2f7;
+  border-color: #d9e2ec;
 }
 
 .map-view {
@@ -263,7 +270,8 @@ input[type="search"] {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   overflow: hidden;
-  background: var(--surface);
+  background: #f8fbff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .map-status {
@@ -281,7 +289,7 @@ input[type="search"] {
 
 .base-page {
   display: grid;
-  gap: var(--space-5);
+  gap: var(--space-6);
 }
 
 .detail-hero {
@@ -296,7 +304,7 @@ input[type="search"] {
 
 .detail-summary {
   margin: 0;
-  color: var(--text);
+  color: var(--text-secondary);
   max-width: 72ch;
   font-size: var(--fs-body);
 }
@@ -313,7 +321,8 @@ input[type="search"] {
   border-top: 1px solid var(--border);
   padding-top: var(--space-4);
   display: grid;
-  gap: var(--space-3);
+  gap: var(--space-2);
+  margin-top: var(--space-2);
 }
 
 .content-section h3 {
@@ -494,6 +503,7 @@ input[type="search"] {
   border: 1px solid var(--border);
   border-radius: var(--space-2);
   padding: var(--space-4);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .featured-section h2 {
@@ -567,6 +577,7 @@ input[type="search"] {
   border: 1px solid var(--border);
   border-radius: var(--space-2);
   padding: var(--space-4);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .not-found h2 {
@@ -643,6 +654,7 @@ input[type="search"] {
   color: var(--muted);
   display: grid;
   gap: var(--space-4);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
 }
 
 .empty-state p {
@@ -656,9 +668,10 @@ input[type="search"] {
 
 .detail-overall-score {
   margin: 0 0 var(--space-2);
-  font-size: var(--fs-title);
+  font-size: clamp(1.65rem, 3vw, 2rem);
   font-weight: 700;
   line-height: var(--lh-tight);
+  color: var(--score-high);
 }
 
 #score-section {
@@ -666,6 +679,7 @@ input[type="search"] {
   background: var(--surface);
   border-radius: var(--space-2);
   padding: var(--space-4);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .score-list {
@@ -682,39 +696,57 @@ input[type="search"] {
 
 .badge {
   display: inline-block;
-  padding: 4px 8px;
+  padding: 0.24rem 0.6rem;
   border-radius: 6px;
   font-size: 12px;
   font-weight: 400;
   margin-right: 6px;
   margin-top: 4px;
-  background: #e2e8f0;
+  background: #dde6f2;
   color: #0f172a;
+  border: 1px solid #ccd8e6;
 }
 
 .badge-tier,
 .badge-identity,
 .badge-trait {
-  background: #e5e7eb;
   color: var(--text);
+}
+
+.badge-tier {
+  background: #dbeafe;
+  border-color: #bfdbfe;
+  color: #1e3a8a;
+}
+
+.badge-identity {
+  background: #dcfce7;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+
+.badge-trait {
+  background: #ede9fe;
+  border-color: #ddd6fe;
+  color: #5b21b6;
 }
 
 .score-insight {
   margin-top: 0.65rem !important;
-  color: var(--muted);
+  color: #6f7d90;
   font-size: 0.92rem;
   white-space: pre-line;
 }
 
 .score-interpretation {
   margin-top: 0.65rem !important;
-  color: #334155;
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
 .comparison-panel {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.6rem;
 }
 
 .comparison-panel h3 {
@@ -733,7 +765,7 @@ input[type="search"] {
 }
 
 .comparison-section + .comparison-section {
-  padding-top: 0.5rem;
+  padding-top: 0.45rem;
   border-top: 1px solid var(--border);
 }
 
@@ -899,6 +931,7 @@ input[type="search"] {
   padding: var(--space-3) var(--space-4);
   display: grid;
   gap: var(--space-2);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .controls-panel {
@@ -910,7 +943,7 @@ input[type="search"] {
 }
 
 .rankings-explore h2 {
-  margin: 0 0 var(--space-1);
+  margin: var(--space-2) 0 var(--space-1);
 }
 
 .discovery-group {
