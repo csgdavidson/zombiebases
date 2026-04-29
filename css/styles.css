@@ -450,6 +450,16 @@ input[type="search"] {
   border: 1px solid var(--border);
 }
 
+.base-feature-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 6;
+  object-fit: cover;
+  border-radius: var(--space-2);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
 .base-meta-row {
   list-style: none;
   margin: 0;
