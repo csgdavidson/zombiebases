@@ -22,33 +22,41 @@
 
     <article id="base-detail" class="base-page" hidden>
       <header class="detail-hero">
-        <h1 id="base-name"></h1>
+        <div class="detail-hero-main">
+          <h1 id="base-name"></h1>
 
-        <section id="hero-section" class="hero-section" aria-label="Hero image section" hidden>
-          <img id="base-hero-image" class="hero-image base-feature-image" alt="">
-        </section>
+          <section id="hero-section" class="hero-section" aria-label="Hero image section" hidden>
+            <img id="base-hero-image" class="hero-image base-feature-image" alt="">
+          </section>
 
-        <p id="base-summary-lead" class="detail-summary" hidden></p>
-        <p id="base-hero-strengths-row" hidden><strong>Strengths:</strong> <span id="base-hero-strengths"></span></p>
-        <p id="base-hero-weaknesses-row" hidden><strong>Weaknesses:</strong> <span id="base-hero-weaknesses"></span></p>
-        <p id="base-reality-check-row" hidden><strong>Reality check:</strong> <span id="base-reality-check"></span></p>
-        <p id="base-best-use-row" hidden><strong>Best use:</strong> <span id="base-best-use"></span></p>
-        <p id="base-key-risk-row" hidden><strong>Key risk:</strong> <span id="base-key-risk"></span></p>
-        <ul id="base-meta-row" class="base-meta-row" aria-label="Base metadata"></ul>
+          <p id="base-summary-lead" class="detail-summary" hidden></p>
+          <p id="base-hero-strengths-row" hidden><strong>Strengths:</strong> <span id="base-hero-strengths"></span></p>
+          <p id="base-hero-weaknesses-row" hidden><strong>Weaknesses:</strong> <span id="base-hero-weaknesses"></span></p>
+          <p id="base-reality-check-row" hidden><strong>Reality check:</strong> <span id="base-reality-check"></span></p>
+          <p id="base-best-use-row" hidden><strong>Best use:</strong> <span id="base-best-use"></span></p>
+          <p id="base-key-risk-row" hidden><strong>Key risk:</strong> <span id="base-key-risk"></span></p>
+          <ul id="base-meta-row" class="base-meta-row" aria-label="Base metadata"></ul>
+        </div>
+        <aside id="ranking-section" class="detail-positioning" aria-label="Positioning" hidden>
+          <ul id="ranking-list" class="ranking-list ranking-badges"></ul>
+        </aside>
       </header>
 
       <div class="summary-band">
         <section id="score-section" class="content-section summary-panel" aria-label="Score section" hidden>
           <h3>Score</h3>
-          <p id="score-empty">Scoring coming soon.</p>
-          <p id="base-score-overall" class="detail-overall-score" hidden></p>
-          <p id="base-score-badges" class="badge-row" hidden></p>
-          <ul id="base-score-list" class="score-list" hidden></ul>
-        </section>
-
-        <section id="ranking-section" class="content-section summary-panel" aria-label="Rankings section" hidden>
-          <h3>Positioning</h3>
-          <ul id="ranking-list" class="ranking-list"></ul>
+          <div class="score-layout">
+            <div class="score-overall-column">
+              <p id="score-empty">Scoring coming soon.</p>
+              <p id="base-score-overall" class="detail-overall-score" hidden></p>
+            </div>
+            <div class="score-tags-column">
+              <p id="base-score-badges" class="badge-row" hidden></p>
+            </div>
+            <div class="score-breakdown-column">
+              <ul id="base-score-list" class="score-list" hidden></ul>
+            </div>
+          </div>
         </section>
       </div>
 
