@@ -350,7 +350,7 @@ input[type="search"] {
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   align-items: start;
-  gap: var(--space-4);
+  gap: 20px;
   margin-top: var(--space-5);
 }
 
@@ -1038,13 +1038,30 @@ input[type="search"] {
 }
 
 #ranking-section {
-  padding: calc(var(--space-4) + 2px);
-  gap: var(--space-2);
+  margin-top: var(--space-4);
+  padding: calc(var(--space-4) + 1px);
+  gap: var(--space-3);
+  border: 1px solid #b8c8d9;
+  background: #f7fafd;
+  border-radius: var(--space-2);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
 }
 
 #ranking-section .ranking-list {
-  font-size: 0.98rem;
-  line-height: 1.45;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  gap: 0.6rem;
+}
+
+#ranking-section .ranking-list li:first-child {
+  font-size: 1rem;
+  font-weight: 650;
+  color: #12263f;
+}
+
+#ranking-section .ranking-list li:not(:first-child) {
+  color: #5f7085;
+  font-size: 0.92rem;
 }
 
 .ranking-list a {
