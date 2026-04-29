@@ -341,7 +341,7 @@ function renderHero(base) {
   }
 
   elements.heroImage.src = imageUrl;
-  elements.heroImage.alt = `${base.name} hero image`;
+  elements.heroImage.alt = `Feature image for ${base.name}`;
   elements.heroSection.hidden = false;
 }
 
