@@ -321,7 +321,6 @@ input[type="search"] {
 .detail-summary {
   margin: 0;
   color: var(--text-secondary);
-  max-width: 72ch;
   font-size: var(--fs-body);
 }
 
@@ -343,7 +342,7 @@ input[type="search"] {
   display: grid;
   gap: var(--space-1);
   margin-top: var(--space-5);
-  max-width: 74ch;
+  width: 100%;
 }
 
 .content-section h3 {
@@ -358,22 +357,22 @@ input[type="search"] {
   margin: 0;
 }
 
-.dossier-panel {
-  border: 1px solid #90a9c1;
-  background: #f3f8ff;
-  border-radius: var(--space-2);
-  padding: calc(var(--space-4) + 6px);
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.09);
-  margin-top: var(--space-2);
-  width: 100%;
-  box-sizing: border-box;
-  gap: var(--space-3);
-}
-
 .base-page .content-section {
   max-width: none;
   width: 100%;
   box-sizing: border-box;
+}
+
+.base-intro-section {
+  margin-top: 0;
+}
+
+.score-band {
+  margin-top: var(--space-4);
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+  background: linear-gradient(180deg, rgba(243, 248, 255, 0.75), rgba(243, 248, 255, 0.4));
 }
 
 .base-page .dossier-content,
@@ -738,9 +737,6 @@ input[type="search"] {
   display: grid;
   gap: var(--space-4);
   align-items: start;
-  border-bottom: 1px solid rgba(144, 169, 193, 0.42);
-  padding-bottom: var(--space-4);
-  margin-bottom: var(--space-1);
 }
 
 .score-overall-column,
@@ -777,14 +773,15 @@ input[type="search"] {
 .badge {
   display: inline-block;
   padding: 0.24rem 0.6rem;
-  border-radius: 6px;
+  border-radius: var(--radius-pill);
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 600;
   margin-right: 6px;
   margin-top: 4px;
-  background: #f4f7fb;
-  color: #607087;
-  border: 1px solid #d7e0ea;
+  background: rgba(15, 23, 42, 0.84);
+  color: #f8fafc;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  box-shadow: 0 6px 16px rgba(2, 6, 23, 0.45), 0 0 12px rgba(15, 23, 42, 0.28);
 }
 
 .badge-tier {
@@ -1269,25 +1266,21 @@ input[type="search"] {
   }
 
   #ranking-section {
-    position: static;
-    margin-top: var(--space-2);
-    max-width: 100%;
-  }
-
-  #ranking-section .ranking-list {
-    justify-content: flex-start;
-  }
-
-  #ranking-section .ranking-list li {
-    flex: 1 1 auto;
+    top: var(--space-2);
+    right: var(--space-2);
   }
 }
 
 @media (min-width: 900px) {
   .dossier-score-header {
-    grid-template-columns: minmax(190px, auto) minmax(220px, 1fr) minmax(250px, 1fr);
+    grid-template-columns: minmax(190px, 0.9fr) minmax(240px, 1.2fr) minmax(220px, 1fr);
     align-items: start;
     column-gap: calc(var(--space-5) + 4px);
+  }
+
+  .score-breakdown-column {
+    justify-self: end;
+    text-align: right;
   }
 
   .score-breakdown-column .score-list {
