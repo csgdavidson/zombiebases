@@ -749,7 +749,7 @@ function buildRankingsLinks(base, rankings) {
   if (globalEntry) {
     const topPercent = Math.max(1, Math.round(globalEntry.percentile));
     entries.push({
-      text: `Top ${topPercent}% globally`,
+      text: `Global #${globalEntry.rank} · Top ${topPercent}%`,
       href: './rankings.html'
     });
   }
@@ -765,7 +765,7 @@ function buildRankingsLinks(base, rankings) {
   if (typeEntry) {
     const typeLabel = labelFor('type', base.type);
     entries.push({
-      text: `Top ${typeEntry.rank} in ${typeLabel}`,
+      text: `${typeLabel} #${typeEntry.rank}`,
       href: `./rankings-type.html?type=${encodeURIComponent(base.type)}`
     });
   }
