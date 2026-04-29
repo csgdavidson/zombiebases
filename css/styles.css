@@ -366,7 +366,23 @@ input[type="search"] {
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.09);
   margin-top: var(--space-2);
   width: 100%;
+  box-sizing: border-box;
   gap: var(--space-3);
+}
+
+.base-page .content-section {
+  max-width: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.base-page .dossier-content,
+.base-page .dossier-content p,
+.base-page .score-list,
+.base-page .score-list li {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .survival-profile-header {
@@ -751,6 +767,7 @@ input[type="search"] {
   align-content: start;
   gap: var(--space-2);
   padding-top: 2px;
+  min-width: 0;
 }
 
 .badge-row {
@@ -899,6 +916,10 @@ input[type="search"] {
 }
 
 @media (max-width: 640px) {
+
+  .base-page .dossier-score-header {
+    grid-template-columns: 1fr;
+  }
 
   .survival-profile-header {
     align-items: flex-start;
