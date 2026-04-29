@@ -357,15 +357,15 @@ input[type="search"] {
   margin: 0;
 }
 
-.summary-band {
-  display: block;
-  margin-top: var(--space-5);
+.dossier-panel {
+  border: 1px solid #90a9c1;
+  background: #f3f8ff;
+  border-radius: var(--space-2);
+  padding: calc(var(--space-4) + 2px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.09);
+  margin-top: var(--space-2);
   width: 100%;
-}
-
-.summary-panel {
-  margin-top: 0;
-  height: 100%;
+  gap: var(--space-3);
 }
 
 .survival-profile-header {
@@ -709,16 +709,6 @@ input[type="search"] {
   color: var(--score-high);
 }
 
-#score-section {
-  border: 1px solid #90a9c1;
-  background: #f3f8ff;
-  border-radius: var(--space-2);
-  padding: calc(var(--space-4) + 2px);
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.09);
-  margin-top: var(--space-4);
-  width: 100%;
-}
-
 .score-list {
   list-style: none;
   margin: 0;
@@ -727,9 +717,11 @@ input[type="search"] {
   gap: 0.4rem;
 }
 
-.score-layout {
+.dossier-score-header {
   display: grid;
   gap: var(--space-4);
+  border-bottom: 1px solid rgba(144, 169, 193, 0.55);
+  padding-bottom: var(--space-3);
 }
 
 .score-overall-column,
@@ -1084,19 +1076,20 @@ input[type="search"] {
 }
 
 .ranking-list a {
-  color: #e2e8f0;
+  color: #f8fafc;
   text-decoration: none;
-  font-weight: 550;
-  border: 1px solid rgba(203, 213, 225, 0.45);
-  background: rgba(15, 23, 42, 0.52);
-  backdrop-filter: blur(2px);
+  font-weight: 600;
+  border: 1px solid rgba(226, 232, 240, 0.38);
+  background: rgba(2, 6, 23, 0.64);
+  backdrop-filter: blur(7px);
   border-radius: var(--radius-pill);
   font-size: var(--fs-meta);
   line-height: 1.2;
-  padding: 0.24rem 0.52rem;
+  padding: 0.32rem 0.6rem;
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.35);
 }
 
 .ranking-list a:hover,
@@ -1238,10 +1231,14 @@ input[type="search"] {
   #ranking-section .ranking-list {
     justify-content: flex-start;
   }
+
+  #ranking-section .ranking-list li {
+    flex: 1 1 auto;
+  }
 }
 
 @media (min-width: 900px) {
-  .score-layout {
+  .dossier-score-header {
     grid-template-columns: minmax(190px, auto) minmax(220px, 1fr) minmax(250px, 1fr);
     align-items: center;
     column-gap: var(--space-5);
