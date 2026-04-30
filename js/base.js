@@ -939,11 +939,15 @@ function renderSimilarBases(base, discovery, params) {
 
     const image = document.createElement('img');
     image.className = 'similar-base-thumb';
-    image.src = `/images/bases/${encodeURIComponent(item.slug)}.png`;
+    image.src = `/images/bases/${item.slug}.png`;
     image.alt = `${item.name} thumbnail`;
     image.loading = 'lazy';
-    image.width = 120;
-    image.height = 68;
+    image.decoding = 'async';
+    image.width = 112;
+    image.height = 63;
+    image.addEventListener('error', () => {
+      image.src = '/images/bases/placeholder.png';
+    }, { once: true });
     imageLink.appendChild(image);
 
     const textWrap = document.createElement('div');
