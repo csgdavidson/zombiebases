@@ -665,6 +665,35 @@ main > * {
 }
 
 
+.compact-base-list li.similar-base-item {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: start;
+}
+
+.similar-base-thumb-link {
+  display: block;
+  border-radius: var(--radius-sm);
+}
+
+.similar-base-thumb {
+  display: block;
+  width: 120px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: #e7edf5;
+}
+
+.similar-base-text {
+  min-width: 0;
+}
+
+.similar-base-text > a {
+  font-weight: var(--fw-semibold);
+}
+
 .site-brand {
   margin: 0;
   font-size: var(--fs-title);
