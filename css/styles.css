@@ -1,3 +1,4 @@
+/* Tokens: global design variables for color, spacing, type, and radii. */
 :root {
   --bg: #e3e9f1;
   --surface: #fdfefe;
@@ -32,6 +33,7 @@
   --lh-body: 1.62;
 }
 
+/* Layout: foundational page flow, containers, and shared spacing behavior. */
 * {
   box-sizing: border-box;
 }
@@ -43,11 +45,6 @@ body {
   line-height: var(--lh-body);
   color: var(--text);
   background: var(--bg);
-}
-
-h3 {
-  color: #0f1f35;
-  font-weight: 650;
 }
 
 .site-header {
@@ -94,6 +91,7 @@ main > * {
   display: none !important;
 }
 
+/* Buttons / filters: interactive controls used in list, map, and ranking filters. */
 .view-toggle {
   display: flex;
   align-items: center;
@@ -141,7 +139,8 @@ main > * {
   min-width: 260px;
 }
 
-label {
+.controls-panel label,
+.rankings-filter-wrap label {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
@@ -149,8 +148,10 @@ label {
   color: var(--muted);
 }
 
-select,
-input[type="search"] {
+.controls-panel select,
+.controls-panel input[type="search"],
+.rankings-filter-wrap select,
+.rankings-filter-wrap input[type="search"] {
   width: 100%;
   border: 1px solid var(--border);
   border-radius: 0.5rem;
@@ -161,6 +162,7 @@ input[type="search"] {
   line-height: var(--lh-body);
 }
 
+/* Cards: reusable base-card/list card styles for homepage and ranking listings. */
 #bases-list {
   list-style: none;
   margin: 0;
@@ -244,6 +246,7 @@ input[type="search"] {
   overflow: hidden;
 }
 
+/* Tags / pills: compact status chips, filter chips, and taxonomy badges. */
 .status-badge {
   justify-self: start;
   margin-top: 0.2rem;
@@ -268,6 +271,7 @@ input[type="search"] {
   border-color: #d9e2ec;
 }
 
+/* Layout: map and detail page structural components. */
 .map-view {
   display: grid;
   gap: var(--space-2);
@@ -367,6 +371,7 @@ input[type="search"] {
   margin-top: 0;
 }
 
+/* Score band: highlighted overall scoring region and score-column structure. */
 .score-band {
   margin-top: var(--space-4);
   padding: var(--space-4) 0;
@@ -519,6 +524,7 @@ input[type="search"] {
   border-top-color: #475569;
 }
 
+/* Feature image badges: hero image, ranking overlays, and image badge placement. */
 .hero-image {
   display: block;
   width: 100%;
@@ -717,6 +723,14 @@ input[type="search"] {
   align-self: start;
 }
 
+/* Typography: score readouts, insight text, and semantic emphasis helpers. */
+.content-section h3,
+.comparison-panel h3,
+.survival-profile-header h3 {
+  color: #0f1f35;
+  font-weight: 650;
+}
+
 .detail-overall-score {
   margin: 0;
   font-size: clamp(2.15rem, 4vw, 2.8rem);
@@ -816,6 +830,7 @@ input[type="search"] {
   font-size: 0.9rem;
 }
 
+/* Comparison bars: side-by-side metric comparison rows and visual bar scale. */
 .comparison-panel {
   display: grid;
   gap: 0.5rem;
@@ -912,6 +927,7 @@ input[type="search"] {
   pointer-events: none;
 }
 
+/* Survival profile: responsive stage timeline and trajectory micro-visualization. */
 @media (max-width: 640px) {
 
   .base-page .dossier-score-header {
@@ -1001,6 +1017,7 @@ input[type="search"] {
   }
 }
 
+/* Cards: rankings explore and ranking list card variants. */
 .rankings-explore {
   background: #e9eff6;
   border: 1px solid #c9d6e3;
