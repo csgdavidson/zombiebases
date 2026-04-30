@@ -216,7 +216,7 @@ main > * {
 
 .base-meta {
   margin: 0;
-  color: #8b98ab;
+  color: #5f6f84;
   font-size: var(--fs-meta);
   line-height: var(--lh-body);
 }
@@ -230,13 +230,13 @@ main > * {
 .base-country {
   margin: 0;
   font-size: var(--fs-meta);
-  color: #9aa5b6;
+  color: #6b7b90;
   font-weight: 400;
 }
 
 .base-summary {
   margin: 0;
-  color: #617288;
+  color: #3f5168;
   font-size: var(--fs-body);
   line-height: var(--lh-body);
   display: -webkit-box;
@@ -341,11 +341,14 @@ main > * {
 }
 
 .content-section {
-  border-top: 1px solid var(--border);
-  padding-top: var(--space-3);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+  padding: var(--space-4);
   display: grid;
   gap: var(--space-1);
-  margin-top: var(--space-5);
+  margin-top: var(--space-4);
   width: 100%;
 }
 
@@ -374,10 +377,11 @@ main > * {
 /* Score band: highlighted overall scoring region and score-column structure. */
 .score-band {
   margin-top: var(--space-4);
-  padding: var(--space-4) 0;
-  border-top: 1px solid var(--border-soft);
-  border-bottom: 1px solid var(--border-soft);
-  background: linear-gradient(180deg, rgba(243, 248, 255, 0.75), rgba(243, 248, 255, 0.4));
+  padding: var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(249, 252, 255, 0.96), rgba(244, 249, 255, 0.9));
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06);
 }
 
 .base-page .dossier-content,
@@ -819,7 +823,7 @@ main > * {
 
 .score-insight {
   margin-top: 0.6rem !important;
-  color: #8090a4;
+  color: #5f728a;
   font-size: 0.92rem;
   white-space: pre-line;
 }
@@ -860,7 +864,7 @@ main > * {
   margin: 0;
   font-size: 0.86rem;
   letter-spacing: 0.02em;
-  color: #738499;
+  color: #5f7186;
 }
 
 .comparison-row {
@@ -893,7 +897,7 @@ main > * {
 }
 
 .comparison-values {
-  color: #7f8b9c;
+  color: #5f7085;
   font-size: 0.8rem;
   justify-self: end;
   text-align: right;
@@ -1161,6 +1165,18 @@ main > * {
   margin-bottom: 0.25rem;
 }
 
+.rankings-page-header,
+.rankings-list-surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+}
+
+.rankings-list-surface {
+  padding-top: var(--space-3);
+}
+
 .rankings-filter-wrap {
   margin-top: var(--space-3);
   max-width: 320px;
@@ -1175,7 +1191,7 @@ main > * {
 }
 
 .ranking-row {
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-soft);
   padding-bottom: var(--space-4);
 }
 
