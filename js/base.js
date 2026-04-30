@@ -73,6 +73,7 @@ const elements = {
   comparisonStrengthBlock: document.getElementById('comparison-strength-block'),
   comparisonOverallList: document.getElementById('comparison-overall-list'),
   comparisonCategoryList: document.getElementById('comparison-category-list'),
+  comparisonInterpretationBlock: document.getElementById('comparison-interpretation-block'),
   similarSection: document.getElementById('similar-section'),
   similarList: document.getElementById('similar-bases-list'),
   similarExploreLink: document.getElementById('similar-explore-link'),
@@ -871,7 +872,9 @@ function renderComparison(base, stats) {
 
   elements.comparisonOverallBlock.hidden = elements.comparisonOverallList.children.length === 0;
   elements.comparisonStrengthBlock.hidden = elements.comparisonCategoryList.children.length === 0;
-  elements.comparisonInterpretationBlock.hidden = !hasContent;
+  if (elements.comparisonInterpretationBlock) {
+    elements.comparisonInterpretationBlock.hidden = !hasContent;
+  }
   renderComparisonInsight(hasContent ? comparisonEntries : []);
 }
 
