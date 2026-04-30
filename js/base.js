@@ -789,6 +789,7 @@ function renderRankingPosition(base, rankings) {
   rankingLinks.forEach((item) => {
     const li = document.createElement('li');
     const link = document.createElement('a');
+    link.className = 'image-positioning-badge';
     link.href = item.href;
     link.textContent = item.text;
     li.appendChild(link);
