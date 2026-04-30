@@ -403,7 +403,7 @@ main > * {
 .survival-profile-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-2);
   margin-bottom: var(--space-3);
 }
@@ -414,14 +414,16 @@ main > * {
 
 .survival-trajectory-label {
   margin: 0 !important;
-  font-size: var(--fs-meta);
-  color: var(--muted);
-  border: 1px solid #cbd5e1;
-  background: #f8fafc;
+  font-size: 0.76rem;
+  color: #0f172a;
+  border: 1px solid #93c5fd;
+  background: #eaf2ff;
   border-radius: 999px;
-  padding: var(--space-1) var(--space-2);
+  padding: 0.28rem 0.65rem;
   line-height: var(--lh-tight);
-  font-weight: 400;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .survival-timeline {
@@ -437,16 +439,17 @@ main > * {
   position: absolute;
   left: 16%;
   right: 16%;
-  top: 0.95rem;
-  height: 3px;
-  background: #b8c5d3;
+  top: 1rem;
+  height: 5px;
+  background: linear-gradient(90deg, #334155 0%, #64748b 50%, #94a3b8 100%);
+  border-radius: 999px;
   pointer-events: none;
 }
 
 .survival-stage {
   --survival-level: 3;
   position: relative;
-  padding-top: 2rem;
+  padding-top: 2.35rem;
   text-align: center;
   display: grid;
   gap: 0.15rem;
@@ -483,26 +486,36 @@ main > * {
 .survival-stage-node {
   position: absolute;
   left: 50%;
-  top: calc((4 - var(--survival-level)) * 0.45rem + 0.3rem);
+  top: calc((4 - var(--survival-level)) * 0.45rem + 0.16rem);
   width: var(--node-size, 0.88rem);
   height: var(--node-size, 0.88rem);
   transform: translateX(-50%);
   border-radius: 999px;
   border: var(--node-border, 2px) solid var(--node-ring, #334155);
   background: var(--node-bg, #f8fafc);
-  box-shadow: 0 0 0 2px #fff;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px rgba(148, 163, 184, 0.3);
 }
 
 .survival-stage-label {
-  font-size: 0.8rem;
-  color: #5f7085;
-  font-weight: 650;
+  font-size: 0.82rem;
+  color: #334155;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 .survival-stage-value {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #0f172a;
+}
+
+.survival-stage-note {
+  margin-top: 0.15rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: #5f7085;
+  max-width: 22ch;
+  justify-self: center;
 }
 
 .survival-stage:not(:last-child) .survival-stage-value::after {
@@ -514,10 +527,10 @@ main > * {
 .survival-stage:not(:last-child)::after {
   content: "";
   position: absolute;
-  top: 0.98rem;
+  top: 1rem;
   left: calc(50% + 0.6rem);
   width: calc(100% - 1.2rem);
-  border-top: 2px solid #94a3b8;
+  border-top: 3px solid #94a3b8;
   opacity: 0.95;
 }
 
@@ -533,6 +546,15 @@ main > * {
 .survival-stage[data-segment="flat"]::after {
   border-top-style: solid;
   border-top-color: #475569;
+}
+
+.survival-summary-insight {
+  margin: var(--space-3) 0 0;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border-soft);
+  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 /* Feature image badges: hero image, ranking overlays, and image badge placement. */
@@ -931,7 +953,7 @@ main > * {
     padding-top: 0;
     padding-left: 1.5rem;
     text-align: left;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto auto 1fr;
     align-items: center;
     column-gap: 0.4rem;
     min-width: 0;
@@ -949,8 +971,14 @@ main > * {
 
   .survival-stage-value {
     font-size: 0.8rem;
-    justify-self: end;
-    text-align: right;
+    justify-self: start;
+    text-align: left;
+  }
+
+  .survival-stage-note {
+    grid-column: 2 / -1;
+    justify-self: start;
+    max-width: none;
   }
 
   .survival-stage:not(:last-child)::after {
