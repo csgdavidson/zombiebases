@@ -64,31 +64,20 @@ const elements = {
   rankingSection: document.getElementById('ranking-section'),
   rankingList: document.getElementById('ranking-list'),
   comparisonSection: document.getElementById('comparison-section'),
-  comparisonInsightBlock: document.getElementById('comparison-insight-block'),
-  comparisonInsightOverview: document.getElementById('comparison-insight-overview'),
-  comparisonInsightTradeoff: document.getElementById('comparison-insight-tradeoff'),
-  comparisonOverallTier: document.getElementById('comparison-overall-tier'),
-  comparisonOverallExplanation: document.getElementById('comparison-overall-explanation'),
-  comparisonOverallBlock: document.getElementById('comparison-overall-block'),
-  comparisonStrengthBlock: document.getElementById('comparison-strength-block'),
+  comparisonInsight: document.getElementById('comparison-insight'),
   comparisonOverallList: document.getElementById('comparison-overall-list'),
   comparisonCategoryList: document.getElementById('comparison-category-list'),
-  comparisonInterpretationBlock: document.getElementById('comparison-interpretation-block'),
   similarSection: document.getElementById('similar-section'),
   similarList: document.getElementById('similar-bases-list'),
   similarExploreLink: document.getElementById('similar-explore-link'),
   survivalProfileSection: document.getElementById('survival-profile-section'),
   survivalInitialRow: document.getElementById('base-survival-initial-row'),
   survivalInitial: document.getElementById('base-survival-initial'),
-  survivalInitialNote: document.getElementById('base-survival-initial-note'),
   survivalShortTermRow: document.getElementById('base-survival-short-term-row'),
   survivalShortTerm: document.getElementById('base-survival-short-term'),
-  survivalShortTermNote: document.getElementById('base-survival-short-term-note'),
   survivalLongTermRow: document.getElementById('base-survival-long-term-row'),
   survivalLongTerm: document.getElementById('base-survival-long-term'),
-  survivalLongTermNote: document.getElementById('base-survival-long-term-note'),
   survivalTrajectoryLabel: document.getElementById('survival-trajectory-label'),
-  survivalSummaryInsight: document.getElementById('survival-summary-insight'),
   realityCheckRow: document.getElementById('base-reality-check-row'),
   realityCheckText: document.getElementById('base-reality-check')
 };
@@ -559,9 +548,6 @@ function renderSurvivalProfile(base) {
   elements.survivalInitialRow.hidden = !initial;
   elements.survivalShortTermRow.hidden = !shortTerm;
   elements.survivalLongTermRow.hidden = !longTerm;
-  elements.survivalInitialNote.textContent = 'Immediate viability at first occupancy and setup.';
-  elements.survivalShortTermNote.textContent = 'Resilience once supplies tighten and pressure builds.';
-  elements.survivalLongTermNote.textContent = 'Durability after systems, health, and logistics are stress-tested.';
 
   const stageRows = [
     { row: elements.survivalInitialRow, value: initial },
@@ -595,16 +581,6 @@ function renderSurvivalProfile(base) {
   const trajectoryLabel = getTrajectoryLabel(stageLevels);
   elements.survivalTrajectoryLabel.textContent = trajectoryLabel;
   elements.survivalTrajectoryLabel.hidden = !trajectoryLabel;
-
-  if (stageLevels.length) {
-    const bestIndex = stageLevels.indexOf(Math.max(...stageLevels));
-    const worstIndex = stageLevels.indexOf(Math.min(...stageLevels));
-    const phaseNames = ['Initial', 'Short-term', 'Long-term'];
-    elements.survivalSummaryInsight.textContent = `What this means: Best window is ${phaseNames[bestIndex]}; risk window is ${phaseNames[worstIndex]}.`;
-    elements.survivalSummaryInsight.hidden = false;
-  } else {
-    elements.survivalSummaryInsight.hidden = true;
-  }
 }
 
 function renderRealityCheck(base) {
@@ -671,12 +647,7 @@ function classifyComparison(value, average) {
   return { label: 'Critical', marker: '▼', tone: 'negative' };
 }
 
-function formatDelta(difference) {
-  const sign = difference >= 0 ? '+' : '';
-  return `${sign}${difference.toFixed(1)}`;
-}
-
-function appendComparisonItem(list, label, value, average, description) {
+function appendComparisonItem(list, label, value, average) {
   if (!isValidScoreValue(value) || !isValidScoreValue(average)) {
     return;
   }
@@ -685,78 +656,82 @@ function appendComparisonItem(list, label, value, average, description) {
   if (!comparison) {
     return null;
   }
-
   const difference = value - average;
+
   const item = document.createElement('li');
   item.className = 'comparison-row';
 
-  const heading = document.createElement('p');
-  heading.className = 'comparison-row-heading';
-  const labelToneClass = toneClassForLabel(comparison.label);
-  heading.innerHTML = `<strong>${label}:</strong> <span class="comparison-row-label ${labelToneClass}">${comparison.label}</span>`;
+  const rowLabel = document.createElement('span');
+  rowLabel.className = 'comparison-label';
+  rowLabel.textContent = label;
 
-  const details = document.createElement('p');
-  details.className = 'comparison-values';
-  details.textContent = description || `${value.toFixed(1)} vs ${average.toFixed(1)} (${formatDelta(difference)}).`;
+  const judgement = document.createElement('span');
+  judgement.className = `comparison-judgement comparison-judgement-${comparison.tone}`;
+  judgement.textContent = `${comparison.marker} ${comparison.label}`;
 
-  item.append(heading, details);
+  const values = document.createElement('span');
+  values.className = 'comparison-values';
+  values.textContent = `${value.toFixed(1)} vs ${average.toFixed(1)}`;
+
+  const bar = document.createElement('span');
+  bar.className = 'comparison-bar';
+  bar.title = `Base score ${value.toFixed(1)} vs benchmark ${average.toFixed(1)}`;
+  bar.setAttribute('aria-label', `Base score ${value.toFixed(1)} out of 10. Benchmark ${average.toFixed(1)} out of 10.`);
+  const barFill = document.createElement('span');
+  barFill.className = 'comparison-bar-fill';
+  barFill.style.width = `${Math.max(0, Math.min(100, (value / 10) * 100))}%`;
+  barFill.setAttribute('aria-hidden', 'true');
+  const barMarker = document.createElement('span');
+  barMarker.className = 'comparison-bar-marker';
+  barMarker.style.left = `${Math.max(0, Math.min(100, (average / 10) * 100))}%`;
+  barMarker.title = `Benchmark: ${average.toFixed(1)}`;
+  barMarker.setAttribute('aria-hidden', 'true');
+  bar.append(barFill, barMarker);
+
+  item.append(rowLabel, judgement, values, bar);
   list.appendChild(item);
   return { label, value, average, difference, comparison };
 }
 
 function comparisonOverallLabel(kind, base) {
-  if (kind === 'global') return 'All bases';
-  if (kind === 'region') return labelFor('region', base.region);
-  if (kind === 'type') return labelFor('type', base.type);
-  return '';
-}
-
-function buildInterpretationSummary(comparisons) {
-  const traitEntries = comparisons.filter((entry) => ['Defensibility', 'Isolation', 'Sustainability'].includes(entry.label));
-  const sorted = [...traitEntries].sort((a, b) => b.difference - a.difference);
-  const strongest = sorted[0];
-  const weakest = sorted[sorted.length - 1];
-  const overallEntry = comparisons.find((entry) => entry.label === 'All bases');
-
-  return { strongest, weakest, overallEntry };
-}
-
-function toneClassForLabel(label) {
-  if (label === 'Elite' || label === 'Strong') return 'comparison-tone-positive';
-  if (label === 'Average') return 'comparison-tone-average';
+  if (kind === 'global') {
+    return 'Against all bases';
+  }
+  if (kind === 'region') {
+    return `Against ${labelFor('region', base.region)}`;
+  }
+  if (kind === 'type') {
+    return `Against ${labelFor('type', base.type)}`;
+  }
   return '';
 }
 
 function renderComparisonInsight(comparisons) {
-  if (!elements.comparisonInsightBlock || !elements.comparisonInsightOverview || !elements.comparisonInsightTradeoff) {
+  if (!elements.comparisonInsight) {
     return;
   }
 
   if (!Array.isArray(comparisons) || !comparisons.length) {
-    elements.comparisonInsightBlock.hidden = true;
-    elements.comparisonInsightOverview.textContent = '';
-    elements.comparisonInsightTradeoff.textContent = '';
+    elements.comparisonInsight.hidden = true;
+    elements.comparisonInsight.textContent = '';
     return;
   }
 
-  const { strongest, weakest, overallEntry } = buildInterpretationSummary(comparisons);
-  if (!overallEntry || !strongest) {
-    elements.comparisonInsightBlock.hidden = true;
+  const overallEntry = comparisons.find((entry) => entry.label.includes('Against all bases'));
+  const traitEntries = comparisons.filter((entry) => !entry.label.startsWith('Against '));
+  const weakestTrait = traitEntries.reduce((worst, current) => (!worst || current.difference < worst.difference ? current : worst), null);
+
+  if (!overallEntry) {
+    elements.comparisonInsight.hidden = true;
+    elements.comparisonInsight.textContent = '';
     return;
   }
 
-  elements.comparisonInsightBlock.hidden = false;
-  const overallTone = toneClassForLabel(overallEntry.comparison.label);
-  const strengthTone = toneClassForLabel(strongest.comparison.label);
-  const tradeoffTone = weakest ? toneClassForLabel(weakest.comparison.label) : '';
-
-  elements.comparisonInsightOverview.innerHTML = `Overall, this base is <span class="comparison-keyword ${overallTone}">${overallEntry.comparison.label.toLowerCase()}</span> (${formatDelta(overallEntry.difference)}). Its clearest edge is <span class="comparison-keyword ${strengthTone}">${strongest.label.toLowerCase()}</span> at ${formatDelta(strongest.difference)}.`;
-
-  if (weakest && weakest !== strongest) {
-    elements.comparisonInsightTradeoff.innerHTML = `The main trade-off is <span class="comparison-keyword ${tradeoffTone}">${weakest.label.toLowerCase()}</span> at ${formatDelta(weakest.difference)}, so plan around this weaker side.`;
-  } else {
-    elements.comparisonInsightTradeoff.textContent = '';
-  }
+  const sentence = weakestTrait
+    ? `${overallEntry.comparison.label} overall • Weakest: ${weakestTrait.label}`
+    : `${overallEntry.comparison.label} overall`;
+  elements.comparisonInsight.hidden = false;
+  elements.comparisonInsight.textContent = sentence;
 }
 
 
@@ -825,7 +800,7 @@ function renderRankingPosition(base, rankings) {
 }
 
 function renderComparison(base, stats) {
-  if (!elements.comparisonSection || !elements.comparisonOverallList || !elements.comparisonCategoryList || !elements.comparisonOverallTier || !elements.comparisonOverallExplanation) {
+  if (!elements.comparisonSection || !elements.comparisonOverallList || !elements.comparisonCategoryList) {
     return;
   }
 
@@ -846,15 +821,15 @@ function renderComparison(base, stats) {
   const comparisonEntries = [];
 
   const overallEntries = [
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('global', base), overall, globalStats?.averages?.overall, `Delta ${formatDelta(overall - (globalStats?.averages?.overall || 0))} (${overall.toFixed(1)} vs ${(globalStats?.averages?.overall || 0).toFixed(1)}).`),
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('region', base), overall, regionStats?.averages?.overall, `Delta ${formatDelta(overall - (regionStats?.averages?.overall || 0))} (${overall.toFixed(1)} vs ${(regionStats?.averages?.overall || 0).toFixed(1)}).`),
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('type', base), overall, typeStats?.averages?.overall, `Delta ${formatDelta(overall - (typeStats?.averages?.overall || 0))} (${overall.toFixed(1)} vs ${(typeStats?.averages?.overall || 0).toFixed(1)}).`)
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('global', base), overall, globalStats?.averages?.overall),
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('region', base), overall, regionStats?.averages?.overall),
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('type', base), overall, typeStats?.averages?.overall)
   ].filter(Boolean);
   comparisonEntries.push(...overallEntries);
 
   if (scoreObject && typeStats?.averages) {
     Object.entries(SCORE_LABELS).forEach(([key, label]) => {
-      const item = appendComparisonItem(elements.comparisonCategoryList, label, scoreObject[key], typeStats.averages[key], `${formatDelta(scoreObject[key] - typeStats.averages[key])} (${scoreObject[key].toFixed(1)} vs ${typeStats.averages[key].toFixed(1)}).`);
+      const item = appendComparisonItem(elements.comparisonCategoryList, label, scoreObject[key], typeStats.averages[key]);
       if (item) {
         comparisonEntries.push(item);
       }
@@ -863,18 +838,6 @@ function renderComparison(base, stats) {
 
   const hasContent = elements.comparisonOverallList.children.length > 0 || elements.comparisonCategoryList.children.length > 0;
   elements.comparisonSection.hidden = !hasContent;
-
-  const globalEntry = comparisonEntries.find((entry) => entry.label === 'All bases');
-  if (globalEntry) {
-    elements.comparisonOverallTier.textContent = `${globalEntry.comparison.label} tier overall`;
-    elements.comparisonOverallExplanation.textContent = `This base is ${globalEntry.comparison.label.toLowerCase()} against the full directory, with the numbers below showing secondary score deltas.`;
-  }
-
-  elements.comparisonOverallBlock.hidden = elements.comparisonOverallList.children.length === 0;
-  elements.comparisonStrengthBlock.hidden = elements.comparisonCategoryList.children.length === 0;
-  if (elements.comparisonInterpretationBlock) {
-    elements.comparisonInterpretationBlock.hidden = !hasContent;
-  }
   renderComparisonInsight(hasContent ? comparisonEntries : []);
 }
 
