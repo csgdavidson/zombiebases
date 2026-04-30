@@ -439,6 +439,21 @@ function createBaseUrl(baseOrSlug) {
   return query ? `${cleanUrl}?${query}` : cleanUrl;
 }
 
+function createBaseThumbnail(slug, name) {
+  const image = document.createElement('img');
+  image.className = 'base-card-thumb';
+  image.src = `/images/bases/${slug}.png`;
+  image.alt = `${name} thumbnail`;
+  image.width = 112;
+  image.height = 63;
+  image.loading = 'lazy';
+  image.decoding = 'async';
+  image.addEventListener('error', () => {
+    image.src = '/images/bases/placeholder.png';
+  }, { once: true });
+  return image;
+}
+
 function appendCardScore(container, base) {
   const scoreValue = computeOverallScore(base);
   const scoreText = formatOverallScore(base);
@@ -506,6 +521,10 @@ function renderBaseList(items) {
     const link = document.createElement('a');
     link.className = 'base-card-link';
     link.href = createBaseUrl(base);
+    link.appendChild(createBaseThumbnail(preferredSlugFor(base), base.name));
+
+    const content = document.createElement('div');
+    content.className = 'base-card-content';
 
     const header = document.createElement('div');
     header.className = 'base-card-header';
@@ -524,17 +543,18 @@ function renderBaseList(items) {
       : labelFor('region', base.region);
     meta.textContent = `${location} • ${labelFor('type', base.type)}`;
 
-    link.append(header, meta);
+    content.append(header, meta);
 
-    appendCardBadges(link, base);
+    appendCardBadges(content, base);
 
     if (base.summary) {
       const summary = document.createElement('p');
       summary.className = 'base-summary';
       summary.textContent = base.summary;
-      link.appendChild(summary);
+      content.appendChild(summary);
     }
 
+    link.appendChild(content);
     listItem.appendChild(link);
     elements.list.appendChild(listItem);
   });
