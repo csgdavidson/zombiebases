@@ -64,15 +64,15 @@ const elements = {
   rankingSection: document.getElementById('ranking-section'),
   rankingList: document.getElementById('ranking-list'),
   comparisonSection: document.getElementById('comparison-section'),
-  comparisonInsight: document.getElementById('comparison-insight'),
+  comparisonInsightBlock: document.getElementById('comparison-insight-block'),
+  comparisonInsightOverview: document.getElementById('comparison-insight-overview'),
+  comparisonInsightTradeoff: document.getElementById('comparison-insight-tradeoff'),
   comparisonOverallTier: document.getElementById('comparison-overall-tier'),
   comparisonOverallExplanation: document.getElementById('comparison-overall-explanation'),
   comparisonOverallBlock: document.getElementById('comparison-overall-block'),
   comparisonStrengthBlock: document.getElementById('comparison-strength-block'),
-  comparisonInterpretationBlock: document.getElementById('comparison-interpretation-block'),
   comparisonOverallList: document.getElementById('comparison-overall-list'),
   comparisonCategoryList: document.getElementById('comparison-category-list'),
-  comparisonInterpretationList: document.getElementById('comparison-interpretation-list'),
   similarSection: document.getElementById('similar-section'),
   similarList: document.getElementById('similar-bases-list'),
   similarExploreLink: document.getElementById('similar-explore-link'),
@@ -691,7 +691,8 @@ function appendComparisonItem(list, label, value, average, description) {
 
   const heading = document.createElement('p');
   heading.className = 'comparison-row-heading';
-  heading.innerHTML = `<strong>${label}:</strong> ${comparison.label}`;
+  const labelToneClass = toneClassForLabel(comparison.label);
+  heading.innerHTML = `<strong>${label}:</strong> <span class="comparison-row-label ${labelToneClass}">${comparison.label}</span>`;
 
   const details = document.createElement('p');
   details.className = 'comparison-values';
@@ -709,50 +710,52 @@ function comparisonOverallLabel(kind, base) {
   return '';
 }
 
-function buildInterpretationPoints(comparisons) {
+function buildInterpretationSummary(comparisons) {
   const traitEntries = comparisons.filter((entry) => ['Defensibility', 'Isolation', 'Sustainability'].includes(entry.label));
   const sorted = [...traitEntries].sort((a, b) => b.difference - a.difference);
   const strongest = sorted[0];
   const weakest = sorted[sorted.length - 1];
-  const points = [];
-
-  if (strongest) {
-    points.push(`Excels most in ${strongest.label.toLowerCase()} (${strongest.comparison.label.toLowerCase()} vs type baseline, ${formatDelta(strongest.difference)}).`);
-  }
-  if (weakest && weakest !== strongest) {
-    points.push(`Struggles most in ${weakest.label.toLowerCase()} (${weakest.comparison.label.toLowerCase()} vs type baseline, ${formatDelta(weakest.difference)}).`);
-  }
   const overallEntry = comparisons.find((entry) => entry.label === 'All bases');
-  if (overallEntry) {
-    points.push(`Overall standing is ${overallEntry.comparison.label.toLowerCase()} compared with all listed bases (${formatDelta(overallEntry.difference)}).`);
-  }
 
-  return points.slice(0, 3);
+  return { strongest, weakest, overallEntry };
+}
+
+function toneClassForLabel(label) {
+  if (label === 'Elite' || label === 'Strong') return 'comparison-tone-positive';
+  if (label === 'Average') return 'comparison-tone-average';
+  return '';
 }
 
 function renderComparisonInsight(comparisons) {
-  if (!elements.comparisonInsight || !elements.comparisonInterpretationList) {
+  if (!elements.comparisonInsightBlock || !elements.comparisonInsightOverview || !elements.comparisonInsightTradeoff) {
     return;
   }
 
   if (!Array.isArray(comparisons) || !comparisons.length) {
-    elements.comparisonInsight.hidden = true;
-    elements.comparisonInsight.textContent = '';
-    elements.comparisonInterpretationList.innerHTML = '';
+    elements.comparisonInsightBlock.hidden = true;
+    elements.comparisonInsightOverview.textContent = '';
+    elements.comparisonInsightTradeoff.textContent = '';
     return;
   }
 
-  elements.comparisonInsight.hidden = false;
-  elements.comparisonInsight.textContent = 'This profile shows where this base gains advantage and where trade-offs may limit survival performance.';
+  const { strongest, weakest, overallEntry } = buildInterpretationSummary(comparisons);
+  if (!overallEntry || !strongest) {
+    elements.comparisonInsightBlock.hidden = true;
+    return;
+  }
 
-  const points = buildInterpretationPoints(comparisons);
-  elements.comparisonInterpretationList.innerHTML = '';
-  points.forEach((point) => {
-    const item = document.createElement('li');
-    item.className = 'comparison-row';
-    item.textContent = point;
-    elements.comparisonInterpretationList.appendChild(item);
-  });
+  elements.comparisonInsightBlock.hidden = false;
+  const overallTone = toneClassForLabel(overallEntry.comparison.label);
+  const strengthTone = toneClassForLabel(strongest.comparison.label);
+  const tradeoffTone = weakest ? toneClassForLabel(weakest.comparison.label) : '';
+
+  elements.comparisonInsightOverview.innerHTML = `Overall, this base is <span class="comparison-keyword ${overallTone}">${overallEntry.comparison.label.toLowerCase()}</span> (${formatDelta(overallEntry.difference)}). Its clearest edge is <span class="comparison-keyword ${strengthTone}">${strongest.label.toLowerCase()}</span> at ${formatDelta(strongest.difference)}.`;
+
+  if (weakest && weakest !== strongest) {
+    elements.comparisonInsightTradeoff.innerHTML = `The main trade-off is <span class="comparison-keyword ${tradeoffTone}">${weakest.label.toLowerCase()}</span> at ${formatDelta(weakest.difference)}, so plan around this weaker side.`;
+  } else {
+    elements.comparisonInsightTradeoff.textContent = '';
+  }
 }
 
 
@@ -842,15 +845,15 @@ function renderComparison(base, stats) {
   const comparisonEntries = [];
 
   const overallEntries = [
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('global', base), overall, globalStats?.averages?.overall, `Compared with all bases: ${formatDelta(overall - (globalStats?.averages?.overall || 0))} (${overall.toFixed(1)} vs ${(globalStats?.averages?.overall || 0).toFixed(1)}).`),
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('region', base), overall, regionStats?.averages?.overall, `Compared with region baseline: ${formatDelta(overall - (regionStats?.averages?.overall || 0))} (${overall.toFixed(1)} vs ${(regionStats?.averages?.overall || 0).toFixed(1)}).`),
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('type', base), overall, typeStats?.averages?.overall, `Compared with type baseline: ${formatDelta(overall - (typeStats?.averages?.overall || 0))} (${overall.toFixed(1)} vs ${(typeStats?.averages?.overall || 0).toFixed(1)}).`)
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('global', base), overall, globalStats?.averages?.overall, `Delta ${formatDelta(overall - (globalStats?.averages?.overall || 0))} (${overall.toFixed(1)} vs ${(globalStats?.averages?.overall || 0).toFixed(1)}).`),
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('region', base), overall, regionStats?.averages?.overall, `Delta ${formatDelta(overall - (regionStats?.averages?.overall || 0))} (${overall.toFixed(1)} vs ${(regionStats?.averages?.overall || 0).toFixed(1)}).`),
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('type', base), overall, typeStats?.averages?.overall, `Delta ${formatDelta(overall - (typeStats?.averages?.overall || 0))} (${overall.toFixed(1)} vs ${(typeStats?.averages?.overall || 0).toFixed(1)}).`)
   ].filter(Boolean);
   comparisonEntries.push(...overallEntries);
 
   if (scoreObject && typeStats?.averages) {
     Object.entries(SCORE_LABELS).forEach(([key, label]) => {
-      const item = appendComparisonItem(elements.comparisonCategoryList, label, scoreObject[key], typeStats.averages[key], `${label}: ${formatDelta(scoreObject[key] - typeStats.averages[key])} vs type baseline (${scoreObject[key].toFixed(1)} vs ${typeStats.averages[key].toFixed(1)}).`);
+      const item = appendComparisonItem(elements.comparisonCategoryList, label, scoreObject[key], typeStats.averages[key], `${formatDelta(scoreObject[key] - typeStats.averages[key])} (${scoreObject[key].toFixed(1)} vs ${typeStats.averages[key].toFixed(1)}).`);
       if (item) {
         comparisonEntries.push(item);
       }
