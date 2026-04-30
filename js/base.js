@@ -65,8 +65,14 @@ const elements = {
   rankingList: document.getElementById('ranking-list'),
   comparisonSection: document.getElementById('comparison-section'),
   comparisonInsight: document.getElementById('comparison-insight'),
+  comparisonOverallTier: document.getElementById('comparison-overall-tier'),
+  comparisonOverallExplanation: document.getElementById('comparison-overall-explanation'),
+  comparisonOverallBlock: document.getElementById('comparison-overall-block'),
+  comparisonStrengthBlock: document.getElementById('comparison-strength-block'),
+  comparisonInterpretationBlock: document.getElementById('comparison-interpretation-block'),
   comparisonOverallList: document.getElementById('comparison-overall-list'),
   comparisonCategoryList: document.getElementById('comparison-category-list'),
+  comparisonInterpretationList: document.getElementById('comparison-interpretation-list'),
   similarSection: document.getElementById('similar-section'),
   similarList: document.getElementById('similar-bases-list'),
   similarExploreLink: document.getElementById('similar-explore-link'),
@@ -647,7 +653,12 @@ function classifyComparison(value, average) {
   return { label: 'Critical', marker: '▼', tone: 'negative' };
 }
 
-function appendComparisonItem(list, label, value, average) {
+function formatDelta(difference) {
+  const sign = difference >= 0 ? '+' : '';
+  return `${sign}${difference.toFixed(1)}`;
+}
+
+function appendComparisonItem(list, label, value, average, description) {
   if (!isValidScoreValue(value) || !isValidScoreValue(average)) {
     return;
   }
@@ -656,82 +667,75 @@ function appendComparisonItem(list, label, value, average) {
   if (!comparison) {
     return null;
   }
-  const difference = value - average;
 
+  const difference = value - average;
   const item = document.createElement('li');
   item.className = 'comparison-row';
 
-  const rowLabel = document.createElement('span');
-  rowLabel.className = 'comparison-label';
-  rowLabel.textContent = label;
+  const heading = document.createElement('p');
+  heading.className = 'comparison-row-heading';
+  heading.innerHTML = `<strong>${label}:</strong> ${comparison.label}`;
 
-  const judgement = document.createElement('span');
-  judgement.className = `comparison-judgement comparison-judgement-${comparison.tone}`;
-  judgement.textContent = `${comparison.marker} ${comparison.label}`;
+  const details = document.createElement('p');
+  details.className = 'comparison-values';
+  details.textContent = description || `${value.toFixed(1)} vs ${average.toFixed(1)} (${formatDelta(difference)}).`;
 
-  const values = document.createElement('span');
-  values.className = 'comparison-values';
-  values.textContent = `${value.toFixed(1)} vs ${average.toFixed(1)}`;
-
-  const bar = document.createElement('span');
-  bar.className = 'comparison-bar';
-  bar.title = `Base score ${value.toFixed(1)} vs benchmark ${average.toFixed(1)}`;
-  bar.setAttribute('aria-label', `Base score ${value.toFixed(1)} out of 10. Benchmark ${average.toFixed(1)} out of 10.`);
-  const barFill = document.createElement('span');
-  barFill.className = 'comparison-bar-fill';
-  barFill.style.width = `${Math.max(0, Math.min(100, (value / 10) * 100))}%`;
-  barFill.setAttribute('aria-hidden', 'true');
-  const barMarker = document.createElement('span');
-  barMarker.className = 'comparison-bar-marker';
-  barMarker.style.left = `${Math.max(0, Math.min(100, (average / 10) * 100))}%`;
-  barMarker.title = `Benchmark: ${average.toFixed(1)}`;
-  barMarker.setAttribute('aria-hidden', 'true');
-  bar.append(barFill, barMarker);
-
-  item.append(rowLabel, judgement, values, bar);
+  item.append(heading, details);
   list.appendChild(item);
   return { label, value, average, difference, comparison };
 }
 
 function comparisonOverallLabel(kind, base) {
-  if (kind === 'global') {
-    return 'Against all bases';
-  }
-  if (kind === 'region') {
-    return `Against ${labelFor('region', base.region)}`;
-  }
-  if (kind === 'type') {
-    return `Against ${labelFor('type', base.type)}`;
-  }
+  if (kind === 'global') return 'All bases';
+  if (kind === 'region') return labelFor('region', base.region);
+  if (kind === 'type') return labelFor('type', base.type);
   return '';
 }
 
+function buildInterpretationPoints(comparisons) {
+  const traitEntries = comparisons.filter((entry) => ['Defensibility', 'Isolation', 'Sustainability'].includes(entry.label));
+  const sorted = [...traitEntries].sort((a, b) => b.difference - a.difference);
+  const strongest = sorted[0];
+  const weakest = sorted[sorted.length - 1];
+  const points = [];
+
+  if (strongest) {
+    points.push(`Excels most in ${strongest.label.toLowerCase()} (${strongest.comparison.label.toLowerCase()} vs type baseline, ${formatDelta(strongest.difference)}).`);
+  }
+  if (weakest && weakest !== strongest) {
+    points.push(`Struggles most in ${weakest.label.toLowerCase()} (${weakest.comparison.label.toLowerCase()} vs type baseline, ${formatDelta(weakest.difference)}).`);
+  }
+  const overallEntry = comparisons.find((entry) => entry.label === 'All bases');
+  if (overallEntry) {
+    points.push(`Overall standing is ${overallEntry.comparison.label.toLowerCase()} compared with all listed bases (${formatDelta(overallEntry.difference)}).`);
+  }
+
+  return points.slice(0, 3);
+}
+
 function renderComparisonInsight(comparisons) {
-  if (!elements.comparisonInsight) {
+  if (!elements.comparisonInsight || !elements.comparisonInterpretationList) {
     return;
   }
 
   if (!Array.isArray(comparisons) || !comparisons.length) {
     elements.comparisonInsight.hidden = true;
     elements.comparisonInsight.textContent = '';
+    elements.comparisonInterpretationList.innerHTML = '';
     return;
   }
 
-  const overallEntry = comparisons.find((entry) => entry.label.includes('Against all bases'));
-  const traitEntries = comparisons.filter((entry) => !entry.label.startsWith('Against '));
-  const weakestTrait = traitEntries.reduce((worst, current) => (!worst || current.difference < worst.difference ? current : worst), null);
-
-  if (!overallEntry) {
-    elements.comparisonInsight.hidden = true;
-    elements.comparisonInsight.textContent = '';
-    return;
-  }
-
-  const sentence = weakestTrait
-    ? `${overallEntry.comparison.label} overall • Weakest: ${weakestTrait.label}`
-    : `${overallEntry.comparison.label} overall`;
   elements.comparisonInsight.hidden = false;
-  elements.comparisonInsight.textContent = sentence;
+  elements.comparisonInsight.textContent = 'This profile shows where this base gains advantage and where trade-offs may limit survival performance.';
+
+  const points = buildInterpretationPoints(comparisons);
+  elements.comparisonInterpretationList.innerHTML = '';
+  points.forEach((point) => {
+    const item = document.createElement('li');
+    item.className = 'comparison-row';
+    item.textContent = point;
+    elements.comparisonInterpretationList.appendChild(item);
+  });
 }
 
 
@@ -800,7 +804,7 @@ function renderRankingPosition(base, rankings) {
 }
 
 function renderComparison(base, stats) {
-  if (!elements.comparisonSection || !elements.comparisonOverallList || !elements.comparisonCategoryList) {
+  if (!elements.comparisonSection || !elements.comparisonOverallList || !elements.comparisonCategoryList || !elements.comparisonOverallTier || !elements.comparisonOverallExplanation) {
     return;
   }
 
@@ -821,15 +825,15 @@ function renderComparison(base, stats) {
   const comparisonEntries = [];
 
   const overallEntries = [
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('global', base), overall, globalStats?.averages?.overall),
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('region', base), overall, regionStats?.averages?.overall),
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('type', base), overall, typeStats?.averages?.overall)
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('global', base), overall, globalStats?.averages?.overall, `Compared with all bases: ${formatDelta(overall - (globalStats?.averages?.overall || 0))} (${overall.toFixed(1)} vs ${(globalStats?.averages?.overall || 0).toFixed(1)}).`),
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('region', base), overall, regionStats?.averages?.overall, `Compared with region baseline: ${formatDelta(overall - (regionStats?.averages?.overall || 0))} (${overall.toFixed(1)} vs ${(regionStats?.averages?.overall || 0).toFixed(1)}).`),
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('type', base), overall, typeStats?.averages?.overall, `Compared with type baseline: ${formatDelta(overall - (typeStats?.averages?.overall || 0))} (${overall.toFixed(1)} vs ${(typeStats?.averages?.overall || 0).toFixed(1)}).`)
   ].filter(Boolean);
   comparisonEntries.push(...overallEntries);
 
   if (scoreObject && typeStats?.averages) {
     Object.entries(SCORE_LABELS).forEach(([key, label]) => {
-      const item = appendComparisonItem(elements.comparisonCategoryList, label, scoreObject[key], typeStats.averages[key]);
+      const item = appendComparisonItem(elements.comparisonCategoryList, label, scoreObject[key], typeStats.averages[key], `${label}: ${formatDelta(scoreObject[key] - typeStats.averages[key])} vs type baseline (${scoreObject[key].toFixed(1)} vs ${typeStats.averages[key].toFixed(1)}).`);
       if (item) {
         comparisonEntries.push(item);
       }
@@ -838,6 +842,16 @@ function renderComparison(base, stats) {
 
   const hasContent = elements.comparisonOverallList.children.length > 0 || elements.comparisonCategoryList.children.length > 0;
   elements.comparisonSection.hidden = !hasContent;
+
+  const globalEntry = comparisonEntries.find((entry) => entry.label === 'All bases');
+  if (globalEntry) {
+    elements.comparisonOverallTier.textContent = `${globalEntry.comparison.label} tier overall`;
+    elements.comparisonOverallExplanation.textContent = `This base is ${globalEntry.comparison.label.toLowerCase()} against the full directory, with the numbers below showing secondary score deltas.`;
+  }
+
+  elements.comparisonOverallBlock.hidden = elements.comparisonOverallList.children.length === 0;
+  elements.comparisonStrengthBlock.hidden = elements.comparisonCategoryList.children.length === 0;
+  elements.comparisonInterpretationBlock.hidden = !hasContent;
   renderComparisonInsight(hasContent ? comparisonEntries : []);
 }
 

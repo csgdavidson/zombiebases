@@ -64,14 +64,20 @@
 
       <section id="comparison-section" class="content-section comparison-panel" aria-label="Score comparison section" hidden>
         <h3>How it compares</h3>
-        <p id="comparison-insight" class="comparison-insight" hidden></p>
-        <div class="comparison-section">
-          <h4 class="comparison-section-title">Overall performance</h4>
-          <ul id="comparison-overall-list" class="score-list"></ul>
+        <div id="comparison-overall-block" class="comparison-section" hidden>
+          <h4 class="comparison-section-title">Overall comparison</h4>
+          <p id="comparison-overall-tier" class="comparison-overall-tier"></p>
+          <p id="comparison-overall-explanation" class="comparison-overall-explanation"></p>
+          <ul id="comparison-overall-list" class="comparison-summary-list"></ul>
         </div>
-        <div class="comparison-section">
-          <h4 class="comparison-section-title">Key traits vs type baseline</h4>
-          <ul id="comparison-category-list" class="score-list"></ul>
+        <div id="comparison-strength-block" class="comparison-section" hidden>
+          <h4 class="comparison-section-title">Strength profile</h4>
+          <ul id="comparison-category-list" class="comparison-summary-list"></ul>
+        </div>
+        <div id="comparison-interpretation-block" class="comparison-section" hidden>
+          <h4 class="comparison-section-title">What this means</h4>
+          <p id="comparison-insight" class="comparison-insight" hidden></p>
+          <ul id="comparison-interpretation-list" class="comparison-summary-list"></ul>
         </div>
       </section>
 
