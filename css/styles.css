@@ -832,7 +832,7 @@ main > * {
   font-size: 0.9rem;
 }
 
-/* Comparison bars: side-by-side metric comparison rows and visual bar scale. */
+/* Comparison panel: text-first comparison blocks with clear hierarchy. */
 .comparison-panel {
   display: grid;
   gap: var(--space-3);
@@ -865,68 +865,40 @@ main > * {
   color: #5f7186;
 }
 
-.comparison-row {
-  display: grid;
-  grid-template-columns: minmax(6.5rem, 1.2fr) minmax(5.5rem, 0.9fr) minmax(7rem, auto);
-  column-gap: 0.7rem;
-  row-gap: 0.2rem;
-  align-items: center;
-}
-
-.comparison-label {
-  font-weight: 600;
-}
-
-.comparison-judgement {
+.comparison-overall-tier {
+  margin: 0;
   font-weight: 700;
-  letter-spacing: 0.01em;
+  color: #0f1f35;
 }
 
-.comparison-judgement-positive {
-  color: var(--score-high);
+.comparison-overall-explanation {
+  margin: 0;
+  color: #5f7085;
 }
 
-.comparison-judgement-neutral {
-  color: var(--muted);
+.comparison-summary-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
 }
 
-.comparison-judgement-negative {
-  color: var(--score-low);
+.comparison-row {
+  margin: 0;
+  padding: 0;
+}
+
+.comparison-row-heading {
+  margin: 0;
+  color: #0f1f35;
 }
 
 .comparison-values {
+  margin: 0.2rem 0 0;
   color: #5f7085;
-  font-size: 0.8rem;
-  justify-self: end;
-  text-align: right;
+  font-size: 0.86rem;
   font-variant-numeric: tabular-nums;
-}
-
-.comparison-bar {
-  position: relative;
-  grid-column: 1 / -1;
-  height: 0.36rem;
-  border-radius: 999px;
-  background: #cfd9e4;
-  overflow: hidden;
-}
-
-.comparison-bar-fill {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: var(--text);
-}
-
-.comparison-bar-marker {
-  position: absolute;
-  top: -1px;
-  bottom: -1px;
-  width: 2px;
-  transform: translateX(-1px);
-  background: #334155;
-  opacity: 0.9;
-  pointer-events: none;
 }
 
 /* Survival profile: responsive stage timeline and trajectory micro-visualization. */
