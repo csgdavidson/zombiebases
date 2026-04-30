@@ -679,7 +679,7 @@ function appendComparisonItem(list, label, value, average, options = {}) {
     return;
   }
 
-  const { baseName = "This base", averageLabel = "Average" } = options;
+  const { averageLabel = "Global avg", showDelta = false } = options;
   const comparison = classifyComparison(value, average);
   if (!comparison) {
     return null;
@@ -699,11 +699,12 @@ function appendComparisonItem(list, label, value, average, options = {}) {
 
   const primary = document.createElement('span');
   primary.className = 'comparison-primary';
-  primary.textContent = `${baseName} ${value.toFixed(1)}`;
+  const deltaPrefix = showDelta ? `${difference >= 0 ? '+' : ''}${difference.toFixed(1)} vs avg · ` : '';
+  primary.textContent = `${deltaPrefix}${value.toFixed(1)} vs ${averageLabel} ${average.toFixed(1)}`;
 
   const values = document.createElement('span');
   values.className = 'comparison-values';
-  values.textContent = `${averageLabel} ${average.toFixed(1)}`;
+  values.hidden = true;
 
   item.append(rowLabel, primary, values, judgement);
   list.appendChild(item);
@@ -834,15 +835,15 @@ function renderComparison(base, stats) {
   const comparisonEntries = [];
 
   const overallEntries = [
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('global', base), overall, globalStats?.averages?.overall, { baseName: base.name || 'This base', averageLabel: 'Average' }),
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('region', base), overall, regionStats?.averages?.overall, { baseName: base.name || 'This base', averageLabel: `${labelFor('region', base.region)} average` }),
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('type', base), overall, typeStats?.averages?.overall, { baseName: base.name || 'This base', averageLabel: `${labelFor('type', base.type)} average` })
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('global', base), overall, globalStats?.averages?.overall, { averageLabel: 'Global avg', showDelta: true }),
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('region', base), overall, regionStats?.averages?.overall, { averageLabel: 'Region avg', showDelta: true }),
+    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('type', base), overall, typeStats?.averages?.overall, { averageLabel: 'Type avg', showDelta: true })
   ].filter(Boolean);
   comparisonEntries.push(...overallEntries);
 
   if (scoreObject && globalStats?.averages) {
     Object.entries(SCORE_LABELS).forEach(([key, label]) => {
-      const item = appendComparisonItem(elements.comparisonCategoryList, label, scoreObject[key], globalStats.averages[key], { baseName: base.name || 'This base', averageLabel: 'Global average' });
+      const item = appendComparisonItem(elements.comparisonCategoryList, label, scoreObject[key], globalStats.averages[key], { averageLabel: 'Global avg' });
       if (item) {
         comparisonEntries.push(item);
       }
