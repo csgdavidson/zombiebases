@@ -1327,26 +1327,35 @@ main > * {
     width: 100%;
   }
 
-  .base-card-link,
-  .ranking-row {
+  .base-card-link {
     grid-template-columns: 96px minmax(0, 1fr);
+    gap: var(--space-2);
+  }
+
+  .ranking-row {
+    grid-template-columns: 1fr;
     gap: var(--space-2);
   }
 
   .base-card-thumb {
     width: 96px;
   }
+
+  .ranking-row .base-card-thumb {
+    width: 112px;
+  }
 }
 
 .ranking-row-heading {
   margin: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: baseline;
   gap: var(--space-2);
-  flex-wrap: wrap;
 }
 
 .ranking-row-heading a {
+  min-width: 0;
   color: var(--text);
   text-decoration: none;
   font-weight: 700;
@@ -1364,6 +1373,7 @@ main > * {
 
 .ranking-score {
   margin-left: auto;
+  white-space: nowrap;
   font-weight: 700;
 }
 
