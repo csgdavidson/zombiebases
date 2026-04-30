@@ -772,16 +772,16 @@ input[type="search"] {
 
 .badge {
   display: inline-block;
-  padding: 0.24rem 0.6rem;
+  padding: 0.18rem 0.55rem;
   border-radius: var(--radius-pill);
   font-size: 12px;
   font-weight: 600;
   margin-right: 6px;
   margin-top: 4px;
-  background: rgba(15, 23, 42, 0.84);
-  color: #f8fafc;
-  border: 1px solid rgba(226, 232, 240, 0.5);
-  box-shadow: 0 6px 16px rgba(2, 6, 23, 0.45), 0 0 12px rgba(15, 23, 42, 0.28);
+  background: #f4f7fb;
+  color: #607087;
+  border: 1px solid #d7e0ea;
+  box-shadow: none;
 }
 
 .badge-tier {
@@ -1116,7 +1116,7 @@ input[type="search"] {
   font-size: inherit;
 }
 
-.ranking-list a {
+#ranking-section .ranking-list .image-positioning-badge {
   color: #f8fafc;
   text-decoration: none;
   font-weight: 700;
@@ -1135,8 +1135,8 @@ input[type="search"] {
   box-shadow: 0 8px 20px rgba(2, 6, 23, 0.52), 0 0 0 1px rgba(248, 250, 252, 0.16) inset;
 }
 
-.ranking-list a:hover,
-.ranking-list a:focus-visible {
+#ranking-section .ranking-list .image-positioning-badge:hover,
+#ranking-section .ranking-list .image-positioning-badge:focus-visible {
   text-decoration: underline;
 }
 
