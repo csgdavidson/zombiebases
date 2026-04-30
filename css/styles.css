@@ -373,12 +373,13 @@ main > * {
 .base-summary-panel {
   margin-top: 0;
   gap: var(--space-4);
-  padding: var(--space-5);
+  padding: calc(var(--space-5) + 4px) var(--space-5);
 }
 
 .base-intro-section {
   border-top: 1px solid var(--border-soft);
   padding-top: var(--space-4);
+  margin-top: var(--space-4);
 }
 
 /* Score band: highlighted overall scoring region and score-column structure. */
@@ -612,13 +613,27 @@ main > * {
 
 .base-meta-row {
   list-style: none;
-  margin: 0;
+  margin: var(--space-4) 0 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-3);
-  color: #7f8b9c;
-  font-size: 0.86rem;
+  color: #67778d;
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+
+#base-summary-lead {
+  color: #3f5168;
+  margin-bottom: 18px;
+}
+
+.base-intro-section .dossier-content > p + p {
+  margin-top: 11px;
+}
+
+#base-key-risk-row {
+  margin-top: 11px;
 }
 
 .featured-section {
@@ -827,7 +842,7 @@ main > * {
 .score-overall-column {
   display: grid;
   align-content: start;
-  gap: var(--space-2);
+  gap: var(--space-3);
 }
 
 .score-breakdown-column {
@@ -838,7 +853,7 @@ main > * {
 }
 
 .badge-row {
-  margin-top: 0 !important;
+  margin-top: var(--space-3) !important;
 }
 
 .badge {
