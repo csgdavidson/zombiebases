@@ -547,12 +547,10 @@ function renderBaseList(items) {
 
     appendCardBadges(content, base);
 
-    if (base.summary) {
-      const summary = document.createElement('p');
-      summary.className = 'base-summary';
-      summary.textContent = base.summary;
-      content.appendChild(summary);
-    }
+    const summary = document.createElement('p');
+    summary.className = 'base-summary';
+    summary.textContent = base?.description?.summary ?? '';
+    content.appendChild(summary);
 
     link.appendChild(content);
     listItem.appendChild(link);
