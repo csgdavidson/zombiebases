@@ -78,6 +78,9 @@ const elements = {
   survivalLongTermRow: document.getElementById('base-survival-long-term-row'),
   survivalLongTerm: document.getElementById('base-survival-long-term'),
   survivalTrajectoryLabel: document.getElementById('survival-trajectory-label'),
+  survivalSummaryInsight: document.getElementById('survival-summary-insight'),
+  survivalBestWindow: document.getElementById('survival-best-window'),
+  survivalPrimaryRisk: document.getElementById('survival-primary-risk'),
   realityCheckRow: document.getElementById('base-reality-check-row'),
   realityCheckText: document.getElementById('base-reality-check')
 };
@@ -532,6 +535,8 @@ function renderUseCaseAndRisk(base) {
 
 function renderSurvivalProfile(base) {
   const profile = getSurvivalProfile(base);
+  const verdict = getVerdict(base);
+  const useCaseAndRisk = getUseCaseAndRisk(base);
   const initial = isNonEmptyString(profile.initial) ? profile.initial : '';
   const shortTerm = isNonEmptyString(profile.shortTerm) ? profile.shortTerm : '';
   const longTerm = isNonEmptyString(profile.longTerm) ? profile.longTerm : '';
@@ -565,6 +570,10 @@ function renderSurvivalProfile(base) {
     if (level !== null) {
       row.style.setProperty('--survival-level', String(level));
       row.setAttribute('data-survival-level', String(level));
+      const valueEl = row.querySelector('.survival-stage-value');
+      if (valueEl) {
+        valueEl.setAttribute('data-survival-level', String(level));
+      }
       stageLevels.push(level);
     }
   });
@@ -581,6 +590,21 @@ function renderSurvivalProfile(base) {
   const trajectoryLabel = getTrajectoryLabel(stageLevels);
   elements.survivalTrajectoryLabel.textContent = trajectoryLabel;
   elements.survivalTrajectoryLabel.hidden = !trajectoryLabel;
+  elements.survivalTrajectoryLabel.setAttribute('data-trajectory', trajectoryLabel.toLowerCase().replace(/\s+/g, '-'));
+
+  const bestWindow = firstSentence(verdict.bestUseCase || useCaseAndRisk.bestUseCase);
+  const primaryRisk = firstSentence(useCaseAndRisk.keyRisk || verdict.failureMode);
+  const hasSummary = Boolean(bestWindow || primaryRisk);
+
+  if (elements.survivalSummaryInsight) {
+    elements.survivalSummaryInsight.hidden = !hasSummary;
+  }
+  if (elements.survivalBestWindow) {
+    elements.survivalBestWindow.textContent = bestWindow ? `Best window: ${bestWindow}` : '';
+  }
+  if (elements.survivalPrimaryRisk) {
+    elements.survivalPrimaryRisk.textContent = primaryRisk ? `Primary risk: ${primaryRisk}` : '';
+  }
 }
 
 function renderRealityCheck(base) {
