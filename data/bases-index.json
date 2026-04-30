@@ -43,7 +43,8 @@
       }
     },
     "lat": 13.1807,
-    "long": 38.065
+    "long": 38.065,
+    "image": "/images/bases/simien.png"
   },
   {
     "name": "Table Mountain Plateau",
@@ -89,7 +90,8 @@
       }
     },
     "lat": -33.9628,
-    "long": 18.4098
+    "long": 18.4098,
+    "image": "/images/bases/table-mountain.png"
   },
   {
     "name": "Elmina Castle",
@@ -135,7 +137,8 @@
       "keyRisk": "External pressure builds faster than the structure can compensate for"
     },
     "realityCheck": "Assumes the structure remains defensible and not immediately overrun. Long-term survival would require external supply or relocation due to limited self-sufficiency.",
-    "scoreNarrative": "Elmina Castle scores highly for defensibility due to its strong physical structure and controlled layout. However, its low isolation and coastal location significantly reduce long-term viability. The base performs best as a short-term defensive position, but struggles to sustain occupants as external pressure increases."
+    "scoreNarrative": "Elmina Castle scores highly for defensibility due to its strong physical structure and controlled layout. However, its low isolation and coastal location significantly reduce long-term viability. The base performs best as a short-term defensive position, but struggles to sustain occupants as external pressure increases.",
+    "image": "/images/bases/elmina.png"
   },
   {
     "name": "Fasil Ghebbi",
@@ -179,7 +182,8 @@
       "keyRisk": "Defenses remain strong while sustainability improvements lag behind consumption"
     },
     "realityCheck": "Assumes surrounding farmland and water access can be secured without constant conflict. The compound alone does not provide full long-term life support.",
-    "scoreNarrative": "Fasil Ghebbi scores highest in defensibility, supported by strong historic fortification geometry. Isolation is moderate-to-strong for a non-island site, but sustainability is the limiting factor because self-sufficient infrastructure is not intrinsic to the complex."
+    "scoreNarrative": "Fasil Ghebbi scores highest in defensibility, supported by strong historic fortification geometry. Isolation is moderate-to-strong for a non-island site, but sustainability is the limiting factor because self-sufficient infrastructure is not intrinsic to the complex.",
+    "image": "/images/bases/fasil-ghebbi.png"
   },
   {
     "name": "Kimberley Big Hole & Mining Complex",
@@ -223,7 +227,8 @@
       "keyRisk": "Entrapment risk: once exits, water, or supply flow are compromised, defenders are pinned in a degrading pit complex."
     },
     "realityCheck": "Assumes safe zones can be established inside a partially degraded industrial landscape. Long-term habitation requires major remediation and external inputs.",
-    "scoreNarrative": "Kimberley now scores high in defensibility because the pit and surrounding works can channel and slow attacks. Isolation is moderate, but sustainability is decisively weak: water, food, and safe long-term habitability are poor. The dominant failure mode is entrapment—if lifelines fail, the same terrain that protects you can trap you."
+    "scoreNarrative": "Kimberley now scores high in defensibility because the pit and surrounding works can channel and slow attacks. Isolation is moderate, but sustainability is decisively weak: water, food, and safe long-term habitability are poor. The dominant failure mode is entrapment—if lifelines fail, the same terrain that protects you can trap you.",
+    "image": "/images/bases/kimberley-big-hole.png"
   },
   {
     "name": "Bonny Island LNG Terminal",
@@ -266,7 +271,8 @@
       "keyRisk": "Infrastructure failure after external support stops can rapidly collapse power, water, safety controls, and habitability."
     },
     "realityCheck": "Assumes initial access to trained operators and stored supplies. Without industrial continuity, habitability declines quickly despite isolation.",
-    "scoreNarrative": "Bonny scores as a capable but fragile base: defensibility is solid, while isolation and sustainability are only moderate once realistic support constraints are applied. The site can perform well in the short run, but long-run survival hinges on complex infrastructure that degrades quickly without technical supply chains."
+    "scoreNarrative": "Bonny scores as a capable but fragile base: defensibility is solid, while isolation and sustainability are only moderate once realistic support constraints are applied. The site can perform well in the short run, but long-run survival hinges on complex infrastructure that degrades quickly without technical supply chains.",
+    "image": "/images/bases/bonny-lng-terminal.png"
   },
   {
     "name": "Camp Lemonnier",
@@ -309,7 +315,8 @@
       "keyRisk": "Dependence on fuel, water systems, and external supply chains undermines long-term independence despite strong defenses."
     },
     "realityCheck": "Assumes occupants can retain control of key systems and perimeter manpower. Long-term autonomy is difficult without dependable supply inflow.",
-    "scoreNarrative": "Camp Lemonnier remains a top-tier defensive site with a very high defensibility score. However, low isolation and logistics dependence limit autonomy, so sustainability and endurance depend on continued fuel, water, maintenance, and resupply. In short: tactically strong, strategically dependent."
+    "scoreNarrative": "Camp Lemonnier remains a top-tier defensive site with a very high defensibility score. However, low isolation and logistics dependence limit autonomy, so sustainability and endurance depend on continued fuel, water, maintenance, and resupply. In short: tactically strong, strategically dependent.",
+    "image": "/images/bases/camp-lemonnier.png"
   },
   {
     "name": "UN Base in Juba (UNMISS HQ, South Sudan)",
@@ -352,7 +359,8 @@
       "keyRisk": "Aid dependency and sustained crowding outpace capacity, degrading security, sanitation, and governance inside the compound."
     },
     "realityCheck": "Assumes disciplined management and finite-duration occupation. Permanent independent survival is unlikely in this setting.",
-    "scoreNarrative": "UNMISS Juba has moderate-to-strong defensibility for immediate crisis shelter, but very low isolation and weak sustainability dominate longer timelines. As surrounding pressure rises, crowding and aid reliance become the primary killers, turning a protected enclave into an overloaded one."
+    "scoreNarrative": "UNMISS Juba has moderate-to-strong defensibility for immediate crisis shelter, but very low isolation and weak sustainability dominate longer timelines. As surrounding pressure rises, crowding and aid reliance become the primary killers, turning a protected enclave into an overloaded one.",
+    "image": "/images/bases/unmiss-juba.png"
   },
   {
     "name": "Seychelles",
@@ -394,7 +402,8 @@
       "keyRisk": "Maritime transport and inter-island governance become the critical bottleneck"
     },
     "realityCheck": "Assumes access to boats, fuel alternatives, and governance capacity across multiple islands. Benefits fall quickly if mobility between islands collapses.",
-    "scoreNarrative": "Seychelles scores highest in isolation and also performs well in sustainability, producing a top-tier overall rating. Defensibility is comparatively lower due to dispersed coastlines, but not low enough to undermine long-term viability."
+    "scoreNarrative": "Seychelles scores highest in isolation and also performs well in sustainability, producing a top-tier overall rating. Defensibility is comparatively lower due to dispersed coastlines, but not low enough to undermine long-term viability.",
+    "image": "/images/bases/seychelles.png"
   },
   {
     "name": "Zanzibar Island",
@@ -436,7 +445,8 @@
       "keyRisk": "Resource governance fails before isolation advantages can be fully leveraged"
     },
     "realityCheck": "Assumes early control of key ports, storage, and distribution systems. Without disciplined governance, density turns into vulnerability.",
-    "scoreNarrative": "Zanzibar scores best in isolation and remains solid in defensibility, creating a strong overall profile. Sustainability is the lowest category, so long-term success depends on disciplined food, water, and public-order management."
+    "scoreNarrative": "Zanzibar scores best in isolation and remains solid in defensibility, creating a strong overall profile. Sustainability is the lowest category, so long-term success depends on disciplined food, water, and public-order management.",
+    "image": "/images/bases/zanzibar.png"
   },
   {
     "name": "Cape Point Lighthouse",
@@ -478,7 +488,8 @@
       "keyRisk": "Teams overcommit to a scenic defensive point that cannot sustain residency"
     },
     "realityCheck": "Assumes the site is used as a support outpost, not a standalone settlement. Endurance depends on external supply from better-positioned bases.",
-    "scoreNarrative": "Cape Point performs best in defensibility, with isolation in the mid range. Sustainability is clearly the weakest category, which limits its role to temporary operations and reconnaissance support."
+    "scoreNarrative": "Cape Point performs best in defensibility, with isolation in the mid range. Sustainability is clearly the weakest category, which limits its role to temporary operations and reconnaissance support.",
+    "image": "/images/bases/cape-point.png"
   },
   {
     "name": "Great Mosque of Djenné",
@@ -521,7 +532,8 @@
       "keyRisk": "Material fragility: a culturally iconic structure can look strong but lacks the durability and defensive utility needed for sustained conflict conditions."
     },
     "realityCheck": "Assumes respectful, minimal-impact use of a heritage landmark. Practical survival planning should prioritize purpose-built or resource-rich alternatives.",
-    "scoreNarrative": "Djenné remains a weak base overall: defensibility is limited, isolation is low, and sustainability is modest at best. The dominant failure mode is fragility—its heritage construction and symbolic prominence do not translate into robust, long-duration defensive performance."
+    "scoreNarrative": "Djenné remains a weak base overall: defensibility is limited, isolation is low, and sustainability is modest at best. The dominant failure mode is fragility—its heritage construction and symbolic prominence do not translate into robust, long-duration defensive performance.",
+    "image": "/images/bases/djenne.png"
   },
   {
     "name": "Aït Benhaddou",
@@ -564,7 +576,8 @@
       "keyRisk": "Water scarcity is the primary long-horizon threat, with food limits compounding endurance risk in prolonged disruption."
     },
     "realityCheck": "Assumes access to nearby water management and cultivated support zones. The ksar alone is not a complete long-horizon survival system.",
-    "scoreNarrative": "Aït Benhaddou scores as a high-performing niche option, with strong defensibility and strong isolation working together. Sustainability remains the limiting category because water and food expansion are constrained in an arid environment. The base can excel with tight planning, but water scarcity defines the long-term kill condition."
+    "scoreNarrative": "Aït Benhaddou scores as a high-performing niche option, with strong defensibility and strong isolation working together. Sustainability remains the limiting category because water and food expansion are constrained in an arid environment. The base can excel with tight planning, but water scarcity defines the long-term kill condition.",
+    "image": "/images/bases/ait-benhaddou.png"
   },
   {
     "name": "Kolmanskop",
@@ -609,7 +622,8 @@
       "keyRisk": "Water dependence creates a hard timeline that defense quality cannot extend"
     },
     "realityCheck": "Assumes prepositioned stores, transport fuel, and strict consumption discipline. Without scheduled resupply, the site fails predictably.",
-    "scoreNarrative": "Kolmanskop scores well on isolation but very low on sustainability, which defines the kill condition. This is a hideout, not a self-sustaining settlement: what kills you here is water failure."
+    "scoreNarrative": "Kolmanskop scores well on isolation but very low on sustainability, which defines the kill condition. This is a hideout, not a self-sustaining settlement: what kills you here is water failure.",
+    "image": "/images/bases/kolmanskop.png"
   },
   {
     "name": "Waw an Namus Cave System",
@@ -654,7 +668,8 @@
       "keyRisk": "Distance from everything turns routine shortages into terminal events"
     },
     "realityCheck": "Assumes substantial pre-staged stores, spare parts, and transport redundancy. Without those, isolation turns from shield to trap.",
-    "scoreNarrative": "Waw an Namus rates elite in isolation and good in defensibility, but sustainability remains critically low. What kills you here is not breach risk; it is being too far from resilient water, food, and medical chains."
+    "scoreNarrative": "Waw an Namus rates elite in isolation and good in defensibility, but sustainability remains critically low. What kills you here is not breach risk; it is being too far from resilient water, food, and medical chains.",
+    "image": "/images/bases/waw-namus.png"
   },
   {
     "name": "Matmata Underground Dwellings",
@@ -699,7 +714,8 @@
       "keyRisk": "If external resource loops are disrupted, underground shelter quality cannot compensate"
     },
     "realityCheck": "Assumes control of nearby land and technical upkeep of subterranean systems. The dwellings are an excellent shell, not a complete autonomous ecosystem.",
-    "scoreNarrative": "Matmata clears the 7+ tier by combining high defensibility with useful isolation and better-than-average sustainability for this category. The failure mode is system strain: what kills you here is resource and infrastructure overload, not immediate overruns."
+    "scoreNarrative": "Matmata clears the 7+ tier by combining high defensibility with useful isolation and better-than-average sustainability for this category. The failure mode is system strain: what kills you here is resource and infrastructure overload, not immediate overruns.",
+    "image": "/images/bases/matmata.png"
   },
   {
     "name": "Cape Town Airport",
@@ -744,7 +760,8 @@
       "keyRisk": "High-traffic geometry ensures you spend all capacity on defense and still lose ground"
     },
     "realityCheck": "Assumes temporary mission focus with preplanned exit routes. Holding the site as a permanent refuge is strategically unsound.",
-    "scoreNarrative": "Cape Town Airport remains below 5 because isolation and defensibility are structurally weak despite decent infrastructure. What kills you here is relentless exposure: the location is too connected to survive as a static base."
+    "scoreNarrative": "Cape Town Airport remains below 5 because isolation and defensibility are structurally weak despite decent infrastructure. What kills you here is relentless exposure: the location is too connected to survive as a static base.",
+    "image": "/images/bases/cape-town-airport.png"
   },
   {
     "name": "Mombasa Port",
@@ -789,7 +806,8 @@
       "keyRisk": "The site drains defenders through constant perimeter incidents and strategic competition"
     },
     "realityCheck": "Assumes maritime lanes remain usable and group command is disciplined. Without continuous throughput, the port becomes a high-risk target without upside.",
-    "scoreNarrative": "Mombasa Port scores below 5 because low isolation and weak defendability outweigh decent infrastructure. What kills you here is attrition from nonstop exposure and contested access."
+    "scoreNarrative": "Mombasa Port scores below 5 because low isolation and weak defendability outweigh decent infrastructure. What kills you here is attrition from nonstop exposure and contested access.",
+    "image": "/images/bases/mombasa.png"
   },
   {
     "name": "Mount Huashan",
@@ -834,7 +852,8 @@
       "keyRisk": "The mountain stays defensible while daily life systems become the bottleneck"
     },
     "realityCheck": "Assumes disciplined load planning, ropeway alternatives, and low occupancy. High occupancy or frequent casualties rapidly destabilize the site.",
-    "scoreNarrative": "Huashan ranks above 7 because defensibility and isolation are genuinely top-tier. What kills you here is logistics: if lift, water, or medical chains fail, the defensive advantage cannot save the group."
+    "scoreNarrative": "Huashan ranks above 7 because defensibility and isolation are genuinely top-tier. What kills you here is logistics: if lift, water, or medical chains fail, the defensive advantage cannot save the group.",
+    "image": "/images/bases/huashan.png"
   },
   {
     "name": "Tiger Leaping Gorge Cliffs",
@@ -879,7 +898,8 @@
       "keyRisk": "Sustainability deficits accumulate faster than defensive incidents"
     },
     "realityCheck": "Assumes light occupancy and pre-cached essentials. Treating the gorge as a permanent settlement is a common planning error.",
-    "scoreNarrative": "Tiger Gorge stays just under 7: defensibility is exceptional, but sustainability drags the total down. What kills you here is not breach probability; it is supply and mobility breakdown in extreme terrain."
+    "scoreNarrative": "Tiger Gorge stays just under 7: defensibility is exceptional, but sustainability drags the total down. What kills you here is not breach probability; it is supply and mobility breakdown in extreme terrain.",
+    "image": "/images/bases/tiger-gorge.png"
   },
   {
     "name": "Great Wall Fortress Sections",
@@ -924,7 +944,8 @@
       "keyRisk": "Teams become overextended defending static infrastructure without enough supply depth"
     },
     "realityCheck": "Assumes selecting and fortifying a limited segment, not attempting to hold broad continuous wall systems.",
-    "scoreNarrative": "Great Wall sections reach the 7 range through very high defensibility, but only if occupation is tightly scoped. What kills you here is overextension: too much wall, not enough sustainment."
+    "scoreNarrative": "Great Wall sections reach the 7 range through very high defensibility, but only if occupation is tightly scoped. What kills you here is overextension: too much wall, not enough sustainment.",
+    "image": "/images/bases/great-wall.png"
   },
   {
     "name": "Himeji Castle",
@@ -969,7 +990,8 @@
       "keyRisk": "The castle can repel attacks, but cannot isolate itself from city-scale attrition"
     },
     "realityCheck": "Assumes coordinated outer security and controlled access corridors. Alone, the castle is a hard shell in a high-pressure basin.",
-    "scoreNarrative": "Himeji remains a strong defensive site but below 7 overall due to low isolation. What kills you here is sustained urban attrition, not immediate wall breach."
+    "scoreNarrative": "Himeji remains a strong defensive site but below 7 overall due to low isolation. What kills you here is sustained urban attrition, not immediate wall breach.",
+    "image": "/images/bases/himeji.png"
   },
   {
     "name": "Foxconn Shenzhen Factory",
@@ -1014,7 +1036,8 @@
       "keyRisk": "Operational complexity and exposure consume manpower faster than systems can be maintained"
     },
     "realityCheck": "Assumes immediate lockdown capability, skilled operators, and strong command discipline. Without fast consolidation, the site becomes an attritional trap.",
-    "scoreNarrative": "Factory Shenzhen lands mid-low overall: sustainability potential is real, but isolation is near-bottom and decisively caps survivability. What kills you here is urban perimeter attrition, not lack of equipment."
+    "scoreNarrative": "Factory Shenzhen lands mid-low overall: sustainability potential is real, but isolation is near-bottom and decisively caps survivability. What kills you here is urban perimeter attrition, not lack of equipment.",
+    "image": "/images/bases/factory-shenzhen.png"
   },
   {
     "name": "Hyundai Heavy Industries Shipyard",
@@ -1057,7 +1080,8 @@
       "keyRisk": "Teams get trapped in a sprawling industrial complex once power, pumps, and coordination break down"
     },
     "realityCheck": "Assumes early access to fuel and skilled operators. Without continuous maintenance, cranes, gates, lighting, and water systems degrade fast.",
-    "scoreNarrative": "Defensibility is only moderate because usable strongpoints exist but the overall site is too large to secure. Isolation is low in a coastal industrial corridor, and sustainability is weak due to heavy infrastructure dependence. The dominant failure mode is control loss at scale."
+    "scoreNarrative": "Defensibility is only moderate because usable strongpoints exist but the overall site is too large to secure. Isolation is low in a coastal industrial corridor, and sustainability is weak due to heavy infrastructure dependence. The dominant failure mode is control loss at scale.",
+    "image": "/images/bases/hyundai-shipyard.png"
   },
   {
     "name": "Wuhan Institute of Virology",
@@ -1100,7 +1124,8 @@
       "keyRisk": "Continuous contact pressure and resupply interruption grind down defenses faster than they can recover"
     },
     "realityCheck": "Assumes immediate control of the campus and disciplined occupancy. Long-term independent survival in central urban terrain is unlikely.",
-    "scoreNarrative": "Defensibility starts above average due to institutional design, but isolation is extremely poor and sustainability declines as technical systems fail. Overall score stays below 5 because the core failure mode is urban encirclement, not wall strength."
+    "scoreNarrative": "Defensibility starts above average due to institutional design, but isolation is extremely poor and sustainability declines as technical systems fail. Overall score stays below 5 because the core failure mode is urban encirclement, not wall strength.",
+    "image": "/images/bases/wuhan-institute-of-virology.png"
   },
   {
     "name": "Ryongsong Residence Compound",
@@ -1143,7 +1168,8 @@
       "keyRisk": "A fixed, famous compound becomes a magnet target and is slowly starved rather than stormed"
     },
     "realityCheck": "Assumes occupants can enforce strict access and rationing. Survival drops sharply if surrounding routes are cut for weeks.",
-    "scoreNarrative": "High defensibility keeps the score above average, but low isolation and poor self-sufficiency cap long-term viability. The model penalizes siege vulnerability as the dominant kill mechanism."
+    "scoreNarrative": "High defensibility keeps the score above average, but low isolation and poor self-sufficiency cap long-term viability. The model penalizes siege vulnerability as the dominant kill mechanism.",
+    "image": "/images/bases/ryongsong-compound.png"
   },
   {
     "name": "Jeju Island",
@@ -1186,7 +1212,8 @@
       "keyRisk": "A prolonged shipping disruption turns isolation from protection into a supply trap"
     },
     "realityCheck": "Assumes early population control measures and rapid shift to local food production. Without coordinated governance, demand shock can break the system.",
-    "scoreNarrative": "Jeju scores high because isolation and sustainability are both above average for a macro-base. Defensibility is solid but not elite. The key failure mode is logistical choke: maritime disruption can convert a strong island into a stressed one."
+    "scoreNarrative": "Jeju scores high because isolation and sustainability are both above average for a macro-base. Defensibility is solid but not elite. The key failure mode is logistical choke: maritime disruption can convert a strong island into a stressed one.",
+    "image": "/images/bases/jeju.png"
   },
   {
     "name": "Okinawa",
@@ -1229,7 +1256,8 @@
       "keyRisk": "If hub infrastructure is disrupted or contested, cascading shortages trigger internal instability"
     },
     "realityCheck": "Assumes rapid decentralization from high-density zones and enforceable rationing. A centralized strategy is more brittle under stress.",
-    "scoreNarrative": "Okinawa sits in the upper-middle tier: decent isolation and sustainability, but only moderate defensibility at scale. The score is constrained by strategic contest risk around critical infrastructure."
+    "scoreNarrative": "Okinawa sits in the upper-middle tier: decent isolation and sustainability, but only moderate defensibility at scale. The score is constrained by strategic contest risk around critical infrastructure.",
+    "image": "/images/bases/okinawa.png"
   },
   {
     "name": "Great Buddha Leshan",
@@ -1272,7 +1300,8 @@
       "keyRisk": "Occupants are fixed in an open tourist terrain that cannot be secured or supplied"
     },
     "realityCheck": "Assumes minimal occupancy and immediate onward movement. Treating Leshan as a permanent refuge is unrealistic.",
-    "scoreNarrative": "All core categories score low because the site is a landmark rather than a fortified or self-sustaining habitat. The defining failure mode is immediate exposure, so overall viability is poor."
+    "scoreNarrative": "All core categories score low because the site is a landmark rather than a fortified or self-sustaining habitat. The defining failure mode is immediate exposure, so overall viability is poor.",
+    "image": "/images/bases/leshan.png"
   },
   {
     "name": "Tokyo Tower",
@@ -1315,7 +1344,8 @@
       "keyRisk": "Staying in place turns visibility advantage into target fixation with no sustainment path"
     },
     "realityCheck": "Assumes zero intent to occupy long-term. Any prolonged hold at this site is strategically unsound.",
-    "scoreNarrative": "Tokyo Tower ranks near the bottom because it fails every survival pillar: no isolation, negligible sustainability, and almost no practical defensibility. The base fails by design, not by bad execution."
+    "scoreNarrative": "Tokyo Tower ranks near the bottom because it fails every survival pillar: no isolation, negligible sustainability, and almost no practical defensibility. The base fails by design, not by bad execution.",
+    "image": "/images/bases/tokyo-tower.png"
   },
   {
     "name": "Shaxi Ancient Town",
@@ -1358,7 +1388,8 @@
       "keyRisk": "Without strong external barriers, recurring probes and raids steadily wear down defenders"
     },
     "realityCheck": "Assumes disciplined governance and quick conversion of buildings for defense. Passive defense alone is insufficient.",
-    "scoreNarrative": "Shaxi is carried by decent sustainability and isolation for a rural site, but defensibility remains below average. The score reflects an attritional failure mode rather than a single catastrophic breach."
+    "scoreNarrative": "Shaxi is carried by decent sustainability and isolation for a rural site, but defensibility remains below average. The score reflects an attritional failure mode rather than a single catastrophic breach.",
+    "image": "/images/bases/shaxi.png"
   },
   {
     "name": "Shirakawa-go",
@@ -1401,7 +1432,8 @@
       "keyRisk": "If winter prep is insufficient, cold-weather shortages cascade into health and security failures"
     },
     "realityCheck": "Assumes high pre-winter preparation and reliable local fuel strategy. Underprepared groups fail here seasonally, not tactically.",
-    "scoreNarrative": "Shirakawa-go scores as a balanced but climate-constrained refuge: isolation is good, sustainability moderate, and defensibility modest. The model centers winter logistics as the core kill factor."
+    "scoreNarrative": "Shirakawa-go scores as a balanced but climate-constrained refuge: isolation is good, sustainability moderate, and defensibility modest. The model centers winter logistics as the core kill factor.",
+    "image": "/images/bases/shirakawa-go.png"
   },
   {
     "name": "Iwo Jima Underground Bunkers",
@@ -1444,7 +1476,8 @@
       "keyRisk": "If occupants cannot rotate out or restore supplies, bunker endurance fails from inside-out"
     },
     "realityCheck": "Assumes pre-positioned supplies, water discipline, and engineering capability. The site is defensive gold but not a self-sustaining ecosystem.",
-    "scoreNarrative": "Iwo Jima earns high marks for defensibility and isolation, pushing overall score to the lower 7s. Sustainability is decisively weak, and that weakness defines the failure mode: you are protected until you run out of life support."
+    "scoreNarrative": "Iwo Jima earns high marks for defensibility and isolation, pushing overall score to the lower 7s. Sustainability is decisively weak, and that weakness defines the failure mode: you are protected until you run out of life support.",
+    "image": "/images/bases/iwo-jima-bunkers.png"
   },
   {
     "name": "Beijing Underground City",
@@ -1487,7 +1520,8 @@
       "keyRisk": "If filters, pumps, or power chains fail, the bunker becomes a sealed hazard instead of a refuge"
     },
     "realityCheck": "Assumes pre-stocked spares, disciplined maintenance crews, water treatment capability, and strict occupancy control in a dense urban crisis zone.",
-    "scoreNarrative": "Defensibility keeps Beijing Underground City competitive, but sustainability drags the score down. The decisive failure mode is internal systems collapse: you do not get overrun first, you run out of breathable and safe living conditions."
+    "scoreNarrative": "Defensibility keeps Beijing Underground City competitive, but sustainability drags the score down. The decisive failure mode is internal systems collapse: you do not get overrun first, you run out of breathable and safe living conditions.",
+    "image": "/images/bases/beijing-underground.png"
   },
   {
     "name": "Shanghai Port",
@@ -1530,7 +1564,8 @@
       "keyRisk": "Staying to defend fixed infrastructure turns your group into a static target in a converging urban battlespace"
     },
     "realityCheck": "Assumes early access, marine competence, and enough force to load and leave quickly; assumes no prolonged siege posture.",
-    "scoreNarrative": "Access and material abundance inflate tactical opportunity but not survivability. The core failure mode is persistent exposure: the port attracts too many actors to defend long enough for stability."
+    "scoreNarrative": "Access and material abundance inflate tactical opportunity but not survivability. The core failure mode is persistent exposure: the port attracts too many actors to defend long enough for stability.",
+    "image": "/images/bases/shanghai-port.png"
   },
   {
     "name": "Tokyo Airport",
@@ -1573,7 +1608,8 @@
       "keyRisk": "If sortie timing fails, the airport's scale and visibility trap defenders in an unwinnable static defense"
     },
     "realityCheck": "Assumes available aircraft or convoy plans, disciplined timing, and immediate fallback routes once congestion and security degrade.",
-    "scoreNarrative": "Tokyo Airport scores slightly above major ports on organized mobility, but defensibility remains poor. The fatal trade-off is clear: great movement node, terrible place to stay."
+    "scoreNarrative": "Tokyo Airport scores slightly above major ports on organized mobility, but defensibility remains poor. The fatal trade-off is clear: great movement node, terrible place to stay.",
+    "image": "/images/bases/tokyo-airport.png"
   },
   {
     "name": "Predjama Castle",
@@ -1616,7 +1652,8 @@
       "keyRisk": "If surrounding networks are cut, static defenders consume stocks and lose without being breached"
     },
     "realityCheck": "Assumes pre-stocked reserves, secure nearby production zones, and disciplined rationing under intermittent siege.",
-    "scoreNarrative": "Predjama keeps elite defensibility but drops below the top tier because sustainability is structurally limited. Its core failure mode is starvation by encirclement, not direct assault."
+    "scoreNarrative": "Predjama keeps elite defensibility but drops below the top tier because sustainability is structurally limited. Its core failure mode is starvation by encirclement, not direct assault.",
+    "image": "/images/bases/predjama.png"
   },
   {
     "name": "Sigiriya",
@@ -1659,7 +1696,8 @@
       "Limited usable plateau area restricts agriculture, sanitation expansion, and population growth",
       "Dependence on lower-ground systems makes sustained siege conditions risky",
       "High visibility can attract both desperate civilians and organized hostile groups"
-    ]
+    ],
+    "image": "/images/bases/sigiriya.png"
   },
   {
     "name": "Malbork Castle",
@@ -1702,7 +1740,8 @@
       "keyRisk": "Without persistent external resource capture, defenders become static and gradually out-consumed"
     },
     "realityCheck": "Assumes trained defenders, nearby cooperative territory, and sustained convoy security through a contested region.",
-    "scoreNarrative": "Malbork reaches 7.0 on fortress quality and defensive depth. It does not score higher because the decisive failure mode is external-logistics attrition rather than structural weakness."
+    "scoreNarrative": "Malbork reaches 7.0 on fortress quality and defensive depth. It does not score higher because the decisive failure mode is external-logistics attrition rather than structural weakness.",
+    "image": "/images/bases/malbork.png"
   },
   {
     "name": "Suomenlinna Fortress",
@@ -1745,7 +1784,8 @@
       "keyRisk": "If sea lanes are denied, the fortress consumes reserves faster than it can replace critical inputs"
     },
     "realityCheck": "Assumes control of boats, fuel stores, water treatment, and secure off-island partners for food and repairs.",
-    "scoreNarrative": "Suomenlinna remains defensible but lands in the mid-6s because sustainability is externally coupled. The failure mode is blockade attrition, not immediate tactical collapse."
+    "scoreNarrative": "Suomenlinna remains defensible but lands in the mid-6s because sustainability is externally coupled. The failure mode is blockade attrition, not immediate tactical collapse.",
+    "image": "/images/bases/suomenlinna.png"
   },
   {
     "name": "Gdańsk Shipyard",
@@ -1788,7 +1828,8 @@
       "keyRisk": "Treating the whole shipyard as a live-in fortress exhausts personnel and collapses sector control"
     },
     "realityCheck": "Assumes skilled labor, spare parts, and convoy or marine security to move produced assets quickly.",
-    "scoreNarrative": "Gdańsk gains points on practical industry but loses heavily on defendable footprint and exposure. The dominant kill mechanism is not scarcity; it is overstretched security."
+    "scoreNarrative": "Gdańsk gains points on practical industry but loses heavily on defendable footprint and exposure. The dominant kill mechanism is not scarcity; it is overstretched security.",
+    "image": "/images/bases/gdansk-shipyard.png"
   },
   {
     "name": "Norilsk",
@@ -1831,7 +1872,8 @@
       "keyRisk": "If power and heating chains are not redundant, routine winter failures become lethal events"
     },
     "realityCheck": "Assumes cold-weather expertise, large fuel buffers, indoor agriculture plans, and reliable maintenance teams.",
-    "scoreNarrative": "Norilsk's isolation is elite, but isolation alone does not keep people alive. Its core failure mode is environmental lethality once critical systems degrade."
+    "scoreNarrative": "Norilsk's isolation is elite, but isolation alone does not keep people alive. Its core failure mode is environmental lethality once critical systems degrade.",
+    "image": "/images/bases/norilsk.png"
   },
   {
     "name": "Chernobyl Exclusion Zone Facility",
@@ -1874,7 +1916,8 @@
       "keyRisk": "If decontamination and medical monitoring lapse, invisible cumulative hazards erode group capability"
     },
     "realityCheck": "Assumes dosimetry discipline, contamination-aware agriculture choices, and access to diagnostics and specialist medicine.",
-    "scoreNarrative": "Chernobyl scores better than dense urban hubs on isolation but remains capped by chronic health risk. The key failure mode is cumulative biological damage under constrained medical support."
+    "scoreNarrative": "Chernobyl scores better than dense urban hubs on isolation but remains capped by chronic health risk. The key failure mode is cumulative biological damage under constrained medical support.",
+    "image": "/images/bases/chernobyl.png"
   },
   {
     "name": "Olenya Air Base",
@@ -1917,7 +1960,8 @@
       "keyRisk": "If fuel purity, spare parts, or heating redundancy fail, exposure and immobility cascade quickly"
     },
     "realityCheck": "Assumes cold-weather mechanics, large fuel buffers, and enough trained maintainers to keep heat and power online.",
-    "scoreNarrative": "Olenya scores well on defensibility but loses long-term points on sustainability. Its core failure mode is not breach, but technical freeze-out after supply-chain breakdown."
+    "scoreNarrative": "Olenya scores well on defensibility but loses long-term points on sustainability. Its core failure mode is not breach, but technical freeze-out after supply-chain breakdown.",
+    "image": "/images/bases/olenya-airbase.png"
   },
   {
     "name": "Faroe Islands",
@@ -1960,7 +2004,8 @@
       "keyRisk": "If boats, diesel, or harbor operations fail, isolation shifts from shield to starvation trap"
     },
     "realityCheck": "Assumes seafaring crews, engine maintenance capacity, and coordinated ration policy across settlements.",
-    "scoreNarrative": "Faroe stays high due to excellent isolation, but sustainability is capped by maritime dependence. The core failure mode is a shipping and fuel bottleneck, not direct overrun."
+    "scoreNarrative": "Faroe stays high due to excellent isolation, but sustainability is capped by maritime dependence. The core failure mode is a shipping and fuel bottleneck, not direct overrun.",
+    "image": "/images/bases/faroe.png"
   },
   {
     "name": "Gotland",
@@ -2003,7 +2048,8 @@
       "keyRisk": "If teams try to hold the full island footprint, attrition outruns recruitment and repair"
     },
     "realityCheck": "Assumes unified command, coastal surveillance, and willingness to cede terrain to preserve force density.",
-    "scoreNarrative": "Gotland earns a high score from isolation and livability, but not elite due to scale-control friction. The core failure mode is operational overstretch rather than instant collapse."
+    "scoreNarrative": "Gotland earns a high score from isolation and livability, but not elite due to scale-control friction. The core failure mode is operational overstretch rather than instant collapse.",
+    "image": "/images/bases/gotland.png"
   },
   {
     "name": "Kizhi Pogost",
@@ -2046,7 +2092,8 @@
       "keyRisk": "If isolated there for winter without reserves, cold and medical scarcity become fatal"
     },
     "realityCheck": "Assumes pre-stocked supplies, boat reliability, and external support for anything beyond short stays.",
-    "scoreNarrative": "Kizhi keeps some points for isolation, but sustainability is fundamentally low. Its core failure mode is slow systems starvation, not tactical defeat."
+    "scoreNarrative": "Kizhi keeps some points for isolation, but sustainability is fundamentally low. Its core failure mode is slow systems starvation, not tactical defeat.",
+    "image": "/images/bases/kizhi.png"
   },
   {
     "name": "Ostankino Tower",
@@ -2089,7 +2136,8 @@
       "keyRisk": "If teams treat it as a fortress, visibility and choke-point exits convert it into a kill box"
     },
     "realityCheck": "Assumes controlled access windows and preplanned exfil routes; otherwise casualty risk spikes fast.",
-    "scoreNarrative": "Ostankino remains near the floor because it concentrates people in an obvious vertical trap. The core failure mode is catastrophic entrapment under urban pressure."
+    "scoreNarrative": "Ostankino remains near the floor because it concentrates people in an obvious vertical trap. The core failure mode is catastrophic entrapment under urban pressure.",
+    "image": "/images/bases/ostankino.png"
   },
   {
     "name": "Longyearbyen",
@@ -2132,7 +2180,8 @@
       "keyRisk": "What kills you here is prolonged logistics breakdown that strips heat and calories in deep cold"
     },
     "realityCheck": "Longyearbyen only holds if teams can maintain critical systems through repeated resupply shocks.",
-    "scoreNarrative": "Longyearbyen grades well on isolation and workable infrastructure, but sustainability drag remains decisive: when imports stall, survival margins collapse fast."
+    "scoreNarrative": "Longyearbyen grades well on isolation and workable infrastructure, but sustainability drag remains decisive: when imports stall, survival margins collapse fast.",
+    "image": "/images/bases/longyearbyen.png"
   },
   {
     "name": "Visby",
@@ -2175,7 +2224,8 @@
       "keyRisk": "If intake is unmanaged, sanitation and water stress erode survivability from inside"
     },
     "realityCheck": "Assumes disciplined governance, enforceable ration policy, and rapid infrastructure triage capability.",
-    "scoreNarrative": "Visby remains a high-tier balanced site, but not elite because carrying capacity is finite. Its core failure mode is internal systems overload rather than perimeter collapse."
+    "scoreNarrative": "Visby remains a high-tier balanced site, but not elite because carrying capacity is finite. Its core failure mode is internal systems overload rather than perimeter collapse.",
+    "image": "/images/bases/visby.png"
   },
   {
     "name": "Ligatne Bunker",
@@ -2218,7 +2268,8 @@
       "keyRisk": "If ventilation, filtration, or pumping fails for long periods, shelter turns nonviable quickly"
     },
     "realityCheck": "Assumes preventive maintenance discipline and redundant systems for air, water, and waste handling.",
-    "scoreNarrative": "Ligatne scores high on defensibility but is pulled down by severe sustainability constraints. The core failure mode is internal systems failure in a closed environment."
+    "scoreNarrative": "Ligatne scores high on defensibility but is pulled down by severe sustainability constraints. The core failure mode is internal systems failure in a closed environment.",
+    "image": "/images/bases/ligatne-bunker.png"
   },
   {
     "name": "Derinkuyu Underground City",
@@ -2261,7 +2312,8 @@
       "keyRisk": "If leadership overpacks the site, internal life-support stress compounds into disease and panic"
     },
     "realityCheck": "Assumes strict occupancy control, medical triage, and continuous external farming support.",
-    "scoreNarrative": "Derinkuyu stays above 7 because its defensive geometry is exceptional, but sustainability drag keeps it out of top tier. The core failure mode is closed-environment systems overload."
+    "scoreNarrative": "Derinkuyu stays above 7 because its defensive geometry is exceptional, but sustainability drag keeps it out of top tier. The core failure mode is closed-environment systems overload.",
+    "image": "/images/bases/derinkuyu.png"
   },
   {
     "name": "Helsinki Airport",
@@ -2304,7 +2356,8 @@
       "keyRisk": "If treated as a static base, crowd pressure and infiltration rapidly become unmanageable"
     },
     "realityCheck": "Assumes temporary military-grade security presence and preplanned relocation routes.",
-    "scoreNarrative": "Helsinki Airport gains points for mobility utility, but settlement viability is very low. The core failure mode is control collapse under continuous inbound pressure."
+    "scoreNarrative": "Helsinki Airport gains points for mobility utility, but settlement viability is very low. The core failure mode is control collapse under continuous inbound pressure.",
+    "image": "/images/bases/helsinki-airport.png"
   },
   {
     "name": "Murmansk Port",
@@ -2347,7 +2400,8 @@
       "keyRisk": "Treating the port as a static community base creates cascading fuel, shelter, and health failures"
     },
     "realityCheck": "Assumes initial access to winterized shelters, diesel reserves, and trained mechanics for rapid triage.",
-    "scoreNarrative": "Murmansk rates as a conditional utility node: isolation is helpful, but sustainability is the dominant failure axis. The core kill mechanism is exposure after system decline."
+    "scoreNarrative": "Murmansk rates as a conditional utility node: isolation is helpful, but sustainability is the dominant failure axis. The core kill mechanism is exposure after system decline.",
+    "image": "/images/bases/murmansk.png"
   },
   {
     "name": "Cappadocia Highlands",
@@ -2390,7 +2444,8 @@
       "keyRisk": "If occupancy expands faster than production, internal depletion defeats the terrain advantage"
     },
     "realityCheck": "Assumes disciplined water governance, protected farming corridors, and redundant local storage sites.",
-    "scoreNarrative": "Cappadocia clears the 7-tier on defensibility and isolation, but not top-tier because sustainability plateaus quickly. The decisive failure mode is slow starvation and water stress, not direct assault."
+    "scoreNarrative": "Cappadocia clears the 7-tier on defensibility and isolation, but not top-tier because sustainability plateaus quickly. The decisive failure mode is slow starvation and water stress, not direct assault.",
+    "image": "/images/bases/cappadocia.png"
   },
   {
     "name": "Petra",
@@ -2433,7 +2488,8 @@
       "keyRisk": "If leaders assume fortress strength equals self-sufficiency, dehydration and illness become primary killers"
     },
     "realityCheck": "Assumes prepositioned treatment equipment, protected cisterns, and stable perimeter control of nearby springs.",
-    "scoreNarrative": "Petra remains defensible, but overall score drops into upper-mid tier because sustainability is the binding constraint. Core failure mode: hydration collapse under prolonged occupancy."
+    "scoreNarrative": "Petra remains defensible, but overall score drops into upper-mid tier because sustainability is the binding constraint. Core failure mode: hydration collapse under prolonged occupancy.",
+    "image": "/images/bases/petra.png"
   },
   {
     "name": "Krak des Chevaliers",
@@ -2476,7 +2532,8 @@
       "keyRisk": "If all critical stores and personnel are centralized, siege pressure creates irreversible depletion"
     },
     "realityCheck": "Assumes secure offsite agriculture, convoy discipline, and active anti-encirclement patrol doctrine.",
-    "scoreNarrative": "Krak stays above 7 due to elite defensibility, but not elite overall because endurance depends on external throughput. The kill chain is logistical starvation, not breach."
+    "scoreNarrative": "Krak stays above 7 due to elite defensibility, but not elite overall because endurance depends on external throughput. The kill chain is logistical starvation, not breach.",
+    "image": "/images/bases/krak.png"
   },
   {
     "name": "Masada",
@@ -2519,7 +2576,8 @@
       "keyRisk": "Using Masada as a permanent settlement turns tactical advantage into a slow attrition trap"
     },
     "realityCheck": "Assumes controlled occupancy, redundant water storage, and reliable lower-elevation support nodes.",
-    "scoreNarrative": "Masada scores high in defense but below 7 overall because sustainment bottlenecks dominate multi-month timelines. Core failure mode: internal attrition under resource stress."
+    "scoreNarrative": "Masada scores high in defense but below 7 overall because sustainment bottlenecks dominate multi-month timelines. Core failure mode: internal attrition under resource stress.",
+    "image": "/images/bases/masada.png"
   },
   {
     "name": "Abqaiq Oil Processing Facility",
@@ -2562,7 +2620,8 @@
       "keyRisk": "Attempting to hold Abqaiq invites repeated contact that burns manpower and critical stores"
     },
     "realityCheck": "Assumes brief controlled access window and an already identified fallback settlement.",
-    "scoreNarrative": "Abqaiq remains low-tier because strategic attention and technical fragility compound each other. The core failure mode is exposure-to-targeting plus infrastructure dependency."
+    "scoreNarrative": "Abqaiq remains low-tier because strategic attention and technical fragility compound each other. The core failure mode is exposure-to-targeting plus infrastructure dependency.",
+    "image": "/images/bases/abqaiq.png"
   },
   {
     "name": "Ras Al Khair Desalination Plant",
@@ -2605,7 +2664,8 @@
       "keyRisk": "If population remains dependent on continuous plant operation, failure becomes catastrophic"
     },
     "realityCheck": "Assumes early stockpiling of treatment consumables and secure backup generation capacity.",
-    "scoreNarrative": "Ras Al Khair scores higher than generic industrial sites because water production matters, but stays below strong-tier due to brittle technical dependence. Failure mode: utility cliff-edge."
+    "scoreNarrative": "Ras Al Khair scores higher than generic industrial sites because water production matters, but stays below strong-tier due to brittle technical dependence. Failure mode: utility cliff-edge.",
+    "image": "/images/bases/ras-al-khair.png"
   },
   {
     "name": "Al Udeid Air Base",
@@ -2648,7 +2708,8 @@
       "keyRisk": "Staying too long concentrates people and materiel at a predictable high-value point"
     },
     "realityCheck": "Assumes cohesive command structure, disciplined perimeter staffing, and finite-duration mission planning.",
-    "scoreNarrative": "Al Udeid lands in the mid-tier: excellent defensibility but poor strategic invisibility and modest sustainability. The killer is prolonged attention, not immediate breach."
+    "scoreNarrative": "Al Udeid lands in the mid-tier: excellent defensibility but poor strategic invisibility and modest sustainability. The killer is prolonged attention, not immediate breach.",
+    "image": "/images/bases/al-udeid.png"
   },
   {
     "name": "Ghawar Oil Field Central Processing",
@@ -2691,7 +2752,8 @@
       "keyRisk": "Trying to run complex processing at reduced capacity increases accident and poisoning exposure"
     },
     "realityCheck": "Assumes access to protective gear, technical shutdown procedures, and immediate relocation options.",
-    "scoreNarrative": "Ghawar remains bottom-tier for residency despite salvage utility. The core failure mode is technical and environmental cascade after industrial support erosion."
+    "scoreNarrative": "Ghawar remains bottom-tier for residency despite salvage utility. The core failure mode is technical and environmental cascade after industrial support erosion.",
+    "image": "/images/bases/ghawar-processing.png"
   },
   {
     "name": "Qeshm Island",
@@ -2734,7 +2796,8 @@
       "keyRisk": "Attempting to fully occupy and police the island overextends manpower and fractures command"
     },
     "realityCheck": "Assumes reliable small-craft patrol capacity, local food planning, and enforceable landing controls.",
-    "scoreNarrative": "Qeshm sits just below 7: isolation and scale are meaningful assets, but control burden is the dominant weakness. Core failure mode is governance breakdown across too much coastline."
+    "scoreNarrative": "Qeshm sits just below 7: isolation and scale are meaningful assets, but control burden is the dominant weakness. Core failure mode is governance breakdown across too much coastline.",
+    "image": "/images/bases/qeshm.png"
   },
   {
     "name": "Socotra Island",
@@ -2777,7 +2840,8 @@
       "keyRisk": "Assuming periodic resupply will continue leads to delayed rationing and hard supply cliffs"
     },
     "realityCheck": "Assumes disciplined maritime governance, pre-positioned medical stock, and conservative population caps.",
-    "scoreNarrative": "Socotra earns a strong 7+ on isolation value, but sustainability friction keeps it below elite tier. The core failure mode is slow logistic starvation rather than direct assault."
+    "scoreNarrative": "Socotra earns a strong 7+ on isolation value, but sustainability friction keeps it below elite tier. The core failure mode is slow logistic starvation rather than direct assault.",
+    "image": "/images/bases/socotra.png"
   },
   {
     "name": "Burj Khalifa",
@@ -2820,7 +2884,8 @@
       "keyRisk": "Trying to permanently occupy upper floors after grid loss creates evacuation deadlocks"
     },
     "realityCheck": "Assumes immediate fallback routes, stairwell control, and no expectation of full-system restoration.",
-    "scoreNarrative": "Burj remains near-bottom despite scale advantages. The core failure mode is vertical infrastructure collapse inside a high-pressure urban basin."
+    "scoreNarrative": "Burj remains near-bottom despite scale advantages. The core failure mode is vertical infrastructure collapse inside a high-pressure urban basin.",
+    "image": "/images/bases/burj.png"
   },
   {
     "name": "Lighthouse Hormuz",
@@ -2863,7 +2928,8 @@
       "keyRisk": "Treating it as a primary settlement causes overcrowding and fast consumable burn"
     },
     "realityCheck": "Assumes dependable boat access, strict occupancy caps, and preplanned evacuation windows.",
-    "scoreNarrative": "Hormuz-light sits mid-lower tier: isolation helps, but tiny carrying capacity dominates outcomes. The core failure mode is resource exhaustion in an undersized site."
+    "scoreNarrative": "Hormuz-light sits mid-lower tier: isolation helps, but tiny carrying capacity dominates outcomes. The core failure mode is resource exhaustion in an undersized site.",
+    "image": "/images/bases/hormuz-light.png"
   },
   {
     "name": "Siwa Oasis",
@@ -2906,7 +2972,8 @@
       "keyRisk": "Population growth beyond recharge limits causes irreversible water decline"
     },
     "realityCheck": "Assumes robust well maintenance, conservative irrigation, and enforceable drawdown limits.",
-    "scoreNarrative": "Siwa stays above 7 by combining remoteness with real habitation potential. The core failure mode is hydrology collapse, not direct invasion."
+    "scoreNarrative": "Siwa stays above 7 by combining remoteness with real habitation potential. The core failure mode is hydrology collapse, not direct invasion.",
+    "image": "/images/bases/siwa-oasis.png"
   },
   {
     "name": "Wadi Musa",
@@ -2949,7 +3016,8 @@
       "keyRisk": "Overcommitting to static defense allows route interdiction to starve the settlement"
     },
     "realityCheck": "Assumes persistent patrol capability and fuel reserves for route clearance operations.",
-    "scoreNarrative": "Wadi Musa falls just under 6 because habitability is offset by transport fragility. The core failure mode is chokepoint isolation."
+    "scoreNarrative": "Wadi Musa falls just under 6 because habitability is offset by transport fragility. The core failure mode is chokepoint isolation.",
+    "image": "/images/bases/wadi-musa.png"
   },
   {
     "name": "Gaza Tunnel Network",
@@ -2992,7 +3060,8 @@
       "keyRisk": "Normalizing continuous underground residency creates accelerating public-health collapse"
     },
     "realityCheck": "Assumes frequent rotation, reliable ventilation maintenance, and alternative surface logistics.",
-    "scoreNarrative": "Despite high tactical defensibility, Gaza tunnels score below 5 for settlement viability. The core failure mode is underground habitability collapse."
+    "scoreNarrative": "Despite high tactical defensibility, Gaza tunnels score below 5 for settlement viability. The core failure mode is underground habitability collapse.",
+    "image": "/images/bases/gaza-tunnels.png"
   },
   {
     "name": "Dubai Airport",
@@ -3035,7 +3104,8 @@
       "keyRisk": "Attempting fixed long-term occupation invites sieges and internal resource violence"
     },
     "realityCheck": "Assumes preplanned exit corridors and no dependence on continuous airport operations.",
-    "scoreNarrative": "Dubai Airport remains near-bottom despite scale and assets. The core failure mode is convergence overload at an obvious strategic node."
+    "scoreNarrative": "Dubai Airport remains near-bottom despite scale and assets. The core failure mode is convergence overload at an obvious strategic node.",
+    "image": "/images/bases/dubai-airport.png"
   },
   {
     "name": "Jebel Ali Port",
@@ -3078,7 +3148,8 @@
       "keyRisk": "Treating the port as a permanent capital locks the group into constant conflict cycles"
     },
     "realityCheck": "Assumes maritime awareness, rapid convoy capability, and willingness to abandon fixed assets early.",
-    "scoreNarrative": "Jebel Ali scores slightly above airports on salvage upside, but remains low-tier for residence. The core failure mode is strategic overexposure."
+    "scoreNarrative": "Jebel Ali scores slightly above airports on salvage upside, but remains low-tier for residence. The core failure mode is strategic overexposure.",
+    "image": "/images/bases/jebel-ali.png"
   },
   {
     "name": "Mesa Verde",
@@ -3121,7 +3192,8 @@
       "keyRisk": "Overconcentrating refugees without production expansion causes chronic shortages"
     },
     "realityCheck": "Assumes disciplined intake policy, water capture infrastructure, and cold-season stock planning.",
-    "scoreNarrative": "Mesa Verde remains upper-mid tier because defensibility is strong but carrying capacity is finite. The core failure mode is slow resource mismatch."
+    "scoreNarrative": "Mesa Verde remains upper-mid tier because defensibility is strong but carrying capacity is finite. The core failure mode is slow resource mismatch.",
+    "image": "/images/bases/mesa-verde.png"
   },
   {
     "name": "Table Rock Plateau",
@@ -3164,7 +3236,8 @@
       "keyRisk": "Trying to secure all surrounding approaches drains manpower and invites penetration"
     },
     "realityCheck": "Assumes constant patrol discipline and willingness to abandon outer zones early.",
-    "scoreNarrative": "Table Rock sits just above 6: useful terrain, but no decisive isolation or sustainment edge. The core failure mode is perimeter dilution."
+    "scoreNarrative": "Table Rock sits just above 6: useful terrain, but no decisive isolation or sustainment edge. The core failure mode is perimeter dilution.",
+    "image": "/images/bases/table-rock.png"
   },
   {
     "name": "Alcatraz Island",
@@ -3207,7 +3280,8 @@
       "keyRisk": "Treating the island as permanent settlement instead of a time-limited holdout"
     },
     "realityCheck": "Without dependable desalination, fishing yield management, and marine logistics, endurance falls sharply after initial stockpiles.",
-    "scoreNarrative": "Alcatraz scores high in defensibility and isolation but is pulled under 7 by very low sustainability. The rating reflects a fortress that delays threats effectively yet fails when supply autonomy is tested."
+    "scoreNarrative": "Alcatraz scores high in defensibility and isolation but is pulled under 7 by very low sustainability. The rating reflects a fortress that delays threats effectively yet fails when supply autonomy is tested.",
+    "image": "/images/bases/alcatraz.png"
   },
   {
     "name": "Fort Jefferson",
@@ -3250,7 +3324,8 @@
       "keyRisk": "Overcommitting personnel to a site with no resilient water-energy base"
     },
     "realityCheck": "The fort can resist people better than it can resist infrastructure decay.",
-    "scoreNarrative": "The site earns elite defensibility and isolation scores, but sustainability is critically low, preventing a top overall tier. Its bottleneck is utilities, not security doctrine."
+    "scoreNarrative": "The site earns elite defensibility and isolation scores, but sustainability is critically low, preventing a top overall tier. Its bottleneck is utilities, not security doctrine.",
+    "image": "/images/bases/fort-jefferson.png"
   },
   {
     "name": "Hutchinson Salt Storage Caverns",
@@ -3293,7 +3368,8 @@
       "keyRisk": "Moving full-time habitation underground without redundant life-support engineering"
     },
     "realityCheck": "Underground shelter solves exposure risk, not metabolic needs; air, power, and water remain non-negotiable.",
-    "scoreNarrative": "Hutchinson grades as a defensive niche base: one strong category, two middling-to-weak categories. It misses 6+ because sustainment depends on fragile technical systems."
+    "scoreNarrative": "Hutchinson grades as a defensive niche base: one strong category, two middling-to-weak categories. It misses 6+ because sustainment depends on fragile technical systems.",
+    "image": "/images/bases/hutchinson-salt.png"
   },
   {
     "name": "Port Arthur Refinery",
@@ -3336,7 +3412,8 @@
       "keyRisk": "Attempting static occupation inside a high-consequence industrial complex"
     },
     "realityCheck": "This is a resource site, not a survivable settlement; hazard management burden is too high.",
-    "scoreNarrative": "Port Arthur remains below 4 because isolation and defensibility are both poor in realistic collapse conditions. Utility value exists, but prolonged occupancy multiplies risk faster than resilience."
+    "scoreNarrative": "Port Arthur remains below 4 because isolation and defensibility are both poor in realistic collapse conditions. Utility value exists, but prolonged occupancy multiplies risk faster than resilience.",
+    "image": "/images/bases/port-arthur-refinery.png"
   },
   {
     "name": "Area 51",
@@ -3379,7 +3456,8 @@
       "keyRisk": "Trying to preserve full peacetime capability with collapsing supply chains"
     },
     "realityCheck": "Remote security helps, but spare parts, water strategy, and maintainable power architecture decide endurance.",
-    "scoreNarrative": "Area 51 sits just under 7: strong defensibility and isolation are offset by only moderate sustainability. The rating assumes partial downshifting from complex systems to simpler, repairable operations."
+    "scoreNarrative": "Area 51 sits just under 7: strong defensibility and isolation are offset by only moderate sustainability. The rating assumes partial downshifting from complex systems to simpler, repairable operations.",
+    "image": "/images/bases/area-51.png"
   },
   {
     "name": "Guantanamo Bay",
@@ -3422,7 +3500,8 @@
       "keyRisk": "Assuming secure governance status guarantees uninterrupted resupply"
     },
     "realityCheck": "Perimeters can hold; strategic freedom of movement may not.",
-    "scoreNarrative": "Guantanamo remains above 6 on defensive quality, but sustainability and strategic isolation constraints prevent higher ranking. Its endurance problem is external dependency under political friction."
+    "scoreNarrative": "Guantanamo remains above 6 on defensive quality, but sustainability and strategic isolation constraints prevent higher ranking. Its endurance problem is external dependency under political friction.",
+    "image": "/images/bases/guantanamo.png"
   },
   {
     "name": "Kodiak Island",
@@ -3465,7 +3544,8 @@
       "keyRisk": "Underestimating cumulative maintenance debt from extreme weather exposure"
     },
     "realityCheck": "Kodiak can work long-term, but only with disciplined winterization and realistic population limits.",
-    "scoreNarrative": "Kodiak clears 7 through top-tier isolation and above-average sustainability for a remote island. Defensibility is solid rather than elite, and long-run success depends on managing weather-driven attrition."
+    "scoreNarrative": "Kodiak clears 7 through top-tier isolation and above-average sustainability for a remote island. Defensibility is solid rather than elite, and long-run success depends on managing weather-driven attrition.",
+    "image": "/images/bases/kodiak.png"
   },
   {
     "name": "Vancouver Island",
@@ -3508,7 +3588,8 @@
       "keyRisk": "Treating the whole island as equally defensible despite heavy population concentration"
     },
     "realityCheck": "Resource depth is real, but social load management is the deciding variable.",
-    "scoreNarrative": "Vancouver Island remains high-mid tier by combining strong sustainability with decent defensibility. It stays below 7 because isolation is only moderate once population and transport realities are included."
+    "scoreNarrative": "Vancouver Island remains high-mid tier by combining strong sustainability with decent defensibility. It stays below 7 because isolation is only moderate once population and transport realities are included.",
+    "image": "/images/bases/vancouver-island.png"
   },
   {
     "name": "CN Tower",
@@ -3551,7 +3632,8 @@
       "keyRisk": "Confusing visibility advantage with actual survivability"
     },
     "realityCheck": "Tall structure does not equal defensible habitat; sustainment is effectively zero.",
-    "scoreNarrative": "CN Tower is sub-2 overall because all core survival categories are weak except access. It is an observation asset, not a defensible or sustainable base."
+    "scoreNarrative": "CN Tower is sub-2 overall because all core survival categories are weak except access. It is an observation asset, not a defensible or sustainable base.",
+    "image": "/images/bases/cn-tower.png"
   },
   {
     "name": "Cape Hatteras Lighthouse",
@@ -3594,7 +3676,8 @@
       "keyRisk": "Treating visibility advantage as if it were sustainment"
     },
     "realityCheck": "What kills you here is weather plus supply fragility, not direct assault.",
-    "scoreNarrative": "Cape Hatteras stays low overall: isolation is decent, but defensibility and sustainability are both poor in repeated storm conditions."
+    "scoreNarrative": "Cape Hatteras stays low overall: isolation is decent, but defensibility and sustainability are both poor in repeated storm conditions.",
+    "image": "/images/bases/cape-hatteras.png"
   },
   {
     "name": "Telluride",
@@ -3637,7 +3720,8 @@
       "keyRisk": "Underestimating how fast cold-season logistics collapse"
     },
     "realityCheck": "What kills you here is winter supply failure before any perimeter breach.",
-    "scoreNarrative": "Telluride rates strong-mid: terrain and isolation are high value, while sustainment is bounded by winter and limited production capacity."
+    "scoreNarrative": "Telluride rates strong-mid: terrain and isolation are high value, while sustainment is bounded by winter and limited production capacity.",
+    "image": "/images/bases/telluride.png"
   },
   {
     "name": "Utqiagvik",
@@ -3680,7 +3764,8 @@
       "keyRisk": "Assuming isolation alone solves survivability"
     },
     "realityCheck": "What kills you here is energy failure in Arctic conditions.",
-    "scoreNarrative": "Utqiagvik lands mid-tier: isolation is elite, but sustainability is constrained by extreme climate and logistics dependency."
+    "scoreNarrative": "Utqiagvik lands mid-tier: isolation is elite, but sustainability is constrained by extreme climate and logistics dependency.",
+    "image": "/images/bases/utqiagvik.png"
   },
   {
     "name": "Cheyenne Mountain Complex",
@@ -3709,7 +3794,7 @@
     },
     "lat": 38.7444,
     "long": -104.8719,
-    "image": "/images/bases/cheyenne-mountain-complex.png",
+    "image": "/images/bases/cheyenne.png",
     "verdict": {
       "bestUseCase": "High-security command-and-shelter node for structured, technical teams",
       "failureMode": "Maintenance debt breaks life-support chains that the site depends on"
@@ -3767,7 +3852,8 @@
       "keyRisk": "Overfilling a bunker that cannot sustain that load"
     },
     "realityCheck": "What kills you here is sustainment choke points inside a sealed site.",
-    "scoreNarrative": "Titan Silo is high-mid overall: elite defensibility is offset by limited long-term habitability and utility depth."
+    "scoreNarrative": "Titan Silo is high-mid overall: elite defensibility is offset by limited long-term habitability and utility depth.",
+    "image": "/images/bases/titan-silo.png"
   },
   {
     "name": "Corwith Intermodal Yard",
@@ -3810,7 +3896,8 @@
       "keyRisk": "Trying to fortify a site designed for throughput, not defense"
     },
     "realityCheck": "What kills you here is exposure saturation from every direction.",
-    "scoreNarrative": "Corwith Yard scores low because accessibility and resources cannot compensate for near-zero isolation and weak defensibility."
+    "scoreNarrative": "Corwith Yard scores low because accessibility and resources cannot compensate for near-zero isolation and weak defensibility.",
+    "image": "/images/bases/corwith-yard.png"
   },
   {
     "name": "LAX Airport",
@@ -3853,7 +3940,8 @@
       "keyRisk": "Confusing infrastructure size with defendable survivability"
     },
     "realityCheck": "What kills you here is sheer human pressure before plans can stabilize.",
-    "scoreNarrative": "LAX is bottom-tier: maximum accessibility combines with minimal isolation and defensibility, producing near-immediate failure risk."
+    "scoreNarrative": "LAX is bottom-tier: maximum accessibility combines with minimal isolation and defensibility, producing near-immediate failure risk.",
+    "image": "/images/bases/lax.png"
   },
   {
     "name": "Blue Mountains Cliffs",
@@ -3896,7 +3984,8 @@
       "keyRisk": "Overcommitting to fixed positions during escalating fire conditions"
     },
     "realityCheck": "What kills you here is fire and smoke, not direct assault.",
-    "scoreNarrative": "Blue Mountains sits in the upper mid-range: defensibility is strong, but sustainability is inconsistent under recurring fire stress."
+    "scoreNarrative": "Blue Mountains sits in the upper mid-range: defensibility is strong, but sustainability is inconsistent under recurring fire stress.",
+    "image": "/images/bases/blue-mountains.png"
   },
   {
     "name": "Uluru Surroundings",
@@ -3939,7 +4028,8 @@
       "keyRisk": "Assuming isolation offsets fundamental environmental limits"
     },
     "realityCheck": "What kills you here is water failure in extreme heat.",
-    "scoreNarrative": "Uluru remains low-mid: isolation is excellent, but sustainability is critically weak in arid conditions."
+    "scoreNarrative": "Uluru remains low-mid: isolation is excellent, but sustainability is critically weak in arid conditions.",
+    "image": "/images/bases/uluru.png"
   },
   {
     "name": "Fort Denison",
@@ -3982,7 +4072,8 @@
       "keyRisk": "Attempting permanent habitation on a micro-footprint island fort"
     },
     "realityCheck": "What kills you here is sustainment collapse before defenses fail.",
-    "scoreNarrative": "Fort Denison grades mid-low: defensibility is high, but sustainability and isolation are too limited for durable survival."
+    "scoreNarrative": "Fort Denison grades mid-low: defensibility is high, but sustainability and isolation are too limited for durable survival.",
+    "image": "/images/bases/fort-denison.png"
   },
   {
     "name": "Maori Pa Fortifications",
@@ -4025,7 +4116,8 @@
       "keyRisk": "Treating a heritage fortification as a self-sustaining settlement"
     },
     "realityCheck": "What kills you here is slow sustainment collapse, not the first assault wave.",
-    "scoreNarrative": "Maori pa scores as defense-forward but sustainment-limited: it wins opening phases, then degrades if isolation turns into siege."
+    "scoreNarrative": "Maori pa scores as defense-forward but sustainment-limited: it wins opening phases, then degrades if isolation turns into siege.",
+    "image": "/images/bases/maori-pa.png"
   },
   {
     "name": "Super Pit Gold Mine",
@@ -4068,7 +4160,8 @@
       "keyRisk": "Attempting to live in an industrial extraction void as if it were a settlement"
     },
     "realityCheck": "What kills you here is exposure and water vulnerability before any organized attack.",
-    "scoreNarrative": "Super Pit ranks weak overall: remoteness helps, but livability and sustainability are too poor for durable survival."
+    "scoreNarrative": "Super Pit ranks weak overall: remoteness helps, but livability and sustainability are too poor for durable survival.",
+    "image": "/images/bases/super-pit.png"
   },
   {
     "name": "Anna Creek Station",
@@ -4111,7 +4204,8 @@
       "keyRisk": "Overextending into static perimeter defense across impossible distances"
     },
     "realityCheck": "What kills you here is overextension: too much ground, not enough people on key points.",
-    "scoreNarrative": "Anna Creek sits upper-mid: isolation and sustainability are strong, but defensibility drags because scale outpaces control."
+    "scoreNarrative": "Anna Creek sits upper-mid: isolation and sustainability are strong, but defensibility drags because scale outpaces control.",
+    "image": "/images/bases/anna-creek.png"
   },
   {
     "name": "RAAF Base Tindal",
@@ -4154,7 +4248,8 @@
       "keyRisk": "Assuming military-grade hardening equals long-term self-sufficiency"
     },
     "realityCheck": "What kills you here is target visibility once logistics stop being reliable.",
-    "scoreNarrative": "Tindal is defense-strong but endurance-mid: impressive hardening cannot fully offset strategic exposure and sustainment dependence."
+    "scoreNarrative": "Tindal is defense-strong but endurance-mid: impressive hardening cannot fully offset strategic exposure and sustainment dependence.",
+    "image": "/images/bases/tindal-base.png"
   },
   {
     "name": "Pine Gap Facility",
@@ -4197,7 +4292,8 @@
       "keyRisk": "Confusing isolation with survivability when strategic salience is extreme"
     },
     "realityCheck": "What kills you here is being too important while too system-dependent.",
-    "scoreNarrative": "Pine Gap is high-control but brittle: isolation and security are excellent, yet long-run sustainability is weak under strategic stress."
+    "scoreNarrative": "Pine Gap is high-control but brittle: isolation and security are excellent, yet long-run sustainability is weak under strategic stress.",
+    "image": "/images/bases/pine-gap.png"
   },
   {
     "name": "Fiji Islands",
@@ -4240,7 +4336,8 @@
       "keyRisk": "Overreliance on ports and imported inputs during severe weather cycles"
     },
     "realityCheck": "What kills you here is storm-shocked logistics, not immediate invasion pressure.",
-    "scoreNarrative": "Fiji rates strong-mid: isolation and natural productivity are good, but weather and maritime dependency prevent top-tier resilience."
+    "scoreNarrative": "Fiji rates strong-mid: isolation and natural productivity are good, but weather and maritime dependency prevent top-tier resilience.",
+    "image": "/images/bases/fiji.png"
   },
   {
     "name": "Tasmania",
@@ -4283,7 +4380,8 @@
       "keyRisk": "Assuming island status alone solves migration, bottleneck, and governance stress"
     },
     "realityCheck": "What kills you here is systems overload at critical chokepoints, not resource scarcity.",
-    "scoreNarrative": "Tasmania remains top-tier: sustainability leads, isolation is meaningful, and weaknesses are mostly management and throughput risks."
+    "scoreNarrative": "Tasmania remains top-tier: sustainability leads, isolation is meaningful, and weaknesses are mostly management and throughput risks.",
+    "image": "/images/bases/tasmania.png"
   },
   {
     "name": "Cape Byron Lighthouse",
@@ -4326,7 +4424,8 @@
       "keyRisk": "Trying to defend and inhabit a landmark with no logistical base"
     },
     "realityCheck": "What kills you here is exposure and depletion because lookout is not livability.",
-    "scoreNarrative": "Byron Light stays low-tier: strong visibility cannot compensate for almost nonexistent sustainability and capacity."
+    "scoreNarrative": "Byron Light stays low-tier: strong visibility cannot compensate for almost nonexistent sustainability and capacity.",
+    "image": "/images/bases/byron-light.png"
   },
   {
     "name": "Sydney Harbour Bridge",
@@ -4369,7 +4468,8 @@
       "keyRisk": "Treating infrastructure symbolism as actual survivability"
     },
     "realityCheck": "What kills you here is instant overexposure in the least sustainable environment possible.",
-    "scoreNarrative": "Harbour Bridge remains near-bottom: operational relevance exists, but base viability is effectively zero."
+    "scoreNarrative": "Harbour Bridge remains near-bottom: operational relevance exists, but base viability is effectively zero.",
+    "image": "/images/bases/harbour-bridge.png"
   },
   {
     "name": "Port Vila",
@@ -4412,7 +4512,8 @@
       "keyRisk": "Assuming urban port infrastructure can absorb prolonged regional stress"
     },
     "realityCheck": "What kills you here is infrastructure fragility when weather and imports fail together.",
-    "scoreNarrative": "Port Vila lands mid-tier: better than improvised sites, but too infrastructure-sensitive for elite long-term resilience."
+    "scoreNarrative": "Port Vila lands mid-tier: better than improvised sites, but too infrastructure-sensitive for elite long-term resilience.",
+    "image": "/images/bases/port-vila.png"
   },
   {
     "name": "Coober Pedy Underground Settlement",
@@ -4455,7 +4556,8 @@
       "keyRisk": "Assuming underground comfort equals full autonomy in a water-scarce biome"
     },
     "realityCheck": "What kills you here is water exhaustion before security fails.",
-    "scoreNarrative": "Coober Pedy scores as a strong-mid base: defensibility and isolation are high, but sustainability—not walls—is the long-run limiter."
+    "scoreNarrative": "Coober Pedy scores as a strong-mid base: defensibility and isolation are high, but sustainability—not walls—is the long-run limiter.",
+    "image": "/images/bases/coober-pedy.png"
   },
   {
     "name": "North Head Gun Emplacements",
@@ -4498,7 +4600,8 @@
       "keyRisk": "Treating a bunker complex as a settlement rather than a temporary tactical position"
     },
     "realityCheck": "What kills you here is siege-driven depletion in an exposed urban basin.",
-    "scoreNarrative": "North Head lands below mid-tier: excellent local defensibility cannot offset very weak sustainability and low isolation."
+    "scoreNarrative": "North Head lands below mid-tier: excellent local defensibility cannot offset very weak sustainability and low isolation.",
+    "image": "/images/bases/north-head-bunker.png"
   },
   {
     "name": "Auckland Port",
@@ -4541,7 +4644,8 @@
       "keyRisk": "Confusing logistics abundance with defensible long-term survivability"
     },
     "realityCheck": "What kills you here is nonstop human pressure long before resources run out.",
-    "scoreNarrative": "Auckland Port remains low-tier because accessibility and assets do not compensate for severe isolation and defensibility deficits."
+    "scoreNarrative": "Auckland Port remains low-tier because accessibility and assets do not compensate for severe isolation and defensibility deficits.",
+    "image": "/images/bases/auckland-port.png"
   },
   {
     "name": "Sydney Airport",
@@ -4584,7 +4688,8 @@
       "keyRisk": "Attempting to hold a globally obvious transit hub as a settlement"
     },
     "realityCheck": "What kills you here is convergence overload within hours, not months.",
-    "scoreNarrative": "Sydney Airport is near-bottom by design: accessibility is maximal while every survivability pillar is critically weak."
+    "scoreNarrative": "Sydney Airport is near-bottom by design: accessibility is maximal while every survivability pillar is critically weak.",
+    "image": "/images/bases/sydney-airport.png"
   },
   {
     "name": "Glacier Plateau",
@@ -4627,7 +4732,8 @@
       "keyRisk": "Mistaking low attacker probability for true long-term survivability"
     },
     "realityCheck": "What kills you here is exposure and supply failure, not attackers.",
-    "scoreNarrative": "Glacier scores poorly overall because elite isolation cannot compensate for near-zero sustainability."
+    "scoreNarrative": "Glacier scores poorly overall because elite isolation cannot compensate for near-zero sustainability.",
+    "image": "/images/bases/glacier.png"
   },
   {
     "name": "Crevasse Field Glacier",
@@ -4673,7 +4779,8 @@
       "keyRisk": "The terrain itself is the primary threat, with concealed crevasses and no sustainable resources"
     },
     "realityCheck": "Assumes occupants have specialist glacier travel skills and equipment. Without ropes, navigation, shelter, and cold-weather capability, this location is more hazard than refuge.",
-    "scoreNarrative": "Crevasse Field Glacier scores highly for isolation because few threats could reach it easily. Its overall score remains low because movement is dangerous, resources are effectively absent, and the terrain can kill occupants faster than external threats."
+    "scoreNarrative": "Crevasse Field Glacier scores highly for isolation because few threats could reach it easily. Its overall score remains low because movement is dangerous, resources are effectively absent, and the terrain can kill occupants faster than external threats.",
+    "image": "/images/bases/ice-shelf.png"
   },
   {
     "name": "McMurdo Station",
@@ -4716,7 +4823,8 @@
       "keyRisk": "What kills you here is logistics collapse that leaves high-demand systems without fuel or parts"
     },
     "realityCheck": "McMurdo is strong by Antarctic standards, but it is not a closed-loop settlement and cannot ignore external sustainment.",
-    "scoreNarrative": "McMurdo lands in the upper mid-tier because its infrastructure and defensibility are unusually strong; the ceiling is still set by long-run dependence on supply chains."
+    "scoreNarrative": "McMurdo lands in the upper mid-tier because its infrastructure and defensibility are unusually strong; the ceiling is still set by long-run dependence on supply chains.",
+    "image": "/images/bases/mcmurdo.png"
   },
   {
     "name": "Prudhoe Bay Oil Field",
@@ -4759,7 +4867,8 @@
       "keyRisk": "Treating an oilfield operations complex as a durable survival community"
     },
     "realityCheck": "What kills you here is Arctic systems failure after industrial support thins out.",
-    "scoreNarrative": "Prudhoe Bay stays low-mid: remoteness helps, but sustainability and defensibility remain too weak for durable occupation."
+    "scoreNarrative": "Prudhoe Bay stays low-mid: remoteness helps, but sustainability and defensibility remain too weak for durable occupation.",
+    "image": "/images/bases/prudhoe-bay.png"
   },
   {
     "name": "Murmansk Icebreaker Port",
@@ -4802,7 +4911,8 @@
       "keyRisk": "What kills you here is prolonged infrastructure exposure at a visible port chokepoint"
     },
     "realityCheck": "Murmansk performs best with secure maritime flow; without it, complexity outruns local resilience.",
-    "scoreNarrative": "Murmansk rises on defensibility and practical infrastructure, but its dominant failure mode remains exposed port dependence under Arctic strain."
+    "scoreNarrative": "Murmansk rises on defensibility and practical infrastructure, but its dominant failure mode remains exposed port dependence under Arctic strain.",
+    "image": "/images/bases/murmansk-icebreaker.png"
   },
   {
     "name": "Nagurskoye Air Base",
@@ -4845,7 +4955,8 @@
       "keyRisk": "What kills you here is sustainment failure after weather or logistics disruption"
     },
     "realityCheck": "Nagurskoye can control access well, but it cannot self-produce enough to survive prolonged isolation from supply networks.",
-    "scoreNarrative": "Nagurskoye scores high on defensibility and isolation, then loses ground hard on sustainability where Arctic logistics become the decisive weakness."
+    "scoreNarrative": "Nagurskoye scores high on defensibility and isolation, then loses ground hard on sustainability where Arctic logistics become the decisive weakness.",
+    "image": "/images/bases/nagurskoye.png"
   },
   {
     "name": "Amundsen-Scott South Pole Station",
@@ -4888,7 +4999,8 @@
       "keyRisk": "What kills you here is cascading life-support failure when resupply or repairs stop"
     },
     "realityCheck": "South Pole Station is secure from attackers, but not from thermodynamic reality when critical systems fail.",
-    "scoreNarrative": "South Pole Station rates high on isolation and defensibility, yet stays constrained because sustainability is structurally dependent on complex support chains."
+    "scoreNarrative": "South Pole Station rates high on isolation and defensibility, yet stays constrained because sustainability is structurally dependent on complex support chains.",
+    "image": "/images/bases/south-pole-station.png"
   },
   {
     "name": "Antarctic Peninsula",
@@ -4931,7 +5043,8 @@
       "keyRisk": "What kills you here is slow starvation and exposure when weather blocks replenishment"
     },
     "realityCheck": "Antarctic Peninsula offers options for movement, but not abundant autonomous life-support resources.",
-    "scoreNarrative": "Antarctic Peninsula keeps strong isolation value, yet long-run outcomes are capped by thin infrastructure and persistent sustainability deficits."
+    "scoreNarrative": "Antarctic Peninsula keeps strong isolation value, yet long-run outcomes are capped by thin infrastructure and persistent sustainability deficits.",
+    "image": "/images/bases/antarctic-peninsula.png"
   },
   {
     "name": "Greenland",
@@ -4974,7 +5087,8 @@
       "keyRisk": "What kills you here is overextension across vast terrain with insufficient logistics density"
     },
     "realityCheck": "Greenland has more resource potential than most polar sites, but exploiting it reliably requires sustained technical and transport capacity.",
-    "scoreNarrative": "Greenland remains one of the stronger polar options due to scale and resource pockets, yet still loses points where climate and infrastructure fragility meet distance."
+    "scoreNarrative": "Greenland remains one of the stronger polar options due to scale and resource pockets, yet still loses points where climate and infrastructure fragility meet distance.",
+    "image": "/images/bases/greenland.png"
   },
   {
     "name": "Antarctic Lighthouse",
@@ -5017,7 +5131,8 @@
       "keyRisk": "What kills you here is exposure plus depletion in a structure that cannot support long-duration living"
     },
     "realityCheck": "Antarctic Lighthouse can buy time briefly, but it cannot absorb prolonged weather or sustain occupants independently.",
-    "scoreNarrative": "Antarctic Lighthouse stays low because isolation alone cannot offset severe shelter and sustainability deficits."
+    "scoreNarrative": "Antarctic Lighthouse stays low because isolation alone cannot offset severe shelter and sustainability deficits.",
+    "image": "/images/bases/antarctic-light.png"
   },
   {
     "name": "Polar Observation Tower",
@@ -5060,7 +5175,8 @@
       "keyRisk": "What kills you here is exposure after short-term utility ends and sustainment demand begins"
     },
     "realityCheck": "Polar Tower can observe, but observation does not substitute for life-support depth.",
-    "scoreNarrative": "Polar Tower remains low-scoring because its tactical visibility is outweighed by poor shelter, low sustainability, and high environmental exposure."
+    "scoreNarrative": "Polar Tower remains low-scoring because its tactical visibility is outweighed by poor shelter, low sustainability, and high environmental exposure.",
+    "image": "/images/bases/polar-tower.png"
   },
   {
     "name": "Olavsvern Naval Base",
@@ -5103,7 +5219,8 @@
       "keyRisk": "What kills you here is slow systems dependency failure inside a finite underground envelope"
     },
     "realityCheck": "Olavsvern is excellent for protection, but not immune to long-horizon sustainment math.",
-    "scoreNarrative": "Olavsvern scores high on defensibility but settles in upper-mid range overall because confined, supply-dependent systems cap long-term resilience."
+    "scoreNarrative": "Olavsvern scores high on defensibility but settles in upper-mid range overall because confined, supply-dependent systems cap long-term resilience.",
+    "image": "/images/bases/olavsvern.png"
   },
   {
     "name": "Camp Century Ice Tunnels",
@@ -5148,7 +5265,8 @@
       "keyRisk": "What kills you here is system failure under Arctic conditions, not a frontal assault"
     },
     "realityCheck": "Viability assumes intact shelter systems, fuel, and technical personnel. Without steady maintenance, survival margins collapse quickly.",
-    "scoreNarrative": "Camp Century scores high in defensibility and isolation but collapses on sustainability. It is a bunker, not a durable community base."
+    "scoreNarrative": "Camp Century scores high in defensibility and isolation but collapses on sustainability. It is a bunker, not a durable community base.",
+    "image": "/images/bases/camp-century.png"
   },
   {
     "name": "Phoenix Airfield (McMurdo)",
@@ -5193,7 +5311,8 @@
       "keyRisk": "What kills you here is dependence on external logistics the moment air operations degrade"
     },
     "realityCheck": "Assumes runway operability, aircraft access, and security staffing. If any one of those fails, site value drops sharply.",
-    "scoreNarrative": "Phoenix Airfield earns points for access utility but remains poor as a defensive or sustainable holdout. It is a tool, not a sanctuary."
+    "scoreNarrative": "Phoenix Airfield earns points for access utility but remains poor as a defensive or sustainable holdout. It is a tool, not a sanctuary.",
+    "image": "/images/bases/phoenix-airfield.png"
   },
   {
     "name": "Port of Murmansk",
@@ -5238,7 +5357,8 @@
       "keyRisk": "What kills you here is attrition from constant exposure, not immediate resource shortage"
     },
     "realityCheck": "Performance assumes coordinated security, functioning energy, and maintained port equipment. Fragmented command sharply reduces survivability.",
-    "scoreNarrative": "Murmansk is workable in organized phases but vulnerable to sustained pressure. It performs as infrastructure, not as a sealed refuge."
+    "scoreNarrative": "Murmansk is workable in organized phases but vulnerable to sustained pressure. It performs as infrastructure, not as a sealed refuge.",
+    "image": "/images/bases/murmansk-port.png"
   },
   {
     "name": "La Rinconada",
@@ -5283,7 +5403,8 @@
       "keyRisk": "What kills you here is altitude stress and chronic medical degradation over time"
     },
     "realityCheck": "Assumes acclimatized occupants, cold-weather gear, and disciplined resource planning. Unprepared arrivals deteriorate quickly.",
-    "scoreNarrative": "La Rinconada is naturally hard to reach but biologically and logistically punishing. Isolation helps first; physiology hurts later."
+    "scoreNarrative": "La Rinconada is naturally hard to reach but biologically and logistically punishing. Isolation helps first; physiology hurts later.",
+    "image": "/images/bases/la-rinconada.png"
   },
   {
     "name": "Machu Picchu",
@@ -5328,7 +5449,8 @@
       "keyRisk": "What kills you here is resource ceiling, not inability to repel early threats"
     },
     "realityCheck": "Works best with tight population control, prepositioned stores, and nearby production support outside core ruins.",
-    "scoreNarrative": "Machu Picchu scores near the top on defensibility and remains solid on isolation, but sustainability limits prevent true long-horizon expansion."
+    "scoreNarrative": "Machu Picchu scores near the top on defensibility and remains solid on isolation, but sustainability limits prevent true long-horizon expansion.",
+    "image": "/images/bases/machu-picchu.png"
   },
   {
     "name": "Fort Copacabana",
@@ -5373,7 +5495,8 @@
       "keyRisk": "What kills you here is urban siege dynamics, not fortress wall failure"
     },
     "realityCheck": "Requires disciplined perimeter operations and external logistics. Without regular inflow, durability erodes fast.",
-    "scoreNarrative": "Copacabana Fort is tactically strong but strategically trapped by location. Strong walls cannot offset a sustained urban resource war."
+    "scoreNarrative": "Copacabana Fort is tactically strong but strategically trapped by location. Strong walls cannot offset a sustained urban resource war.",
+    "image": "/images/bases/copacabana-fort.png"
   },
   {
     "name": "San Felipe Fortress",
@@ -5418,7 +5541,8 @@
       "keyRisk": "What kills you here is slow sustainment drain rather than sudden breach"
     },
     "realityCheck": "Effective only with conservative headcount, maintenance capacity, and external supplementation for food and medicine.",
-    "scoreNarrative": "San Felipe sits in the middle-upper tier: good defensibility, workable operations, but not enough standalone production for indefinite survival."
+    "scoreNarrative": "San Felipe sits in the middle-upper tier: good defensibility, workable operations, but not enough standalone production for indefinite survival.",
+    "image": "/images/bases/san-felipe.png"
   },
   {
     "name": "Itaipu Dam",
@@ -5463,7 +5587,8 @@
       "keyRisk": "What kills you here is losing control complexity, not lacking raw resources"
     },
     "realityCheck": "Requires technical staff, layered security, and redundant maintenance teams. Understaffed operation turns strategic advantage into liability.",
-    "scoreNarrative": "Itaipu ranks high for sustainability potential but lower for defensibility due to scale and targeting risk. Powerful if governed; brittle if fragmented."
+    "scoreNarrative": "Itaipu ranks high for sustainability potential but lower for defensibility due to scale and targeting risk. Powerful if governed; brittle if fragmented.",
+    "image": "/images/bases/itaipu-dam.png"
   },
   {
     "name": "Bunge Soy Processing Plant (Santos)",
@@ -5508,7 +5633,8 @@
       "keyRisk": "What kills you here is dependency on external agricultural and fuel flows"
     },
     "realityCheck": "Performance assumes inbound raw materials, spare parts, and steady security staffing. Without those, utility drops quickly.",
-    "scoreNarrative": "Bunge Santos is operationally helpful early but structurally poor for isolated survival. It is logistics-heavy and resilience-light."
+    "scoreNarrative": "Bunge Santos is operationally helpful early but structurally poor for isolated survival. It is logistics-heavy and resilience-light.",
+    "image": "/images/bases/bunge-santos.png"
   },
   {
     "name": "Amazon Tall Tower Observatory",
@@ -5553,7 +5679,8 @@
       "keyRisk": "What kills you here is cumulative health and mobility failure, not immediate attack pressure"
     },
     "realityCheck": "Requires jungle operations experience, medical preparedness, and decentralized planning. Untrained groups degrade fast.",
-    "scoreNarrative": "ATTO scores high on isolation and good on sustainability potential, but low control efficiency and medical fragility limit dependable performance."
+    "scoreNarrative": "ATTO scores high on isolation and good on sustainability potential, but low control efficiency and medical fragility limit dependable performance.",
+    "image": "/images/bases/atto.png"
   },
   {
     "name": "Tambopata Research Center",
@@ -5596,7 +5723,8 @@
       "keyRisk": "What kills you here is one bad wound, one bad fever, or one bad fall that cannot be treated in time"
     },
     "realityCheck": "Works for expert field operators, not improvised groups. Environment punishes mistakes quickly.",
-    "scoreNarrative": "Isolation is high and sustainability is good, but defensibility and medical resilience keep Tambopata in the mid tier."
+    "scoreNarrative": "Isolation is high and sustainability is good, but defensibility and medical resilience keep Tambopata in the mid tier.",
+    "image": "/images/bases/tambopata.png"
   },
   {
     "name": "Chiloé Island",
@@ -5639,7 +5767,8 @@
       "keyRisk": "What kills you here is supply isolation when weather and sea lanes fail together"
     },
     "realityCheck": "Chiloé is robust, not invulnerable. It needs disciplined stockpiles and winter planning.",
-    "scoreNarrative": "High sustainability plus good defensibility make Chiloé a strong option; dependence on sea logistics is the limiting factor."
+    "scoreNarrative": "High sustainability plus good defensibility make Chiloé a strong option; dependence on sea logistics is the limiting factor.",
+    "image": "/images/bases/chiloe.png"
   },
   {
     "name": "Galápagos Islands",
@@ -5682,7 +5811,8 @@
       "keyRisk": "What kills you here is running out of critical imports before replacement systems exist"
     },
     "realityCheck": "Isolation is excellent, autonomy is not. Success depends on stock depth and demand control from day one.",
-    "scoreNarrative": "Galápagos scores elite on isolation but notably lower on sustainability, preventing top-tier overall resilience."
+    "scoreNarrative": "Galápagos scores elite on isolation but notably lower on sustainability, preventing top-tier overall resilience.",
+    "image": "/images/bases/galapagos.png"
   },
   {
     "name": "Christ the Redeemer",
@@ -5725,7 +5855,8 @@
       "keyRisk": "What kills you here is staying in place where everyone can see and reach you"
     },
     "realityCheck": "Treat as a waypoint, never as a survival site.",
-    "scoreNarrative": "All core survival dimensions are critically low; only accessibility is high, which increases threat exposure."
+    "scoreNarrative": "All core survival dimensions are critically low; only accessibility is high, which increases threat exposure.",
+    "image": "/images/bases/christ-redeemer.png"
   },
   {
     "name": "Lighthouse Punta Del Este",
@@ -5768,7 +5899,8 @@
       "keyRisk": "What kills you here is prolonged hold in a site designed for navigation, not habitation"
     },
     "realityCheck": "Use for minutes to hours, not days to weeks.",
-    "scoreNarrative": "The lighthouse has tactical visibility but fails core survival requirements, keeping it near-bottom tier."
+    "scoreNarrative": "The lighthouse has tactical visibility but fails core survival requirements, keeping it near-bottom tier.",
+    "image": "/images/bases/punta-lighthouse.png"
   },
   {
     "name": "Cusco Highlands Village",
@@ -5811,7 +5943,8 @@
       "keyRisk": "What kills you here is chronic exposure and altitude-related health failures, not immediate attack"
     },
     "realityCheck": "Best for adapted populations; outside groups need acclimatization and winter readiness.",
-    "scoreNarrative": "High defensibility and sustainability place Cusco highlands among the strongest regional options, constrained mainly by altitude burden."
+    "scoreNarrative": "High defensibility and sustainability place Cusco highlands among the strongest regional options, constrained mainly by altitude burden.",
+    "image": "/images/bases/cusco-highlands.png"
   },
   {
     "name": "Patagonian Village",
@@ -5854,7 +5987,8 @@
       "keyRisk": "What kills you here is cold, not crowds"
     },
     "realityCheck": "Isolation helps security, but climate turns small logistics errors into survival failures.",
-    "scoreNarrative": "Isolation is a major asset, while climate burden and support scarcity keep Patagonia in the mid band."
+    "scoreNarrative": "Isolation is a major asset, while climate burden and support scarcity keep Patagonia in the mid band.",
+    "image": "/images/bases/patagonia-village.png"
   },
   {
     "name": "Cueva de las Manos",
@@ -5897,7 +6031,8 @@
       "keyRisk": "What kills you here is trying to turn a shelter into a self-sustaining base"
     },
     "realityCheck": "Useful as temporary cover only. Stay duration should be tightly limited.",
-    "scoreNarrative": "Defensibility and isolation are decent, but near-zero sustainability caps this site at low overall viability."
+    "scoreNarrative": "Defensibility and isolation are decent, but near-zero sustainability caps this site at low overall viability.",
+    "image": "/images/bases/cueva-de-las-manos.png"
   },
   {
     "name": "Potosí Silver Mine (Cerro Rico)",
@@ -5940,7 +6075,8 @@
       "keyRisk": "What kills you here is the mine environment itself before attackers do"
     },
     "realityCheck": "Without industrial-grade ventilation and hygiene controls, endurance is limited.",
-    "scoreNarrative": "High defensibility is offset by severe sustainability penalties from health and infrastructure burden."
+    "scoreNarrative": "High defensibility is offset by severe sustainability penalties from health and infrastructure burden.",
+    "image": "/images/bases/potosi-mine.png"
   },
   {
     "name": "Panama Canal Zone",
@@ -5983,7 +6119,8 @@
       "keyRisk": "What kills you here is strategic attention from everyone at once"
     },
     "realityCheck": "High infrastructure does not equal survivability when strategic contestation is inevitable.",
-    "scoreNarrative": "Sustainability assets are outweighed by near-zero isolation and poor defensibility in a globally contested corridor."
+    "scoreNarrative": "Sustainability assets are outweighed by near-zero isolation and poor defensibility in a globally contested corridor.",
+    "image": "/images/bases/panama-canal.png"
   },
   {
     "name": "São Paulo Airport",
@@ -6026,7 +6163,8 @@
       "keyRisk": "The base becomes a magnet: accessibility amplifies threat faster than defenses can scale"
     },
     "realityCheck": "Assumes immediate organized arrival, preplanned extraction routes, and no attempt to hold terminal complexes as a settlement.",
-    "scoreNarrative": "Accessibility is the dominant advantage but also the fatal flaw. Defensibility and isolation are near-bottom, so even moderate supplies cannot convert this site into a survivable base."
+    "scoreNarrative": "Accessibility is the dominant advantage but also the fatal flaw. Defensibility and isolation are near-bottom, so even moderate supplies cannot convert this site into a survivable base.",
+    "image": "/images/bases/sao-paulo-airport.png"
   },
   {
     "name": "Hilltop Fort Rajasthan",
@@ -6069,7 +6207,8 @@
       "keyRisk": "Defensive success masks a slower collapse in water and habitability capacity"
     },
     "realityCheck": "Assumes access to cistern restoration, external collection routes, and strict population control relative to stored resources.",
-    "scoreNarrative": "Defensibility clearly dominates and pulls the base high, while sustainability is the decisive weakness. This is a fortress first, settlement second."
+    "scoreNarrative": "Defensibility clearly dominates and pulls the base high, while sustainability is the decisive weakness. This is a fortress first, settlement second.",
+    "image": "/images/bases/rajasthan-fort.png"
   },
   {
     "name": "Tiger’s Nest Monastery",
@@ -6112,7 +6251,8 @@
       "keyRisk": "The same inaccessibility that protects the site also blocks recovery once systems degrade"
     },
     "realityCheck": "Assumes caches are prepositioned and occupants are acclimatized; ad hoc relocation here under pressure is usually too late.",
-    "scoreNarrative": "Defensibility and isolation are elite, but sustainability is distinctly low. The core trade-off is protection versus endurance capacity."
+    "scoreNarrative": "Defensibility and isolation are elite, but sustainability is distinctly low. The core trade-off is protection versus endurance capacity.",
+    "image": "/images/bases/tigers-nest.png"
   },
   {
     "name": "Mehrangarh Fort",
@@ -6155,7 +6295,8 @@
       "keyRisk": "If outer security collapses, the fort becomes a besieged static shell"
     },
     "realityCheck": "Assumes coordinated external buffer zones and strict access governance; walls alone cannot offset prolonged urban spillover.",
-    "scoreNarrative": "Defensibility is the dominant strength and clearly tops the profile. Isolation is the weak axis, so long-term success depends on controlling surrounding approach corridors."
+    "scoreNarrative": "Defensibility is the dominant strength and clearly tops the profile. Isolation is the weak axis, so long-term success depends on controlling surrounding approach corridors.",
+    "image": "/images/bases/mehrangarh.png"
   },
   {
     "name": "KRBL Rice Mill (Dhuri)",
@@ -6198,7 +6339,8 @@
       "keyRisk": "High accessibility drives constant pressure that outpaces defensive capacity"
     },
     "realityCheck": "Assumes preexisting workforce skills, spare parts scavenging, and armed outer security; without these, output falls rapidly.",
-    "scoreNarrative": "Sustainability potential is the clear strength, while defensibility is the clear weakness. The site works as a production asset, not a final fortress."
+    "scoreNarrative": "Sustainability potential is the clear strength, while defensibility is the clear weakness. The site works as a production asset, not a final fortress.",
+    "image": "/images/bases/krbl-dhuri.png"
   },
   {
     "name": "Tiruppur Textile Cluster",
@@ -6241,7 +6383,8 @@
       "keyRisk": "Operational value attracts attention faster than the area can be hardened"
     },
     "realityCheck": "Assumes immediate access to inventories and ability to relocate outputs; holding the cluster as a settlement is unrealistic.",
-    "scoreNarrative": "Manufacturing gives some sustainability upside, but isolation and defensibility are both low. The base is useful for output, not survivable for static occupation."
+    "scoreNarrative": "Manufacturing gives some sustainability upside, but isolation and defensibility are both low. The base is useful for output, not survivable for static occupation.",
+    "image": "/images/bases/tiruppur-textiles.png"
   },
   {
     "name": "Pathankot Air Force Station",
@@ -6284,7 +6427,8 @@
       "keyRisk": "Targeting pressure rises because the base is visible, capable, and symbolically important"
     },
     "realityCheck": "Assumes trained operators, fuel management, and layered outer security; without operational continuity, advantage erodes quickly.",
-    "scoreNarrative": "Defensibility leads and keeps the base above average, but isolation is the limiting weakness. This is an operations platform, not a low-signature sanctuary."
+    "scoreNarrative": "Defensibility leads and keeps the base above average, but isolation is the limiting weakness. This is an operations platform, not a low-signature sanctuary.",
+    "image": "/images/bases/pathankot-afs.png"
   },
   {
     "name": "Hanle Observatory",
@@ -6327,7 +6471,8 @@
       "keyRisk": "Isolation solves security but magnifies every supply and health mistake"
     },
     "realityCheck": "Assumes altitude adaptation, winterized systems, and backup comms. Unacclimatized populations will underperform rapidly.",
-    "scoreNarrative": "Isolation is the dominant strength and sharply distinguishes Hanle. Sustainability is the weakness, because environment and logistics tax every long-term function."
+    "scoreNarrative": "Isolation is the dominant strength and sharply distinguishes Hanle. Sustainability is the weakness, because environment and logistics tax every long-term function.",
+    "image": "/images/bases/hanle-observatory.png"
   },
   {
     "name": "Andaman Islands",
@@ -6337,7 +6482,7 @@
     "country": "India",
     "lat": 11.7401,
     "long": 92.6586,
-    "image": "/images/bases/andaman-islands.png",
+    "image": "/images/bases/andaman.png",
     "scores": {
       "overall": 8.3,
       "categories": {
@@ -6414,7 +6559,8 @@
       "keyRisk": "Maritime disruption breaks resupply, medevac, and command continuity"
     },
     "realityCheck": "Assumes seaworthy transport, fuel discipline, and managed freshwater systems across multiple inhabited points.",
-    "scoreNarrative": "Its dominant strength is island isolation with controllable sea access. Its dominant weakness is brittle inter-island logistics, which can quickly turn strategic depth into fragmentation."
+    "scoreNarrative": "Its dominant strength is island isolation with controllable sea access. Its dominant weakness is brittle inter-island logistics, which can quickly turn strategic depth into fragmentation.",
+    "image": "/images/bases/lakshadweep.png"
   },
   {
     "name": "Lighthouse Mahabalipuram",
@@ -6457,7 +6603,8 @@
       "keyRisk": "Rapid exposure and depletion force abandonment quickly"
     },
     "realityCheck": "Assumes no protected logistics tail and no scalable support infrastructure on site.",
-    "scoreNarrative": "The dominant strength is rapid local surveillance from elevation. The dominant weakness is near-total sustainment dependence, which makes static survival nonviable."
+    "scoreNarrative": "The dominant strength is rapid local surveillance from elevation. The dominant weakness is near-total sustainment dependence, which makes static survival nonviable.",
+    "image": "/images/bases/mahabalipuram.png"
   },
   {
     "name": "Qutub Minar",
@@ -6500,7 +6647,8 @@
       "keyRisk": "Crowd convergence overwhelms any defensive attempt"
     },
     "realityCheck": "Assumes city-scale disruption and no protected exclusion perimeter around the site.",
-    "scoreNarrative": "Its dominant strength is utility as a recognizable coordination marker. Its dominant weakness is extreme urban exposure paired with no survival infrastructure."
+    "scoreNarrative": "Its dominant strength is utility as a recognizable coordination marker. Its dominant weakness is extreme urban exposure paired with no survival infrastructure.",
+    "image": "/images/bases/qutub.png"
   },
   {
     "name": "Kibber Village",
@@ -6543,7 +6691,8 @@
       "keyRisk": "Weather and altitude attrition outpace local recovery"
     },
     "realityCheck": "Assumes cold-weather readiness, stocked stores, and acclimatized population.",
-    "scoreNarrative": "The dominant strength is low-contact isolation with controllable access routes. The dominant weakness is winter sustainment fragility, especially fuel and medical continuity."
+    "scoreNarrative": "The dominant strength is low-contact isolation with controllable access routes. The dominant weakness is winter sustainment fragility, especially fuel and medical continuity.",
+    "image": "/images/bases/kibber.png"
   },
   {
     "name": "Kuttanad Village",
@@ -6586,7 +6735,8 @@
       "keyRisk": "Defense fails when flood stress and access pressure align"
     },
     "realityCheck": "Assumes flood management, boat mobility, and protected storage for staples.",
-    "scoreNarrative": "The dominant strength is strong calorie production capacity. The dominant weakness is hydraulic and health instability, which can collapse security and output together."
+    "scoreNarrative": "The dominant strength is strong calorie production capacity. The dominant weakness is hydraulic and health instability, which can collapse security and output together.",
+    "image": "/images/bases/kuttanad.png"
   },
   {
     "name": "Ajanta Caves",
@@ -6629,7 +6779,8 @@
       "keyRisk": "Confinement and resource depletion degrade survivability"
     },
     "realityCheck": "Assumes pre-stocked stores and strict occupancy limits to prevent sanitation collapse.",
-    "scoreNarrative": "The dominant strength is high defensibility from choke-point terrain. The dominant weakness is life-support failure in confined conditions over longer durations."
+    "scoreNarrative": "The dominant strength is high defensibility from choke-point terrain. The dominant weakness is life-support failure in confined conditions over longer durations.",
+    "image": "/images/bases/ajanta.png"
   },
   {
     "name": "Kargil War Bunkers",
@@ -6672,7 +6823,8 @@
       "keyRisk": "Sustainment failure collapses combat value over time"
     },
     "realityCheck": "Assumes winterized equipment, fuel, and medical chains are partially prepositioned.",
-    "scoreNarrative": "The dominant strength is top-tier hardened defensibility. The dominant weakness is sustainment starvation under altitude and weather constraints."
+    "scoreNarrative": "The dominant strength is top-tier hardened defensibility. The dominant weakness is sustainment starvation under altitude and weather constraints.",
+    "image": "/images/bases/kargil-bunkers.png"
   },
   {
     "name": "Delhi Airport",
@@ -6715,7 +6867,8 @@
       "keyRisk": "Contact pressure and perimeter chaos overwhelm defenses"
     },
     "realityCheck": "Assumes metropolitan stress, contested access roads, and no durable air-operations control.",
-    "scoreNarrative": "The dominant strength is short-term logistics and extraction utility. The dominant weakness is unmanageable perimeter exposure in a dense metro network."
+    "scoreNarrative": "The dominant strength is short-term logistics and extraction utility. The dominant weakness is unmanageable perimeter exposure in a dense metro network.",
+    "image": "/images/bases/delhi-airport.png"
   },
   {
     "name": "Mumbai Port",
@@ -6758,7 +6911,8 @@
       "keyRisk": "Security demand outpaces manpower and depletes stores"
     },
     "realityCheck": "Assumes contested shoreline, disrupted shipping rhythm, and unstable labor/security balance.",
-    "scoreNarrative": "The dominant strength is high logistics throughput while systems run. The dominant weakness is persistent exposure that breaks security and operations over time."
+    "scoreNarrative": "The dominant strength is high logistics throughput while systems run. The dominant weakness is persistent exposure that breaks security and operations over time.",
+    "image": "/images/bases/mumbai-port.png"
   },
   {
     "name": "Ha Long Bay Cliffs",
@@ -6801,7 +6955,8 @@
       "keyRisk": "Storm disruption repeatedly breaks sustainment rhythm"
     },
     "realityCheck": "Assumes boat readiness, fuel reserves, and hardened storage against monsoon conditions.",
-    "scoreNarrative": "The dominant strength is terrain-driven access control across fragmented islands. The dominant weakness is maritime mobility dependence for cohesion and sustainment."
+    "scoreNarrative": "The dominant strength is terrain-driven access control across fragmented islands. The dominant weakness is maritime mobility dependence for cohesion and sustainment.",
+    "image": "/images/bases/halong.png"
   },
   {
     "name": "Rice Terrace Highlands",
@@ -6844,7 +6999,8 @@
       "keyRisk": "Overcrowding breaks food, hygiene, and governance balance"
     },
     "realityCheck": "Assumes terrace systems remain maintained and population stays within carrying limits.",
-    "scoreNarrative": "The dominant strength is strong food self-production potential. The dominant weakness is infrastructure-labor fragility in irrigation and mountain access systems."
+    "scoreNarrative": "The dominant strength is strong food self-production potential. The dominant weakness is infrastructure-labor fragility in irrigation and mountain access systems.",
+    "image": "/images/bases/rice-terraces.png"
   },
   {
     "name": "Hue Citadel",
@@ -6887,7 +7043,8 @@
       "keyRisk": "Siege attrition depletes supplies and morale"
     },
     "realityCheck": "Assumes controlled gateways and nearby districts remain contested rather than fully denied.",
-    "scoreNarrative": "The dominant strength is robust layered fortification in close urban terrain. The dominant weakness is siege endurance, since sustainment demand exceeds on-site production."
+    "scoreNarrative": "The dominant strength is robust layered fortification in close urban terrain. The dominant weakness is siege endurance, since sustainment demand exceeds on-site production.",
+    "image": "/images/bases/hue.png"
   },
   {
     "name": "Intramuros Manila",
@@ -6930,7 +7087,8 @@
       "keyRisk": "Encirclement erodes supplies faster than defense can recover"
     },
     "realityCheck": "Assumes external districts remain unstable and movement corridors are intermittently denied.",
-    "scoreNarrative": "The dominant strength is short-term movement control inside a walled core. The dominant weakness is metropolitan encirclement risk with thin internal sustainment depth."
+    "scoreNarrative": "The dominant strength is short-term movement control inside a walled core. The dominant weakness is metropolitan encirclement risk with thin internal sustainment depth.",
+    "image": "/images/bases/intramuros.png"
   },
   {
     "name": "General Santos Fish Port",
@@ -6973,7 +7131,8 @@
       "keyRisk": "Fuel, labor, and security breakdown stop throughput quickly"
     },
     "realityCheck": "Assumes contested fuel access and unstable staffing under crisis conditions.",
-    "scoreNarrative": "The dominant strength is rapid food-processing throughput. The dominant weakness is industrial fragility: once energy, labor, or security breaks, value collapses fast."
+    "scoreNarrative": "The dominant strength is rapid food-processing throughput. The dominant weakness is industrial fragility: once energy, labor, or security breaks, value collapses fast.",
+    "image": "/images/bases/gen-santos-port.png"
   },
   {
     "name": "Sime Darby Palm Oil Estate (Sabah)",
@@ -7016,7 +7175,8 @@
       "keyRisk": "Overstretch causes cascading theft, sabotage, and output loss"
     },
     "realityCheck": "Assumes phased contraction to defendable sectors rather than full-estate control.",
-    "scoreNarrative": "The dominant strength is high-scale agricultural throughput potential. The dominant weakness is control-at-scale fragility across a broad, machinery-dependent estate."
+    "scoreNarrative": "The dominant strength is high-scale agricultural throughput potential. The dominant weakness is control-at-scale fragility across a broad, machinery-dependent estate.",
+    "image": "/images/bases/sime-darby-sabah.png"
   },
   {
     "name": "Kota Kinabalu Naval Base",
@@ -7059,7 +7219,8 @@
       "keyRisk": "Contest intensity overwhelms sustainment and repair cycles"
     },
     "realityCheck": "Assumes adversarial attention to naval assets and intermittent maritime disruption.",
-    "scoreNarrative": "The dominant strength is disciplined military defensive command capacity. The dominant weakness is strategic exposure that drives unsustainable consumption and maintenance load."
+    "scoreNarrative": "The dominant strength is disciplined military defensive command capacity. The dominant weakness is strategic exposure that drives unsustainable consumption and maintenance load.",
+    "image": "/images/bases/kota-kinabalu-base.png"
   },
   {
     "name": "Danum Valley Field Centre",
@@ -7102,7 +7263,8 @@
       "keyRisk": "Treatable injuries become fatal when evacuation fails"
     },
     "realityCheck": "Assumes disease control, field medicine capability, and controlled occupancy size.",
-    "scoreNarrative": "The dominant strength is deep isolation with low signature. The dominant weakness is medical and maintenance attrition in a harsh tropical operating environment."
+    "scoreNarrative": "The dominant strength is deep isolation with low signature. The dominant weakness is medical and maintenance attrition in a harsh tropical operating environment.",
+    "image": "/images/bases/danum-valley.png"
   },
   {
     "name": "Komodo Island",
@@ -7145,7 +7307,8 @@
       "keyRisk": "Maritime disruption triggers cascading shortages"
     },
     "realityCheck": "Assumes rain capture, storage management, and protected boat/fuel capacity.",
-    "scoreNarrative": "The dominant strength is exceptional isolation with manageable access points. The dominant weakness is hard sustainment ceilings in water and maritime resupply."
+    "scoreNarrative": "The dominant strength is exceptional isolation with manageable access points. The dominant weakness is hard sustainment ceilings in water and maritime resupply.",
+    "image": "/images/bases/komodo.png"
   },
   {
     "name": "Palawan",
@@ -7188,7 +7351,8 @@
       "keyRisk": "Demand and shipping disruption outpace replenishment"
     },
     "realityCheck": "Assumes controlled population growth and protected coastal logistics nodes.",
-    "scoreNarrative": "The dominant strength is balanced island-scale resilience with diversified terrain and resources. The dominant weakness is coordination and logistics coherence across distance and coastline."
+    "scoreNarrative": "The dominant strength is balanced island-scale resilience with diversified terrain and resources. The dominant weakness is coordination and logistics coherence across distance and coastline.",
+    "image": "/images/bases/palawan.png"
   },
   {
     "name": "Petronas Towers",
@@ -7231,7 +7395,8 @@
       "keyRisk": "Encirclement and utility collapse make prolonged stay fatal"
     },
     "realityCheck": "Assumes prolonged urban disruption with no protected utility restoration.",
-    "scoreNarrative": "The dominant strength is brief vantage and coordination value. The dominant weakness is total dependence on an urban utility grid in a high-pressure environment."
+    "scoreNarrative": "The dominant strength is brief vantage and coordination value. The dominant weakness is total dependence on an urban utility grid in a high-pressure environment.",
+    "image": "/images/bases/petronas.png"
   },
   {
     "name": "Phu Quoc Lighthouse",
@@ -7277,7 +7442,8 @@
       "keyRisk": "What kills you here is depletion: water, food, and medical margins run out before threats do."
     },
     "realityCheck": "Viable only with frequent resupply and strict low headcount discipline.",
-    "scoreNarrative": "Isolation is decent for a coastal node, but sustainability is critically low. This is a watcher position, not a durable base."
+    "scoreNarrative": "Isolation is decent for a coastal node, but sustainability is critically low. This is a watcher position, not a durable base.",
+    "image": "/images/bases/phuquoc-light.png"
   },
   {
     "name": "Banda Neira",
@@ -7323,7 +7489,8 @@
       "keyRisk": "What kills you here is scale failure: shortages arrive faster than replacement systems can grow."
     },
     "realityCheck": "Performs best with low headcount, fishing competence, and conservative consumption.",
-    "scoreNarrative": "Isolation is the decisive advantage, while defensibility and sustainability are solid but not elite. Long-term survival depends on staying small and disciplined."
+    "scoreNarrative": "Isolation is the decisive advantage, while defensibility and sustainability are solid but not elite. Long-term survival depends on staying small and disciplined.",
+    "image": "/images/bases/banda-neira.png"
   },
   {
     "name": "Banlung",
@@ -7369,7 +7536,8 @@
       "keyRisk": "What kills you here is attrition from porous security plus medical and logistics strain."
     },
     "realityCheck": "Best outcomes require perimeter zoning, route control, and low reliance on external fuel chains.",
-    "scoreNarrative": "Isolation and livability are workable, but defensibility is the limiting factor. Banlung survives through management quality, not fortress geometry."
+    "scoreNarrative": "Isolation and livability are workable, but defensibility is the limiting factor. Banlung survives through management quality, not fortress geometry.",
+    "image": "/images/bases/banlung.png"
   },
   {
     "name": "Cu Chi Tunnels",
@@ -7415,7 +7583,8 @@
       "keyRisk": "What kills you here is confinement failure: air, water, hygiene, and injuries compound faster than recovery."
     },
     "realityCheck": "Use only with strict rotation plans and an external sustainment site.",
-    "scoreNarrative": "Defensibility is outstanding, but sustainability is fundamentally weak. The tunnels win fights, not decades."
+    "scoreNarrative": "Defensibility is outstanding, but sustainability is fundamentally weak. The tunnels win fights, not decades.",
+    "image": "/images/bases/cu-chi-tunnels.png"
   },
   {
     "name": "Vietnam Tunnel Systems",
@@ -7461,7 +7630,8 @@
       "keyRisk": "What kills you here is cumulative degradation from poor living conditions and fragmented support lines."
     },
     "realityCheck": "Needs surface support hubs and disciplined rotation to remain viable.",
-    "scoreNarrative": "Defensive utility is high, but long-term living quality remains the structural weakness. This is a tactical system, not a complete settlement."
+    "scoreNarrative": "Defensive utility is high, but long-term living quality remains the structural weakness. This is a tactical system, not a complete settlement.",
+    "image": "/images/bases/cu-chi.png"
   },
   {
     "name": "Bangkok Airport",
@@ -7507,7 +7677,8 @@
       "keyRisk": "What kills you here is perimeter exhaustion: too much frontage, too many entries, nonstop pressure."
     },
     "realityCheck": "Treat as a scavenging platform, not a residence, once urban movement destabilizes.",
-    "scoreNarrative": "Sustainment assets are strong on paper, but isolation is near-zero. Security math fails before supplies do."
+    "scoreNarrative": "Sustainment assets are strong on paper, but isolation is near-zero. Security math fails before supplies do.",
+    "image": "/images/bases/bangkok-airport.png"
   },
   {
     "name": "Singapore Port",
@@ -7553,7 +7724,8 @@
       "keyRisk": "What kills you here is contestation: the site is too valuable and too exposed to remain yours."
     },
     "realityCheck": "Only workable with superior force, clear extraction plans, and low static commitment.",
-    "scoreNarrative": "Infrastructure and sustainment potential are excellent, but isolation and holdability are poor. Control is temporary by default."
+    "scoreNarrative": "Infrastructure and sustainment potential are excellent, but isolation and holdability are poor. Control is temporary by default.",
+    "image": "/images/bases/singapore-port.png"
   },
   {
     "name": "Edinburgh Castle",
@@ -7599,7 +7771,8 @@
       "keyRisk": "What kills you here is urban attrition: siege pressure outlasts internal sustainment."
     },
     "realityCheck": "Best used with external supply links and fallback positions outside the city core.",
-    "scoreNarrative": "Defensibility is elite, but isolation is only moderate in an urban context. Long-term performance depends on external sustainment discipline."
+    "scoreNarrative": "Defensibility is elite, but isolation is only moderate in an urban context. Long-term performance depends on external sustainment discipline.",
+    "image": "/images/bases/edinburgh-castle.png"
   },
   {
     "name": "The Roaches",
@@ -7645,7 +7818,8 @@
       "keyRisk": "What kills you here is exposure-driven attrition before enemies even breach your position."
     },
     "realityCheck": "Keep occupancy low and duration short; pre-stage supplies off-site.",
-    "scoreNarrative": "Natural defensibility is useful, but sustainability is too low for permanence. It is a position to pass through, not settle."
+    "scoreNarrative": "Natural defensibility is useful, but sustainability is too low for permanence. It is a position to pass through, not settle.",
+    "image": "/images/bases/the-roaches.png"
   },
   {
     "name": "Caerphilly Castle",
@@ -7691,7 +7865,8 @@
       "keyRisk": "What kills you here is siege-by-shortage: supplies thin out before defenses fail."
     },
     "realityCheck": "Success depends on disciplined stock management and off-site food systems.",
-    "scoreNarrative": "Defensibility is a major asset, while isolation and sustainability are moderate. Strong in conflict phases, less robust in prolonged austerity."
+    "scoreNarrative": "Defensibility is a major asset, while isolation and sustainability are moderate. Strong in conflict phases, less robust in prolonged austerity.",
+    "image": "/images/bases/caerphilly-castle.png"
   },
   {
     "name": "Fort George",
@@ -7737,7 +7912,8 @@
       "keyRisk": "What kills you here is logistics fatigue: maintaining the fort outpaces local production."
     },
     "realityCheck": "Works best with skilled maintenance teams and preplanned resupply cycles.",
-    "scoreNarrative": "Defensibility is high and isolation is decent, but sustainability remains constrained. The fort is credible, not self-sufficient."
+    "scoreNarrative": "Defensibility is high and isolation is decent, but sustainability remains constrained. The fort is credible, not self-sufficient.",
+    "image": "/images/bases/fort-george.png"
   },
   {
     "name": "Port Talbot Steelworks",
@@ -7783,7 +7959,8 @@
       "keyRisk": "What kills you here is cumulative exposure: contamination, injuries, and security drag."
     },
     "realityCheck": "Use in timed operations with clear withdrawal thresholds.",
-    "scoreNarrative": "Sustainment utility exists through industry, but isolation is poor and defensibility is average. It is a node to exploit, not hold."
+    "scoreNarrative": "Sustainment utility exists through industry, but isolation is poor and defensibility is average. It is a node to exploit, not hold.",
+    "image": "/images/bases/port-talbot.png"
   },
   {
     "name": "Amazon BHX4 Fulfilment Centre",
@@ -7829,7 +8006,8 @@
       "keyRisk": "What kills you here is concentration risk: once breached, losses are sudden and decisive."
     },
     "realityCheck": "Do not centralize whole-group residency; split stocks across secondary caches.",
-    "scoreNarrative": "Early sustainment value is high, but isolation and holdability are poor. Warehouses are accelerators, not end-state bases."
+    "scoreNarrative": "Early sustainment value is high, but isolation and holdability are poor. Warehouses are accelerators, not end-state bases.",
+    "image": "/images/bases/bhx4-amazon.png"
   },
   {
     "name": "HM Prison Dartmoor",
@@ -7875,7 +8053,8 @@
       "keyRisk": "What kills you here is slow attrition from poor livability and insufficient self-production."
     },
     "realityCheck": "Requires rapid transition from custody layout to settlement logistics.",
-    "scoreNarrative": "Defensibility is strong and isolation helpful, but sustainability lags. It buys time, not indefinite autonomy."
+    "scoreNarrative": "Defensibility is strong and isolation helpful, but sustainability lags. It buys time, not indefinite autonomy.",
+    "image": "/images/bases/dartmoor-prison.png"
   },
   {
     "name": "Porton Down",
@@ -7921,7 +8100,8 @@
       "keyRisk": "What kills you here is technical failure under stress, amplified by contamination and visibility."
     },
     "realityCheck": "Keep mission scope narrow and avoid overcommitting population on-site.",
-    "scoreNarrative": "Defensibility is good, but sustainability is constrained by complexity and hazard. Strong procedures are mandatory, not optional."
+    "scoreNarrative": "Defensibility is good, but sustainability is constrained by complexity and hazard. Strong procedures are mandatory, not optional.",
+    "image": "/images/bases/porton-down.png"
   },
   {
     "name": "Lindisfarne",
@@ -7967,7 +8147,8 @@
       "keyRisk": "What kills you here is timing failure: miss windows and essential systems fall behind."
     },
     "realityCheck": "Needs tide-aware logistics planning and conservative reserve buffers.",
-    "scoreNarrative": "Isolation and defensibility are strong, but sustainability has hard limits. It rewards discipline and punishes schedule failure."
+    "scoreNarrative": "Isolation and defensibility are strong, but sustainability has hard limits. It rewards discipline and punishes schedule failure.",
+    "image": "/images/bases/lindisfarne.png"
   },
   {
     "name": "St Kilda",
@@ -8013,7 +8194,8 @@
       "keyRisk": "What kills you here is sustainment fragility under severe weather and isolation delays."
     },
     "realityCheck": "Requires prepositioned stores, robust seamanship, and strict contingency planning.",
-    "scoreNarrative": "Isolation is exceptional, but sustainability is structurally weak. Survival depends on preparation depth, not site abundance."
+    "scoreNarrative": "Isolation is exceptional, but sustainability is structurally weak. Survival depends on preparation depth, not site abundance.",
+    "image": "/images/bases/st-kilda.png"
   },
   {
     "name": "Fastnet Lighthouse",
@@ -8059,7 +8241,8 @@
       "keyRisk": "What kills you here is simple depletion: you run out of essentials with nowhere to recover."
     },
     "realityCheck": "Do not plan static occupancy beyond brief emergency intervals.",
-    "scoreNarrative": "Isolation is extreme, but sustainability is near-zero. This is a temporary bolt-hole at best."
+    "scoreNarrative": "Isolation is extreme, but sustainability is near-zero. This is a temporary bolt-hole at best.",
+    "image": "/images/bases/fastnet.png"
   },
   {
     "name": "Spinnaker Tower",
@@ -8105,7 +8288,8 @@
       "keyRisk": "What kills you here is entrapment: visibility without survivable logistics."
     },
     "realityCheck": "Use for hours or days, not as a standing residence.",
-    "scoreNarrative": "Visibility is the only major asset; isolation and sustainability are poor. Height does not compensate for urban exposure."
+    "scoreNarrative": "Visibility is the only major asset; isolation and sustainability are poor. Height does not compensate for urban exposure.",
+    "image": "/images/bases/spinnaker.png"
   },
   {
     "name": "Clovelly",
@@ -8151,7 +8335,8 @@
       "keyRisk": "What kills you here is capacity overrun: demand outgrows terrain and logistics limits."
     },
     "realityCheck": "Works best with low headcount, stored reserves, and backup inland links.",
-    "scoreNarrative": "Defensibility and isolation are solid for a village-scale base, but sustainability remains moderate. Success depends on staying within its narrow capacity envelope."
+    "scoreNarrative": "Defensibility and isolation are solid for a village-scale base, but sustainability remains moderate. Success depends on staying within its narrow capacity envelope.",
+    "image": "/images/bases/clovelly.png"
   },
   {
     "name": "Isle of Eigg Village",
@@ -8201,7 +8386,8 @@
       "Core infrastructure remains operable",
       "Group size stays within carrying capacity"
     ],
-    "scoreNarrative": "High isolation and good sustainability drive the score; moderate defensibility and tight capacity cap long-term upside."
+    "scoreNarrative": "High isolation and good sustainability drive the score; moderate defensibility and tight capacity cap long-term upside.",
+    "image": "/images/bases/eigg.png"
   },
   {
     "name": "Burlington Bunker",
@@ -8251,7 +8437,8 @@
       "No catastrophic subsystem failure",
       "Internal discipline remains high"
     ],
-    "scoreNarrative": "Defensibility is elite, but sustainability is weak; high early survivability trends down as maintenance debt accumulates."
+    "scoreNarrative": "Defensibility is elite, but sustainability is weak; high early survivability trends down as maintenance debt accumulates.",
+    "image": "/images/bases/burlington-bunker.png"
   },
   {
     "name": "Cheddar Gorge Caves",
@@ -8301,7 +8488,8 @@
       "Nearby foraging routes are usable",
       "No severe flooding or rockfall events"
     ],
-    "scoreNarrative": "Good terrain defense cannot offset weak sustainability, so it scores as temporary shelter rather than durable base."
+    "scoreNarrative": "Good terrain defense cannot offset weak sustainability, so it scores as temporary shelter rather than durable base.",
+    "image": "/images/bases/cheddar-gorge.png"
   },
   {
     "name": "Heathrow Airport",
@@ -8351,7 +8539,8 @@
       "Group avoids terminal buildings chokepoints",
       "No attempt at static defense"
     ],
-    "scoreNarrative": "Isolation and defensibility are near floor values; short-lived salvage value does not translate into survivability."
+    "scoreNarrative": "Isolation and defensibility are near floor values; short-lived salvage value does not translate into survivability.",
+    "image": "/images/bases/heathrow.png"
   },
   {
     "name": "Portsmouth Harbour",
@@ -8401,7 +8590,8 @@
       "Weather windows allow movement",
       "No long static siege"
     ],
-    "scoreNarrative": "Mobility lifts sustainability somewhat, but low isolation and middling defense keep long-term survivability limited."
+    "scoreNarrative": "Mobility lifts sustainability somewhat, but low isolation and middling defense keep long-term survivability limited.",
+    "image": "/images/bases/portsmouth-harbour.png"
   },
   {
     "name": "Neuschwanstein Castle",
@@ -8451,7 +8641,8 @@
       "Access roads remain intermittently usable",
       "No prolonged encirclement"
     ],
-    "scoreNarrative": "Defensibility is solid and isolation is fair, but sustainability ceiling keeps overall score in the mid tier."
+    "scoreNarrative": "Defensibility is solid and isolation is fair, but sustainability ceiling keeps overall score in the mid tier.",
+    "image": "/images/bases/neuschwanstein.png"
   },
   {
     "name": "Rocamadour",
@@ -8501,7 +8692,8 @@
       "Stable water logistics",
       "Regional routes remain intermittently open"
     ],
-    "scoreNarrative": "Strong defensibility and decent isolation/sustainability make this a high-mid performer, capped by space and throughput limits."
+    "scoreNarrative": "Strong defensibility and decent isolation/sustainability make this a high-mid performer, capped by space and throughput limits.",
+    "image": "/images/bases/rocamadour.png"
   },
   {
     "name": "Carcassonne",
@@ -8551,7 +8743,8 @@
       "Nearby production zones are defended",
       "Supply corridors are periodically restored"
     ],
-    "scoreNarrative": "Top-tier defensibility is offset by only mid isolation and sustainability, producing a strong but not self-sufficient profile."
+    "scoreNarrative": "Top-tier defensibility is offset by only mid isolation and sustainability, producing a strong but not self-sufficient profile.",
+    "image": "/images/bases/carcassonne.png"
   },
   {
     "name": "Mont Saint-Michel",
@@ -8601,7 +8794,8 @@
       "No prolonged blockade",
       "Strict consumption control"
     ],
-    "scoreNarrative": "Defensibility and isolation are elite; sustainability is merely moderate, so long-term success depends on strict throughput discipline."
+    "scoreNarrative": "Defensibility and isolation are elite; sustainability is merely moderate, so long-term success depends on strict throughput discipline.",
+    "image": "/images/bases/mont-saint-michel.png"
   },
   {
     "name": "Rotterdam Port",
@@ -8651,7 +8845,8 @@
       "Key channels are navigable",
       "No attempt to hold entire port complex"
     ],
-    "scoreNarrative": "Low defensibility and isolation suppress survivability despite useful industrial sustainment potential."
+    "scoreNarrative": "Low defensibility and isolation suppress survivability despite useful industrial sustainment potential.",
+    "image": "/images/bases/rotterdam-port.png"
   },
   {
     "name": "Ruhr Industrial Complex",
@@ -8701,7 +8896,8 @@
       "Groups can enforce route security",
       "Industrial hazards are actively managed"
     ],
-    "scoreNarrative": "Sustainability is moderate through industrial capacity, but weak isolation and defense limit direct base viability."
+    "scoreNarrative": "Sustainability is moderate through industrial capacity, but weak isolation and defense limit direct base viability.",
+    "image": "/images/bases/ruhr.png"
   },
   {
     "name": "2e REP Barracks (Calvi)",
@@ -8744,7 +8940,8 @@
       "keyRisk": "Supply-chain break turns a fortress into a rationing crisis"
     },
     "realityCheck": "Assumes early control of stores, water treatment, and port access. Without shipping continuity, endurance falls sharply.",
-    "scoreNarrative": "Calvi scores high on defensibility, mid on isolation, and weaker on sustainability. It is a capable holdout, not a self-contained island civilization."
+    "scoreNarrative": "Calvi scores high on defensibility, mid on isolation, and weaker on sustainability. It is a capable holdout, not a self-contained island civilization.",
+    "image": "/images/bases/2rep-calvi.png"
   },
   {
     "name": "NATO Airbase Geilenkirchen",
@@ -8787,7 +8984,8 @@
       "keyRisk": "Contact frequency and staffing burnout erode security faster than expected"
     },
     "realityCheck": "Assumes trained personnel, spare parts, and reliable fuel reserves. Civilian spillover and road access drive persistent threat load.",
-    "scoreNarrative": "High defensibility is offset by low isolation and only moderate sustainability. Geilenkirchen performs as a mission base, not a low-signature refuge."
+    "scoreNarrative": "High defensibility is offset by low isolation and only moderate sustainability. Geilenkirchen performs as a mission base, not a low-signature refuge.",
+    "image": "/images/bases/geilenkirchen.png"
   },
   {
     "name": "Heligoland",
@@ -8830,7 +9028,8 @@
       "keyRisk": "A transport gap quickly becomes a food and medical crisis"
     },
     "realityCheck": "Assumes boat access, maintenance capability, and disciplined rationing. Isolation helps security but punishes planning errors.",
-    "scoreNarrative": "Heligoland ranks as a strong base because isolation is elite and defensibility is solid. Sustainability is adequate but remains the deciding ceiling."
+    "scoreNarrative": "Heligoland ranks as a strong base because isolation is elite and defensibility is solid. Sustainability is adequate but remains the deciding ceiling.",
+    "image": "/images/bases/heligoland.png"
   },
   {
     "name": "Île d’Yeu",
@@ -8873,7 +9072,8 @@
       "keyRisk": "Demand growth and interrupted imports degrade resilience"
     },
     "realityCheck": "Assumes early governance, stock accounting, and shoreline control. Without demand management, sustainability decays steadily.",
-    "scoreNarrative": "Île d’Yeu performs well through strong isolation and balanced core scores, but no category is elite enough to absorb major planning failures."
+    "scoreNarrative": "Île d’Yeu performs well through strong isolation and balanced core scores, but no category is elite enough to absorb major planning failures.",
+    "image": "/images/bases/ile-dyeu.png"
   },
   {
     "name": "Eiffel Tower",
@@ -8915,7 +9115,8 @@
       "keyRisk": "Every signal and movement attracts attention in a dense city core"
     },
     "realityCheck": "Assumes access is even possible in a collapse scenario. The site cannot function as a sustained refuge.",
-    "scoreNarrative": "All core survival categories are near-minimum. High accessibility is a liability here, not an advantage."
+    "scoreNarrative": "All core survival categories are near-minimum. High accessibility is a liability here, not an advantage.",
+    "image": "/images/bases/eiffel.png"
   },
   {
     "name": "Phare du Créac'h",
@@ -8958,7 +9159,8 @@
       "keyRisk": "Tiny capacity means small planning errors become fatal quickly"
     },
     "realityCheck": "Assumes support from nearby settlements or relay supply. Standalone operation is time-limited.",
-    "scoreNarrative": "Isolation is strong, but defensibility and sustainability are too low for independent long-horizon survival."
+    "scoreNarrative": "Isolation is strong, but defensibility and sustainability are too low for independent long-horizon survival.",
+    "image": "/images/bases/creach.png"
   },
   {
     "name": "Eguisheim",
@@ -9001,7 +9203,8 @@
       "keyRisk": "Conflict spillover and staffing fatigue outpace local control"
     },
     "realityCheck": "Assumes social cohesion, land access, and tool continuity. Without coordinated defense, settlement advantages erode fast.",
-    "scoreNarrative": "Eguisheim sits in the middle tier: sustainability is decent, but low defensibility and isolation cap overall performance."
+    "scoreNarrative": "Eguisheim sits in the middle tier: sustainability is decent, but low defensibility and isolation cap overall performance.",
+    "image": "/images/bases/eguisheim.png"
   },
   {
     "name": "Hallstatt",
@@ -9044,7 +9247,8 @@
       "keyRisk": "Single-route dependency can convert defensive terrain into a trap"
     },
     "realityCheck": "Assumes control of key approaches, lake logistics, and winter planning. Seasonal stress testing is essential.",
-    "scoreNarrative": "Hallstatt scores well because no core category is weak; defensibility and sustainability jointly carry it above average."
+    "scoreNarrative": "Hallstatt scores well because no core category is weak; defensibility and sustainability jointly carry it above average.",
+    "image": "/images/bases/hallstatt.png"
   },
   {
     "name": "Maginot Line Bunkers",
@@ -9087,7 +9291,8 @@
       "keyRisk": "Technical degradation turns protection into entombment risk"
     },
     "realityCheck": "Assumes functioning ventilation, drainage, power alternatives, and maintenance crews. Static fortification is not the same as autonomous settlement.",
-    "scoreNarrative": "Defensibility is top-tier, but sustainability is decisively weak, pulling the overall score down to mid-tier."
+    "scoreNarrative": "Defensibility is top-tier, but sustainability is decisively weak, pulling the overall score down to mid-tier.",
+    "image": "/images/bases/maginot-line.png"
   },
   {
     "name": "Naours Underground City",
@@ -9130,7 +9335,8 @@
       "keyRisk": "Staying too long underground creates compounding health failures"
     },
     "realityCheck": "Assumes regular rotation, external supply, and strict occupancy limits. As a permanent base, it is structurally mismatched.",
-    "scoreNarrative": "Naours is stronger defensively than it is sustainable. It works as a shelter layer, not as the final survival architecture."
+    "scoreNarrative": "Naours is stronger defensively than it is sustainable. It works as a shelter layer, not as the final survival architecture.",
+    "image": "/images/bases/naours.png"
   },
   {
     "name": "Charles de Gaulle Airport",
@@ -9172,7 +9378,8 @@
       "keyRisk": "Exposure is constant and multidirectional; static defense fails fast"
     },
     "realityCheck": "Assumes temporary use before relocation. Treating CDG as a permanent base is strategically unsound.",
-    "scoreNarrative": "CDG remains near the bottom because defensibility and isolation are minimal. Infrastructure scale cannot compensate for exposure."
+    "scoreNarrative": "CDG remains near the bottom because defensibility and isolation are minimal. Infrastructure scale cannot compensate for exposure.",
+    "image": "/images/bases/cdg.png"
   },
   {
     "name": "Schiphol Airport",
@@ -9214,6 +9421,7 @@
       "keyRisk": "High visibility and connectivity ensure persistent conflict contact"
     },
     "realityCheck": "Assumes mission-oriented use with strict time limits. Long-term occupation is a losing proposition.",
-    "scoreNarrative": "Despite strong infrastructure, Schiphol scores very low where survival matters most: defensibility, isolation, and endurance."
+    "scoreNarrative": "Despite strong infrastructure, Schiphol scores very low where survival matters most: defensibility, isolation, and endurance.",
+    "image": "/images/bases/schiphol.png"
   }
 ]
