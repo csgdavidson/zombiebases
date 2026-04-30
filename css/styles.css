@@ -667,19 +667,21 @@ main > * {
 
 .compact-base-list li.similar-base-item {
   display: grid;
-  grid-template-columns: 120px minmax(0, 1fr);
+  grid-template-columns: 112px minmax(0, 1fr);
   gap: var(--space-3);
   align-items: start;
+  padding-bottom: 0.75rem;
 }
 
 .similar-base-thumb-link {
   display: block;
   border-radius: var(--radius-sm);
+  width: 112px;
 }
 
 .similar-base-thumb {
   display: block;
-  width: 120px;
+  width: 112px;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: var(--radius-sm);
@@ -692,6 +694,18 @@ main > * {
 
 .similar-base-text > a {
   font-weight: var(--fw-semibold);
+}
+
+@media (max-width: 640px) {
+  .compact-base-list li.similar-base-item {
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: var(--space-2);
+  }
+
+  .similar-base-thumb-link,
+  .similar-base-thumb {
+    width: 96px;
+  }
 }
 
 .site-brand {
