@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import json
-import re
 import subprocess
 from dataclasses import dataclass
 from pathlib import Path
@@ -14,11 +13,6 @@ BASE_URL = "https://zombiebases.com"
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = REPO_ROOT / "data" / "bases-index.json"
 SITEMAP_PATH = REPO_ROOT / "sitemap.xml"
-
-NOINDEX_PATTERN = re.compile(
-  r"<meta[^>]*name=[\"']robots[\"'][^>]*content=[\"'][^\"']*noindex",
-  re.IGNORECASE,
-)
 
 
 @dataclass(frozen=True)
@@ -55,16 +49,6 @@ def iter_indexable_slugs() -> list[str]:
   return sorted(slugs)
 
 
-def iter_indexable_dedicated_pages() -> list[Path]:
-  pages: list[Path] = []
-  for page in sorted((REPO_ROOT / "bases").glob("*.html")):
-    content = page.read_text(encoding="utf-8")
-    if NOINDEX_PATTERN.search(content):
-      continue
-    pages.append(page)
-  return pages
-
-
 def build_entries() -> list[SitemapEntry]:
   entries: list[SitemapEntry] = [
     SitemapEntry(loc=f"{BASE_URL}/", source_path=REPO_ROOT / "index.html"),
@@ -80,14 +64,6 @@ def build_entries() -> list[SitemapEntry]:
       source_path=DATA_PATH,
     )
     for slug in iter_indexable_slugs()
-  )
-
-  entries.extend(
-    SitemapEntry(
-      loc=f"{BASE_URL}/{page.relative_to(REPO_ROOT).as_posix()}",
-      source_path=page,
-    )
-    for page in iter_indexable_dedicated_pages()
   )
 
   return entries

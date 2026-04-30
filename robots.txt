@@ -3,4 +3,3 @@ Allow: /
 
 Sitemap: https://zombiebases.com/sitemap.xml
 
-Disallow: /bases/
