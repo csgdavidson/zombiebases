@@ -79,11 +79,15 @@ const elements = {
   survivalProfileSection: document.getElementById('survival-profile-section'),
   survivalInitialRow: document.getElementById('base-survival-initial-row'),
   survivalInitial: document.getElementById('base-survival-initial'),
+  survivalInitialNote: document.getElementById('base-survival-initial-note'),
   survivalShortTermRow: document.getElementById('base-survival-short-term-row'),
   survivalShortTerm: document.getElementById('base-survival-short-term'),
+  survivalShortTermNote: document.getElementById('base-survival-short-term-note'),
   survivalLongTermRow: document.getElementById('base-survival-long-term-row'),
   survivalLongTerm: document.getElementById('base-survival-long-term'),
+  survivalLongTermNote: document.getElementById('base-survival-long-term-note'),
   survivalTrajectoryLabel: document.getElementById('survival-trajectory-label'),
+  survivalSummaryInsight: document.getElementById('survival-summary-insight'),
   realityCheckRow: document.getElementById('base-reality-check-row'),
   realityCheckText: document.getElementById('base-reality-check')
 };
@@ -554,6 +558,9 @@ function renderSurvivalProfile(base) {
   elements.survivalInitialRow.hidden = !initial;
   elements.survivalShortTermRow.hidden = !shortTerm;
   elements.survivalLongTermRow.hidden = !longTerm;
+  elements.survivalInitialNote.textContent = 'Immediate viability at first occupancy and setup.';
+  elements.survivalShortTermNote.textContent = 'Resilience once supplies tighten and pressure builds.';
+  elements.survivalLongTermNote.textContent = 'Durability after systems, health, and logistics are stress-tested.';
 
   const stageRows = [
     { row: elements.survivalInitialRow, value: initial },
@@ -587,6 +594,16 @@ function renderSurvivalProfile(base) {
   const trajectoryLabel = getTrajectoryLabel(stageLevels);
   elements.survivalTrajectoryLabel.textContent = trajectoryLabel;
   elements.survivalTrajectoryLabel.hidden = !trajectoryLabel;
+
+  if (stageLevels.length) {
+    const bestIndex = stageLevels.indexOf(Math.max(...stageLevels));
+    const worstIndex = stageLevels.indexOf(Math.min(...stageLevels));
+    const phaseNames = ['Initial', 'Short-term', 'Long-term'];
+    elements.survivalSummaryInsight.textContent = `What this means: Best window is ${phaseNames[bestIndex]}; risk window is ${phaseNames[worstIndex]}.`;
+    elements.survivalSummaryInsight.hidden = false;
+  } else {
+    elements.survivalSummaryInsight.hidden = true;
+  }
 }
 
 function renderRealityCheck(base) {
