@@ -53,6 +53,21 @@ function createBaseUrl(slug) {
   return slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(slug) : `/${encodeURIComponent(slug)}`;
 }
 
+function createBaseThumbnail(slug, name) {
+  const image = document.createElement('img');
+  image.className = 'base-card-thumb';
+  image.src = `/images/bases/${slug}.png`;
+  image.alt = `${name} thumbnail`;
+  image.width = 112;
+  image.height = 63;
+  image.loading = 'lazy';
+  image.decoding = 'async';
+  image.addEventListener('error', () => {
+    image.src = '/images/bases/placeholder.png';
+  }, { once: true });
+  return image;
+}
+
 function updateScenarioParam(value) {
   const params = new URLSearchParams(window.location.search);
   params.set('scenario', value);
@@ -68,6 +83,10 @@ function renderList(entries) {
   entries.forEach((entry) => {
     const item = document.createElement('li');
     item.className = 'ranking-row';
+    item.appendChild(createBaseThumbnail(entry.slug, entry.name));
+
+    const content = document.createElement('div');
+    content.className = 'ranking-row-content';
 
     const heading = document.createElement('p');
     heading.className = 'ranking-row-heading';
@@ -94,7 +113,8 @@ function renderList(entries) {
     reason.className = 'base-summary';
     reason.textContent = entry.reason || 'Scenario fit details coming soon.';
 
-    item.append(heading, meta, reason);
+    content.append(heading, meta, reason);
+    item.appendChild(content);
     elements.list.appendChild(item);
   });
 }

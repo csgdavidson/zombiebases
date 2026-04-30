@@ -180,10 +180,27 @@ main > * {
 
 .base-card-link {
   display: grid;
-  gap: var(--space-2);
+  grid-template-columns: 112px minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-3);
   padding: var(--space-3) var(--space-4);
   text-decoration: none;
   color: inherit;
+}
+
+.base-card-thumb {
+  width: 112px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: #e7edf5;
+  display: block;
+}
+
+.base-card-content {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
 }
 
 .base-card-header {
@@ -1231,8 +1248,18 @@ main > * {
 }
 
 .ranking-row {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-3);
   border-bottom: 1px solid var(--border-soft);
   padding-bottom: var(--space-4);
+}
+
+.ranking-row-content {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
 }
 
 .ranking-row:last-child {
@@ -1269,6 +1296,16 @@ main > * {
   .view-toggle {
     justify-content: space-between;
     width: 100%;
+  }
+
+  .base-card-link,
+  .ranking-row {
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: var(--space-2);
+  }
+
+  .base-card-thumb {
+    width: 96px;
   }
 }
 
