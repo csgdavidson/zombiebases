@@ -489,6 +489,16 @@ function appendCardBadges(container, base) {
   container.appendChild(row);
 }
 
+function getCardSummary(base) {
+  if (typeof base?.description?.summary === 'string' && base.description.summary.trim()) {
+    return base.description.summary.trim();
+  }
+  if (typeof base?.summary === 'string' && base.summary.trim()) {
+    return base.summary.trim();
+  }
+  return '';
+}
+
 function createEmptyState() {
   const emptyState = document.createElement('li');
   emptyState.className = 'empty-state';
@@ -547,10 +557,13 @@ function renderBaseList(items) {
 
     appendCardBadges(content, base);
 
-    const summary = document.createElement('p');
-    summary.className = 'base-summary';
-    summary.textContent = base?.description?.summary ?? '';
-    content.appendChild(summary);
+    const summaryText = getCardSummary(base);
+    if (summaryText) {
+      const summary = document.createElement('p');
+      summary.className = 'base-summary';
+      summary.textContent = summaryText;
+      content.appendChild(summary);
+    }
 
     link.appendChild(content);
     listItem.appendChild(link);
@@ -585,10 +598,11 @@ function renderFeaturedBases(items) {
 
     appendCardScore(listItem, base);
 
-    if (base.summary) {
+    const summaryText = getCardSummary(base);
+    if (summaryText) {
       const summary = document.createElement('p');
       summary.className = 'base-summary';
-      summary.textContent = base.summary;
+      summary.textContent = summaryText;
       listItem.appendChild(summary);
     }
 
