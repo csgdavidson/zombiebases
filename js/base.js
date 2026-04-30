@@ -930,6 +930,25 @@ function renderSimilarBases(base, discovery, params) {
 
   similarEntries.slice(0, 3).forEach((item) => {
     const li = document.createElement('li');
+    li.className = 'similar-base-item';
+
+    const imageLink = document.createElement('a');
+    imageLink.className = 'similar-base-thumb-link';
+    imageLink.href = createBaseUrl(item.slug, params);
+    imageLink.setAttribute('aria-label', `View details for ${item.name}`);
+
+    const image = document.createElement('img');
+    image.className = 'similar-base-thumb';
+    image.src = `/images/bases/${encodeURIComponent(item.slug)}.png`;
+    image.alt = `${item.name} thumbnail`;
+    image.loading = 'lazy';
+    image.width = 120;
+    image.height = 68;
+    imageLink.appendChild(image);
+
+    const textWrap = document.createElement('div');
+    textWrap.className = 'similar-base-text';
+
     const link = document.createElement('a');
     link.href = createBaseUrl(item.slug, params);
     link.textContent = item.name;
@@ -953,10 +972,12 @@ function renderSimilarBases(base, discovery, params) {
       tagRow.appendChild(badge);
     });
 
-    li.append(link, scoreMeta);
+    textWrap.append(link, scoreMeta);
     if (tags.length) {
-      li.appendChild(tagRow);
+      textWrap.appendChild(tagRow);
     }
+
+    li.append(imageLink, textWrap);
     elements.similarList.appendChild(li);
   });
 
