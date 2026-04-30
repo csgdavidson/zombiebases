@@ -3,6 +3,7 @@ const LEGACY_DATA_URL = './data/bases.json';
 const STATS_URL = './data/base-stats.json';
 const RANKINGS_URL = './data/rankings.json';
 const DISCOVERY_URL = './data/discovery.json';
+const HERO_IMAGE_FALLBACK_URL = '/images/bases/placeholder.png';
 
 const LABELS = {
   type: {
@@ -347,6 +348,10 @@ function renderHero(base) {
   }
 
   elements.heroImage.src = imageUrl;
+  elements.heroImage.onerror = () => {
+    elements.heroImage.onerror = null;
+    elements.heroImage.src = HERO_IMAGE_FALLBACK_URL;
+  };
   elements.heroImage.alt = `Feature image for ${base.name}`;
   elements.heroSection.hidden = false;
 }
