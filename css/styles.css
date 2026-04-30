@@ -952,16 +952,39 @@ main > * {
 
 .comparison-row {
   margin: 0;
-  padding: 0;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: #f9fbfd;
+  display: grid;
+  gap: 0.25rem;
 }
 
-.comparison-row-heading {
+.comparison-label {
   margin: 0;
+  font-weight: 650;
   color: #0f1f35;
 }
 
+.comparison-judgement {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.comparison-judgement-positive {
+  color: #166534;
+}
+
+.comparison-judgement-neutral {
+  color: #5f7085;
+}
+
+.comparison-judgement-negative {
+  color: #9f1239;
+}
+
 .comparison-values {
-  margin: 0.2rem 0 0;
+  margin: 0;
   color: #5f7085;
   font-size: 0.86rem;
   font-variant-numeric: tabular-nums;
