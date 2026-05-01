@@ -114,6 +114,7 @@ main > * {
   border-radius: var(--radius-md);
   background: var(--surface);
   overflow: hidden;
+  min-height: 36px;
 }
 
 .toggle-button {
@@ -125,6 +126,8 @@ main > * {
   text-decoration: none;
   display: inline-block;
   font-size: var(--fs-body);
+  display: inline-flex;
+  align-items: center;
 }
 
 .toggle-button[aria-pressed="true"] {
@@ -143,20 +146,32 @@ main > * {
   justify-content: space-between;
   align-items: center;
   gap: var(--space-2);
+  flex-wrap: wrap;
 }
 
 .header-search {
-  min-width: min(420px, 100%);
+  width: clamp(280px, 36vw, 440px);
+  min-width: 0;
 }
 
 .header-search input[type="search"] {
   width: 100%;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0 var(--space-3);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--fs-body);
+  line-height: 1.2;
 }
 
 .controls-actions {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
+  margin-left: auto;
+  flex-wrap: wrap;
 }
 
 .visually-hidden {
@@ -172,20 +187,35 @@ main > * {
 }
 
 .toggle-filters {
-  align-self: end;
-  border: 1px solid #cbd5e1;
-  border-radius: 0.5rem;
-  padding: 0.48rem 0.68rem;
-  background: #f8fafc;
-  color: #475569;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  min-height: 36px;
+  background: var(--surface);
+  color: var(--text);
   cursor: pointer;
-  font-size: 0.84rem;
+  font-size: var(--fs-body);
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
 }
 
 .toggle-filters:hover,
 .toggle-filters:focus-visible {
   border-color: var(--text);
-  color: var(--text);
+  background: var(--surface-subtle);
+  outline: 0;
+}
+
+.toggle-filters[aria-expanded="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.toggle-filters[aria-expanded="true"]:hover,
+.toggle-filters[aria-expanded="true"]:focus-visible {
+  filter: brightness(0.95);
 }
 
 .advanced-filters {
@@ -1456,7 +1486,6 @@ main > * {
   }
 
   .header-search {
-    min-width: 0;
     width: 100%;
   }
 
@@ -1469,12 +1498,11 @@ main > * {
 
   .controls-actions {
     width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .controls-row .view-toggle {
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
   }
 
