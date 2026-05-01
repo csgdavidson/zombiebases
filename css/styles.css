@@ -188,6 +188,11 @@ main > * {
   flex-wrap: wrap;
 }
 
+.controls-actions .view-toggle,
+.controls-actions .toggle-filters {
+  align-self: center;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1320,7 +1325,10 @@ main > * {
   border-radius: var(--radius-md);
   padding: var(--space-3) var(--space-4);
   display: grid;
-  gap: var(--space-2);
+  grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  column-gap: var(--space-4);
+  row-gap: var(--space-1);
   box-shadow: none;
 }
 
@@ -1329,13 +1337,15 @@ main > * {
 }
 
 .rankings-explore h2 {
-  margin: var(--space-3) 0 var(--space-2);
+  margin: 0;
   font-size: 1.08rem;
+  align-self: start;
 }
 
 .discovery-group {
   display: grid;
   gap: 0.35rem;
+  align-content: start;
 }
 
 .discovery-heading {
@@ -1555,6 +1565,14 @@ main > * {
   }
 }
 
+
+
+@media (max-width: 760px) {
+  .rankings-explore {
+    grid-template-columns: 1fr;
+    row-gap: var(--space-2);
+  }
+}
 .ranking-row-heading {
   margin: 0;
   display: grid;
