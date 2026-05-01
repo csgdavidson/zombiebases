@@ -914,7 +914,7 @@ function getSlugFromPathname(pathname) {
   return decodeURIComponent(pathSegment);
 }
 
-function renderSimilarBases(base, discovery, params) {
+function renderSimilarBases(base, bases, discovery, params) {
   if (!elements.similarSection || !elements.similarList) {
     return;
   }
@@ -926,6 +926,8 @@ function renderSimilarBases(base, discovery, params) {
   }
 
   elements.similarList.innerHTML = '';
+
+  const baseLookup = new Map((Array.isArray(bases) ? bases : []).map((entry) => [entry.slug, entry]));
 
   similarEntries.slice(0, 3).forEach((item) => {
     const li = document.createElement('li');
@@ -980,6 +982,15 @@ function renderSimilarBases(base, discovery, params) {
       textWrap.appendChild(tagRow);
     }
 
+    const sourceBase = baseLookup.get(item.slug);
+    const summaryText = sourceBase?.description?.summary;
+    if (isNonEmptyString(summaryText)) {
+      const description = document.createElement('p');
+      description.className = 'similar-base-description';
+      description.textContent = summaryText;
+      textWrap.appendChild(description);
+    }
+
     li.append(imageLink, textWrap);
     elements.similarList.appendChild(li);
   });
@@ -1023,7 +1034,7 @@ function showBase(base, bases, params, stats, rankings, discovery) {
   renderComparison(base, stats);
   renderSurvivalProfile(base);
   renderRealityCheck(base);
-  renderSimilarBases(base, discovery, params);
+  renderSimilarBases(base, bases, discovery, params);
   elements.status.textContent = '';
   elements.notFound.hidden = true;
   elements.detail.hidden = false;
