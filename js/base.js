@@ -991,16 +991,19 @@ function renderSimilarBases(base, bases, discovery, params) {
 
     const sourceBase = baseLookup.get(item.slug);
     const summaryText = getCardSummary(sourceBase);
+    let description;
     if (summaryText) {
-      const description = document.createElement('p');
+      description = document.createElement('p');
       description.className = 'similar-base-description';
       description.textContent = summaryText;
-      textWrap.appendChild(description);
     }
 
     li.append(imageLink, textWrap);
     if (tags.length) {
       li.appendChild(tagRow);
+    }
+    if (description) {
+      li.appendChild(description);
     }
     elements.similarList.appendChild(li);
   });
