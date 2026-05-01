@@ -733,7 +733,8 @@ if (elements.searchInput && elements.regionFilter && elements.typeFilter && elem
   });
   elements.resetFilters?.addEventListener('click', resetFilters);
   elements.toggleFiltersButton?.addEventListener('click', () => {
-    setAdvancedFiltersVisibility(elements.advancedFilters?.hidden);
+    const isExpanded = elements.toggleFiltersButton.getAttribute('aria-expanded') === 'true';
+    setAdvancedFiltersVisibility(!isExpanded);
   });
   elements.listViewButton.addEventListener('click', (event) => {
     event.preventDefault();

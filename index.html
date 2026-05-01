@@ -15,6 +15,10 @@
   <header class="site-header">
     <div class="header-inner">
       <h1>Zombie Bases</h1>
+      <label class="header-search" for="search-input">
+        <span class="visually-hidden">Search bases</span>
+        <input id="search-input" type="search" placeholder="Search by name, region, country, or type">
+      </label>
     </div>
   </header>
 
@@ -47,20 +51,18 @@
 
     <section class="controls-panel" aria-label="Search and filter zombie bases">
       <div class="controls-row">
-        <label class="control-search" for="search-input">
-          Search
-          <input id="search-input" type="search" placeholder="Search by name, region, country, or type">
-        </label>
+        <p id="result-count" class="result-count" aria-live="polite"></p>
 
-        <button id="toggle-filters" type="button" class="toggle-filters" aria-expanded="false" aria-controls="advanced-filters">Show filters</button>
-
-        <div class="view-toggle" aria-label="Select homepage view">
-        <span class="toggle-label">View</span>
-        <div class="toggle-buttons" role="group" aria-label="Homepage views">
-          <a id="view-list" class="toggle-button" href="./index.html" data-view="list" aria-pressed="true">List</a>
-          <a id="view-map" class="toggle-button" href="./index.html?view=map" data-view="map" aria-pressed="false">Map</a>
+        <div class="controls-actions">
+          <button id="toggle-filters" type="button" class="toggle-filters" aria-expanded="false" aria-controls="advanced-filters">Show filters</button>
+          <div class="view-toggle" aria-label="Select homepage view">
+            <span class="toggle-label">View</span>
+            <div class="toggle-buttons" role="group" aria-label="Homepage views">
+              <a id="view-list" class="toggle-button" href="./index.html" data-view="list" aria-pressed="true">List</a>
+              <a id="view-map" class="toggle-button" href="./index.html?view=map" data-view="map" aria-pressed="false">Map</a>
+            </div>
+          </div>
         </div>
-      </div>
       </div>
 
       <div id="advanced-filters" class="advanced-filters" hidden>
@@ -86,10 +88,6 @@
         <button id="reset-filters" type="button" class="reset-filters">Reset</button>
       </div>
     </section>
-
-    <div class="result-row">
-      <p id="result-count" class="result-count" aria-live="polite"></p>
-    </div>
 
     <p id="active-filters" class="active-filters" aria-live="polite" hidden></p>
     <p id="status" class="status-message" role="status" aria-live="polite"></p>
