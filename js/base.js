@@ -988,9 +988,6 @@ function renderSimilarBases(base, bases, discovery, params) {
     });
 
     textWrap.append(link, scoreMeta);
-    if (tags.length) {
-      textWrap.appendChild(tagRow);
-    }
 
     const sourceBase = baseLookup.get(item.slug);
     const summaryText = getCardSummary(sourceBase);
@@ -1002,6 +999,9 @@ function renderSimilarBases(base, bases, discovery, params) {
     }
 
     li.append(imageLink, textWrap);
+    if (tags.length) {
+      li.appendChild(tagRow);
+    }
     elements.similarList.appendChild(li);
   });
 

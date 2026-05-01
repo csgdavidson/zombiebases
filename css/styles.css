@@ -669,14 +669,18 @@ main > * {
 
 .compact-base-list li.similar-base-item {
   display: grid;
-  grid-template-columns: 112px minmax(0, 1fr);
-  gap: var(--space-3);
+  grid-template-columns: 112px minmax(0, 1fr) auto;
+  grid-template-areas:
+    "image content tags";
+  column-gap: var(--space-3);
+  row-gap: 0;
   align-items: start;
   width: 100%;
-  padding-bottom: 0.8rem;
+  padding: 0.25rem 0 1rem;
 }
 
 .similar-base-thumb-link {
+  grid-area: image;
   display: block;
   border-radius: var(--radius-sm);
   width: 112px;
@@ -692,6 +696,7 @@ main > * {
 }
 
 .similar-base-text {
+  grid-area: content;
   min-width: 0;
 }
 
@@ -700,15 +705,18 @@ main > * {
 }
 
 .similar-base-text .base-meta {
-  margin-top: 0.15rem;
+  margin-top: 0.2rem;
 }
 
-.similar-base-text .badge-row {
-  margin-top: 0.35rem !important;
+.compact-base-list li.similar-base-item .badge-row {
+  grid-area: tags;
+  justify-self: end;
+  margin: 0 0 0.7rem !important;
+  max-width: min(45%, 18rem);
 }
 
 .similar-base-description {
-  margin: 0.5rem 0 0;
+  margin: 0.75rem 0 0;
   color: #64758a;
   font-size: 0.86rem;
   line-height: 1.35;
@@ -722,13 +730,29 @@ main > * {
 
 @media (max-width: 640px) {
   .compact-base-list li.similar-base-item {
-    grid-template-columns: 96px minmax(0, 1fr);
-    gap: var(--space-2);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "content"
+      "tags";
+    row-gap: 0.55rem;
+    padding: 0.3rem 0 1rem;
   }
 
   .similar-base-thumb-link,
   .similar-base-thumb {
-    width: 96px;
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .compact-base-list li.similar-base-item .badge-row {
+    justify-self: start;
+    margin: 0.15rem 0 0 !important;
+    max-width: 100%;
+  }
+
+  .similar-base-description {
+    margin-top: 0.65rem;
   }
 }
 
