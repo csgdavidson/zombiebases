@@ -1323,12 +1323,11 @@ main > * {
   background: #e9eff6;
   border: 1px solid #c9d6e3;
   border-radius: var(--radius-md);
-  padding: var(--space-3) var(--space-4);
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr);
-  align-items: start;
-  column-gap: var(--space-4);
-  row-gap: var(--space-1);
+  padding: var(--space-2) var(--space-4);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3) var(--space-4);
+  flex-wrap: wrap;
   box-shadow: none;
 }
 
@@ -1340,12 +1339,16 @@ main > * {
   margin: 0;
   font-size: 1.08rem;
   align-self: start;
+  flex: 0 0 auto;
+  margin-top: 0.1rem;
 }
 
 .discovery-group {
   display: grid;
   gap: 0.35rem;
   align-content: start;
+  flex: 1 1 280px;
+  min-width: 220px;
 }
 
 .discovery-heading {
@@ -1569,8 +1572,13 @@ main > * {
 
 @media (max-width: 760px) {
   .rankings-explore {
-    grid-template-columns: 1fr;
-    row-gap: var(--space-2);
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .discovery-group {
+    flex: 1 1 auto;
+    min-width: 0;
   }
 }
 .ranking-row-heading {
