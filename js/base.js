@@ -141,6 +141,16 @@ function getSummary(base) {
   return isNonEmptyString(value) ? value : '';
 }
 
+function getCardSummary(base) {
+  if (isNonEmptyString(base?.description?.summary)) {
+    return base.description.summary.trim();
+  }
+  if (isNonEmptyString(base?.summary)) {
+    return base.summary.trim();
+  }
+  return '';
+}
+
 function buildIntroSummary(base) {
   const summary = getSummary(base);
   const description = getDescription(base);
@@ -983,8 +993,8 @@ function renderSimilarBases(base, bases, discovery, params) {
     }
 
     const sourceBase = baseLookup.get(item.slug);
-    const summaryText = sourceBase?.description?.summary;
-    if (isNonEmptyString(summaryText)) {
+    const summaryText = getCardSummary(sourceBase);
+    if (summaryText) {
       const description = document.createElement('p');
       description.className = 'similar-base-description';
       description.textContent = summaryText;
