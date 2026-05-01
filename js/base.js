@@ -684,7 +684,7 @@ function appendComparisonItem(list, label, value, average, options = {}) {
     return;
   }
 
-  const { averageLabel = "Global avg", showDelta = false } = options;
+  const { averageLabel = "Global avg" } = options;
   const comparison = classifyComparison(value, average);
   if (!comparison) {
     return null;
@@ -698,18 +698,17 @@ function appendComparisonItem(list, label, value, average, options = {}) {
   rowLabel.className = 'comparison-label';
   rowLabel.textContent = label;
 
-  const judgement = document.createElement('span');
-  judgement.className = `comparison-judgement comparison-judgement-${comparison.tone}`;
-  judgement.textContent = `${comparison.marker} ${comparison.label}`;
-
   const primary = document.createElement('span');
-  primary.className = 'comparison-primary';
-  const deltaPrefix = showDelta ? `${difference >= 0 ? '+' : ''}${difference.toFixed(1)} vs avg · ` : '';
-  primary.textContent = `${deltaPrefix}${value.toFixed(1)} vs ${averageLabel} ${average.toFixed(1)}`;
+  primary.className = `comparison-primary comparison-primary-${comparison.tone}`;
+  primary.textContent = `${difference >= 0 ? '+' : ''}${difference.toFixed(1)} vs avg`;
 
   const values = document.createElement('span');
   values.className = 'comparison-values';
-  values.hidden = true;
+  values.textContent = `${value.toFixed(1)} vs ${averageLabel} ${average.toFixed(1)}`;
+
+  const judgement = document.createElement('span');
+  judgement.className = `comparison-judgement comparison-judgement-${comparison.tone}`;
+  judgement.textContent = `${comparison.marker} ${comparison.label}`;
 
   item.append(rowLabel, primary, values, judgement);
   list.appendChild(item);
