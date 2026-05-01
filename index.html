@@ -46,43 +46,49 @@
     </section>
 
     <section class="controls-panel" aria-label="Search and filter zombie bases">
-      <label class="control-search" for="search-input">
-        Search
-        <input id="search-input" type="search" placeholder="Search by name, region, country, or type">
-      </label>
+      <div class="controls-row">
+        <label class="control-search" for="search-input">
+          Search
+          <input id="search-input" type="search" placeholder="Search by name, region, country, or type">
+        </label>
 
-      <label for="region-filter">
-        Region
-        <select id="region-filter">
-          <option value="">All regions</option>
-        </select>
-      </label>
+        <button id="toggle-filters" type="button" class="toggle-filters" aria-expanded="false" aria-controls="advanced-filters">Show filters</button>
 
-      <label for="type-filter">
-        Type
-        <select id="type-filter">
-          <option value="">All types</option>
-        </select>
-      </label>
-
-      <label for="sort-select">
-        Sort
-        <select id="sort-select"></select>
-      </label>
-
-      <button id="reset-filters" type="button" class="reset-filters">Reset</button>
-    </section>
-
-    <div class="result-row">
-      <p id="result-count" class="result-count" aria-live="polite"></p>
-
-      <div class="view-toggle" aria-label="Select homepage view">
+        <div class="view-toggle" aria-label="Select homepage view">
         <span class="toggle-label">View</span>
         <div class="toggle-buttons" role="group" aria-label="Homepage views">
           <a id="view-list" class="toggle-button" href="./index.html" data-view="list" aria-pressed="true">List</a>
           <a id="view-map" class="toggle-button" href="./index.html?view=map" data-view="map" aria-pressed="false">Map</a>
         </div>
       </div>
+      </div>
+
+      <div id="advanced-filters" class="advanced-filters" hidden>
+        <label for="region-filter">
+          Region
+          <select id="region-filter">
+            <option value="">All regions</option>
+          </select>
+        </label>
+
+        <label for="type-filter">
+          Type
+          <select id="type-filter">
+            <option value="">All types</option>
+          </select>
+        </label>
+
+        <label for="sort-select">
+          Sort
+          <select id="sort-select"></select>
+        </label>
+
+        <button id="reset-filters" type="button" class="reset-filters">Reset</button>
+      </div>
+    </section>
+
+    <div class="result-row">
+      <p id="result-count" class="result-count" aria-live="polite"></p>
     </div>
 
     <p id="active-filters" class="active-filters" aria-live="polite" hidden></p>
