@@ -1629,15 +1629,15 @@ main > * {
 }
 
 
-.base-map {
+.base-map-section {
   margin-bottom: var(--space-4);
 }
 
-.base-map img {
+.base-map-image {
   width: 100%;
-  height: auto;
   aspect-ratio: 2 / 1;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--border);
+  display: block;
 }
