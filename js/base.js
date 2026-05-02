@@ -77,7 +77,9 @@ const elements = {
   survivalProfileSection: document.getElementById('survival-profile-section'),
   survivalTimelineCards: document.getElementById('survival-timeline-cards'),
   realityCheckRow: document.getElementById('base-reality-check-row'),
-  realityCheckText: document.getElementById('base-reality-check')
+  realityCheckText: document.getElementById('base-reality-check'),
+  mapSection: document.getElementById('base-map-section'),
+  mapImage: document.getElementById('baseMapImage')
 };
 
 const slugHelper = window.baseSlugHelper;
@@ -540,6 +542,25 @@ function renderUseCaseAndRisk(base) {
   if (showRisk) {
     elements.keyRiskText.textContent = riskText;
   }
+}
+
+
+function renderBaseMap(base) {
+  if (!elements.mapSection || !elements.mapImage) {
+    return;
+  }
+
+  const getMapUrl = window.getStaticMapUrl;
+  const mapUrl = typeof getMapUrl === 'function' ? getMapUrl(base) : null;
+
+  if (mapUrl) {
+    elements.mapImage.src = mapUrl;
+    elements.mapSection.hidden = false;
+    return;
+  }
+
+  elements.mapImage.removeAttribute('src');
+  elements.mapSection.hidden = true;
 }
 
 function renderSurvivalProfile(base) {
@@ -1031,6 +1052,7 @@ function showBase(base, bases, params, stats, rankings, discovery) {
   renderScore(base);
   renderRankingPosition(base, rankings);
   renderComparison(base, stats);
+  renderBaseMap(base);
   renderSurvivalProfile(base);
   renderRealityCheck(base);
   renderSimilarBases(base, bases, discovery, params);
