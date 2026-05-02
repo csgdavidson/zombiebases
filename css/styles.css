@@ -832,14 +832,29 @@ main > * {
   text-decoration: underline;
 }
 
+
+.detail-topbar {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: var(--space-1);
+}
+
 .back-link {
-  display: inline-block;
-  margin-bottom: var(--space-4);
-  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--fs-body);
+  color: var(--muted);
   text-decoration: none;
 }
 
-.back-link:hover,
+@media (min-width: 641px) {
+  .detail-topbar {
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+}
+
+ .back-link:hover,
 .back-link:focus-visible {
   text-decoration: underline;
 }
