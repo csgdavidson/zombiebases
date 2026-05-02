@@ -550,6 +550,14 @@ function renderBaseMap(base) {
     return;
   }
 
+  if (!elements.mapImage.dataset.mapErrorHandlerBound) {
+    elements.mapImage.addEventListener('error', () => {
+      elements.mapImage.removeAttribute('src');
+      elements.mapSection.hidden = true;
+    });
+    elements.mapImage.dataset.mapErrorHandlerBound = 'true';
+  }
+
   const getMapUrl = window.getStaticMapUrl;
   const mapUrl = typeof getMapUrl === 'function' ? getMapUrl(base) : null;
 
