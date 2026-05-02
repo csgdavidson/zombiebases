@@ -542,11 +542,8 @@ main > * {
   word-break: normal;
 }
 
+
 .survival-profile-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: var(--space-2);
   margin-bottom: var(--space-3);
 }
 
@@ -554,144 +551,60 @@ main > * {
   margin-bottom: 0;
 }
 
-.survival-trajectory-label {
-  margin: 0 !important;
-  font-size: 0.76rem;
-  color: #0f172a;
-  border: 1px solid #c7d2fe;
-  background: #eef2ff;
-  border-radius: 999px;
-  padding: 0.28rem 0.65rem;
-  line-height: var(--lh-tight);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-.survival-trajectory-label[data-trajectory="gradual-decline"] {
-  background: #fff7ed;
-  border-color: #fdba74;
-  color: #9a3412;
-  box-shadow: 0 1px 0 rgba(154, 52, 18, 0.08);
-}
-
-.survival-timeline {
-  position: relative;
+.survival-timeline-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.95rem;
-  align-items: start;
-  margin-top: 0.3rem;
+  gap: 1.25rem;
 }
 
-.survival-connector {
-  position: absolute;
-  left: 14%;
-  right: 14%;
-  top: 1.24rem;
-  height: 6px;
-  background: #cbd5e1;
-  border-radius: 999px;
-  pointer-events: none;
-}
-
-.survival-stage {
-  position: relative;
-  padding-top: 2.45rem;
-  text-align: center;
+.survival-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: #f8fafc;
+  box-shadow: var(--shadow-sm);
+  padding: 1rem 1.05rem;
   display: grid;
-  gap: 0.35rem;
+  gap: 0.7rem;
 }
 
-.survival-stage[data-survival-level="4"] {
-  --node-size: 0.96rem;
-  --node-border: 2px;
-  --node-bg: #16a34a;
-  --node-ring: #166534;
-}
+.survival-card[data-status="strong"] { background: #f0fdf4; border-color: #bbf7d0; }
+.survival-card[data-status="moderate"] { background: #fffbeb; border-color: #fcd34d; }
+.survival-card[data-status="weak"] { background: #fef2f2; border-color: #fecaca; }
 
-.survival-stage[data-survival-level="3"] {
-  --node-size: 0.96rem;
-  --node-border: 2px;
-  --node-bg: #d97706;
-  --node-ring: #92400e;
-}
-
-.survival-stage[data-survival-level="2"] {
-  --node-size: 0.96rem;
-  --node-border: 2px;
-  --node-bg: #b45309;
-  --node-ring: #7c2d12;
-}
-
-.survival-stage[data-survival-level="1"] {
-  --node-size: 0.96rem;
-  --node-border: 2px;
-  --node-bg: #cbd5e1;
-  --node-ring: #64748b;
-}
-
-.survival-stage-node {
-  position: absolute;
-  left: 50%;
-  top: 0.66rem;
-  width: var(--node-size, 0.88rem);
-  height: var(--node-size, 0.88rem);
-  transform: translateX(-50%);
-  border-radius: 999px;
-  border: var(--node-border, 2px) solid var(--node-ring, #334155);
-  background: var(--node-bg, #f8fafc);
-  z-index: 1;
-}
-
-.survival-stage-label {
-  font-size: 0.72rem;
-  color: #73859b;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+.survival-card-timeframe {
+  margin: 0;
+  font-size: 0.73rem;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+  font-weight: 700;
 }
 
-.survival-stage-value {
-  font-size: 1.17rem;
+.survival-card-status {
+  margin: 0;
+  font-size: 1.1rem;
   font-weight: 800;
   color: #0f172a;
-  line-height: 1.25;
 }
 
-.survival-stage-value[data-survival-level="4"] { color: #166534; }
-.survival-stage-value[data-survival-level="3"] { color: #b45309; }
-.survival-stage-value[data-survival-level="2"] { color: #9a3412; }
-
-.survival-stage-note {
-  margin-top: 0.45rem;
-  font-size: 0.78rem;
-  line-height: 1.45;
-  color: #5f7085;
-  max-width: 22ch;
-  justify-self: center;
-}
-
-.survival-summary-insight {
-  margin: var(--space-4) 0 0;
-  padding: 1rem 1.05rem;
-  border: 0;
-  background: #f8fafc;
-  border-radius: 0.7rem;
-}
-
-.survival-summary-line {
+.survival-card-points {
   margin: 0;
-  color: #1e293b;
-  font-size: 0.87rem;
-  font-weight: 650;
-  line-height: 1.55;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.35rem;
+  color: #334155;
+  font-size: 0.9rem;
 }
 
-.survival-summary-line + .survival-summary-line {
-  margin-top: 0.5rem;
+.survival-card-failure {
+  margin: 0;
+  color: #55657a;
+  font-size: 0.83rem;
+  font-style: italic;
+  line-height: 1.45;
 }
 
+/* Feature image badges: hero image, ranking overlays, and image badge placement. */
 /* Feature image badges: hero image, ranking overlays, and image badge placement. */
 .hero-image {
   display: block;
@@ -1247,60 +1160,9 @@ main > * {
     grid-template-columns: 1fr;
   }
 
-  .survival-profile-header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-
-  .survival-trajectory-label {
-    align-self: flex-start;
-  }
-
-  .survival-trajectory-label:not([hidden]) {
-    margin-top: 0.1rem !important;
-  }
-
-  .survival-timeline {
-    gap: 0.55rem;
+  .survival-timeline-cards {
     grid-template-columns: 1fr;
-  }
-
-  .survival-connector {
-    display: none;
-  }
-
-  .survival-stage {
-    padding-top: 0;
-    padding-left: 1.5rem;
-    text-align: left;
-    grid-template-columns: auto auto 1fr;
-    align-items: center;
-    column-gap: 0.4rem;
-    min-width: 0;
-  }
-
-  .survival-stage-node {
-    position: static;
-    transform: none;
-  }
-
-  .survival-stage-label {
-    font-size: 0.7rem;
-    white-space: nowrap;
-  }
-
-  .survival-stage-value {
-    font-size: 1rem;
-    justify-self: start;
-    text-align: left;
-  }
-
-  .survival-stage-note {
-    grid-column: 2 / -1;
-    justify-self: start;
-    max-width: none;
-    margin-top: 0.25rem;
+    gap: 0.8rem;
   }
 
   #comparison-overall-list,
@@ -1315,6 +1177,13 @@ main > * {
   .comparison-values {
     grid-column: 1 / -1;
     justify-self: end;
+  }
+}
+
+
+@media (max-width: 960px) and (min-width: 641px) {
+  .survival-timeline-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
