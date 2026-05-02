@@ -1323,7 +1323,7 @@ main > * {
   background: #e9eff6;
   border: 1px solid #c9d6e3;
   border-radius: var(--radius-md);
-  padding: var(--space-3) var(--space-4);
+  padding: calc(var(--space-3) + 4px) var(--space-4);
   display: flex;
   align-items: flex-start;
   gap: var(--space-3) var(--space-5);
@@ -1583,12 +1583,16 @@ main > * {
 }
 
 @media (min-width: 761px) {
+  .rankings-explore {
+    flex-wrap: nowrap;
+  }
+
   .rankings-explore h2 {
-    margin-right: var(--space-2);
+    margin-right: 20px;
   }
 
   .rankings-explore .discovery-group + .discovery-group {
-    margin-left: var(--space-2);
+    margin-left: 20px;
   }
 }
 .ranking-row-heading {
