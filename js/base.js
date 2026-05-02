@@ -75,16 +75,7 @@ const elements = {
   similarList: document.getElementById('similar-bases-list'),
   similarExploreLink: document.getElementById('similar-explore-link'),
   survivalProfileSection: document.getElementById('survival-profile-section'),
-  survivalInitialRow: document.getElementById('base-survival-initial-row'),
-  survivalInitial: document.getElementById('base-survival-initial'),
-  survivalShortTermRow: document.getElementById('base-survival-short-term-row'),
-  survivalShortTerm: document.getElementById('base-survival-short-term'),
-  survivalLongTermRow: document.getElementById('base-survival-long-term-row'),
-  survivalLongTerm: document.getElementById('base-survival-long-term'),
-  survivalTrajectoryLabel: document.getElementById('survival-trajectory-label'),
-  survivalSummaryInsight: document.getElementById('survival-summary-insight'),
-  survivalBestWindow: document.getElementById('survival-best-window'),
-  survivalPrimaryRisk: document.getElementById('survival-primary-risk'),
+  survivalTimelineCards: document.getElementById('survival-timeline-cards'),
   realityCheckRow: document.getElementById('base-reality-check-row'),
   realityCheckText: document.getElementById('base-reality-check')
 };
@@ -553,76 +544,71 @@ function renderUseCaseAndRisk(base) {
 
 function renderSurvivalProfile(base) {
   const profile = getSurvivalProfile(base);
-  const verdict = getVerdict(base);
   const useCaseAndRisk = getUseCaseAndRisk(base);
-  const initial = isNonEmptyString(profile.initial) ? profile.initial : '';
-  const shortTerm = isNonEmptyString(profile.shortTerm) ? profile.shortTerm : '';
-  const longTerm = isNonEmptyString(profile.longTerm) ? profile.longTerm : '';
+  const verdict = getVerdict(base);
 
-  const hasContent = Boolean(initial || shortTerm || longTerm);
+  const phases = [
+    { timeframe: 'First 7 Days', value: isNonEmptyString(profile.initial) ? profile.initial : '' },
+    { timeframe: 'First 100 Days', value: isNonEmptyString(profile.shortTerm) ? profile.shortTerm : '' },
+    { timeframe: 'Long-term (100+ Days)', value: isNonEmptyString(profile.longTerm) ? profile.longTerm : '' }
+  ];
+
+  const hasContent = phases.some((phase) => phase.value);
   elements.survivalProfileSection.hidden = !hasContent;
-  if (!hasContent) {
+  if (!hasContent || !elements.survivalTimelineCards) {
     return;
   }
 
-  elements.survivalInitial.textContent = initial;
-  elements.survivalShortTerm.textContent = shortTerm;
-  elements.survivalLongTerm.textContent = longTerm;
-  elements.survivalInitialRow.hidden = !initial;
-  elements.survivalShortTermRow.hidden = !shortTerm;
-  elements.survivalLongTermRow.hidden = !longTerm;
+  const primaryRisk = firstSentence(useCaseAndRisk.keyRisk || verdict.failureMode) || 'core systems start to fail';
+  const cardsMarkup = phases.map((phase, index) => {
+    const status = phase.value || 'Moderate';
+    const level = getSurvivalLevel(status);
+    const tone = level >= 4 ? 'strong' : level <= 2 ? 'weak' : 'moderate';
+    const bullets = getSurvivalCardBullets(index, tone);
+    const failureLine = getFailureLine(index, primaryRisk);
 
-  const stageRows = [
-    { row: elements.survivalInitialRow, value: initial },
-    { row: elements.survivalShortTermRow, value: shortTerm },
-    { row: elements.survivalLongTermRow, value: longTerm }
-  ];
+    return `
+      <article class="survival-card" data-status="${tone}">
+        <p class="survival-card-timeframe">${phase.timeframe}</p>
+        <p class="survival-card-status">${status}</p>
+        <ul class="survival-card-points">
+          ${bullets.map((item) => `<li>${item}</li>`).join('')}
+        </ul>
+        <p class="survival-card-failure">→ ${failureLine}</p>
+      </article>
+    `;
+  }).join('');
 
-  const stageLevels = [];
-  stageRows.forEach(({ row, value }) => {
-    if (!row || !value) {
-      return;
-    }
+  elements.survivalTimelineCards.innerHTML = cardsMarkup;
+}
 
-    const level = getSurvivalLevel(value);
-    if (level !== null) {
-      row.style.setProperty('--survival-level', String(level));
-      row.setAttribute('data-survival-level', String(level));
-      const valueEl = row.querySelector('.survival-stage-value');
-      if (valueEl) {
-        valueEl.setAttribute('data-survival-level', String(level));
-      }
-      stageLevels.push(level);
-    }
-  });
+function getSurvivalCardBullets(index, tone) {
+  const phaseBullets = {
+    strong: [
+      ['✔ Secure and defensible', '✔ Controlled access', '✖ Early supply dependency'],
+      ['✔ Stable control', '✔ Defensible perimeter', '✖ Supply strain emerging'],
+      ['✔ Survivable with discipline', '✔ Systems can hold', '✖ Long-tail maintenance burden']
+    ],
+    moderate: [
+      ['✔ Initial setup is workable', '✔ Access can be managed', '✖ Early logistics can wobble'],
+      ['✔ Control is maintainable', '✔ Defenses remain useful', '✖ Resource pressure grows'],
+      ['✔ Survivable with strict rationing', '✖ Resource depletion risk', '✖ Maintenance complexity rises']
+    ],
+    weak: [
+      ['✔ Short burst survivability', '✖ Exposure points remain', '✖ Supply chain fragility'],
+      ['✔ Some control is possible', '✖ Defenses are hard to sustain', '✖ Logistics become brittle'],
+      ['✔ Pockets may remain viable', '✖ Resource exhaustion likely', '✖ System decay compounds']
+    ]
+  };
 
-  const visibleRows = stageRows.filter(({ value }) => Boolean(value));
-  visibleRows.forEach((entry, index) => {
-    const next = visibleRows[index + 1];
-    const level = getSurvivalLevel(entry.value);
-    const nextLevel = next ? getSurvivalLevel(next.value) : null;
-    const segmentState = !next ? 'end' : nextLevel < level ? 'decline' : nextLevel > level ? 'improve' : 'flat';
-    entry.row.setAttribute('data-segment', segmentState);
-  });
+  return phaseBullets[tone][index] || phaseBullets.moderate[index];
+}
 
-  const trajectoryLabel = getTrajectoryLabel(stageLevels);
-  elements.survivalTrajectoryLabel.textContent = trajectoryLabel;
-  elements.survivalTrajectoryLabel.hidden = !trajectoryLabel;
-  elements.survivalTrajectoryLabel.setAttribute('data-trajectory', trajectoryLabel.toLowerCase().replace(/\s+/g, '-'));
-
-  const bestWindow = firstSentence(verdict.bestUseCase || useCaseAndRisk.bestUseCase);
-  const primaryRisk = firstSentence(useCaseAndRisk.keyRisk || verdict.failureMode);
-  const hasSummary = Boolean(bestWindow || primaryRisk);
-
-  if (elements.survivalSummaryInsight) {
-    elements.survivalSummaryInsight.hidden = !hasSummary;
-  }
-  if (elements.survivalBestWindow) {
-    elements.survivalBestWindow.textContent = bestWindow ? `Best window: ${bestWindow}` : '';
-  }
-  if (elements.survivalPrimaryRisk) {
-    elements.survivalPrimaryRisk.textContent = primaryRisk ? `Primary risk: ${primaryRisk}` : '';
-  }
+function getFailureLine(index, risk) {
+  const stem = risk.charAt(0).toLowerCase() + risk.slice(1);
+  if (index === 0) return `You fail if early logistics break: ${stem}`;
+  if (index === 1) return `You fail when sustained operations crack: ${stem}`;
+  return `You fail through slow system decay: ${stem}`;
 }
 
 function renderRealityCheck(base) {
