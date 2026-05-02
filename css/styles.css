@@ -1612,3 +1612,17 @@ main > * {
     justify-items: end;
   }
 }
+
+
+.base-map {
+  margin-bottom: var(--space-4);
+}
+
+.base-map img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
