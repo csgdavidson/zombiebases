@@ -543,6 +543,14 @@ main > * {
 }
 
 
+#survival-profile-section {
+  margin-top: 20px;
+}
+
+#survival-profile-section + #comparison-section {
+  margin-top: 14px;
+}
+
 .survival-profile-header {
   margin-bottom: var(--space-3);
 }
