@@ -4,6 +4,7 @@ const STATS_URL = './data/base-stats.json';
 const RANKINGS_URL = './data/rankings.json';
 const DISCOVERY_URL = './data/discovery.json';
 const HERO_IMAGE_FALLBACK_URL = '/images/bases/placeholder.png';
+const MAPBOX_PUBLIC_TOKEN = '';
 
 const LABELS = {
   type: {
@@ -79,7 +80,7 @@ const elements = {
   realityCheckRow: document.getElementById('base-reality-check-row'),
   realityCheckText: document.getElementById('base-reality-check'),
   mapSection: document.getElementById('base-map-section'),
-  mapImage: document.getElementById('baseMapImage')
+  mapImage: document.getElementById('base-map-image')
 };
 
 const slugHelper = window.baseSlugHelper;
@@ -545,30 +546,43 @@ function renderUseCaseAndRisk(base) {
 }
 
 
+function getBaseMapUrl(base) {
+  if (!MAPBOX_PUBLIC_TOKEN) return '';
+  if (!Number.isFinite(base.lat) || !Number.isFinite(base.long)) return '';
+
+  const longitude = base.long;
+  const latitude = base.lat;
+
+  return `https://api.mapbox.com/styles/v1/mapbox/dark-v11/static/pin-s+ff6b35(${longitude},${latitude})/${longitude},${latitude},7/1200x600@2x?access_token=${MAPBOX_PUBLIC_TOKEN}`;
+}
+
 function renderBaseMap(base) {
-  if (!elements.mapSection || !elements.mapImage) {
+  const mapSection = elements.mapSection;
+  const mapImage = elements.mapImage;
+
+  if (!mapSection || !mapImage) {
     return;
   }
 
-  if (!elements.mapImage.dataset.mapErrorHandlerBound) {
-    elements.mapImage.addEventListener('error', () => {
-      elements.mapImage.removeAttribute('src');
-      elements.mapSection.hidden = true;
-    });
-    elements.mapImage.dataset.mapErrorHandlerBound = 'true';
-  }
+  const mapUrl = getBaseMapUrl(base);
 
-  const getMapUrl = window.getStaticMapUrl;
-  const mapUrl = typeof getMapUrl === 'function' ? getMapUrl(base) : null;
-
-  if (mapUrl) {
-    elements.mapImage.src = mapUrl;
-    elements.mapSection.hidden = false;
+  if (!mapUrl) {
+    mapImage.removeAttribute('src');
+    mapImage.alt = '';
+    mapSection.hidden = true;
     return;
   }
 
-  elements.mapImage.removeAttribute('src');
-  elements.mapSection.hidden = true;
+  mapImage.onerror = () => {
+    mapImage.onerror = null;
+    mapImage.removeAttribute('src');
+    mapImage.alt = '';
+    mapSection.hidden = true;
+  };
+
+  mapImage.src = mapUrl;
+  mapImage.alt = `Map showing location of ${base.name}`;
+  mapSection.hidden = false;
 }
 
 function renderSurvivalProfile(base) {
