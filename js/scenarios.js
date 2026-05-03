@@ -119,17 +119,45 @@ function renderList(entries) {
   });
 }
 
+function applyScenarioMetadata(title, description) {
+  if (!window.seo) {
+    return;
+  }
+
+  const normalizedTitle = title || 'Scenario discovery';
+  const normalizedDescription = description || 'Choose a scenario to explore ranked bases.';
+
+  window.seo.applyPageMetadata({
+    title: `${normalizedTitle} | Zombie Bases`,
+    description: normalizedDescription,
+    canonicalPath: '/scenarios.html'
+  });
+
+  window.seo.applySocialMetadata({
+    title: `${normalizedTitle} | Zombie Bases`,
+    description: normalizedDescription,
+    url: `${window.seo.PRODUCTION_ORIGIN}/scenarios.html`,
+    type: 'website',
+    image: window.seo.DEFAULT_IMAGE
+  });
+}
+
 function setScenario(discovery, scenarioId) {
   const scenario = discovery.scenarios?.[scenarioId];
   if (!scenario) {
     elements.title.textContent = 'Scenario discovery';
     elements.description.textContent = 'Choose a scenario to explore ranked bases.';
+    applyScenarioMetadata(
+      'Scenario Discovery',
+      'Explore zombie survival scenarios to compare which bases perform best under different outbreak conditions.'
+    );
     renderList([]);
     return;
   }
 
   elements.title.textContent = scenario.title;
   elements.description.textContent = scenario.description;
+  applyScenarioMetadata(scenario.title, scenario.description);
   renderList(scenario.entries || []);
 }
 
