@@ -92,8 +92,8 @@ function updateHomepageMetadata() {
     return;
   }
 
-  const title = 'Zombie Bases | Survival Base Directory';
-  const description = 'Explore and compare real-world locations as zombie survival bases, ranked by defensibility, isolation, sustainability, and long-term viability.';
+  const title = 'Best Zombie Survival Bases | Real-World Locations Ranked';
+  const description = 'Explore the best real-world locations for survival scenarios. Compare defensibility, isolation, and long-term sustainability across 200+ bases.';
   const canonicalUrl = `${window.seo.PRODUCTION_ORIGIN}/`;
 
   window.seo.applyPageMetadata({

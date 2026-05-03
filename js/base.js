@@ -269,14 +269,13 @@ function setBackLink(params) {
 }
 
 function buildBaseDescription(base) {
-  const summary = getSummary(base);
-  const description = getDescription(base);
-  const fallback = 'Read details for this zombie survival base, including region, type, and preparedness notes.';
-  return window.seo?.truncateDescription(summary || description || fallback, 160) || fallback;
+  const name = isNonEmptyString(base?.name) ? base.name.trim() : 'This survival base';
+  const template = `${name} survival base analysis covers defensibility, isolation, and long-term viability with strengths, weaknesses, and practical trade-offs.`;
+  return window.seo?.truncateDescription(template, 155) || template;
 }
 
 function applyDetailMetadata(base) {
-  const title = `${base.name} | ${window.seo?.BRAND_NAME || 'Zombie Bases'}`;
+  const title = `${base.name} Survival Base Analysis | ${window.seo?.BRAND_NAME || 'Zombie Bases'}`;
   const description = buildBaseDescription(base);
   const canonicalUrl = `${window.seo?.PRODUCTION_ORIGIN || 'https://zombiebases.com'}${slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(base.slug) : `/${encodeURIComponent(base.slug)}`}`;
 
