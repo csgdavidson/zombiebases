@@ -83,8 +83,8 @@ function updateViewToggleLinks() {
   const listQuery = listParams.toString();
   const mapQuery = mapParams.toString();
 
-  elements.listViewButton.href = listQuery ? `./index.html?${listQuery}` : './index.html';
-  elements.mapViewButton.href = mapQuery ? `./index.html?${mapQuery}` : './index.html?view=map';
+  elements.listViewButton.href = listQuery ? `/?${listQuery}` : '/';
+  elements.mapViewButton.href = mapQuery ? `/?${mapQuery}` : '/?view=map';
 }
 
 function updateHomepageMetadata() {

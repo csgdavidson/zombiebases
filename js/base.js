@@ -256,7 +256,7 @@ function buildBackLink(params) {
   }
 
   const queryString = linkParams.toString();
-  const href = queryString ? `./index.html?${queryString}` : './index.html';
+  const href = queryString ? `/?${queryString}` : '/';
   const text = view === 'map' ? '← Back to Map' : '← Back to List';
 
   return { href, text };
