@@ -875,8 +875,17 @@ main > * {
 @media (min-width: 768px) {
   .base-header {
     flex-direction: row;
-    justify-content: space-between;
     align-items: baseline;
+    justify-content: flex-start;
+  }
+
+  .base-header h1 {
+    order: 1;
+  }
+
+  .base-header .back-link {
+    order: 2;
+    margin-left: auto;
   }
 }
 
