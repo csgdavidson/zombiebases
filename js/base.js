@@ -300,6 +300,65 @@ function applyDetailMetadata(base) {
     type: 'article',
     image: socialImage
   });
+
+  const cleanUrl = slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(base.slug) : `/${encodeURIComponent(base.slug)}`;
+  const canonicalUrlForSchema = `${window.seo?.PRODUCTION_ORIGIN || 'https://zombiebases.com'}${cleanUrl}`;
+  const imageUrl = `${window.seo?.PRODUCTION_ORIGIN || 'https://zombiebases.com'}/images/bases/${encodeURIComponent(base.slug)}.png`;
+  const summary = getDescription(base);
+  const latitude = Number(base?.lat);
+  const longitude = Number(base?.long);
+  const hasValidGeo = Number.isFinite(latitude) && Number.isFinite(longitude);
+
+  window.seo?.setJsonLd?.('base-article', {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${base.name} Zombie Survival Analysis`,
+    description: summary,
+    image: imageUrl,
+    url: canonicalUrlForSchema,
+    mainEntityOfPage: canonicalUrlForSchema,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Zombie Bases'
+    }
+  });
+
+  window.seo?.setJsonLd?.('base-place', {
+    '@context': 'https://schema.org',
+    '@type': 'Place',
+    name: base.name,
+    description: summary,
+    image: imageUrl,
+    url: canonicalUrlForSchema,
+    geo: hasValidGeo ? {
+      '@type': 'GeoCoordinates',
+      latitude,
+      longitude
+    } : undefined,
+    address: isNonEmptyString(base?.country) ? {
+      '@type': 'PostalAddress',
+      addressCountry: base.country
+    } : undefined
+  });
+
+  window.seo?.setJsonLd?.('base-breadcrumbs', {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://zombiebases.com/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: base.name,
+        item: canonicalUrlForSchema
+      }
+    ]
+  });
 }
 
 function applyNotFoundMetadata() {
