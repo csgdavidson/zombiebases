@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-04-28T15:34:12.690087+00:00",
+  "generatedAt": "2026-05-03T18:55:38.469441+00:00",
   "totalBases": 210,
   "global": [
     {
-      "slug": "cheyenne",
+      "slug": "cheyenne-mountain-complex",
       "name": "Cheyenne Mountain Complex",
       "region": "north_america",
       "type": "subterranean",
@@ -13,7 +13,7 @@
       "percentile": 0.48
     },
     {
-      "slug": "andaman",
+      "slug": "andaman-islands",
       "name": "Andaman Islands",
       "region": "south_asia",
       "type": "isolated_landmass",
@@ -33,7 +33,7 @@
       "percentile": 1.43
     },
     {
-      "slug": "eigg",
+      "slug": "isle-of-eigg-village",
       "name": "Isle of Eigg Village",
       "region": "uk_ireland",
       "type": "remote_settlement",
@@ -53,7 +53,7 @@
       "percentile": 2.38
     },
     {
-      "slug": "chiloe",
+      "slug": "chiloe-island",
       "name": "Chilo\u00e9 Island",
       "region": "south_america",
       "type": "isolated_landmass",
@@ -63,7 +63,7 @@
       "percentile": 2.86
     },
     {
-      "slug": "cusco-highlands",
+      "slug": "cusco-highlands-village",
       "name": "Cusco Highlands Village",
       "region": "south_america",
       "type": "remote_settlement",
@@ -93,7 +93,7 @@
       "percentile": 4.29
     },
     {
-      "slug": "mehrangarh",
+      "slug": "mehrangarh-fort",
       "name": "Mehrangarh Fort",
       "region": "south_asia",
       "type": "fortified_structure",
@@ -113,7 +113,7 @@
       "percentile": 5.24
     },
     {
-      "slug": "simien",
+      "slug": "simien-mountains",
       "name": "Simien Mountains",
       "region": "africa",
       "type": "elevated_stronghold",
@@ -133,7 +133,7 @@
       "percentile": 6.19
     },
     {
-      "slug": "faroe",
+      "slug": "faroe-islands",
       "name": "Faroe Islands",
       "region": "eastern_europe",
       "type": "isolated_landmass",
@@ -143,7 +143,7 @@
       "percentile": 6.67
     },
     {
-      "slug": "rajasthan-fort",
+      "slug": "hilltop-fort-rajasthan",
       "name": "Hilltop Fort Rajasthan",
       "region": "south_asia",
       "type": "elevated_stronghold",
@@ -153,7 +153,7 @@
       "percentile": 7.14
     },
     {
-      "slug": "socotra",
+      "slug": "socotra-island",
       "name": "Socotra Island",
       "region": "middle_east",
       "type": "isolated_landmass",
@@ -163,7 +163,7 @@
       "percentile": 7.62
     },
     {
-      "slug": "fiji",
+      "slug": "fiji-islands",
       "name": "Fiji Islands",
       "region": "oceania",
       "type": "isolated_landmass",
@@ -173,7 +173,7 @@
       "percentile": 8.1
     },
     {
-      "slug": "krak",
+      "slug": "krak-des-chevaliers",
       "name": "Krak des Chevaliers",
       "region": "middle_east",
       "type": "fortified_structure",
@@ -193,7 +193,7 @@
       "percentile": 9.05
     },
     {
-      "slug": "kodiak",
+      "slug": "kodiak-island",
       "name": "Kodiak Island",
       "region": "north_america",
       "type": "isolated_landmass",
@@ -203,7 +203,7 @@
       "percentile": 9.52
     },
     {
-      "slug": "matmata",
+      "slug": "matmata-underground-dwellings",
       "name": "Matmata Underground Dwellings",
       "region": "africa",
       "type": "subterranean",
@@ -213,7 +213,7 @@
       "percentile": 10.0
     },
     {
-      "slug": "rice-terraces",
+      "slug": "rice-terrace-highlands",
       "name": "Rice Terrace Highlands",
       "region": "southeast_asia",
       "type": "elevated_stronghold",
@@ -233,7 +233,7 @@
       "percentile": 10.95
     },
     {
-      "slug": "zanzibar",
+      "slug": "zanzibar-island",
       "name": "Zanzibar Island",
       "region": "africa",
       "type": "isolated_landmass",
@@ -253,7 +253,7 @@
       "percentile": 11.9
     },
     {
-      "slug": "cappadocia",
+      "slug": "cappadocia-highlands",
       "name": "Cappadocia Highlands",
       "region": "middle_east",
       "type": "elevated_stronghold",
@@ -263,7 +263,7 @@
       "percentile": 12.38
     },
     {
-      "slug": "coober-pedy",
+      "slug": "coober-pedy-underground-settlement",
       "name": "Coober Pedy Underground Settlement",
       "region": "oceania",
       "type": "remote_settlement",
@@ -273,7 +273,7 @@
       "percentile": 12.86
     },
     {
-      "slug": "derinkuyu",
+      "slug": "derinkuyu-underground-city",
       "name": "Derinkuyu Underground City",
       "region": "eastern_europe",
       "type": "subterranean",
@@ -303,7 +303,7 @@
       "percentile": 14.29
     },
     {
-      "slug": "jeju",
+      "slug": "jeju-island",
       "name": "Jeju Island",
       "region": "east_asia",
       "type": "isolated_landmass",
@@ -313,7 +313,7 @@
       "percentile": 14.76
     },
     {
-      "slug": "kargil-bunkers",
+      "slug": "kargil-war-bunkers",
       "name": "Kargil War Bunkers",
       "region": "south_asia",
       "type": "subterranean",
@@ -323,7 +323,7 @@
       "percentile": 15.24
     },
     {
-      "slug": "huashan",
+      "slug": "mount-huashan",
       "name": "Mount Huashan",
       "region": "east_asia",
       "type": "elevated_stronghold",
@@ -343,7 +343,7 @@
       "percentile": 16.19
     },
     {
-      "slug": "2rep-calvi",
+      "slug": "2e-rep-barracks-calvi",
       "name": "2e REP Barracks (Calvi)",
       "region": "western_europe",
       "type": "institutional_compound",
@@ -363,7 +363,7 @@
       "percentile": 17.14
     },
     {
-      "slug": "galapagos",
+      "slug": "galapagos-islands",
       "name": "Gal\u00e1pagos Islands",
       "region": "south_america",
       "type": "isolated_landmass",
@@ -373,7 +373,7 @@
       "percentile": 17.62
     },
     {
-      "slug": "great-wall",
+      "slug": "great-wall-fortress-sections",
       "name": "Great Wall Fortress Sections",
       "region": "east_asia",
       "type": "fortified_structure",
@@ -393,7 +393,7 @@
       "percentile": 18.57
     },
     {
-      "slug": "iwo-jima-bunkers",
+      "slug": "iwo-jima-underground-bunkers",
       "name": "Iwo Jima Underground Bunkers",
       "region": "east_asia",
       "type": "subterranean",
@@ -403,7 +403,7 @@
       "percentile": 19.05
     },
     {
-      "slug": "malbork",
+      "slug": "malbork-castle",
       "name": "Malbork Castle",
       "region": "eastern_europe",
       "type": "fortified_structure",
@@ -423,7 +423,7 @@
       "percentile": 20.0
     },
     {
-      "slug": "titan-silo",
+      "slug": "titan-missile-museum-silo-571-7",
       "name": "Titan Missile Museum (Silo 571-7)",
       "region": "north_america",
       "type": "subterranean",
@@ -483,7 +483,7 @@
       "percentile": 22.86
     },
     {
-      "slug": "predjama",
+      "slug": "predjama-castle",
       "name": "Predjama Castle",
       "region": "eastern_europe",
       "type": "elevated_stronghold",
@@ -493,7 +493,7 @@
       "percentile": 23.33
     },
     {
-      "slug": "qeshm",
+      "slug": "qeshm-island",
       "name": "Qeshm Island",
       "region": "middle_east",
       "type": "isolated_landmass",
@@ -503,7 +503,7 @@
       "percentile": 23.81
     },
     {
-      "slug": "tindal-base",
+      "slug": "raaf-base-tindal",
       "name": "RAAF Base Tindal",
       "region": "oceania",
       "type": "institutional_compound",
@@ -523,7 +523,7 @@
       "percentile": 24.76
     },
     {
-      "slug": "tiger-gorge",
+      "slug": "tiger-leaping-gorge-cliffs",
       "name": "Tiger Leaping Gorge Cliffs",
       "region": "east_asia",
       "type": "elevated_stronghold",
@@ -533,7 +533,7 @@
       "percentile": 25.24
     },
     {
-      "slug": "tigers-nest",
+      "slug": "tigers-nest-monastery",
       "name": "Tiger\u2019s Nest Monastery",
       "region": "south_asia",
       "type": "elevated_stronghold",
@@ -543,7 +543,7 @@
       "percentile": 25.71
     },
     {
-      "slug": "alcatraz",
+      "slug": "alcatraz-island",
       "name": "Alcatraz Island",
       "region": "north_america",
       "type": "fortified_structure",
@@ -553,7 +553,7 @@
       "percentile": 26.19
     },
     {
-      "slug": "anna-creek",
+      "slug": "anna-creek-station",
       "name": "Anna Creek Station",
       "region": "oceania",
       "type": "industrial_site",
@@ -593,7 +593,7 @@
       "percentile": 28.1
     },
     {
-      "slug": "himeji",
+      "slug": "himeji-castle",
       "name": "Himeji Castle",
       "region": "east_asia",
       "type": "fortified_structure",
@@ -633,7 +633,7 @@
       "percentile": 30.0
     },
     {
-      "slug": "olavsvern",
+      "slug": "olavsvern-naval-base",
       "name": "Olavsvern Naval Base",
       "region": "polar_extreme",
       "type": "subterranean",
@@ -653,7 +653,7 @@
       "percentile": 30.95
     },
     {
-      "slug": "nagurskoye",
+      "slug": "nagurskoye-air-base",
       "name": "Nagurskoye Air Base",
       "region": "polar_extreme",
       "type": "institutional_compound",
@@ -713,7 +713,7 @@
       "percentile": 33.81
     },
     {
-      "slug": "dartmoor-prison",
+      "slug": "hm-prison-dartmoor",
       "name": "HM Prison Dartmoor",
       "region": "uk_ireland",
       "type": "institutional_compound",
@@ -723,7 +723,7 @@
       "percentile": 34.29
     },
     {
-      "slug": "halong",
+      "slug": "ha-long-bay-cliffs",
       "name": "Ha Long Bay Cliffs",
       "region": "southeast_asia",
       "type": "elevated_stronghold",
@@ -733,7 +733,7 @@
       "percentile": 34.76
     },
     {
-      "slug": "hue",
+      "slug": "hue-citadel",
       "name": "Hue Citadel",
       "region": "southeast_asia",
       "type": "fortified_structure",
@@ -743,7 +743,7 @@
       "percentile": 35.24
     },
     {
-      "slug": "maori-pa",
+      "slug": "maori-pa-fortifications",
       "name": "Maori Pa Fortifications",
       "region": "oceania",
       "type": "fortified_structure",
@@ -753,7 +753,7 @@
       "percentile": 35.71
     },
     {
-      "slug": "pathankot-afs",
+      "slug": "pathankot-air-force-station",
       "name": "Pathankot Air Force Station",
       "region": "south_asia",
       "type": "institutional_compound",
@@ -763,7 +763,7 @@
       "percentile": 36.19
     },
     {
-      "slug": "suomenlinna",
+      "slug": "suomenlinna-fortress",
       "name": "Suomenlinna Fortress",
       "region": "eastern_europe",
       "type": "fortified_structure",
@@ -793,7 +793,7 @@
       "percentile": 37.62
     },
     {
-      "slug": "kibber",
+      "slug": "kibber-village",
       "name": "Kibber Village",
       "region": "south_asia",
       "type": "remote_settlement",
@@ -803,7 +803,7 @@
       "percentile": 38.1
     },
     {
-      "slug": "komodo",
+      "slug": "komodo-island",
       "name": "Komodo Island",
       "region": "southeast_asia",
       "type": "isolated_landmass",
@@ -823,7 +823,7 @@
       "percentile": 39.05
     },
     {
-      "slug": "mcmurdo",
+      "slug": "mcmurdo-station",
       "name": "McMurdo Station",
       "region": "polar_extreme",
       "type": "fortified_structure",
@@ -833,7 +833,7 @@
       "percentile": 39.52
     },
     {
-      "slug": "table-mountain",
+      "slug": "table-mountain-plateau",
       "name": "Table Mountain Plateau",
       "region": "africa",
       "type": "elevated_stronghold",
@@ -843,7 +843,7 @@
       "percentile": 40.0
     },
     {
-      "slug": "south-pole-station",
+      "slug": "amundsen-scott-south-pole-station",
       "name": "Amundsen-Scott South Pole Station",
       "region": "polar_extreme",
       "type": "institutional_compound",
@@ -873,7 +873,7 @@
       "percentile": 41.43
     },
     {
-      "slug": "san-felipe",
+      "slug": "san-felipe-fortress",
       "name": "San Felipe Fortress",
       "region": "south_america",
       "type": "fortified_structure",
@@ -883,7 +883,7 @@
       "percentile": 41.9
     },
     {
-      "slug": "cu-chi",
+      "slug": "vietnam-tunnel-systems",
       "name": "Vietnam Tunnel Systems",
       "region": "southeast_asia",
       "type": "subterranean",
@@ -893,7 +893,7 @@
       "percentile": 42.38
     },
     {
-      "slug": "danum-valley",
+      "slug": "danum-valley-field-centre",
       "name": "Danum Valley Field Centre",
       "region": "southeast_asia",
       "type": "institutional_compound",
@@ -903,7 +903,7 @@
       "percentile": 42.86
     },
     {
-      "slug": "murmansk-icebreaker",
+      "slug": "murmansk-icebreaker-port",
       "name": "Murmansk Icebreaker Port",
       "region": "polar_extreme",
       "type": "industrial_site",
@@ -913,7 +913,7 @@
       "percentile": 43.33
     },
     {
-      "slug": "pine-gap",
+      "slug": "pine-gap-facility",
       "name": "Pine Gap Facility",
       "region": "oceania",
       "type": "institutional_compound",
@@ -923,7 +923,7 @@
       "percentile": 43.81
     },
     {
-      "slug": "al-udeid",
+      "slug": "al-udeid-air-base",
       "name": "Al Udeid Air Base",
       "region": "middle_east",
       "type": "institutional_compound",
@@ -943,7 +943,7 @@
       "percentile": 44.76
     },
     {
-      "slug": "elmina",
+      "slug": "elmina-castle",
       "name": "Elmina Castle",
       "region": "africa",
       "type": "fortified_structure",
@@ -953,7 +953,7 @@
       "percentile": 45.24
     },
     {
-      "slug": "kota-kinabalu-base",
+      "slug": "kota-kinabalu-naval-base",
       "name": "Kota Kinabalu Naval Base",
       "region": "southeast_asia",
       "type": "institutional_compound",
@@ -973,7 +973,7 @@
       "percentile": 46.19
     },
     {
-      "slug": "atto",
+      "slug": "amazon-tall-tower-observatory",
       "name": "Amazon Tall Tower Observatory",
       "region": "south_america",
       "type": "institutional_compound",
@@ -993,7 +993,7 @@
       "percentile": 47.14
     },
     {
-      "slug": "bonny-lng-terminal",
+      "slug": "bonny-island-lng-terminal",
       "name": "Bonny Island LNG Terminal",
       "region": "africa",
       "type": "industrial_site",
@@ -1003,7 +1003,7 @@
       "percentile": 47.62
     },
     {
-      "slug": "guantanamo",
+      "slug": "guantanamo-bay",
       "name": "Guantanamo Bay",
       "region": "north_america",
       "type": "institutional_compound",
@@ -1023,7 +1023,7 @@
       "percentile": 48.57
     },
     {
-      "slug": "sime-darby-sabah",
+      "slug": "sime-darby-palm-oil-estate-sabah",
       "name": "Sime Darby Palm Oil Estate (Sabah)",
       "region": "southeast_asia",
       "type": "industrial_site",
@@ -1033,7 +1033,7 @@
       "percentile": 49.05
     },
     {
-      "slug": "table-rock",
+      "slug": "table-rock-plateau",
       "name": "Table Rock Plateau",
       "region": "north_america",
       "type": "elevated_stronghold",
@@ -1043,7 +1043,7 @@
       "percentile": 49.52
     },
     {
-      "slug": "beijing-underground",
+      "slug": "beijing-underground-city",
       "name": "Beijing Underground City",
       "region": "east_asia",
       "type": "subterranean",
@@ -1053,7 +1053,7 @@
       "percentile": 50.0
     },
     {
-      "slug": "blue-mountains",
+      "slug": "blue-mountains-cliffs",
       "name": "Blue Mountains Cliffs",
       "region": "oceania",
       "type": "elevated_stronghold",
@@ -1063,7 +1063,7 @@
       "percentile": 50.48
     },
     {
-      "slug": "kimberley-big-hole",
+      "slug": "kimberley-big-hole-mining-complex",
       "name": "Kimberley Big Hole & Mining Complex",
       "region": "africa",
       "type": "industrial_site",
@@ -1073,7 +1073,7 @@
       "percentile": 50.95
     },
     {
-      "slug": "maginot-line",
+      "slug": "maginot-line-bunkers",
       "name": "Maginot Line Bunkers",
       "region": "western_europe",
       "type": "subterranean",
@@ -1083,7 +1083,7 @@
       "percentile": 51.43
     },
     {
-      "slug": "geilenkirchen",
+      "slug": "nato-airbase-geilenkirchen",
       "name": "NATO Airbase Geilenkirchen",
       "region": "western_europe",
       "type": "institutional_compound",
@@ -1093,7 +1093,7 @@
       "percentile": 51.9
     },
     {
-      "slug": "neuschwanstein",
+      "slug": "neuschwanstein-castle",
       "name": "Neuschwanstein Castle",
       "region": "western_europe",
       "type": "elevated_stronghold",
@@ -1103,7 +1103,7 @@
       "percentile": 52.38
     },
     {
-      "slug": "patagonia-village",
+      "slug": "patagonian-village",
       "name": "Patagonian Village",
       "region": "south_america",
       "type": "remote_settlement",
@@ -1123,7 +1123,7 @@
       "percentile": 53.33
     },
     {
-      "slug": "tambopata",
+      "slug": "tambopata-research-center",
       "name": "Tambopata Research Center",
       "region": "south_america",
       "type": "institutional_compound",
@@ -1133,7 +1133,7 @@
       "percentile": 53.81
     },
     {
-      "slug": "hutchinson-salt",
+      "slug": "hutchinson-salt-storage-caverns",
       "name": "Hutchinson Salt Storage Caverns",
       "region": "north_america",
       "type": "industrial_site",
@@ -1193,7 +1193,7 @@
       "percentile": 56.67
     },
     {
-      "slug": "camp-century",
+      "slug": "camp-century-ice-tunnels",
       "name": "Camp Century Ice Tunnels",
       "region": "polar_extreme",
       "type": "subterranean",
@@ -1213,7 +1213,7 @@
       "percentile": 57.62
     },
     {
-      "slug": "olenya-airbase",
+      "slug": "olenya-air-base",
       "name": "Olenya Air Base",
       "region": "eastern_europe",
       "type": "institutional_compound",
@@ -1223,7 +1223,7 @@
       "percentile": 58.1
     },
     {
-      "slug": "ras-al-khair",
+      "slug": "ras-al-khair-desalination-plant",
       "name": "Ras Al Khair Desalination Plant",
       "region": "middle_east",
       "type": "industrial_site",
@@ -1233,7 +1233,7 @@
       "percentile": 58.57
     },
     {
-      "slug": "shaxi",
+      "slug": "shaxi-ancient-town",
       "name": "Shaxi Ancient Town",
       "region": "east_asia",
       "type": "remote_settlement",
@@ -1243,7 +1243,7 @@
       "percentile": 59.05
     },
     {
-      "slug": "waw-namus",
+      "slug": "waw-an-namus-cave-system",
       "name": "Waw an Namus Cave System",
       "region": "africa",
       "type": "subterranean",
@@ -1253,7 +1253,7 @@
       "percentile": 59.52
     },
     {
-      "slug": "ajanta",
+      "slug": "ajanta-caves",
       "name": "Ajanta Caves",
       "region": "south_asia",
       "type": "subterranean",
@@ -1263,7 +1263,7 @@
       "percentile": 60.0
     },
     {
-      "slug": "bhx4-amazon",
+      "slug": "amazon-bhx4-fulfilment-centre",
       "name": "Amazon BHX4 Fulfilment Centre",
       "region": "uk_ireland",
       "type": "industrial_site",
@@ -1273,7 +1273,7 @@
       "percentile": 60.48
     },
     {
-      "slug": "ice-shelf",
+      "slug": "crevasse-field-glacier",
       "name": "Crevasse Field Glacier",
       "region": "polar_extreme",
       "type": "polar_extreme",
@@ -1283,7 +1283,7 @@
       "percentile": 60.95
     },
     {
-      "slug": "kuttanad",
+      "slug": "kuttanad-village",
       "name": "Kuttanad Village",
       "region": "south_asia",
       "type": "remote_settlement",
@@ -1293,7 +1293,7 @@
       "percentile": 61.43
     },
     {
-      "slug": "ryongsong-compound",
+      "slug": "ryongsong-residence-compound",
       "name": "Ryongsong Residence Compound",
       "region": "east_asia",
       "type": "institutional_compound",
@@ -1323,7 +1323,7 @@
       "percentile": 62.86
     },
     {
-      "slug": "port-talbot",
+      "slug": "port-talbot-steelworks",
       "name": "Port Talbot Steelworks",
       "region": "uk_ireland",
       "type": "industrial_site",
@@ -1333,7 +1333,7 @@
       "percentile": 63.33
     },
     {
-      "slug": "factory-shenzhen",
+      "slug": "foxconn-shenzhen-factory",
       "name": "Foxconn Shenzhen Factory",
       "region": "east_asia",
       "type": "industrial_site",
@@ -1353,7 +1353,7 @@
       "percentile": 64.29
     },
     {
-      "slug": "hormuz-light",
+      "slug": "lighthouse-hormuz",
       "name": "Lighthouse Hormuz",
       "region": "middle_east",
       "type": "landmark_structure",
@@ -1363,7 +1363,7 @@
       "percentile": 64.76
     },
     {
-      "slug": "cheddar-gorge",
+      "slug": "cheddar-gorge-caves",
       "name": "Cheddar Gorge Caves",
       "region": "uk_ireland",
       "type": "subterranean",
@@ -1373,7 +1373,7 @@
       "percentile": 65.24
     },
     {
-      "slug": "copacabana-fort",
+      "slug": "fort-copacabana",
       "name": "Fort Copacabana",
       "region": "south_america",
       "type": "fortified_structure",
@@ -1383,7 +1383,7 @@
       "percentile": 65.71
     },
     {
-      "slug": "unmiss-juba",
+      "slug": "un-base-in-juba-unmiss-hq-south-sudan",
       "name": "UN Base in Juba (UNMISS HQ, South Sudan)",
       "region": "africa",
       "type": "institutional_compound",
@@ -1393,7 +1393,7 @@
       "percentile": 66.19
     },
     {
-      "slug": "chernobyl",
+      "slug": "chernobyl-exclusion-zone-facility",
       "name": "Chernobyl Exclusion Zone Facility",
       "region": "eastern_europe",
       "type": "institutional_compound",
@@ -1403,7 +1403,7 @@
       "percentile": 66.67
     },
     {
-      "slug": "phuquoc-light",
+      "slug": "phu-quoc-lighthouse",
       "name": "Phu Quoc Lighthouse",
       "region": "southeast_asia",
       "type": "landmark_structure",
@@ -1413,7 +1413,7 @@
       "percentile": 67.14
     },
     {
-      "slug": "cape-point",
+      "slug": "cape-point-lighthouse",
       "name": "Cape Point Lighthouse",
       "region": "africa",
       "type": "landmark_structure",
@@ -1423,7 +1423,7 @@
       "percentile": 67.62
     },
     {
-      "slug": "fastnet",
+      "slug": "fastnet-lighthouse",
       "name": "Fastnet Lighthouse",
       "region": "uk_ireland",
       "type": "landmark_structure",
@@ -1433,7 +1433,7 @@
       "percentile": 68.1
     },
     {
-      "slug": "krbl-dhuri",
+      "slug": "krbl-rice-mill-dhuri",
       "name": "KRBL Rice Mill (Dhuri)",
       "region": "south_asia",
       "type": "industrial_site",
@@ -1453,7 +1453,7 @@
       "percentile": 69.05
     },
     {
-      "slug": "ruhr",
+      "slug": "ruhr-industrial-complex",
       "name": "Ruhr Industrial Complex",
       "region": "western_europe",
       "type": "industrial_site",
@@ -1463,7 +1463,7 @@
       "percentile": 69.52
     },
     {
-      "slug": "antarctic-light",
+      "slug": "antarctic-lighthouse",
       "name": "Antarctic Lighthouse",
       "region": "polar_extreme",
       "type": "landmark_structure",
@@ -1493,7 +1493,7 @@
       "percentile": 70.95
     },
     {
-      "slug": "naours",
+      "slug": "naours-underground-city",
       "name": "Naours Underground City",
       "region": "western_europe",
       "type": "subterranean",
@@ -1503,7 +1503,7 @@
       "percentile": 71.43
     },
     {
-      "slug": "potosi-mine",
+      "slug": "potosi-silver-mine-cerro-rico",
       "name": "Potos\u00ed Silver Mine (Cerro Rico)",
       "region": "south_america",
       "type": "subterranean",
@@ -1523,7 +1523,7 @@
       "percentile": 72.38
     },
     {
-      "slug": "djenne",
+      "slug": "great-mosque-of-djenne",
       "name": "Great Mosque of Djenn\u00e9",
       "region": "africa",
       "type": "landmark_structure",
@@ -1533,7 +1533,7 @@
       "percentile": 72.86
     },
     {
-      "slug": "polar-tower",
+      "slug": "polar-observation-tower",
       "name": "Polar Observation Tower",
       "region": "polar_extreme",
       "type": "landmark_structure",
@@ -1543,7 +1543,7 @@
       "percentile": 73.33
     },
     {
-      "slug": "gaza-tunnels",
+      "slug": "gaza-tunnel-network",
       "name": "Gaza Tunnel Network",
       "region": "middle_east",
       "type": "subterranean",
@@ -1553,7 +1553,7 @@
       "percentile": 73.81
     },
     {
-      "slug": "hyundai-shipyard",
+      "slug": "hyundai-heavy-industries-shipyard",
       "name": "Hyundai Heavy Industries Shipyard",
       "region": "east_asia",
       "type": "industrial_site",
@@ -1563,7 +1563,7 @@
       "percentile": 74.29
     },
     {
-      "slug": "mombasa",
+      "slug": "mombasa-port",
       "name": "Mombasa Port",
       "region": "africa",
       "type": "transit_hub",
@@ -1573,7 +1573,7 @@
       "percentile": 74.76
     },
     {
-      "slug": "north-head-bunker",
+      "slug": "north-head-gun-emplacements",
       "name": "North Head Gun Emplacements",
       "region": "oceania",
       "type": "subterranean",
@@ -1583,7 +1583,7 @@
       "percentile": 75.24
     },
     {
-      "slug": "tiruppur-textiles",
+      "slug": "tiruppur-textile-cluster",
       "name": "Tiruppur Textile Cluster",
       "region": "south_asia",
       "type": "industrial_site",
@@ -1593,7 +1593,7 @@
       "percentile": 75.71
     },
     {
-      "slug": "murmansk",
+      "slug": "murmansk-port",
       "name": "Murmansk Port",
       "region": "eastern_europe",
       "type": "transit_hub",
@@ -1613,7 +1613,7 @@
       "percentile": 76.67
     },
     {
-      "slug": "kizhi",
+      "slug": "kizhi-pogost",
       "name": "Kizhi Pogost",
       "region": "eastern_europe",
       "type": "landmark_structure",
@@ -1633,7 +1633,7 @@
       "percentile": 77.62
     },
     {
-      "slug": "intramuros",
+      "slug": "intramuros-manila",
       "name": "Intramuros Manila",
       "region": "southeast_asia",
       "type": "fortified_structure",
@@ -1643,7 +1643,7 @@
       "percentile": 78.1
     },
     {
-      "slug": "spinnaker",
+      "slug": "spinnaker-tower",
       "name": "Spinnaker Tower",
       "region": "uk_ireland",
       "type": "landmark_structure",
@@ -1663,7 +1663,7 @@
       "percentile": 79.05
     },
     {
-      "slug": "murmansk-port",
+      "slug": "port-of-murmansk",
       "name": "Port of Murmansk",
       "region": "polar_extreme",
       "type": "transit_hub",
@@ -1683,7 +1683,7 @@
       "percentile": 80.0
     },
     {
-      "slug": "prudhoe-bay",
+      "slug": "prudhoe-bay-oil-field",
       "name": "Prudhoe Bay Oil Field",
       "region": "polar_extreme",
       "type": "industrial_site",
@@ -1713,7 +1713,7 @@
       "percentile": 81.43
     },
     {
-      "slug": "gen-santos-port",
+      "slug": "general-santos-fish-port",
       "name": "General Santos Fish Port",
       "region": "southeast_asia",
       "type": "industrial_site",
@@ -1723,7 +1723,7 @@
       "percentile": 81.9
     },
     {
-      "slug": "creach",
+      "slug": "phare-du-creach",
       "name": "Phare du Cr\u00e9ac'h",
       "region": "western_europe",
       "type": "landmark_structure",
@@ -1733,7 +1733,7 @@
       "percentile": 82.38
     },
     {
-      "slug": "uluru",
+      "slug": "uluru-surroundings",
       "name": "Uluru Surroundings",
       "region": "oceania",
       "type": "elevated_stronghold",
@@ -1743,7 +1743,7 @@
       "percentile": 82.86
     },
     {
-      "slug": "ghawar-processing",
+      "slug": "ghawar-oil-field-central-processing",
       "name": "Ghawar Oil Field Central Processing",
       "region": "middle_east",
       "type": "institutional_compound",
@@ -1753,7 +1753,7 @@
       "percentile": 83.33
     },
     {
-      "slug": "abqaiq",
+      "slug": "abqaiq-oil-processing-facility",
       "name": "Abqaiq Oil Processing Facility",
       "region": "middle_east",
       "type": "industrial_site",
@@ -1763,7 +1763,7 @@
       "percentile": 83.81
     },
     {
-      "slug": "bunge-santos",
+      "slug": "bunge-soy-processing-plant-santos",
       "name": "Bunge Soy Processing Plant (Santos)",
       "region": "south_america",
       "type": "industrial_site",
@@ -1783,7 +1783,7 @@
       "percentile": 84.76
     },
     {
-      "slug": "super-pit",
+      "slug": "super-pit-gold-mine",
       "name": "Super Pit Gold Mine",
       "region": "oceania",
       "type": "industrial_site",
@@ -1803,7 +1803,7 @@
       "percentile": 85.71
     },
     {
-      "slug": "phoenix-airfield",
+      "slug": "phoenix-airfield-mcmurdo",
       "name": "Phoenix Airfield (McMurdo)",
       "region": "polar_extreme",
       "type": "transit_hub",
@@ -1813,7 +1813,7 @@
       "percentile": 86.19
     },
     {
-      "slug": "jebel-ali",
+      "slug": "jebel-ali-port",
       "name": "Jebel Ali Port",
       "region": "middle_east",
       "type": "transit_hub",
@@ -1833,7 +1833,7 @@
       "percentile": 87.14
     },
     {
-      "slug": "cape-hatteras",
+      "slug": "cape-hatteras-lighthouse",
       "name": "Cape Hatteras Lighthouse",
       "region": "north_america",
       "type": "landmark_structure",
@@ -1843,7 +1843,7 @@
       "percentile": 87.62
     },
     {
-      "slug": "corwith-yard",
+      "slug": "corwith-intermodal-yard",
       "name": "Corwith Intermodal Yard",
       "region": "north_america",
       "type": "transit_hub",
@@ -1863,7 +1863,7 @@
       "percentile": 88.57
     },
     {
-      "slug": "panama-canal",
+      "slug": "panama-canal-zone",
       "name": "Panama Canal Zone",
       "region": "south_america",
       "type": "transit_hub",
@@ -1873,7 +1873,7 @@
       "percentile": 89.05
     },
     {
-      "slug": "byron-light",
+      "slug": "cape-byron-lighthouse",
       "name": "Cape Byron Lighthouse",
       "region": "oceania",
       "type": "landmark_structure",
@@ -1883,7 +1883,7 @@
       "percentile": 89.52
     },
     {
-      "slug": "glacier",
+      "slug": "glacier-plateau",
       "name": "Glacier Plateau",
       "region": "polar_extreme",
       "type": "elevated_stronghold",
@@ -1893,7 +1893,7 @@
       "percentile": 90.0
     },
     {
-      "slug": "leshan",
+      "slug": "great-buddha-leshan",
       "name": "Great Buddha Leshan",
       "region": "east_asia",
       "type": "landmark_structure",
@@ -1913,7 +1913,7 @@
       "percentile": 90.95
     },
     {
-      "slug": "mahabalipuram",
+      "slug": "lighthouse-mahabalipuram",
       "name": "Lighthouse Mahabalipuram",
       "region": "south_asia",
       "type": "landmark_structure",
@@ -1943,7 +1943,7 @@
       "percentile": 92.38
     },
     {
-      "slug": "ostankino",
+      "slug": "ostankino-tower",
       "name": "Ostankino Tower",
       "region": "eastern_europe",
       "type": "landmark_structure",
@@ -1953,7 +1953,7 @@
       "percentile": 92.86
     },
     {
-      "slug": "burj",
+      "slug": "burj-khalifa",
       "name": "Burj Khalifa",
       "region": "middle_east",
       "type": "landmark_structure",
@@ -1963,7 +1963,7 @@
       "percentile": 93.33
     },
     {
-      "slug": "cdg",
+      "slug": "charles-de-gaulle-airport",
       "name": "Charles de Gaulle Airport",
       "region": "western_europe",
       "type": "transit_hub",
@@ -1983,7 +1983,7 @@
       "percentile": 94.29
     },
     {
-      "slug": "heathrow",
+      "slug": "heathrow-airport",
       "name": "Heathrow Airport",
       "region": "uk_ireland",
       "type": "transit_hub",
@@ -1993,7 +1993,7 @@
       "percentile": 94.76
     },
     {
-      "slug": "punta-lighthouse",
+      "slug": "lighthouse-punta-del-este",
       "name": "Lighthouse Punta Del Este",
       "region": "south_america",
       "type": "landmark_structure",
@@ -2003,7 +2003,7 @@
       "percentile": 95.24
     },
     {
-      "slug": "schiphol",
+      "slug": "schiphol-airport",
       "name": "Schiphol Airport",
       "region": "western_europe",
       "type": "transit_hub",
@@ -2023,7 +2023,7 @@
       "percentile": 96.19
     },
     {
-      "slug": "harbour-bridge",
+      "slug": "sydney-harbour-bridge",
       "name": "Sydney Harbour Bridge",
       "region": "oceania",
       "type": "landmark_structure",
@@ -2053,7 +2053,7 @@
       "percentile": 97.62
     },
     {
-      "slug": "petronas",
+      "slug": "petronas-towers",
       "name": "Petronas Towers",
       "region": "southeast_asia",
       "type": "landmark_structure",
@@ -2063,7 +2063,7 @@
       "percentile": 98.1
     },
     {
-      "slug": "qutub",
+      "slug": "qutub-minar",
       "name": "Qutub Minar",
       "region": "south_asia",
       "type": "landmark_structure",
@@ -2073,7 +2073,7 @@
       "percentile": 98.57
     },
     {
-      "slug": "christ-redeemer",
+      "slug": "christ-the-redeemer",
       "name": "Christ the Redeemer",
       "region": "south_america",
       "type": "landmark_structure",
@@ -2083,7 +2083,7 @@
       "percentile": 99.05
     },
     {
-      "slug": "eiffel",
+      "slug": "eiffel-tower",
       "name": "Eiffel Tower",
       "region": "western_europe",
       "type": "landmark_structure",
@@ -2093,7 +2093,7 @@
       "percentile": 99.52
     },
     {
-      "slug": "lax",
+      "slug": "lax-airport",
       "name": "LAX Airport",
       "region": "north_america",
       "type": "transit_hub",
@@ -2116,7 +2116,7 @@
         "percentile": 5.56
       },
       {
-        "slug": "simien",
+        "slug": "simien-mountains",
         "name": "Simien Mountains",
         "region": "africa",
         "type": "elevated_stronghold",
@@ -2126,7 +2126,7 @@
         "percentile": 11.11
       },
       {
-        "slug": "matmata",
+        "slug": "matmata-underground-dwellings",
         "name": "Matmata Underground Dwellings",
         "region": "africa",
         "type": "subterranean",
@@ -2136,7 +2136,7 @@
         "percentile": 16.67
       },
       {
-        "slug": "zanzibar",
+        "slug": "zanzibar-island",
         "name": "Zanzibar Island",
         "region": "africa",
         "type": "isolated_landmass",
@@ -2176,7 +2176,7 @@
         "percentile": 38.89
       },
       {
-        "slug": "table-mountain",
+        "slug": "table-mountain-plateau",
         "name": "Table Mountain Plateau",
         "region": "africa",
         "type": "elevated_stronghold",
@@ -2186,7 +2186,7 @@
         "percentile": 44.44
       },
       {
-        "slug": "elmina",
+        "slug": "elmina-castle",
         "name": "Elmina Castle",
         "region": "africa",
         "type": "fortified_structure",
@@ -2196,7 +2196,7 @@
         "percentile": 50.0
       },
       {
-        "slug": "bonny-lng-terminal",
+        "slug": "bonny-island-lng-terminal",
         "name": "Bonny Island LNG Terminal",
         "region": "africa",
         "type": "industrial_site",
@@ -2206,7 +2206,7 @@
         "percentile": 55.56
       },
       {
-        "slug": "kimberley-big-hole",
+        "slug": "kimberley-big-hole-mining-complex",
         "name": "Kimberley Big Hole & Mining Complex",
         "region": "africa",
         "type": "industrial_site",
@@ -2216,7 +2216,7 @@
         "percentile": 61.11
       },
       {
-        "slug": "waw-namus",
+        "slug": "waw-an-namus-cave-system",
         "name": "Waw an Namus Cave System",
         "region": "africa",
         "type": "subterranean",
@@ -2236,7 +2236,7 @@
         "percentile": 72.22
       },
       {
-        "slug": "unmiss-juba",
+        "slug": "un-base-in-juba-unmiss-hq-south-sudan",
         "name": "UN Base in Juba (UNMISS HQ, South Sudan)",
         "region": "africa",
         "type": "institutional_compound",
@@ -2246,7 +2246,7 @@
         "percentile": 77.78
       },
       {
-        "slug": "cape-point",
+        "slug": "cape-point-lighthouse",
         "name": "Cape Point Lighthouse",
         "region": "africa",
         "type": "landmark_structure",
@@ -2256,7 +2256,7 @@
         "percentile": 83.33
       },
       {
-        "slug": "djenne",
+        "slug": "great-mosque-of-djenne",
         "name": "Great Mosque of Djenn\u00e9",
         "region": "africa",
         "type": "landmark_structure",
@@ -2266,7 +2266,7 @@
         "percentile": 88.89
       },
       {
-        "slug": "mombasa",
+        "slug": "mombasa-port",
         "name": "Mombasa Port",
         "region": "africa",
         "type": "transit_hub",
@@ -2288,7 +2288,7 @@
     ],
     "east_asia": [
       {
-        "slug": "jeju",
+        "slug": "jeju-island",
         "name": "Jeju Island",
         "region": "east_asia",
         "type": "isolated_landmass",
@@ -2298,7 +2298,7 @@
         "percentile": 5.56
       },
       {
-        "slug": "huashan",
+        "slug": "mount-huashan",
         "name": "Mount Huashan",
         "region": "east_asia",
         "type": "elevated_stronghold",
@@ -2308,7 +2308,7 @@
         "percentile": 11.11
       },
       {
-        "slug": "great-wall",
+        "slug": "great-wall-fortress-sections",
         "name": "Great Wall Fortress Sections",
         "region": "east_asia",
         "type": "fortified_structure",
@@ -2318,7 +2318,7 @@
         "percentile": 16.67
       },
       {
-        "slug": "iwo-jima-bunkers",
+        "slug": "iwo-jima-underground-bunkers",
         "name": "Iwo Jima Underground Bunkers",
         "region": "east_asia",
         "type": "subterranean",
@@ -2328,7 +2328,7 @@
         "percentile": 22.22
       },
       {
-        "slug": "tiger-gorge",
+        "slug": "tiger-leaping-gorge-cliffs",
         "name": "Tiger Leaping Gorge Cliffs",
         "region": "east_asia",
         "type": "elevated_stronghold",
@@ -2338,7 +2338,7 @@
         "percentile": 27.78
       },
       {
-        "slug": "himeji",
+        "slug": "himeji-castle",
         "name": "Himeji Castle",
         "region": "east_asia",
         "type": "fortified_structure",
@@ -2358,7 +2358,7 @@
         "percentile": 38.89
       },
       {
-        "slug": "beijing-underground",
+        "slug": "beijing-underground-city",
         "name": "Beijing Underground City",
         "region": "east_asia",
         "type": "subterranean",
@@ -2378,7 +2378,7 @@
         "percentile": 50.0
       },
       {
-        "slug": "shaxi",
+        "slug": "shaxi-ancient-town",
         "name": "Shaxi Ancient Town",
         "region": "east_asia",
         "type": "remote_settlement",
@@ -2388,7 +2388,7 @@
         "percentile": 55.56
       },
       {
-        "slug": "ryongsong-compound",
+        "slug": "ryongsong-residence-compound",
         "name": "Ryongsong Residence Compound",
         "region": "east_asia",
         "type": "institutional_compound",
@@ -2398,7 +2398,7 @@
         "percentile": 61.11
       },
       {
-        "slug": "factory-shenzhen",
+        "slug": "foxconn-shenzhen-factory",
         "name": "Foxconn Shenzhen Factory",
         "region": "east_asia",
         "type": "industrial_site",
@@ -2408,7 +2408,7 @@
         "percentile": 66.67
       },
       {
-        "slug": "hyundai-shipyard",
+        "slug": "hyundai-heavy-industries-shipyard",
         "name": "Hyundai Heavy Industries Shipyard",
         "region": "east_asia",
         "type": "industrial_site",
@@ -2448,7 +2448,7 @@
         "percentile": 88.89
       },
       {
-        "slug": "leshan",
+        "slug": "great-buddha-leshan",
         "name": "Great Buddha Leshan",
         "region": "east_asia",
         "type": "landmark_structure",
@@ -2470,7 +2470,7 @@
     ],
     "eastern_europe": [
       {
-        "slug": "faroe",
+        "slug": "faroe-islands",
         "name": "Faroe Islands",
         "region": "eastern_europe",
         "type": "isolated_landmass",
@@ -2480,7 +2480,7 @@
         "percentile": 5.88
       },
       {
-        "slug": "derinkuyu",
+        "slug": "derinkuyu-underground-city",
         "name": "Derinkuyu Underground City",
         "region": "eastern_europe",
         "type": "subterranean",
@@ -2500,7 +2500,7 @@
         "percentile": 17.65
       },
       {
-        "slug": "malbork",
+        "slug": "malbork-castle",
         "name": "Malbork Castle",
         "region": "eastern_europe",
         "type": "fortified_structure",
@@ -2520,7 +2520,7 @@
         "percentile": 29.41
       },
       {
-        "slug": "predjama",
+        "slug": "predjama-castle",
         "name": "Predjama Castle",
         "region": "eastern_europe",
         "type": "elevated_stronghold",
@@ -2530,7 +2530,7 @@
         "percentile": 35.29
       },
       {
-        "slug": "suomenlinna",
+        "slug": "suomenlinna-fortress",
         "name": "Suomenlinna Fortress",
         "region": "eastern_europe",
         "type": "fortified_structure",
@@ -2560,7 +2560,7 @@
         "percentile": 52.94
       },
       {
-        "slug": "olenya-airbase",
+        "slug": "olenya-air-base",
         "name": "Olenya Air Base",
         "region": "eastern_europe",
         "type": "institutional_compound",
@@ -2590,7 +2590,7 @@
         "percentile": 70.59
       },
       {
-        "slug": "chernobyl",
+        "slug": "chernobyl-exclusion-zone-facility",
         "name": "Chernobyl Exclusion Zone Facility",
         "region": "eastern_europe",
         "type": "institutional_compound",
@@ -2600,7 +2600,7 @@
         "percentile": 76.47
       },
       {
-        "slug": "murmansk",
+        "slug": "murmansk-port",
         "name": "Murmansk Port",
         "region": "eastern_europe",
         "type": "transit_hub",
@@ -2610,7 +2610,7 @@
         "percentile": 82.35
       },
       {
-        "slug": "kizhi",
+        "slug": "kizhi-pogost",
         "name": "Kizhi Pogost",
         "region": "eastern_europe",
         "type": "landmark_structure",
@@ -2630,7 +2630,7 @@
         "percentile": 94.12
       },
       {
-        "slug": "ostankino",
+        "slug": "ostankino-tower",
         "name": "Ostankino Tower",
         "region": "eastern_europe",
         "type": "landmark_structure",
@@ -2642,7 +2642,7 @@
     ],
     "middle_east": [
       {
-        "slug": "socotra",
+        "slug": "socotra-island",
         "name": "Socotra Island",
         "region": "middle_east",
         "type": "isolated_landmass",
@@ -2652,7 +2652,7 @@
         "percentile": 5.88
       },
       {
-        "slug": "krak",
+        "slug": "krak-des-chevaliers",
         "name": "Krak des Chevaliers",
         "region": "middle_east",
         "type": "fortified_structure",
@@ -2662,7 +2662,7 @@
         "percentile": 11.76
       },
       {
-        "slug": "cappadocia",
+        "slug": "cappadocia-highlands",
         "name": "Cappadocia Highlands",
         "region": "middle_east",
         "type": "elevated_stronghold",
@@ -2682,7 +2682,7 @@
         "percentile": 23.53
       },
       {
-        "slug": "qeshm",
+        "slug": "qeshm-island",
         "name": "Qeshm Island",
         "region": "middle_east",
         "type": "isolated_landmass",
@@ -2712,7 +2712,7 @@
         "percentile": 41.18
       },
       {
-        "slug": "al-udeid",
+        "slug": "al-udeid-air-base",
         "name": "Al Udeid Air Base",
         "region": "middle_east",
         "type": "institutional_compound",
@@ -2732,7 +2732,7 @@
         "percentile": 52.94
       },
       {
-        "slug": "ras-al-khair",
+        "slug": "ras-al-khair-desalination-plant",
         "name": "Ras Al Khair Desalination Plant",
         "region": "middle_east",
         "type": "industrial_site",
@@ -2742,7 +2742,7 @@
         "percentile": 58.82
       },
       {
-        "slug": "hormuz-light",
+        "slug": "lighthouse-hormuz",
         "name": "Lighthouse Hormuz",
         "region": "middle_east",
         "type": "landmark_structure",
@@ -2752,7 +2752,7 @@
         "percentile": 64.71
       },
       {
-        "slug": "gaza-tunnels",
+        "slug": "gaza-tunnel-network",
         "name": "Gaza Tunnel Network",
         "region": "middle_east",
         "type": "subterranean",
@@ -2762,7 +2762,7 @@
         "percentile": 70.59
       },
       {
-        "slug": "ghawar-processing",
+        "slug": "ghawar-oil-field-central-processing",
         "name": "Ghawar Oil Field Central Processing",
         "region": "middle_east",
         "type": "institutional_compound",
@@ -2772,7 +2772,7 @@
         "percentile": 76.47
       },
       {
-        "slug": "abqaiq",
+        "slug": "abqaiq-oil-processing-facility",
         "name": "Abqaiq Oil Processing Facility",
         "region": "middle_east",
         "type": "industrial_site",
@@ -2782,7 +2782,7 @@
         "percentile": 82.35
       },
       {
-        "slug": "jebel-ali",
+        "slug": "jebel-ali-port",
         "name": "Jebel Ali Port",
         "region": "middle_east",
         "type": "transit_hub",
@@ -2802,7 +2802,7 @@
         "percentile": 94.12
       },
       {
-        "slug": "burj",
+        "slug": "burj-khalifa",
         "name": "Burj Khalifa",
         "region": "middle_east",
         "type": "landmark_structure",
@@ -2814,7 +2814,7 @@
     ],
     "north_america": [
       {
-        "slug": "cheyenne",
+        "slug": "cheyenne-mountain-complex",
         "name": "Cheyenne Mountain Complex",
         "region": "north_america",
         "type": "subterranean",
@@ -2824,7 +2824,7 @@
         "percentile": 5.56
       },
       {
-        "slug": "kodiak",
+        "slug": "kodiak-island",
         "name": "Kodiak Island",
         "region": "north_america",
         "type": "isolated_landmass",
@@ -2844,7 +2844,7 @@
         "percentile": 16.67
       },
       {
-        "slug": "titan-silo",
+        "slug": "titan-missile-museum-silo-571-7",
         "name": "Titan Missile Museum (Silo 571-7)",
         "region": "north_america",
         "type": "subterranean",
@@ -2864,7 +2864,7 @@
         "percentile": 27.78
       },
       {
-        "slug": "alcatraz",
+        "slug": "alcatraz-island",
         "name": "Alcatraz Island",
         "region": "north_america",
         "type": "fortified_structure",
@@ -2904,7 +2904,7 @@
         "percentile": 50.0
       },
       {
-        "slug": "guantanamo",
+        "slug": "guantanamo-bay",
         "name": "Guantanamo Bay",
         "region": "north_america",
         "type": "institutional_compound",
@@ -2914,7 +2914,7 @@
         "percentile": 55.56
       },
       {
-        "slug": "table-rock",
+        "slug": "table-rock-plateau",
         "name": "Table Rock Plateau",
         "region": "north_america",
         "type": "elevated_stronghold",
@@ -2924,7 +2924,7 @@
         "percentile": 61.11
       },
       {
-        "slug": "hutchinson-salt",
+        "slug": "hutchinson-salt-storage-caverns",
         "name": "Hutchinson Salt Storage Caverns",
         "region": "north_america",
         "type": "industrial_site",
@@ -2954,7 +2954,7 @@
         "percentile": 77.78
       },
       {
-        "slug": "cape-hatteras",
+        "slug": "cape-hatteras-lighthouse",
         "name": "Cape Hatteras Lighthouse",
         "region": "north_america",
         "type": "landmark_structure",
@@ -2964,7 +2964,7 @@
         "percentile": 83.33
       },
       {
-        "slug": "corwith-yard",
+        "slug": "corwith-intermodal-yard",
         "name": "Corwith Intermodal Yard",
         "region": "north_america",
         "type": "transit_hub",
@@ -2984,7 +2984,7 @@
         "percentile": 94.44
       },
       {
-        "slug": "lax",
+        "slug": "lax-airport",
         "name": "LAX Airport",
         "region": "north_america",
         "type": "transit_hub",
@@ -3006,7 +3006,7 @@
         "percentile": 5.88
       },
       {
-        "slug": "fiji",
+        "slug": "fiji-islands",
         "name": "Fiji Islands",
         "region": "oceania",
         "type": "isolated_landmass",
@@ -3016,7 +3016,7 @@
         "percentile": 11.76
       },
       {
-        "slug": "coober-pedy",
+        "slug": "coober-pedy-underground-settlement",
         "name": "Coober Pedy Underground Settlement",
         "region": "oceania",
         "type": "remote_settlement",
@@ -3026,7 +3026,7 @@
         "percentile": 17.65
       },
       {
-        "slug": "tindal-base",
+        "slug": "raaf-base-tindal",
         "name": "RAAF Base Tindal",
         "region": "oceania",
         "type": "institutional_compound",
@@ -3036,7 +3036,7 @@
         "percentile": 23.53
       },
       {
-        "slug": "anna-creek",
+        "slug": "anna-creek-station",
         "name": "Anna Creek Station",
         "region": "oceania",
         "type": "industrial_site",
@@ -3046,7 +3046,7 @@
         "percentile": 29.41
       },
       {
-        "slug": "maori-pa",
+        "slug": "maori-pa-fortifications",
         "name": "Maori Pa Fortifications",
         "region": "oceania",
         "type": "fortified_structure",
@@ -3056,7 +3056,7 @@
         "percentile": 35.29
       },
       {
-        "slug": "pine-gap",
+        "slug": "pine-gap-facility",
         "name": "Pine Gap Facility",
         "region": "oceania",
         "type": "institutional_compound",
@@ -3066,7 +3066,7 @@
         "percentile": 41.18
       },
       {
-        "slug": "blue-mountains",
+        "slug": "blue-mountains-cliffs",
         "name": "Blue Mountains Cliffs",
         "region": "oceania",
         "type": "elevated_stronghold",
@@ -3096,7 +3096,7 @@
         "percentile": 58.82
       },
       {
-        "slug": "north-head-bunker",
+        "slug": "north-head-gun-emplacements",
         "name": "North Head Gun Emplacements",
         "region": "oceania",
         "type": "subterranean",
@@ -3106,7 +3106,7 @@
         "percentile": 64.71
       },
       {
-        "slug": "uluru",
+        "slug": "uluru-surroundings",
         "name": "Uluru Surroundings",
         "region": "oceania",
         "type": "elevated_stronghold",
@@ -3116,7 +3116,7 @@
         "percentile": 70.59
       },
       {
-        "slug": "super-pit",
+        "slug": "super-pit-gold-mine",
         "name": "Super Pit Gold Mine",
         "region": "oceania",
         "type": "industrial_site",
@@ -3126,7 +3126,7 @@
         "percentile": 76.47
       },
       {
-        "slug": "byron-light",
+        "slug": "cape-byron-lighthouse",
         "name": "Cape Byron Lighthouse",
         "region": "oceania",
         "type": "landmark_structure",
@@ -3146,7 +3146,7 @@
         "percentile": 88.24
       },
       {
-        "slug": "harbour-bridge",
+        "slug": "sydney-harbour-bridge",
         "name": "Sydney Harbour Bridge",
         "region": "oceania",
         "type": "landmark_structure",
@@ -3178,7 +3178,7 @@
         "percentile": 6.67
       },
       {
-        "slug": "olavsvern",
+        "slug": "olavsvern-naval-base",
         "name": "Olavsvern Naval Base",
         "region": "polar_extreme",
         "type": "subterranean",
@@ -3188,7 +3188,7 @@
         "percentile": 13.33
       },
       {
-        "slug": "nagurskoye",
+        "slug": "nagurskoye-air-base",
         "name": "Nagurskoye Air Base",
         "region": "polar_extreme",
         "type": "institutional_compound",
@@ -3198,7 +3198,7 @@
         "percentile": 20.0
       },
       {
-        "slug": "mcmurdo",
+        "slug": "mcmurdo-station",
         "name": "McMurdo Station",
         "region": "polar_extreme",
         "type": "fortified_structure",
@@ -3208,7 +3208,7 @@
         "percentile": 26.67
       },
       {
-        "slug": "south-pole-station",
+        "slug": "amundsen-scott-south-pole-station",
         "name": "Amundsen-Scott South Pole Station",
         "region": "polar_extreme",
         "type": "institutional_compound",
@@ -3218,7 +3218,7 @@
         "percentile": 33.33
       },
       {
-        "slug": "murmansk-icebreaker",
+        "slug": "murmansk-icebreaker-port",
         "name": "Murmansk Icebreaker Port",
         "region": "polar_extreme",
         "type": "industrial_site",
@@ -3238,7 +3238,7 @@
         "percentile": 46.67
       },
       {
-        "slug": "camp-century",
+        "slug": "camp-century-ice-tunnels",
         "name": "Camp Century Ice Tunnels",
         "region": "polar_extreme",
         "type": "subterranean",
@@ -3248,7 +3248,7 @@
         "percentile": 53.33
       },
       {
-        "slug": "ice-shelf",
+        "slug": "crevasse-field-glacier",
         "name": "Crevasse Field Glacier",
         "region": "polar_extreme",
         "type": "polar_extreme",
@@ -3258,7 +3258,7 @@
         "percentile": 60.0
       },
       {
-        "slug": "antarctic-light",
+        "slug": "antarctic-lighthouse",
         "name": "Antarctic Lighthouse",
         "region": "polar_extreme",
         "type": "landmark_structure",
@@ -3268,7 +3268,7 @@
         "percentile": 66.67
       },
       {
-        "slug": "polar-tower",
+        "slug": "polar-observation-tower",
         "name": "Polar Observation Tower",
         "region": "polar_extreme",
         "type": "landmark_structure",
@@ -3278,7 +3278,7 @@
         "percentile": 73.33
       },
       {
-        "slug": "murmansk-port",
+        "slug": "port-of-murmansk",
         "name": "Port of Murmansk",
         "region": "polar_extreme",
         "type": "transit_hub",
@@ -3288,7 +3288,7 @@
         "percentile": 80.0
       },
       {
-        "slug": "prudhoe-bay",
+        "slug": "prudhoe-bay-oil-field",
         "name": "Prudhoe Bay Oil Field",
         "region": "polar_extreme",
         "type": "industrial_site",
@@ -3298,7 +3298,7 @@
         "percentile": 86.67
       },
       {
-        "slug": "phoenix-airfield",
+        "slug": "phoenix-airfield-mcmurdo",
         "name": "Phoenix Airfield (McMurdo)",
         "region": "polar_extreme",
         "type": "transit_hub",
@@ -3308,7 +3308,7 @@
         "percentile": 93.33
       },
       {
-        "slug": "glacier",
+        "slug": "glacier-plateau",
         "name": "Glacier Plateau",
         "region": "polar_extreme",
         "type": "elevated_stronghold",
@@ -3320,7 +3320,7 @@
     ],
     "south_america": [
       {
-        "slug": "chiloe",
+        "slug": "chiloe-island",
         "name": "Chilo\u00e9 Island",
         "region": "south_america",
         "type": "isolated_landmass",
@@ -3330,7 +3330,7 @@
         "percentile": 5.56
       },
       {
-        "slug": "cusco-highlands",
+        "slug": "cusco-highlands-village",
         "name": "Cusco Highlands Village",
         "region": "south_america",
         "type": "remote_settlement",
@@ -3350,7 +3350,7 @@
         "percentile": 16.67
       },
       {
-        "slug": "galapagos",
+        "slug": "galapagos-islands",
         "name": "Gal\u00e1pagos Islands",
         "region": "south_america",
         "type": "isolated_landmass",
@@ -3370,7 +3370,7 @@
         "percentile": 27.78
       },
       {
-        "slug": "san-felipe",
+        "slug": "san-felipe-fortress",
         "name": "San Felipe Fortress",
         "region": "south_america",
         "type": "fortified_structure",
@@ -3380,7 +3380,7 @@
         "percentile": 33.33
       },
       {
-        "slug": "atto",
+        "slug": "amazon-tall-tower-observatory",
         "name": "Amazon Tall Tower Observatory",
         "region": "south_america",
         "type": "institutional_compound",
@@ -3390,7 +3390,7 @@
         "percentile": 38.89
       },
       {
-        "slug": "patagonia-village",
+        "slug": "patagonian-village",
         "name": "Patagonian Village",
         "region": "south_america",
         "type": "remote_settlement",
@@ -3400,7 +3400,7 @@
         "percentile": 44.44
       },
       {
-        "slug": "tambopata",
+        "slug": "tambopata-research-center",
         "name": "Tambopata Research Center",
         "region": "south_america",
         "type": "institutional_compound",
@@ -3410,7 +3410,7 @@
         "percentile": 50.0
       },
       {
-        "slug": "copacabana-fort",
+        "slug": "fort-copacabana",
         "name": "Fort Copacabana",
         "region": "south_america",
         "type": "fortified_structure",
@@ -3430,7 +3430,7 @@
         "percentile": 61.11
       },
       {
-        "slug": "potosi-mine",
+        "slug": "potosi-silver-mine-cerro-rico",
         "name": "Potos\u00ed Silver Mine (Cerro Rico)",
         "region": "south_america",
         "type": "subterranean",
@@ -3450,7 +3450,7 @@
         "percentile": 72.22
       },
       {
-        "slug": "bunge-santos",
+        "slug": "bunge-soy-processing-plant-santos",
         "name": "Bunge Soy Processing Plant (Santos)",
         "region": "south_america",
         "type": "industrial_site",
@@ -3460,7 +3460,7 @@
         "percentile": 77.78
       },
       {
-        "slug": "panama-canal",
+        "slug": "panama-canal-zone",
         "name": "Panama Canal Zone",
         "region": "south_america",
         "type": "transit_hub",
@@ -3480,7 +3480,7 @@
         "percentile": 88.89
       },
       {
-        "slug": "punta-lighthouse",
+        "slug": "lighthouse-punta-del-este",
         "name": "Lighthouse Punta Del Este",
         "region": "south_america",
         "type": "landmark_structure",
@@ -3490,7 +3490,7 @@
         "percentile": 94.44
       },
       {
-        "slug": "christ-redeemer",
+        "slug": "christ-the-redeemer",
         "name": "Christ the Redeemer",
         "region": "south_america",
         "type": "landmark_structure",
@@ -3502,7 +3502,7 @@
     ],
     "south_asia": [
       {
-        "slug": "andaman",
+        "slug": "andaman-islands",
         "name": "Andaman Islands",
         "region": "south_asia",
         "type": "isolated_landmass",
@@ -3512,7 +3512,7 @@
         "percentile": 5.56
       },
       {
-        "slug": "mehrangarh",
+        "slug": "mehrangarh-fort",
         "name": "Mehrangarh Fort",
         "region": "south_asia",
         "type": "fortified_structure",
@@ -3522,7 +3522,7 @@
         "percentile": 11.11
       },
       {
-        "slug": "rajasthan-fort",
+        "slug": "hilltop-fort-rajasthan",
         "name": "Hilltop Fort Rajasthan",
         "region": "south_asia",
         "type": "elevated_stronghold",
@@ -3552,7 +3552,7 @@
         "percentile": 27.78
       },
       {
-        "slug": "kargil-bunkers",
+        "slug": "kargil-war-bunkers",
         "name": "Kargil War Bunkers",
         "region": "south_asia",
         "type": "subterranean",
@@ -3562,7 +3562,7 @@
         "percentile": 33.33
       },
       {
-        "slug": "tigers-nest",
+        "slug": "tigers-nest-monastery",
         "name": "Tiger\u2019s Nest Monastery",
         "region": "south_asia",
         "type": "elevated_stronghold",
@@ -3572,7 +3572,7 @@
         "percentile": 38.89
       },
       {
-        "slug": "pathankot-afs",
+        "slug": "pathankot-air-force-station",
         "name": "Pathankot Air Force Station",
         "region": "south_asia",
         "type": "institutional_compound",
@@ -3582,7 +3582,7 @@
         "percentile": 44.44
       },
       {
-        "slug": "kibber",
+        "slug": "kibber-village",
         "name": "Kibber Village",
         "region": "south_asia",
         "type": "remote_settlement",
@@ -3602,7 +3602,7 @@
         "percentile": 55.56
       },
       {
-        "slug": "ajanta",
+        "slug": "ajanta-caves",
         "name": "Ajanta Caves",
         "region": "south_asia",
         "type": "subterranean",
@@ -3612,7 +3612,7 @@
         "percentile": 61.11
       },
       {
-        "slug": "kuttanad",
+        "slug": "kuttanad-village",
         "name": "Kuttanad Village",
         "region": "south_asia",
         "type": "remote_settlement",
@@ -3622,7 +3622,7 @@
         "percentile": 66.67
       },
       {
-        "slug": "krbl-dhuri",
+        "slug": "krbl-rice-mill-dhuri",
         "name": "KRBL Rice Mill (Dhuri)",
         "region": "south_asia",
         "type": "industrial_site",
@@ -3632,7 +3632,7 @@
         "percentile": 72.22
       },
       {
-        "slug": "tiruppur-textiles",
+        "slug": "tiruppur-textile-cluster",
         "name": "Tiruppur Textile Cluster",
         "region": "south_asia",
         "type": "industrial_site",
@@ -3652,7 +3652,7 @@
         "percentile": 83.33
       },
       {
-        "slug": "mahabalipuram",
+        "slug": "lighthouse-mahabalipuram",
         "name": "Lighthouse Mahabalipuram",
         "region": "south_asia",
         "type": "landmark_structure",
@@ -3672,7 +3672,7 @@
         "percentile": 94.44
       },
       {
-        "slug": "qutub",
+        "slug": "qutub-minar",
         "name": "Qutub Minar",
         "region": "south_asia",
         "type": "landmark_structure",
@@ -3694,7 +3694,7 @@
         "percentile": 5.56
       },
       {
-        "slug": "rice-terraces",
+        "slug": "rice-terrace-highlands",
         "name": "Rice Terrace Highlands",
         "region": "southeast_asia",
         "type": "elevated_stronghold",
@@ -3724,7 +3724,7 @@
         "percentile": 22.22
       },
       {
-        "slug": "halong",
+        "slug": "ha-long-bay-cliffs",
         "name": "Ha Long Bay Cliffs",
         "region": "southeast_asia",
         "type": "elevated_stronghold",
@@ -3734,7 +3734,7 @@
         "percentile": 27.78
       },
       {
-        "slug": "hue",
+        "slug": "hue-citadel",
         "name": "Hue Citadel",
         "region": "southeast_asia",
         "type": "fortified_structure",
@@ -3744,7 +3744,7 @@
         "percentile": 33.33
       },
       {
-        "slug": "komodo",
+        "slug": "komodo-island",
         "name": "Komodo Island",
         "region": "southeast_asia",
         "type": "isolated_landmass",
@@ -3754,7 +3754,7 @@
         "percentile": 38.89
       },
       {
-        "slug": "cu-chi",
+        "slug": "vietnam-tunnel-systems",
         "name": "Vietnam Tunnel Systems",
         "region": "southeast_asia",
         "type": "subterranean",
@@ -3764,7 +3764,7 @@
         "percentile": 44.44
       },
       {
-        "slug": "danum-valley",
+        "slug": "danum-valley-field-centre",
         "name": "Danum Valley Field Centre",
         "region": "southeast_asia",
         "type": "institutional_compound",
@@ -3774,7 +3774,7 @@
         "percentile": 50.0
       },
       {
-        "slug": "kota-kinabalu-base",
+        "slug": "kota-kinabalu-naval-base",
         "name": "Kota Kinabalu Naval Base",
         "region": "southeast_asia",
         "type": "institutional_compound",
@@ -3794,7 +3794,7 @@
         "percentile": 61.11
       },
       {
-        "slug": "sime-darby-sabah",
+        "slug": "sime-darby-palm-oil-estate-sabah",
         "name": "Sime Darby Palm Oil Estate (Sabah)",
         "region": "southeast_asia",
         "type": "industrial_site",
@@ -3824,7 +3824,7 @@
         "percentile": 77.78
       },
       {
-        "slug": "phuquoc-light",
+        "slug": "phu-quoc-lighthouse",
         "name": "Phu Quoc Lighthouse",
         "region": "southeast_asia",
         "type": "landmark_structure",
@@ -3834,7 +3834,7 @@
         "percentile": 83.33
       },
       {
-        "slug": "intramuros",
+        "slug": "intramuros-manila",
         "name": "Intramuros Manila",
         "region": "southeast_asia",
         "type": "fortified_structure",
@@ -3844,7 +3844,7 @@
         "percentile": 88.89
       },
       {
-        "slug": "gen-santos-port",
+        "slug": "general-santos-fish-port",
         "name": "General Santos Fish Port",
         "region": "southeast_asia",
         "type": "industrial_site",
@@ -3854,7 +3854,7 @@
         "percentile": 94.44
       },
       {
-        "slug": "petronas",
+        "slug": "petronas-towers",
         "name": "Petronas Towers",
         "region": "southeast_asia",
         "type": "landmark_structure",
@@ -3866,7 +3866,7 @@
     ],
     "uk_ireland": [
       {
-        "slug": "eigg",
+        "slug": "isle-of-eigg-village",
         "name": "Isle of Eigg Village",
         "region": "uk_ireland",
         "type": "remote_settlement",
@@ -3926,7 +3926,7 @@
         "percentile": 33.33
       },
       {
-        "slug": "dartmoor-prison",
+        "slug": "hm-prison-dartmoor",
         "name": "HM Prison Dartmoor",
         "region": "uk_ireland",
         "type": "institutional_compound",
@@ -3976,7 +3976,7 @@
         "percentile": 61.11
       },
       {
-        "slug": "bhx4-amazon",
+        "slug": "amazon-bhx4-fulfilment-centre",
         "name": "Amazon BHX4 Fulfilment Centre",
         "region": "uk_ireland",
         "type": "industrial_site",
@@ -3986,7 +3986,7 @@
         "percentile": 66.67
       },
       {
-        "slug": "port-talbot",
+        "slug": "port-talbot-steelworks",
         "name": "Port Talbot Steelworks",
         "region": "uk_ireland",
         "type": "industrial_site",
@@ -3996,7 +3996,7 @@
         "percentile": 72.22
       },
       {
-        "slug": "cheddar-gorge",
+        "slug": "cheddar-gorge-caves",
         "name": "Cheddar Gorge Caves",
         "region": "uk_ireland",
         "type": "subterranean",
@@ -4006,7 +4006,7 @@
         "percentile": 77.78
       },
       {
-        "slug": "fastnet",
+        "slug": "fastnet-lighthouse",
         "name": "Fastnet Lighthouse",
         "region": "uk_ireland",
         "type": "landmark_structure",
@@ -4016,7 +4016,7 @@
         "percentile": 83.33
       },
       {
-        "slug": "spinnaker",
+        "slug": "spinnaker-tower",
         "name": "Spinnaker Tower",
         "region": "uk_ireland",
         "type": "landmark_structure",
@@ -4036,7 +4036,7 @@
         "percentile": 94.44
       },
       {
-        "slug": "heathrow",
+        "slug": "heathrow-airport",
         "name": "Heathrow Airport",
         "region": "uk_ireland",
         "type": "transit_hub",
@@ -4078,7 +4078,7 @@
         "percentile": 16.67
       },
       {
-        "slug": "2rep-calvi",
+        "slug": "2e-rep-barracks-calvi",
         "name": "2e REP Barracks (Calvi)",
         "region": "western_europe",
         "type": "institutional_compound",
@@ -4118,7 +4118,7 @@
         "percentile": 38.89
       },
       {
-        "slug": "maginot-line",
+        "slug": "maginot-line-bunkers",
         "name": "Maginot Line Bunkers",
         "region": "western_europe",
         "type": "subterranean",
@@ -4128,7 +4128,7 @@
         "percentile": 44.44
       },
       {
-        "slug": "geilenkirchen",
+        "slug": "nato-airbase-geilenkirchen",
         "name": "NATO Airbase Geilenkirchen",
         "region": "western_europe",
         "type": "institutional_compound",
@@ -4138,7 +4138,7 @@
         "percentile": 50.0
       },
       {
-        "slug": "neuschwanstein",
+        "slug": "neuschwanstein-castle",
         "name": "Neuschwanstein Castle",
         "region": "western_europe",
         "type": "elevated_stronghold",
@@ -4148,7 +4148,7 @@
         "percentile": 55.56
       },
       {
-        "slug": "ruhr",
+        "slug": "ruhr-industrial-complex",
         "name": "Ruhr Industrial Complex",
         "region": "western_europe",
         "type": "industrial_site",
@@ -4168,7 +4168,7 @@
         "percentile": 66.67
       },
       {
-        "slug": "naours",
+        "slug": "naours-underground-city",
         "name": "Naours Underground City",
         "region": "western_europe",
         "type": "subterranean",
@@ -4188,7 +4188,7 @@
         "percentile": 77.78
       },
       {
-        "slug": "creach",
+        "slug": "phare-du-creach",
         "name": "Phare du Cr\u00e9ac'h",
         "region": "western_europe",
         "type": "landmark_structure",
@@ -4198,7 +4198,7 @@
         "percentile": 83.33
       },
       {
-        "slug": "cdg",
+        "slug": "charles-de-gaulle-airport",
         "name": "Charles de Gaulle Airport",
         "region": "western_europe",
         "type": "transit_hub",
@@ -4208,7 +4208,7 @@
         "percentile": 88.89
       },
       {
-        "slug": "schiphol",
+        "slug": "schiphol-airport",
         "name": "Schiphol Airport",
         "region": "western_europe",
         "type": "transit_hub",
@@ -4218,7 +4218,7 @@
         "percentile": 94.44
       },
       {
-        "slug": "eiffel",
+        "slug": "eiffel-tower",
         "name": "Eiffel Tower",
         "region": "western_europe",
         "type": "landmark_structure",
@@ -4242,7 +4242,7 @@
         "percentile": 4.35
       },
       {
-        "slug": "simien",
+        "slug": "simien-mountains",
         "name": "Simien Mountains",
         "region": "africa",
         "type": "elevated_stronghold",
@@ -4252,7 +4252,7 @@
         "percentile": 8.7
       },
       {
-        "slug": "rajasthan-fort",
+        "slug": "hilltop-fort-rajasthan",
         "name": "Hilltop Fort Rajasthan",
         "region": "south_asia",
         "type": "elevated_stronghold",
@@ -4262,7 +4262,7 @@
         "percentile": 13.04
       },
       {
-        "slug": "rice-terraces",
+        "slug": "rice-terrace-highlands",
         "name": "Rice Terrace Highlands",
         "region": "southeast_asia",
         "type": "elevated_stronghold",
@@ -4282,7 +4282,7 @@
         "percentile": 21.74
       },
       {
-        "slug": "cappadocia",
+        "slug": "cappadocia-highlands",
         "name": "Cappadocia Highlands",
         "region": "middle_east",
         "type": "elevated_stronghold",
@@ -4292,7 +4292,7 @@
         "percentile": 26.09
       },
       {
-        "slug": "huashan",
+        "slug": "mount-huashan",
         "name": "Mount Huashan",
         "region": "east_asia",
         "type": "elevated_stronghold",
@@ -4302,7 +4302,7 @@
         "percentile": 30.43
       },
       {
-        "slug": "predjama",
+        "slug": "predjama-castle",
         "name": "Predjama Castle",
         "region": "eastern_europe",
         "type": "elevated_stronghold",
@@ -4322,7 +4322,7 @@
         "percentile": 39.13
       },
       {
-        "slug": "tiger-gorge",
+        "slug": "tiger-leaping-gorge-cliffs",
         "name": "Tiger Leaping Gorge Cliffs",
         "region": "east_asia",
         "type": "elevated_stronghold",
@@ -4332,7 +4332,7 @@
         "percentile": 43.48
       },
       {
-        "slug": "tigers-nest",
+        "slug": "tigers-nest-monastery",
         "name": "Tiger\u2019s Nest Monastery",
         "region": "south_asia",
         "type": "elevated_stronghold",
@@ -4352,7 +4352,7 @@
         "percentile": 52.17
       },
       {
-        "slug": "halong",
+        "slug": "ha-long-bay-cliffs",
         "name": "Ha Long Bay Cliffs",
         "region": "southeast_asia",
         "type": "elevated_stronghold",
@@ -4372,7 +4372,7 @@
         "percentile": 60.87
       },
       {
-        "slug": "table-mountain",
+        "slug": "table-mountain-plateau",
         "name": "Table Mountain Plateau",
         "region": "africa",
         "type": "elevated_stronghold",
@@ -4392,7 +4392,7 @@
         "percentile": 69.57
       },
       {
-        "slug": "table-rock",
+        "slug": "table-rock-plateau",
         "name": "Table Rock Plateau",
         "region": "north_america",
         "type": "elevated_stronghold",
@@ -4402,7 +4402,7 @@
         "percentile": 73.91
       },
       {
-        "slug": "blue-mountains",
+        "slug": "blue-mountains-cliffs",
         "name": "Blue Mountains Cliffs",
         "region": "oceania",
         "type": "elevated_stronghold",
@@ -4412,7 +4412,7 @@
         "percentile": 78.26
       },
       {
-        "slug": "neuschwanstein",
+        "slug": "neuschwanstein-castle",
         "name": "Neuschwanstein Castle",
         "region": "western_europe",
         "type": "elevated_stronghold",
@@ -4442,7 +4442,7 @@
         "percentile": 91.3
       },
       {
-        "slug": "uluru",
+        "slug": "uluru-surroundings",
         "name": "Uluru Surroundings",
         "region": "oceania",
         "type": "elevated_stronghold",
@@ -4452,7 +4452,7 @@
         "percentile": 95.65
       },
       {
-        "slug": "glacier",
+        "slug": "glacier-plateau",
         "name": "Glacier Plateau",
         "region": "polar_extreme",
         "type": "elevated_stronghold",
@@ -4474,7 +4474,7 @@
         "percentile": 4.55
       },
       {
-        "slug": "mehrangarh",
+        "slug": "mehrangarh-fort",
         "name": "Mehrangarh Fort",
         "region": "south_asia",
         "type": "fortified_structure",
@@ -4494,7 +4494,7 @@
         "percentile": 13.64
       },
       {
-        "slug": "krak",
+        "slug": "krak-des-chevaliers",
         "name": "Krak des Chevaliers",
         "region": "middle_east",
         "type": "fortified_structure",
@@ -4504,7 +4504,7 @@
         "percentile": 18.18
       },
       {
-        "slug": "great-wall",
+        "slug": "great-wall-fortress-sections",
         "name": "Great Wall Fortress Sections",
         "region": "east_asia",
         "type": "fortified_structure",
@@ -4514,7 +4514,7 @@
         "percentile": 22.73
       },
       {
-        "slug": "malbork",
+        "slug": "malbork-castle",
         "name": "Malbork Castle",
         "region": "eastern_europe",
         "type": "fortified_structure",
@@ -4534,7 +4534,7 @@
         "percentile": 31.82
       },
       {
-        "slug": "alcatraz",
+        "slug": "alcatraz-island",
         "name": "Alcatraz Island",
         "region": "north_america",
         "type": "fortified_structure",
@@ -4554,7 +4554,7 @@
         "percentile": 40.91
       },
       {
-        "slug": "himeji",
+        "slug": "himeji-castle",
         "name": "Himeji Castle",
         "region": "east_asia",
         "type": "fortified_structure",
@@ -4594,7 +4594,7 @@
         "percentile": 59.09
       },
       {
-        "slug": "hue",
+        "slug": "hue-citadel",
         "name": "Hue Citadel",
         "region": "southeast_asia",
         "type": "fortified_structure",
@@ -4604,7 +4604,7 @@
         "percentile": 63.64
       },
       {
-        "slug": "maori-pa",
+        "slug": "maori-pa-fortifications",
         "name": "Maori Pa Fortifications",
         "region": "oceania",
         "type": "fortified_structure",
@@ -4614,7 +4614,7 @@
         "percentile": 68.18
       },
       {
-        "slug": "suomenlinna",
+        "slug": "suomenlinna-fortress",
         "name": "Suomenlinna Fortress",
         "region": "eastern_europe",
         "type": "fortified_structure",
@@ -4624,7 +4624,7 @@
         "percentile": 72.73
       },
       {
-        "slug": "mcmurdo",
+        "slug": "mcmurdo-station",
         "name": "McMurdo Station",
         "region": "polar_extreme",
         "type": "fortified_structure",
@@ -4634,7 +4634,7 @@
         "percentile": 77.27
       },
       {
-        "slug": "san-felipe",
+        "slug": "san-felipe-fortress",
         "name": "San Felipe Fortress",
         "region": "south_america",
         "type": "fortified_structure",
@@ -4644,7 +4644,7 @@
         "percentile": 81.82
       },
       {
-        "slug": "elmina",
+        "slug": "elmina-castle",
         "name": "Elmina Castle",
         "region": "africa",
         "type": "fortified_structure",
@@ -4654,7 +4654,7 @@
         "percentile": 86.36
       },
       {
-        "slug": "copacabana-fort",
+        "slug": "fort-copacabana",
         "name": "Fort Copacabana",
         "region": "south_america",
         "type": "fortified_structure",
@@ -4674,7 +4674,7 @@
         "percentile": 95.45
       },
       {
-        "slug": "intramuros",
+        "slug": "intramuros-manila",
         "name": "Intramuros Manila",
         "region": "southeast_asia",
         "type": "fortified_structure",
@@ -4686,7 +4686,7 @@
     ],
     "industrial_site": [
       {
-        "slug": "anna-creek",
+        "slug": "anna-creek-station",
         "name": "Anna Creek Station",
         "region": "oceania",
         "type": "industrial_site",
@@ -4706,7 +4706,7 @@
         "percentile": 8.33
       },
       {
-        "slug": "murmansk-icebreaker",
+        "slug": "murmansk-icebreaker-port",
         "name": "Murmansk Icebreaker Port",
         "region": "polar_extreme",
         "type": "industrial_site",
@@ -4716,7 +4716,7 @@
         "percentile": 12.5
       },
       {
-        "slug": "bonny-lng-terminal",
+        "slug": "bonny-island-lng-terminal",
         "name": "Bonny Island LNG Terminal",
         "region": "africa",
         "type": "industrial_site",
@@ -4726,7 +4726,7 @@
         "percentile": 16.67
       },
       {
-        "slug": "sime-darby-sabah",
+        "slug": "sime-darby-palm-oil-estate-sabah",
         "name": "Sime Darby Palm Oil Estate (Sabah)",
         "region": "southeast_asia",
         "type": "industrial_site",
@@ -4736,7 +4736,7 @@
         "percentile": 20.83
       },
       {
-        "slug": "kimberley-big-hole",
+        "slug": "kimberley-big-hole-mining-complex",
         "name": "Kimberley Big Hole & Mining Complex",
         "region": "africa",
         "type": "industrial_site",
@@ -4746,7 +4746,7 @@
         "percentile": 25.0
       },
       {
-        "slug": "hutchinson-salt",
+        "slug": "hutchinson-salt-storage-caverns",
         "name": "Hutchinson Salt Storage Caverns",
         "region": "north_america",
         "type": "industrial_site",
@@ -4766,7 +4766,7 @@
         "percentile": 33.33
       },
       {
-        "slug": "ras-al-khair",
+        "slug": "ras-al-khair-desalination-plant",
         "name": "Ras Al Khair Desalination Plant",
         "region": "middle_east",
         "type": "industrial_site",
@@ -4776,7 +4776,7 @@
         "percentile": 37.5
       },
       {
-        "slug": "bhx4-amazon",
+        "slug": "amazon-bhx4-fulfilment-centre",
         "name": "Amazon BHX4 Fulfilment Centre",
         "region": "uk_ireland",
         "type": "industrial_site",
@@ -4786,7 +4786,7 @@
         "percentile": 41.67
       },
       {
-        "slug": "port-talbot",
+        "slug": "port-talbot-steelworks",
         "name": "Port Talbot Steelworks",
         "region": "uk_ireland",
         "type": "industrial_site",
@@ -4796,7 +4796,7 @@
         "percentile": 45.83
       },
       {
-        "slug": "factory-shenzhen",
+        "slug": "foxconn-shenzhen-factory",
         "name": "Foxconn Shenzhen Factory",
         "region": "east_asia",
         "type": "industrial_site",
@@ -4816,7 +4816,7 @@
         "percentile": 54.17
       },
       {
-        "slug": "krbl-dhuri",
+        "slug": "krbl-rice-mill-dhuri",
         "name": "KRBL Rice Mill (Dhuri)",
         "region": "south_asia",
         "type": "industrial_site",
@@ -4826,7 +4826,7 @@
         "percentile": 58.33
       },
       {
-        "slug": "ruhr",
+        "slug": "ruhr-industrial-complex",
         "name": "Ruhr Industrial Complex",
         "region": "western_europe",
         "type": "industrial_site",
@@ -4836,7 +4836,7 @@
         "percentile": 62.5
       },
       {
-        "slug": "hyundai-shipyard",
+        "slug": "hyundai-heavy-industries-shipyard",
         "name": "Hyundai Heavy Industries Shipyard",
         "region": "east_asia",
         "type": "industrial_site",
@@ -4846,7 +4846,7 @@
         "percentile": 66.67
       },
       {
-        "slug": "tiruppur-textiles",
+        "slug": "tiruppur-textile-cluster",
         "name": "Tiruppur Textile Cluster",
         "region": "south_asia",
         "type": "industrial_site",
@@ -4866,7 +4866,7 @@
         "percentile": 75.0
       },
       {
-        "slug": "prudhoe-bay",
+        "slug": "prudhoe-bay-oil-field",
         "name": "Prudhoe Bay Oil Field",
         "region": "polar_extreme",
         "type": "industrial_site",
@@ -4876,7 +4876,7 @@
         "percentile": 79.17
       },
       {
-        "slug": "gen-santos-port",
+        "slug": "general-santos-fish-port",
         "name": "General Santos Fish Port",
         "region": "southeast_asia",
         "type": "industrial_site",
@@ -4886,7 +4886,7 @@
         "percentile": 83.33
       },
       {
-        "slug": "abqaiq",
+        "slug": "abqaiq-oil-processing-facility",
         "name": "Abqaiq Oil Processing Facility",
         "region": "middle_east",
         "type": "industrial_site",
@@ -4896,7 +4896,7 @@
         "percentile": 87.5
       },
       {
-        "slug": "bunge-santos",
+        "slug": "bunge-soy-processing-plant-santos",
         "name": "Bunge Soy Processing Plant (Santos)",
         "region": "south_america",
         "type": "industrial_site",
@@ -4906,7 +4906,7 @@
         "percentile": 91.67
       },
       {
-        "slug": "super-pit",
+        "slug": "super-pit-gold-mine",
         "name": "Super Pit Gold Mine",
         "region": "oceania",
         "type": "industrial_site",
@@ -4938,7 +4938,7 @@
         "percentile": 4.17
       },
       {
-        "slug": "2rep-calvi",
+        "slug": "2e-rep-barracks-calvi",
         "name": "2e REP Barracks (Calvi)",
         "region": "western_europe",
         "type": "institutional_compound",
@@ -4958,7 +4958,7 @@
         "percentile": 12.5
       },
       {
-        "slug": "tindal-base",
+        "slug": "raaf-base-tindal",
         "name": "RAAF Base Tindal",
         "region": "oceania",
         "type": "institutional_compound",
@@ -4968,7 +4968,7 @@
         "percentile": 16.67
       },
       {
-        "slug": "nagurskoye",
+        "slug": "nagurskoye-air-base",
         "name": "Nagurskoye Air Base",
         "region": "polar_extreme",
         "type": "institutional_compound",
@@ -4988,7 +4988,7 @@
         "percentile": 25.0
       },
       {
-        "slug": "dartmoor-prison",
+        "slug": "hm-prison-dartmoor",
         "name": "HM Prison Dartmoor",
         "region": "uk_ireland",
         "type": "institutional_compound",
@@ -4998,7 +4998,7 @@
         "percentile": 29.17
       },
       {
-        "slug": "pathankot-afs",
+        "slug": "pathankot-air-force-station",
         "name": "Pathankot Air Force Station",
         "region": "south_asia",
         "type": "institutional_compound",
@@ -5008,7 +5008,7 @@
         "percentile": 33.33
       },
       {
-        "slug": "south-pole-station",
+        "slug": "amundsen-scott-south-pole-station",
         "name": "Amundsen-Scott South Pole Station",
         "region": "polar_extreme",
         "type": "institutional_compound",
@@ -5018,7 +5018,7 @@
         "percentile": 37.5
       },
       {
-        "slug": "danum-valley",
+        "slug": "danum-valley-field-centre",
         "name": "Danum Valley Field Centre",
         "region": "southeast_asia",
         "type": "institutional_compound",
@@ -5028,7 +5028,7 @@
         "percentile": 41.67
       },
       {
-        "slug": "pine-gap",
+        "slug": "pine-gap-facility",
         "name": "Pine Gap Facility",
         "region": "oceania",
         "type": "institutional_compound",
@@ -5038,7 +5038,7 @@
         "percentile": 45.83
       },
       {
-        "slug": "al-udeid",
+        "slug": "al-udeid-air-base",
         "name": "Al Udeid Air Base",
         "region": "middle_east",
         "type": "institutional_compound",
@@ -5048,7 +5048,7 @@
         "percentile": 50.0
       },
       {
-        "slug": "kota-kinabalu-base",
+        "slug": "kota-kinabalu-naval-base",
         "name": "Kota Kinabalu Naval Base",
         "region": "southeast_asia",
         "type": "institutional_compound",
@@ -5058,7 +5058,7 @@
         "percentile": 54.17
       },
       {
-        "slug": "atto",
+        "slug": "amazon-tall-tower-observatory",
         "name": "Amazon Tall Tower Observatory",
         "region": "south_america",
         "type": "institutional_compound",
@@ -5068,7 +5068,7 @@
         "percentile": 58.33
       },
       {
-        "slug": "guantanamo",
+        "slug": "guantanamo-bay",
         "name": "Guantanamo Bay",
         "region": "north_america",
         "type": "institutional_compound",
@@ -5088,7 +5088,7 @@
         "percentile": 66.67
       },
       {
-        "slug": "geilenkirchen",
+        "slug": "nato-airbase-geilenkirchen",
         "name": "NATO Airbase Geilenkirchen",
         "region": "western_europe",
         "type": "institutional_compound",
@@ -5098,7 +5098,7 @@
         "percentile": 70.83
       },
       {
-        "slug": "tambopata",
+        "slug": "tambopata-research-center",
         "name": "Tambopata Research Center",
         "region": "south_america",
         "type": "institutional_compound",
@@ -5108,7 +5108,7 @@
         "percentile": 75.0
       },
       {
-        "slug": "olenya-airbase",
+        "slug": "olenya-air-base",
         "name": "Olenya Air Base",
         "region": "eastern_europe",
         "type": "institutional_compound",
@@ -5118,7 +5118,7 @@
         "percentile": 79.17
       },
       {
-        "slug": "ryongsong-compound",
+        "slug": "ryongsong-residence-compound",
         "name": "Ryongsong Residence Compound",
         "region": "east_asia",
         "type": "institutional_compound",
@@ -5128,7 +5128,7 @@
         "percentile": 83.33
       },
       {
-        "slug": "unmiss-juba",
+        "slug": "un-base-in-juba-unmiss-hq-south-sudan",
         "name": "UN Base in Juba (UNMISS HQ, South Sudan)",
         "region": "africa",
         "type": "institutional_compound",
@@ -5138,7 +5138,7 @@
         "percentile": 87.5
       },
       {
-        "slug": "chernobyl",
+        "slug": "chernobyl-exclusion-zone-facility",
         "name": "Chernobyl Exclusion Zone Facility",
         "region": "eastern_europe",
         "type": "institutional_compound",
@@ -5158,7 +5158,7 @@
         "percentile": 95.83
       },
       {
-        "slug": "ghawar-processing",
+        "slug": "ghawar-oil-field-central-processing",
         "name": "Ghawar Oil Field Central Processing",
         "region": "middle_east",
         "type": "institutional_compound",
@@ -5170,7 +5170,7 @@
     ],
     "isolated_landmass": [
       {
-        "slug": "andaman",
+        "slug": "andaman-islands",
         "name": "Andaman Islands",
         "region": "south_asia",
         "type": "isolated_landmass",
@@ -5190,7 +5190,7 @@
         "percentile": 8.33
       },
       {
-        "slug": "chiloe",
+        "slug": "chiloe-island",
         "name": "Chilo\u00e9 Island",
         "region": "south_america",
         "type": "isolated_landmass",
@@ -5220,7 +5220,7 @@
         "percentile": 20.83
       },
       {
-        "slug": "faroe",
+        "slug": "faroe-islands",
         "name": "Faroe Islands",
         "region": "eastern_europe",
         "type": "isolated_landmass",
@@ -5230,7 +5230,7 @@
         "percentile": 25.0
       },
       {
-        "slug": "socotra",
+        "slug": "socotra-island",
         "name": "Socotra Island",
         "region": "middle_east",
         "type": "isolated_landmass",
@@ -5240,7 +5240,7 @@
         "percentile": 29.17
       },
       {
-        "slug": "fiji",
+        "slug": "fiji-islands",
         "name": "Fiji Islands",
         "region": "oceania",
         "type": "isolated_landmass",
@@ -5260,7 +5260,7 @@
         "percentile": 37.5
       },
       {
-        "slug": "kodiak",
+        "slug": "kodiak-island",
         "name": "Kodiak Island",
         "region": "north_america",
         "type": "isolated_landmass",
@@ -5270,7 +5270,7 @@
         "percentile": 41.67
       },
       {
-        "slug": "zanzibar",
+        "slug": "zanzibar-island",
         "name": "Zanzibar Island",
         "region": "africa",
         "type": "isolated_landmass",
@@ -5290,7 +5290,7 @@
         "percentile": 50.0
       },
       {
-        "slug": "jeju",
+        "slug": "jeju-island",
         "name": "Jeju Island",
         "region": "east_asia",
         "type": "isolated_landmass",
@@ -5300,7 +5300,7 @@
         "percentile": 54.17
       },
       {
-        "slug": "galapagos",
+        "slug": "galapagos-islands",
         "name": "Gal\u00e1pagos Islands",
         "region": "south_america",
         "type": "isolated_landmass",
@@ -5330,7 +5330,7 @@
         "percentile": 66.67
       },
       {
-        "slug": "qeshm",
+        "slug": "qeshm-island",
         "name": "Qeshm Island",
         "region": "middle_east",
         "type": "isolated_landmass",
@@ -5370,7 +5370,7 @@
         "percentile": 83.33
       },
       {
-        "slug": "komodo",
+        "slug": "komodo-island",
         "name": "Komodo Island",
         "region": "southeast_asia",
         "type": "isolated_landmass",
@@ -5412,7 +5412,7 @@
     ],
     "landmark_structure": [
       {
-        "slug": "hormuz-light",
+        "slug": "lighthouse-hormuz",
         "name": "Lighthouse Hormuz",
         "region": "middle_east",
         "type": "landmark_structure",
@@ -5422,7 +5422,7 @@
         "percentile": 4.17
       },
       {
-        "slug": "phuquoc-light",
+        "slug": "phu-quoc-lighthouse",
         "name": "Phu Quoc Lighthouse",
         "region": "southeast_asia",
         "type": "landmark_structure",
@@ -5432,7 +5432,7 @@
         "percentile": 8.33
       },
       {
-        "slug": "cape-point",
+        "slug": "cape-point-lighthouse",
         "name": "Cape Point Lighthouse",
         "region": "africa",
         "type": "landmark_structure",
@@ -5442,7 +5442,7 @@
         "percentile": 12.5
       },
       {
-        "slug": "fastnet",
+        "slug": "fastnet-lighthouse",
         "name": "Fastnet Lighthouse",
         "region": "uk_ireland",
         "type": "landmark_structure",
@@ -5452,7 +5452,7 @@
         "percentile": 16.67
       },
       {
-        "slug": "antarctic-light",
+        "slug": "antarctic-lighthouse",
         "name": "Antarctic Lighthouse",
         "region": "polar_extreme",
         "type": "landmark_structure",
@@ -5462,7 +5462,7 @@
         "percentile": 20.83
       },
       {
-        "slug": "djenne",
+        "slug": "great-mosque-of-djenne",
         "name": "Great Mosque of Djenn\u00e9",
         "region": "africa",
         "type": "landmark_structure",
@@ -5472,7 +5472,7 @@
         "percentile": 25.0
       },
       {
-        "slug": "polar-tower",
+        "slug": "polar-observation-tower",
         "name": "Polar Observation Tower",
         "region": "polar_extreme",
         "type": "landmark_structure",
@@ -5482,7 +5482,7 @@
         "percentile": 29.17
       },
       {
-        "slug": "kizhi",
+        "slug": "kizhi-pogost",
         "name": "Kizhi Pogost",
         "region": "eastern_europe",
         "type": "landmark_structure",
@@ -5492,7 +5492,7 @@
         "percentile": 33.33
       },
       {
-        "slug": "spinnaker",
+        "slug": "spinnaker-tower",
         "name": "Spinnaker Tower",
         "region": "uk_ireland",
         "type": "landmark_structure",
@@ -5502,7 +5502,7 @@
         "percentile": 37.5
       },
       {
-        "slug": "creach",
+        "slug": "phare-du-creach",
         "name": "Phare du Cr\u00e9ac'h",
         "region": "western_europe",
         "type": "landmark_structure",
@@ -5512,7 +5512,7 @@
         "percentile": 41.67
       },
       {
-        "slug": "cape-hatteras",
+        "slug": "cape-hatteras-lighthouse",
         "name": "Cape Hatteras Lighthouse",
         "region": "north_america",
         "type": "landmark_structure",
@@ -5522,7 +5522,7 @@
         "percentile": 45.83
       },
       {
-        "slug": "byron-light",
+        "slug": "cape-byron-lighthouse",
         "name": "Cape Byron Lighthouse",
         "region": "oceania",
         "type": "landmark_structure",
@@ -5532,7 +5532,7 @@
         "percentile": 50.0
       },
       {
-        "slug": "leshan",
+        "slug": "great-buddha-leshan",
         "name": "Great Buddha Leshan",
         "region": "east_asia",
         "type": "landmark_structure",
@@ -5542,7 +5542,7 @@
         "percentile": 54.17
       },
       {
-        "slug": "mahabalipuram",
+        "slug": "lighthouse-mahabalipuram",
         "name": "Lighthouse Mahabalipuram",
         "region": "south_asia",
         "type": "landmark_structure",
@@ -5552,7 +5552,7 @@
         "percentile": 58.33
       },
       {
-        "slug": "ostankino",
+        "slug": "ostankino-tower",
         "name": "Ostankino Tower",
         "region": "eastern_europe",
         "type": "landmark_structure",
@@ -5562,7 +5562,7 @@
         "percentile": 62.5
       },
       {
-        "slug": "burj",
+        "slug": "burj-khalifa",
         "name": "Burj Khalifa",
         "region": "middle_east",
         "type": "landmark_structure",
@@ -5572,7 +5572,7 @@
         "percentile": 66.67
       },
       {
-        "slug": "punta-lighthouse",
+        "slug": "lighthouse-punta-del-este",
         "name": "Lighthouse Punta Del Este",
         "region": "south_america",
         "type": "landmark_structure",
@@ -5592,7 +5592,7 @@
         "percentile": 75.0
       },
       {
-        "slug": "harbour-bridge",
+        "slug": "sydney-harbour-bridge",
         "name": "Sydney Harbour Bridge",
         "region": "oceania",
         "type": "landmark_structure",
@@ -5612,7 +5612,7 @@
         "percentile": 83.33
       },
       {
-        "slug": "petronas",
+        "slug": "petronas-towers",
         "name": "Petronas Towers",
         "region": "southeast_asia",
         "type": "landmark_structure",
@@ -5622,7 +5622,7 @@
         "percentile": 87.5
       },
       {
-        "slug": "qutub",
+        "slug": "qutub-minar",
         "name": "Qutub Minar",
         "region": "south_asia",
         "type": "landmark_structure",
@@ -5632,7 +5632,7 @@
         "percentile": 91.67
       },
       {
-        "slug": "christ-redeemer",
+        "slug": "christ-the-redeemer",
         "name": "Christ the Redeemer",
         "region": "south_america",
         "type": "landmark_structure",
@@ -5642,7 +5642,7 @@
         "percentile": 95.83
       },
       {
-        "slug": "eiffel",
+        "slug": "eiffel-tower",
         "name": "Eiffel Tower",
         "region": "western_europe",
         "type": "landmark_structure",
@@ -5654,7 +5654,7 @@
     ],
     "polar_extreme": [
       {
-        "slug": "ice-shelf",
+        "slug": "crevasse-field-glacier",
         "name": "Crevasse Field Glacier",
         "region": "polar_extreme",
         "type": "polar_extreme",
@@ -5666,7 +5666,7 @@
     ],
     "remote_settlement": [
       {
-        "slug": "eigg",
+        "slug": "isle-of-eigg-village",
         "name": "Isle of Eigg Village",
         "region": "uk_ireland",
         "type": "remote_settlement",
@@ -5676,7 +5676,7 @@
         "percentile": 4.55
       },
       {
-        "slug": "cusco-highlands",
+        "slug": "cusco-highlands-village",
         "name": "Cusco Highlands Village",
         "region": "south_america",
         "type": "remote_settlement",
@@ -5686,7 +5686,7 @@
         "percentile": 9.09
       },
       {
-        "slug": "coober-pedy",
+        "slug": "coober-pedy-underground-settlement",
         "name": "Coober Pedy Underground Settlement",
         "region": "oceania",
         "type": "remote_settlement",
@@ -5766,7 +5766,7 @@
         "percentile": 45.45
       },
       {
-        "slug": "kibber",
+        "slug": "kibber-village",
         "name": "Kibber Village",
         "region": "south_asia",
         "type": "remote_settlement",
@@ -5796,7 +5796,7 @@
         "percentile": 59.09
       },
       {
-        "slug": "patagonia-village",
+        "slug": "patagonian-village",
         "name": "Patagonian Village",
         "region": "south_america",
         "type": "remote_settlement",
@@ -5836,7 +5836,7 @@
         "percentile": 77.27
       },
       {
-        "slug": "shaxi",
+        "slug": "shaxi-ancient-town",
         "name": "Shaxi Ancient Town",
         "region": "east_asia",
         "type": "remote_settlement",
@@ -5846,7 +5846,7 @@
         "percentile": 81.82
       },
       {
-        "slug": "kuttanad",
+        "slug": "kuttanad-village",
         "name": "Kuttanad Village",
         "region": "south_asia",
         "type": "remote_settlement",
@@ -5888,7 +5888,7 @@
     ],
     "subterranean": [
       {
-        "slug": "cheyenne",
+        "slug": "cheyenne-mountain-complex",
         "name": "Cheyenne Mountain Complex",
         "region": "north_america",
         "type": "subterranean",
@@ -5898,7 +5898,7 @@
         "percentile": 4.55
       },
       {
-        "slug": "matmata",
+        "slug": "matmata-underground-dwellings",
         "name": "Matmata Underground Dwellings",
         "region": "africa",
         "type": "subterranean",
@@ -5918,7 +5918,7 @@
         "percentile": 13.64
       },
       {
-        "slug": "derinkuyu",
+        "slug": "derinkuyu-underground-city",
         "name": "Derinkuyu Underground City",
         "region": "eastern_europe",
         "type": "subterranean",
@@ -5928,7 +5928,7 @@
         "percentile": 18.18
       },
       {
-        "slug": "kargil-bunkers",
+        "slug": "kargil-war-bunkers",
         "name": "Kargil War Bunkers",
         "region": "south_asia",
         "type": "subterranean",
@@ -5938,7 +5938,7 @@
         "percentile": 22.73
       },
       {
-        "slug": "iwo-jima-bunkers",
+        "slug": "iwo-jima-underground-bunkers",
         "name": "Iwo Jima Underground Bunkers",
         "region": "east_asia",
         "type": "subterranean",
@@ -5948,7 +5948,7 @@
         "percentile": 27.27
       },
       {
-        "slug": "titan-silo",
+        "slug": "titan-missile-museum-silo-571-7",
         "name": "Titan Missile Museum (Silo 571-7)",
         "region": "north_america",
         "type": "subterranean",
@@ -5958,7 +5958,7 @@
         "percentile": 31.82
       },
       {
-        "slug": "olavsvern",
+        "slug": "olavsvern-naval-base",
         "name": "Olavsvern Naval Base",
         "region": "polar_extreme",
         "type": "subterranean",
@@ -5978,7 +5978,7 @@
         "percentile": 40.91
       },
       {
-        "slug": "cu-chi",
+        "slug": "vietnam-tunnel-systems",
         "name": "Vietnam Tunnel Systems",
         "region": "southeast_asia",
         "type": "subterranean",
@@ -5988,7 +5988,7 @@
         "percentile": 45.45
       },
       {
-        "slug": "beijing-underground",
+        "slug": "beijing-underground-city",
         "name": "Beijing Underground City",
         "region": "east_asia",
         "type": "subterranean",
@@ -5998,7 +5998,7 @@
         "percentile": 50.0
       },
       {
-        "slug": "maginot-line",
+        "slug": "maginot-line-bunkers",
         "name": "Maginot Line Bunkers",
         "region": "western_europe",
         "type": "subterranean",
@@ -6008,7 +6008,7 @@
         "percentile": 54.55
       },
       {
-        "slug": "camp-century",
+        "slug": "camp-century-ice-tunnels",
         "name": "Camp Century Ice Tunnels",
         "region": "polar_extreme",
         "type": "subterranean",
@@ -6018,7 +6018,7 @@
         "percentile": 59.09
       },
       {
-        "slug": "waw-namus",
+        "slug": "waw-an-namus-cave-system",
         "name": "Waw an Namus Cave System",
         "region": "africa",
         "type": "subterranean",
@@ -6028,7 +6028,7 @@
         "percentile": 63.64
       },
       {
-        "slug": "ajanta",
+        "slug": "ajanta-caves",
         "name": "Ajanta Caves",
         "region": "south_asia",
         "type": "subterranean",
@@ -6048,7 +6048,7 @@
         "percentile": 72.73
       },
       {
-        "slug": "cheddar-gorge",
+        "slug": "cheddar-gorge-caves",
         "name": "Cheddar Gorge Caves",
         "region": "uk_ireland",
         "type": "subterranean",
@@ -6058,7 +6058,7 @@
         "percentile": 77.27
       },
       {
-        "slug": "naours",
+        "slug": "naours-underground-city",
         "name": "Naours Underground City",
         "region": "western_europe",
         "type": "subterranean",
@@ -6068,7 +6068,7 @@
         "percentile": 81.82
       },
       {
-        "slug": "potosi-mine",
+        "slug": "potosi-silver-mine-cerro-rico",
         "name": "Potos\u00ed Silver Mine (Cerro Rico)",
         "region": "south_america",
         "type": "subterranean",
@@ -6078,7 +6078,7 @@
         "percentile": 86.36
       },
       {
-        "slug": "gaza-tunnels",
+        "slug": "gaza-tunnel-network",
         "name": "Gaza Tunnel Network",
         "region": "middle_east",
         "type": "subterranean",
@@ -6088,7 +6088,7 @@
         "percentile": 90.91
       },
       {
-        "slug": "north-head-bunker",
+        "slug": "north-head-gun-emplacements",
         "name": "North Head Gun Emplacements",
         "region": "oceania",
         "type": "subterranean",
@@ -6130,7 +6130,7 @@
         "percentile": 8.33
       },
       {
-        "slug": "mombasa",
+        "slug": "mombasa-port",
         "name": "Mombasa Port",
         "region": "africa",
         "type": "transit_hub",
@@ -6140,7 +6140,7 @@
         "percentile": 12.5
       },
       {
-        "slug": "murmansk",
+        "slug": "murmansk-port",
         "name": "Murmansk Port",
         "region": "eastern_europe",
         "type": "transit_hub",
@@ -6160,7 +6160,7 @@
         "percentile": 20.83
       },
       {
-        "slug": "murmansk-port",
+        "slug": "port-of-murmansk",
         "name": "Port of Murmansk",
         "region": "polar_extreme",
         "type": "transit_hub",
@@ -6200,7 +6200,7 @@
         "percentile": 37.5
       },
       {
-        "slug": "phoenix-airfield",
+        "slug": "phoenix-airfield-mcmurdo",
         "name": "Phoenix Airfield (McMurdo)",
         "region": "polar_extreme",
         "type": "transit_hub",
@@ -6210,7 +6210,7 @@
         "percentile": 41.67
       },
       {
-        "slug": "jebel-ali",
+        "slug": "jebel-ali-port",
         "name": "Jebel Ali Port",
         "region": "middle_east",
         "type": "transit_hub",
@@ -6230,7 +6230,7 @@
         "percentile": 50.0
       },
       {
-        "slug": "corwith-yard",
+        "slug": "corwith-intermodal-yard",
         "name": "Corwith Intermodal Yard",
         "region": "north_america",
         "type": "transit_hub",
@@ -6250,7 +6250,7 @@
         "percentile": 58.33
       },
       {
-        "slug": "panama-canal",
+        "slug": "panama-canal-zone",
         "name": "Panama Canal Zone",
         "region": "south_america",
         "type": "transit_hub",
@@ -6290,7 +6290,7 @@
         "percentile": 75.0
       },
       {
-        "slug": "cdg",
+        "slug": "charles-de-gaulle-airport",
         "name": "Charles de Gaulle Airport",
         "region": "western_europe",
         "type": "transit_hub",
@@ -6310,7 +6310,7 @@
         "percentile": 83.33
       },
       {
-        "slug": "heathrow",
+        "slug": "heathrow-airport",
         "name": "Heathrow Airport",
         "region": "uk_ireland",
         "type": "transit_hub",
@@ -6320,7 +6320,7 @@
         "percentile": 87.5
       },
       {
-        "slug": "schiphol",
+        "slug": "schiphol-airport",
         "name": "Schiphol Airport",
         "region": "western_europe",
         "type": "transit_hub",
@@ -6340,7 +6340,7 @@
         "percentile": 95.83
       },
       {
-        "slug": "lax",
+        "slug": "lax-airport",
         "name": "LAX Airport",
         "region": "north_america",
         "type": "transit_hub",
@@ -6365,7 +6365,7 @@
           "percentile": 5.56
         },
         {
-          "slug": "simien",
+          "slug": "simien-mountains",
           "name": "Simien Mountains",
           "region": "africa",
           "type": "elevated_stronghold",
@@ -6375,7 +6375,7 @@
           "percentile": 11.11
         },
         {
-          "slug": "matmata",
+          "slug": "matmata-underground-dwellings",
           "name": "Matmata Underground Dwellings",
           "region": "africa",
           "type": "subterranean",
@@ -6387,7 +6387,7 @@
       ],
       "east_asia": [
         {
-          "slug": "jeju",
+          "slug": "jeju-island",
           "name": "Jeju Island",
           "region": "east_asia",
           "type": "isolated_landmass",
@@ -6397,7 +6397,7 @@
           "percentile": 5.56
         },
         {
-          "slug": "huashan",
+          "slug": "mount-huashan",
           "name": "Mount Huashan",
           "region": "east_asia",
           "type": "elevated_stronghold",
@@ -6407,7 +6407,7 @@
           "percentile": 11.11
         },
         {
-          "slug": "great-wall",
+          "slug": "great-wall-fortress-sections",
           "name": "Great Wall Fortress Sections",
           "region": "east_asia",
           "type": "fortified_structure",
@@ -6419,7 +6419,7 @@
       ],
       "eastern_europe": [
         {
-          "slug": "faroe",
+          "slug": "faroe-islands",
           "name": "Faroe Islands",
           "region": "eastern_europe",
           "type": "isolated_landmass",
@@ -6429,7 +6429,7 @@
           "percentile": 5.88
         },
         {
-          "slug": "derinkuyu",
+          "slug": "derinkuyu-underground-city",
           "name": "Derinkuyu Underground City",
           "region": "eastern_europe",
           "type": "subterranean",
@@ -6451,7 +6451,7 @@
       ],
       "middle_east": [
         {
-          "slug": "socotra",
+          "slug": "socotra-island",
           "name": "Socotra Island",
           "region": "middle_east",
           "type": "isolated_landmass",
@@ -6461,7 +6461,7 @@
           "percentile": 5.88
         },
         {
-          "slug": "krak",
+          "slug": "krak-des-chevaliers",
           "name": "Krak des Chevaliers",
           "region": "middle_east",
           "type": "fortified_structure",
@@ -6471,7 +6471,7 @@
           "percentile": 11.76
         },
         {
-          "slug": "cappadocia",
+          "slug": "cappadocia-highlands",
           "name": "Cappadocia Highlands",
           "region": "middle_east",
           "type": "elevated_stronghold",
@@ -6483,7 +6483,7 @@
       ],
       "north_america": [
         {
-          "slug": "cheyenne",
+          "slug": "cheyenne-mountain-complex",
           "name": "Cheyenne Mountain Complex",
           "region": "north_america",
           "type": "subterranean",
@@ -6493,7 +6493,7 @@
           "percentile": 5.56
         },
         {
-          "slug": "kodiak",
+          "slug": "kodiak-island",
           "name": "Kodiak Island",
           "region": "north_america",
           "type": "isolated_landmass",
@@ -6525,7 +6525,7 @@
           "percentile": 5.88
         },
         {
-          "slug": "fiji",
+          "slug": "fiji-islands",
           "name": "Fiji Islands",
           "region": "oceania",
           "type": "isolated_landmass",
@@ -6535,7 +6535,7 @@
           "percentile": 11.76
         },
         {
-          "slug": "coober-pedy",
+          "slug": "coober-pedy-underground-settlement",
           "name": "Coober Pedy Underground Settlement",
           "region": "oceania",
           "type": "remote_settlement",
@@ -6557,7 +6557,7 @@
           "percentile": 6.67
         },
         {
-          "slug": "olavsvern",
+          "slug": "olavsvern-naval-base",
           "name": "Olavsvern Naval Base",
           "region": "polar_extreme",
           "type": "subterranean",
@@ -6567,7 +6567,7 @@
           "percentile": 13.33
         },
         {
-          "slug": "nagurskoye",
+          "slug": "nagurskoye-air-base",
           "name": "Nagurskoye Air Base",
           "region": "polar_extreme",
           "type": "institutional_compound",
@@ -6579,7 +6579,7 @@
       ],
       "south_america": [
         {
-          "slug": "chiloe",
+          "slug": "chiloe-island",
           "name": "Chilo\u00e9 Island",
           "region": "south_america",
           "type": "isolated_landmass",
@@ -6589,7 +6589,7 @@
           "percentile": 5.56
         },
         {
-          "slug": "cusco-highlands",
+          "slug": "cusco-highlands-village",
           "name": "Cusco Highlands Village",
           "region": "south_america",
           "type": "remote_settlement",
@@ -6611,7 +6611,7 @@
       ],
       "south_asia": [
         {
-          "slug": "andaman",
+          "slug": "andaman-islands",
           "name": "Andaman Islands",
           "region": "south_asia",
           "type": "isolated_landmass",
@@ -6621,7 +6621,7 @@
           "percentile": 5.56
         },
         {
-          "slug": "mehrangarh",
+          "slug": "mehrangarh-fort",
           "name": "Mehrangarh Fort",
           "region": "south_asia",
           "type": "fortified_structure",
@@ -6631,7 +6631,7 @@
           "percentile": 11.11
         },
         {
-          "slug": "rajasthan-fort",
+          "slug": "hilltop-fort-rajasthan",
           "name": "Hilltop Fort Rajasthan",
           "region": "south_asia",
           "type": "elevated_stronghold",
@@ -6653,7 +6653,7 @@
           "percentile": 5.56
         },
         {
-          "slug": "rice-terraces",
+          "slug": "rice-terrace-highlands",
           "name": "Rice Terrace Highlands",
           "region": "southeast_asia",
           "type": "elevated_stronghold",
@@ -6675,7 +6675,7 @@
       ],
       "uk_ireland": [
         {
-          "slug": "eigg",
+          "slug": "isle-of-eigg-village",
           "name": "Isle of Eigg Village",
           "region": "uk_ireland",
           "type": "remote_settlement",
@@ -6751,7 +6751,7 @@
           "percentile": 4.35
         },
         {
-          "slug": "simien",
+          "slug": "simien-mountains",
           "name": "Simien Mountains",
           "region": "africa",
           "type": "elevated_stronghold",
@@ -6761,7 +6761,7 @@
           "percentile": 8.7
         },
         {
-          "slug": "rajasthan-fort",
+          "slug": "hilltop-fort-rajasthan",
           "name": "Hilltop Fort Rajasthan",
           "region": "south_asia",
           "type": "elevated_stronghold",
@@ -6783,7 +6783,7 @@
           "percentile": 4.55
         },
         {
-          "slug": "mehrangarh",
+          "slug": "mehrangarh-fort",
           "name": "Mehrangarh Fort",
           "region": "south_asia",
           "type": "fortified_structure",
@@ -6805,7 +6805,7 @@
       ],
       "industrial_site": [
         {
-          "slug": "anna-creek",
+          "slug": "anna-creek-station",
           "name": "Anna Creek Station",
           "region": "oceania",
           "type": "industrial_site",
@@ -6825,7 +6825,7 @@
           "percentile": 8.33
         },
         {
-          "slug": "murmansk-icebreaker",
+          "slug": "murmansk-icebreaker-port",
           "name": "Murmansk Icebreaker Port",
           "region": "polar_extreme",
           "type": "industrial_site",
@@ -6847,7 +6847,7 @@
           "percentile": 4.17
         },
         {
-          "slug": "2rep-calvi",
+          "slug": "2e-rep-barracks-calvi",
           "name": "2e REP Barracks (Calvi)",
           "region": "western_europe",
           "type": "institutional_compound",
@@ -6869,7 +6869,7 @@
       ],
       "isolated_landmass": [
         {
-          "slug": "andaman",
+          "slug": "andaman-islands",
           "name": "Andaman Islands",
           "region": "south_asia",
           "type": "isolated_landmass",
@@ -6889,7 +6889,7 @@
           "percentile": 8.33
         },
         {
-          "slug": "chiloe",
+          "slug": "chiloe-island",
           "name": "Chilo\u00e9 Island",
           "region": "south_america",
           "type": "isolated_landmass",
@@ -6901,7 +6901,7 @@
       ],
       "landmark_structure": [
         {
-          "slug": "hormuz-light",
+          "slug": "lighthouse-hormuz",
           "name": "Lighthouse Hormuz",
           "region": "middle_east",
           "type": "landmark_structure",
@@ -6911,7 +6911,7 @@
           "percentile": 4.17
         },
         {
-          "slug": "phuquoc-light",
+          "slug": "phu-quoc-lighthouse",
           "name": "Phu Quoc Lighthouse",
           "region": "southeast_asia",
           "type": "landmark_structure",
@@ -6921,7 +6921,7 @@
           "percentile": 8.33
         },
         {
-          "slug": "cape-point",
+          "slug": "cape-point-lighthouse",
           "name": "Cape Point Lighthouse",
           "region": "africa",
           "type": "landmark_structure",
@@ -6933,7 +6933,7 @@
       ],
       "polar_extreme": [
         {
-          "slug": "ice-shelf",
+          "slug": "crevasse-field-glacier",
           "name": "Crevasse Field Glacier",
           "region": "polar_extreme",
           "type": "polar_extreme",
@@ -6945,7 +6945,7 @@
       ],
       "remote_settlement": [
         {
-          "slug": "eigg",
+          "slug": "isle-of-eigg-village",
           "name": "Isle of Eigg Village",
           "region": "uk_ireland",
           "type": "remote_settlement",
@@ -6955,7 +6955,7 @@
           "percentile": 4.55
         },
         {
-          "slug": "cusco-highlands",
+          "slug": "cusco-highlands-village",
           "name": "Cusco Highlands Village",
           "region": "south_america",
           "type": "remote_settlement",
@@ -6965,7 +6965,7 @@
           "percentile": 9.09
         },
         {
-          "slug": "coober-pedy",
+          "slug": "coober-pedy-underground-settlement",
           "name": "Coober Pedy Underground Settlement",
           "region": "oceania",
           "type": "remote_settlement",
@@ -6977,7 +6977,7 @@
       ],
       "subterranean": [
         {
-          "slug": "cheyenne",
+          "slug": "cheyenne-mountain-complex",
           "name": "Cheyenne Mountain Complex",
           "region": "north_america",
           "type": "subterranean",
@@ -6987,7 +6987,7 @@
           "percentile": 4.55
         },
         {
-          "slug": "matmata",
+          "slug": "matmata-underground-dwellings",
           "name": "Matmata Underground Dwellings",
           "region": "africa",
           "type": "subterranean",
@@ -7029,7 +7029,7 @@
           "percentile": 8.33
         },
         {
-          "slug": "mombasa",
+          "slug": "mombasa-port",
           "name": "Mombasa Port",
           "region": "africa",
           "type": "transit_hub",
