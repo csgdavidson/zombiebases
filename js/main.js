@@ -110,6 +110,19 @@ function updateHomepageMetadata() {
     type: 'website',
     image: `${window.seo.PRODUCTION_ORIGIN}/images/bases/placeholder.png`
   });
+
+  window.seo.setJsonLd('home-website', {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Zombie Bases',
+    url: `${window.seo.PRODUCTION_ORIGIN}/`,
+    description: 'Explore and compare real-world locations as zombie survival bases.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${window.seo.PRODUCTION_ORIGIN}/?q={search_term_string}`,
+      'query-input': 'required name=search_term_string'
+    }
+  });
 }
 
 const state = {
@@ -365,6 +378,27 @@ function updateResultCount(count) {
   elements.resultCount.textContent = hasActiveFilters
     ? `${count} ${baseLabel} found for current filters`
     : `${count} ${baseLabel} found`;
+}
+
+function updateHomepageItemListJsonLd() {
+  if (!window.seo) {
+    return;
+  }
+  const sourceList = state.filteredBases.length ? state.filteredBases : state.visibleBases;
+  const itemListElement = sourceList.slice(0, 10).map((base, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: base.name,
+    url: `${window.seo.PRODUCTION_ORIGIN}${createBaseUrl(base.slug)}`
+  }));
+
+  window.seo.setJsonLd('home-itemlist', {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Top Zombie Survival Bases',
+    description: 'Featured and top-ranked zombie survival bases on Zombie Bases.',
+    itemListElement
+  });
 }
 
 function updateActiveFilters() {
@@ -655,6 +689,7 @@ function applyFilters() {
   renderCurrentView();
   updateUrlFromState();
   updateHomepageMetadata();
+  updateHomepageItemListJsonLd();
 }
 
 function setView(nextView) {

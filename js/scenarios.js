@@ -142,6 +142,24 @@ function applyScenarioMetadata(title, description) {
   });
 }
 
+function updateScenarioItemListJsonLd(title, description, entries) {
+  if (!window.seo) {
+    return;
+  }
+  window.seo.setJsonLd('scenarios-itemlist', {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: title,
+    description,
+    itemListElement: (entries || []).map((entry, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: entry.name,
+      url: `${window.seo.PRODUCTION_ORIGIN}${createBaseUrl(entry.slug)}`
+    }))
+  });
+}
+
 function setScenario(discovery, scenarioId) {
   const scenario = discovery.scenarios?.[scenarioId];
   if (!scenario) {
@@ -152,6 +170,7 @@ function setScenario(discovery, scenarioId) {
       'Explore zombie survival scenarios to compare which bases perform best under different outbreak conditions.'
     );
     renderList([]);
+    updateScenarioItemListJsonLd('Scenario Discovery', 'Explore zombie survival scenarios to compare which bases perform best under different outbreak conditions.', []);
     return;
   }
 
@@ -159,6 +178,7 @@ function setScenario(discovery, scenarioId) {
   elements.description.textContent = scenario.description;
   applyScenarioMetadata(scenario.title, scenario.description);
   renderList(scenario.entries || []);
+  updateScenarioItemListJsonLd(scenario.title, scenario.description, scenario.entries || []);
 }
 
 function initScenario(discovery) {

@@ -90,6 +90,24 @@ function applyRankingsMetadata({ title, description, canonicalPath }) {
   });
 }
 
+function updateRankingsItemListJsonLd(title, description, entries) {
+  if (!window.seo) {
+    return;
+  }
+  window.seo.setJsonLd('rankings-itemlist', {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: title,
+    description,
+    itemListElement: (entries || []).map((entry, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: entry.name,
+      url: `${window.seo.PRODUCTION_ORIGIN}${createBaseUrl(entry.slug)}`
+    }))
+  });
+}
+
 
 function createBaseThumbnail(slug, name) {
   const image = document.createElement('img');
@@ -219,6 +237,7 @@ function configureGroupPage(mode, rankings) {
   });
   elements.status.textContent = '';
   renderList(entries, mode);
+  updateRankingsItemListJsonLd(elements.title.textContent, elements.subtitle.textContent, entries);
 
   elements.groupSelect.addEventListener('change', () => {
     const chosenGroup = elements.groupSelect.value;
@@ -235,6 +254,7 @@ function configureGroupPage(mode, rankings) {
       canonicalPath: mode === 'region' ? '/rankings-region.html' : '/rankings-type.html'
     });
     renderList(chosenEntries, mode);
+    updateRankingsItemListJsonLd(elements.title.textContent, elements.subtitle.textContent, chosenEntries);
   });
 }
 
@@ -261,6 +281,11 @@ async function initRankingsPage() {
       });
       elements.status.textContent = '';
       renderList(payload.global || [], mode);
+      updateRankingsItemListJsonLd(
+        'Best Overall Zombie Survival Bases',
+        'Compare the best zombie survival bases overall by score, defensibility, isolation, and sustainability.',
+        payload.global || []
+      );
       return;
     }
 

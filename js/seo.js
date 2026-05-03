@@ -109,6 +109,89 @@
     return `${(cutoff > 100 ? clipped.slice(0, cutoff) : clipped).trim()}…`;
   }
 
+  function sanitizeStructuredData(value) {
+    if (Array.isArray(value)) {
+      const sanitizedArray = value
+        .map((item) => sanitizeStructuredData(item))
+        .filter((item) => item !== undefined);
+      return sanitizedArray.length ? sanitizedArray : undefined;
+    }
+
+    if (value && typeof value === 'object') {
+      const sanitizedObject = {};
+      Object.entries(value).forEach(([key, nestedValue]) => {
+        const sanitizedValue = sanitizeStructuredData(nestedValue);
+        if (sanitizedValue !== undefined) {
+          sanitizedObject[key] = sanitizedValue;
+        }
+      });
+      return Object.keys(sanitizedObject).length ? sanitizedObject : undefined;
+    }
+
+    if (typeof value === 'string') {
+      const trimmed = value.trim();
+      return trimmed ? trimmed : undefined;
+    }
+
+    if (Number.isFinite(value) || typeof value === 'boolean') {
+      return value;
+    }
+
+    return undefined;
+  }
+
+  function stableStringify(value) {
+    if (Array.isArray(value)) {
+      return `[${value.map((item) => stableStringify(item)).join(',')}]`;
+    }
+    if (value && typeof value === 'object') {
+      const keys = Object.keys(value).sort();
+      const entries = keys.map((key) => `${JSON.stringify(key)}:${stableStringify(value[key])}`);
+      return `{${entries.join(',')}}`;
+    }
+    return JSON.stringify(value);
+  }
+
+  function setJsonLd(key, schemaObject) {
+    const normalizedKey = cleanText(key);
+    if (!normalizedKey || !schemaObject || typeof schemaObject !== 'object') {
+      return;
+    }
+
+    const sanitized = sanitizeStructuredData(schemaObject);
+    if (!sanitized || typeof sanitized !== 'object') {
+      return;
+    }
+
+    const nextPayload = `${JSON.stringify(sanitized, null, 2)}\n`;
+    const nextHash = stableStringify(sanitized);
+    const scriptSelector = `script[type="application/ld+json"][data-zb-jsonld-key="${normalizedKey}"]`;
+    let script = document.head.querySelector(scriptSelector);
+
+    if (!script) {
+      script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.setAttribute('data-zb-jsonld-key', normalizedKey);
+      document.head.appendChild(script);
+    }
+
+    const duplicateCandidates = document.head.querySelectorAll('script[type="application/ld+json"]');
+    duplicateCandidates.forEach((candidate) => {
+      if (candidate === script) {
+        return;
+      }
+      const candidateKey = cleanText(candidate.getAttribute('data-zb-jsonld-key'));
+      if (candidateKey === normalizedKey) {
+        candidate.remove();
+      }
+    });
+
+    if (script.getAttribute('data-zb-jsonld-hash') !== nextHash || script.textContent !== nextPayload) {
+      script.textContent = nextPayload;
+      script.setAttribute('data-zb-jsonld-hash', nextHash);
+    }
+  }
+
   window.seo = {
     PRODUCTION_ORIGIN,
     BRAND_NAME,
@@ -118,6 +201,7 @@
     applyPageMetadata,
     applySocialMetadata,
     normalizeImageUrl,
-    truncateDescription
+    truncateDescription,
+    setJsonLd
   };
 })();
