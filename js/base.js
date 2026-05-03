@@ -4,7 +4,6 @@ const STATS_URL = './data/base-stats.json';
 const RANKINGS_URL = './data/rankings.json';
 const DISCOVERY_URL = './data/discovery.json';
 const HERO_IMAGE_FALLBACK_URL = '/images/bases/placeholder.png';
-const MAPBOX_PUBLIC_TOKEN = '';
 
 const LABELS = {
   type: {
@@ -78,9 +77,7 @@ const elements = {
   survivalProfileSection: document.getElementById('survival-profile-section'),
   survivalTimelineCards: document.getElementById('survival-timeline-cards'),
   realityCheckRow: document.getElementById('base-reality-check-row'),
-  realityCheckText: document.getElementById('base-reality-check'),
-  mapSection: document.getElementById('base-map-section'),
-  mapImage: document.getElementById('base-map-image')
+  realityCheckText: document.getElementById('base-reality-check')
 };
 
 const slugHelper = window.baseSlugHelper;
@@ -545,45 +542,6 @@ function renderUseCaseAndRisk(base) {
   }
 }
 
-
-function getBaseMapUrl(base) {
-  if (!MAPBOX_PUBLIC_TOKEN) return '';
-  if (!Number.isFinite(base.lat) || !Number.isFinite(base.long)) return '';
-
-  const longitude = base.long;
-  const latitude = base.lat;
-
-  return `https://api.mapbox.com/styles/v1/mapbox/dark-v11/static/pin-s+ff6b35(${longitude},${latitude})/${longitude},${latitude},7/1200x600@2x?access_token=${MAPBOX_PUBLIC_TOKEN}`;
-}
-
-function renderBaseMap(base) {
-  const mapSection = elements.mapSection;
-  const mapImage = elements.mapImage;
-
-  if (!mapSection || !mapImage) {
-    return;
-  }
-
-  const mapUrl = getBaseMapUrl(base);
-
-  if (!mapUrl) {
-    mapImage.removeAttribute('src');
-    mapImage.alt = '';
-    mapSection.hidden = true;
-    return;
-  }
-
-  mapImage.onerror = () => {
-    mapImage.onerror = null;
-    mapImage.removeAttribute('src');
-    mapImage.alt = '';
-    mapSection.hidden = true;
-  };
-
-  mapImage.src = mapUrl;
-  mapImage.alt = `Map showing location of ${base.name}`;
-  mapSection.hidden = false;
-}
 
 function renderSurvivalProfile(base) {
   const profile = getSurvivalProfile(base);
@@ -1074,7 +1032,6 @@ function showBase(base, bases, params, stats, rankings, discovery) {
   renderScore(base);
   renderRankingPosition(base, rankings);
   renderComparison(base, stats);
-  renderBaseMap(base);
   renderSurvivalProfile(base);
   renderRealityCheck(base);
   renderSimilarBases(base, bases, discovery, params);
