@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASES_PATH = ROOT / "data" / "bases-index.json"
 PRODUCTION_ORIGIN = "https://zombiebases.com"
-DESCRIPTION_LIMIT = 170
+DESCRIPTION_LIMIT = 155
 
 
 def _clean_whitespace(text: str) -> str:
@@ -45,8 +45,9 @@ def _set_or_replace_tag(html: str, selector_pattern: str, replacement: str) -> s
 def _sync_slug_page(page_path: Path, name: str, slug: str, summary: str) -> bool:
     source = page_path.read_text(encoding="utf-8")
 
-    title = f"{name} | Zombie Survival Analysis"
-    description = _trim_description(summary)
+    title = f"{name} Survival Base Analysis | Zombie Bases"
+    description_template = f"{name} survival base analysis: evaluate strengths, weaknesses, defensibility, isolation, and long-term viability for real-world survival planning."
+    description = _trim_description(description_template)
     canonical = f"{PRODUCTION_ORIGIN}/{slug}/"
     image = f"{PRODUCTION_ORIGIN}/images/bases/{slug}.png"
 

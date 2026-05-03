@@ -119,22 +119,23 @@ function renderList(entries) {
   });
 }
 
-function applyScenarioMetadata(title, description) {
+function applyScenarioMetadata(scenarioName) {
   if (!window.seo) {
     return;
   }
 
-  const normalizedTitle = title || 'Scenario discovery';
-  const normalizedDescription = description || 'Choose a scenario to explore ranked bases.';
+  const normalizedScenario = scenarioName || 'Scenario';
+  const normalizedTitle = `Best ${normalizedScenario} Survival Bases | Zombie Bases`;
+  const normalizedDescription = `Explore the best bases for ${normalizedScenario} survival. See which locations perform strongest across short-term, long-term, and high-risk scenarios.`;
 
   window.seo.applyPageMetadata({
-    title: `${normalizedTitle} | Zombie Bases`,
+    title: normalizedTitle,
     description: normalizedDescription,
     canonicalPath: '/scenarios.html'
   });
 
   window.seo.applySocialMetadata({
-    title: `${normalizedTitle} | Zombie Bases`,
+    title: normalizedTitle,
     description: normalizedDescription,
     url: `${window.seo.PRODUCTION_ORIGIN}/scenarios.html`,
     type: 'website',
@@ -165,10 +166,7 @@ function setScenario(discovery, scenarioId) {
   if (!scenario) {
     elements.title.textContent = 'Scenario discovery';
     elements.description.textContent = 'Choose a scenario to explore ranked bases.';
-    applyScenarioMetadata(
-      'Scenario Discovery',
-      'Explore zombie survival scenarios to compare which bases perform best under different outbreak conditions.'
-    );
+    applyScenarioMetadata('Scenario');
     renderList([]);
     updateScenarioItemListJsonLd('Scenario Discovery', 'Explore zombie survival scenarios to compare which bases perform best under different outbreak conditions.', []);
     return;
@@ -176,7 +174,7 @@ function setScenario(discovery, scenarioId) {
 
   elements.title.textContent = scenario.title;
   elements.description.textContent = scenario.description;
-  applyScenarioMetadata(scenario.title, scenario.description);
+  applyScenarioMetadata(scenario.title);
   renderList(scenario.entries || []);
   updateScenarioItemListJsonLd(scenario.title, scenario.description, scenario.entries || []);
 }
