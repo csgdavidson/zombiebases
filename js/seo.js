@@ -3,6 +3,7 @@
   const BRAND_NAME = 'Zombie Bases';
   const DEFAULT_TITLE = 'Zombie Bases | Survival Base Directory';
   const DEFAULT_DESCRIPTION = 'Explore zombie survival base locations by region and type, with list and map views for quick comparison.';
+  const DEFAULT_IMAGE = `${PRODUCTION_ORIGIN}/images/bases/placeholder.png`;
 
   function cleanText(value) {
     return typeof value === 'string' ? value.trim() : '';
@@ -28,6 +29,22 @@
     return link;
   }
 
+  function ensureMetaTag(selector, attributes) {
+    let tag = document.querySelector(selector);
+    if (!tag) {
+      tag = document.createElement('meta');
+      document.head.appendChild(tag);
+    }
+
+    Object.entries(attributes).forEach(([key, value]) => {
+      if (value !== undefined && value !== null) {
+        tag.setAttribute(key, value);
+      }
+    });
+
+    return tag;
+  }
+
   function buildCanonicalUrl(pathname, params = null) {
     const url = new URL(PRODUCTION_ORIGIN);
     url.pathname = pathname;
@@ -43,6 +60,42 @@
     if (canonicalPath) {
       ensureCanonical().setAttribute('href', buildCanonicalUrl(canonicalPath, canonicalParams));
     }
+  }
+
+  function normalizeImageUrl(imageUrl) {
+    const value = cleanText(imageUrl);
+    if (!value) {
+      return DEFAULT_IMAGE;
+    }
+
+    if (value.startsWith('http://') || value.startsWith('https://')) {
+      return value;
+    }
+
+    if (value.startsWith('/')) {
+      return `${PRODUCTION_ORIGIN}${value}`;
+    }
+
+    return `${PRODUCTION_ORIGIN}/${value}`;
+  }
+
+  function applySocialMetadata({ title, description, url, type = 'website', image }) {
+    const normalizedTitle = cleanText(title) || DEFAULT_TITLE;
+    const normalizedDescription = cleanText(description) || DEFAULT_DESCRIPTION;
+    const normalizedImage = normalizeImageUrl(image);
+
+    ensureMetaTag('meta[property="og:title"]', { property: 'og:title', content: normalizedTitle });
+    ensureMetaTag('meta[property="og:description"]', { property: 'og:description', content: normalizedDescription });
+    if (cleanText(url)) {
+      ensureMetaTag('meta[property="og:url"]', { property: 'og:url', content: cleanText(url) });
+    }
+    ensureMetaTag('meta[property="og:type"]', { property: 'og:type', content: cleanText(type) || 'website' });
+    ensureMetaTag('meta[property="og:image"]', { property: 'og:image', content: normalizedImage });
+
+    ensureMetaTag('meta[name="twitter:card"]', { name: 'twitter:card', content: 'summary_large_image' });
+    ensureMetaTag('meta[name="twitter:title"]', { name: 'twitter:title', content: normalizedTitle });
+    ensureMetaTag('meta[name="twitter:description"]', { name: 'twitter:description', content: normalizedDescription });
+    ensureMetaTag('meta[name="twitter:image"]', { name: 'twitter:image', content: normalizedImage });
   }
 
   function truncateDescription(value, maxLength = 160) {
@@ -61,7 +114,10 @@
     BRAND_NAME,
     DEFAULT_TITLE,
     DEFAULT_DESCRIPTION,
+    DEFAULT_IMAGE,
     applyPageMetadata,
+    applySocialMetadata,
+    normalizeImageUrl,
     truncateDescription
   };
 })();

@@ -291,6 +291,15 @@ function applyDetailMetadata(base) {
   }
   slugHelper?.createOrUpdateMetaTag?.('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
   slugHelper?.createOrUpdateMetaTag?.('meta[property="og:type"]', { property: 'og:type', content: 'article' });
+
+  const socialImage = `${window.seo?.PRODUCTION_ORIGIN || 'https://zombiebases.com'}/images/bases/${encodeURIComponent(base.slug)}.png`;
+  window.seo?.applySocialMetadata?.({
+    title,
+    description,
+    url: canonicalUrl,
+    type: 'article',
+    image: socialImage
+  });
 }
 
 function applyNotFoundMetadata() {
@@ -302,6 +311,14 @@ function applyNotFoundMetadata() {
     title: `Base Not Found | ${window.seo.BRAND_NAME}`,
     description: 'The requested base page could not be found in the Zombie Bases directory.',
     canonicalPath: '/base.html'
+  });
+
+  window.seo.applySocialMetadata({
+    title: `Base Not Found | ${window.seo.BRAND_NAME}`,
+    description: 'The requested base page could not be found in the Zombie Bases directory.',
+    url: `${window.seo.PRODUCTION_ORIGIN}/base.html`,
+    type: 'website',
+    image: window.seo.DEFAULT_IMAGE
   });
 }
 

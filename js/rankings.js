@@ -70,6 +70,26 @@ function createBaseUrl(slug) {
   return slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(slug) : `/${encodeURIComponent(slug)}`;
 }
 
+function applyRankingsMetadata({ title, description, canonicalPath }) {
+  if (!window.seo) {
+    return;
+  }
+
+  window.seo.applyPageMetadata({
+    title,
+    description,
+    canonicalPath
+  });
+
+  window.seo.applySocialMetadata({
+    title,
+    description,
+    url: `${window.seo.PRODUCTION_ORIGIN}${canonicalPath}`,
+    type: 'website',
+    image: window.seo.DEFAULT_IMAGE
+  });
+}
+
 
 function createBaseThumbnail(slug, name) {
   const image = document.createElement('img');
@@ -190,6 +210,13 @@ function configureGroupPage(mode, rankings) {
   const groupLabel = labelFor(groupKey, activeGroup);
   elements.title.textContent = mode === 'region' ? `Best Bases in ${groupLabel}` : `Best ${groupLabel} Bases`;
   elements.subtitle.textContent = `Ranked by overall score within ${groupLabel}.`;
+  applyRankingsMetadata({
+    title: mode === 'region' ? `Best Zombie Bases in ${groupLabel} | Zombie Bases` : `Best ${groupLabel} Zombie Bases | Zombie Bases`,
+    description: mode === 'region'
+      ? `Compare the best zombie survival bases in ${groupLabel} by score, defensibility, isolation, and sustainability.`
+      : `Compare the best ${groupLabel.toLowerCase()} zombie survival bases by score, defensibility, isolation, and sustainability.`,
+    canonicalPath: mode === 'region' ? '/rankings-region.html' : '/rankings-type.html'
+  });
   elements.status.textContent = '';
   renderList(entries, mode);
 
@@ -200,6 +227,13 @@ function configureGroupPage(mode, rankings) {
     const chosenLabel = labelFor(groupKey, chosenGroup);
     elements.title.textContent = mode === 'region' ? `Best Bases in ${chosenLabel}` : `Best ${chosenLabel} Bases`;
     elements.subtitle.textContent = `Ranked by overall score within ${chosenLabel}.`;
+    applyRankingsMetadata({
+      title: mode === 'region' ? `Best Zombie Bases in ${chosenLabel} | Zombie Bases` : `Best ${chosenLabel} Zombie Bases | Zombie Bases`,
+      description: mode === 'region'
+        ? `Compare the best zombie survival bases in ${chosenLabel} by score, defensibility, isolation, and sustainability.`
+        : `Compare the best ${chosenLabel.toLowerCase()} zombie survival bases by score, defensibility, isolation, and sustainability.`,
+      canonicalPath: mode === 'region' ? '/rankings-region.html' : '/rankings-type.html'
+    });
     renderList(chosenEntries, mode);
   });
 }
@@ -220,6 +254,11 @@ async function initRankingsPage() {
 
     const payload = await response.json();
     if (mode === 'global') {
+      applyRankingsMetadata({
+        title: 'Best Overall Zombie Survival Bases | Zombie Bases',
+        description: 'Compare the best zombie survival bases overall by score, defensibility, isolation, and sustainability.',
+        canonicalPath: '/rankings.html'
+      });
       elements.status.textContent = '';
       renderList(payload.global || [], mode);
       return;

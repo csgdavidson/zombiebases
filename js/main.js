@@ -92,25 +92,23 @@ function updateHomepageMetadata() {
     return;
   }
 
-  const region = elements.regionFilter.value;
-  const type = elements.typeFilter.value;
-  const filters = summarizeActiveFilters(region, type);
-  const filterLabel = filters.length ? `${filters.join(' · ')} ` : '';
-  const isMapView = state.view === 'map';
-
-  const titlePrefix = isMapView ? 'Zombie Bases Map' : 'Zombie Bases';
-  const title = `${titlePrefix}${filterLabel ? ` | ${filterLabel.trim()}` : ''} | Survival Base Directory`;
-
-  const viewLabel = isMapView ? 'map' : 'list';
-  const description = filters.length
-    ? `Browse ${viewLabel} view zombie survival bases for ${filters.join(' and ')}.`
-    : `Explore zombie survival base locations by region and type in ${viewLabel} and map views.`;
+  const title = 'Zombie Bases | Survival Base Directory';
+  const description = 'Explore and compare real-world locations as zombie survival bases, ranked by defensibility, isolation, sustainability, and long-term viability.';
+  const canonicalUrl = `${window.seo.PRODUCTION_ORIGIN}/`;
 
   window.seo.applyPageMetadata({
     title,
     description,
     canonicalPath: '/',
     canonicalParams: null
+  });
+
+  window.seo.applySocialMetadata({
+    title,
+    description,
+    url: canonicalUrl,
+    type: 'website',
+    image: `${window.seo.PRODUCTION_ORIGIN}/images/bases/placeholder.png`
   });
 }
 
