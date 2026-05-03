@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T15:34:30.432003+00:00",
+  "generatedAt": "2026-05-03T18:55:39.212528+00:00",
   "totalBases": 210,
   "scoreCategories": [
     "overall",
@@ -16,12 +16,12 @@
       "sustainability": 4.47
     },
     "highest": {
-      "slug": "cheyenne",
+      "slug": "cheyenne-mountain-complex",
       "name": "Cheyenne Mountain Complex",
       "overall": 9.0
     },
     "lowest": {
-      "slug": "lax",
+      "slug": "lax-airport",
       "name": "LAX Airport",
       "overall": 1.0
     }
@@ -55,7 +55,7 @@
         "sustainability": 4.4
       },
       "highest": {
-        "slug": "huashan",
+        "slug": "mount-huashan",
         "name": "Mount Huashan",
         "overall": 7.1
       },
@@ -74,12 +74,12 @@
         "sustainability": 3.67
       },
       "highest": {
-        "slug": "faroe",
+        "slug": "faroe-islands",
         "name": "Faroe Islands",
         "overall": 7.4
       },
       "lowest": {
-        "slug": "ostankino",
+        "slug": "ostankino-tower",
         "name": "Ostankino Tower",
         "overall": 2.4
       }
@@ -93,12 +93,12 @@
         "sustainability": 4.18
       },
       "highest": {
-        "slug": "socotra",
+        "slug": "socotra-island",
         "name": "Socotra Island",
         "overall": 7.4
       },
       "lowest": {
-        "slug": "burj",
+        "slug": "burj-khalifa",
         "name": "Burj Khalifa",
         "overall": 2.2
       }
@@ -112,12 +112,12 @@
         "sustainability": 4.42
       },
       "highest": {
-        "slug": "cheyenne",
+        "slug": "cheyenne-mountain-complex",
         "name": "Cheyenne Mountain Complex",
         "overall": 9.0
       },
       "lowest": {
-        "slug": "lax",
+        "slug": "lax-airport",
         "name": "LAX Airport",
         "overall": 1.0
       }
@@ -155,7 +155,7 @@
         "overall": 6.8
       },
       "lowest": {
-        "slug": "glacier",
+        "slug": "glacier-plateau",
         "name": "Glacier Plateau",
         "overall": 2.9
       }
@@ -169,12 +169,12 @@
         "sustainability": 5.04
       },
       "highest": {
-        "slug": "chiloe",
+        "slug": "chiloe-island",
         "name": "Chilo\u00e9 Island",
         "overall": 8.0
       },
       "lowest": {
-        "slug": "christ-redeemer",
+        "slug": "christ-the-redeemer",
         "name": "Christ the Redeemer",
         "overall": 1.0
       }
@@ -188,12 +188,12 @@
         "sustainability": 5.04
       },
       "highest": {
-        "slug": "andaman",
+        "slug": "andaman-islands",
         "name": "Andaman Islands",
         "overall": 8.3
       },
       "lowest": {
-        "slug": "qutub",
+        "slug": "qutub-minar",
         "name": "Qutub Minar",
         "overall": 1.3
       }
@@ -212,7 +212,7 @@
         "overall": 7.3
       },
       "lowest": {
-        "slug": "petronas",
+        "slug": "petronas-towers",
         "name": "Petronas Towers",
         "overall": 1.3
       }
@@ -226,12 +226,12 @@
         "sustainability": 4.55
       },
       "highest": {
-        "slug": "eigg",
+        "slug": "isle-of-eigg-village",
         "name": "Isle of Eigg Village",
         "overall": 8.1
       },
       "lowest": {
-        "slug": "heathrow",
+        "slug": "heathrow-airport",
         "name": "Heathrow Airport",
         "overall": 2.0
       }
@@ -250,7 +250,7 @@
         "overall": 8.2
       },
       "lowest": {
-        "slug": "eiffel",
+        "slug": "eiffel-tower",
         "name": "Eiffel Tower",
         "overall": 1.0
       }
@@ -271,7 +271,7 @@
         "overall": 7.6
       },
       "lowest": {
-        "slug": "glacier",
+        "slug": "glacier-plateau",
         "name": "Glacier Plateau",
         "overall": 2.9
       }
@@ -290,7 +290,7 @@
         "overall": 8.2
       },
       "lowest": {
-        "slug": "intramuros",
+        "slug": "intramuros-manila",
         "name": "Intramuros Manila",
         "overall": 4.3
       }
@@ -304,7 +304,7 @@
         "sustainability": 5.32
       },
       "highest": {
-        "slug": "anna-creek",
+        "slug": "anna-creek-station",
         "name": "Anna Creek Station",
         "overall": 6.8
       },
@@ -328,7 +328,7 @@
         "overall": 7.1
       },
       "lowest": {
-        "slug": "ghawar-processing",
+        "slug": "ghawar-oil-field-central-processing",
         "name": "Ghawar Oil Field Central Processing",
         "overall": 3.9
       }
@@ -342,7 +342,7 @@
         "sustainability": 6.14
       },
       "highest": {
-        "slug": "andaman",
+        "slug": "andaman-islands",
         "name": "Andaman Islands",
         "overall": 8.3
       },
@@ -361,12 +361,12 @@
         "sustainability": 1.97
       },
       "highest": {
-        "slug": "hormuz-light",
+        "slug": "lighthouse-hormuz",
         "name": "Lighthouse Hormuz",
         "overall": 5.4
       },
       "lowest": {
-        "slug": "christ-redeemer",
+        "slug": "christ-the-redeemer",
         "name": "Christ the Redeemer",
         "overall": 1.0
       }
@@ -380,12 +380,12 @@
         "sustainability": 1.5
       },
       "highest": {
-        "slug": "ice-shelf",
+        "slug": "crevasse-field-glacier",
         "name": "Crevasse Field Glacier",
         "overall": 5.7
       },
       "lowest": {
-        "slug": "ice-shelf",
+        "slug": "crevasse-field-glacier",
         "name": "Crevasse Field Glacier",
         "overall": 5.7
       }
@@ -399,7 +399,7 @@
         "sustainability": 5.77
       },
       "highest": {
-        "slug": "eigg",
+        "slug": "isle-of-eigg-village",
         "name": "Isle of Eigg Village",
         "overall": 8.1
       },
@@ -418,7 +418,7 @@
         "sustainability": 3.56
       },
       "highest": {
-        "slug": "cheyenne",
+        "slug": "cheyenne-mountain-complex",
         "name": "Cheyenne Mountain Complex",
         "overall": 9.0
       },
@@ -442,7 +442,7 @@
         "overall": 5.9
       },
       "lowest": {
-        "slug": "lax",
+        "slug": "lax-airport",
         "name": "LAX Airport",
         "overall": 1.0
       }
