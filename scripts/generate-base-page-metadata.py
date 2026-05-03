@@ -53,6 +53,7 @@ def _sync_slug_page(page_path: Path, name: str, slug: str, summary: str) -> bool
     updated = source
     updated = updated.replace('href="./index.html"', 'href="/"')
     updated = updated.replace('href="/index.html"', 'href="/"')
+    updated = updated.replace('href="index.html"', 'href="/"')
 
     updated = _set_or_replace_tag(updated, r"<title>.*?</title>", f"<title>{title}</title>")
     updated = _set_or_replace_tag(updated, r"<meta\s+name=\"description\"\s+content=\"[^\"]*\"\s*/?>", f"<meta name=\"description\" content=\"{description}\">")
