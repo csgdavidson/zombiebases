@@ -60,7 +60,7 @@ def build_entries() -> list[SitemapEntry]:
 
   entries.extend(
     SitemapEntry(
-      loc=f"{BASE_URL}/{slug}",
+      loc=f"{BASE_URL}/base.html?slug={slug}",
       source_path=DATA_PATH,
     )
     for slug in iter_indexable_slugs()

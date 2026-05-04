@@ -275,32 +275,7 @@ function buildBaseDescription(base) {
 }
 
 function applyDetailMetadata(base) {
-  const title = `${base.name} Survival Base Analysis | ${window.seo?.BRAND_NAME || 'Zombie Bases'}`;
-  const description = buildBaseDescription(base);
-  const canonicalUrl = `${window.seo?.PRODUCTION_ORIGIN || 'https://zombiebases.com'}${slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(base.slug) : `/${encodeURIComponent(base.slug)}`}`;
-
-  document.title = title;
-  if (description) {
-    slugHelper?.createOrUpdateMetaTag?.('meta[name="description"]', { name: 'description', content: description });
-  }
-  slugHelper?.createOrUpdateCanonical?.(canonicalUrl);
-  slugHelper?.createOrUpdateMetaTag?.('meta[property="og:title"]', { property: 'og:title', content: title });
-  if (description) {
-    slugHelper?.createOrUpdateMetaTag?.('meta[property="og:description"]', { property: 'og:description', content: description });
-  }
-  slugHelper?.createOrUpdateMetaTag?.('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
-  slugHelper?.createOrUpdateMetaTag?.('meta[property="og:type"]', { property: 'og:type', content: 'article' });
-
-  const socialImage = `${window.seo?.PRODUCTION_ORIGIN || 'https://zombiebases.com'}/images/bases/${encodeURIComponent(base.slug)}.png`;
-  window.seo?.applySocialMetadata?.({
-    title,
-    description,
-    url: canonicalUrl,
-    type: 'article',
-    image: socialImage
-  });
-
-  const cleanUrl = slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(base.slug) : `/${encodeURIComponent(base.slug)}`;
+  const cleanUrl = slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(base.slug) : `/base.html?slug=${encodeURIComponent(base.slug)}`;
   const canonicalUrlForSchema = `${window.seo?.PRODUCTION_ORIGIN || 'https://zombiebases.com'}${cleanUrl}`;
   const imageUrl = `${window.seo?.PRODUCTION_ORIGIN || 'https://zombiebases.com'}/images/bases/${encodeURIComponent(base.slug)}.png`;
   const summary = getDescription(base);
@@ -339,58 +314,6 @@ function applyDetailMetadata(base) {
       addressCountry: base.country
     } : undefined
   });
-
-  window.seo?.setJsonLd?.('base-breadcrumbs', {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://zombiebases.com/'
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: base.name,
-        item: canonicalUrlForSchema
-      }
-    ]
-  });
-}
-
-function applyNotFoundMetadata() {
-  if (!window.seo) {
-    return;
-  }
-
-  window.seo.applyPageMetadata({
-    title: `Base Not Found | ${window.seo.BRAND_NAME}`,
-    description: 'The requested base page could not be found in the Zombie Bases directory.',
-    canonicalPath: '/base.html'
-  });
-
-  window.seo.applySocialMetadata({
-    title: `Base Not Found | ${window.seo.BRAND_NAME}`,
-    description: 'The requested base page could not be found in the Zombie Bases directory.',
-    url: `${window.seo.PRODUCTION_ORIGIN}/base.html`,
-    type: 'website',
-    image: window.seo.DEFAULT_IMAGE
-  });
-}
-
-function showNotFound() {
-  elements.status.textContent = '';
-  elements.detail.hidden = true;
-  elements.notFound.hidden = false;
-  applyNotFoundMetadata();
-}
-
-function showLoadError() {
-  elements.status.textContent = 'Unable to load base details right now. Please try again.';
-  elements.detail.hidden = true;
-  elements.notFound.hidden = true;
 }
 
 function renderMetaRow(base) {
@@ -965,7 +888,7 @@ function createBaseUrl(slug, sourceParams) {
   }
 
   const queryString = params.toString();
-  const cleanUrl = slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(resolvedSlug) : `/${encodeURIComponent(resolvedSlug)}`;
+  const cleanUrl = slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(resolvedSlug) : `/base.html?slug=${encodeURIComponent(resolvedSlug)}`;
   return queryString ? `${cleanUrl}?${queryString}` : cleanUrl;
 }
 

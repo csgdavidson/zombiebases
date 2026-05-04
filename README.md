@@ -52,12 +52,10 @@ The homepage supports exploration and decision workflows through:
 
 ## URL Structure
 
-- Canonical URLs use clean slug paths:
-  - `https://zombiebases.com/{slug}`
-- Legacy URLs remain supported for backward compatibility:
-  - `/base.html?slug={slug}`
-- Cloudflare Transform Rules rewrite clean slug paths to `base.html` internally.
-- Internal links should use clean URLs only.
+- Base detail pages are routed through query-parameter URLs:
+  - `https://zombiebases.com/base.html?slug={slug}`
+- Internal links should target `base.html?slug={slug}` for detail navigation.
+- Homepage and global navigation should use `/` (not `/index.html`).
 
 ## Tech Stack
 
@@ -155,3 +153,60 @@ Avoid:
 - Clean URLs depend on Cloudflare Transform Rules, not native server routing.
 - The site must remain fully functional as a static deployment with no server logic.
 - Backward compatibility for query-parameter URLs is intentional.
+
+
+## V2 Architecture Roadmap
+
+### Why V2 is needed
+
+- The current JSON-driven architecture is effective for V1 but will not scale indefinitely as content volume and editorial workflows grow.
+- Attempting static per-base HTML generation inside GitHub Pages introduced brittle routing and metadata drift.
+- Strong SEO outcomes at scale require fully pre-rendered base pages with deterministic metadata.
+- Safer iteration requires staging and preview-based deployments before production release.
+
+### Planned V2 direction
+
+1. **Framework**
+   - Move to Astro or Next.js for first-class routing and static generation workflows.
+
+2. **Database / CMS**
+   - Replace JSON files with a structured data source (for example Supabase, Sanity, or equivalent).
+
+3. **Static generation per base**
+   - Generate one page per base with:
+     - unique metadata
+     - Open Graph and Twitter tags
+     - JSON-LD structured data
+
+4. **Image pipeline**
+   - Add optimized image outputs (WebP/AVIF).
+   - Add OG image generation.
+   - Enforce consistent naming and compression standards.
+
+5. **Staging & deployment**
+   - Use Vercel or Netlify.
+   - Enable preview deployments per change.
+   - Promote only validated builds to production.
+
+6. **SEO enhancements**
+   - Full Open Graph and Twitter metadata coverage.
+   - Structured data across all major templates.
+   - Improved title and description strategy.
+
+7. **Admin workflow**
+   - Allow adding/editing bases without manual JSON edits.
+   - Support draft/publish states.
+   - Add validation rules to prevent malformed entries.
+
+### V1 philosophy
+
+Keep V1:
+- simple
+- stable
+- fast to iterate
+- focused on content and UX
+
+Avoid:
+- partial implementations of V2 architecture
+- complex routing hacks
+- static generation inside GitHub Pages
