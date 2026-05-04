@@ -53,20 +53,6 @@ function createBaseUrl(slug) {
   return slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(slug) : `/base.html?slug=${encodeURIComponent(slug)}`;
 }
 
-function createBaseThumbnail(slug, name) {
-  const image = document.createElement('img');
-  image.className = 'base-card-thumb';
-  image.src = `/images/bases/${slug}.png`;
-  image.alt = `${name} thumbnail`;
-  image.width = 112;
-  image.height = 63;
-  image.loading = 'lazy';
-  image.decoding = 'async';
-  image.addEventListener('error', () => {
-    image.src = '/images/bases/placeholder.png';
-  }, { once: true });
-  return image;
-}
 
 function updateScenarioParam(value) {
   const params = new URLSearchParams(window.location.search);
@@ -76,45 +62,22 @@ function updateScenarioParam(value) {
   window.history.replaceState({}, '', url);
 }
 
-function renderList(entries) {
+function renderList(entries, scenarioId) {
   elements.list.innerHTML = '';
   elements.empty.hidden = entries.length > 0;
 
   entries.forEach((entry) => {
-    const item = document.createElement('li');
-    item.className = 'ranking-row';
-    item.appendChild(createBaseThumbnail(entry.slug, entry.name));
-
-    const content = document.createElement('div');
-    content.className = 'ranking-row-content';
-
-    const heading = document.createElement('p');
-    heading.className = 'ranking-row-heading';
-
-    const rank = document.createElement('span');
-    rank.className = 'ranking-chip';
-    rank.textContent = `#${entry.rank}`;
-
-    const nameLink = document.createElement('a');
-    nameLink.href = createBaseUrl(entry.slug);
-    nameLink.textContent = entry.name;
-
-    const score = document.createElement('span');
-    score.className = 'ranking-score';
-    score.textContent = `${entry.overall.toFixed(1)}/10`;
-
-    heading.append(rank, nameLink, score);
-
-    const meta = document.createElement('p');
-    meta.className = 'base-meta';
-    meta.textContent = `${labelFor('region', entry.region)} • ${labelFor('type', entry.type)}`;
-
-    const reason = document.createElement('p');
-    reason.className = 'base-summary';
-    reason.textContent = entry.reason || 'Scenario fit details coming soon.';
-
-    content.append(heading, meta, reason);
-    item.appendChild(content);
+    const item = window.baseCardRenderer.createBaseCard({
+      slug: entry.slug,
+      name: entry.name,
+      href: createBaseUrl(entry.slug),
+      metaText: `${labelFor('region', entry.region)} • ${labelFor('type', entry.type)}`,
+      description: entry.reason || 'Scenario fit details coming soon.',
+      score: entry.overall,
+      rank: entry.rank,
+      tags: [],
+      scenarioId
+    });
     elements.list.appendChild(item);
   });
 }
@@ -175,7 +138,7 @@ function setScenario(discovery, scenarioId) {
   elements.title.textContent = scenario.title;
   elements.description.textContent = scenario.description;
   applyScenarioMetadata(scenario.title);
-  renderList(scenario.entries || []);
+  renderList(scenario.entries || [], scenarioId);
   updateScenarioItemListJsonLd(scenario.title, scenario.description, scenario.entries || []);
 }
 

@@ -473,55 +473,6 @@ function createBaseUrl(baseOrSlug) {
   return query ? `${cleanUrl}?${query}` : cleanUrl;
 }
 
-function createBaseThumbnail(slug, name) {
-  const image = document.createElement('img');
-  image.className = 'base-card-thumb';
-  image.src = `/images/bases/${slug}.png`;
-  image.alt = `${name} thumbnail`;
-  image.width = 112;
-  image.height = 63;
-  image.loading = 'lazy';
-  image.decoding = 'async';
-  image.addEventListener('error', () => {
-    image.src = '/images/bases/placeholder.png';
-  }, { once: true });
-  return image;
-}
-
-function appendCardScore(container, base) {
-  const scoreValue = computeOverallScore(base);
-  const scoreText = formatOverallScore(base);
-  if (!scoreText) {
-    return;
-  }
-
-  const score = document.createElement('span');
-  score.className = `base-score-pill ${scoreToneClass(scoreValue)}`.trim();
-  score.textContent = scoreText.replace('/10', '');
-  container.appendChild(score);
-}
-
-function appendCardBadges(container, base) {
-  const candidateBadges = slugHelper?.getBaseBadges
-    ? slugHelper.getBaseBadges(base, 2)
-    : [];
-
-  if (!candidateBadges.length) {
-    return;
-  }
-
-  const row = document.createElement('p');
-  row.className = 'card-badge-row';
-
-  candidateBadges.forEach((badgeLabel) => {
-    const badge = document.createElement('span');
-    badge.className = 'badge badge-trait';
-    badge.textContent = badgeLabel;
-    row.appendChild(badge);
-  });
-
-  container.appendChild(row);
-}
 
 function getCardSummary(base) {
   if (typeof base?.description?.summary === 'string' && base.description.summary.trim()) {
@@ -559,48 +510,20 @@ function renderBaseList(items) {
   }
 
   items.forEach((base) => {
-    const listItem = document.createElement('li');
-    listItem.className = 'base-card';
-
-    const link = document.createElement('a');
-    link.className = 'base-card-link';
-    link.href = createBaseUrl(base);
-    link.appendChild(createBaseThumbnail(preferredSlugFor(base), base.name));
-
-    const content = document.createElement('div');
-    content.className = 'base-card-content';
-
-    const header = document.createElement('div');
-    header.className = 'base-card-header';
-
-    const title = document.createElement('span');
-    title.className = 'base-card-title';
-    title.textContent = base.name;
-
-    header.appendChild(title);
-    appendCardScore(header, base);
-
-    const meta = document.createElement('p');
-    meta.className = 'base-meta';
     const location = base.country
       ? `${base.country}, ${labelFor('region', base.region)}`
       : labelFor('region', base.region);
-    meta.textContent = `${location} • ${labelFor('type', base.type)}`;
-
-    content.append(header, meta);
-
-    appendCardBadges(content, base);
-
-    const summaryText = getCardSummary(base);
-    if (summaryText) {
-      const summary = document.createElement('p');
-      summary.className = 'base-summary';
-      summary.textContent = summaryText;
-      content.appendChild(summary);
-    }
-
-    link.appendChild(content);
-    listItem.appendChild(link);
+    const listItem = window.baseCardRenderer.createBaseCard({
+      slug: preferredSlugFor(base),
+      name: base.name,
+      href: createBaseUrl(base),
+      metaText: `${location} • ${labelFor('type', base.type)}`,
+      description: getCardSummary(base),
+      score: computeOverallScore(base),
+      rank: null,
+      tags: slugHelper?.getBaseBadges ? slugHelper.getBaseBadges(base, 2) : [],
+      scenarioId: null
+    });
     elements.list.appendChild(listItem);
   });
 }
@@ -630,7 +553,7 @@ function renderFeaturedBases(items) {
 
     listItem.append(link, meta);
 
-    appendCardScore(listItem, base);
+
 
     const summaryText = getCardSummary(base);
     if (summaryText) {

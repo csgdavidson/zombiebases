@@ -109,32 +109,6 @@ function updateRankingsItemListJsonLd(title, description, entries) {
 }
 
 
-function createBaseThumbnail(slug, name) {
-  const image = document.createElement('img');
-  image.className = 'base-card-thumb';
-  image.src = `/images/bases/${slug}.png`;
-  image.alt = `${name} thumbnail`;
-  image.width = 112;
-  image.height = 63;
-  image.loading = 'lazy';
-  image.decoding = 'async';
-  image.addEventListener('error', () => {
-    image.src = '/images/bases/placeholder.png';
-  }, { once: true });
-  return image;
-}
-function scoreToneClass(value) {
-  if (!Number.isFinite(value)) {
-    return '';
-  }
-  if (value >= 8) {
-    return 'score-high';
-  }
-  if (value >= 5) {
-    return 'score-medium';
-  }
-  return 'score-low';
-}
 
 function summarize(entry) {
   if (typeof entry.summary === 'string' && entry.summary.trim()) {
@@ -149,50 +123,24 @@ function renderList(entries, mode) {
   elements.empty.hidden = entries.length > 0;
 
   entries.forEach((entry) => {
-    const item = document.createElement('li');
-    item.className = 'ranking-row';
-    item.appendChild(createBaseThumbnail(entry.slug, entry.name));
-
-    const content = document.createElement('div');
-    content.className = 'ranking-row-content';
-
-    const heading = document.createElement('p');
-    heading.className = 'ranking-row-heading';
-
-    const rank = document.createElement('span');
-    rank.className = 'ranking-chip';
-    rank.textContent = `#${entry.rank}`;
-
-    const nameLink = document.createElement('a');
-    nameLink.href = createBaseUrl(entry.slug);
-    nameLink.textContent = entry.name;
-
-    const score = document.createElement('span');
-    score.className = `ranking-score ${scoreToneClass(entry.overall)}`.trim();
-    score.textContent = `${entry.overall.toFixed(1)}/10`;
-
-    heading.append(rank, nameLink, score);
-
-    const meta = document.createElement('p');
-    meta.className = 'base-meta';
     const topPercent = Math.max(1, Math.round(entry.percentile));
     const qualifiers = [`Top ${topPercent}%`];
 
     if (mode === 'global') {
-      const location = entry.country
-        ? `${entry.country}, ${labelFor('region', entry.region)}`
-        : labelFor('region', entry.region);
-      qualifiers.unshift(`${location} • ${labelFor('type', entry.type)}`);
+      qualifiers.unshift(`${labelFor('region', entry.region)} • ${labelFor('type', entry.type)}`);
     }
 
-    meta.textContent = qualifiers.join(' • ');
-
-    const summary = document.createElement('p');
-    summary.className = 'base-summary';
-    summary.textContent = summarize(entry);
-
-    content.append(heading, meta, summary);
-    item.appendChild(content);
+    const item = window.baseCardRenderer.createBaseCard({
+      slug: entry.slug,
+      name: entry.name,
+      href: createBaseUrl(entry.slug),
+      metaText: qualifiers.join(' • '),
+      description: summarize(entry),
+      score: entry.overall,
+      rank: entry.rank,
+      tags: [],
+      scenarioId: null
+    });
     elements.list.appendChild(item);
   });
 }
