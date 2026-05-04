@@ -275,7 +275,7 @@ function buildBaseDescription(base) {
 }
 
 function applyDetailMetadata(base) {
-  const cleanUrl = slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(base.slug) : `/base.html?slug=${encodeURIComponent(base.slug)}`;
+  const cleanUrl = slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(base.slug) : `/${encodeURIComponent(base.slug)}`;
   const canonicalUrlForSchema = `${window.seo?.PRODUCTION_ORIGIN || 'https://zombiebases.com'}${cleanUrl}`;
   const imageUrl = `${window.seo?.PRODUCTION_ORIGIN || 'https://zombiebases.com'}/images/bases/${encodeURIComponent(base.slug)}.png`;
   const summary = getDescription(base);
@@ -888,25 +888,22 @@ function createBaseUrl(slug, sourceParams) {
   }
 
   const queryString = params.toString();
-  const cleanUrl = slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(resolvedSlug) : `/base.html?slug=${encodeURIComponent(resolvedSlug)}`;
+  const cleanUrl = slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(resolvedSlug) : `/${encodeURIComponent(resolvedSlug)}`;
   return queryString ? `${cleanUrl}?${queryString}` : cleanUrl;
 }
 
-function getSlugFromPathname(pathname) {
-  if (typeof pathname !== 'string') {
-    return '';
+function getSlug() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('slug')) {
+    return params.get('slug');
   }
 
-  const pathSegment = pathname
-    .split('/')
-    .filter(Boolean)
-    .pop() || '';
-
-  if (!pathSegment || pathSegment.toLowerCase() === 'base.html') {
-    return '';
+  const path = window.location.pathname.replace(/^\/|\/$/g, '');
+  if (!path || path.toLowerCase() === 'base.html' || path.toLowerCase() === 'index.html') {
+    return null;
   }
 
-  return decodeURIComponent(pathSegment);
+  return decodeURIComponent(path.split('/').pop() || '') || null;
 }
 
 function renderSimilarBases(base, bases, discovery, params) {
@@ -1040,7 +1037,7 @@ function showBase(base, bases, params, stats, rankings, discovery) {
 
 async function loadBase() {
   const params = new URLSearchParams(window.location.search);
-  const slug = slugHelper?.getBaseSlugFromLocation ? slugHelper.getBaseSlugFromLocation(window.location) : (params.get('slug') || getSlugFromPathname(window.location.pathname));
+  const slug = slugHelper?.getBaseSlugFromLocation ? slugHelper.getBaseSlugFromLocation(window.location) : getSlug();
 
   setBackLink(params);
 

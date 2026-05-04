@@ -52,9 +52,10 @@ The homepage supports exploration and decision workflows through:
 
 ## URL Structure
 
-- Base detail pages are routed through query-parameter URLs:
+- Base detail pages use clean public URLs:
+  - `https://zombiebases.com/{slug}`
+- Query-parameter URLs remain supported for backward compatibility:
   - `https://zombiebases.com/base.html?slug={slug}`
-- Internal links should target `base.html?slug={slug}` for detail navigation.
 - Homepage and global navigation should use `/` (not `/index.html`).
 
 ## Tech Stack
@@ -153,6 +154,22 @@ Avoid:
 - Clean URLs depend on Cloudflare Transform Rules, not native server routing.
 - The site must remain fully functional as a static deployment with no server logic.
 - Backward compatibility for query-parameter URLs is intentional.
+
+## URL Routing (V1)
+
+Zombie Bases uses clean URLs with rewrite-based routing:
+
+- Public URLs:
+  `/cheyenne-mountain-complex`
+
+- Internally resolved to:
+  `/base.html?slug=cheyenne-mountain-complex`
+
+Routing is handled via:
+- Cloudflare rewrite rules (production)
+- JavaScript fallback (local/dev)
+
+No static pages are generated per base in V1.
 
 
 ## V2 Architecture Roadmap
