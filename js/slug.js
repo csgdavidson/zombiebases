@@ -86,7 +86,7 @@
     if (!slug) {
       return '/';
     }
-    return `/${encodeURIComponent(slug)}`;
+    return `/base.html?slug=${encodeURIComponent(slug)}`;
   }
 
   function getBaseSlugFromLocation(location = window.location) {

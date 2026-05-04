@@ -469,7 +469,7 @@ function createBaseUrl(baseOrSlug) {
   }
 
   const query = params.toString();
-  const cleanUrl = slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(slug) : `/${encodeURIComponent(slug)}`;
+  const cleanUrl = slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(slug) : `/base.html?slug=${encodeURIComponent(slug)}`;
   return query ? `${cleanUrl}?${query}` : cleanUrl;
 }
 

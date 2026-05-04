@@ -50,7 +50,7 @@ function labelFor(kind, value) {
 }
 
 function createBaseUrl(slug) {
-  return slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(slug) : `/${encodeURIComponent(slug)}`;
+  return slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(slug) : `/base.html?slug=${encodeURIComponent(slug)}`;
 }
 
 function createBaseThumbnail(slug, name) {
