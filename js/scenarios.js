@@ -71,7 +71,7 @@ function renderList(entries, scenarioId) {
       slug: entry.slug,
       name: entry.name,
       href: createBaseUrl(entry.slug),
-      metaText: `${labelFor('region', entry.region)} • ${labelFor('type', entry.type)}`,
+      metaText: `${entry.country ? `${entry.country}, ` : ''}${labelFor('region', entry.region)} • ${labelFor('type', entry.type)}`,
       description: entry.reason || 'Scenario fit details coming soon.',
       score: entry.overall,
       rank: entry.rank,

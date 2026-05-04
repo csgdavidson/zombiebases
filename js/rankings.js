@@ -123,18 +123,11 @@ function renderList(entries, mode) {
   elements.empty.hidden = entries.length > 0;
 
   entries.forEach((entry) => {
-    const topPercent = Math.max(1, Math.round(entry.percentile));
-    const qualifiers = [`Top ${topPercent}%`];
-
-    if (mode === 'global') {
-      qualifiers.unshift(`${labelFor('region', entry.region)} • ${labelFor('type', entry.type)}`);
-    }
-
     const item = window.baseCardRenderer.createBaseCard({
       slug: entry.slug,
       name: entry.name,
       href: createBaseUrl(entry.slug),
-      metaText: qualifiers.join(' • '),
+      metaText: `${entry.country ? `${entry.country}, ` : ''}${labelFor('region', entry.region)} • ${labelFor('type', entry.type)}`,
       description: summarize(entry),
       score: entry.overall,
       rank: entry.rank,
