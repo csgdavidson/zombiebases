@@ -1,0 +1,5 @@
+# Clean comparison pages must use the comparison shell before the base detail route.
+/base/:slugA/vs/:slugB /compare.html 200
+
+# Clean base detail URLs served by Cloudflare Pages.
+/base/:slug /base.html 200
