@@ -73,13 +73,20 @@
         <div id="verdict-list" class="verdict-grid"></div>
       </section>
 
-      <section class="content-section compare-picker-section" aria-label="Compare against another base">
-        <h3>Compare against another base</h3>
-        <p class="base-meta">Choose a different base to replace the second side of this comparison.</p>
-        <label for="compare-against-select" class="compare-select-label">
-          Base
-          <select id="compare-against-select"></select>
-        </label>
+      <section class="content-section compare-picker-section" aria-label="Compare another base">
+        <h3>Compare another base</h3>
+        <p class="base-meta">Change either side of this matchup, then open the updated comparison.</p>
+        <div class="compare-select-grid">
+          <label for="compare-current-primary" class="compare-select-label">
+            First base
+            <select id="compare-current-primary"></select>
+          </label>
+          <label for="compare-current-secondary" class="compare-select-label">
+            Second base
+            <select id="compare-current-secondary"></select>
+          </label>
+        </div>
+        <button id="compare-current-button" class="compare-button" type="button">Update comparison</button>
       </section>
     </article>
 
