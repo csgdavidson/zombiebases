@@ -6,6 +6,7 @@
     "validate:discovery": "python3 scripts/validate-discovery.py",
     "generate:interpretations": "python3 scripts/generate-interpretations.py",
     "validate:interpretations": "python3 scripts/validate-interpretations.py",
-    "generate:base-metadata": "python3 scripts/generate-base-page-metadata.py"
+    "generate:base-metadata": "python3 scripts/generate-base-page-metadata.py",
+    "validate:bases": "python3 scripts/validate-bases.py"
   }
 }

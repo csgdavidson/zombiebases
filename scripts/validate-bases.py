@@ -11,6 +11,7 @@ DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "bases-index.json"
 REQUIRED_SCORE_FIELDS = {"overall", "defensibility", "isolation", "sustainability"}
 FORBIDDEN_SCORE_FIELDS = {"food", "water", "escape"}
 ALLOWED_CATEGORY_FIELDS = {"defensibility", "isolation", "sustainability"}
+REQUIRED_COMPARISON_FIELDS = {"exposure", "maintenanceBurden", "populationCapacity", "resourceSecurity"}
 
 
 def is_non_empty_string(value: object) -> bool:
@@ -19,6 +20,10 @@ def is_non_empty_string(value: object) -> bool:
 
 def is_finite_number(value: object) -> bool:
     return isinstance(value, (int, float)) and not isinstance(value, bool)
+
+
+def is_score_1_to_10(value: object) -> bool:
+    return is_finite_number(value) and 1 <= value <= 10
 
 
 def get_related_slugs(base: dict) -> list[str]:
@@ -102,6 +107,33 @@ def validate(bases: list[dict]) -> list[str]:
         forbidden_present = sorted(FORBIDDEN_SCORE_FIELDS.intersection(categories.keys()))
         if forbidden_present:
             errors.append(f"{base_name}: forbidden legacy score keys present: {', '.join(forbidden_present)}")
+
+        comparison_scores = base.get("comparisonScores")
+        if not isinstance(comparison_scores, dict):
+            errors.append(f"{base_name}: missing required comparisonScores object")
+        else:
+            missing_comparison_fields = sorted(REQUIRED_COMPARISON_FIELDS.difference(comparison_scores.keys()))
+            if missing_comparison_fields:
+                errors.append(
+                    f"{base_name}: missing required comparison score fields: {', '.join(missing_comparison_fields)}"
+                )
+
+            unexpected_comparison_fields = sorted(set(comparison_scores.keys()).difference(REQUIRED_COMPARISON_FIELDS))
+            if unexpected_comparison_fields:
+                errors.append(
+                    f"{base_name}: unexpected comparison score fields: {', '.join(unexpected_comparison_fields)}"
+                )
+
+            for field in sorted(REQUIRED_COMPARISON_FIELDS):
+                entry = comparison_scores.get(field)
+                if not isinstance(entry, dict):
+                    errors.append(f"{base_name}: comparisonScores.{field} must be an object")
+                    continue
+
+                if not is_score_1_to_10(entry.get("score")):
+                    errors.append(f"{base_name}: comparisonScores.{field}.score must be a number from 1 to 10")
+                if not is_non_empty_string(entry.get("rationale")):
+                    errors.append(f"{base_name}: comparisonScores.{field}.rationale must be present and non-empty")
 
         for related_slug in get_related_slugs(base):
             if related_slug not in valid_slugs:
