@@ -1856,6 +1856,13 @@ main > * {
   align-items: start;
 }
 
+.compare-select-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: var(--space-3);
+  width: 100%;
+}
+
 .compare-select-label {
   display: grid;
   gap: var(--space-2);
@@ -1882,7 +1889,8 @@ main > * {
   .versus-hero-card,
   .winner-card-grid,
   .advantage-grid,
-  .verdict-grid {
+  .verdict-grid,
+  .compare-select-grid {
     grid-template-columns: 1fr;
   }
 

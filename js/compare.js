@@ -88,7 +88,9 @@ const elements = {
   winners: document.getElementById('category-winners'),
   advantages: document.getElementById('biggest-advantages'),
   verdicts: document.getElementById('verdict-list'),
-  compareAgainst: document.getElementById('compare-against-select'),
+  compareCurrentPrimary: document.getElementById('compare-current-primary'),
+  compareCurrentSecondary: document.getElementById('compare-current-secondary'),
+  compareCurrentButton: document.getElementById('compare-current-button'),
   setupPrimary: document.getElementById('compare-setup-primary'),
   setupSecondary: document.getElementById('compare-setup-secondary'),
   setupButton: document.getElementById('compare-setup-button')
@@ -135,6 +137,19 @@ function preferredSlugFor(baseOrSlug) {
 
 function compareUrl(slugA, slugB) {
   return slugHelper?.getCompareUrl ? slugHelper.getCompareUrl(slugA, slugB) : `/base/${encodeURIComponent(slugA)}/vs/${encodeURIComponent(slugB)}`;
+}
+
+function isCleanCompareRoute() {
+  return /^\/base\/[^/]+\/vs\/[^/]+\/?$/i.test(window.location.pathname);
+}
+
+function syncCleanCompareUrl(baseA, baseB) {
+  const cleanPath = compareUrl(preferredSlugFor(baseA), preferredSlugFor(baseB));
+  if (!cleanPath || isCleanCompareRoute()) {
+    return;
+  }
+
+  window.history.replaceState({}, '', cleanPath);
 }
 
 function baseUrl(base) {
@@ -379,6 +394,13 @@ function updateMetadata(baseA, baseB) {
   });
 }
 
+function pushCleanCompareUrl(baseA, baseB) {
+  const cleanPath = compareUrl(preferredSlugFor(baseA), preferredSlugFor(baseB));
+  if (cleanPath) {
+    window.history.pushState({}, '', cleanPath);
+  }
+}
+
 function renderComparison(baseA, baseB, bases) {
   const overallResult = winnerForRows(baseA, baseB, ['overall']);
   elements.title.textContent = `${baseA.name} vs ${baseB.name}`;
@@ -388,15 +410,41 @@ function renderComparison(baseA, baseB, bases) {
   renderWinnerCards(baseA, baseB);
   renderAdvantages(baseA, baseB);
   renderVerdicts(baseA, baseB);
-  populateSelect(elements.compareAgainst, bases, {
-    placeholder: 'Select another base',
-    excludeSlug: preferredSlugFor(baseA)
-  });
-  elements.compareAgainst.addEventListener('change', () => {
-    if (elements.compareAgainst.value) {
-      window.location.href = compareUrl(preferredSlugFor(baseA), elements.compareAgainst.value);
+  const slugA = preferredSlugFor(baseA);
+  const slugB = preferredSlugFor(baseB);
+  populateSelect(elements.compareCurrentPrimary, bases, { value: slugA, excludeSlug: slugB });
+  populateSelect(elements.compareCurrentSecondary, bases, { value: slugB, excludeSlug: slugA });
+  elements.compareCurrentPrimary.onchange = () => {
+    populateSelect(elements.compareCurrentSecondary, bases, {
+      value: elements.compareCurrentSecondary.value,
+      excludeSlug: elements.compareCurrentPrimary.value
+    });
+  };
+  elements.compareCurrentSecondary.onchange = () => {
+    populateSelect(elements.compareCurrentPrimary, bases, {
+      value: elements.compareCurrentPrimary.value,
+      excludeSlug: elements.compareCurrentSecondary.value
+    });
+  };
+  elements.compareCurrentButton.onclick = () => {
+    const nextSlugA = elements.compareCurrentPrimary.value;
+    const nextSlugB = elements.compareCurrentSecondary.value;
+    if (!nextSlugA || !nextSlugB || nextSlugA === nextSlugB) {
+      return;
     }
-  });
+
+    const nextBaseA = slugHelper?.resolveBaseBySlug?.(bases, nextSlugA) || bases.find((base) => preferredSlugFor(base) === nextSlugA);
+    const nextBaseB = slugHelper?.resolveBaseBySlug?.(bases, nextSlugB) || bases.find((base) => preferredSlugFor(base) === nextSlugB);
+    if (!nextBaseA || !nextBaseB) {
+      const missing = [!nextBaseA ? nextSlugA : null, !nextBaseB ? nextSlugB : null].filter(Boolean).join(' and ');
+      showNotFound(`We couldn't find ${missing} in the current base dataset.`);
+      return;
+    }
+
+    pushCleanCompareUrl(nextBaseA, nextBaseB);
+    renderComparison(nextBaseA, nextBaseB, bases);
+  };
+  syncCleanCompareUrl(baseA, baseB);
   updateMetadata(baseA, baseB);
   elements.status.textContent = '';
   elements.setup.hidden = true;
@@ -440,9 +488,22 @@ function showSetup(bases, slugA = '', slugB = '') {
     });
   });
   elements.setupButton.addEventListener('click', () => {
-    if (elements.setupPrimary.value && elements.setupSecondary.value) {
-      window.location.href = compareUrl(elements.setupPrimary.value, elements.setupSecondary.value);
+    const nextSlugA = elements.setupPrimary.value;
+    const nextSlugB = elements.setupSecondary.value;
+    if (!nextSlugA || !nextSlugB) {
+      return;
     }
+
+    const nextBaseA = slugHelper?.resolveBaseBySlug?.(bases, nextSlugA) || bases.find((base) => preferredSlugFor(base) === nextSlugA);
+    const nextBaseB = slugHelper?.resolveBaseBySlug?.(bases, nextSlugB) || bases.find((base) => preferredSlugFor(base) === nextSlugB);
+    if (!nextBaseA || !nextBaseB) {
+      const missing = [!nextBaseA ? nextSlugA : null, !nextBaseB ? nextSlugB : null].filter(Boolean).join(' and ');
+      showNotFound(`We couldn't find ${missing} in the current base dataset.`);
+      return;
+    }
+
+    pushCleanCompareUrl(nextBaseA, nextBaseB);
+    renderComparison(nextBaseA, nextBaseB, bases);
   });
 
   elements.status.textContent = '';
@@ -482,8 +543,8 @@ async function initComparison() {
     const baseA = slugA ? slugHelper?.resolveBaseBySlug?.(bases, slugA) || bases.find((base) => preferredSlugFor(base) === slugA) : null;
     const baseB = slugB ? slugHelper?.resolveBaseBySlug?.(bases, slugB) || bases.find((base) => preferredSlugFor(base) === slugB) : null;
 
-    if (slugA && slugB && (!baseA || !baseB)) {
-      const missing = [!baseA ? slugA : null, !baseB ? slugB : null].filter(Boolean).join(' and ');
+    if ((slugA && !baseA) || (slugB && !baseB)) {
+      const missing = [slugA && !baseA ? slugA : null, slugB && !baseB ? slugB : null].filter(Boolean).join(' and ');
       showNotFound(`We couldn't find ${missing} in the current base dataset.`);
       return;
     }
