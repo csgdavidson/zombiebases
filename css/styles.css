@@ -565,37 +565,48 @@ main > * {
 }
 
 .survival-characteristics-header {
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-4);
 }
 
 .survival-characteristics-header h3 {
-  margin-bottom: 0;
+  margin-bottom: var(--space-1);
+}
+
+.survival-characteristics-intro {
+  max-width: 680px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .survival-characteristics-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
 }
 
 .survival-characteristic-card {
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-soft);
   border-radius: var(--radius-md);
   background: #f9fbfd;
-  padding: var(--space-3);
+  padding: var(--space-4);
   display: grid;
-  gap: var(--space-2);
+  gap: var(--space-3);
   min-width: 0;
+  min-height: 168px;
+  align-content: start;
 }
 
 .survival-characteristic-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: var(--space-2);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: var(--space-3);
 }
 
 .survival-characteristic-label {
+  margin: 0;
   color: #0f1f35;
   font-weight: 650;
   line-height: var(--lh-tight);
@@ -603,14 +614,17 @@ main > * {
 
 .survival-characteristic-score {
   flex: 0 0 auto;
-  font-size: 0.95rem;
-  font-weight: 750;
-  line-height: var(--lh-tight);
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .survival-characteristic-meter {
-  height: 0.4rem;
+  height: 0.32rem;
   border-radius: var(--radius-pill);
   background: #e2e8f0;
   overflow: hidden;
@@ -621,15 +635,17 @@ main > * {
   height: 100%;
   border-radius: inherit;
   background: currentColor;
+  opacity: 0.9;
 }
 
 .survival-characteristic-rationale {
+  margin: 0;
   color: var(--text-secondary);
-  font-size: 0.84rem;
-  line-height: 1.45;
+  font-size: 0.93rem;
+  line-height: 1.5;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   overflow: hidden;
 }
 
