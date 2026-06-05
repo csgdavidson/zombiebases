@@ -1644,3 +1644,267 @@ main > * {
   }
 }
 
+
+/* Versus MVP: base-to-base comparison route and lightweight compare entry points. */
+.compare-button,
+.base-card-compare-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius-pill);
+  background: #f8fafc;
+  color: #334155;
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 650;
+  line-height: 1;
+  min-height: 2rem;
+  padding: 0.45rem 0.8rem;
+  text-decoration: none;
+}
+
+.compare-button:hover,
+.compare-button:focus-visible,
+.base-card-compare-link:hover,
+.base-card-compare-link:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.base-card-compare-link {
+  margin: var(--space-2) 0 0 128px;
+}
+
+@media (min-width: 768px) {
+  .base-header .compare-button {
+    order: 3;
+  }
+}
+
+.comparison-page-main {
+  width: min(1120px, 92vw);
+}
+
+.versus-hero-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+  gap: var(--space-4);
+  margin-top: 0;
+}
+
+.versus-base-card {
+  display: grid;
+  grid-template-columns: minmax(140px, 42%) minmax(0, 1fr);
+  gap: var(--space-4);
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: #f9fbfd;
+  padding: var(--space-3);
+}
+
+.versus-base-card-winner {
+  border-color: #86efac;
+  background: #f0fdf4;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.12);
+}
+
+.versus-base-image {
+  width: 100%;
+  min-height: 160px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: #e7edf5;
+}
+
+.versus-base-content {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.versus-base-content h2 {
+  margin: 0;
+}
+
+.versus-base-content h2 a {
+  color: #0f1f35;
+  text-decoration: none;
+}
+
+.versus-base-content h2 a:hover,
+.versus-base-content h2 a:focus-visible {
+  text-decoration: underline;
+}
+
+.versus-overall-score {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.versus-divider {
+  align-self: center;
+  justify-self: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: #0f1f35;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.55rem 0.7rem;
+}
+
+.score-comparison-table-wrap {
+  overflow-x: auto;
+}
+
+.score-comparison-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.score-comparison-table th,
+.score-comparison-table td {
+  border-bottom: 1px solid var(--border-soft);
+  padding: 0.75rem 0.65rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.score-comparison-table thead th {
+  color: #5f7186;
+  font-size: var(--fs-meta);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.score-comparison-table tbody th {
+  color: #0f1f35;
+  font-weight: 700;
+}
+
+.score-cell-winner {
+  color: var(--score-high);
+  font-weight: 800;
+}
+
+.score-difference-cell {
+  color: var(--score-high);
+  font-weight: 700;
+}
+
+.score-difference-even {
+  color: var(--muted);
+}
+
+.winner-card-grid,
+.advantage-grid,
+.verdict-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.winner-card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.advantage-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.verdict-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.winner-card,
+.advantage-card,
+.verdict-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: #f9fbfd;
+  padding: var(--space-3);
+  display: grid;
+  gap: var(--space-2);
+}
+
+.winner-card-label {
+  margin: 0;
+  color: #5f7186;
+  font-size: var(--fs-meta);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.winner-card-name {
+  margin: 0;
+  color: #0f1f35;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: var(--lh-tight);
+}
+
+.compare-picker-section {
+  align-items: start;
+}
+
+.compare-select-label {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 420px;
+  width: 100%;
+  color: #334155;
+  font-weight: 650;
+}
+
+.compare-select-label select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  color: var(--text);
+  font-size: var(--fs-body);
+  padding: 0 var(--space-3);
+}
+
+@media (max-width: 900px) {
+  .versus-hero-card,
+  .winner-card-grid,
+  .advantage-grid,
+  .verdict-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .versus-divider {
+    margin: -0.2rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .base-card-compare-link {
+    margin-left: 0;
+  }
+
+  .versus-base-card {
+    grid-template-columns: 1fr;
+  }
+
+  .versus-base-image {
+    min-height: 180px;
+  }
+
+  .score-comparison-table {
+    min-width: 560px;
+  }
+}
