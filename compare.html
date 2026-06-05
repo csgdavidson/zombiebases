@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Zombie Survival Bases | Zombie Bases</title>
+  <meta name="description" content="Compare two zombie survival bases across overall score, defensibility, sustainability, isolation, exposure, maintenance, population capacity, and resource security.">
+  <link rel="canonical" href="https://zombiebases.com/compare.html">
+  <meta property="og:title" content="Compare Zombie Survival Bases | Zombie Bases">
+  <meta property="og:description" content="Compare two zombie survival bases using deterministic score logic and category verdicts.">
+  <meta property="og:url" content="https://zombiebases.com/compare.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://zombiebases.com/images/bases/placeholder.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Compare Zombie Survival Bases | Zombie Bases">
+  <meta name="twitter:description" content="Compare two zombie survival bases using deterministic score logic and category verdicts.">
+  <meta name="twitter:image" content="https://zombiebases.com/images/bases/placeholder.png">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="site-brand"><a class="home-link" href="/">Zombie Bases</a></p>
+    </div>
+  </header>
+
+  <main class="base-detail-main comparison-page-main">
+    <p id="compare-status" role="status" aria-live="polite"></p>
+
+    <article id="compare-page" class="base-page versus-page" hidden>
+      <header class="detail-hero versus-hero">
+        <div class="base-header">
+          <a class="back-link" href="/">← Back to List</a>
+          <h1 id="comparison-title">Base vs Base</h1>
+        </div>
+
+        <section class="content-section versus-hero-card" aria-label="Comparison hero">
+          <article id="hero-base-a" class="versus-base-card"></article>
+          <div class="versus-divider" aria-hidden="true">VS</div>
+          <article id="hero-base-b" class="versus-base-card"></article>
+        </section>
+      </header>
+
+      <section class="content-section score-comparison-section" aria-label="Score comparison">
+        <h3>Score Comparison</h3>
+        <div class="score-comparison-table-wrap">
+          <table class="score-comparison-table">
+            <thead>
+              <tr>
+                <th scope="col">Score</th>
+                <th id="score-base-a" scope="col">Base A</th>
+                <th id="score-base-b" scope="col">Base B</th>
+                <th scope="col">Difference</th>
+              </tr>
+            </thead>
+            <tbody id="score-comparison-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="content-section" aria-label="Category winners">
+        <h3>Category Winners</h3>
+        <div id="category-winners" class="winner-card-grid"></div>
+      </section>
+
+      <section class="content-section" aria-label="Biggest advantages">
+        <h3>Biggest Advantage</h3>
+        <div id="biggest-advantages" class="advantage-grid"></div>
+      </section>
+
+      <section class="content-section" aria-label="Deterministic verdicts">
+        <h3>Verdict</h3>
+        <div id="verdict-list" class="verdict-grid"></div>
+      </section>
+
+      <section class="content-section compare-picker-section" aria-label="Compare against another base">
+        <h3>Compare against another base</h3>
+        <p class="base-meta">Choose a different base to replace the second side of this comparison.</p>
+        <label for="compare-against-select" class="compare-select-label">
+          Base
+          <select id="compare-against-select"></select>
+        </label>
+      </section>
+    </article>
+
+    <section id="compare-setup" class="content-section compare-picker-section" hidden>
+      <h1>Compare bases</h1>
+      <p class="base-meta">Select a second base to start a direct comparison.</p>
+      <label for="compare-setup-primary" class="compare-select-label">
+        First base
+        <select id="compare-setup-primary"></select>
+      </label>
+      <label for="compare-setup-secondary" class="compare-select-label">
+        Second base
+        <select id="compare-setup-secondary"></select>
+      </label>
+      <button id="compare-setup-button" class="compare-button" type="button">Compare bases</button>
+    </section>
+
+    <section id="compare-not-found" class="not-found" hidden>
+      <h2>Comparison unavailable</h2>
+      <p id="compare-not-found-message">We couldn't find one of the bases for this comparison.</p>
+      <a href="/">Back to homepage</a>
+    </section>
+  </main>
+
+  <script src="/js/seo.js" defer></script>
+  <script src="/js/slug.js" defer></script>
+  <script src="/js/compare.js" defer></script>
+</body>
+</html>

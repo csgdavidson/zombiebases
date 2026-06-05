@@ -1,0 +1,503 @@
+const DATA_URL = '/data/bases-index.json';
+const LEGACY_DATA_URL = '/data/bases.json';
+const HERO_IMAGE_FALLBACK_URL = '/images/bases/placeholder.png';
+
+const LABELS = {
+  type: {
+    fortified_structure: 'Fortified Structure',
+    isolated_landmass: 'Isolated Landmass',
+    elevated_stronghold: 'Elevated Stronghold',
+    subterranean: 'Subterranean',
+    institutional_compound: 'Institutional Compound',
+    industrial_site: 'Industrial Site',
+    remote_settlement: 'Remote Settlement',
+    transit_hub: 'Transit Hub',
+    landmark_structure: 'Landmark Structure'
+  },
+  region: {
+    uk_ireland: 'UK & Ireland',
+    western_europe: 'Western Europe',
+    eastern_europe: 'Eastern & Northern Europe',
+    north_america: 'North America',
+    south_america: 'South America',
+    africa: 'Africa',
+    middle_east: 'Middle East',
+    south_asia: 'South Asia',
+    east_asia: 'East Asia',
+    southeast_asia: 'Southeast Asia',
+    oceania: 'Oceania',
+    polar_extreme: 'Polar & Extreme'
+  }
+};
+
+const SCORE_ROWS = [
+  { key: 'overall', label: 'Overall', source: 'overall', higherIsBetter: true },
+  { key: 'defensibility', label: 'Defensibility', source: 'category', higherIsBetter: true },
+  { key: 'sustainability', label: 'Sustainability', source: 'category', higherIsBetter: true },
+  { key: 'isolation', label: 'Isolation', source: 'category', higherIsBetter: true },
+  { key: 'exposure', label: 'Exposure', source: 'comparison', higherIsBetter: true },
+  { key: 'maintenanceBurden', label: 'Maintenance Burden', source: 'comparison', higherIsBetter: true },
+  { key: 'populationCapacity', label: 'Population Capacity', source: 'comparison', higherIsBetter: true },
+  { key: 'resourceSecurity', label: 'Resource Security', source: 'comparison', higherIsBetter: true }
+];
+
+const WINNER_CARDS = [
+  { title: 'Best Defended', keys: ['defensibility'] },
+  { title: 'Best Long-Term Survivor', keys: ['sustainability', 'resourceSecurity', 'populationCapacity'] },
+  { title: 'Lowest Exposure', keys: ['exposure'] },
+  { title: 'Lowest Maintenance Burden', keys: ['maintenanceBurden'] },
+  { title: 'Largest Population Capacity', keys: ['populationCapacity'] },
+  { title: 'Strongest Resource Security', keys: ['resourceSecurity'] }
+];
+
+const VERDICTS = [
+  {
+    title: 'Early Outbreak Winner',
+    keys: ['defensibility', 'isolation', 'exposure'],
+    reason: (winner) => `${winner.name}'s balance of defensibility, isolation, and exposure control makes it harder to overrun during the first phase of collapse.`
+  },
+  {
+    title: 'Long-Term Winner',
+    keys: ['sustainability', 'resourceSecurity', 'populationCapacity'],
+    reason: (winner) => `${winner.name}'s long-term profile is stronger because sustainability, resource security, and settlement capacity carry more weight after the first wave passes.`
+  },
+  {
+    title: 'Low-Maintenance Winner',
+    keys: ['maintenanceBurden'],
+    reason: (winner) => `${winner.name} is the easier base to keep functioning because its maintenance score indicates the lower upkeep burden.`
+  },
+  {
+    title: 'Best Overall',
+    keys: ['overall'],
+    reason: (winner) => `${winner.name} has the higher overall score across the full survival profile.`
+  }
+];
+
+const elements = {
+  status: document.getElementById('compare-status'),
+  page: document.getElementById('compare-page'),
+  setup: document.getElementById('compare-setup'),
+  notFound: document.getElementById('compare-not-found'),
+  notFoundMessage: document.getElementById('compare-not-found-message'),
+  title: document.getElementById('comparison-title'),
+  heroA: document.getElementById('hero-base-a'),
+  heroB: document.getElementById('hero-base-b'),
+  scoreBaseA: document.getElementById('score-base-a'),
+  scoreBaseB: document.getElementById('score-base-b'),
+  scoreBody: document.getElementById('score-comparison-body'),
+  winners: document.getElementById('category-winners'),
+  advantages: document.getElementById('biggest-advantages'),
+  verdicts: document.getElementById('verdict-list'),
+  compareAgainst: document.getElementById('compare-against-select'),
+  setupPrimary: document.getElementById('compare-setup-primary'),
+  setupSecondary: document.getElementById('compare-setup-secondary'),
+  setupButton: document.getElementById('compare-setup-button')
+};
+
+const slugHelper = window.baseSlugHelper;
+
+function toTitleCaseSlug(value) {
+  return String(value || '')
+    .split('_')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+}
+
+function labelFor(kind, value) {
+  return LABELS[kind][value] ?? toTitleCaseSlug(value);
+}
+
+function isValidScoreValue(value) {
+  return Number.isFinite(value);
+}
+
+function formatScore(value) {
+  return isValidScoreValue(value) ? value.toFixed(1) : '—';
+}
+
+function formatDifference(value) {
+  if (!isValidScoreValue(value) || Math.abs(value) < 0.05) {
+    return 'Even';
+  }
+  return `${value > 0 ? '+' : ''}${value.toFixed(1)}`;
+}
+
+function scoreToneClass(value) {
+  if (!isValidScoreValue(value)) return '';
+  if (value >= 8) return 'score-high';
+  if (value >= 5) return 'score-medium';
+  return 'score-low';
+}
+
+function preferredSlugFor(baseOrSlug) {
+  return slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(baseOrSlug) : (typeof baseOrSlug === 'string' ? baseOrSlug : baseOrSlug?.slug || '');
+}
+
+function compareUrl(slugA, slugB) {
+  return slugHelper?.getCompareUrl ? slugHelper.getCompareUrl(slugA, slugB) : `/base/${encodeURIComponent(slugA)}/vs/${encodeURIComponent(slugB)}`;
+}
+
+function baseUrl(base) {
+  return slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(base) : `/${encodeURIComponent(preferredSlugFor(base))}`;
+}
+
+function setupUrl(base) {
+  return slugHelper?.getCompareSetupUrl ? slugHelper.getCompareSetupUrl(base) : `/compare.html?base=${encodeURIComponent(preferredSlugFor(base))}`;
+}
+
+function getScore(base, rowOrKey) {
+  const row = typeof rowOrKey === 'string'
+    ? SCORE_ROWS.find((item) => item.key === rowOrKey)
+    : rowOrKey;
+
+  if (!row) return null;
+  if (row.source === 'overall') return isValidScoreValue(base?.scores?.overall) ? base.scores.overall : null;
+  if (row.source === 'category') return isValidScoreValue(base?.scores?.categories?.[row.key]) ? base.scores.categories[row.key] : null;
+  return isValidScoreValue(base?.comparisonScores?.[row.key]?.score) ? base.comparisonScores[row.key].score : null;
+}
+
+function normalizedDiff(baseA, baseB, row) {
+  const scoreA = getScore(baseA, row);
+  const scoreB = getScore(baseB, row);
+  if (!isValidScoreValue(scoreA) || !isValidScoreValue(scoreB)) return null;
+  return row.higherIsBetter ? scoreA - scoreB : scoreB - scoreA;
+}
+
+function winnerForRows(baseA, baseB, keys) {
+  const rows = keys.map((key) => SCORE_ROWS.find((row) => row.key === key)).filter(Boolean);
+  const validRows = rows.filter((row) => isValidScoreValue(getScore(baseA, row)) && isValidScoreValue(getScore(baseB, row)));
+  if (!validRows.length) return { winner: null, margin: null, rows: [] };
+
+  const total = validRows.reduce((sum, row) => sum + normalizedDiff(baseA, baseB, row), 0);
+  return {
+    winner: Math.abs(total) < 0.05 ? null : (total > 0 ? baseA : baseB),
+    margin: total,
+    rows: validRows
+  };
+}
+
+function renderHeroCard(container, base, overallWinner) {
+  const overall = getScore(base, 'overall');
+  const slug = preferredSlugFor(base);
+  const isWinner = overallWinner && preferredSlugFor(overallWinner) === slug;
+  container.className = `versus-base-card${isWinner ? ' versus-base-card-winner' : ''}`;
+  container.innerHTML = '';
+
+  const image = document.createElement('img');
+  image.className = 'versus-base-image';
+  image.src = base.image || `/images/bases/${slug}.png`;
+  image.alt = `${base.name} base image`;
+  image.loading = 'eager';
+  image.decoding = 'async';
+  image.addEventListener('error', () => {
+    image.src = HERO_IMAGE_FALLBACK_URL;
+  }, { once: true });
+
+  const content = document.createElement('div');
+  content.className = 'versus-base-content';
+
+  const title = document.createElement('h2');
+  const link = document.createElement('a');
+  link.href = baseUrl(base);
+  link.textContent = base.name;
+  title.appendChild(link);
+
+  const meta = document.createElement('p');
+  meta.className = 'base-meta';
+  meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
+
+  const score = document.createElement('p');
+  score.className = `detail-overall-score versus-overall-score ${scoreToneClass(overall)}`.trim();
+  score.textContent = isValidScoreValue(overall) ? `${overall.toFixed(1)}/10` : 'Score unavailable';
+
+  const badge = document.createElement('span');
+  badge.className = `badge ${isWinner ? 'badge-tier' : 'badge-trait'}`;
+  badge.textContent = isWinner ? 'Higher Overall' : 'Challenger';
+
+  content.append(title, meta, score, badge);
+  container.append(image, content);
+}
+
+function renderScoreRows(baseA, baseB) {
+  elements.scoreBody.innerHTML = '';
+  elements.scoreBaseA.textContent = baseA.name;
+  elements.scoreBaseB.textContent = baseB.name;
+
+  SCORE_ROWS.forEach((row) => {
+    const scoreA = getScore(baseA, row);
+    const scoreB = getScore(baseB, row);
+    if (!isValidScoreValue(scoreA) && !isValidScoreValue(scoreB)) return;
+
+    const diff = normalizedDiff(baseA, baseB, row);
+    const winner = !isValidScoreValue(diff) || Math.abs(diff) < 0.05 ? null : (diff > 0 ? 'a' : 'b');
+    const tableRow = document.createElement('tr');
+    tableRow.className = winner ? 'has-score-winner' : 'score-tie-row';
+
+    const label = document.createElement('th');
+    label.scope = 'row';
+    label.textContent = row.label;
+
+    const aCell = document.createElement('td');
+    aCell.className = winner === 'a' ? 'score-cell-winner' : '';
+    aCell.textContent = formatScore(scoreA);
+
+    const bCell = document.createElement('td');
+    bCell.className = winner === 'b' ? 'score-cell-winner' : '';
+    bCell.textContent = formatScore(scoreB);
+
+    const diffCell = document.createElement('td');
+    diffCell.className = winner ? 'score-difference-cell' : 'score-difference-even';
+    diffCell.textContent = isValidScoreValue(diff)
+      ? `${formatDifference(Math.abs(diff))}${winner ? ` ${winner === 'a' ? baseA.name : baseB.name}` : ''}`
+      : '—';
+
+    tableRow.append(label, aCell, bCell, diffCell);
+    elements.scoreBody.appendChild(tableRow);
+  });
+}
+
+function renderWinnerCards(baseA, baseB) {
+  elements.winners.innerHTML = '';
+
+  WINNER_CARDS.forEach((card) => {
+    const result = winnerForRows(baseA, baseB, card.keys);
+    const article = document.createElement('article');
+    article.className = 'winner-card';
+
+    const title = document.createElement('p');
+    title.className = 'winner-card-label';
+    title.textContent = card.title;
+
+    const winner = document.createElement('p');
+    winner.className = 'winner-card-name';
+    winner.textContent = result.winner ? result.winner.name : 'Tie';
+
+    const detail = document.createElement('p');
+    detail.className = 'comparison-values';
+    detail.textContent = result.rows.map((row) => `${row.label}: ${formatDifference(Math.abs(normalizedDiff(baseA, baseB, row)))}`).join(' • ') || 'Insufficient scores';
+
+    article.append(title, winner, detail);
+    elements.winners.appendChild(article);
+  });
+}
+
+function biggestAdvantageFor(base, opponent) {
+  const advantages = SCORE_ROWS
+    .filter((row) => row.key !== 'overall')
+    .map((row) => ({ row, diff: normalizedDiff(base, opponent, row) }))
+    .filter((item) => isValidScoreValue(item.diff) && item.diff > 0.05)
+    .sort((a, b) => b.diff - a.diff || a.row.label.localeCompare(b.row.label));
+  return advantages[0] || null;
+}
+
+function renderAdvantages(baseA, baseB) {
+  elements.advantages.innerHTML = '';
+  [
+    { base: baseA, opponent: baseB },
+    { base: baseB, opponent: baseA }
+  ].forEach(({ base, opponent }) => {
+    const advantage = biggestAdvantageFor(base, opponent);
+    const card = document.createElement('article');
+    card.className = 'advantage-card';
+    const line = document.createElement('p');
+    line.className = 'comparison-primary comparison-primary-positive';
+    line.textContent = advantage
+      ? `${base.name}'s biggest advantage is ${advantage.row.label} (+${advantage.diff.toFixed(1)})`
+      : `${base.name} has no positive scoring advantage over ${opponent.name}.`;
+    card.appendChild(line);
+    elements.advantages.appendChild(card);
+  });
+}
+
+function renderVerdicts(baseA, baseB) {
+  elements.verdicts.innerHTML = '';
+
+  VERDICTS.forEach((verdict) => {
+    const result = winnerForRows(baseA, baseB, verdict.keys);
+    const winner = result.winner;
+    const card = document.createElement('article');
+    card.className = 'verdict-card';
+
+    const title = document.createElement('p');
+    title.className = 'winner-card-label';
+    title.textContent = verdict.title;
+
+    const name = document.createElement('p');
+    name.className = 'winner-card-name';
+    name.textContent = winner ? winner.name : 'Tie';
+
+    const reason = document.createElement('p');
+    reason.className = 'base-summary';
+    reason.textContent = winner
+      ? verdict.reason(winner, result)
+      : 'The weighted score inputs are effectively even, so neither base has a deterministic edge here.';
+
+    card.append(title, name, reason);
+    elements.verdicts.appendChild(card);
+  });
+}
+
+function populateSelect(select, bases, options = {}) {
+  select.innerHTML = '';
+  if (options.placeholder) {
+    const placeholder = document.createElement('option');
+    placeholder.value = '';
+    placeholder.textContent = options.placeholder;
+    select.appendChild(placeholder);
+  }
+
+  bases
+    .filter((base) => preferredSlugFor(base) !== options.excludeSlug)
+    .slice()
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .forEach((base) => {
+      const option = document.createElement('option');
+      option.value = preferredSlugFor(base);
+      option.textContent = base.name;
+      select.appendChild(option);
+    });
+
+  if (options.value) {
+    select.value = options.value;
+  }
+}
+
+function updateMetadata(baseA, baseB) {
+  if (!window.seo) return;
+  const title = `${baseA.name} vs ${baseB.name} | Zombie Bases`;
+  const description = `Compare ${baseA.name} and ${baseB.name} across survival scores, category winners, biggest advantages, and deterministic verdicts.`;
+  const canonicalPath = `/base/${preferredSlugFor(baseA)}/vs/${preferredSlugFor(baseB)}`;
+  const canonicalUrl = `${window.seo.PRODUCTION_ORIGIN}${canonicalPath}`;
+
+  window.seo.applyPageMetadata({ title, description, canonicalPath, canonicalParams: null });
+  window.seo.applySocialMetadata({
+    title,
+    description,
+    url: canonicalUrl,
+    type: 'website',
+    image: `${window.seo.PRODUCTION_ORIGIN}/images/bases/${encodeURIComponent(preferredSlugFor(baseA))}.png`
+  });
+}
+
+function renderComparison(baseA, baseB, bases) {
+  const overallResult = winnerForRows(baseA, baseB, ['overall']);
+  elements.title.textContent = `${baseA.name} vs ${baseB.name}`;
+  renderHeroCard(elements.heroA, baseA, overallResult.winner);
+  renderHeroCard(elements.heroB, baseB, overallResult.winner);
+  renderScoreRows(baseA, baseB);
+  renderWinnerCards(baseA, baseB);
+  renderAdvantages(baseA, baseB);
+  renderVerdicts(baseA, baseB);
+  populateSelect(elements.compareAgainst, bases, {
+    placeholder: 'Select another base',
+    excludeSlug: preferredSlugFor(baseA)
+  });
+  elements.compareAgainst.addEventListener('change', () => {
+    if (elements.compareAgainst.value) {
+      window.location.href = compareUrl(preferredSlugFor(baseA), elements.compareAgainst.value);
+    }
+  });
+  updateMetadata(baseA, baseB);
+  elements.status.textContent = '';
+  elements.setup.hidden = true;
+  elements.notFound.hidden = true;
+  elements.page.hidden = false;
+}
+
+function getRequestedSlugs() {
+  const params = new URLSearchParams(window.location.search);
+  const pathParts = window.location.pathname.split('/').filter(Boolean).map((part) => decodeURIComponent(part));
+  const baseIndex = pathParts.findIndex((part) => part.toLowerCase() === 'base');
+  const vsIndex = pathParts.findIndex((part) => part.toLowerCase() === 'vs');
+
+  if (baseIndex !== -1 && vsIndex === baseIndex + 2 && pathParts[baseIndex + 1] && pathParts[vsIndex + 1]) {
+    return { slugA: pathParts[baseIndex + 1], slugB: pathParts[vsIndex + 1] };
+  }
+
+  return {
+    slugA: params.get('a') || params.get('base') || '',
+    slugB: params.get('b') || params.get('against') || ''
+  };
+}
+
+function showNotFound(message) {
+  elements.status.textContent = '';
+  elements.page.hidden = true;
+  elements.setup.hidden = true;
+  elements.notFoundMessage.textContent = message;
+  elements.notFound.hidden = false;
+}
+
+function showSetup(bases, slugA = '', slugB = '') {
+  populateSelect(elements.setupPrimary, bases, { placeholder: 'Select first base', value: slugA });
+  populateSelect(elements.setupSecondary, bases, { placeholder: 'Select second base', value: slugB, excludeSlug: slugA });
+
+  elements.setupPrimary.addEventListener('change', () => {
+    populateSelect(elements.setupSecondary, bases, {
+      placeholder: 'Select second base',
+      excludeSlug: elements.setupPrimary.value,
+      value: elements.setupSecondary.value
+    });
+  });
+  elements.setupButton.addEventListener('click', () => {
+    if (elements.setupPrimary.value && elements.setupSecondary.value) {
+      window.location.href = compareUrl(elements.setupPrimary.value, elements.setupSecondary.value);
+    }
+  });
+
+  elements.status.textContent = '';
+  elements.page.hidden = true;
+  elements.notFound.hidden = true;
+  elements.setup.hidden = false;
+}
+
+async function loadBasesData() {
+  const candidates = [DATA_URL, LEGACY_DATA_URL];
+  let lastError = null;
+
+  for (const url of candidates) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        lastError = new Error(`Failed to load base data from ${url} (${response.status})`);
+        continue;
+      }
+      const payload = await response.json();
+      if (Array.isArray(payload)) return payload;
+      if (Array.isArray(payload?.bases)) return payload.bases;
+      lastError = new Error(`Unexpected base data shape from ${url}`);
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  throw lastError || new Error('Unable to load base data');
+}
+
+async function initComparison() {
+  elements.status.textContent = 'Loading comparison...';
+  try {
+    const bases = await loadBasesData();
+    const { slugA, slugB } = getRequestedSlugs();
+    const baseA = slugA ? slugHelper?.resolveBaseBySlug?.(bases, slugA) || bases.find((base) => preferredSlugFor(base) === slugA) : null;
+    const baseB = slugB ? slugHelper?.resolveBaseBySlug?.(bases, slugB) || bases.find((base) => preferredSlugFor(base) === slugB) : null;
+
+    if (slugA && slugB && (!baseA || !baseB)) {
+      const missing = [!baseA ? slugA : null, !baseB ? slugB : null].filter(Boolean).join(' and ');
+      showNotFound(`We couldn't find ${missing} in the current base dataset.`);
+      return;
+    }
+
+    if (!baseA || !baseB) {
+      showSetup(bases, baseA ? preferredSlugFor(baseA) : slugA, baseB ? preferredSlugFor(baseB) : slugB);
+      return;
+    }
+
+    renderComparison(baseA, baseB, bases);
+  } catch (error) {
+    console.error(error);
+    showNotFound('The comparison data could not be loaded. Please try again later.');
+  }
+}
+
+initComparison();

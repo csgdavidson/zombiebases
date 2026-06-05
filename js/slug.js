@@ -89,6 +89,25 @@
     return `/${encodeURIComponent(slug)}`;
   }
 
+  function getCompareSetupUrl(baseOrSlug) {
+    const slug = getPreferredSlug(baseOrSlug);
+    const params = new URLSearchParams();
+    if (slug) {
+      params.set('base', slug);
+    }
+    const query = params.toString();
+    return query ? `/compare.html?${query}` : '/compare.html';
+  }
+
+  function getCompareUrl(baseA, baseB) {
+    const slugA = getPreferredSlug(baseA);
+    const slugB = getPreferredSlug(baseB);
+    if (!slugA || !slugB) {
+      return getCompareSetupUrl(slugA || slugB || '');
+    }
+    return `/base/${encodeURIComponent(slugA)}/vs/${encodeURIComponent(slugB)}`;
+  }
+
   function getBaseSlugFromLocation(location = window.location) {
     const params = new URLSearchParams(location.search || '');
     const fromQuery = normalizeSlugCandidate(params.get('slug') || '');
@@ -204,6 +223,8 @@
     deriveSlug,
     getPreferredSlug,
     getBaseUrl,
+    getCompareSetupUrl,
+    getCompareUrl,
     getBaseSlugFromLocation,
     resolveBaseBySlug,
     normalizeSlugCandidate,

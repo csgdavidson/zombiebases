@@ -55,6 +55,7 @@ const elements = {
   keyRiskText: document.getElementById('base-key-risk'),
   metaRow: document.getElementById('base-meta-row'),
   backLink: document.getElementById('back-link'),
+  compareLink: document.getElementById('compare-link'),
   heroSection: document.getElementById('hero-section'),
   heroImage: document.getElementById('base-hero-image'),
   scoreSection: document.getElementById('score-section'),
@@ -337,6 +338,17 @@ function renderMetaRow(base) {
     elements.metaRow.appendChild(listItem);
   });
   elements.metaRow.hidden = elements.metaRow.children.length === 0;
+}
+
+function renderCompareEntry(base) {
+  if (!elements.compareLink) {
+    return;
+  }
+
+  elements.compareLink.href = slugHelper?.getCompareSetupUrl
+    ? slugHelper.getCompareSetupUrl(base)
+    : `/compare.html?base=${encodeURIComponent(base.slug)}`;
+  elements.compareLink.hidden = false;
 }
 
 function renderHero(base) {
@@ -1020,6 +1032,7 @@ function showBase(base, bases, params, stats, rankings, discovery) {
   elements.name.textContent = base.name;
   applyDetailMetadata(base);
   renderMetaRow(base);
+  renderCompareEntry(base);
   renderHero(base);
   renderSummary(base);
   renderHeroTraits(base);
