@@ -39,6 +39,13 @@ const SCORE_LABELS = {
   sustainability: 'Sustainability'
 };
 
+const SURVIVAL_CHARACTERISTIC_LABELS = {
+  exposure: 'Exposure',
+  maintenanceBurden: 'Maintenance Burden',
+  populationCapacity: 'Population Capacity',
+  resourceSecurity: 'Resource Security'
+};
+
 const elements = {
   status: document.getElementById('detail-status'),
   detail: document.getElementById('base-detail'),
@@ -75,6 +82,8 @@ const elements = {
   similarSection: document.getElementById('similar-section'),
   similarList: document.getElementById('similar-bases-list'),
   similarExploreLink: document.getElementById('similar-explore-link'),
+  survivalCharacteristicsSection: document.getElementById('survival-characteristics-section'),
+  survivalCharacteristicsGrid: document.getElementById('survival-characteristics-grid'),
   survivalProfileSection: document.getElementById('survival-profile-section'),
   survivalTimelineCards: document.getElementById('survival-timeline-cards'),
   realityCheckRow: document.getElementById('base-reality-check-row'),
@@ -443,6 +452,29 @@ function getSurvivalProfile(base) {
   };
 }
 
+function getSurvivalCharacteristics(base) {
+  const source = base?.comparisonScores;
+  if (!source || typeof source !== 'object') {
+    return [];
+  }
+
+  return Object.entries(SURVIVAL_CHARACTERISTIC_LABELS)
+    .map(([key, label]) => {
+      const entry = source[key];
+      if (!entry || typeof entry !== 'object' || !isValidScoreValue(entry.score)) {
+        return null;
+      }
+
+      return {
+        key,
+        label,
+        score: entry.score,
+        rationale: isNonEmptyString(entry.rationale) ? entry.rationale.trim() : ''
+      };
+    })
+    .filter(Boolean);
+}
+
 function getUseCaseAndRisk(base) {
   return {
     bestUseCase: base?.useCaseAndRisk?.bestUseCase ?? null,
@@ -632,6 +664,58 @@ function renderRealityCheck(base) {
   }
 
   elements.realityCheckText.textContent = content;
+}
+
+function renderSurvivalCharacteristics(base) {
+  if (!elements.survivalCharacteristicsSection || !elements.survivalCharacteristicsGrid) {
+    return;
+  }
+
+  const characteristics = getSurvivalCharacteristics(base);
+  elements.survivalCharacteristicsGrid.innerHTML = '';
+  elements.survivalCharacteristicsSection.hidden = characteristics.length === 0;
+
+  if (!characteristics.length) {
+    return;
+  }
+
+  characteristics.forEach((characteristic) => {
+    const card = document.createElement('article');
+    card.className = 'survival-characteristic-card';
+
+    const header = document.createElement('div');
+    header.className = 'survival-characteristic-card-header';
+
+    const label = document.createElement('p');
+    label.className = 'survival-characteristic-label';
+    label.textContent = characteristic.label;
+
+    const score = document.createElement('p');
+    score.className = `survival-characteristic-score ${scoreToneClass(characteristic.score)}`.trim();
+    score.textContent = `${characteristic.score.toFixed(1)}/10`;
+
+    header.append(label, score);
+
+    const meter = document.createElement('div');
+    meter.className = 'survival-characteristic-meter';
+    meter.setAttribute('aria-hidden', 'true');
+
+    const meterFill = document.createElement('span');
+    meterFill.className = `survival-characteristic-meter-fill ${scoreToneClass(characteristic.score)}`.trim();
+    meterFill.style.width = `${Math.max(0, Math.min(10, characteristic.score)) * 10}%`;
+    meter.appendChild(meterFill);
+
+    card.append(header, meter);
+
+    if (characteristic.rationale) {
+      const rationale = document.createElement('p');
+      rationale.className = 'survival-characteristic-rationale';
+      rationale.textContent = characteristic.rationale;
+      card.appendChild(rationale);
+    }
+
+    elements.survivalCharacteristicsGrid.appendChild(card);
+  });
 }
 
 function renderScore(base) {
@@ -1038,6 +1122,7 @@ function showBase(base, bases, params, stats, rankings, discovery) {
   renderHeroTraits(base);
   renderUseCaseAndRisk(base);
   renderScore(base);
+  renderSurvivalCharacteristics(base);
   renderRankingPosition(base, rankings);
   renderComparison(base, stats);
   renderSurvivalProfile(base);
