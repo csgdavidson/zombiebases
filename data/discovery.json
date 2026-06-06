@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-06T19:31:39.511760+00:00",
-  "sourceDigest": "ea31d095adafd49162206b4bbbd15baa8e19dddabb2a0e9b1bf660448dc6c31f",
-  "totalBases": 156,
+  "generatedAt": "2026-06-06T19:51:14.649195+00:00",
+  "sourceDigest": "78c8f597eb43db46b0cd224f483e8c648ec45b5a22a7d531cac1ae1ecc7a0e3c",
+  "totalBases": 131,
   "scenarioOrder": [
     "long_term_survival",
     "short_term_refuge",
@@ -195,14 +195,6 @@
         "reason": "Comparable survival shape, but with stronger defensive coverage."
       },
       {
-        "slug": "olenya-air-base",
-        "name": "Olenya Air Base",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "overall": 5.8,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
         "slug": "vietnam-tunnel-systems",
         "name": "Vietnam Tunnel Systems",
         "region": "southeast_asia",
@@ -217,6 +209,14 @@
         "type": "elevated_stronghold",
         "overall": 6.0,
         "reason": "Comparable frontline profile with stronger long-term viability."
+      },
+      {
+        "slug": "the-roaches",
+        "name": "The Roaches",
+        "region": "uk_ireland",
+        "type": "elevated_stronghold",
+        "overall": 5.9,
+        "reason": "Comparable survival shape, but with weaker defensive coverage."
       }
     ],
     "bonny-island-lng-terminal": [
@@ -303,48 +303,6 @@
         "reason": "Similar trade-off between protection and sustainability."
       }
     ],
-    "un-base-in-juba-unmiss-hq-south-sudan": [
-      {
-        "slug": "fort-copacabana",
-        "name": "Fort Copacabana",
-        "region": "south_america",
-        "type": "fortified_structure",
-        "overall": 5.3,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "ryongsong-residence-compound",
-        "name": "Ryongsong Residence Compound",
-        "region": "east_asia",
-        "type": "institutional_compound",
-        "overall": 5.7,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "north-head-gun-emplacements",
-        "name": "North Head Gun Emplacements",
-        "region": "oceania",
-        "type": "subterranean",
-        "overall": 4.8,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "great-mosque-of-djenne",
-        "name": "Great Mosque of Djenn\u00e9",
-        "region": "africa",
-        "type": "landmark_structure",
-        "overall": 4.9,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
-        "slug": "nato-airbase-geilenkirchen",
-        "name": "NATO Airbase Geilenkirchen",
-        "region": "western_europe",
-        "type": "institutional_compound",
-        "overall": 6.0,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      }
-    ],
     "seychelles": [
       {
         "slug": "andaman-islands",
@@ -429,73 +387,7 @@
         "reason": "Strong defence profile with a different regional context."
       }
     ],
-    "cape-point-lighthouse": [
-      {
-        "slug": "naours-underground-city",
-        "name": "Naours Underground City",
-        "region": "western_europe",
-        "type": "subterranean",
-        "overall": 5.0,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "ajanta-caves",
-        "name": "Ajanta Caves",
-        "region": "south_asia",
-        "type": "subterranean",
-        "overall": 5.7,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "cheddar-gorge-caves",
-        "name": "Cheddar Gorge Caves",
-        "region": "uk_ireland",
-        "type": "subterranean",
-        "overall": 5.3,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "potosi-silver-mine-cerro-rico",
-        "name": "Potos\u00ed Silver Mine (Cerro Rico)",
-        "region": "south_america",
-        "type": "subterranean",
-        "overall": 5.0,
-        "reason": "Comparable isolation, but weaker long-term viability."
-      },
-      {
-        "slug": "the-roaches",
-        "name": "The Roaches",
-        "region": "uk_ireland",
-        "type": "elevated_stronghold",
-        "overall": 5.9,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      }
-    ],
     "great-mosque-of-djenne": [
-      {
-        "slug": "un-base-in-juba-unmiss-hq-south-sudan",
-        "name": "UN Base in Juba (UNMISS HQ, South Sudan)",
-        "region": "africa",
-        "type": "institutional_compound",
-        "overall": 5.3,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "ruhr-industrial-complex",
-        "name": "Ruhr Industrial Complex",
-        "region": "western_europe",
-        "type": "industrial_site",
-        "overall": 5.1,
-        "reason": "Comparable survival shape, but with stronger long-term viability."
-      },
-      {
-        "slug": "port-talbot-steelworks",
-        "name": "Port Talbot Steelworks",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.6,
-        "reason": "Comparable frontline profile with stronger long-term viability."
-      },
       {
         "slug": "fort-copacabana",
         "name": "Fort Copacabana",
@@ -505,12 +397,36 @@
         "reason": "Comparable survival shape, but with stronger defensive coverage."
       },
       {
-        "slug": "gdansk-shipyard",
-        "name": "Gda\u0144sk Shipyard",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "overall": 5.4,
+        "slug": "eguisheim",
+        "name": "Eguisheim",
+        "region": "western_europe",
+        "type": "remote_settlement",
+        "overall": 5.0,
         "reason": "Comparable survival shape, but with stronger long-term viability."
+      },
+      {
+        "slug": "north-head-gun-emplacements",
+        "name": "North Head Gun Emplacements",
+        "region": "oceania",
+        "type": "subterranean",
+        "overall": 4.8,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
+      },
+      {
+        "slug": "bonny-island-lng-terminal",
+        "name": "Bonny Island LNG Terminal",
+        "region": "africa",
+        "type": "industrial_site",
+        "overall": 6.1,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
+      },
+      {
+        "slug": "naours-underground-city",
+        "name": "Naours Underground City",
+        "region": "western_europe",
+        "type": "subterranean",
+        "overall": 5.0,
+        "reason": "Comparable survival shape, but with stronger isolation."
       }
     ],
     "ait-benhaddou": [
@@ -565,14 +481,6 @@
         "reason": "Similar trade-off between protection and sustainability."
       },
       {
-        "slug": "la-rinconada",
-        "name": "La Rinconada",
-        "region": "south_america",
-        "type": "elevated_stronghold",
-        "overall": 5.1,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
         "slug": "waw-an-namus-cave-system",
         "name": "Waw an Namus Cave System",
         "region": "africa",
@@ -595,6 +503,14 @@
         "type": "remote_settlement",
         "overall": 5.0,
         "reason": "Comparable survival shape, but with weaker defensive coverage."
+      },
+      {
+        "slug": "longyearbyen",
+        "name": "Longyearbyen",
+        "region": "eastern_europe",
+        "type": "remote_settlement",
+        "overall": 6.4,
+        "reason": "Comparable frontline profile with stronger long-term viability."
       }
     ],
     "waw-an-namus-cave-system": [
@@ -849,90 +765,6 @@
         "reason": "Similar trade-off between protection and sustainability."
       }
     ],
-    "foxconn-shenzhen-factory": [
-      {
-        "slug": "ruhr-industrial-complex",
-        "name": "Ruhr Industrial Complex",
-        "region": "western_europe",
-        "type": "industrial_site",
-        "overall": 5.1,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "port-talbot-steelworks",
-        "name": "Port Talbot Steelworks",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.6,
-        "reason": "Comparable survival shape with a different balance across key traits."
-      },
-      {
-        "slug": "amazon-bhx4-fulfilment-centre",
-        "name": "Amazon BHX4 Fulfilment Centre",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.7,
-        "reason": "Comparable survival shape with a different balance across key traits."
-      },
-      {
-        "slug": "singapore-port",
-        "name": "Singapore Port",
-        "region": "southeast_asia",
-        "type": "transit_hub",
-        "overall": 5.9,
-        "reason": "Comparable survival shape with a different balance across key traits."
-      },
-      {
-        "slug": "gdansk-shipyard",
-        "name": "Gda\u0144sk Shipyard",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "overall": 5.4,
-        "reason": "Strong defence profile with a different regional context."
-      }
-    ],
-    "ryongsong-residence-compound": [
-      {
-        "slug": "fort-copacabana",
-        "name": "Fort Copacabana",
-        "region": "south_america",
-        "type": "fortified_structure",
-        "overall": 5.3,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "un-base-in-juba-unmiss-hq-south-sudan",
-        "name": "UN Base in Juba (UNMISS HQ, South Sudan)",
-        "region": "africa",
-        "type": "institutional_compound",
-        "overall": 5.3,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "north-head-gun-emplacements",
-        "name": "North Head Gun Emplacements",
-        "region": "oceania",
-        "type": "subterranean",
-        "overall": 4.8,
-        "reason": "Similar defensive profile with lower sustainability."
-      },
-      {
-        "slug": "nato-airbase-geilenkirchen",
-        "name": "NATO Airbase Geilenkirchen",
-        "region": "western_europe",
-        "type": "institutional_compound",
-        "overall": 6.0,
-        "reason": "Comparable frontline profile with stronger long-term viability."
-      },
-      {
-        "slug": "beijing-underground-city",
-        "name": "Beijing Underground City",
-        "region": "east_asia",
-        "type": "subterranean",
-        "overall": 6.0,
-        "reason": "Comparable survival shape, but with stronger isolation."
-      }
-    ],
     "jeju-island": [
       {
         "slug": "siwa-oasis",
@@ -1017,48 +849,6 @@
         "reason": "Strong defence profile with a different regional context."
       }
     ],
-    "shaxi-ancient-town": [
-      {
-        "slug": "wadi-musa",
-        "name": "Wadi Musa",
-        "region": "middle_east",
-        "type": "remote_settlement",
-        "overall": 5.9,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "shirakawa-go",
-        "name": "Shirakawa-go",
-        "region": "east_asia",
-        "type": "remote_settlement",
-        "overall": 6.0,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "port-vila",
-        "name": "Port Vila",
-        "region": "oceania",
-        "type": "remote_settlement",
-        "overall": 5.9,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "banlung",
-        "name": "Banlung",
-        "region": "southeast_asia",
-        "type": "remote_settlement",
-        "overall": 6.1,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "okinawa",
-        "name": "Okinawa",
-        "region": "east_asia",
-        "type": "isolated_landmass",
-        "overall": 6.2,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      }
-    ],
     "shirakawa-go": [
       {
         "slug": "banlung",
@@ -1066,22 +856,6 @@
         "region": "southeast_asia",
         "type": "remote_settlement",
         "overall": 6.1,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "shaxi-ancient-town",
-        "name": "Shaxi Ancient Town",
-        "region": "east_asia",
-        "type": "remote_settlement",
-        "overall": 5.8,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "port-vila",
-        "name": "Port Vila",
-        "region": "oceania",
-        "type": "remote_settlement",
-        "overall": 5.9,
         "reason": "Similar trade-off between protection and sustainability."
       },
       {
@@ -1099,6 +873,22 @@
         "type": "isolated_landmass",
         "overall": 6.2,
         "reason": "Similar remote-survival profile with a different risk balance."
+      },
+      {
+        "slug": "danum-valley-field-centre",
+        "name": "Danum Valley Field Centre",
+        "region": "southeast_asia",
+        "type": "institutional_compound",
+        "overall": 6.3,
+        "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "murmansk-icebreaker-port",
+        "name": "Murmansk Icebreaker Port",
+        "region": "polar_extreme",
+        "type": "industrial_site",
+        "overall": 6.3,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "iwo-jima-underground-bunkers": [
@@ -1353,174 +1143,6 @@
         "reason": "Strong defence profile with a different regional context."
       }
     ],
-    "gdansk-shipyard": [
-      {
-        "slug": "ruhr-industrial-complex",
-        "name": "Ruhr Industrial Complex",
-        "region": "western_europe",
-        "type": "industrial_site",
-        "overall": 5.1,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "eguisheim",
-        "name": "Eguisheim",
-        "region": "western_europe",
-        "type": "remote_settlement",
-        "overall": 5.0,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "foxconn-shenzhen-factory",
-        "name": "Foxconn Shenzhen Factory",
-        "region": "east_asia",
-        "type": "industrial_site",
-        "overall": 5.4,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "ras-al-khair-desalination-plant",
-        "name": "Ras Al Khair Desalination Plant",
-        "region": "middle_east",
-        "type": "industrial_site",
-        "overall": 5.8,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "port-talbot-steelworks",
-        "name": "Port Talbot Steelworks",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.6,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      }
-    ],
-    "norilsk": [
-      {
-        "slug": "chernobyl-exclusion-zone-facility",
-        "name": "Chernobyl Exclusion Zone Facility",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "overall": 5.2,
-        "reason": "Comparable survival shape, but with weaker isolation."
-      },
-      {
-        "slug": "utqiagvik",
-        "name": "Utqiagvik",
-        "region": "north_america",
-        "type": "remote_settlement",
-        "overall": 5.0,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "antarctic-lighthouse",
-        "name": "Antarctic Lighthouse",
-        "region": "polar_extreme",
-        "type": "landmark_structure",
-        "overall": 5.0,
-        "reason": "Comparable isolation, but weaker long-term viability."
-      },
-      {
-        "slug": "phare-du-creach",
-        "name": "Phare du Cr\u00e9ac'h",
-        "region": "western_europe",
-        "type": "landmark_structure",
-        "overall": 4.0,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "kolmanskop",
-        "name": "Kolmanskop",
-        "region": "africa",
-        "type": "remote_settlement",
-        "overall": 5.6,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      }
-    ],
-    "chernobyl-exclusion-zone-facility": [
-      {
-        "slug": "norilsk",
-        "name": "Norilsk",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "overall": 5.8,
-        "reason": "Comparable survival shape, but with stronger isolation."
-      },
-      {
-        "slug": "phare-du-creach",
-        "name": "Phare du Cr\u00e9ac'h",
-        "region": "western_europe",
-        "type": "landmark_structure",
-        "overall": 4.0,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "utqiagvik",
-        "name": "Utqiagvik",
-        "region": "north_america",
-        "type": "remote_settlement",
-        "overall": 5.0,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "lighthouse-hormuz",
-        "name": "Lighthouse Hormuz",
-        "region": "middle_east",
-        "type": "landmark_structure",
-        "overall": 5.4,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "antarctic-lighthouse",
-        "name": "Antarctic Lighthouse",
-        "region": "polar_extreme",
-        "type": "landmark_structure",
-        "overall": 5.0,
-        "reason": "Comparable isolation, but weaker long-term viability."
-      }
-    ],
-    "olenya-air-base": [
-      {
-        "slug": "the-roaches",
-        "name": "The Roaches",
-        "region": "uk_ireland",
-        "type": "elevated_stronghold",
-        "overall": 5.9,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "cheddar-gorge-caves",
-        "name": "Cheddar Gorge Caves",
-        "region": "uk_ireland",
-        "type": "subterranean",
-        "overall": 5.3,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "ajanta-caves",
-        "name": "Ajanta Caves",
-        "region": "south_asia",
-        "type": "subterranean",
-        "overall": 5.7,
-        "reason": "Comparable frontline profile with stronger long-term viability."
-      },
-      {
-        "slug": "kimberley-big-hole-mining-complex",
-        "name": "Kimberley Big Hole & Mining Complex",
-        "region": "africa",
-        "type": "industrial_site",
-        "overall": 6.0,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "potosi-silver-mine-cerro-rico",
-        "name": "Potos\u00ed Silver Mine (Cerro Rico)",
-        "region": "south_america",
-        "type": "subterranean",
-        "overall": 5.0,
-        "reason": "Strong defence profile with a different regional context."
-      }
-    ],
     "faroe-islands": [
       {
         "slug": "gotland",
@@ -1615,36 +1237,36 @@
         "reason": "Comparable survival shape, but with stronger defensive coverage."
       },
       {
-        "slug": "chernobyl-exclusion-zone-facility",
-        "name": "Chernobyl Exclusion Zone Facility",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "overall": 5.2,
+        "slug": "uluru-surroundings",
+        "name": "Uluru Surroundings",
+        "region": "oceania",
+        "type": "elevated_stronghold",
+        "overall": 4.0,
         "reason": "Comparable survival shape, but with stronger defensive coverage."
       },
       {
-        "slug": "antarctic-lighthouse",
-        "name": "Antarctic Lighthouse",
-        "region": "polar_extreme",
-        "type": "landmark_structure",
+        "slug": "utqiagvik",
+        "name": "Utqiagvik",
+        "region": "north_america",
+        "type": "remote_settlement",
         "overall": 5.0,
         "reason": "Comparable survival shape, but with stronger defensive coverage."
       },
       {
-        "slug": "phu-quoc-lighthouse",
-        "name": "Phu Quoc Lighthouse",
-        "region": "southeast_asia",
+        "slug": "fastnet-lighthouse",
+        "name": "Fastnet Lighthouse",
+        "region": "uk_ireland",
         "type": "landmark_structure",
-        "overall": 5.2,
+        "overall": 5.1,
         "reason": "Comparable survival shape, but with stronger defensive coverage."
       },
       {
-        "slug": "norilsk",
-        "name": "Norilsk",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "overall": 5.8,
-        "reason": "Comparable survival shape, but with stronger isolation."
+        "slug": "kolmanskop",
+        "name": "Kolmanskop",
+        "region": "africa",
+        "type": "remote_settlement",
+        "overall": 5.6,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "longyearbyen": [
@@ -1749,28 +1371,28 @@
         "reason": "Strong defence profile with a different regional context."
       },
       {
-        "slug": "potosi-silver-mine-cerro-rico",
-        "name": "Potos\u00ed Silver Mine (Cerro Rico)",
-        "region": "south_america",
-        "type": "subterranean",
-        "overall": 5.0,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
-        "slug": "olenya-air-base",
-        "name": "Olenya Air Base",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "overall": 5.8,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
         "slug": "maginot-line-bunkers",
         "name": "Maginot Line Bunkers",
         "region": "western_europe",
         "type": "subterranean",
         "overall": 6.0,
         "reason": "Comparable survival shape, but with stronger defensive coverage."
+      },
+      {
+        "slug": "cheddar-gorge-caves",
+        "name": "Cheddar Gorge Caves",
+        "region": "uk_ireland",
+        "type": "subterranean",
+        "overall": 5.3,
+        "reason": "Comparable survival shape, but with stronger long-term viability."
+      },
+      {
+        "slug": "the-roaches",
+        "name": "The Roaches",
+        "region": "uk_ireland",
+        "type": "elevated_stronghold",
+        "overall": 5.9,
+        "reason": "Comparable survival shape, but with stronger long-term viability."
       }
     ],
     "derinkuyu-underground-city": [
@@ -1983,48 +1605,6 @@
         "reason": "Similar trade-off between protection and sustainability."
       }
     ],
-    "ras-al-khair-desalination-plant": [
-      {
-        "slug": "eguisheim",
-        "name": "Eguisheim",
-        "region": "western_europe",
-        "type": "remote_settlement",
-        "overall": 5.0,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
-        "slug": "gdansk-shipyard",
-        "name": "Gda\u0144sk Shipyard",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "overall": 5.4,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
-        "slug": "port-talbot-steelworks",
-        "name": "Port Talbot Steelworks",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.6,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "amazon-bhx4-fulfilment-centre",
-        "name": "Amazon BHX4 Fulfilment Centre",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.7,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "wadi-musa",
-        "name": "Wadi Musa",
-        "region": "middle_east",
-        "type": "remote_settlement",
-        "overall": 5.9,
-        "reason": "Comparable survival shape, but with stronger isolation."
-      }
-    ],
     "al-udeid-air-base": [
       {
         "slug": "beijing-underground-city",
@@ -2077,14 +1657,6 @@
         "reason": "Similar trade-off between protection and sustainability."
       },
       {
-        "slug": "patagonian-village",
-        "name": "Patagonian Village",
-        "region": "south_america",
-        "type": "remote_settlement",
-        "overall": 6.0,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
         "slug": "ile-dyeu",
         "name": "\u00cele d\u2019Yeu",
         "region": "western_europe",
@@ -2107,6 +1679,14 @@
         "type": "remote_settlement",
         "overall": 6.1,
         "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "anna-creek-station",
+        "name": "Anna Creek Station",
+        "region": "oceania",
+        "type": "industrial_site",
+        "overall": 6.8,
+        "reason": "Comparable frontline profile with stronger long-term viability."
       }
     ],
     "socotra-island": [
@@ -2149,48 +1729,6 @@
         "type": "fortified_structure",
         "overall": 6.5,
         "reason": "Similar trade-off between protection and sustainability."
-      }
-    ],
-    "lighthouse-hormuz": [
-      {
-        "slug": "la-rinconada",
-        "name": "La Rinconada",
-        "region": "south_america",
-        "type": "elevated_stronghold",
-        "overall": 5.1,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "phu-quoc-lighthouse",
-        "name": "Phu Quoc Lighthouse",
-        "region": "southeast_asia",
-        "type": "landmark_structure",
-        "overall": 5.2,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "kolmanskop",
-        "name": "Kolmanskop",
-        "region": "africa",
-        "type": "remote_settlement",
-        "overall": 5.6,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "cheddar-gorge-caves",
-        "name": "Cheddar Gorge Caves",
-        "region": "uk_ireland",
-        "type": "subterranean",
-        "overall": 5.3,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "chernobyl-exclusion-zone-facility",
-        "name": "Chernobyl Exclusion Zone Facility",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "overall": 5.2,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
       }
     ],
     "siwa-oasis": [
@@ -2237,14 +1775,6 @@
     ],
     "wadi-musa": [
       {
-        "slug": "shaxi-ancient-town",
-        "name": "Shaxi Ancient Town",
-        "region": "east_asia",
-        "type": "remote_settlement",
-        "overall": 5.8,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
         "slug": "shirakawa-go",
         "name": "Shirakawa-go",
         "region": "east_asia",
@@ -2261,20 +1791,28 @@
         "reason": "Strong defence profile with a different regional context."
       },
       {
-        "slug": "port-vila",
-        "name": "Port Vila",
-        "region": "oceania",
-        "type": "remote_settlement",
-        "overall": 5.9,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
         "slug": "okinawa",
         "name": "Okinawa",
         "region": "east_asia",
         "type": "isolated_landmass",
         "overall": 6.2,
         "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "table-rock-plateau",
+        "name": "Table Rock Plateau",
+        "region": "north_america",
+        "type": "elevated_stronghold",
+        "overall": 6.1,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
+      },
+      {
+        "slug": "murmansk-icebreaker-port",
+        "name": "Murmansk Icebreaker Port",
+        "region": "polar_extreme",
+        "type": "industrial_site",
+        "overall": 6.3,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "mesa-verde": [
@@ -2699,14 +2237,6 @@
     ],
     "utqiagvik": [
       {
-        "slug": "norilsk",
-        "name": "Norilsk",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "overall": 5.8,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
         "slug": "kolmanskop",
         "name": "Kolmanskop",
         "region": "africa",
@@ -2723,20 +2253,28 @@
         "reason": "Similar defensive profile with lower sustainability."
       },
       {
-        "slug": "chernobyl-exclusion-zone-facility",
-        "name": "Chernobyl Exclusion Zone Facility",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "overall": 5.2,
+        "slug": "fastnet-lighthouse",
+        "name": "Fastnet Lighthouse",
+        "region": "uk_ireland",
+        "type": "landmark_structure",
+        "overall": 5.1,
+        "reason": "Similar defensive profile with lower sustainability."
+      },
+      {
+        "slug": "phare-du-creach",
+        "name": "Phare du Cr\u00e9ac'h",
+        "region": "western_europe",
+        "type": "landmark_structure",
+        "overall": 4.0,
         "reason": "Comparable survival shape, but with weaker defensive coverage."
       },
       {
-        "slug": "antarctic-lighthouse",
-        "name": "Antarctic Lighthouse",
+        "slug": "antarctic-peninsula",
+        "name": "Antarctic Peninsula",
         "region": "polar_extreme",
-        "type": "landmark_structure",
-        "overall": 5.0,
-        "reason": "Similar defensive profile with lower sustainability."
+        "type": "isolated_landmass",
+        "overall": 6.2,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "cheyenne-mountain-complex": [
@@ -2867,14 +2405,6 @@
     ],
     "uluru-surroundings": [
       {
-        "slug": "antarctic-lighthouse",
-        "name": "Antarctic Lighthouse",
-        "region": "polar_extreme",
-        "type": "landmark_structure",
-        "overall": 5.0,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
         "slug": "fastnet-lighthouse",
         "name": "Fastnet Lighthouse",
         "region": "uk_ireland",
@@ -2905,6 +2435,14 @@
         "type": "remote_settlement",
         "overall": 5.6,
         "reason": "Comparable survival shape, but with stronger defensive coverage."
+      },
+      {
+        "slug": "antarctic-peninsula",
+        "name": "Antarctic Peninsula",
+        "region": "polar_extreme",
+        "type": "isolated_landmass",
+        "overall": 6.2,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "fort-denison": [
@@ -2925,14 +2463,6 @@
         "reason": "Strong defence profile with a different regional context."
       },
       {
-        "slug": "potosi-silver-mine-cerro-rico",
-        "name": "Potos\u00ed Silver Mine (Cerro Rico)",
-        "region": "south_america",
-        "type": "subterranean",
-        "overall": 5.0,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
         "slug": "kimberley-big-hole-mining-complex",
         "name": "Kimberley Big Hole & Mining Complex",
         "region": "africa",
@@ -2946,6 +2476,14 @@
         "region": "east_asia",
         "type": "subterranean",
         "overall": 6.0,
+        "reason": "Comparable frontline profile with stronger long-term viability."
+      },
+      {
+        "slug": "al-udeid-air-base",
+        "name": "Al Udeid Air Base",
+        "region": "middle_east",
+        "type": "institutional_compound",
+        "overall": 6.2,
         "reason": "Comparable frontline profile with stronger long-term viability."
       }
     ],
@@ -3201,48 +2739,6 @@
         "reason": "Similar defensive profile with lower sustainability."
       }
     ],
-    "port-vila": [
-      {
-        "slug": "shirakawa-go",
-        "name": "Shirakawa-go",
-        "region": "east_asia",
-        "type": "remote_settlement",
-        "overall": 6.0,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "banlung",
-        "name": "Banlung",
-        "region": "southeast_asia",
-        "type": "remote_settlement",
-        "overall": 6.1,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "shaxi-ancient-town",
-        "name": "Shaxi Ancient Town",
-        "region": "east_asia",
-        "type": "remote_settlement",
-        "overall": 5.8,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "patagonian-village",
-        "name": "Patagonian Village",
-        "region": "south_america",
-        "type": "remote_settlement",
-        "overall": 6.0,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "danum-valley-field-centre",
-        "name": "Danum Valley Field Centre",
-        "region": "southeast_asia",
-        "type": "institutional_compound",
-        "overall": 6.3,
-        "reason": "Strong defence profile with a different regional context."
-      }
-    ],
     "coober-pedy-underground-settlement": [
       {
         "slug": "zanzibar-island",
@@ -3295,14 +2791,6 @@
         "reason": "Strong defence profile with a different regional context."
       },
       {
-        "slug": "ryongsong-residence-compound",
-        "name": "Ryongsong Residence Compound",
-        "region": "east_asia",
-        "type": "institutional_compound",
-        "overall": 5.7,
-        "reason": "Comparable frontline profile with stronger long-term viability."
-      },
-      {
         "slug": "fort-copacabana",
         "name": "Fort Copacabana",
         "region": "south_america",
@@ -3311,62 +2799,28 @@
         "reason": "Strong defence profile with a different regional context."
       },
       {
-        "slug": "un-base-in-juba-unmiss-hq-south-sudan",
-        "name": "UN Base in Juba (UNMISS HQ, South Sudan)",
-        "region": "africa",
+        "slug": "beijing-underground-city",
+        "name": "Beijing Underground City",
+        "region": "east_asia",
+        "type": "subterranean",
+        "overall": 6.0,
+        "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "al-udeid-air-base",
+        "name": "Al Udeid Air Base",
+        "region": "middle_east",
         "type": "institutional_compound",
-        "overall": 5.3,
+        "overall": 6.2,
         "reason": "Strong defence profile with a different regional context."
       },
       {
-        "slug": "potosi-silver-mine-cerro-rico",
-        "name": "Potos\u00ed Silver Mine (Cerro Rico)",
-        "region": "south_america",
+        "slug": "ligatne-bunker",
+        "name": "Ligatne Bunker",
+        "region": "eastern_europe",
         "type": "subterranean",
-        "overall": 5.0,
-        "reason": "Strong defence profile with a different regional context."
-      }
-    ],
-    "crevasse-field-glacier": [
-      {
-        "slug": "fastnet-lighthouse",
-        "name": "Fastnet Lighthouse",
-        "region": "uk_ireland",
-        "type": "landmark_structure",
-        "overall": 5.1,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
-        "slug": "waw-an-namus-cave-system",
-        "name": "Waw an Namus Cave System",
-        "region": "africa",
-        "type": "subterranean",
-        "overall": 5.8,
-        "reason": "Comparable frontline profile with stronger long-term viability."
-      },
-      {
-        "slug": "kolmanskop",
-        "name": "Kolmanskop",
-        "region": "africa",
-        "type": "remote_settlement",
         "overall": 5.6,
         "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "antarctic-peninsula",
-        "name": "Antarctic Peninsula",
-        "region": "polar_extreme",
-        "type": "isolated_landmass",
-        "overall": 6.2,
-        "reason": "Comparable frontline profile with stronger long-term viability."
-      },
-      {
-        "slug": "antarctic-lighthouse",
-        "name": "Antarctic Lighthouse",
-        "region": "polar_extreme",
-        "type": "landmark_structure",
-        "overall": 5.0,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
       }
     ],
     "mcmurdo-station": [
@@ -3621,48 +3075,6 @@
         "reason": "Similar trade-off between protection and sustainability."
       }
     ],
-    "antarctic-lighthouse": [
-      {
-        "slug": "fastnet-lighthouse",
-        "name": "Fastnet Lighthouse",
-        "region": "uk_ireland",
-        "type": "landmark_structure",
-        "overall": 5.1,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "uluru-surroundings",
-        "name": "Uluru Surroundings",
-        "region": "oceania",
-        "type": "elevated_stronghold",
-        "overall": 4.0,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "kolmanskop",
-        "name": "Kolmanskop",
-        "region": "africa",
-        "type": "remote_settlement",
-        "overall": 5.6,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "utqiagvik",
-        "name": "Utqiagvik",
-        "region": "north_america",
-        "type": "remote_settlement",
-        "overall": 5.0,
-        "reason": "Comparable frontline profile with stronger long-term viability."
-      },
-      {
-        "slug": "la-rinconada",
-        "name": "La Rinconada",
-        "region": "south_america",
-        "type": "elevated_stronghold",
-        "overall": 5.1,
-        "reason": "Strong defence profile with a different regional context."
-      }
-    ],
     "olavsvern-naval-base": [
       {
         "slug": "sigiriya",
@@ -3747,48 +3159,6 @@
         "reason": "Comparable survival shape, but with stronger long-term viability."
       }
     ],
-    "la-rinconada": [
-      {
-        "slug": "lighthouse-hormuz",
-        "name": "Lighthouse Hormuz",
-        "region": "middle_east",
-        "type": "landmark_structure",
-        "overall": 5.4,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "phu-quoc-lighthouse",
-        "name": "Phu Quoc Lighthouse",
-        "region": "southeast_asia",
-        "type": "landmark_structure",
-        "overall": 5.2,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "kolmanskop",
-        "name": "Kolmanskop",
-        "region": "africa",
-        "type": "remote_settlement",
-        "overall": 5.6,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "antarctic-lighthouse",
-        "name": "Antarctic Lighthouse",
-        "region": "polar_extreme",
-        "type": "landmark_structure",
-        "overall": 5.0,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "utqiagvik",
-        "name": "Utqiagvik",
-        "region": "north_america",
-        "type": "remote_settlement",
-        "overall": 5.0,
-        "reason": "Strong defence profile with a different regional context."
-      }
-    ],
     "machu-picchu": [
       {
         "slug": "sigiriya",
@@ -3833,22 +3203,6 @@
     ],
     "fort-copacabana": [
       {
-        "slug": "ryongsong-residence-compound",
-        "name": "Ryongsong Residence Compound",
-        "region": "east_asia",
-        "type": "institutional_compound",
-        "overall": 5.7,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "un-base-in-juba-unmiss-hq-south-sudan",
-        "name": "UN Base in Juba (UNMISS HQ, South Sudan)",
-        "region": "africa",
-        "type": "institutional_compound",
-        "overall": 5.3,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
         "slug": "north-head-gun-emplacements",
         "name": "North Head Gun Emplacements",
         "region": "oceania",
@@ -3871,6 +3225,22 @@
         "type": "fortified_structure",
         "overall": 6.2,
         "reason": "Comparable survival shape, but with stronger defensive coverage."
+      },
+      {
+        "slug": "beijing-underground-city",
+        "name": "Beijing Underground City",
+        "region": "east_asia",
+        "type": "subterranean",
+        "overall": 6.0,
+        "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "al-udeid-air-base",
+        "name": "Al Udeid Air Base",
+        "region": "middle_east",
+        "type": "institutional_compound",
+        "overall": 6.2,
+        "reason": "Strong defence profile with a different regional context."
       }
     ],
     "san-felipe-fortress": [
@@ -3917,44 +3287,44 @@
     ],
     "itaipu-dam": [
       {
-        "slug": "singapore-port",
-        "name": "Singapore Port",
+        "slug": "rice-terrace-highlands",
+        "name": "Rice Terrace Highlands",
         "region": "southeast_asia",
-        "type": "transit_hub",
-        "overall": 5.9,
-        "reason": "Similar defensive profile with lower sustainability."
-      },
-      {
-        "slug": "amazon-bhx4-fulfilment-centre",
-        "name": "Amazon BHX4 Fulfilment Centre",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.7,
-        "reason": "Similar defensive profile with lower sustainability."
-      },
-      {
-        "slug": "kuttanad-village",
-        "name": "Kuttanad Village",
-        "region": "south_asia",
-        "type": "remote_settlement",
-        "overall": 5.7,
+        "type": "elevated_stronghold",
+        "overall": 7.2,
         "reason": "Comparable survival shape, but with stronger isolation."
       },
       {
-        "slug": "ras-al-khair-desalination-plant",
-        "name": "Ras Al Khair Desalination Plant",
-        "region": "middle_east",
+        "slug": "sime-darby-palm-oil-estate-sabah",
+        "name": "Sime Darby Palm Oil Estate (Sabah)",
+        "region": "southeast_asia",
         "type": "industrial_site",
-        "overall": 5.8,
-        "reason": "Similar defensive profile with lower sustainability."
+        "overall": 6.1,
+        "reason": "Comparable survival shape, but with stronger isolation."
       },
       {
-        "slug": "port-talbot-steelworks",
-        "name": "Port Talbot Steelworks",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.6,
-        "reason": "Similar defensive profile with lower sustainability."
+        "slug": "vancouver-island",
+        "name": "Vancouver Island",
+        "region": "north_america",
+        "type": "isolated_landmass",
+        "overall": 6.7,
+        "reason": "Comparable survival shape, but with stronger isolation."
+      },
+      {
+        "slug": "hallstatt",
+        "name": "Hallstatt",
+        "region": "western_europe",
+        "type": "remote_settlement",
+        "overall": 7.0,
+        "reason": "Comparable survival shape, but with stronger isolation."
+      },
+      {
+        "slug": "eguisheim",
+        "name": "Eguisheim",
+        "region": "western_europe",
+        "type": "remote_settlement",
+        "overall": 5.0,
+        "reason": "Comparable survival shape, but with weaker long-term viability."
       }
     ],
     "amazon-tall-tower-observatory": [
@@ -3975,14 +3345,6 @@
         "reason": "Comparable survival shape, but with stronger defensive coverage."
       },
       {
-        "slug": "patagonian-village",
-        "name": "Patagonian Village",
-        "region": "south_america",
-        "type": "remote_settlement",
-        "overall": 6.0,
-        "reason": "Comparable isolation, but weaker long-term viability."
-      },
-      {
         "slug": "danum-valley-field-centre",
         "name": "Danum Valley Field Centre",
         "region": "southeast_asia",
@@ -3997,6 +3359,14 @@
         "type": "industrial_site",
         "overall": 6.1,
         "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "qeshm-island",
+        "name": "Qeshm Island",
+        "region": "middle_east",
+        "type": "isolated_landmass",
+        "overall": 6.9,
+        "reason": "Comparable isolation, but weaker long-term viability."
       }
     ],
     "tambopata-research-center": [
@@ -4017,14 +3387,6 @@
         "reason": "Similar trade-off between protection and sustainability."
       },
       {
-        "slug": "patagonian-village",
-        "name": "Patagonian Village",
-        "region": "south_america",
-        "type": "remote_settlement",
-        "overall": 6.0,
-        "reason": "Comparable isolation, but weaker long-term viability."
-      },
-      {
         "slug": "danum-valley-field-centre",
         "name": "Danum Valley Field Centre",
         "region": "southeast_asia",
@@ -4039,6 +3401,14 @@
         "type": "isolated_landmass",
         "overall": 6.9,
         "reason": "Comparable isolation, but weaker long-term viability."
+      },
+      {
+        "slug": "shirakawa-go",
+        "name": "Shirakawa-go",
+        "region": "east_asia",
+        "type": "remote_settlement",
+        "overall": 6.0,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "chiloe-island": [
@@ -4167,90 +3537,6 @@
         "reason": "Comparable survival shape, but with weaker defensive coverage."
       }
     ],
-    "patagonian-village": [
-      {
-        "slug": "danum-valley-field-centre",
-        "name": "Danum Valley Field Centre",
-        "region": "southeast_asia",
-        "type": "institutional_compound",
-        "overall": 6.3,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "qeshm-island",
-        "name": "Qeshm Island",
-        "region": "middle_east",
-        "type": "isolated_landmass",
-        "overall": 6.9,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "banlung",
-        "name": "Banlung",
-        "region": "southeast_asia",
-        "type": "remote_settlement",
-        "overall": 6.1,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "port-vila",
-        "name": "Port Vila",
-        "region": "oceania",
-        "type": "remote_settlement",
-        "overall": 5.9,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "shirakawa-go",
-        "name": "Shirakawa-go",
-        "region": "east_asia",
-        "type": "remote_settlement",
-        "overall": 6.0,
-        "reason": "Strong defence profile with a different regional context."
-      }
-    ],
-    "potosi-silver-mine-cerro-rico": [
-      {
-        "slug": "naours-underground-city",
-        "name": "Naours Underground City",
-        "region": "western_europe",
-        "type": "subterranean",
-        "overall": 5.0,
-        "reason": "Comparable frontline profile with stronger long-term viability."
-      },
-      {
-        "slug": "cheddar-gorge-caves",
-        "name": "Cheddar Gorge Caves",
-        "region": "uk_ireland",
-        "type": "subterranean",
-        "overall": 5.3,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "olenya-air-base",
-        "name": "Olenya Air Base",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "overall": 5.8,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "cape-point-lighthouse",
-        "name": "Cape Point Lighthouse",
-        "region": "africa",
-        "type": "landmark_structure",
-        "overall": 5.1,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
-        "slug": "the-roaches",
-        "name": "The Roaches",
-        "region": "uk_ireland",
-        "type": "elevated_stronghold",
-        "overall": 5.9,
-        "reason": "Strong defence profile with a different regional context."
-      }
-    ],
     "hilltop-fort-rajasthan": [
       {
         "slug": "great-wall-fortress-sections",
@@ -4375,48 +3661,6 @@
         "type": "subterranean",
         "overall": 9.0,
         "reason": "Strong defence profile with a different regional context."
-      }
-    ],
-    "krbl-rice-mill-dhuri": [
-      {
-        "slug": "gdansk-shipyard",
-        "name": "Gda\u0144sk Shipyard",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "overall": 5.4,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "foxconn-shenzhen-factory",
-        "name": "Foxconn Shenzhen Factory",
-        "region": "east_asia",
-        "type": "industrial_site",
-        "overall": 5.4,
-        "reason": "Comparable isolation, but weaker long-term viability."
-      },
-      {
-        "slug": "ruhr-industrial-complex",
-        "name": "Ruhr Industrial Complex",
-        "region": "western_europe",
-        "type": "industrial_site",
-        "overall": 5.1,
-        "reason": "Comparable isolation, but weaker long-term viability."
-      },
-      {
-        "slug": "eguisheim",
-        "name": "Eguisheim",
-        "region": "western_europe",
-        "type": "remote_settlement",
-        "overall": 5.0,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "amazon-bhx4-fulfilment-centre",
-        "name": "Amazon BHX4 Fulfilment Centre",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.7,
-        "reason": "Comparable isolation, but weaker long-term viability."
       }
     ],
     "pathankot-air-force-station": [
@@ -4627,48 +3871,6 @@
         "type": "remote_settlement",
         "overall": 6.8,
         "reason": "Comparable frontline profile with stronger long-term viability."
-      }
-    ],
-    "kuttanad-village": [
-      {
-        "slug": "sime-darby-palm-oil-estate-sabah",
-        "name": "Sime Darby Palm Oil Estate (Sabah)",
-        "region": "southeast_asia",
-        "type": "industrial_site",
-        "overall": 6.1,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "eguisheim",
-        "name": "Eguisheim",
-        "region": "western_europe",
-        "type": "remote_settlement",
-        "overall": 5.0,
-        "reason": "Similar defensive profile with lower sustainability."
-      },
-      {
-        "slug": "ras-al-khair-desalination-plant",
-        "name": "Ras Al Khair Desalination Plant",
-        "region": "middle_east",
-        "type": "industrial_site",
-        "overall": 5.8,
-        "reason": "Comparable survival shape, but with weaker long-term viability."
-      },
-      {
-        "slug": "shaxi-ancient-town",
-        "name": "Shaxi Ancient Town",
-        "region": "east_asia",
-        "type": "remote_settlement",
-        "overall": 5.8,
-        "reason": "Comparable survival shape, but with weaker long-term viability."
-      },
-      {
-        "slug": "itaipu-dam",
-        "name": "Itaipu Dam",
-        "region": "south_america",
-        "type": "industrial_site",
-        "overall": 6.8,
-        "reason": "Comparable survival shape, but with weaker isolation."
       }
     ],
     "ajanta-caves": [
@@ -4883,22 +4085,6 @@
     ],
     "sime-darby-palm-oil-estate-sabah": [
       {
-        "slug": "kuttanad-village",
-        "name": "Kuttanad Village",
-        "region": "south_asia",
-        "type": "remote_settlement",
-        "overall": 5.7,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "shaxi-ancient-town",
-        "name": "Shaxi Ancient Town",
-        "region": "east_asia",
-        "type": "remote_settlement",
-        "overall": 5.8,
-        "reason": "Comparable isolation, but weaker long-term viability."
-      },
-      {
         "slug": "tambopata-research-center",
         "name": "Tambopata Research Center",
         "region": "south_america",
@@ -4921,6 +4107,22 @@
         "type": "remote_settlement",
         "overall": 6.0,
         "reason": "Comparable survival shape, but with weaker long-term viability."
+      },
+      {
+        "slug": "wadi-musa",
+        "name": "Wadi Musa",
+        "region": "middle_east",
+        "type": "remote_settlement",
+        "overall": 5.9,
+        "reason": "Comparable isolation, but weaker long-term viability."
+      },
+      {
+        "slug": "okinawa",
+        "name": "Okinawa",
+        "region": "east_asia",
+        "type": "isolated_landmass",
+        "overall": 6.2,
+        "reason": "Comparable isolation, but weaker long-term viability."
       }
     ],
     "kota-kinabalu-naval-base": [
@@ -4967,14 +4169,6 @@
     ],
     "danum-valley-field-centre": [
       {
-        "slug": "patagonian-village",
-        "name": "Patagonian Village",
-        "region": "south_america",
-        "type": "remote_settlement",
-        "overall": 6.0,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
         "slug": "qeshm-island",
         "name": "Qeshm Island",
         "region": "middle_east",
@@ -4991,19 +4185,27 @@
         "reason": "Comparable survival shape, but with weaker isolation."
       },
       {
-        "slug": "port-vila",
-        "name": "Port Vila",
-        "region": "oceania",
-        "type": "remote_settlement",
-        "overall": 5.9,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
         "slug": "ile-dyeu",
         "name": "\u00cele d\u2019Yeu",
         "region": "western_europe",
         "type": "isolated_landmass",
         "overall": 7.0,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
+      },
+      {
+        "slug": "shirakawa-go",
+        "name": "Shirakawa-go",
+        "region": "east_asia",
+        "type": "remote_settlement",
+        "overall": 6.0,
+        "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "gotland",
+        "name": "Gotland",
+        "region": "eastern_europe",
+        "type": "isolated_landmass",
+        "overall": 7.1,
         "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
@@ -5091,48 +4293,6 @@
         "reason": "Strong defence profile with a different regional context."
       }
     ],
-    "phu-quoc-lighthouse": [
-      {
-        "slug": "la-rinconada",
-        "name": "La Rinconada",
-        "region": "south_america",
-        "type": "elevated_stronghold",
-        "overall": 5.1,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "lighthouse-hormuz",
-        "name": "Lighthouse Hormuz",
-        "region": "middle_east",
-        "type": "landmark_structure",
-        "overall": 5.4,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "cheddar-gorge-caves",
-        "name": "Cheddar Gorge Caves",
-        "region": "uk_ireland",
-        "type": "subterranean",
-        "overall": 5.3,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "olenya-air-base",
-        "name": "Olenya Air Base",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "overall": 5.8,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "cape-point-lighthouse",
-        "name": "Cape Point Lighthouse",
-        "region": "africa",
-        "type": "landmark_structure",
-        "overall": 5.1,
-        "reason": "Strong defence profile with a different regional context."
-      }
-    ],
     "banda-neira": [
       {
         "slug": "ile-dyeu",
@@ -5185,14 +4345,6 @@
         "reason": "Similar trade-off between protection and sustainability."
       },
       {
-        "slug": "port-vila",
-        "name": "Port Vila",
-        "region": "oceania",
-        "type": "remote_settlement",
-        "overall": 5.9,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
         "slug": "okinawa",
         "name": "Okinawa",
         "region": "east_asia",
@@ -5201,20 +4353,28 @@
         "reason": "Similar trade-off between protection and sustainability."
       },
       {
-        "slug": "shaxi-ancient-town",
-        "name": "Shaxi Ancient Town",
-        "region": "east_asia",
+        "slug": "danum-valley-field-centre",
+        "name": "Danum Valley Field Centre",
+        "region": "southeast_asia",
+        "type": "institutional_compound",
+        "overall": 6.3,
+        "reason": "Comparable survival shape, but with stronger isolation."
+      },
+      {
+        "slug": "wadi-musa",
+        "name": "Wadi Musa",
+        "region": "middle_east",
         "type": "remote_settlement",
-        "overall": 5.8,
+        "overall": 5.9,
         "reason": "Strong defence profile with a different regional context."
       },
       {
-        "slug": "patagonian-village",
-        "name": "Patagonian Village",
-        "region": "south_america",
-        "type": "remote_settlement",
-        "overall": 6.0,
-        "reason": "Strong defence profile with a different regional context."
+        "slug": "murmansk-icebreaker-port",
+        "name": "Murmansk Icebreaker Port",
+        "region": "polar_extreme",
+        "type": "industrial_site",
+        "overall": 6.3,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "cu-chi-tunnels": [
@@ -5301,90 +4461,6 @@
         "reason": "Comparable survival shape, but with weaker defensive coverage."
       }
     ],
-    "bangkok-airport": [
-      {
-        "slug": "singapore-port",
-        "name": "Singapore Port",
-        "region": "southeast_asia",
-        "type": "transit_hub",
-        "overall": 5.9,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "amazon-bhx4-fulfilment-centre",
-        "name": "Amazon BHX4 Fulfilment Centre",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.7,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "port-talbot-steelworks",
-        "name": "Port Talbot Steelworks",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.6,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "foxconn-shenzhen-factory",
-        "name": "Foxconn Shenzhen Factory",
-        "region": "east_asia",
-        "type": "industrial_site",
-        "overall": 5.4,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
-        "slug": "ruhr-industrial-complex",
-        "name": "Ruhr Industrial Complex",
-        "region": "western_europe",
-        "type": "industrial_site",
-        "overall": 5.1,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      }
-    ],
-    "singapore-port": [
-      {
-        "slug": "bangkok-airport",
-        "name": "Bangkok Airport",
-        "region": "southeast_asia",
-        "type": "transit_hub",
-        "overall": 5.8,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "amazon-bhx4-fulfilment-centre",
-        "name": "Amazon BHX4 Fulfilment Centre",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.7,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "foxconn-shenzhen-factory",
-        "name": "Foxconn Shenzhen Factory",
-        "region": "east_asia",
-        "type": "industrial_site",
-        "overall": 5.4,
-        "reason": "Comparable survival shape with a different balance across key traits."
-      },
-      {
-        "slug": "port-talbot-steelworks",
-        "name": "Port Talbot Steelworks",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.6,
-        "reason": "Similar defensive profile with lower sustainability."
-      },
-      {
-        "slug": "gdansk-shipyard",
-        "name": "Gda\u0144sk Shipyard",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "overall": 5.4,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      }
-    ],
     "edinburgh-castle": [
       {
         "slug": "san-felipe-fortress",
@@ -5429,14 +4505,6 @@
     ],
     "the-roaches": [
       {
-        "slug": "olenya-air-base",
-        "name": "Olenya Air Base",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "overall": 5.8,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
         "slug": "ajanta-caves",
         "name": "Ajanta Caves",
         "region": "south_asia",
@@ -5467,6 +4535,14 @@
         "type": "elevated_stronghold",
         "overall": 6.4,
         "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "vietnam-tunnel-systems",
+        "name": "Vietnam Tunnel Systems",
+        "region": "southeast_asia",
+        "type": "subterranean",
+        "overall": 6.4,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "caerphilly-castle": [
@@ -5550,90 +4626,6 @@
         "region": "oceania",
         "type": "institutional_compound",
         "overall": 6.9,
-        "reason": "Strong defence profile with a different regional context."
-      }
-    ],
-    "port-talbot-steelworks": [
-      {
-        "slug": "amazon-bhx4-fulfilment-centre",
-        "name": "Amazon BHX4 Fulfilment Centre",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.7,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "foxconn-shenzhen-factory",
-        "name": "Foxconn Shenzhen Factory",
-        "region": "east_asia",
-        "type": "industrial_site",
-        "overall": 5.4,
-        "reason": "Comparable survival shape with a different balance across key traits."
-      },
-      {
-        "slug": "bangkok-airport",
-        "name": "Bangkok Airport",
-        "region": "southeast_asia",
-        "type": "transit_hub",
-        "overall": 5.8,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "singapore-port",
-        "name": "Singapore Port",
-        "region": "southeast_asia",
-        "type": "transit_hub",
-        "overall": 5.9,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "gdansk-shipyard",
-        "name": "Gda\u0144sk Shipyard",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "overall": 5.4,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      }
-    ],
-    "amazon-bhx4-fulfilment-centre": [
-      {
-        "slug": "port-talbot-steelworks",
-        "name": "Port Talbot Steelworks",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.6,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "bangkok-airport",
-        "name": "Bangkok Airport",
-        "region": "southeast_asia",
-        "type": "transit_hub",
-        "overall": 5.8,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "singapore-port",
-        "name": "Singapore Port",
-        "region": "southeast_asia",
-        "type": "transit_hub",
-        "overall": 5.9,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "foxconn-shenzhen-factory",
-        "name": "Foxconn Shenzhen Factory",
-        "region": "east_asia",
-        "type": "industrial_site",
-        "overall": 5.4,
-        "reason": "Comparable survival shape with a different balance across key traits."
-      },
-      {
-        "slug": "ras-al-khair-desalination-plant",
-        "name": "Ras Al Khair Desalination Plant",
-        "region": "middle_east",
-        "type": "industrial_site",
-        "overall": 5.8,
         "reason": "Strong defence profile with a different regional context."
       }
     ],
@@ -5807,22 +4799,6 @@
     ],
     "fastnet-lighthouse": [
       {
-        "slug": "antarctic-lighthouse",
-        "name": "Antarctic Lighthouse",
-        "region": "polar_extreme",
-        "type": "landmark_structure",
-        "overall": 5.0,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "crevasse-field-glacier",
-        "name": "Crevasse Field Glacier",
-        "region": "polar_extreme",
-        "type": "polar_extreme",
-        "overall": 5.7,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
         "slug": "uluru-surroundings",
         "name": "Uluru Surroundings",
         "region": "oceania",
@@ -5845,6 +4821,22 @@
         "type": "remote_settlement",
         "overall": 5.0,
         "reason": "Comparable frontline profile with stronger long-term viability."
+      },
+      {
+        "slug": "antarctic-peninsula",
+        "name": "Antarctic Peninsula",
+        "region": "polar_extreme",
+        "type": "isolated_landmass",
+        "overall": 6.2,
+        "reason": "Comparable survival shape, but with stronger long-term viability."
+      },
+      {
+        "slug": "waw-an-namus-cave-system",
+        "name": "Waw an Namus Cave System",
+        "region": "africa",
+        "type": "subterranean",
+        "overall": 5.8,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "clovelly": [
@@ -5975,14 +4967,6 @@
     ],
     "cheddar-gorge-caves": [
       {
-        "slug": "olenya-air-base",
-        "name": "Olenya Air Base",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "overall": 5.8,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
         "slug": "the-roaches",
         "name": "The Roaches",
         "region": "uk_ireland",
@@ -5999,20 +4983,28 @@
         "reason": "Similar trade-off between protection and sustainability."
       },
       {
-        "slug": "potosi-silver-mine-cerro-rico",
-        "name": "Potos\u00ed Silver Mine (Cerro Rico)",
-        "region": "south_america",
-        "type": "subterranean",
-        "overall": 5.0,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
         "slug": "naours-underground-city",
         "name": "Naours Underground City",
         "region": "western_europe",
         "type": "subterranean",
         "overall": 5.0,
         "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "blue-mountains-cliffs",
+        "name": "Blue Mountains Cliffs",
+        "region": "oceania",
+        "type": "elevated_stronghold",
+        "overall": 6.0,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
+      },
+      {
+        "slug": "kimberley-big-hole-mining-complex",
+        "name": "Kimberley Big Hole & Mining Complex",
+        "region": "africa",
+        "type": "industrial_site",
+        "overall": 6.0,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "neuschwanstein-castle": [
@@ -6183,48 +5175,6 @@
         "reason": "Comparable isolation, but weaker long-term viability."
       }
     ],
-    "ruhr-industrial-complex": [
-      {
-        "slug": "gdansk-shipyard",
-        "name": "Gda\u0144sk Shipyard",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "overall": 5.4,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "foxconn-shenzhen-factory",
-        "name": "Foxconn Shenzhen Factory",
-        "region": "east_asia",
-        "type": "industrial_site",
-        "overall": 5.4,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "port-talbot-steelworks",
-        "name": "Port Talbot Steelworks",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.6,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "eguisheim",
-        "name": "Eguisheim",
-        "region": "western_europe",
-        "type": "remote_settlement",
-        "overall": 5.0,
-        "reason": "Comparable survival shape, but with stronger isolation."
-      },
-      {
-        "slug": "amazon-bhx4-fulfilment-centre",
-        "name": "Amazon BHX4 Fulfilment Centre",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.7,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      }
-    ],
     "nato-airbase-geilenkirchen": [
       {
         "slug": "elmina-castle",
@@ -6353,14 +5303,6 @@
     ],
     "phare-du-creach": [
       {
-        "slug": "chernobyl-exclusion-zone-facility",
-        "name": "Chernobyl Exclusion Zone Facility",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "overall": 5.2,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
         "slug": "uluru-surroundings",
         "name": "Uluru Surroundings",
         "region": "oceania",
@@ -6385,54 +5327,62 @@
         "reason": "Comparable survival shape, but with weaker defensive coverage."
       },
       {
-        "slug": "norilsk",
-        "name": "Norilsk",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "overall": 5.8,
-        "reason": "Strong defence profile with a different regional context."
+        "slug": "fastnet-lighthouse",
+        "name": "Fastnet Lighthouse",
+        "region": "uk_ireland",
+        "type": "landmark_structure",
+        "overall": 5.1,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
+      },
+      {
+        "slug": "kolmanskop",
+        "name": "Kolmanskop",
+        "region": "africa",
+        "type": "remote_settlement",
+        "overall": 5.6,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "eguisheim": [
       {
-        "slug": "gdansk-shipyard",
-        "name": "Gda\u0144sk Shipyard",
-        "region": "eastern_europe",
+        "slug": "wadi-musa",
+        "name": "Wadi Musa",
+        "region": "middle_east",
+        "type": "remote_settlement",
+        "overall": 5.9,
+        "reason": "Comparable survival shape, but with stronger isolation."
+      },
+      {
+        "slug": "great-mosque-of-djenne",
+        "name": "Great Mosque of Djenn\u00e9",
+        "region": "africa",
+        "type": "landmark_structure",
+        "overall": 4.9,
+        "reason": "Comparable survival shape, but with weaker long-term viability."
+      },
+      {
+        "slug": "table-rock-plateau",
+        "name": "Table Rock Plateau",
+        "region": "north_america",
+        "type": "elevated_stronghold",
+        "overall": 6.1,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
+      },
+      {
+        "slug": "sime-darby-palm-oil-estate-sabah",
+        "name": "Sime Darby Palm Oil Estate (Sabah)",
+        "region": "southeast_asia",
         "type": "industrial_site",
-        "overall": 5.4,
+        "overall": 6.1,
         "reason": "Strong defence profile with a different regional context."
       },
       {
-        "slug": "ras-al-khair-desalination-plant",
-        "name": "Ras Al Khair Desalination Plant",
-        "region": "middle_east",
-        "type": "industrial_site",
-        "overall": 5.8,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "ruhr-industrial-complex",
-        "name": "Ruhr Industrial Complex",
-        "region": "western_europe",
-        "type": "industrial_site",
-        "overall": 5.1,
-        "reason": "Comparable survival shape, but with weaker isolation."
-      },
-      {
-        "slug": "port-talbot-steelworks",
-        "name": "Port Talbot Steelworks",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.6,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "amazon-bhx4-fulfilment-centre",
-        "name": "Amazon BHX4 Fulfilment Centre",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "overall": 5.7,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
+        "slug": "shirakawa-go",
+        "name": "Shirakawa-go",
+        "region": "east_asia",
+        "type": "remote_settlement",
+        "overall": 6.0,
+        "reason": "Comparable survival shape, but with stronger isolation."
       }
     ],
     "hallstatt": [
@@ -6521,22 +5471,6 @@
     ],
     "naours-underground-city": [
       {
-        "slug": "potosi-silver-mine-cerro-rico",
-        "name": "Potos\u00ed Silver Mine (Cerro Rico)",
-        "region": "south_america",
-        "type": "subterranean",
-        "overall": 5.0,
-        "reason": "Similar defensive profile with lower sustainability."
-      },
-      {
-        "slug": "cape-point-lighthouse",
-        "name": "Cape Point Lighthouse",
-        "region": "africa",
-        "type": "landmark_structure",
-        "overall": 5.1,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
         "slug": "hutchinson-salt-storage-caverns",
         "name": "Hutchinson Salt Storage Caverns",
         "region": "north_america",
@@ -6559,6 +5493,22 @@
         "type": "subterranean",
         "overall": 5.3,
         "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "porton-down",
+        "name": "Porton Down",
+        "region": "uk_ireland",
+        "type": "institutional_compound",
+        "overall": 6.1,
+        "reason": "Similar trade-off between protection and sustainability."
+      },
+      {
+        "slug": "petra",
+        "name": "Petra",
+        "region": "middle_east",
+        "type": "elevated_stronghold",
+        "overall": 6.4,
+        "reason": "Similar trade-off between protection and sustainability."
       }
     ]
   },
@@ -6595,10 +5545,6 @@
       "scenario": "high_risk_high_reward",
       "title": "Highest risk / highest reward"
     },
-    "foxconn-shenzhen-factory": {
-      "scenario": "community_bases",
-      "title": "Best community bases"
-    },
     "jeju-island": {
       "scenario": "long_term_survival",
       "title": "Best long-term survival bases"
@@ -6615,11 +5561,11 @@
       "scenario": "short_term_refuge",
       "title": "Best short-term refuges"
     },
-    "gdansk-shipyard": {
-      "scenario": "community_bases",
-      "title": "Best community bases"
-    },
     "faroe-islands": {
+      "scenario": "long_term_survival",
+      "title": "Best long-term survival bases"
+    },
+    "gotland": {
       "scenario": "long_term_survival",
       "title": "Best long-term survival bases"
     },
@@ -6630,10 +5576,6 @@
     "masada": {
       "scenario": "high_risk_high_reward",
       "title": "Highest risk / highest reward"
-    },
-    "ras-al-khair-desalination-plant": {
-      "scenario": "community_bases",
-      "title": "Best community bases"
     },
     "socotra-island": {
       "scenario": "high_risk_high_reward",
@@ -6748,20 +5690,16 @@
       "title": "Best short-term refuges"
     },
     "mehrangarh-fort": {
-      "scenario": "high_risk_high_reward",
-      "title": "Highest risk / highest reward"
+      "scenario": "community_bases",
+      "title": "Best community bases"
     },
-    "krbl-rice-mill-dhuri": {
+    "pathankot-air-force-station": {
       "scenario": "community_bases",
       "title": "Best community bases"
     },
     "andaman-islands": {
       "scenario": "long_term_survival",
       "title": "Best long-term survival bases"
-    },
-    "kuttanad-village": {
-      "scenario": "community_bases",
-      "title": "Best community bases"
     },
     "kargil-war-bunkers": {
       "scenario": "short_term_refuge",
@@ -6771,7 +5709,15 @@
       "scenario": "community_bases",
       "title": "Best community bases"
     },
+    "hue-citadel": {
+      "scenario": "community_bases",
+      "title": "Best community bases"
+    },
     "sime-darby-palm-oil-estate-sabah": {
+      "scenario": "community_bases",
+      "title": "Best community bases"
+    },
+    "kota-kinabalu-naval-base": {
       "scenario": "community_bases",
       "title": "Best community bases"
     },
@@ -6783,19 +5729,7 @@
       "scenario": "high_risk_high_reward",
       "title": "Highest risk / highest reward"
     },
-    "bangkok-airport": {
-      "scenario": "community_bases",
-      "title": "Best community bases"
-    },
-    "singapore-port": {
-      "scenario": "community_bases",
-      "title": "Best community bases"
-    },
-    "port-talbot-steelworks": {
-      "scenario": "community_bases",
-      "title": "Best community bases"
-    },
-    "amazon-bhx4-fulfilment-centre": {
+    "edinburgh-castle": {
       "scenario": "community_bases",
       "title": "Best community bases"
     },
@@ -6811,13 +5745,13 @@
       "scenario": "high_risk_high_reward",
       "title": "Highest risk / highest reward"
     },
+    "carcassonne": {
+      "scenario": "community_bases",
+      "title": "Best community bases"
+    },
     "mont-saint-michel": {
       "scenario": "short_term_refuge",
       "title": "Best short-term refuges"
-    },
-    "ruhr-industrial-complex": {
-      "scenario": "community_bases",
-      "title": "Best community bases"
     },
     "heligoland": {
       "scenario": "long_term_survival",
@@ -7050,11 +5984,11 @@
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
-          "slug": "kuttanad-village",
-          "name": "Kuttanad Village",
-          "region": "south_asia",
-          "type": "remote_settlement",
-          "overall": 5.7,
+          "slug": "gotland",
+          "name": "Gotland",
+          "region": "eastern_europe",
+          "type": "isolated_landmass",
+          "overall": 7.1,
           "rank": 25,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         }
@@ -7314,30 +6248,12 @@
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
-          "slug": "singapore-port",
-          "name": "Singapore Port",
-          "region": "southeast_asia",
-          "type": "transit_hub",
-          "overall": 5.9,
-          "rank": 3,
-          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
-        },
-        {
           "slug": "cusco-highlands-village",
           "name": "Cusco Highlands Village",
           "region": "south_america",
           "type": "remote_settlement",
           "overall": 8.0,
-          "rank": 4,
-          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
-        },
-        {
-          "slug": "krbl-rice-mill-dhuri",
-          "name": "KRBL Rice Mill (Dhuri)",
-          "region": "south_asia",
-          "type": "industrial_site",
-          "overall": 5.1,
-          "rank": 5,
+          "rank": 3,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -7346,16 +6262,7 @@
           "region": "oceania",
           "type": "isolated_landmass",
           "overall": 8.1,
-          "rank": 6,
-          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
-        },
-        {
-          "slug": "bangkok-airport",
-          "name": "Bangkok Airport",
-          "region": "southeast_asia",
-          "type": "transit_hub",
-          "overall": 5.8,
-          "rank": 7,
+          "rank": 4,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -7364,7 +6271,7 @@
           "region": "north_america",
           "type": "subterranean",
           "overall": 9.0,
-          "rank": 8,
+          "rank": 5,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -7373,25 +6280,7 @@
           "region": "south_america",
           "type": "isolated_landmass",
           "overall": 8.0,
-          "rank": 9,
-          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
-        },
-        {
-          "slug": "kuttanad-village",
-          "name": "Kuttanad Village",
-          "region": "south_asia",
-          "type": "remote_settlement",
-          "overall": 5.7,
-          "rank": 10,
-          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
-        },
-        {
-          "slug": "amazon-bhx4-fulfilment-centre",
-          "name": "Amazon BHX4 Fulfilment Centre",
-          "region": "uk_ireland",
-          "type": "industrial_site",
-          "overall": 5.7,
-          "rank": 11,
+          "rank": 6,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -7400,25 +6289,7 @@
           "region": "southeast_asia",
           "type": "industrial_site",
           "overall": 6.1,
-          "rank": 12,
-          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
-        },
-        {
-          "slug": "foxconn-shenzhen-factory",
-          "name": "Foxconn Shenzhen Factory",
-          "region": "east_asia",
-          "type": "industrial_site",
-          "overall": 5.4,
-          "rank": 13,
-          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
-        },
-        {
-          "slug": "port-talbot-steelworks",
-          "name": "Port Talbot Steelworks",
-          "region": "uk_ireland",
-          "type": "industrial_site",
-          "overall": 5.6,
-          "rank": 14,
+          "rank": 7,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -7427,7 +6298,7 @@
           "region": "north_america",
           "type": "isolated_landmass",
           "overall": 6.7,
-          "rank": 15,
+          "rank": 8,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -7436,7 +6307,7 @@
           "region": "western_europe",
           "type": "remote_settlement",
           "overall": 7.0,
-          "rank": 16,
+          "rank": 9,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -7445,7 +6316,7 @@
           "region": "south_asia",
           "type": "isolated_landmass",
           "overall": 8.3,
-          "rank": 17,
+          "rank": 10,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -7454,7 +6325,7 @@
           "region": "south_asia",
           "type": "fortified_structure",
           "overall": 7.8,
-          "rank": 18,
+          "rank": 11,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -7463,7 +6334,7 @@
           "region": "africa",
           "type": "elevated_stronghold",
           "overall": 6.5,
-          "rank": 19,
+          "rank": 12,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -7472,16 +6343,7 @@
           "region": "uk_ireland",
           "type": "remote_settlement",
           "overall": 8.1,
-          "rank": 20,
-          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
-        },
-        {
-          "slug": "gdansk-shipyard",
-          "name": "Gda\u0144sk Shipyard",
-          "region": "eastern_europe",
-          "type": "industrial_site",
-          "overall": 5.4,
-          "rank": 21,
+          "rank": 13,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -7490,25 +6352,7 @@
           "region": "africa",
           "type": "institutional_compound",
           "overall": 6.6,
-          "rank": 22,
-          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
-        },
-        {
-          "slug": "ruhr-industrial-complex",
-          "name": "Ruhr Industrial Complex",
-          "region": "western_europe",
-          "type": "industrial_site",
-          "overall": 5.1,
-          "rank": 23,
-          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
-        },
-        {
-          "slug": "ras-al-khair-desalination-plant",
-          "name": "Ras Al Khair Desalination Plant",
-          "region": "middle_east",
-          "type": "industrial_site",
-          "overall": 5.8,
-          "rank": 24,
+          "rank": 14,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -7517,6 +6361,96 @@
           "region": "east_asia",
           "type": "isolated_landmass",
           "overall": 7.1,
+          "rank": 15,
+          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
+        },
+        {
+          "slug": "hue-citadel",
+          "name": "Hue Citadel",
+          "region": "southeast_asia",
+          "type": "fortified_structure",
+          "overall": 6.6,
+          "rank": 16,
+          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
+        },
+        {
+          "slug": "siwa-oasis",
+          "name": "Siwa Oasis",
+          "region": "middle_east",
+          "type": "remote_settlement",
+          "overall": 7.1,
+          "rank": 17,
+          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
+        },
+        {
+          "slug": "palawan",
+          "name": "Palawan",
+          "region": "southeast_asia",
+          "type": "isolated_landmass",
+          "overall": 7.3,
+          "rank": 18,
+          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
+        },
+        {
+          "slug": "pathankot-air-force-station",
+          "name": "Pathankot Air Force Station",
+          "region": "south_asia",
+          "type": "institutional_compound",
+          "overall": 6.6,
+          "rank": 19,
+          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
+        },
+        {
+          "slug": "himeji-castle",
+          "name": "Himeji Castle",
+          "region": "east_asia",
+          "type": "fortified_structure",
+          "overall": 6.8,
+          "rank": 20,
+          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
+        },
+        {
+          "slug": "kota-kinabalu-naval-base",
+          "name": "Kota Kinabalu Naval Base",
+          "region": "southeast_asia",
+          "type": "institutional_compound",
+          "overall": 6.2,
+          "rank": 21,
+          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
+        },
+        {
+          "slug": "fiji-islands",
+          "name": "Fiji Islands",
+          "region": "oceania",
+          "type": "isolated_landmass",
+          "overall": 7.3,
+          "rank": 22,
+          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
+        },
+        {
+          "slug": "amazon-tall-tower-observatory",
+          "name": "Amazon Tall Tower Observatory",
+          "region": "south_america",
+          "type": "institutional_compound",
+          "overall": 6.1,
+          "rank": 23,
+          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
+        },
+        {
+          "slug": "carcassonne",
+          "name": "Carcassonne",
+          "region": "western_europe",
+          "type": "fortified_structure",
+          "overall": 7.4,
+          "rank": 24,
+          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
+        },
+        {
+          "slug": "edinburgh-castle",
+          "name": "Edinburgh Castle",
+          "region": "uk_ireland",
+          "type": "elevated_stronghold",
+          "overall": 6.5,
           "rank": 25,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         }

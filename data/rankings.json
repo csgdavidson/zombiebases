@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-06T19:31:38.734465+00:00",
-  "totalBases": 156,
+  "generatedAt": "2026-06-06T19:51:12.512174+00:00",
+  "totalBases": 131,
   "global": [
     {
       "slug": "cheyenne-mountain-complex",
@@ -10,7 +10,7 @@
       "summary": "Purpose-built hardened infrastructure makes this one of the most defensible options on the board.",
       "overall": 9.0,
       "rank": 1,
-      "percentile": 0.64
+      "percentile": 0.76
     },
     {
       "slug": "andaman-islands",
@@ -20,7 +20,7 @@
       "summary": "The Andamans are one of the strongest long-horizon options: maritime isolation and resource diversity create resilience if governance and inter-island logistics stay coherent.",
       "overall": 8.3,
       "rank": 2,
-      "percentile": 1.28
+      "percentile": 1.53
     },
     {
       "slug": "mont-saint-michel",
@@ -30,7 +30,7 @@
       "summary": "Mont Saint-Michel is one of the hardest micro-sites to assault thanks to tidal separation; what kills you here is throughput limits in food, space, and medical response.",
       "overall": 8.2,
       "rank": 3,
-      "percentile": 1.92
+      "percentile": 2.29
     },
     {
       "slug": "isle-of-eigg-village",
@@ -40,7 +40,7 @@
       "summary": "Eigg is a rare island community with real off-grid credibility; what kills you here is a bad season that breaks food, fuel, and medical margins before security fails.",
       "overall": 8.1,
       "rank": 4,
-      "percentile": 2.56
+      "percentile": 3.05
     },
     {
       "slug": "tasmania",
@@ -50,7 +50,7 @@
       "summary": "Tasmania is one of the strongest balanced options: durable food-water-energy potential with enough separation to reduce pressure.",
       "overall": 8.1,
       "rank": 5,
-      "percentile": 3.21
+      "percentile": 3.82
     },
     {
       "slug": "chiloe-island",
@@ -60,7 +60,7 @@
       "summary": "Chilo\u00e9 is a strong all-round island base with workable agriculture and defensible approaches, but what kills you here is prolonged maritime cutoff during a hard winter.",
       "overall": 8.0,
       "rank": 6,
-      "percentile": 3.85
+      "percentile": 4.58
     },
     {
       "slug": "cusco-highlands-village",
@@ -70,7 +70,7 @@
       "summary": "Cusco highlands villages combine terrain defense with proven local subsistence systems, but what kills you here is cold-altitude medical decline in unacclimated groups.",
       "overall": 8.0,
       "rank": 7,
-      "percentile": 4.49
+      "percentile": 5.34
     },
     {
       "slug": "heligoland",
@@ -80,7 +80,7 @@
       "summary": "Heligoland is one of the strongest isolation plays in Western Europe: remote, compact, and easier to monitor than mainland sites. What kills you here is maritime dependency when weather or fuel cuts the lifeline.",
       "overall": 8.0,
       "rank": 8,
-      "percentile": 5.13
+      "percentile": 6.11
     },
     {
       "slug": "seychelles",
@@ -90,7 +90,7 @@
       "summary": "Seychelles is one of the strongest African macro-base options because exceptional island isolation combines with a livable climate and realistic long-term habitation potential. The main constraint is coordination and resupply across dispersed islands once external systems weaken.",
       "overall": 8.0,
       "rank": 9,
-      "percentile": 5.77
+      "percentile": 6.87
     },
     {
       "slug": "mehrangarh-fort",
@@ -100,7 +100,7 @@
       "summary": "Mehrangarh combines exceptional fortification geometry with workable internal scale, making it one of the stronger fortress options if surrounding pressure is actively managed.",
       "overall": 7.8,
       "rank": 10,
-      "percentile": 6.41
+      "percentile": 7.63
     },
     {
       "slug": "machu-picchu",
@@ -110,7 +110,7 @@
       "summary": "Machu Picchu offers excellent terrain defense and controlled approach lines, but limited productive capacity prevents large, permanent survival communities.",
       "overall": 7.6,
       "rank": 11,
-      "percentile": 7.05
+      "percentile": 8.4
     },
     {
       "slug": "simien-mountains",
@@ -120,7 +120,7 @@
       "summary": "The Simien Mountains are a naturally defensible high-altitude stronghold, where sheer cliffs, limited access routes, and extreme isolation significantly reduce external threat pressure. However, that same isolation severely limits long-term survivability, with constrained food production, harsh living conditions, and difficult resupply. Over time, the balance shifts from protection to restriction, making it better suited to short-term refuge than permanent settlement.",
       "overall": 7.5,
       "rank": 12,
-      "percentile": 7.69
+      "percentile": 9.16
     },
     {
       "slug": "carcassonne",
@@ -130,7 +130,7 @@
       "summary": "Carcassonne is a premier fortified shell with layered walls and command depth; what kills you here is sustainment fatigue behind intact defenses.",
       "overall": 7.4,
       "rank": 13,
-      "percentile": 8.33
+      "percentile": 9.92
     },
     {
       "slug": "faroe-islands",
@@ -140,7 +140,7 @@
       "summary": "Faroe is one of Europe's strongest isolation plays, but what kills you here is maritime bottleneck failure when storms, fuel limits, and fleet wear cut food and medical imports.",
       "overall": 7.4,
       "rank": 14,
-      "percentile": 8.97
+      "percentile": 10.69
     },
     {
       "slug": "hilltop-fort-rajasthan",
@@ -150,7 +150,7 @@
       "summary": "A Rajasthan hill fort is a classic high-control stronghold with excellent wall geometry, but water and heat stress define whether it thrives or slowly fails.",
       "overall": 7.4,
       "rank": 15,
-      "percentile": 9.62
+      "percentile": 11.45
     },
     {
       "slug": "socotra-island",
@@ -160,7 +160,7 @@
       "summary": "Socotra gives outstanding separation from collapse corridors, but what kills you here is maritime supply fracture: once sea links fail, medicine, tools, and replacement goods run out faster than local systems can adapt.",
       "overall": 7.4,
       "rank": 16,
-      "percentile": 10.26
+      "percentile": 12.21
     },
     {
       "slug": "fiji-islands",
@@ -170,7 +170,7 @@
       "summary": "Fiji balances isolation and livability better than most island options, but cyclone and maritime dependence cap reliability.",
       "overall": 7.3,
       "rank": 17,
-      "percentile": 10.9
+      "percentile": 12.98
     },
     {
       "slug": "krak-des-chevaliers",
@@ -180,7 +180,7 @@
       "summary": "Krak des Chevaliers is a premier fortress for holding ground, but what kills you here is siege economics: ammunition, medicine, and calories run out long before the walls meaningfully fail.",
       "overall": 7.3,
       "rank": 18,
-      "percentile": 11.54
+      "percentile": 13.74
     },
     {
       "slug": "palawan",
@@ -190,7 +190,7 @@
       "summary": "Palawan is a large island system that balances isolation, defensibility, and resource diversity. It works when distributed settlements and logistics are coordinated at island-wide scale. You die when governance fractures and shipping disruption desynchronizes regional supply.",
       "overall": 7.3,
       "rank": 19,
-      "percentile": 12.18
+      "percentile": 14.5
     },
     {
       "slug": "kodiak-island",
@@ -200,7 +200,7 @@
       "summary": "Kodiak is a high-isolation island with credible wild-resource potential, but its dominant failure mode is climate-logistics attrition: severe weather and seasonal bottlenecks steadily erode throughput, maintenance, and medical resilience.",
       "overall": 7.2,
       "rank": 20,
-      "percentile": 12.82
+      "percentile": 15.27
     },
     {
       "slug": "matmata-underground-dwellings",
@@ -210,7 +210,7 @@
       "summary": "Matmata offers a strong concealment-defense package with naturally insulated subterranean housing and manageable access points. Its core trade-off is protected living space versus limited scale and external dependence for growth.",
       "overall": 7.2,
       "rank": 21,
-      "percentile": 13.46
+      "percentile": 16.03
     },
     {
       "slug": "rice-terrace-highlands",
@@ -220,7 +220,7 @@
       "summary": "Rice Terrace Highlands are elevated agrarian settlements with built-in food potential. They work by combining controllable approach routes with reliable staple production systems. You die when irrigation, labor coordination, or slope access fails during stress cycles.",
       "overall": 7.2,
       "rank": 22,
-      "percentile": 14.1
+      "percentile": 16.79
     },
     {
       "slug": "sigiriya",
@@ -230,7 +230,7 @@
       "summary": "Sigiriya offers rare rock-fortress defensibility and visibility, but constrained top-plateau capacity limits how long a group can live there without strong external support.",
       "overall": 7.2,
       "rank": 23,
-      "percentile": 14.74
+      "percentile": 17.56
     },
     {
       "slug": "zanzibar-island",
@@ -240,7 +240,7 @@
       "summary": "Zanzibar balances meaningful island separation with established settlement infrastructure, making it a credible medium-to-long-term refuge if governance and resource management remain coherent. Its challenge is that it is populated and close enough to mainland dynamics to face persistent pressure.",
       "overall": 7.2,
       "rank": 24,
-      "percentile": 15.38
+      "percentile": 18.32
     },
     {
       "slug": "burlington-bunker",
@@ -250,7 +250,7 @@
       "summary": "Burlington is exceptionally hard to breach in the opening phase; what kills you here is closed-system decay once consumables, maintenance, or governance slip.",
       "overall": 7.1,
       "rank": 25,
-      "percentile": 16.03
+      "percentile": 19.08
     },
     {
       "slug": "cappadocia-highlands",
@@ -260,7 +260,7 @@
       "summary": "Cappadocia\u2019s broken terrain and concealment options make it a strong defensive refuge, but what kills you here is water-and-agriculture throughput: dispersed hideouts can outlast attacks, not prolonged scarcity.",
       "overall": 7.1,
       "rank": 26,
-      "percentile": 16.67
+      "percentile": 19.85
     },
     {
       "slug": "coober-pedy-underground-settlement",
@@ -270,7 +270,7 @@
       "summary": "Coober Pedy is one of the few desert sites where underground habitation is already proven, but long-term success is limited by hard water and logistics ceilings.",
       "overall": 7.1,
       "rank": 27,
-      "percentile": 17.31
+      "percentile": 20.61
     },
     {
       "slug": "derinkuyu-underground-city",
@@ -280,7 +280,7 @@
       "summary": "Derinkuyu is an elite hide-and-hold refuge, but what kills you here is subterranean throughput collapse: ventilation, waste handling, and calorie flow fail before defenses do.",
       "overall": 7.1,
       "rank": 28,
-      "percentile": 17.95
+      "percentile": 21.37
     },
     {
       "slug": "gotland",
@@ -290,7 +290,7 @@
       "summary": "Gotland is a robust island option with workable infrastructure, but what kills you here is coastline overextension: too many access points for too few defenders over time.",
       "overall": 7.1,
       "rank": 29,
-      "percentile": 18.59
+      "percentile": 22.14
     },
     {
       "slug": "hanle-observatory",
@@ -300,7 +300,7 @@
       "summary": "Hanle Observatory is an isolation-dominant survival option with low encounter pressure, but extreme altitude and remoteness impose severe physiological and logistics penalties.",
       "overall": 7.1,
       "rank": 30,
-      "percentile": 19.23
+      "percentile": 22.9
     },
     {
       "slug": "jeju-island",
@@ -310,7 +310,7 @@
       "summary": "Jeju is a strong island refuge with usable farmland, water access, and natural maritime separation from mainland spillover. What kills you here is maritime choke failure: if ports and fuel fail, an island-scale population can out-consume local capacity.",
       "overall": 7.1,
       "rank": 31,
-      "percentile": 19.87
+      "percentile": 23.66
     },
     {
       "slug": "kargil-war-bunkers",
@@ -320,7 +320,7 @@
       "summary": "Kargil War Bunkers are military-hardened high-altitude positions designed to resist assault. They work by combining strong fortification with terrain that channels approaches. You die when cold-weather fuel, medical, and resupply throughput collapses before defenses do.",
       "overall": 7.1,
       "rank": 32,
-      "percentile": 20.51
+      "percentile": 24.43
     },
     {
       "slug": "mount-huashan",
@@ -330,7 +330,7 @@
       "summary": "Mount Huashan is an elite defensive perch with severe access control and strong natural isolation. The decisive trade-off is near-unmatched protection versus chronic logistical fragility.",
       "overall": 7.1,
       "rank": 33,
-      "percentile": 21.15
+      "percentile": 25.19
     },
     {
       "slug": "siwa-oasis",
@@ -340,7 +340,7 @@
       "summary": "Siwa Oasis is one of the more credible long-horizon refuges in the region, but what kills you here is water-system fragility: contamination, overdraw, or pump failure can collapse the settlement\u2019s carrying capacity.",
       "overall": 7.1,
       "rank": 34,
-      "percentile": 21.79
+      "percentile": 25.95
     },
     {
       "slug": "ait-benhaddou",
@@ -350,7 +350,7 @@
       "summary": "A\u00eft Benhaddou is a strong niche base: its fortified settlement form and relative isolation support controlled defense and lower immediate pressure. Its long-term ceiling is set by arid constraints, where limited water and food capacity become the decisive bottleneck.",
       "overall": 7.0,
       "rank": 35,
-      "percentile": 22.44
+      "percentile": 26.72
     },
     {
       "slug": "galapagos-islands",
@@ -360,7 +360,7 @@
       "summary": "Gal\u00e1pagos has extreme isolation and low random threat traffic, but what kills you here is supply collapse once imported essentials stop.",
       "overall": 7.0,
       "rank": 36,
-      "percentile": 23.08
+      "percentile": 27.48
     },
     {
       "slug": "great-wall-fortress-sections",
@@ -370,7 +370,7 @@
       "summary": "Great Wall fortress sections provide strong engineered defense lines and terrain leverage, but they are fragmented assets rather than turnkey settlements. The dominant trade-off is excellent barrier control versus poor self-sustaining living capacity.",
       "overall": 7.0,
       "rank": 37,
-      "percentile": 23.72
+      "percentile": 28.24
     },
     {
       "slug": "hallstatt",
@@ -380,7 +380,7 @@
       "summary": "Hallstatt combines constrained access with strong local livability, making it one of the better balanced settlement options. What kills you here is chokepoint failure that traps residents against terrain.",
       "overall": 7.0,
       "rank": 38,
-      "percentile": 24.36
+      "percentile": 29.01
     },
     {
       "slug": "iwo-jima-underground-bunkers",
@@ -390,7 +390,7 @@
       "summary": "Iwo Jima\u2019s bunker network is exceptionally hard to assault and highly isolated, but it is austere and resource-poor. What kills you here is life-support collapse underground: water, ventilation, and medical limits outrun defensive advantages.",
       "overall": 7.0,
       "rank": 39,
-      "percentile": 25.0
+      "percentile": 29.77
     },
     {
       "slug": "malbork-castle",
@@ -400,7 +400,7 @@
       "summary": "Malbork provides exceptional masonry defense and layered gates, but it sits in a reachable lowland region. What kills you here is siege attrition: repeated encirclement and supply disruption grind down even a strong fortress.",
       "overall": 7.0,
       "rank": 40,
-      "percentile": 25.64
+      "percentile": 30.53
     },
     {
       "slug": "telluride",
@@ -410,7 +410,7 @@
       "summary": "Mountain terrain and manageable scale make Telluride a credible holdout if you prepare for winter logistics.",
       "overall": 7.0,
       "rank": 41,
-      "percentile": 26.28
+      "percentile": 31.3
     },
     {
       "slug": "titan-missile-museum-silo-571-7",
@@ -420,7 +420,7 @@
       "summary": "A tough underground shell with real protective value, but limited habitability without major adaptation.",
       "overall": 7.0,
       "rank": 42,
-      "percentile": 26.92
+      "percentile": 32.06
     },
     {
       "slug": "visby",
@@ -430,7 +430,7 @@
       "summary": "Visby is a balanced walled island town, but what kills you here is population-and-water strain if too many survivors concentrate behind finite historic defenses.",
       "overall": 7.0,
       "rank": 43,
-      "percentile": 27.56
+      "percentile": 32.82
     },
     {
       "slug": "ile-dyeu",
@@ -440,7 +440,7 @@
       "summary": "\u00cele d\u2019Yeu is a balanced island refuge with useful separation and livable conditions, but it lacks deep strategic depth. What kills you here is slow resource depletion under prolonged isolation.",
       "overall": 7.0,
       "rank": 44,
-      "percentile": 28.21
+      "percentile": 33.59
     },
     {
       "slug": "area-51",
@@ -450,7 +450,7 @@
       "summary": "Area 51 combines remoteness, controlled approaches, and hardened infrastructure, but its dominant failure mode is systems complexity debt: without specialized maintenance pipelines, high-tech capabilities decay into unusable overhead.",
       "overall": 6.9,
       "rank": 45,
-      "percentile": 28.85
+      "percentile": 34.35
     },
     {
       "slug": "fasil-ghebbi",
@@ -460,7 +460,7 @@
       "summary": "Fasil Ghebbi is a fortified royal compound with thick masonry, layered courtyards, and strong internal control, giving it above-average defensive potential in an inland setting. It is more balanced than many heritage landmarks, but long-term survival still depends on building reliable food, water, and medical systems beyond the walls.",
       "overall": 6.9,
       "rank": 46,
-      "percentile": 29.49
+      "percentile": 35.11
     },
     {
       "slug": "lindisfarne",
@@ -470,7 +470,7 @@
       "summary": "A tidal island with natural separation, limited access windows, and a defensible settlement pattern. It works well for a disciplined small group, but tide dependency and resource limits cap long-term resilience.",
       "overall": 6.9,
       "rank": 47,
-      "percentile": 30.13
+      "percentile": 35.88
     },
     {
       "slug": "predjama-castle",
@@ -480,7 +480,7 @@
       "summary": "Predjama is a superb cliff fortress with choke-point control, but fortress geometry does not make food or medicine. What kills you here is siege starvation: you can deny entry for a long time and still lose to depletion.",
       "overall": 6.9,
       "rank": 48,
-      "percentile": 30.77
+      "percentile": 36.64
     },
     {
       "slug": "qeshm-island",
@@ -490,7 +490,7 @@
       "summary": "Qeshm offers valuable island separation and room for mixed subsistence, but what kills you here is control dilution: the island is large enough that fragmented authority invites persistent infiltration and internal conflict.",
       "overall": 6.9,
       "rank": 49,
-      "percentile": 31.41
+      "percentile": 37.4
     },
     {
       "slug": "raaf-base-tindal",
@@ -500,7 +500,7 @@
       "summary": "High-grade military infrastructure gives strong initial control, but strategic visibility and supply dependence limit endurance.",
       "overall": 6.9,
       "rank": 50,
-      "percentile": 32.05
+      "percentile": 38.17
     },
     {
       "slug": "rocamadour",
@@ -510,7 +510,7 @@
       "summary": "Rocamadour balances cliffside defense with workable rural linkage; what kills you here is exceeding carrying capacity and overloading water/sanitation systems.",
       "overall": 6.9,
       "rank": 51,
-      "percentile": 32.69
+      "percentile": 38.93
     },
     {
       "slug": "tiger-leaping-gorge-cliffs",
@@ -520,7 +520,7 @@
       "summary": "Tiger Leaping Gorge offers extraordinary terrain defense and low approach density, but daily survival is constrained by space and supply movement. The central trade-off is tactical dominance versus unworkable sustainment at scale.",
       "overall": 6.9,
       "rank": 52,
-      "percentile": 33.33
+      "percentile": 39.69
     },
     {
       "slug": "tigers-nest-monastery",
@@ -530,7 +530,7 @@
       "summary": "Tiger\u2019s Nest is an extreme cliffside redoubt with elite access denial, but its tiny carrying capacity and severe logistics ceiling cap long-term survival.",
       "overall": 6.9,
       "rank": 53,
-      "percentile": 33.97
+      "percentile": 40.46
     },
     {
       "slug": "alcatraz-island",
@@ -540,7 +540,7 @@
       "summary": "Alcatraz buys strong early security through water separation and choke-point access, but the decisive failure mode is supply starvation: once boat fuel, food inflow, and repair parts lapse, the island becomes a sealed deficit zone.",
       "overall": 6.8,
       "rank": 54,
-      "percentile": 34.62
+      "percentile": 41.22
     },
     {
       "slug": "anna-creek-station",
@@ -550,7 +550,7 @@
       "summary": "Exceptional scale and remoteness support long-run survival potential, but the footprint is too vast to secure conventionally.",
       "overall": 6.8,
       "rank": 55,
-      "percentile": 35.26
+      "percentile": 41.98
     },
     {
       "slug": "banda-neira",
@@ -560,7 +560,7 @@
       "summary": "A small island settlement with strong maritime separation, historic fortifications, and access to coastal resources. It works best as a low-profile island refuge, but limited scale and supply dependence cap long-term resilience.",
       "overall": 6.8,
       "rank": 56,
-      "percentile": 35.9
+      "percentile": 42.75
     },
     {
       "slug": "caerphilly-castle",
@@ -570,7 +570,7 @@
       "summary": "A large moated castle with strong defensive design and layered barriers. It is one of the stronger historic fortifications, but modern exposure and limited self-sufficiency keep it from elite status.",
       "overall": 6.8,
       "rank": 57,
-      "percentile": 36.54
+      "percentile": 43.51
     },
     {
       "slug": "greenland",
@@ -580,7 +580,7 @@
       "summary": "A vast Arctic island with extreme isolation, natural resources, and scattered settlements. However, harsh climate, huge scale, and infrastructure dependency make it difficult to control or sustain.",
       "overall": 6.8,
       "rank": 58,
-      "percentile": 37.18
+      "percentile": 44.27
     },
     {
       "slug": "himeji-castle",
@@ -590,7 +590,7 @@
       "summary": "Himeji Castle delivers high-quality fortress geometry and controlled internal defense, but its urban context limits long-term security. The key trade-off is superb structure versus low isolation.",
       "overall": 6.8,
       "rank": 59,
-      "percentile": 37.82
+      "percentile": 45.04
     },
     {
       "slug": "itaipu-dam",
@@ -600,7 +600,7 @@
       "summary": "Itaipu Dam has exceptional energy potential and water access, making it operationally powerful, but its scale and strategic value make defense extremely demanding.",
       "overall": 6.8,
       "rank": 60,
-      "percentile": 38.46
+      "percentile": 45.8
     },
     {
       "slug": "masada",
@@ -610,7 +610,7 @@
       "summary": "Masada is brutally hard to assault, but what kills you here is plateau logistics: water, heat management, and medical throughput collapse before attackers can force entry.",
       "overall": 6.8,
       "rank": 61,
-      "percentile": 39.1
+      "percentile": 46.56
     },
     {
       "slug": "mesa-verde",
@@ -620,7 +620,7 @@
       "summary": "Mesa Verde offers strong terrain defense, but what kills you here is carrying-capacity mismatch: protected positions can hold people, yet arable throughput and water logistics limit long-run population support.",
       "overall": 6.8,
       "rank": 62,
-      "percentile": 39.74
+      "percentile": 47.33
     },
     {
       "slug": "olavsvern-naval-base",
@@ -630,7 +630,7 @@
       "summary": "A hardened underground naval base with strong concealment and protected infrastructure. However, confined systems, external supply needs, and limited scalability restrict long-term survival.",
       "overall": 6.8,
       "rank": 63,
-      "percentile": 40.38
+      "percentile": 48.09
     },
     {
       "slug": "st-kilda",
@@ -640,7 +640,7 @@
       "summary": "An extremely remote island archipelago with exceptional isolation and low external threat pressure. Its weakness is sustainment: weather, landing difficulty, and limited resources make survival fragile over time.",
       "overall": 6.8,
       "rank": 64,
-      "percentile": 41.03
+      "percentile": 48.85
     },
     {
       "slug": "nagurskoye-air-base",
@@ -650,7 +650,7 @@
       "summary": "A remote Arctic military airbase with controlled access and strong strategic positioning. However, extreme climate, visibility, and dependence on supply chains reduce independent survivability.",
       "overall": 6.7,
       "rank": 65,
-      "percentile": 41.67
+      "percentile": 49.62
     },
     {
       "slug": "vancouver-island",
@@ -660,7 +660,7 @@
       "summary": "Vancouver Island is one of the most balanced large-island options, but its dominant failure mode is population-interface pressure: connected urban corridors and ferry chokepoints can overwhelm otherwise strong local resources.",
       "overall": 6.7,
       "rank": 66,
-      "percentile": 42.31
+      "percentile": 50.38
     },
     {
       "slug": "camp-lemonnier",
@@ -670,7 +670,7 @@
       "summary": "Camp Lemonnier has exceptional military-grade defensive capability and organized base infrastructure, making it one of the strongest compounds in a direct security sense. But it is not highly independent: if fuel, water treatment, and logistics pipelines fail, performance drops fast.",
       "overall": 6.6,
       "rank": 67,
-      "percentile": 42.95
+      "percentile": 51.15
     },
     {
       "slug": "cu-chi-tunnels",
@@ -680,7 +680,7 @@
       "summary": "A purpose-built tunnel network with concealment, restricted access, and strong defensive history. It is highly effective for short-term evasion, but confinement, ventilation, and resource limits make permanent survival difficult.",
       "overall": 6.6,
       "rank": 68,
-      "percentile": 43.59
+      "percentile": 51.91
     },
     {
       "slug": "fort-george",
@@ -690,7 +690,7 @@
       "summary": "A purpose-built coastal military fort with strong walls, controlled access, and organised internal space. It has real defensive value, but exposure and reliance on external supplies limit long-term independence.",
       "overall": 6.6,
       "rank": 69,
-      "percentile": 44.23
+      "percentile": 52.67
     },
     {
       "slug": "fort-jefferson",
@@ -700,7 +700,7 @@
       "summary": "Fort Jefferson is an exceptional sea-fortress with clear defensive geometry and extreme stand-off distance, but its dominant failure mode is water-energy fragility: if desalination and fuel chains degrade, habitability collapses quickly.",
       "overall": 6.6,
       "rank": 70,
-      "percentile": 44.87
+      "percentile": 53.44
     },
     {
       "slug": "hm-prison-dartmoor",
@@ -710,7 +710,7 @@
       "summary": "A remote prison complex with secure walls, controlled movement, and strong internal containment. It offers a credible short-term defensive shell, but harsh exposure and limited self-sufficiency constrain long-term survival.",
       "overall": 6.6,
       "rank": 71,
-      "percentile": 45.51
+      "percentile": 54.2
     },
     {
       "slug": "ha-long-bay-cliffs",
@@ -720,7 +720,7 @@
       "summary": "Ha Long Bay cliffs are a terrain-fragmented coastal redoubt of islands and vertical rock. It works by forcing movement through predictable maritime channels and narrow landing points. You die when weather or boat degradation cuts mobility and resupply between sectors.",
       "overall": 6.6,
       "rank": 72,
-      "percentile": 46.15
+      "percentile": 54.96
     },
     {
       "slug": "hue-citadel",
@@ -730,7 +730,7 @@
       "summary": "Hue Citadel is a fortified urban compound with layered walls and controlled gates. It works as a short-to-medium defensive enclave where geometry slows penetration. You die when siege pressure outlasts external food, fuel, and medical inflows.",
       "overall": 6.6,
       "rank": 73,
-      "percentile": 46.79
+      "percentile": 55.73
     },
     {
       "slug": "maori-pa-fortifications",
@@ -740,7 +740,7 @@
       "summary": "Strong terrain-first fortifications can stop early incursions, but most pa sites fail once stocks and water run thin.",
       "overall": 6.6,
       "rank": 74,
-      "percentile": 47.44
+      "percentile": 56.49
     },
     {
       "slug": "pathankot-air-force-station",
@@ -750,7 +750,7 @@
       "summary": "Pathankot AFS is a hardened operational compound with meaningful defensive structure, but its strategic visibility keeps pressure high and long-term autonomy uncertain.",
       "overall": 6.6,
       "rank": 75,
-      "percentile": 48.08
+      "percentile": 57.25
     },
     {
       "slug": "suomenlinna-fortress",
@@ -760,7 +760,7 @@
       "summary": "Suomenlinna has real island-fortress defensive logic, but it is tied to nearby urban waters and maritime supply. What kills you here is blockade-driven depletion when fuel, food, and treatment capacity cannot be replenished.",
       "overall": 6.6,
       "rank": 76,
-      "percentile": 48.72
+      "percentile": 58.02
     },
     {
       "slug": "clovelly",
@@ -770,7 +770,7 @@
       "summary": "A steep coastal village with constrained access routes, natural defensibility, and small-scale shelter. It is viable as a compact refuge, but limited expansion, coastal exposure, and supply dependence restrict long-term survival.",
       "overall": 6.5,
       "rank": 77,
-      "percentile": 49.36
+      "percentile": 58.78
     },
     {
       "slug": "edinburgh-castle",
@@ -780,7 +780,7 @@
       "summary": "A highly defensible urban castle on elevated rock, with strong visibility and controlled approaches. It is excellent as a symbolic redoubt, but urban exposure and limited sustainability reduce long-term value.",
       "overall": 6.5,
       "rank": 78,
-      "percentile": 50.0
+      "percentile": 59.54
     },
     {
       "slug": "kibber-village",
@@ -790,7 +790,7 @@
       "summary": "Kibber is a high-altitude remote village that trades accessibility for security. It works through isolation, narrow approaches, and existing community housing for organized routines. You die when winter isolation, fuel gaps, or delayed medical care compound faster than recovery.",
       "overall": 6.5,
       "rank": 79,
-      "percentile": 50.64
+      "percentile": 60.31
     },
     {
       "slug": "komodo-island",
@@ -800,7 +800,7 @@
       "summary": "Komodo is a highly isolated island refuge with strong separation from mainland pressure. It works by limiting approach routes and maintaining disciplined low-population maritime living. You die when freshwater constraints and sea-logistics disruption trigger cascading shortages.",
       "overall": 6.5,
       "rank": 80,
-      "percentile": 51.28
+      "percentile": 61.07
     },
     {
       "slug": "lakshadweep",
@@ -810,7 +810,7 @@
       "summary": "Lakshadweep is a distributed island-chain refuge where sea separation reduces routine contact and gives strong early warning. It works when multiple islands coordinate boats, storage, and rationing as one system. You die when maritime links or freshwater discipline fail and each island is stranded alone.",
       "overall": 6.5,
       "rank": 81,
-      "percentile": 51.92
+      "percentile": 61.83
     },
     {
       "slug": "mcmurdo-station",
@@ -820,7 +820,7 @@
       "summary": "A large Antarctic research station with infrastructure, shelter, and operational capacity. However, harsh conditions and dependence on supply chains limit true long-term independence.",
       "overall": 6.5,
       "rank": 82,
-      "percentile": 52.56
+      "percentile": 62.6
     },
     {
       "slug": "table-mountain-plateau",
@@ -830,7 +830,7 @@
       "summary": "Table Mountain Plateau is a highly defensible elevated position with steep cliffs, strong visibility, and usable space on top. However, its direct proximity to Cape Town, multiple access routes, and high visibility make it far less secure than more remote mountain strongholds. It is better suited to short-term defence and staging than long-term isolation.",
       "overall": 6.5,
       "rank": 83,
-      "percentile": 53.21
+      "percentile": 63.36
     },
     {
       "slug": "amundsen-scott-south-pole-station",
@@ -840,7 +840,7 @@
       "summary": "An extremely isolated scientific station with controlled infrastructure and almost no external threat pressure. However, total dependence on life-support systems and resupply makes long-term independence impossible.",
       "overall": 6.4,
       "rank": 84,
-      "percentile": 53.85
+      "percentile": 64.12
     },
     {
       "slug": "longyearbyen",
@@ -850,7 +850,7 @@
       "summary": "A remote Arctic settlement with strong isolation, infrastructure, and controlled access. However, extreme climate and supply-chain reliance constrain long-term resilience.",
       "overall": 6.4,
       "rank": 85,
-      "percentile": 54.49
+      "percentile": 64.89
     },
     {
       "slug": "petra",
@@ -860,7 +860,7 @@
       "summary": "Petra offers strong chokepoints and concealment in stone corridors, but what kills you here is water dependency: once stored supply and nearby sources are contested, defensive geometry cannot feed or hydrate a population.",
       "overall": 6.4,
       "rank": 86,
-      "percentile": 55.13
+      "percentile": 65.65
     },
     {
       "slug": "san-felipe-fortress",
@@ -870,7 +870,7 @@
       "summary": "San Felipe combines historical fortification advantages with moderate operating feasibility, but limited local throughput caps long-term resilience.",
       "overall": 6.4,
       "rank": 87,
-      "percentile": 55.77
+      "percentile": 66.41
     },
     {
       "slug": "vietnam-tunnel-systems",
@@ -880,7 +880,7 @@
       "summary": "A broader tunnel-system concept with strong concealment and movement control across difficult terrain. It provides tactical advantage, but fragmented infrastructure and poor long-term livability keep it below true stronghold status.",
       "overall": 6.4,
       "rank": 88,
-      "percentile": 56.41
+      "percentile": 67.18
     },
     {
       "slug": "danum-valley-field-centre",
@@ -890,7 +890,7 @@
       "summary": "Danum Valley Field Centre is a remote jungle refuge with low-contact signature advantages. It works for small trained groups that can run strict field medicine and maintenance routines. You die when treatable illness, injury, or equipment failure outpaces evacuation and repair.",
       "overall": 6.3,
       "rank": 89,
-      "percentile": 57.05
+      "percentile": 67.94
     },
     {
       "slug": "murmansk-icebreaker-port",
@@ -900,7 +900,7 @@
       "summary": "A polar maritime hub with specialist icebreaker infrastructure and Arctic access. However, port exposure, supply dependency, and harsh operating conditions limit long-term security.",
       "overall": 6.3,
       "rank": 90,
-      "percentile": 57.69
+      "percentile": 68.7
     },
     {
       "slug": "pine-gap-facility",
@@ -910,7 +910,7 @@
       "summary": "Extreme remoteness and hardened controls are offset by acute system dependency and top-tier strategic exposure.",
       "overall": 6.3,
       "rank": 91,
-      "percentile": 58.33
+      "percentile": 69.47
     },
     {
       "slug": "al-udeid-air-base",
@@ -920,7 +920,7 @@
       "summary": "Al Udeid provides one of the best ready-made defense envelopes in the region, but what kills you here is signature load: major airbase visibility attracts sustained external pressure and drains supplies.",
       "overall": 6.2,
       "rank": 92,
-      "percentile": 58.97
+      "percentile": 70.23
     },
     {
       "slug": "antarctic-peninsula",
@@ -930,7 +930,7 @@
       "summary": "A remote polar region with natural isolation and access to coastal landing points. However, severe weather, limited infrastructure, and scarce sustainable resources make survival highly fragile.",
       "overall": 6.2,
       "rank": 93,
-      "percentile": 59.62
+      "percentile": 70.99
     },
     {
       "slug": "elmina-castle",
@@ -940,7 +940,7 @@
       "summary": "Elmina Castle is a heavily fortified coastal stronghold with thick walls, controlled internal spaces, and clear defensive advantages. However, its position within a populated coastal town and direct access from land and sea significantly reduce its long-term viability, making it better suited to temporary defence than sustained survival.",
       "overall": 6.2,
       "rank": 94,
-      "percentile": 60.26
+      "percentile": 71.76
     },
     {
       "slug": "kota-kinabalu-naval-base",
@@ -950,7 +950,7 @@
       "summary": "Kota Kinabalu Naval Base is a military command compound with strong tactical security. It works through hardened access control, organized response, and maritime support infrastructure. You die when prolonged contest burns fuel, parts, and readiness faster than resupply.",
       "overall": 6.2,
       "rank": 95,
-      "percentile": 60.9
+      "percentile": 72.52
     },
     {
       "slug": "okinawa",
@@ -960,7 +960,7 @@
       "summary": "Okinawa offers meaningful island separation and workable living conditions, but dense infrastructure and strategic visibility increase contest pressure. What kills you here is competition over ports, fuel, and transport hubs that fractures island stability.",
       "overall": 6.2,
       "rank": 96,
-      "percentile": 61.54
+      "percentile": 73.28
     },
     {
       "slug": "amazon-tall-tower-observatory",
@@ -970,7 +970,7 @@
       "summary": "ATTO offers deep-rainforest isolation and strong natural resource potential, but terrain, disease burden, and mobility constraints make control and continuity difficult.",
       "overall": 6.1,
       "rank": 97,
-      "percentile": 62.18
+      "percentile": 74.05
     },
     {
       "slug": "banlung",
@@ -980,7 +980,7 @@
       "summary": "A remote inland town with surrounding terrain, forest cover, and regional resource access. It offers more livability than a pure wilderness refuge, but weak defensibility and difficult logistics limit its ceiling.",
       "overall": 6.1,
       "rank": 98,
-      "percentile": 62.82
+      "percentile": 74.81
     },
     {
       "slug": "bonny-island-lng-terminal",
@@ -990,7 +990,7 @@
       "summary": "Bonny LNG Terminal is a powerful industrial strongpoint with controlled space and hard infrastructure, but it is brittle under collapse conditions. Its usefulness depends on complex systems, skilled maintenance, and steady supply chains that are hard to replace locally.",
       "overall": 6.1,
       "rank": 99,
-      "percentile": 63.46
+      "percentile": 75.57
     },
     {
       "slug": "guantanamo-bay",
@@ -1000,7 +1000,7 @@
       "summary": "Guantanamo offers strong perimeter control and organized facilities, yet the dominant failure mode is geopolitical encirclement: prolonged dependence on maritime logistics and contested sovereignty can choke continuity even before direct breach.",
       "overall": 6.1,
       "rank": 100,
-      "percentile": 64.1
+      "percentile": 76.34
     },
     {
       "slug": "porton-down",
@@ -1010,7 +1010,7 @@
       "summary": "A secure research facility with controlled access, specialist infrastructure, and perimeter discipline. It has defensive value, but technical dependency, contamination risk, and strategic visibility create serious long-term weakness.",
       "overall": 6.1,
       "rank": 101,
-      "percentile": 64.74
+      "percentile": 77.1
     },
     {
       "slug": "sime-darby-palm-oil-estate-sabah",
@@ -1020,7 +1020,7 @@
       "summary": "Sime Darby Sabah is a large agro-industrial estate that can produce at regional scale. It works when core zones, mills, roads, and workforce discipline stay synchronized. You die when security overstretch and machinery dependence cause cascading output loss.",
       "overall": 6.1,
       "rank": 102,
-      "percentile": 65.38
+      "percentile": 77.86
     },
     {
       "slug": "table-rock-plateau",
@@ -1030,7 +1030,7 @@
       "summary": "Table Rock is a serviceable elevated fallback, but what kills you here is perimeter dilution: broad approach arcs and limited concealment stretch defenders until incidents become constant.",
       "overall": 6.1,
       "rank": 103,
-      "percentile": 66.03
+      "percentile": 78.63
     },
     {
       "slug": "beijing-underground-city",
@@ -1040,7 +1040,7 @@
       "summary": "Beijing Underground City is hard to clear and hard to spot, but it is still a buried extension of a megacity. What kills you here is ventilation and water-system failure once surface utilities, filters, and spare parts stop flowing.",
       "overall": 6.0,
       "rank": 104,
-      "percentile": 66.67
+      "percentile": 79.39
     },
     {
       "slug": "blue-mountains-cliffs",
@@ -1050,7 +1050,7 @@
       "summary": "Excellent terrain defense and standoff distance, with sustainment limited by wildfire and infrastructure thinness.",
       "overall": 6.0,
       "rank": 105,
-      "percentile": 67.31
+      "percentile": 80.15
     },
     {
       "slug": "kimberley-big-hole-mining-complex",
@@ -1060,7 +1060,7 @@
       "summary": "The Kimberley Big Hole offers strong terrain-based defensibility, but it is a dangerous bowl if exits, water access, or supply routes fail. It works as a hard-to-storm holdout early on, yet can quickly become a trap once core lifelines are cut.",
       "overall": 6.0,
       "rank": 106,
-      "percentile": 67.95
+      "percentile": 80.92
     },
     {
       "slug": "maginot-line-bunkers",
@@ -1070,7 +1070,7 @@
       "summary": "The Maginot bunkers are elite for hard protection but poor at independent endurance. What kills you here is subsystem failure underground: air, water, power, and sanitation.",
       "overall": 6.0,
       "rank": 107,
-      "percentile": 68.59
+      "percentile": 81.68
     },
     {
       "slug": "nato-airbase-geilenkirchen",
@@ -1080,7 +1080,7 @@
       "summary": "Geilenkirchen offers serious NATO-grade infrastructure and layered security, but it is embedded in dense mainland networks. What kills you here is constant contact pressure once perimeter staffing and logistics slip.",
       "overall": 6.0,
       "rank": 108,
-      "percentile": 69.23
+      "percentile": 82.44
     },
     {
       "slug": "neuschwanstein-castle",
@@ -1090,17 +1090,7 @@
       "summary": "Neuschwanstein offers strong terrain-assisted defense and visibility; what kills you here is logistics drag from a symbolic site that cannot feed itself.",
       "overall": 6.0,
       "rank": 109,
-      "percentile": 69.87
-    },
-    {
-      "slug": "patagonian-village",
-      "name": "Patagonian Village",
-      "region": "south_america",
-      "type": "remote_settlement",
-      "summary": "Patagonian villages benefit from remoteness and low traffic, but what kills you here is wind-cold exposure when fuel and shelter maintenance fall behind.",
-      "overall": 6.0,
-      "rank": 110,
-      "percentile": 70.51
+      "percentile": 83.21
     },
     {
       "slug": "shirakawa-go",
@@ -1109,8 +1099,8 @@
       "type": "remote_settlement",
       "summary": "Shirakawa-go benefits from mountain remoteness and small-settlement cohesion, but severe winters and limited redundancy constrain endurance. What kills you here is winter logistics failure: heat, medicine, and mobility collapse before threats do.",
       "overall": 6.0,
-      "rank": 111,
-      "percentile": 71.15
+      "rank": 110,
+      "percentile": 83.97
     },
     {
       "slug": "tambopata-research-center",
@@ -1119,8 +1109,8 @@
       "type": "institutional_compound",
       "summary": "Tambopata gives concealment and food potential in deep jungle, but what kills you here is untreated injury or infection far from reliable care.",
       "overall": 6.0,
-      "rank": 112,
-      "percentile": 71.79
+      "rank": 111,
+      "percentile": 84.73
     },
     {
       "slug": "hutchinson-salt-storage-caverns",
@@ -1129,28 +1119,8 @@
       "type": "industrial_site",
       "summary": "Hutchinson salt caverns provide excellent blast/weather protection and concealment, yet the single dominant failure mode is ventilation-power dependency: lose airflow and pumping reliability, and the underground advantage becomes a liability.",
       "overall": 5.9,
-      "rank": 113,
-      "percentile": 72.44
-    },
-    {
-      "slug": "port-vila",
-      "name": "Port Vila",
-      "region": "oceania",
-      "type": "remote_settlement",
-      "summary": "Port Vila offers real settlement infrastructure and island separation, but limited depth makes it fragile under prolonged disruption.",
-      "overall": 5.9,
-      "rank": 114,
-      "percentile": 73.08
-    },
-    {
-      "slug": "singapore-port",
-      "name": "Singapore Port",
-      "region": "southeast_asia",
-      "type": "transit_hub",
-      "summary": "A globally significant port with exceptional logistics, maritime access, and infrastructure. Those strengths become liabilities in collapse, as exposure, density, and strategic importance make it almost impossible to hold.",
-      "overall": 5.9,
-      "rank": 115,
-      "percentile": 73.72
+      "rank": 112,
+      "percentile": 85.5
     },
     {
       "slug": "the-roaches",
@@ -1159,8 +1129,8 @@
       "type": "elevated_stronghold",
       "summary": "A rocky elevated ridge with natural defensibility, visibility, and difficult approaches. It works as a temporary fallback point, but exposure and lack of infrastructure make it unsuitable for long-term occupation.",
       "overall": 5.9,
-      "rank": 116,
-      "percentile": 74.36
+      "rank": 113,
+      "percentile": 86.26
     },
     {
       "slug": "wadi-musa",
@@ -1169,18 +1139,8 @@
       "type": "remote_settlement",
       "summary": "Wadi Musa is workable but fragile; what kills you here is corridor squeeze: limited approach routes become contested chokepoints that choke trade, movement, and medical evacuation.",
       "overall": 5.9,
-      "rank": 117,
-      "percentile": 75.0
-    },
-    {
-      "slug": "bangkok-airport",
-      "name": "Bangkok Airport",
-      "region": "southeast_asia",
-      "type": "transit_hub",
-      "summary": "A major transport hub with huge space, supplies, and infrastructure. It fails as a base because urban proximity, scale, and uncontrolled entry points make it impossible to secure.",
-      "overall": 5.8,
-      "rank": 118,
-      "percentile": 75.64
+      "rank": 114,
+      "percentile": 87.02
     },
     {
       "slug": "camp-century-ice-tunnels",
@@ -1189,48 +1149,8 @@
       "type": "subterranean",
       "summary": "Camp Century is exceptionally hard to reach and hard to assault, but it fails as a settlement because the environment itself destroys long-term habitability.",
       "overall": 5.8,
-      "rank": 119,
-      "percentile": 76.28
-    },
-    {
-      "slug": "norilsk",
-      "name": "Norilsk",
-      "region": "eastern_europe",
-      "type": "industrial_site",
-      "summary": "Norilsk is remote enough to avoid mass contact, but the environment itself is hostile to human endurance. What kills you here is infrastructure-coupled cold exposure: once heat, shelter integrity, or medical capability slip, mortality spikes fast.",
-      "overall": 5.8,
-      "rank": 120,
-      "percentile": 76.92
-    },
-    {
-      "slug": "olenya-air-base",
-      "name": "Olenya Air Base",
-      "region": "eastern_europe",
-      "type": "institutional_compound",
-      "summary": "Olenya can absorb early shock thanks to military-grade hardening and Arctic distance, but what kills you here is fuel-and-spares collapse in extreme cold once central logistics break.",
-      "overall": 5.8,
-      "rank": 121,
-      "percentile": 77.56
-    },
-    {
-      "slug": "ras-al-khair-desalination-plant",
-      "name": "Ras Al Khair Desalination Plant",
-      "region": "middle_east",
-      "type": "industrial_site",
-      "summary": "Ras Al Khair\u2019s water output is uniquely valuable, but what kills you here is power-chain fragility: once energy input or specialist maintenance fails, the core survival advantage disappears fast.",
-      "overall": 5.8,
-      "rank": 122,
-      "percentile": 78.21
-    },
-    {
-      "slug": "shaxi-ancient-town",
-      "name": "Shaxi Ancient Town",
-      "region": "east_asia",
-      "type": "remote_settlement",
-      "summary": "Shaxi is a remote town with manageable scale and decent local living potential, but it lacks hard defensive geometry. What kills you here is slow attrition from repeated incursions that drain manpower and stores.",
-      "overall": 5.8,
-      "rank": 123,
-      "percentile": 78.85
+      "rank": 115,
+      "percentile": 87.79
     },
     {
       "slug": "waw-an-namus-cave-system",
@@ -1239,8 +1159,8 @@
       "type": "subterranean",
       "summary": "Waw an Namus is one of the hardest places to reach, which dramatically lowers threat pressure. The same isolation becomes the fatal weakness because survival systems are almost entirely import-dependent.",
       "overall": 5.8,
-      "rank": 124,
-      "percentile": 79.49
+      "rank": 116,
+      "percentile": 88.55
     },
     {
       "slug": "ajanta-caves",
@@ -1249,48 +1169,8 @@
       "type": "subterranean",
       "summary": "Ajanta Caves are a hardened cave shelter system with strong choke-point defense. It works for short protected occupancy because rock-cut access geometry lowers breach risk. You die when confinement-driven sanitation and resource limits outrun defensive advantages.",
       "overall": 5.7,
-      "rank": 125,
-      "percentile": 80.13
-    },
-    {
-      "slug": "amazon-bhx4-fulfilment-centre",
-      "name": "Amazon BHX4 Fulfilment Centre",
-      "region": "uk_ireland",
-      "type": "industrial_site",
-      "summary": "A huge logistics warehouse with stored goods, space, and controlled internal areas. It gives a strong early advantage, but weak defensibility, dependence on systems, and surrounding access routes make it decay quickly.",
-      "overall": 5.7,
-      "rank": 126,
-      "percentile": 80.77
-    },
-    {
-      "slug": "crevasse-field-glacier",
-      "name": "Crevasse Field Glacier",
-      "region": "polar_extreme",
-      "type": "polar_extreme",
-      "summary": "A fractured glacial terrain filled with deep crevasses, offering extreme isolation and natural barriers. However, unstable footing, concealed crevasse risk, and lack of resources make long-term survival nearly impossible.",
-      "overall": 5.7,
-      "rank": 127,
-      "percentile": 81.41
-    },
-    {
-      "slug": "kuttanad-village",
-      "name": "Kuttanad Village",
-      "region": "south_asia",
-      "type": "remote_settlement",
-      "summary": "Kuttanad is a food-producing lowland basin built around paddy and waterways. It works as a production engine when flood control, storage, and transport are tightly managed. You die when flooding and disease pressure break perimeter control and erase surplus.",
-      "overall": 5.7,
-      "rank": 128,
-      "percentile": 82.05
-    },
-    {
-      "slug": "ryongsong-residence-compound",
-      "name": "Ryongsong Residence Compound",
-      "region": "east_asia",
-      "type": "institutional_compound",
-      "summary": "Ryongsong Compound has strong perimeter control and internal zoning, but it remains a politically obvious fixed site in an urban state core. What kills you here is siege pressure once external support and movement options collapse.",
-      "overall": 5.7,
-      "rank": 129,
-      "percentile": 82.69
+      "rank": 117,
+      "percentile": 89.31
     },
     {
       "slug": "kolmanskop",
@@ -1299,8 +1179,8 @@
       "type": "remote_settlement",
       "summary": "Kolmanskop buys time through remoteness and clear sightlines, but it cannot feed or hydrate a group for long. The dominant trade-off is safety from people versus total dependence on imported water and food.",
       "overall": 5.6,
-      "rank": 130,
-      "percentile": 83.33
+      "rank": 118,
+      "percentile": 90.08
     },
     {
       "slug": "ligatne-bunker",
@@ -1309,48 +1189,8 @@
       "type": "subterranean",
       "summary": "Ligatne's bunker geometry is excellent for sheltering, but what kills you here is air-power-water dependency: once life-support systems degrade, underground becomes a coffin.",
       "overall": 5.6,
-      "rank": 131,
-      "percentile": 83.97
-    },
-    {
-      "slug": "port-talbot-steelworks",
-      "name": "Port Talbot Steelworks",
-      "region": "uk_ireland",
-      "type": "industrial_site",
-      "summary": "A major industrial site with infrastructure, materials, and repair potential. It is useful as a resource node, but pollution, exposure, and system dependency make it weak as a secure living base.",
-      "overall": 5.6,
-      "rank": 132,
-      "percentile": 84.62
-    },
-    {
-      "slug": "foxconn-shenzhen-factory",
-      "name": "Foxconn Shenzhen Factory",
-      "region": "east_asia",
-      "type": "industrial_site",
-      "summary": "The Shenzhen factory complex has unusual infrastructure depth and short-term resource potential, but it sits inside one of the world\u2019s densest urban-industrial corridors. The dominant trade-off is internal capability versus catastrophic exposure.",
-      "overall": 5.4,
-      "rank": 133,
-      "percentile": 85.26
-    },
-    {
-      "slug": "gdansk-shipyard",
-      "name": "Gda\u0144sk Shipyard",
-      "region": "eastern_europe",
-      "type": "industrial_site",
-      "summary": "Gda\u0144sk Shipyard is a high-value industrial toolkit, not a survivable sanctuary. What kills you here is perimeter overstretch: too much open infrastructure to guard, too many approach paths, too many competing groups.",
-      "overall": 5.4,
-      "rank": 134,
-      "percentile": 85.9
-    },
-    {
-      "slug": "lighthouse-hormuz",
-      "name": "Lighthouse Hormuz",
-      "region": "middle_east",
-      "type": "landmark_structure",
-      "summary": "Hormuz lighthouse has useful separation and surveillance value, but what kills you here is capacity exhaustion: the site is too small and too harsh to sustain a community once short-term stores are depleted.",
-      "overall": 5.4,
-      "rank": 135,
-      "percentile": 86.54
+      "rank": 119,
+      "percentile": 90.84
     },
     {
       "slug": "cheddar-gorge-caves",
@@ -1359,8 +1199,8 @@
       "type": "subterranean",
       "summary": "Cheddar Gorge caves are a solid tactical hide with useful terrain friction; what kills you here is chronic livability failure, not direct assault.",
       "overall": 5.3,
-      "rank": 136,
-      "percentile": 87.18
+      "rank": 120,
+      "percentile": 91.6
     },
     {
       "slug": "fort-copacabana",
@@ -1369,48 +1209,8 @@
       "type": "fortified_structure",
       "summary": "Copacabana Fort is structurally robust and tactically defensible at the site level, but dense urban surroundings overwhelm long-term survivability.",
       "overall": 5.3,
-      "rank": 137,
-      "percentile": 87.82
-    },
-    {
-      "slug": "un-base-in-juba-unmiss-hq-south-sudan",
-      "name": "UN Base in Juba (UNMISS HQ, South Sudan)",
-      "region": "africa",
-      "type": "institutional_compound",
-      "summary": "UNMISS Juba provides a protected compound that can absorb early shocks, but prolonged crisis drives mounting population pressure into and around the site. Over time, crowding and aid dependence overwhelm what the perimeter can realistically sustain.",
-      "overall": 5.3,
-      "rank": 138,
-      "percentile": 88.46
-    },
-    {
-      "slug": "chernobyl-exclusion-zone-facility",
-      "name": "Chernobyl Exclusion Zone Facility",
-      "region": "eastern_europe",
-      "type": "institutional_compound",
-      "summary": "Chernobyl offers rare low-population isolation in Europe, but contamination and decaying infrastructure impose a slow-burn survival tax. What kills you here is cumulative exposure and medical degradation, not immediate assault.",
-      "overall": 5.2,
-      "rank": 139,
-      "percentile": 89.1
-    },
-    {
-      "slug": "phu-quoc-lighthouse",
-      "name": "Phu Quoc Lighthouse",
-      "region": "southeast_asia",
-      "type": "landmark_structure",
-      "summary": "A coastal lighthouse with visibility, limited access, and some island separation. It offers short-term observation value, but exposure, lack of resources, and dependence on nearby settlement make it weak as a base.",
-      "overall": 5.2,
-      "rank": 140,
-      "percentile": 89.74
-    },
-    {
-      "slug": "cape-point-lighthouse",
-      "name": "Cape Point Lighthouse",
-      "region": "africa",
-      "type": "landmark_structure",
-      "summary": "Cape Point Lighthouse has tactical lookout value and some geographic separation, but it lacks the carrying capacity and resource depth needed for sustained habitation. It works best as an observation and signaling outpost rather than a primary survival settlement.",
-      "overall": 5.1,
-      "rank": 141,
-      "percentile": 90.38
+      "rank": 121,
+      "percentile": 92.37
     },
     {
       "slug": "fastnet-lighthouse",
@@ -1419,48 +1219,8 @@
       "type": "landmark_structure",
       "summary": "A remote offshore lighthouse with extreme separation and strong visibility. It is nearly useless as a survival base because space, shelter, food, water, and evacuation options are all critically limited.",
       "overall": 5.1,
-      "rank": 142,
-      "percentile": 91.03
-    },
-    {
-      "slug": "krbl-rice-mill-dhuri",
-      "name": "KRBL Rice Mill (Dhuri)",
-      "region": "south_asia",
-      "type": "industrial_site",
-      "summary": "KRBL Dhuri has serious food-processing upside, but as a fixed base it is exposed, labor-dependent, and hard to secure against persistent pressure.",
-      "overall": 5.1,
-      "rank": 143,
-      "percentile": 91.67
-    },
-    {
-      "slug": "la-rinconada",
-      "name": "La Rinconada",
-      "region": "south_america",
-      "type": "elevated_stronghold",
-      "summary": "La Rinconada gains protection from altitude and remoteness, but extreme living conditions and weak local systems limit survival duration.",
-      "overall": 5.1,
-      "rank": 144,
-      "percentile": 92.31
-    },
-    {
-      "slug": "ruhr-industrial-complex",
-      "name": "Ruhr Industrial Complex",
-      "region": "western_europe",
-      "type": "industrial_site",
-      "summary": "The Ruhr offers broad industrial depth across many nodes; what kills you here is security sprawl that outgrows coordination capacity.",
-      "overall": 5.1,
-      "rank": 145,
-      "percentile": 92.95
-    },
-    {
-      "slug": "antarctic-lighthouse",
-      "name": "Antarctic Lighthouse",
-      "region": "polar_extreme",
-      "type": "landmark_structure",
-      "summary": "A small polar outpost with visibility and isolation. However, exposure, limited shelter, and lack of resources make it unsuitable for long-term survival.",
-      "overall": 5.0,
-      "rank": 146,
-      "percentile": 93.59
+      "rank": 122,
+      "percentile": 93.13
     },
     {
       "slug": "eguisheim",
@@ -1469,8 +1229,8 @@
       "type": "remote_settlement",
       "summary": "Eguisheim is a workable village-scale fallback with manageable density and access to surrounding land. What kills you here is perimeter dilution once pressure exceeds what a small settlement can police.",
       "overall": 5.0,
-      "rank": 147,
-      "percentile": 94.23
+      "rank": 123,
+      "percentile": 93.89
     },
     {
       "slug": "fort-denison",
@@ -1479,8 +1239,8 @@
       "type": "fortified_structure",
       "summary": "A compact fortified island position with controllable access but almost no independent sustainment depth.",
       "overall": 5.0,
-      "rank": 148,
-      "percentile": 94.87
+      "rank": 124,
+      "percentile": 94.66
     },
     {
       "slug": "naours-underground-city",
@@ -1489,18 +1249,8 @@
       "type": "subterranean",
       "summary": "Naours gives useful subterranean concealment and controlled entry, but it was never built as a full independent city. What kills you here is prolonged underground strain: air quality, hygiene, and supply depletion.",
       "overall": 5.0,
-      "rank": 149,
-      "percentile": 95.51
-    },
-    {
-      "slug": "potosi-silver-mine-cerro-rico",
-      "name": "Potos\u00ed Silver Mine (Cerro Rico)",
-      "region": "south_america",
-      "type": "subterranean",
-      "summary": "Potos\u00ed mine has strong defensive geometry underground, but what kills you here is toxic air and chronic occupational health collapse.",
-      "overall": 5.0,
-      "rank": 150,
-      "percentile": 96.15
+      "rank": 125,
+      "percentile": 95.42
     },
     {
       "slug": "utqiagvik",
@@ -1509,8 +1259,8 @@
       "type": "remote_settlement",
       "summary": "Extreme remoteness sharply reduces contact risk, but Arctic dependence makes long survival brittle.",
       "overall": 5.0,
-      "rank": 151,
-      "percentile": 96.79
+      "rank": 126,
+      "percentile": 96.18
     },
     {
       "slug": "great-mosque-of-djenne",
@@ -1519,8 +1269,8 @@
       "type": "landmark_structure",
       "summary": "The Great Mosque of Djenn\u00e9 is visually imposing and culturally significant, but materially fragile for sustained defensive use. It may serve as a symbolic shelter point, yet structural vulnerability and limited isolation make it unsuitable as a serious long-term survival base.",
       "overall": 4.9,
-      "rank": 152,
-      "percentile": 97.44
+      "rank": 127,
+      "percentile": 96.95
     },
     {
       "slug": "north-head-gun-emplacements",
@@ -1529,8 +1279,8 @@
       "type": "subterranean",
       "summary": "North Head works as a hard defensive shell, but urban proximity and tiny sustainment depth make it a poor long-term base.",
       "overall": 4.8,
-      "rank": 153,
-      "percentile": 98.08
+      "rank": 128,
+      "percentile": 97.71
     },
     {
       "slug": "kizhi-pogost",
@@ -1539,8 +1289,8 @@
       "type": "landmark_structure",
       "summary": "Kizhi is remote and scenic, but what kills you here is infrastructure poverty: you run out of heat, medicine, and repair capacity before threats ever need to storm the site.",
       "overall": 4.4,
-      "rank": 154,
-      "percentile": 98.72
+      "rank": 129,
+      "percentile": 98.47
     },
     {
       "slug": "phare-du-creach",
@@ -1549,8 +1299,8 @@
       "type": "landmark_structure",
       "summary": "Phare du Cr\u00e9ac\u2019h provides remote coastal isolation and observation value, but it is too small and brittle for extended habitation. What kills you here is capacity failure once stores run thin.",
       "overall": 4.0,
-      "rank": 155,
-      "percentile": 99.36
+      "rank": 130,
+      "percentile": 99.24
     },
     {
       "slug": "uluru-surroundings",
@@ -1559,7 +1309,7 @@
       "type": "elevated_stronghold",
       "summary": "Remote desert standoff lowers contact risk, but water and heat realities make it hard to sustain life.",
       "overall": 4.0,
-      "rank": 156,
+      "rank": 131,
       "percentile": 100.0
     }
   ],
@@ -1573,7 +1323,7 @@
         "summary": "Seychelles is one of the strongest African macro-base options because exceptional island isolation combines with a livable climate and realistic long-term habitation potential. The main constraint is coordination and resupply across dispersed islands once external systems weaken.",
         "overall": 8.0,
         "rank": 1,
-        "percentile": 6.25
+        "percentile": 7.14
       },
       {
         "slug": "simien-mountains",
@@ -1583,7 +1333,7 @@
         "summary": "The Simien Mountains are a naturally defensible high-altitude stronghold, where sheer cliffs, limited access routes, and extreme isolation significantly reduce external threat pressure. However, that same isolation severely limits long-term survivability, with constrained food production, harsh living conditions, and difficult resupply. Over time, the balance shifts from protection to restriction, making it better suited to short-term refuge than permanent settlement.",
         "overall": 7.5,
         "rank": 2,
-        "percentile": 12.5
+        "percentile": 14.29
       },
       {
         "slug": "matmata-underground-dwellings",
@@ -1593,7 +1343,7 @@
         "summary": "Matmata offers a strong concealment-defense package with naturally insulated subterranean housing and manageable access points. Its core trade-off is protected living space versus limited scale and external dependence for growth.",
         "overall": 7.2,
         "rank": 3,
-        "percentile": 18.75
+        "percentile": 21.43
       },
       {
         "slug": "zanzibar-island",
@@ -1603,7 +1353,7 @@
         "summary": "Zanzibar balances meaningful island separation with established settlement infrastructure, making it a credible medium-to-long-term refuge if governance and resource management remain coherent. Its challenge is that it is populated and close enough to mainland dynamics to face persistent pressure.",
         "overall": 7.2,
         "rank": 4,
-        "percentile": 25.0
+        "percentile": 28.57
       },
       {
         "slug": "ait-benhaddou",
@@ -1613,7 +1363,7 @@
         "summary": "A\u00eft Benhaddou is a strong niche base: its fortified settlement form and relative isolation support controlled defense and lower immediate pressure. Its long-term ceiling is set by arid constraints, where limited water and food capacity become the decisive bottleneck.",
         "overall": 7.0,
         "rank": 5,
-        "percentile": 31.25
+        "percentile": 35.71
       },
       {
         "slug": "fasil-ghebbi",
@@ -1623,7 +1373,7 @@
         "summary": "Fasil Ghebbi is a fortified royal compound with thick masonry, layered courtyards, and strong internal control, giving it above-average defensive potential in an inland setting. It is more balanced than many heritage landmarks, but long-term survival still depends on building reliable food, water, and medical systems beyond the walls.",
         "overall": 6.9,
         "rank": 6,
-        "percentile": 37.5
+        "percentile": 42.86
       },
       {
         "slug": "camp-lemonnier",
@@ -1633,7 +1383,7 @@
         "summary": "Camp Lemonnier has exceptional military-grade defensive capability and organized base infrastructure, making it one of the strongest compounds in a direct security sense. But it is not highly independent: if fuel, water treatment, and logistics pipelines fail, performance drops fast.",
         "overall": 6.6,
         "rank": 7,
-        "percentile": 43.75
+        "percentile": 50.0
       },
       {
         "slug": "table-mountain-plateau",
@@ -1643,7 +1393,7 @@
         "summary": "Table Mountain Plateau is a highly defensible elevated position with steep cliffs, strong visibility, and usable space on top. However, its direct proximity to Cape Town, multiple access routes, and high visibility make it far less secure than more remote mountain strongholds. It is better suited to short-term defence and staging than long-term isolation.",
         "overall": 6.5,
         "rank": 8,
-        "percentile": 50.0
+        "percentile": 57.14
       },
       {
         "slug": "elmina-castle",
@@ -1653,7 +1403,7 @@
         "summary": "Elmina Castle is a heavily fortified coastal stronghold with thick walls, controlled internal spaces, and clear defensive advantages. However, its position within a populated coastal town and direct access from land and sea significantly reduce its long-term viability, making it better suited to temporary defence than sustained survival.",
         "overall": 6.2,
         "rank": 9,
-        "percentile": 56.25
+        "percentile": 64.29
       },
       {
         "slug": "bonny-island-lng-terminal",
@@ -1663,7 +1413,7 @@
         "summary": "Bonny LNG Terminal is a powerful industrial strongpoint with controlled space and hard infrastructure, but it is brittle under collapse conditions. Its usefulness depends on complex systems, skilled maintenance, and steady supply chains that are hard to replace locally.",
         "overall": 6.1,
         "rank": 10,
-        "percentile": 62.5
+        "percentile": 71.43
       },
       {
         "slug": "kimberley-big-hole-mining-complex",
@@ -1673,7 +1423,7 @@
         "summary": "The Kimberley Big Hole offers strong terrain-based defensibility, but it is a dangerous bowl if exits, water access, or supply routes fail. It works as a hard-to-storm holdout early on, yet can quickly become a trap once core lifelines are cut.",
         "overall": 6.0,
         "rank": 11,
-        "percentile": 68.75
+        "percentile": 78.57
       },
       {
         "slug": "waw-an-namus-cave-system",
@@ -1683,7 +1433,7 @@
         "summary": "Waw an Namus is one of the hardest places to reach, which dramatically lowers threat pressure. The same isolation becomes the fatal weakness because survival systems are almost entirely import-dependent.",
         "overall": 5.8,
         "rank": 12,
-        "percentile": 75.0
+        "percentile": 85.71
       },
       {
         "slug": "kolmanskop",
@@ -1693,27 +1443,7 @@
         "summary": "Kolmanskop buys time through remoteness and clear sightlines, but it cannot feed or hydrate a group for long. The dominant trade-off is safety from people versus total dependence on imported water and food.",
         "overall": 5.6,
         "rank": 13,
-        "percentile": 81.25
-      },
-      {
-        "slug": "un-base-in-juba-unmiss-hq-south-sudan",
-        "name": "UN Base in Juba (UNMISS HQ, South Sudan)",
-        "region": "africa",
-        "type": "institutional_compound",
-        "summary": "UNMISS Juba provides a protected compound that can absorb early shocks, but prolonged crisis drives mounting population pressure into and around the site. Over time, crowding and aid dependence overwhelm what the perimeter can realistically sustain.",
-        "overall": 5.3,
-        "rank": 14,
-        "percentile": 87.5
-      },
-      {
-        "slug": "cape-point-lighthouse",
-        "name": "Cape Point Lighthouse",
-        "region": "africa",
-        "type": "landmark_structure",
-        "summary": "Cape Point Lighthouse has tactical lookout value and some geographic separation, but it lacks the carrying capacity and resource depth needed for sustained habitation. It works best as an observation and signaling outpost rather than a primary survival settlement.",
-        "overall": 5.1,
-        "rank": 15,
-        "percentile": 93.75
+        "percentile": 92.86
       },
       {
         "slug": "great-mosque-of-djenne",
@@ -1722,7 +1452,7 @@
         "type": "landmark_structure",
         "summary": "The Great Mosque of Djenn\u00e9 is visually imposing and culturally significant, but materially fragile for sustained defensive use. It may serve as a symbolic shelter point, yet structural vulnerability and limited isolation make it unsuitable as a serious long-term survival base.",
         "overall": 4.9,
-        "rank": 16,
+        "rank": 14,
         "percentile": 100.0
       }
     ],
@@ -1735,7 +1465,7 @@
         "summary": "Jeju is a strong island refuge with usable farmland, water access, and natural maritime separation from mainland spillover. What kills you here is maritime choke failure: if ports and fuel fail, an island-scale population can out-consume local capacity.",
         "overall": 7.1,
         "rank": 1,
-        "percentile": 8.33
+        "percentile": 11.11
       },
       {
         "slug": "mount-huashan",
@@ -1745,7 +1475,7 @@
         "summary": "Mount Huashan is an elite defensive perch with severe access control and strong natural isolation. The decisive trade-off is near-unmatched protection versus chronic logistical fragility.",
         "overall": 7.1,
         "rank": 2,
-        "percentile": 16.67
+        "percentile": 22.22
       },
       {
         "slug": "great-wall-fortress-sections",
@@ -1755,7 +1485,7 @@
         "summary": "Great Wall fortress sections provide strong engineered defense lines and terrain leverage, but they are fragmented assets rather than turnkey settlements. The dominant trade-off is excellent barrier control versus poor self-sustaining living capacity.",
         "overall": 7.0,
         "rank": 3,
-        "percentile": 25.0
+        "percentile": 33.33
       },
       {
         "slug": "iwo-jima-underground-bunkers",
@@ -1765,7 +1495,7 @@
         "summary": "Iwo Jima\u2019s bunker network is exceptionally hard to assault and highly isolated, but it is austere and resource-poor. What kills you here is life-support collapse underground: water, ventilation, and medical limits outrun defensive advantages.",
         "overall": 7.0,
         "rank": 4,
-        "percentile": 33.33
+        "percentile": 44.44
       },
       {
         "slug": "tiger-leaping-gorge-cliffs",
@@ -1775,7 +1505,7 @@
         "summary": "Tiger Leaping Gorge offers extraordinary terrain defense and low approach density, but daily survival is constrained by space and supply movement. The central trade-off is tactical dominance versus unworkable sustainment at scale.",
         "overall": 6.9,
         "rank": 5,
-        "percentile": 41.67
+        "percentile": 55.56
       },
       {
         "slug": "himeji-castle",
@@ -1785,7 +1515,7 @@
         "summary": "Himeji Castle delivers high-quality fortress geometry and controlled internal defense, but its urban context limits long-term security. The key trade-off is superb structure versus low isolation.",
         "overall": 6.8,
         "rank": 6,
-        "percentile": 50.0
+        "percentile": 66.67
       },
       {
         "slug": "okinawa",
@@ -1795,7 +1525,7 @@
         "summary": "Okinawa offers meaningful island separation and workable living conditions, but dense infrastructure and strategic visibility increase contest pressure. What kills you here is competition over ports, fuel, and transport hubs that fractures island stability.",
         "overall": 6.2,
         "rank": 7,
-        "percentile": 58.33
+        "percentile": 77.78
       },
       {
         "slug": "beijing-underground-city",
@@ -1805,7 +1535,7 @@
         "summary": "Beijing Underground City is hard to clear and hard to spot, but it is still a buried extension of a megacity. What kills you here is ventilation and water-system failure once surface utilities, filters, and spare parts stop flowing.",
         "overall": 6.0,
         "rank": 8,
-        "percentile": 66.67
+        "percentile": 88.89
       },
       {
         "slug": "shirakawa-go",
@@ -1815,36 +1545,6 @@
         "summary": "Shirakawa-go benefits from mountain remoteness and small-settlement cohesion, but severe winters and limited redundancy constrain endurance. What kills you here is winter logistics failure: heat, medicine, and mobility collapse before threats do.",
         "overall": 6.0,
         "rank": 9,
-        "percentile": 75.0
-      },
-      {
-        "slug": "shaxi-ancient-town",
-        "name": "Shaxi Ancient Town",
-        "region": "east_asia",
-        "type": "remote_settlement",
-        "summary": "Shaxi is a remote town with manageable scale and decent local living potential, but it lacks hard defensive geometry. What kills you here is slow attrition from repeated incursions that drain manpower and stores.",
-        "overall": 5.8,
-        "rank": 10,
-        "percentile": 83.33
-      },
-      {
-        "slug": "ryongsong-residence-compound",
-        "name": "Ryongsong Residence Compound",
-        "region": "east_asia",
-        "type": "institutional_compound",
-        "summary": "Ryongsong Compound has strong perimeter control and internal zoning, but it remains a politically obvious fixed site in an urban state core. What kills you here is siege pressure once external support and movement options collapse.",
-        "overall": 5.7,
-        "rank": 11,
-        "percentile": 91.67
-      },
-      {
-        "slug": "foxconn-shenzhen-factory",
-        "name": "Foxconn Shenzhen Factory",
-        "region": "east_asia",
-        "type": "industrial_site",
-        "summary": "The Shenzhen factory complex has unusual infrastructure depth and short-term resource potential, but it sits inside one of the world\u2019s densest urban-industrial corridors. The dominant trade-off is internal capability versus catastrophic exposure.",
-        "overall": 5.4,
-        "rank": 12,
         "percentile": 100.0
       }
     ],
@@ -1857,7 +1557,7 @@
         "summary": "Faroe is one of Europe's strongest isolation plays, but what kills you here is maritime bottleneck failure when storms, fuel limits, and fleet wear cut food and medical imports.",
         "overall": 7.4,
         "rank": 1,
-        "percentile": 7.14
+        "percentile": 10.0
       },
       {
         "slug": "derinkuyu-underground-city",
@@ -1867,7 +1567,7 @@
         "summary": "Derinkuyu is an elite hide-and-hold refuge, but what kills you here is subterranean throughput collapse: ventilation, waste handling, and calorie flow fail before defenses do.",
         "overall": 7.1,
         "rank": 2,
-        "percentile": 14.29
+        "percentile": 20.0
       },
       {
         "slug": "gotland",
@@ -1877,7 +1577,7 @@
         "summary": "Gotland is a robust island option with workable infrastructure, but what kills you here is coastline overextension: too many access points for too few defenders over time.",
         "overall": 7.1,
         "rank": 3,
-        "percentile": 21.43
+        "percentile": 30.0
       },
       {
         "slug": "malbork-castle",
@@ -1887,7 +1587,7 @@
         "summary": "Malbork provides exceptional masonry defense and layered gates, but it sits in a reachable lowland region. What kills you here is siege attrition: repeated encirclement and supply disruption grind down even a strong fortress.",
         "overall": 7.0,
         "rank": 4,
-        "percentile": 28.57
+        "percentile": 40.0
       },
       {
         "slug": "visby",
@@ -1897,7 +1597,7 @@
         "summary": "Visby is a balanced walled island town, but what kills you here is population-and-water strain if too many survivors concentrate behind finite historic defenses.",
         "overall": 7.0,
         "rank": 5,
-        "percentile": 35.71
+        "percentile": 50.0
       },
       {
         "slug": "predjama-castle",
@@ -1907,7 +1607,7 @@
         "summary": "Predjama is a superb cliff fortress with choke-point control, but fortress geometry does not make food or medicine. What kills you here is siege starvation: you can deny entry for a long time and still lose to depletion.",
         "overall": 6.9,
         "rank": 6,
-        "percentile": 42.86
+        "percentile": 60.0
       },
       {
         "slug": "suomenlinna-fortress",
@@ -1917,7 +1617,7 @@
         "summary": "Suomenlinna has real island-fortress defensive logic, but it is tied to nearby urban waters and maritime supply. What kills you here is blockade-driven depletion when fuel, food, and treatment capacity cannot be replenished.",
         "overall": 6.6,
         "rank": 7,
-        "percentile": 50.0
+        "percentile": 70.0
       },
       {
         "slug": "longyearbyen",
@@ -1927,27 +1627,7 @@
         "summary": "A remote Arctic settlement with strong isolation, infrastructure, and controlled access. However, extreme climate and supply-chain reliance constrain long-term resilience.",
         "overall": 6.4,
         "rank": 8,
-        "percentile": 57.14
-      },
-      {
-        "slug": "norilsk",
-        "name": "Norilsk",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "summary": "Norilsk is remote enough to avoid mass contact, but the environment itself is hostile to human endurance. What kills you here is infrastructure-coupled cold exposure: once heat, shelter integrity, or medical capability slip, mortality spikes fast.",
-        "overall": 5.8,
-        "rank": 9,
-        "percentile": 64.29
-      },
-      {
-        "slug": "olenya-air-base",
-        "name": "Olenya Air Base",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "summary": "Olenya can absorb early shock thanks to military-grade hardening and Arctic distance, but what kills you here is fuel-and-spares collapse in extreme cold once central logistics break.",
-        "overall": 5.8,
-        "rank": 10,
-        "percentile": 71.43
+        "percentile": 80.0
       },
       {
         "slug": "ligatne-bunker",
@@ -1956,28 +1636,8 @@
         "type": "subterranean",
         "summary": "Ligatne's bunker geometry is excellent for sheltering, but what kills you here is air-power-water dependency: once life-support systems degrade, underground becomes a coffin.",
         "overall": 5.6,
-        "rank": 11,
-        "percentile": 78.57
-      },
-      {
-        "slug": "gdansk-shipyard",
-        "name": "Gda\u0144sk Shipyard",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "summary": "Gda\u0144sk Shipyard is a high-value industrial toolkit, not a survivable sanctuary. What kills you here is perimeter overstretch: too much open infrastructure to guard, too many approach paths, too many competing groups.",
-        "overall": 5.4,
-        "rank": 12,
-        "percentile": 85.71
-      },
-      {
-        "slug": "chernobyl-exclusion-zone-facility",
-        "name": "Chernobyl Exclusion Zone Facility",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "summary": "Chernobyl offers rare low-population isolation in Europe, but contamination and decaying infrastructure impose a slow-burn survival tax. What kills you here is cumulative exposure and medical degradation, not immediate assault.",
-        "overall": 5.2,
-        "rank": 13,
-        "percentile": 92.86
+        "rank": 9,
+        "percentile": 90.0
       },
       {
         "slug": "kizhi-pogost",
@@ -1986,7 +1646,7 @@
         "type": "landmark_structure",
         "summary": "Kizhi is remote and scenic, but what kills you here is infrastructure poverty: you run out of heat, medicine, and repair capacity before threats ever need to storm the site.",
         "overall": 4.4,
-        "rank": 14,
+        "rank": 10,
         "percentile": 100.0
       }
     ],
@@ -1999,7 +1659,7 @@
         "summary": "Socotra gives outstanding separation from collapse corridors, but what kills you here is maritime supply fracture: once sea links fail, medicine, tools, and replacement goods run out faster than local systems can adapt.",
         "overall": 7.4,
         "rank": 1,
-        "percentile": 9.09
+        "percentile": 11.11
       },
       {
         "slug": "krak-des-chevaliers",
@@ -2009,7 +1669,7 @@
         "summary": "Krak des Chevaliers is a premier fortress for holding ground, but what kills you here is siege economics: ammunition, medicine, and calories run out long before the walls meaningfully fail.",
         "overall": 7.3,
         "rank": 2,
-        "percentile": 18.18
+        "percentile": 22.22
       },
       {
         "slug": "cappadocia-highlands",
@@ -2019,7 +1679,7 @@
         "summary": "Cappadocia\u2019s broken terrain and concealment options make it a strong defensive refuge, but what kills you here is water-and-agriculture throughput: dispersed hideouts can outlast attacks, not prolonged scarcity.",
         "overall": 7.1,
         "rank": 3,
-        "percentile": 27.27
+        "percentile": 33.33
       },
       {
         "slug": "siwa-oasis",
@@ -2029,7 +1689,7 @@
         "summary": "Siwa Oasis is one of the more credible long-horizon refuges in the region, but what kills you here is water-system fragility: contamination, overdraw, or pump failure can collapse the settlement\u2019s carrying capacity.",
         "overall": 7.1,
         "rank": 4,
-        "percentile": 36.36
+        "percentile": 44.44
       },
       {
         "slug": "qeshm-island",
@@ -2039,7 +1699,7 @@
         "summary": "Qeshm offers valuable island separation and room for mixed subsistence, but what kills you here is control dilution: the island is large enough that fragmented authority invites persistent infiltration and internal conflict.",
         "overall": 6.9,
         "rank": 5,
-        "percentile": 45.45
+        "percentile": 55.56
       },
       {
         "slug": "masada",
@@ -2049,7 +1709,7 @@
         "summary": "Masada is brutally hard to assault, but what kills you here is plateau logistics: water, heat management, and medical throughput collapse before attackers can force entry.",
         "overall": 6.8,
         "rank": 6,
-        "percentile": 54.55
+        "percentile": 66.67
       },
       {
         "slug": "petra",
@@ -2059,7 +1719,7 @@
         "summary": "Petra offers strong chokepoints and concealment in stone corridors, but what kills you here is water dependency: once stored supply and nearby sources are contested, defensive geometry cannot feed or hydrate a population.",
         "overall": 6.4,
         "rank": 7,
-        "percentile": 63.64
+        "percentile": 77.78
       },
       {
         "slug": "al-udeid-air-base",
@@ -2069,7 +1729,7 @@
         "summary": "Al Udeid provides one of the best ready-made defense envelopes in the region, but what kills you here is signature load: major airbase visibility attracts sustained external pressure and drains supplies.",
         "overall": 6.2,
         "rank": 8,
-        "percentile": 72.73
+        "percentile": 88.89
       },
       {
         "slug": "wadi-musa",
@@ -2079,26 +1739,6 @@
         "summary": "Wadi Musa is workable but fragile; what kills you here is corridor squeeze: limited approach routes become contested chokepoints that choke trade, movement, and medical evacuation.",
         "overall": 5.9,
         "rank": 9,
-        "percentile": 81.82
-      },
-      {
-        "slug": "ras-al-khair-desalination-plant",
-        "name": "Ras Al Khair Desalination Plant",
-        "region": "middle_east",
-        "type": "industrial_site",
-        "summary": "Ras Al Khair\u2019s water output is uniquely valuable, but what kills you here is power-chain fragility: once energy input or specialist maintenance fails, the core survival advantage disappears fast.",
-        "overall": 5.8,
-        "rank": 10,
-        "percentile": 90.91
-      },
-      {
-        "slug": "lighthouse-hormuz",
-        "name": "Lighthouse Hormuz",
-        "region": "middle_east",
-        "type": "landmark_structure",
-        "summary": "Hormuz lighthouse has useful separation and surveillance value, but what kills you here is capacity exhaustion: the site is too small and too harsh to sustain a community once short-term stores are depleted.",
-        "overall": 5.4,
-        "rank": 11,
         "percentile": 100.0
       }
     ],
@@ -2243,7 +1883,7 @@
         "summary": "Tasmania is one of the strongest balanced options: durable food-water-energy potential with enough separation to reduce pressure.",
         "overall": 8.1,
         "rank": 1,
-        "percentile": 8.33
+        "percentile": 9.09
       },
       {
         "slug": "fiji-islands",
@@ -2253,7 +1893,7 @@
         "summary": "Fiji balances isolation and livability better than most island options, but cyclone and maritime dependence cap reliability.",
         "overall": 7.3,
         "rank": 2,
-        "percentile": 16.67
+        "percentile": 18.18
       },
       {
         "slug": "coober-pedy-underground-settlement",
@@ -2263,7 +1903,7 @@
         "summary": "Coober Pedy is one of the few desert sites where underground habitation is already proven, but long-term success is limited by hard water and logistics ceilings.",
         "overall": 7.1,
         "rank": 3,
-        "percentile": 25.0
+        "percentile": 27.27
       },
       {
         "slug": "raaf-base-tindal",
@@ -2273,7 +1913,7 @@
         "summary": "High-grade military infrastructure gives strong initial control, but strategic visibility and supply dependence limit endurance.",
         "overall": 6.9,
         "rank": 4,
-        "percentile": 33.33
+        "percentile": 36.36
       },
       {
         "slug": "anna-creek-station",
@@ -2283,7 +1923,7 @@
         "summary": "Exceptional scale and remoteness support long-run survival potential, but the footprint is too vast to secure conventionally.",
         "overall": 6.8,
         "rank": 5,
-        "percentile": 41.67
+        "percentile": 45.45
       },
       {
         "slug": "maori-pa-fortifications",
@@ -2293,7 +1933,7 @@
         "summary": "Strong terrain-first fortifications can stop early incursions, but most pa sites fail once stocks and water run thin.",
         "overall": 6.6,
         "rank": 6,
-        "percentile": 50.0
+        "percentile": 54.55
       },
       {
         "slug": "pine-gap-facility",
@@ -2303,7 +1943,7 @@
         "summary": "Extreme remoteness and hardened controls are offset by acute system dependency and top-tier strategic exposure.",
         "overall": 6.3,
         "rank": 7,
-        "percentile": 58.33
+        "percentile": 63.64
       },
       {
         "slug": "blue-mountains-cliffs",
@@ -2313,17 +1953,7 @@
         "summary": "Excellent terrain defense and standoff distance, with sustainment limited by wildfire and infrastructure thinness.",
         "overall": 6.0,
         "rank": 8,
-        "percentile": 66.67
-      },
-      {
-        "slug": "port-vila",
-        "name": "Port Vila",
-        "region": "oceania",
-        "type": "remote_settlement",
-        "summary": "Port Vila offers real settlement infrastructure and island separation, but limited depth makes it fragile under prolonged disruption.",
-        "overall": 5.9,
-        "rank": 9,
-        "percentile": 75.0
+        "percentile": 72.73
       },
       {
         "slug": "fort-denison",
@@ -2332,8 +1962,8 @@
         "type": "fortified_structure",
         "summary": "A compact fortified island position with controllable access but almost no independent sustainment depth.",
         "overall": 5.0,
-        "rank": 10,
-        "percentile": 83.33
+        "rank": 9,
+        "percentile": 81.82
       },
       {
         "slug": "north-head-gun-emplacements",
@@ -2342,8 +1972,8 @@
         "type": "subterranean",
         "summary": "North Head works as a hard defensive shell, but urban proximity and tiny sustainment depth make it a poor long-term base.",
         "overall": 4.8,
-        "rank": 11,
-        "percentile": 91.67
+        "rank": 10,
+        "percentile": 90.91
       },
       {
         "slug": "uluru-surroundings",
@@ -2352,7 +1982,7 @@
         "type": "elevated_stronghold",
         "summary": "Remote desert standoff lowers contact risk, but water and heat realities make it hard to sustain life.",
         "overall": 4.0,
-        "rank": 12,
+        "rank": 11,
         "percentile": 100.0
       }
     ],
@@ -2365,7 +1995,7 @@
         "summary": "A vast Arctic island with extreme isolation, natural resources, and scattered settlements. However, harsh climate, huge scale, and infrastructure dependency make it difficult to control or sustain.",
         "overall": 6.8,
         "rank": 1,
-        "percentile": 10.0
+        "percentile": 12.5
       },
       {
         "slug": "olavsvern-naval-base",
@@ -2375,7 +2005,7 @@
         "summary": "A hardened underground naval base with strong concealment and protected infrastructure. However, confined systems, external supply needs, and limited scalability restrict long-term survival.",
         "overall": 6.8,
         "rank": 2,
-        "percentile": 20.0
+        "percentile": 25.0
       },
       {
         "slug": "nagurskoye-air-base",
@@ -2385,7 +2015,7 @@
         "summary": "A remote Arctic military airbase with controlled access and strong strategic positioning. However, extreme climate, visibility, and dependence on supply chains reduce independent survivability.",
         "overall": 6.7,
         "rank": 3,
-        "percentile": 30.0
+        "percentile": 37.5
       },
       {
         "slug": "mcmurdo-station",
@@ -2395,7 +2025,7 @@
         "summary": "A large Antarctic research station with infrastructure, shelter, and operational capacity. However, harsh conditions and dependence on supply chains limit true long-term independence.",
         "overall": 6.5,
         "rank": 4,
-        "percentile": 40.0
+        "percentile": 50.0
       },
       {
         "slug": "amundsen-scott-south-pole-station",
@@ -2405,7 +2035,7 @@
         "summary": "An extremely isolated scientific station with controlled infrastructure and almost no external threat pressure. However, total dependence on life-support systems and resupply makes long-term independence impossible.",
         "overall": 6.4,
         "rank": 5,
-        "percentile": 50.0
+        "percentile": 62.5
       },
       {
         "slug": "murmansk-icebreaker-port",
@@ -2415,7 +2045,7 @@
         "summary": "A polar maritime hub with specialist icebreaker infrastructure and Arctic access. However, port exposure, supply dependency, and harsh operating conditions limit long-term security.",
         "overall": 6.3,
         "rank": 6,
-        "percentile": 60.0
+        "percentile": 75.0
       },
       {
         "slug": "antarctic-peninsula",
@@ -2425,7 +2055,7 @@
         "summary": "A remote polar region with natural isolation and access to coastal landing points. However, severe weather, limited infrastructure, and scarce sustainable resources make survival highly fragile.",
         "overall": 6.2,
         "rank": 7,
-        "percentile": 70.0
+        "percentile": 87.5
       },
       {
         "slug": "camp-century-ice-tunnels",
@@ -2435,26 +2065,6 @@
         "summary": "Camp Century is exceptionally hard to reach and hard to assault, but it fails as a settlement because the environment itself destroys long-term habitability.",
         "overall": 5.8,
         "rank": 8,
-        "percentile": 80.0
-      },
-      {
-        "slug": "crevasse-field-glacier",
-        "name": "Crevasse Field Glacier",
-        "region": "polar_extreme",
-        "type": "polar_extreme",
-        "summary": "A fractured glacial terrain filled with deep crevasses, offering extreme isolation and natural barriers. However, unstable footing, concealed crevasse risk, and lack of resources make long-term survival nearly impossible.",
-        "overall": 5.7,
-        "rank": 9,
-        "percentile": 90.0
-      },
-      {
-        "slug": "antarctic-lighthouse",
-        "name": "Antarctic Lighthouse",
-        "region": "polar_extreme",
-        "type": "landmark_structure",
-        "summary": "A small polar outpost with visibility and isolation. However, exposure, limited shelter, and lack of resources make it unsuitable for long-term survival.",
-        "overall": 5.0,
-        "rank": 10,
         "percentile": 100.0
       }
     ],
@@ -2467,7 +2077,7 @@
         "summary": "Chilo\u00e9 is a strong all-round island base with workable agriculture and defensible approaches, but what kills you here is prolonged maritime cutoff during a hard winter.",
         "overall": 8.0,
         "rank": 1,
-        "percentile": 8.33
+        "percentile": 11.11
       },
       {
         "slug": "cusco-highlands-village",
@@ -2477,7 +2087,7 @@
         "summary": "Cusco highlands villages combine terrain defense with proven local subsistence systems, but what kills you here is cold-altitude medical decline in unacclimated groups.",
         "overall": 8.0,
         "rank": 2,
-        "percentile": 16.67
+        "percentile": 22.22
       },
       {
         "slug": "machu-picchu",
@@ -2487,7 +2097,7 @@
         "summary": "Machu Picchu offers excellent terrain defense and controlled approach lines, but limited productive capacity prevents large, permanent survival communities.",
         "overall": 7.6,
         "rank": 3,
-        "percentile": 25.0
+        "percentile": 33.33
       },
       {
         "slug": "galapagos-islands",
@@ -2497,7 +2107,7 @@
         "summary": "Gal\u00e1pagos has extreme isolation and low random threat traffic, but what kills you here is supply collapse once imported essentials stop.",
         "overall": 7.0,
         "rank": 4,
-        "percentile": 33.33
+        "percentile": 44.44
       },
       {
         "slug": "itaipu-dam",
@@ -2507,7 +2117,7 @@
         "summary": "Itaipu Dam has exceptional energy potential and water access, making it operationally powerful, but its scale and strategic value make defense extremely demanding.",
         "overall": 6.8,
         "rank": 5,
-        "percentile": 41.67
+        "percentile": 55.56
       },
       {
         "slug": "san-felipe-fortress",
@@ -2517,7 +2127,7 @@
         "summary": "San Felipe combines historical fortification advantages with moderate operating feasibility, but limited local throughput caps long-term resilience.",
         "overall": 6.4,
         "rank": 6,
-        "percentile": 50.0
+        "percentile": 66.67
       },
       {
         "slug": "amazon-tall-tower-observatory",
@@ -2527,17 +2137,7 @@
         "summary": "ATTO offers deep-rainforest isolation and strong natural resource potential, but terrain, disease burden, and mobility constraints make control and continuity difficult.",
         "overall": 6.1,
         "rank": 7,
-        "percentile": 58.33
-      },
-      {
-        "slug": "patagonian-village",
-        "name": "Patagonian Village",
-        "region": "south_america",
-        "type": "remote_settlement",
-        "summary": "Patagonian villages benefit from remoteness and low traffic, but what kills you here is wind-cold exposure when fuel and shelter maintenance fall behind.",
-        "overall": 6.0,
-        "rank": 8,
-        "percentile": 66.67
+        "percentile": 77.78
       },
       {
         "slug": "tambopata-research-center",
@@ -2546,8 +2146,8 @@
         "type": "institutional_compound",
         "summary": "Tambopata gives concealment and food potential in deep jungle, but what kills you here is untreated injury or infection far from reliable care.",
         "overall": 6.0,
-        "rank": 9,
-        "percentile": 75.0
+        "rank": 8,
+        "percentile": 88.89
       },
       {
         "slug": "fort-copacabana",
@@ -2556,27 +2156,7 @@
         "type": "fortified_structure",
         "summary": "Copacabana Fort is structurally robust and tactically defensible at the site level, but dense urban surroundings overwhelm long-term survivability.",
         "overall": 5.3,
-        "rank": 10,
-        "percentile": 83.33
-      },
-      {
-        "slug": "la-rinconada",
-        "name": "La Rinconada",
-        "region": "south_america",
-        "type": "elevated_stronghold",
-        "summary": "La Rinconada gains protection from altitude and remoteness, but extreme living conditions and weak local systems limit survival duration.",
-        "overall": 5.1,
-        "rank": 11,
-        "percentile": 91.67
-      },
-      {
-        "slug": "potosi-silver-mine-cerro-rico",
-        "name": "Potos\u00ed Silver Mine (Cerro Rico)",
-        "region": "south_america",
-        "type": "subterranean",
-        "summary": "Potos\u00ed mine has strong defensive geometry underground, but what kills you here is toxic air and chronic occupational health collapse.",
-        "overall": 5.0,
-        "rank": 12,
+        "rank": 9,
         "percentile": 100.0
       }
     ],
@@ -2589,7 +2169,7 @@
         "summary": "The Andamans are one of the strongest long-horizon options: maritime isolation and resource diversity create resilience if governance and inter-island logistics stay coherent.",
         "overall": 8.3,
         "rank": 1,
-        "percentile": 7.69
+        "percentile": 9.09
       },
       {
         "slug": "mehrangarh-fort",
@@ -2599,7 +2179,7 @@
         "summary": "Mehrangarh combines exceptional fortification geometry with workable internal scale, making it one of the stronger fortress options if surrounding pressure is actively managed.",
         "overall": 7.8,
         "rank": 2,
-        "percentile": 15.38
+        "percentile": 18.18
       },
       {
         "slug": "hilltop-fort-rajasthan",
@@ -2609,7 +2189,7 @@
         "summary": "A Rajasthan hill fort is a classic high-control stronghold with excellent wall geometry, but water and heat stress define whether it thrives or slowly fails.",
         "overall": 7.4,
         "rank": 3,
-        "percentile": 23.08
+        "percentile": 27.27
       },
       {
         "slug": "sigiriya",
@@ -2619,7 +2199,7 @@
         "summary": "Sigiriya offers rare rock-fortress defensibility and visibility, but constrained top-plateau capacity limits how long a group can live there without strong external support.",
         "overall": 7.2,
         "rank": 4,
-        "percentile": 30.77
+        "percentile": 36.36
       },
       {
         "slug": "hanle-observatory",
@@ -2629,7 +2209,7 @@
         "summary": "Hanle Observatory is an isolation-dominant survival option with low encounter pressure, but extreme altitude and remoteness impose severe physiological and logistics penalties.",
         "overall": 7.1,
         "rank": 5,
-        "percentile": 38.46
+        "percentile": 45.45
       },
       {
         "slug": "kargil-war-bunkers",
@@ -2639,7 +2219,7 @@
         "summary": "Kargil War Bunkers are military-hardened high-altitude positions designed to resist assault. They work by combining strong fortification with terrain that channels approaches. You die when cold-weather fuel, medical, and resupply throughput collapses before defenses do.",
         "overall": 7.1,
         "rank": 6,
-        "percentile": 46.15
+        "percentile": 54.55
       },
       {
         "slug": "tigers-nest-monastery",
@@ -2649,7 +2229,7 @@
         "summary": "Tiger\u2019s Nest is an extreme cliffside redoubt with elite access denial, but its tiny carrying capacity and severe logistics ceiling cap long-term survival.",
         "overall": 6.9,
         "rank": 7,
-        "percentile": 53.85
+        "percentile": 63.64
       },
       {
         "slug": "pathankot-air-force-station",
@@ -2659,7 +2239,7 @@
         "summary": "Pathankot AFS is a hardened operational compound with meaningful defensive structure, but its strategic visibility keeps pressure high and long-term autonomy uncertain.",
         "overall": 6.6,
         "rank": 8,
-        "percentile": 61.54
+        "percentile": 72.73
       },
       {
         "slug": "kibber-village",
@@ -2669,7 +2249,7 @@
         "summary": "Kibber is a high-altitude remote village that trades accessibility for security. It works through isolation, narrow approaches, and existing community housing for organized routines. You die when winter isolation, fuel gaps, or delayed medical care compound faster than recovery.",
         "overall": 6.5,
         "rank": 9,
-        "percentile": 69.23
+        "percentile": 81.82
       },
       {
         "slug": "lakshadweep",
@@ -2679,7 +2259,7 @@
         "summary": "Lakshadweep is a distributed island-chain refuge where sea separation reduces routine contact and gives strong early warning. It works when multiple islands coordinate boats, storage, and rationing as one system. You die when maritime links or freshwater discipline fail and each island is stranded alone.",
         "overall": 6.5,
         "rank": 10,
-        "percentile": 76.92
+        "percentile": 90.91
       },
       {
         "slug": "ajanta-caves",
@@ -2689,26 +2269,6 @@
         "summary": "Ajanta Caves are a hardened cave shelter system with strong choke-point defense. It works for short protected occupancy because rock-cut access geometry lowers breach risk. You die when confinement-driven sanitation and resource limits outrun defensive advantages.",
         "overall": 5.7,
         "rank": 11,
-        "percentile": 84.62
-      },
-      {
-        "slug": "kuttanad-village",
-        "name": "Kuttanad Village",
-        "region": "south_asia",
-        "type": "remote_settlement",
-        "summary": "Kuttanad is a food-producing lowland basin built around paddy and waterways. It works as a production engine when flood control, storage, and transport are tightly managed. You die when flooding and disease pressure break perimeter control and erase surplus.",
-        "overall": 5.7,
-        "rank": 12,
-        "percentile": 92.31
-      },
-      {
-        "slug": "krbl-rice-mill-dhuri",
-        "name": "KRBL Rice Mill (Dhuri)",
-        "region": "south_asia",
-        "type": "industrial_site",
-        "summary": "KRBL Dhuri has serious food-processing upside, but as a fixed base it is exposed, labor-dependent, and hard to secure against persistent pressure.",
-        "overall": 5.1,
-        "rank": 13,
         "percentile": 100.0
       }
     ],
@@ -2721,7 +2281,7 @@
         "summary": "Palawan is a large island system that balances isolation, defensibility, and resource diversity. It works when distributed settlements and logistics are coordinated at island-wide scale. You die when governance fractures and shipping disruption desynchronizes regional supply.",
         "overall": 7.3,
         "rank": 1,
-        "percentile": 6.67
+        "percentile": 8.33
       },
       {
         "slug": "rice-terrace-highlands",
@@ -2731,7 +2291,7 @@
         "summary": "Rice Terrace Highlands are elevated agrarian settlements with built-in food potential. They work by combining controllable approach routes with reliable staple production systems. You die when irrigation, labor coordination, or slope access fails during stress cycles.",
         "overall": 7.2,
         "rank": 2,
-        "percentile": 13.33
+        "percentile": 16.67
       },
       {
         "slug": "banda-neira",
@@ -2741,7 +2301,7 @@
         "summary": "A small island settlement with strong maritime separation, historic fortifications, and access to coastal resources. It works best as a low-profile island refuge, but limited scale and supply dependence cap long-term resilience.",
         "overall": 6.8,
         "rank": 3,
-        "percentile": 20.0
+        "percentile": 25.0
       },
       {
         "slug": "cu-chi-tunnels",
@@ -2751,7 +2311,7 @@
         "summary": "A purpose-built tunnel network with concealment, restricted access, and strong defensive history. It is highly effective for short-term evasion, but confinement, ventilation, and resource limits make permanent survival difficult.",
         "overall": 6.6,
         "rank": 4,
-        "percentile": 26.67
+        "percentile": 33.33
       },
       {
         "slug": "ha-long-bay-cliffs",
@@ -2761,7 +2321,7 @@
         "summary": "Ha Long Bay cliffs are a terrain-fragmented coastal redoubt of islands and vertical rock. It works by forcing movement through predictable maritime channels and narrow landing points. You die when weather or boat degradation cuts mobility and resupply between sectors.",
         "overall": 6.6,
         "rank": 5,
-        "percentile": 33.33
+        "percentile": 41.67
       },
       {
         "slug": "hue-citadel",
@@ -2771,7 +2331,7 @@
         "summary": "Hue Citadel is a fortified urban compound with layered walls and controlled gates. It works as a short-to-medium defensive enclave where geometry slows penetration. You die when siege pressure outlasts external food, fuel, and medical inflows.",
         "overall": 6.6,
         "rank": 6,
-        "percentile": 40.0
+        "percentile": 50.0
       },
       {
         "slug": "komodo-island",
@@ -2781,7 +2341,7 @@
         "summary": "Komodo is a highly isolated island refuge with strong separation from mainland pressure. It works by limiting approach routes and maintaining disciplined low-population maritime living. You die when freshwater constraints and sea-logistics disruption trigger cascading shortages.",
         "overall": 6.5,
         "rank": 7,
-        "percentile": 46.67
+        "percentile": 58.33
       },
       {
         "slug": "vietnam-tunnel-systems",
@@ -2791,7 +2351,7 @@
         "summary": "A broader tunnel-system concept with strong concealment and movement control across difficult terrain. It provides tactical advantage, but fragmented infrastructure and poor long-term livability keep it below true stronghold status.",
         "overall": 6.4,
         "rank": 8,
-        "percentile": 53.33
+        "percentile": 66.67
       },
       {
         "slug": "danum-valley-field-centre",
@@ -2801,7 +2361,7 @@
         "summary": "Danum Valley Field Centre is a remote jungle refuge with low-contact signature advantages. It works for small trained groups that can run strict field medicine and maintenance routines. You die when treatable illness, injury, or equipment failure outpaces evacuation and repair.",
         "overall": 6.3,
         "rank": 9,
-        "percentile": 60.0
+        "percentile": 75.0
       },
       {
         "slug": "kota-kinabalu-naval-base",
@@ -2811,7 +2371,7 @@
         "summary": "Kota Kinabalu Naval Base is a military command compound with strong tactical security. It works through hardened access control, organized response, and maritime support infrastructure. You die when prolonged contest burns fuel, parts, and readiness faster than resupply.",
         "overall": 6.2,
         "rank": 10,
-        "percentile": 66.67
+        "percentile": 83.33
       },
       {
         "slug": "banlung",
@@ -2821,7 +2381,7 @@
         "summary": "A remote inland town with surrounding terrain, forest cover, and regional resource access. It offers more livability than a pure wilderness refuge, but weak defensibility and difficult logistics limit its ceiling.",
         "overall": 6.1,
         "rank": 11,
-        "percentile": 73.33
+        "percentile": 91.67
       },
       {
         "slug": "sime-darby-palm-oil-estate-sabah",
@@ -2831,36 +2391,6 @@
         "summary": "Sime Darby Sabah is a large agro-industrial estate that can produce at regional scale. It works when core zones, mills, roads, and workforce discipline stay synchronized. You die when security overstretch and machinery dependence cause cascading output loss.",
         "overall": 6.1,
         "rank": 12,
-        "percentile": 80.0
-      },
-      {
-        "slug": "singapore-port",
-        "name": "Singapore Port",
-        "region": "southeast_asia",
-        "type": "transit_hub",
-        "summary": "A globally significant port with exceptional logistics, maritime access, and infrastructure. Those strengths become liabilities in collapse, as exposure, density, and strategic importance make it almost impossible to hold.",
-        "overall": 5.9,
-        "rank": 13,
-        "percentile": 86.67
-      },
-      {
-        "slug": "bangkok-airport",
-        "name": "Bangkok Airport",
-        "region": "southeast_asia",
-        "type": "transit_hub",
-        "summary": "A major transport hub with huge space, supplies, and infrastructure. It fails as a base because urban proximity, scale, and uncontrolled entry points make it impossible to secure.",
-        "overall": 5.8,
-        "rank": 14,
-        "percentile": 93.33
-      },
-      {
-        "slug": "phu-quoc-lighthouse",
-        "name": "Phu Quoc Lighthouse",
-        "region": "southeast_asia",
-        "type": "landmark_structure",
-        "summary": "A coastal lighthouse with visibility, limited access, and some island separation. It offers short-term observation value, but exposure, lack of resources, and dependence on nearby settlement make it weak as a base.",
-        "overall": 5.2,
-        "rank": 15,
         "percentile": 100.0
       }
     ],
@@ -2873,7 +2403,7 @@
         "summary": "Eigg is a rare island community with real off-grid credibility; what kills you here is a bad season that breaks food, fuel, and medical margins before security fails.",
         "overall": 8.1,
         "rank": 1,
-        "percentile": 6.67
+        "percentile": 7.69
       },
       {
         "slug": "burlington-bunker",
@@ -2883,7 +2413,7 @@
         "summary": "Burlington is exceptionally hard to breach in the opening phase; what kills you here is closed-system decay once consumables, maintenance, or governance slip.",
         "overall": 7.1,
         "rank": 2,
-        "percentile": 13.33
+        "percentile": 15.38
       },
       {
         "slug": "lindisfarne",
@@ -2893,7 +2423,7 @@
         "summary": "A tidal island with natural separation, limited access windows, and a defensible settlement pattern. It works well for a disciplined small group, but tide dependency and resource limits cap long-term resilience.",
         "overall": 6.9,
         "rank": 3,
-        "percentile": 20.0
+        "percentile": 23.08
       },
       {
         "slug": "caerphilly-castle",
@@ -2903,7 +2433,7 @@
         "summary": "A large moated castle with strong defensive design and layered barriers. It is one of the stronger historic fortifications, but modern exposure and limited self-sufficiency keep it from elite status.",
         "overall": 6.8,
         "rank": 4,
-        "percentile": 26.67
+        "percentile": 30.77
       },
       {
         "slug": "st-kilda",
@@ -2913,7 +2443,7 @@
         "summary": "An extremely remote island archipelago with exceptional isolation and low external threat pressure. Its weakness is sustainment: weather, landing difficulty, and limited resources make survival fragile over time.",
         "overall": 6.8,
         "rank": 5,
-        "percentile": 33.33
+        "percentile": 38.46
       },
       {
         "slug": "fort-george",
@@ -2923,7 +2453,7 @@
         "summary": "A purpose-built coastal military fort with strong walls, controlled access, and organised internal space. It has real defensive value, but exposure and reliance on external supplies limit long-term independence.",
         "overall": 6.6,
         "rank": 6,
-        "percentile": 40.0
+        "percentile": 46.15
       },
       {
         "slug": "hm-prison-dartmoor",
@@ -2933,7 +2463,7 @@
         "summary": "A remote prison complex with secure walls, controlled movement, and strong internal containment. It offers a credible short-term defensive shell, but harsh exposure and limited self-sufficiency constrain long-term survival.",
         "overall": 6.6,
         "rank": 7,
-        "percentile": 46.67
+        "percentile": 53.85
       },
       {
         "slug": "clovelly",
@@ -2943,7 +2473,7 @@
         "summary": "A steep coastal village with constrained access routes, natural defensibility, and small-scale shelter. It is viable as a compact refuge, but limited expansion, coastal exposure, and supply dependence restrict long-term survival.",
         "overall": 6.5,
         "rank": 8,
-        "percentile": 53.33
+        "percentile": 61.54
       },
       {
         "slug": "edinburgh-castle",
@@ -2953,7 +2483,7 @@
         "summary": "A highly defensible urban castle on elevated rock, with strong visibility and controlled approaches. It is excellent as a symbolic redoubt, but urban exposure and limited sustainability reduce long-term value.",
         "overall": 6.5,
         "rank": 9,
-        "percentile": 60.0
+        "percentile": 69.23
       },
       {
         "slug": "porton-down",
@@ -2963,7 +2493,7 @@
         "summary": "A secure research facility with controlled access, specialist infrastructure, and perimeter discipline. It has defensive value, but technical dependency, contamination risk, and strategic visibility create serious long-term weakness.",
         "overall": 6.1,
         "rank": 10,
-        "percentile": 66.67
+        "percentile": 76.92
       },
       {
         "slug": "the-roaches",
@@ -2973,27 +2503,7 @@
         "summary": "A rocky elevated ridge with natural defensibility, visibility, and difficult approaches. It works as a temporary fallback point, but exposure and lack of infrastructure make it unsuitable for long-term occupation.",
         "overall": 5.9,
         "rank": 11,
-        "percentile": 73.33
-      },
-      {
-        "slug": "amazon-bhx4-fulfilment-centre",
-        "name": "Amazon BHX4 Fulfilment Centre",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "summary": "A huge logistics warehouse with stored goods, space, and controlled internal areas. It gives a strong early advantage, but weak defensibility, dependence on systems, and surrounding access routes make it decay quickly.",
-        "overall": 5.7,
-        "rank": 12,
-        "percentile": 80.0
-      },
-      {
-        "slug": "port-talbot-steelworks",
-        "name": "Port Talbot Steelworks",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "summary": "A major industrial site with infrastructure, materials, and repair potential. It is useful as a resource node, but pollution, exposure, and system dependency make it weak as a secure living base.",
-        "overall": 5.6,
-        "rank": 13,
-        "percentile": 86.67
+        "percentile": 84.62
       },
       {
         "slug": "cheddar-gorge-caves",
@@ -3002,8 +2512,8 @@
         "type": "subterranean",
         "summary": "Cheddar Gorge caves are a solid tactical hide with useful terrain friction; what kills you here is chronic livability failure, not direct assault.",
         "overall": 5.3,
-        "rank": 14,
-        "percentile": 93.33
+        "rank": 12,
+        "percentile": 92.31
       },
       {
         "slug": "fastnet-lighthouse",
@@ -3012,7 +2522,7 @@
         "type": "landmark_structure",
         "summary": "A remote offshore lighthouse with extreme separation and strong visibility. It is nearly useless as a survival base because space, shelter, food, water, and evacuation options are all critically limited.",
         "overall": 5.1,
-        "rank": 15,
+        "rank": 13,
         "percentile": 100.0
       }
     ],
@@ -3025,7 +2535,7 @@
         "summary": "Mont Saint-Michel is one of the hardest micro-sites to assault thanks to tidal separation; what kills you here is throughput limits in food, space, and medical response.",
         "overall": 8.2,
         "rank": 1,
-        "percentile": 7.69
+        "percentile": 8.33
       },
       {
         "slug": "heligoland",
@@ -3035,7 +2545,7 @@
         "summary": "Heligoland is one of the strongest isolation plays in Western Europe: remote, compact, and easier to monitor than mainland sites. What kills you here is maritime dependency when weather or fuel cuts the lifeline.",
         "overall": 8.0,
         "rank": 2,
-        "percentile": 15.38
+        "percentile": 16.67
       },
       {
         "slug": "carcassonne",
@@ -3045,7 +2555,7 @@
         "summary": "Carcassonne is a premier fortified shell with layered walls and command depth; what kills you here is sustainment fatigue behind intact defenses.",
         "overall": 7.4,
         "rank": 3,
-        "percentile": 23.08
+        "percentile": 25.0
       },
       {
         "slug": "hallstatt",
@@ -3055,7 +2565,7 @@
         "summary": "Hallstatt combines constrained access with strong local livability, making it one of the better balanced settlement options. What kills you here is chokepoint failure that traps residents against terrain.",
         "overall": 7.0,
         "rank": 4,
-        "percentile": 30.77
+        "percentile": 33.33
       },
       {
         "slug": "ile-dyeu",
@@ -3065,7 +2575,7 @@
         "summary": "\u00cele d\u2019Yeu is a balanced island refuge with useful separation and livable conditions, but it lacks deep strategic depth. What kills you here is slow resource depletion under prolonged isolation.",
         "overall": 7.0,
         "rank": 5,
-        "percentile": 38.46
+        "percentile": 41.67
       },
       {
         "slug": "rocamadour",
@@ -3075,7 +2585,7 @@
         "summary": "Rocamadour balances cliffside defense with workable rural linkage; what kills you here is exceeding carrying capacity and overloading water/sanitation systems.",
         "overall": 6.9,
         "rank": 6,
-        "percentile": 46.15
+        "percentile": 50.0
       },
       {
         "slug": "maginot-line-bunkers",
@@ -3085,7 +2595,7 @@
         "summary": "The Maginot bunkers are elite for hard protection but poor at independent endurance. What kills you here is subsystem failure underground: air, water, power, and sanitation.",
         "overall": 6.0,
         "rank": 7,
-        "percentile": 53.85
+        "percentile": 58.33
       },
       {
         "slug": "nato-airbase-geilenkirchen",
@@ -3095,7 +2605,7 @@
         "summary": "Geilenkirchen offers serious NATO-grade infrastructure and layered security, but it is embedded in dense mainland networks. What kills you here is constant contact pressure once perimeter staffing and logistics slip.",
         "overall": 6.0,
         "rank": 8,
-        "percentile": 61.54
+        "percentile": 66.67
       },
       {
         "slug": "neuschwanstein-castle",
@@ -3105,17 +2615,7 @@
         "summary": "Neuschwanstein offers strong terrain-assisted defense and visibility; what kills you here is logistics drag from a symbolic site that cannot feed itself.",
         "overall": 6.0,
         "rank": 9,
-        "percentile": 69.23
-      },
-      {
-        "slug": "ruhr-industrial-complex",
-        "name": "Ruhr Industrial Complex",
-        "region": "western_europe",
-        "type": "industrial_site",
-        "summary": "The Ruhr offers broad industrial depth across many nodes; what kills you here is security sprawl that outgrows coordination capacity.",
-        "overall": 5.1,
-        "rank": 10,
-        "percentile": 76.92
+        "percentile": 75.0
       },
       {
         "slug": "eguisheim",
@@ -3124,8 +2624,8 @@
         "type": "remote_settlement",
         "summary": "Eguisheim is a workable village-scale fallback with manageable density and access to surrounding land. What kills you here is perimeter dilution once pressure exceeds what a small settlement can police.",
         "overall": 5.0,
-        "rank": 11,
-        "percentile": 84.62
+        "rank": 10,
+        "percentile": 83.33
       },
       {
         "slug": "naours-underground-city",
@@ -3134,8 +2634,8 @@
         "type": "subterranean",
         "summary": "Naours gives useful subterranean concealment and controlled entry, but it was never built as a full independent city. What kills you here is prolonged underground strain: air quality, hygiene, and supply depletion.",
         "overall": 5.0,
-        "rank": 12,
-        "percentile": 92.31
+        "rank": 11,
+        "percentile": 91.67
       },
       {
         "slug": "phare-du-creach",
@@ -3144,7 +2644,7 @@
         "type": "landmark_structure",
         "summary": "Phare du Cr\u00e9ac\u2019h provides remote coastal isolation and observation value, but it is too small and brittle for extended habitation. What kills you here is capacity failure once stores run thin.",
         "overall": 4.0,
-        "rank": 13,
+        "rank": 12,
         "percentile": 100.0
       }
     ]
@@ -3159,7 +2659,7 @@
         "summary": "Machu Picchu offers excellent terrain defense and controlled approach lines, but limited productive capacity prevents large, permanent survival communities.",
         "overall": 7.6,
         "rank": 1,
-        "percentile": 4.55
+        "percentile": 4.76
       },
       {
         "slug": "simien-mountains",
@@ -3169,7 +2669,7 @@
         "summary": "The Simien Mountains are a naturally defensible high-altitude stronghold, where sheer cliffs, limited access routes, and extreme isolation significantly reduce external threat pressure. However, that same isolation severely limits long-term survivability, with constrained food production, harsh living conditions, and difficult resupply. Over time, the balance shifts from protection to restriction, making it better suited to short-term refuge than permanent settlement.",
         "overall": 7.5,
         "rank": 2,
-        "percentile": 9.09
+        "percentile": 9.52
       },
       {
         "slug": "hilltop-fort-rajasthan",
@@ -3179,7 +2679,7 @@
         "summary": "A Rajasthan hill fort is a classic high-control stronghold with excellent wall geometry, but water and heat stress define whether it thrives or slowly fails.",
         "overall": 7.4,
         "rank": 3,
-        "percentile": 13.64
+        "percentile": 14.29
       },
       {
         "slug": "rice-terrace-highlands",
@@ -3189,7 +2689,7 @@
         "summary": "Rice Terrace Highlands are elevated agrarian settlements with built-in food potential. They work by combining controllable approach routes with reliable staple production systems. You die when irrigation, labor coordination, or slope access fails during stress cycles.",
         "overall": 7.2,
         "rank": 4,
-        "percentile": 18.18
+        "percentile": 19.05
       },
       {
         "slug": "sigiriya",
@@ -3199,7 +2699,7 @@
         "summary": "Sigiriya offers rare rock-fortress defensibility and visibility, but constrained top-plateau capacity limits how long a group can live there without strong external support.",
         "overall": 7.2,
         "rank": 5,
-        "percentile": 22.73
+        "percentile": 23.81
       },
       {
         "slug": "cappadocia-highlands",
@@ -3209,7 +2709,7 @@
         "summary": "Cappadocia\u2019s broken terrain and concealment options make it a strong defensive refuge, but what kills you here is water-and-agriculture throughput: dispersed hideouts can outlast attacks, not prolonged scarcity.",
         "overall": 7.1,
         "rank": 6,
-        "percentile": 27.27
+        "percentile": 28.57
       },
       {
         "slug": "mount-huashan",
@@ -3219,7 +2719,7 @@
         "summary": "Mount Huashan is an elite defensive perch with severe access control and strong natural isolation. The decisive trade-off is near-unmatched protection versus chronic logistical fragility.",
         "overall": 7.1,
         "rank": 7,
-        "percentile": 31.82
+        "percentile": 33.33
       },
       {
         "slug": "predjama-castle",
@@ -3229,7 +2729,7 @@
         "summary": "Predjama is a superb cliff fortress with choke-point control, but fortress geometry does not make food or medicine. What kills you here is siege starvation: you can deny entry for a long time and still lose to depletion.",
         "overall": 6.9,
         "rank": 8,
-        "percentile": 36.36
+        "percentile": 38.1
       },
       {
         "slug": "rocamadour",
@@ -3239,7 +2739,7 @@
         "summary": "Rocamadour balances cliffside defense with workable rural linkage; what kills you here is exceeding carrying capacity and overloading water/sanitation systems.",
         "overall": 6.9,
         "rank": 9,
-        "percentile": 40.91
+        "percentile": 42.86
       },
       {
         "slug": "tiger-leaping-gorge-cliffs",
@@ -3249,7 +2749,7 @@
         "summary": "Tiger Leaping Gorge offers extraordinary terrain defense and low approach density, but daily survival is constrained by space and supply movement. The central trade-off is tactical dominance versus unworkable sustainment at scale.",
         "overall": 6.9,
         "rank": 10,
-        "percentile": 45.45
+        "percentile": 47.62
       },
       {
         "slug": "tigers-nest-monastery",
@@ -3259,7 +2759,7 @@
         "summary": "Tiger\u2019s Nest is an extreme cliffside redoubt with elite access denial, but its tiny carrying capacity and severe logistics ceiling cap long-term survival.",
         "overall": 6.9,
         "rank": 11,
-        "percentile": 50.0
+        "percentile": 52.38
       },
       {
         "slug": "mesa-verde",
@@ -3269,7 +2769,7 @@
         "summary": "Mesa Verde offers strong terrain defense, but what kills you here is carrying-capacity mismatch: protected positions can hold people, yet arable throughput and water logistics limit long-run population support.",
         "overall": 6.8,
         "rank": 12,
-        "percentile": 54.55
+        "percentile": 57.14
       },
       {
         "slug": "ha-long-bay-cliffs",
@@ -3279,7 +2779,7 @@
         "summary": "Ha Long Bay cliffs are a terrain-fragmented coastal redoubt of islands and vertical rock. It works by forcing movement through predictable maritime channels and narrow landing points. You die when weather or boat degradation cuts mobility and resupply between sectors.",
         "overall": 6.6,
         "rank": 13,
-        "percentile": 59.09
+        "percentile": 61.9
       },
       {
         "slug": "edinburgh-castle",
@@ -3289,7 +2789,7 @@
         "summary": "A highly defensible urban castle on elevated rock, with strong visibility and controlled approaches. It is excellent as a symbolic redoubt, but urban exposure and limited sustainability reduce long-term value.",
         "overall": 6.5,
         "rank": 14,
-        "percentile": 63.64
+        "percentile": 66.67
       },
       {
         "slug": "table-mountain-plateau",
@@ -3299,7 +2799,7 @@
         "summary": "Table Mountain Plateau is a highly defensible elevated position with steep cliffs, strong visibility, and usable space on top. However, its direct proximity to Cape Town, multiple access routes, and high visibility make it far less secure than more remote mountain strongholds. It is better suited to short-term defence and staging than long-term isolation.",
         "overall": 6.5,
         "rank": 15,
-        "percentile": 68.18
+        "percentile": 71.43
       },
       {
         "slug": "petra",
@@ -3309,7 +2809,7 @@
         "summary": "Petra offers strong chokepoints and concealment in stone corridors, but what kills you here is water dependency: once stored supply and nearby sources are contested, defensive geometry cannot feed or hydrate a population.",
         "overall": 6.4,
         "rank": 16,
-        "percentile": 72.73
+        "percentile": 76.19
       },
       {
         "slug": "table-rock-plateau",
@@ -3319,7 +2819,7 @@
         "summary": "Table Rock is a serviceable elevated fallback, but what kills you here is perimeter dilution: broad approach arcs and limited concealment stretch defenders until incidents become constant.",
         "overall": 6.1,
         "rank": 17,
-        "percentile": 77.27
+        "percentile": 80.95
       },
       {
         "slug": "blue-mountains-cliffs",
@@ -3329,7 +2829,7 @@
         "summary": "Excellent terrain defense and standoff distance, with sustainment limited by wildfire and infrastructure thinness.",
         "overall": 6.0,
         "rank": 18,
-        "percentile": 81.82
+        "percentile": 85.71
       },
       {
         "slug": "neuschwanstein-castle",
@@ -3339,7 +2839,7 @@
         "summary": "Neuschwanstein offers strong terrain-assisted defense and visibility; what kills you here is logistics drag from a symbolic site that cannot feed itself.",
         "overall": 6.0,
         "rank": 19,
-        "percentile": 86.36
+        "percentile": 90.48
       },
       {
         "slug": "the-roaches",
@@ -3349,17 +2849,7 @@
         "summary": "A rocky elevated ridge with natural defensibility, visibility, and difficult approaches. It works as a temporary fallback point, but exposure and lack of infrastructure make it unsuitable for long-term occupation.",
         "overall": 5.9,
         "rank": 20,
-        "percentile": 90.91
-      },
-      {
-        "slug": "la-rinconada",
-        "name": "La Rinconada",
-        "region": "south_america",
-        "type": "elevated_stronghold",
-        "summary": "La Rinconada gains protection from altitude and remoteness, but extreme living conditions and weak local systems limit survival duration.",
-        "overall": 5.1,
-        "rank": 21,
-        "percentile": 95.45
+        "percentile": 95.24
       },
       {
         "slug": "uluru-surroundings",
@@ -3368,7 +2858,7 @@
         "type": "elevated_stronghold",
         "summary": "Remote desert standoff lowers contact risk, but water and heat realities make it hard to sustain life.",
         "overall": 4.0,
-        "rank": 22,
+        "rank": 21,
         "percentile": 100.0
       }
     ],
@@ -3593,7 +3083,7 @@
         "summary": "Exceptional scale and remoteness support long-run survival potential, but the footprint is too vast to secure conventionally.",
         "overall": 6.8,
         "rank": 1,
-        "percentile": 6.67
+        "percentile": 14.29
       },
       {
         "slug": "itaipu-dam",
@@ -3603,7 +3093,7 @@
         "summary": "Itaipu Dam has exceptional energy potential and water access, making it operationally powerful, but its scale and strategic value make defense extremely demanding.",
         "overall": 6.8,
         "rank": 2,
-        "percentile": 13.33
+        "percentile": 28.57
       },
       {
         "slug": "murmansk-icebreaker-port",
@@ -3613,7 +3103,7 @@
         "summary": "A polar maritime hub with specialist icebreaker infrastructure and Arctic access. However, port exposure, supply dependency, and harsh operating conditions limit long-term security.",
         "overall": 6.3,
         "rank": 3,
-        "percentile": 20.0
+        "percentile": 42.86
       },
       {
         "slug": "bonny-island-lng-terminal",
@@ -3623,7 +3113,7 @@
         "summary": "Bonny LNG Terminal is a powerful industrial strongpoint with controlled space and hard infrastructure, but it is brittle under collapse conditions. Its usefulness depends on complex systems, skilled maintenance, and steady supply chains that are hard to replace locally.",
         "overall": 6.1,
         "rank": 4,
-        "percentile": 26.67
+        "percentile": 57.14
       },
       {
         "slug": "sime-darby-palm-oil-estate-sabah",
@@ -3633,7 +3123,7 @@
         "summary": "Sime Darby Sabah is a large agro-industrial estate that can produce at regional scale. It works when core zones, mills, roads, and workforce discipline stay synchronized. You die when security overstretch and machinery dependence cause cascading output loss.",
         "overall": 6.1,
         "rank": 5,
-        "percentile": 33.33
+        "percentile": 71.43
       },
       {
         "slug": "kimberley-big-hole-mining-complex",
@@ -3643,7 +3133,7 @@
         "summary": "The Kimberley Big Hole offers strong terrain-based defensibility, but it is a dangerous bowl if exits, water access, or supply routes fail. It works as a hard-to-storm holdout early on, yet can quickly become a trap once core lifelines are cut.",
         "overall": 6.0,
         "rank": 6,
-        "percentile": 40.0
+        "percentile": 85.71
       },
       {
         "slug": "hutchinson-salt-storage-caverns",
@@ -3653,86 +3143,6 @@
         "summary": "Hutchinson salt caverns provide excellent blast/weather protection and concealment, yet the single dominant failure mode is ventilation-power dependency: lose airflow and pumping reliability, and the underground advantage becomes a liability.",
         "overall": 5.9,
         "rank": 7,
-        "percentile": 46.67
-      },
-      {
-        "slug": "norilsk",
-        "name": "Norilsk",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "summary": "Norilsk is remote enough to avoid mass contact, but the environment itself is hostile to human endurance. What kills you here is infrastructure-coupled cold exposure: once heat, shelter integrity, or medical capability slip, mortality spikes fast.",
-        "overall": 5.8,
-        "rank": 8,
-        "percentile": 53.33
-      },
-      {
-        "slug": "ras-al-khair-desalination-plant",
-        "name": "Ras Al Khair Desalination Plant",
-        "region": "middle_east",
-        "type": "industrial_site",
-        "summary": "Ras Al Khair\u2019s water output is uniquely valuable, but what kills you here is power-chain fragility: once energy input or specialist maintenance fails, the core survival advantage disappears fast.",
-        "overall": 5.8,
-        "rank": 9,
-        "percentile": 60.0
-      },
-      {
-        "slug": "amazon-bhx4-fulfilment-centre",
-        "name": "Amazon BHX4 Fulfilment Centre",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "summary": "A huge logistics warehouse with stored goods, space, and controlled internal areas. It gives a strong early advantage, but weak defensibility, dependence on systems, and surrounding access routes make it decay quickly.",
-        "overall": 5.7,
-        "rank": 10,
-        "percentile": 66.67
-      },
-      {
-        "slug": "port-talbot-steelworks",
-        "name": "Port Talbot Steelworks",
-        "region": "uk_ireland",
-        "type": "industrial_site",
-        "summary": "A major industrial site with infrastructure, materials, and repair potential. It is useful as a resource node, but pollution, exposure, and system dependency make it weak as a secure living base.",
-        "overall": 5.6,
-        "rank": 11,
-        "percentile": 73.33
-      },
-      {
-        "slug": "foxconn-shenzhen-factory",
-        "name": "Foxconn Shenzhen Factory",
-        "region": "east_asia",
-        "type": "industrial_site",
-        "summary": "The Shenzhen factory complex has unusual infrastructure depth and short-term resource potential, but it sits inside one of the world\u2019s densest urban-industrial corridors. The dominant trade-off is internal capability versus catastrophic exposure.",
-        "overall": 5.4,
-        "rank": 12,
-        "percentile": 80.0
-      },
-      {
-        "slug": "gdansk-shipyard",
-        "name": "Gda\u0144sk Shipyard",
-        "region": "eastern_europe",
-        "type": "industrial_site",
-        "summary": "Gda\u0144sk Shipyard is a high-value industrial toolkit, not a survivable sanctuary. What kills you here is perimeter overstretch: too much open infrastructure to guard, too many approach paths, too many competing groups.",
-        "overall": 5.4,
-        "rank": 13,
-        "percentile": 86.67
-      },
-      {
-        "slug": "krbl-rice-mill-dhuri",
-        "name": "KRBL Rice Mill (Dhuri)",
-        "region": "south_asia",
-        "type": "industrial_site",
-        "summary": "KRBL Dhuri has serious food-processing upside, but as a fixed base it is exposed, labor-dependent, and hard to secure against persistent pressure.",
-        "overall": 5.1,
-        "rank": 14,
-        "percentile": 93.33
-      },
-      {
-        "slug": "ruhr-industrial-complex",
-        "name": "Ruhr Industrial Complex",
-        "region": "western_europe",
-        "type": "industrial_site",
-        "summary": "The Ruhr offers broad industrial depth across many nodes; what kills you here is security sprawl that outgrows coordination capacity.",
-        "overall": 5.1,
-        "rank": 15,
         "percentile": 100.0
       }
     ],
@@ -3745,7 +3155,7 @@
         "summary": "Hanle Observatory is an isolation-dominant survival option with low encounter pressure, but extreme altitude and remoteness impose severe physiological and logistics penalties.",
         "overall": 7.1,
         "rank": 1,
-        "percentile": 4.76
+        "percentile": 5.88
       },
       {
         "slug": "area-51",
@@ -3755,7 +3165,7 @@
         "summary": "Area 51 combines remoteness, controlled approaches, and hardened infrastructure, but its dominant failure mode is systems complexity debt: without specialized maintenance pipelines, high-tech capabilities decay into unusable overhead.",
         "overall": 6.9,
         "rank": 2,
-        "percentile": 9.52
+        "percentile": 11.76
       },
       {
         "slug": "raaf-base-tindal",
@@ -3765,7 +3175,7 @@
         "summary": "High-grade military infrastructure gives strong initial control, but strategic visibility and supply dependence limit endurance.",
         "overall": 6.9,
         "rank": 3,
-        "percentile": 14.29
+        "percentile": 17.65
       },
       {
         "slug": "nagurskoye-air-base",
@@ -3775,7 +3185,7 @@
         "summary": "A remote Arctic military airbase with controlled access and strong strategic positioning. However, extreme climate, visibility, and dependence on supply chains reduce independent survivability.",
         "overall": 6.7,
         "rank": 4,
-        "percentile": 19.05
+        "percentile": 23.53
       },
       {
         "slug": "camp-lemonnier",
@@ -3785,7 +3195,7 @@
         "summary": "Camp Lemonnier has exceptional military-grade defensive capability and organized base infrastructure, making it one of the strongest compounds in a direct security sense. But it is not highly independent: if fuel, water treatment, and logistics pipelines fail, performance drops fast.",
         "overall": 6.6,
         "rank": 5,
-        "percentile": 23.81
+        "percentile": 29.41
       },
       {
         "slug": "hm-prison-dartmoor",
@@ -3795,7 +3205,7 @@
         "summary": "A remote prison complex with secure walls, controlled movement, and strong internal containment. It offers a credible short-term defensive shell, but harsh exposure and limited self-sufficiency constrain long-term survival.",
         "overall": 6.6,
         "rank": 6,
-        "percentile": 28.57
+        "percentile": 35.29
       },
       {
         "slug": "pathankot-air-force-station",
@@ -3805,7 +3215,7 @@
         "summary": "Pathankot AFS is a hardened operational compound with meaningful defensive structure, but its strategic visibility keeps pressure high and long-term autonomy uncertain.",
         "overall": 6.6,
         "rank": 7,
-        "percentile": 33.33
+        "percentile": 41.18
       },
       {
         "slug": "amundsen-scott-south-pole-station",
@@ -3815,7 +3225,7 @@
         "summary": "An extremely isolated scientific station with controlled infrastructure and almost no external threat pressure. However, total dependence on life-support systems and resupply makes long-term independence impossible.",
         "overall": 6.4,
         "rank": 8,
-        "percentile": 38.1
+        "percentile": 47.06
       },
       {
         "slug": "danum-valley-field-centre",
@@ -3825,7 +3235,7 @@
         "summary": "Danum Valley Field Centre is a remote jungle refuge with low-contact signature advantages. It works for small trained groups that can run strict field medicine and maintenance routines. You die when treatable illness, injury, or equipment failure outpaces evacuation and repair.",
         "overall": 6.3,
         "rank": 9,
-        "percentile": 42.86
+        "percentile": 52.94
       },
       {
         "slug": "pine-gap-facility",
@@ -3835,7 +3245,7 @@
         "summary": "Extreme remoteness and hardened controls are offset by acute system dependency and top-tier strategic exposure.",
         "overall": 6.3,
         "rank": 10,
-        "percentile": 47.62
+        "percentile": 58.82
       },
       {
         "slug": "al-udeid-air-base",
@@ -3845,7 +3255,7 @@
         "summary": "Al Udeid provides one of the best ready-made defense envelopes in the region, but what kills you here is signature load: major airbase visibility attracts sustained external pressure and drains supplies.",
         "overall": 6.2,
         "rank": 11,
-        "percentile": 52.38
+        "percentile": 64.71
       },
       {
         "slug": "kota-kinabalu-naval-base",
@@ -3855,7 +3265,7 @@
         "summary": "Kota Kinabalu Naval Base is a military command compound with strong tactical security. It works through hardened access control, organized response, and maritime support infrastructure. You die when prolonged contest burns fuel, parts, and readiness faster than resupply.",
         "overall": 6.2,
         "rank": 12,
-        "percentile": 57.14
+        "percentile": 70.59
       },
       {
         "slug": "amazon-tall-tower-observatory",
@@ -3865,7 +3275,7 @@
         "summary": "ATTO offers deep-rainforest isolation and strong natural resource potential, but terrain, disease burden, and mobility constraints make control and continuity difficult.",
         "overall": 6.1,
         "rank": 13,
-        "percentile": 61.9
+        "percentile": 76.47
       },
       {
         "slug": "guantanamo-bay",
@@ -3875,7 +3285,7 @@
         "summary": "Guantanamo offers strong perimeter control and organized facilities, yet the dominant failure mode is geopolitical encirclement: prolonged dependence on maritime logistics and contested sovereignty can choke continuity even before direct breach.",
         "overall": 6.1,
         "rank": 14,
-        "percentile": 66.67
+        "percentile": 82.35
       },
       {
         "slug": "porton-down",
@@ -3885,7 +3295,7 @@
         "summary": "A secure research facility with controlled access, specialist infrastructure, and perimeter discipline. It has defensive value, but technical dependency, contamination risk, and strategic visibility create serious long-term weakness.",
         "overall": 6.1,
         "rank": 15,
-        "percentile": 71.43
+        "percentile": 88.24
       },
       {
         "slug": "nato-airbase-geilenkirchen",
@@ -3895,7 +3305,7 @@
         "summary": "Geilenkirchen offers serious NATO-grade infrastructure and layered security, but it is embedded in dense mainland networks. What kills you here is constant contact pressure once perimeter staffing and logistics slip.",
         "overall": 6.0,
         "rank": 16,
-        "percentile": 76.19
+        "percentile": 94.12
       },
       {
         "slug": "tambopata-research-center",
@@ -3905,46 +3315,6 @@
         "summary": "Tambopata gives concealment and food potential in deep jungle, but what kills you here is untreated injury or infection far from reliable care.",
         "overall": 6.0,
         "rank": 17,
-        "percentile": 80.95
-      },
-      {
-        "slug": "olenya-air-base",
-        "name": "Olenya Air Base",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "summary": "Olenya can absorb early shock thanks to military-grade hardening and Arctic distance, but what kills you here is fuel-and-spares collapse in extreme cold once central logistics break.",
-        "overall": 5.8,
-        "rank": 18,
-        "percentile": 85.71
-      },
-      {
-        "slug": "ryongsong-residence-compound",
-        "name": "Ryongsong Residence Compound",
-        "region": "east_asia",
-        "type": "institutional_compound",
-        "summary": "Ryongsong Compound has strong perimeter control and internal zoning, but it remains a politically obvious fixed site in an urban state core. What kills you here is siege pressure once external support and movement options collapse.",
-        "overall": 5.7,
-        "rank": 19,
-        "percentile": 90.48
-      },
-      {
-        "slug": "un-base-in-juba-unmiss-hq-south-sudan",
-        "name": "UN Base in Juba (UNMISS HQ, South Sudan)",
-        "region": "africa",
-        "type": "institutional_compound",
-        "summary": "UNMISS Juba provides a protected compound that can absorb early shocks, but prolonged crisis drives mounting population pressure into and around the site. Over time, crowding and aid dependence overwhelm what the perimeter can realistically sustain.",
-        "overall": 5.3,
-        "rank": 20,
-        "percentile": 95.24
-      },
-      {
-        "slug": "chernobyl-exclusion-zone-facility",
-        "name": "Chernobyl Exclusion Zone Facility",
-        "region": "eastern_europe",
-        "type": "institutional_compound",
-        "summary": "Chernobyl offers rare low-population isolation in Europe, but contamination and decaying infrastructure impose a slow-burn survival tax. What kills you here is cumulative exposure and medical degradation, not immediate assault.",
-        "overall": 5.2,
-        "rank": 21,
         "percentile": 100.0
       }
     ],
@@ -4192,54 +3562,14 @@
     ],
     "landmark_structure": [
       {
-        "slug": "lighthouse-hormuz",
-        "name": "Lighthouse Hormuz",
-        "region": "middle_east",
-        "type": "landmark_structure",
-        "summary": "Hormuz lighthouse has useful separation and surveillance value, but what kills you here is capacity exhaustion: the site is too small and too harsh to sustain a community once short-term stores are depleted.",
-        "overall": 5.4,
-        "rank": 1,
-        "percentile": 12.5
-      },
-      {
-        "slug": "phu-quoc-lighthouse",
-        "name": "Phu Quoc Lighthouse",
-        "region": "southeast_asia",
-        "type": "landmark_structure",
-        "summary": "A coastal lighthouse with visibility, limited access, and some island separation. It offers short-term observation value, but exposure, lack of resources, and dependence on nearby settlement make it weak as a base.",
-        "overall": 5.2,
-        "rank": 2,
-        "percentile": 25.0
-      },
-      {
-        "slug": "cape-point-lighthouse",
-        "name": "Cape Point Lighthouse",
-        "region": "africa",
-        "type": "landmark_structure",
-        "summary": "Cape Point Lighthouse has tactical lookout value and some geographic separation, but it lacks the carrying capacity and resource depth needed for sustained habitation. It works best as an observation and signaling outpost rather than a primary survival settlement.",
-        "overall": 5.1,
-        "rank": 3,
-        "percentile": 37.5
-      },
-      {
         "slug": "fastnet-lighthouse",
         "name": "Fastnet Lighthouse",
         "region": "uk_ireland",
         "type": "landmark_structure",
         "summary": "A remote offshore lighthouse with extreme separation and strong visibility. It is nearly useless as a survival base because space, shelter, food, water, and evacuation options are all critically limited.",
         "overall": 5.1,
-        "rank": 4,
-        "percentile": 50.0
-      },
-      {
-        "slug": "antarctic-lighthouse",
-        "name": "Antarctic Lighthouse",
-        "region": "polar_extreme",
-        "type": "landmark_structure",
-        "summary": "A small polar outpost with visibility and isolation. However, exposure, limited shelter, and lack of resources make it unsuitable for long-term survival.",
-        "overall": 5.0,
-        "rank": 5,
-        "percentile": 62.5
+        "rank": 1,
+        "percentile": 25.0
       },
       {
         "slug": "great-mosque-of-djenne",
@@ -4248,8 +3578,8 @@
         "type": "landmark_structure",
         "summary": "The Great Mosque of Djenn\u00e9 is visually imposing and culturally significant, but materially fragile for sustained defensive use. It may serve as a symbolic shelter point, yet structural vulnerability and limited isolation make it unsuitable as a serious long-term survival base.",
         "overall": 4.9,
-        "rank": 6,
-        "percentile": 75.0
+        "rank": 2,
+        "percentile": 50.0
       },
       {
         "slug": "kizhi-pogost",
@@ -4258,8 +3588,8 @@
         "type": "landmark_structure",
         "summary": "Kizhi is remote and scenic, but what kills you here is infrastructure poverty: you run out of heat, medicine, and repair capacity before threats ever need to storm the site.",
         "overall": 4.4,
-        "rank": 7,
-        "percentile": 87.5
+        "rank": 3,
+        "percentile": 75.0
       },
       {
         "slug": "phare-du-creach",
@@ -4268,19 +3598,7 @@
         "type": "landmark_structure",
         "summary": "Phare du Cr\u00e9ac\u2019h provides remote coastal isolation and observation value, but it is too small and brittle for extended habitation. What kills you here is capacity failure once stores run thin.",
         "overall": 4.0,
-        "rank": 8,
-        "percentile": 100.0
-      }
-    ],
-    "polar_extreme": [
-      {
-        "slug": "crevasse-field-glacier",
-        "name": "Crevasse Field Glacier",
-        "region": "polar_extreme",
-        "type": "polar_extreme",
-        "summary": "A fractured glacial terrain filled with deep crevasses, offering extreme isolation and natural barriers. However, unstable footing, concealed crevasse risk, and lack of resources make long-term survival nearly impossible.",
-        "overall": 5.7,
-        "rank": 1,
+        "rank": 4,
         "percentile": 100.0
       }
     ],
@@ -4293,7 +3611,7 @@
         "summary": "Eigg is a rare island community with real off-grid credibility; what kills you here is a bad season that breaks food, fuel, and medical margins before security fails.",
         "overall": 8.1,
         "rank": 1,
-        "percentile": 4.55
+        "percentile": 5.56
       },
       {
         "slug": "cusco-highlands-village",
@@ -4303,7 +3621,7 @@
         "summary": "Cusco highlands villages combine terrain defense with proven local subsistence systems, but what kills you here is cold-altitude medical decline in unacclimated groups.",
         "overall": 8.0,
         "rank": 2,
-        "percentile": 9.09
+        "percentile": 11.11
       },
       {
         "slug": "coober-pedy-underground-settlement",
@@ -4313,7 +3631,7 @@
         "summary": "Coober Pedy is one of the few desert sites where underground habitation is already proven, but long-term success is limited by hard water and logistics ceilings.",
         "overall": 7.1,
         "rank": 3,
-        "percentile": 13.64
+        "percentile": 16.67
       },
       {
         "slug": "siwa-oasis",
@@ -4323,7 +3641,7 @@
         "summary": "Siwa Oasis is one of the more credible long-horizon refuges in the region, but what kills you here is water-system fragility: contamination, overdraw, or pump failure can collapse the settlement\u2019s carrying capacity.",
         "overall": 7.1,
         "rank": 4,
-        "percentile": 18.18
+        "percentile": 22.22
       },
       {
         "slug": "ait-benhaddou",
@@ -4333,7 +3651,7 @@
         "summary": "A\u00eft Benhaddou is a strong niche base: its fortified settlement form and relative isolation support controlled defense and lower immediate pressure. Its long-term ceiling is set by arid constraints, where limited water and food capacity become the decisive bottleneck.",
         "overall": 7.0,
         "rank": 5,
-        "percentile": 22.73
+        "percentile": 27.78
       },
       {
         "slug": "hallstatt",
@@ -4343,7 +3661,7 @@
         "summary": "Hallstatt combines constrained access with strong local livability, making it one of the better balanced settlement options. What kills you here is chokepoint failure that traps residents against terrain.",
         "overall": 7.0,
         "rank": 6,
-        "percentile": 27.27
+        "percentile": 33.33
       },
       {
         "slug": "telluride",
@@ -4353,7 +3671,7 @@
         "summary": "Mountain terrain and manageable scale make Telluride a credible holdout if you prepare for winter logistics.",
         "overall": 7.0,
         "rank": 7,
-        "percentile": 31.82
+        "percentile": 38.89
       },
       {
         "slug": "visby",
@@ -4363,7 +3681,7 @@
         "summary": "Visby is a balanced walled island town, but what kills you here is population-and-water strain if too many survivors concentrate behind finite historic defenses.",
         "overall": 7.0,
         "rank": 8,
-        "percentile": 36.36
+        "percentile": 44.44
       },
       {
         "slug": "banda-neira",
@@ -4373,7 +3691,7 @@
         "summary": "A small island settlement with strong maritime separation, historic fortifications, and access to coastal resources. It works best as a low-profile island refuge, but limited scale and supply dependence cap long-term resilience.",
         "overall": 6.8,
         "rank": 9,
-        "percentile": 40.91
+        "percentile": 50.0
       },
       {
         "slug": "clovelly",
@@ -4383,7 +3701,7 @@
         "summary": "A steep coastal village with constrained access routes, natural defensibility, and small-scale shelter. It is viable as a compact refuge, but limited expansion, coastal exposure, and supply dependence restrict long-term survival.",
         "overall": 6.5,
         "rank": 10,
-        "percentile": 45.45
+        "percentile": 55.56
       },
       {
         "slug": "kibber-village",
@@ -4393,7 +3711,7 @@
         "summary": "Kibber is a high-altitude remote village that trades accessibility for security. It works through isolation, narrow approaches, and existing community housing for organized routines. You die when winter isolation, fuel gaps, or delayed medical care compound faster than recovery.",
         "overall": 6.5,
         "rank": 11,
-        "percentile": 50.0
+        "percentile": 61.11
       },
       {
         "slug": "longyearbyen",
@@ -4403,7 +3721,7 @@
         "summary": "A remote Arctic settlement with strong isolation, infrastructure, and controlled access. However, extreme climate and supply-chain reliance constrain long-term resilience.",
         "overall": 6.4,
         "rank": 12,
-        "percentile": 54.55
+        "percentile": 66.67
       },
       {
         "slug": "banlung",
@@ -4413,17 +3731,7 @@
         "summary": "A remote inland town with surrounding terrain, forest cover, and regional resource access. It offers more livability than a pure wilderness refuge, but weak defensibility and difficult logistics limit its ceiling.",
         "overall": 6.1,
         "rank": 13,
-        "percentile": 59.09
-      },
-      {
-        "slug": "patagonian-village",
-        "name": "Patagonian Village",
-        "region": "south_america",
-        "type": "remote_settlement",
-        "summary": "Patagonian villages benefit from remoteness and low traffic, but what kills you here is wind-cold exposure when fuel and shelter maintenance fall behind.",
-        "overall": 6.0,
-        "rank": 14,
-        "percentile": 63.64
+        "percentile": 72.22
       },
       {
         "slug": "shirakawa-go",
@@ -4432,18 +3740,8 @@
         "type": "remote_settlement",
         "summary": "Shirakawa-go benefits from mountain remoteness and small-settlement cohesion, but severe winters and limited redundancy constrain endurance. What kills you here is winter logistics failure: heat, medicine, and mobility collapse before threats do.",
         "overall": 6.0,
-        "rank": 15,
-        "percentile": 68.18
-      },
-      {
-        "slug": "port-vila",
-        "name": "Port Vila",
-        "region": "oceania",
-        "type": "remote_settlement",
-        "summary": "Port Vila offers real settlement infrastructure and island separation, but limited depth makes it fragile under prolonged disruption.",
-        "overall": 5.9,
-        "rank": 16,
-        "percentile": 72.73
+        "rank": 14,
+        "percentile": 77.78
       },
       {
         "slug": "wadi-musa",
@@ -4452,28 +3750,8 @@
         "type": "remote_settlement",
         "summary": "Wadi Musa is workable but fragile; what kills you here is corridor squeeze: limited approach routes become contested chokepoints that choke trade, movement, and medical evacuation.",
         "overall": 5.9,
-        "rank": 17,
-        "percentile": 77.27
-      },
-      {
-        "slug": "shaxi-ancient-town",
-        "name": "Shaxi Ancient Town",
-        "region": "east_asia",
-        "type": "remote_settlement",
-        "summary": "Shaxi is a remote town with manageable scale and decent local living potential, but it lacks hard defensive geometry. What kills you here is slow attrition from repeated incursions that drain manpower and stores.",
-        "overall": 5.8,
-        "rank": 18,
-        "percentile": 81.82
-      },
-      {
-        "slug": "kuttanad-village",
-        "name": "Kuttanad Village",
-        "region": "south_asia",
-        "type": "remote_settlement",
-        "summary": "Kuttanad is a food-producing lowland basin built around paddy and waterways. It works as a production engine when flood control, storage, and transport are tightly managed. You die when flooding and disease pressure break perimeter control and erase surplus.",
-        "overall": 5.7,
-        "rank": 19,
-        "percentile": 86.36
+        "rank": 15,
+        "percentile": 83.33
       },
       {
         "slug": "kolmanskop",
@@ -4482,8 +3760,8 @@
         "type": "remote_settlement",
         "summary": "Kolmanskop buys time through remoteness and clear sightlines, but it cannot feed or hydrate a group for long. The dominant trade-off is safety from people versus total dependence on imported water and food.",
         "overall": 5.6,
-        "rank": 20,
-        "percentile": 90.91
+        "rank": 16,
+        "percentile": 88.89
       },
       {
         "slug": "eguisheim",
@@ -4492,8 +3770,8 @@
         "type": "remote_settlement",
         "summary": "Eguisheim is a workable village-scale fallback with manageable density and access to surrounding land. What kills you here is perimeter dilution once pressure exceeds what a small settlement can police.",
         "overall": 5.0,
-        "rank": 21,
-        "percentile": 95.45
+        "rank": 17,
+        "percentile": 94.44
       },
       {
         "slug": "utqiagvik",
@@ -4502,7 +3780,7 @@
         "type": "remote_settlement",
         "summary": "Extreme remoteness sharply reduces contact risk, but Arctic dependence makes long survival brittle.",
         "overall": 5.0,
-        "rank": 22,
+        "rank": 18,
         "percentile": 100.0
       }
     ],
@@ -4515,7 +3793,7 @@
         "summary": "Purpose-built hardened infrastructure makes this one of the most defensible options on the board.",
         "overall": 9.0,
         "rank": 1,
-        "percentile": 5.0
+        "percentile": 5.26
       },
       {
         "slug": "matmata-underground-dwellings",
@@ -4525,7 +3803,7 @@
         "summary": "Matmata offers a strong concealment-defense package with naturally insulated subterranean housing and manageable access points. Its core trade-off is protected living space versus limited scale and external dependence for growth.",
         "overall": 7.2,
         "rank": 2,
-        "percentile": 10.0
+        "percentile": 10.53
       },
       {
         "slug": "burlington-bunker",
@@ -4535,7 +3813,7 @@
         "summary": "Burlington is exceptionally hard to breach in the opening phase; what kills you here is closed-system decay once consumables, maintenance, or governance slip.",
         "overall": 7.1,
         "rank": 3,
-        "percentile": 15.0
+        "percentile": 15.79
       },
       {
         "slug": "derinkuyu-underground-city",
@@ -4545,7 +3823,7 @@
         "summary": "Derinkuyu is an elite hide-and-hold refuge, but what kills you here is subterranean throughput collapse: ventilation, waste handling, and calorie flow fail before defenses do.",
         "overall": 7.1,
         "rank": 4,
-        "percentile": 20.0
+        "percentile": 21.05
       },
       {
         "slug": "kargil-war-bunkers",
@@ -4555,7 +3833,7 @@
         "summary": "Kargil War Bunkers are military-hardened high-altitude positions designed to resist assault. They work by combining strong fortification with terrain that channels approaches. You die when cold-weather fuel, medical, and resupply throughput collapses before defenses do.",
         "overall": 7.1,
         "rank": 5,
-        "percentile": 25.0
+        "percentile": 26.32
       },
       {
         "slug": "iwo-jima-underground-bunkers",
@@ -4565,7 +3843,7 @@
         "summary": "Iwo Jima\u2019s bunker network is exceptionally hard to assault and highly isolated, but it is austere and resource-poor. What kills you here is life-support collapse underground: water, ventilation, and medical limits outrun defensive advantages.",
         "overall": 7.0,
         "rank": 6,
-        "percentile": 30.0
+        "percentile": 31.58
       },
       {
         "slug": "titan-missile-museum-silo-571-7",
@@ -4575,7 +3853,7 @@
         "summary": "A tough underground shell with real protective value, but limited habitability without major adaptation.",
         "overall": 7.0,
         "rank": 7,
-        "percentile": 35.0
+        "percentile": 36.84
       },
       {
         "slug": "olavsvern-naval-base",
@@ -4585,7 +3863,7 @@
         "summary": "A hardened underground naval base with strong concealment and protected infrastructure. However, confined systems, external supply needs, and limited scalability restrict long-term survival.",
         "overall": 6.8,
         "rank": 8,
-        "percentile": 40.0
+        "percentile": 42.11
       },
       {
         "slug": "cu-chi-tunnels",
@@ -4595,7 +3873,7 @@
         "summary": "A purpose-built tunnel network with concealment, restricted access, and strong defensive history. It is highly effective for short-term evasion, but confinement, ventilation, and resource limits make permanent survival difficult.",
         "overall": 6.6,
         "rank": 9,
-        "percentile": 45.0
+        "percentile": 47.37
       },
       {
         "slug": "vietnam-tunnel-systems",
@@ -4605,7 +3883,7 @@
         "summary": "A broader tunnel-system concept with strong concealment and movement control across difficult terrain. It provides tactical advantage, but fragmented infrastructure and poor long-term livability keep it below true stronghold status.",
         "overall": 6.4,
         "rank": 10,
-        "percentile": 50.0
+        "percentile": 52.63
       },
       {
         "slug": "beijing-underground-city",
@@ -4615,7 +3893,7 @@
         "summary": "Beijing Underground City is hard to clear and hard to spot, but it is still a buried extension of a megacity. What kills you here is ventilation and water-system failure once surface utilities, filters, and spare parts stop flowing.",
         "overall": 6.0,
         "rank": 11,
-        "percentile": 55.0
+        "percentile": 57.89
       },
       {
         "slug": "maginot-line-bunkers",
@@ -4625,7 +3903,7 @@
         "summary": "The Maginot bunkers are elite for hard protection but poor at independent endurance. What kills you here is subsystem failure underground: air, water, power, and sanitation.",
         "overall": 6.0,
         "rank": 12,
-        "percentile": 60.0
+        "percentile": 63.16
       },
       {
         "slug": "camp-century-ice-tunnels",
@@ -4635,7 +3913,7 @@
         "summary": "Camp Century is exceptionally hard to reach and hard to assault, but it fails as a settlement because the environment itself destroys long-term habitability.",
         "overall": 5.8,
         "rank": 13,
-        "percentile": 65.0
+        "percentile": 68.42
       },
       {
         "slug": "waw-an-namus-cave-system",
@@ -4645,7 +3923,7 @@
         "summary": "Waw an Namus is one of the hardest places to reach, which dramatically lowers threat pressure. The same isolation becomes the fatal weakness because survival systems are almost entirely import-dependent.",
         "overall": 5.8,
         "rank": 14,
-        "percentile": 70.0
+        "percentile": 73.68
       },
       {
         "slug": "ajanta-caves",
@@ -4655,7 +3933,7 @@
         "summary": "Ajanta Caves are a hardened cave shelter system with strong choke-point defense. It works for short protected occupancy because rock-cut access geometry lowers breach risk. You die when confinement-driven sanitation and resource limits outrun defensive advantages.",
         "overall": 5.7,
         "rank": 15,
-        "percentile": 75.0
+        "percentile": 78.95
       },
       {
         "slug": "ligatne-bunker",
@@ -4665,7 +3943,7 @@
         "summary": "Ligatne's bunker geometry is excellent for sheltering, but what kills you here is air-power-water dependency: once life-support systems degrade, underground becomes a coffin.",
         "overall": 5.6,
         "rank": 16,
-        "percentile": 80.0
+        "percentile": 84.21
       },
       {
         "slug": "cheddar-gorge-caves",
@@ -4675,7 +3953,7 @@
         "summary": "Cheddar Gorge caves are a solid tactical hide with useful terrain friction; what kills you here is chronic livability failure, not direct assault.",
         "overall": 5.3,
         "rank": 17,
-        "percentile": 85.0
+        "percentile": 89.47
       },
       {
         "slug": "naours-underground-city",
@@ -4685,17 +3963,7 @@
         "summary": "Naours gives useful subterranean concealment and controlled entry, but it was never built as a full independent city. What kills you here is prolonged underground strain: air quality, hygiene, and supply depletion.",
         "overall": 5.0,
         "rank": 18,
-        "percentile": 90.0
-      },
-      {
-        "slug": "potosi-silver-mine-cerro-rico",
-        "name": "Potos\u00ed Silver Mine (Cerro Rico)",
-        "region": "south_america",
-        "type": "subterranean",
-        "summary": "Potos\u00ed mine has strong defensive geometry underground, but what kills you here is toxic air and chronic occupational health collapse.",
-        "overall": 5.0,
-        "rank": 19,
-        "percentile": 95.0
+        "percentile": 94.74
       },
       {
         "slug": "north-head-gun-emplacements",
@@ -4704,29 +3972,7 @@
         "type": "subterranean",
         "summary": "North Head works as a hard defensive shell, but urban proximity and tiny sustainment depth make it a poor long-term base.",
         "overall": 4.8,
-        "rank": 20,
-        "percentile": 100.0
-      }
-    ],
-    "transit_hub": [
-      {
-        "slug": "singapore-port",
-        "name": "Singapore Port",
-        "region": "southeast_asia",
-        "type": "transit_hub",
-        "summary": "A globally significant port with exceptional logistics, maritime access, and infrastructure. Those strengths become liabilities in collapse, as exposure, density, and strategic importance make it almost impossible to hold.",
-        "overall": 5.9,
-        "rank": 1,
-        "percentile": 50.0
-      },
-      {
-        "slug": "bangkok-airport",
-        "name": "Bangkok Airport",
-        "region": "southeast_asia",
-        "type": "transit_hub",
-        "summary": "A major transport hub with huge space, supplies, and infrastructure. It fails as a base because urban proximity, scale, and uncontrolled entry points make it impossible to secure.",
-        "overall": 5.8,
-        "rank": 2,
+        "rank": 19,
         "percentile": 100.0
       }
     ]
@@ -4742,7 +3988,7 @@
           "summary": "Seychelles is one of the strongest African macro-base options because exceptional island isolation combines with a livable climate and realistic long-term habitation potential. The main constraint is coordination and resupply across dispersed islands once external systems weaken.",
           "overall": 8.0,
           "rank": 1,
-          "percentile": 6.25
+          "percentile": 7.14
         },
         {
           "slug": "simien-mountains",
@@ -4752,7 +3998,7 @@
           "summary": "The Simien Mountains are a naturally defensible high-altitude stronghold, where sheer cliffs, limited access routes, and extreme isolation significantly reduce external threat pressure. However, that same isolation severely limits long-term survivability, with constrained food production, harsh living conditions, and difficult resupply. Over time, the balance shifts from protection to restriction, making it better suited to short-term refuge than permanent settlement.",
           "overall": 7.5,
           "rank": 2,
-          "percentile": 12.5
+          "percentile": 14.29
         },
         {
           "slug": "matmata-underground-dwellings",
@@ -4762,7 +4008,7 @@
           "summary": "Matmata offers a strong concealment-defense package with naturally insulated subterranean housing and manageable access points. Its core trade-off is protected living space versus limited scale and external dependence for growth.",
           "overall": 7.2,
           "rank": 3,
-          "percentile": 18.75
+          "percentile": 21.43
         }
       ],
       "east_asia": [
@@ -4774,7 +4020,7 @@
           "summary": "Jeju is a strong island refuge with usable farmland, water access, and natural maritime separation from mainland spillover. What kills you here is maritime choke failure: if ports and fuel fail, an island-scale population can out-consume local capacity.",
           "overall": 7.1,
           "rank": 1,
-          "percentile": 8.33
+          "percentile": 11.11
         },
         {
           "slug": "mount-huashan",
@@ -4784,7 +4030,7 @@
           "summary": "Mount Huashan is an elite defensive perch with severe access control and strong natural isolation. The decisive trade-off is near-unmatched protection versus chronic logistical fragility.",
           "overall": 7.1,
           "rank": 2,
-          "percentile": 16.67
+          "percentile": 22.22
         },
         {
           "slug": "great-wall-fortress-sections",
@@ -4794,7 +4040,7 @@
           "summary": "Great Wall fortress sections provide strong engineered defense lines and terrain leverage, but they are fragmented assets rather than turnkey settlements. The dominant trade-off is excellent barrier control versus poor self-sustaining living capacity.",
           "overall": 7.0,
           "rank": 3,
-          "percentile": 25.0
+          "percentile": 33.33
         }
       ],
       "eastern_europe": [
@@ -4806,7 +4052,7 @@
           "summary": "Faroe is one of Europe's strongest isolation plays, but what kills you here is maritime bottleneck failure when storms, fuel limits, and fleet wear cut food and medical imports.",
           "overall": 7.4,
           "rank": 1,
-          "percentile": 7.14
+          "percentile": 10.0
         },
         {
           "slug": "derinkuyu-underground-city",
@@ -4816,7 +4062,7 @@
           "summary": "Derinkuyu is an elite hide-and-hold refuge, but what kills you here is subterranean throughput collapse: ventilation, waste handling, and calorie flow fail before defenses do.",
           "overall": 7.1,
           "rank": 2,
-          "percentile": 14.29
+          "percentile": 20.0
         },
         {
           "slug": "gotland",
@@ -4826,7 +4072,7 @@
           "summary": "Gotland is a robust island option with workable infrastructure, but what kills you here is coastline overextension: too many access points for too few defenders over time.",
           "overall": 7.1,
           "rank": 3,
-          "percentile": 21.43
+          "percentile": 30.0
         }
       ],
       "middle_east": [
@@ -4838,7 +4084,7 @@
           "summary": "Socotra gives outstanding separation from collapse corridors, but what kills you here is maritime supply fracture: once sea links fail, medicine, tools, and replacement goods run out faster than local systems can adapt.",
           "overall": 7.4,
           "rank": 1,
-          "percentile": 9.09
+          "percentile": 11.11
         },
         {
           "slug": "krak-des-chevaliers",
@@ -4848,7 +4094,7 @@
           "summary": "Krak des Chevaliers is a premier fortress for holding ground, but what kills you here is siege economics: ammunition, medicine, and calories run out long before the walls meaningfully fail.",
           "overall": 7.3,
           "rank": 2,
-          "percentile": 18.18
+          "percentile": 22.22
         },
         {
           "slug": "cappadocia-highlands",
@@ -4858,7 +4104,7 @@
           "summary": "Cappadocia\u2019s broken terrain and concealment options make it a strong defensive refuge, but what kills you here is water-and-agriculture throughput: dispersed hideouts can outlast attacks, not prolonged scarcity.",
           "overall": 7.1,
           "rank": 3,
-          "percentile": 27.27
+          "percentile": 33.33
         }
       ],
       "north_america": [
@@ -4902,7 +4148,7 @@
           "summary": "Tasmania is one of the strongest balanced options: durable food-water-energy potential with enough separation to reduce pressure.",
           "overall": 8.1,
           "rank": 1,
-          "percentile": 8.33
+          "percentile": 9.09
         },
         {
           "slug": "fiji-islands",
@@ -4912,7 +4158,7 @@
           "summary": "Fiji balances isolation and livability better than most island options, but cyclone and maritime dependence cap reliability.",
           "overall": 7.3,
           "rank": 2,
-          "percentile": 16.67
+          "percentile": 18.18
         },
         {
           "slug": "coober-pedy-underground-settlement",
@@ -4922,7 +4168,7 @@
           "summary": "Coober Pedy is one of the few desert sites where underground habitation is already proven, but long-term success is limited by hard water and logistics ceilings.",
           "overall": 7.1,
           "rank": 3,
-          "percentile": 25.0
+          "percentile": 27.27
         }
       ],
       "polar_extreme": [
@@ -4934,7 +4180,7 @@
           "summary": "A vast Arctic island with extreme isolation, natural resources, and scattered settlements. However, harsh climate, huge scale, and infrastructure dependency make it difficult to control or sustain.",
           "overall": 6.8,
           "rank": 1,
-          "percentile": 10.0
+          "percentile": 12.5
         },
         {
           "slug": "olavsvern-naval-base",
@@ -4944,7 +4190,7 @@
           "summary": "A hardened underground naval base with strong concealment and protected infrastructure. However, confined systems, external supply needs, and limited scalability restrict long-term survival.",
           "overall": 6.8,
           "rank": 2,
-          "percentile": 20.0
+          "percentile": 25.0
         },
         {
           "slug": "nagurskoye-air-base",
@@ -4954,7 +4200,7 @@
           "summary": "A remote Arctic military airbase with controlled access and strong strategic positioning. However, extreme climate, visibility, and dependence on supply chains reduce independent survivability.",
           "overall": 6.7,
           "rank": 3,
-          "percentile": 30.0
+          "percentile": 37.5
         }
       ],
       "south_america": [
@@ -4966,7 +4212,7 @@
           "summary": "Chilo\u00e9 is a strong all-round island base with workable agriculture and defensible approaches, but what kills you here is prolonged maritime cutoff during a hard winter.",
           "overall": 8.0,
           "rank": 1,
-          "percentile": 8.33
+          "percentile": 11.11
         },
         {
           "slug": "cusco-highlands-village",
@@ -4976,7 +4222,7 @@
           "summary": "Cusco highlands villages combine terrain defense with proven local subsistence systems, but what kills you here is cold-altitude medical decline in unacclimated groups.",
           "overall": 8.0,
           "rank": 2,
-          "percentile": 16.67
+          "percentile": 22.22
         },
         {
           "slug": "machu-picchu",
@@ -4986,7 +4232,7 @@
           "summary": "Machu Picchu offers excellent terrain defense and controlled approach lines, but limited productive capacity prevents large, permanent survival communities.",
           "overall": 7.6,
           "rank": 3,
-          "percentile": 25.0
+          "percentile": 33.33
         }
       ],
       "south_asia": [
@@ -4998,7 +4244,7 @@
           "summary": "The Andamans are one of the strongest long-horizon options: maritime isolation and resource diversity create resilience if governance and inter-island logistics stay coherent.",
           "overall": 8.3,
           "rank": 1,
-          "percentile": 7.69
+          "percentile": 9.09
         },
         {
           "slug": "mehrangarh-fort",
@@ -5008,7 +4254,7 @@
           "summary": "Mehrangarh combines exceptional fortification geometry with workable internal scale, making it one of the stronger fortress options if surrounding pressure is actively managed.",
           "overall": 7.8,
           "rank": 2,
-          "percentile": 15.38
+          "percentile": 18.18
         },
         {
           "slug": "hilltop-fort-rajasthan",
@@ -5018,7 +4264,7 @@
           "summary": "A Rajasthan hill fort is a classic high-control stronghold with excellent wall geometry, but water and heat stress define whether it thrives or slowly fails.",
           "overall": 7.4,
           "rank": 3,
-          "percentile": 23.08
+          "percentile": 27.27
         }
       ],
       "southeast_asia": [
@@ -5030,7 +4276,7 @@
           "summary": "Palawan is a large island system that balances isolation, defensibility, and resource diversity. It works when distributed settlements and logistics are coordinated at island-wide scale. You die when governance fractures and shipping disruption desynchronizes regional supply.",
           "overall": 7.3,
           "rank": 1,
-          "percentile": 6.67
+          "percentile": 8.33
         },
         {
           "slug": "rice-terrace-highlands",
@@ -5040,7 +4286,7 @@
           "summary": "Rice Terrace Highlands are elevated agrarian settlements with built-in food potential. They work by combining controllable approach routes with reliable staple production systems. You die when irrigation, labor coordination, or slope access fails during stress cycles.",
           "overall": 7.2,
           "rank": 2,
-          "percentile": 13.33
+          "percentile": 16.67
         },
         {
           "slug": "banda-neira",
@@ -5050,7 +4296,7 @@
           "summary": "A small island settlement with strong maritime separation, historic fortifications, and access to coastal resources. It works best as a low-profile island refuge, but limited scale and supply dependence cap long-term resilience.",
           "overall": 6.8,
           "rank": 3,
-          "percentile": 20.0
+          "percentile": 25.0
         }
       ],
       "uk_ireland": [
@@ -5062,7 +4308,7 @@
           "summary": "Eigg is a rare island community with real off-grid credibility; what kills you here is a bad season that breaks food, fuel, and medical margins before security fails.",
           "overall": 8.1,
           "rank": 1,
-          "percentile": 6.67
+          "percentile": 7.69
         },
         {
           "slug": "burlington-bunker",
@@ -5072,7 +4318,7 @@
           "summary": "Burlington is exceptionally hard to breach in the opening phase; what kills you here is closed-system decay once consumables, maintenance, or governance slip.",
           "overall": 7.1,
           "rank": 2,
-          "percentile": 13.33
+          "percentile": 15.38
         },
         {
           "slug": "lindisfarne",
@@ -5082,7 +4328,7 @@
           "summary": "A tidal island with natural separation, limited access windows, and a defensible settlement pattern. It works well for a disciplined small group, but tide dependency and resource limits cap long-term resilience.",
           "overall": 6.9,
           "rank": 3,
-          "percentile": 20.0
+          "percentile": 23.08
         }
       ],
       "western_europe": [
@@ -5094,7 +4340,7 @@
           "summary": "Mont Saint-Michel is one of the hardest micro-sites to assault thanks to tidal separation; what kills you here is throughput limits in food, space, and medical response.",
           "overall": 8.2,
           "rank": 1,
-          "percentile": 7.69
+          "percentile": 8.33
         },
         {
           "slug": "heligoland",
@@ -5104,7 +4350,7 @@
           "summary": "Heligoland is one of the strongest isolation plays in Western Europe: remote, compact, and easier to monitor than mainland sites. What kills you here is maritime dependency when weather or fuel cuts the lifeline.",
           "overall": 8.0,
           "rank": 2,
-          "percentile": 15.38
+          "percentile": 16.67
         },
         {
           "slug": "carcassonne",
@@ -5114,7 +4360,7 @@
           "summary": "Carcassonne is a premier fortified shell with layered walls and command depth; what kills you here is sustainment fatigue behind intact defenses.",
           "overall": 7.4,
           "rank": 3,
-          "percentile": 23.08
+          "percentile": 25.0
         }
       ]
     },
@@ -5128,7 +4374,7 @@
           "summary": "Machu Picchu offers excellent terrain defense and controlled approach lines, but limited productive capacity prevents large, permanent survival communities.",
           "overall": 7.6,
           "rank": 1,
-          "percentile": 4.55
+          "percentile": 4.76
         },
         {
           "slug": "simien-mountains",
@@ -5138,7 +4384,7 @@
           "summary": "The Simien Mountains are a naturally defensible high-altitude stronghold, where sheer cliffs, limited access routes, and extreme isolation significantly reduce external threat pressure. However, that same isolation severely limits long-term survivability, with constrained food production, harsh living conditions, and difficult resupply. Over time, the balance shifts from protection to restriction, making it better suited to short-term refuge than permanent settlement.",
           "overall": 7.5,
           "rank": 2,
-          "percentile": 9.09
+          "percentile": 9.52
         },
         {
           "slug": "hilltop-fort-rajasthan",
@@ -5148,7 +4394,7 @@
           "summary": "A Rajasthan hill fort is a classic high-control stronghold with excellent wall geometry, but water and heat stress define whether it thrives or slowly fails.",
           "overall": 7.4,
           "rank": 3,
-          "percentile": 13.64
+          "percentile": 14.29
         }
       ],
       "fortified_structure": [
@@ -5192,7 +4438,7 @@
           "summary": "Exceptional scale and remoteness support long-run survival potential, but the footprint is too vast to secure conventionally.",
           "overall": 6.8,
           "rank": 1,
-          "percentile": 6.67
+          "percentile": 14.29
         },
         {
           "slug": "itaipu-dam",
@@ -5202,7 +4448,7 @@
           "summary": "Itaipu Dam has exceptional energy potential and water access, making it operationally powerful, but its scale and strategic value make defense extremely demanding.",
           "overall": 6.8,
           "rank": 2,
-          "percentile": 13.33
+          "percentile": 28.57
         },
         {
           "slug": "murmansk-icebreaker-port",
@@ -5212,7 +4458,7 @@
           "summary": "A polar maritime hub with specialist icebreaker infrastructure and Arctic access. However, port exposure, supply dependency, and harsh operating conditions limit long-term security.",
           "overall": 6.3,
           "rank": 3,
-          "percentile": 20.0
+          "percentile": 42.86
         }
       ],
       "institutional_compound": [
@@ -5224,7 +4470,7 @@
           "summary": "Hanle Observatory is an isolation-dominant survival option with low encounter pressure, but extreme altitude and remoteness impose severe physiological and logistics penalties.",
           "overall": 7.1,
           "rank": 1,
-          "percentile": 4.76
+          "percentile": 5.88
         },
         {
           "slug": "area-51",
@@ -5234,7 +4480,7 @@
           "summary": "Area 51 combines remoteness, controlled approaches, and hardened infrastructure, but its dominant failure mode is systems complexity debt: without specialized maintenance pipelines, high-tech capabilities decay into unusable overhead.",
           "overall": 6.9,
           "rank": 2,
-          "percentile": 9.52
+          "percentile": 11.76
         },
         {
           "slug": "raaf-base-tindal",
@@ -5244,7 +4490,7 @@
           "summary": "High-grade military infrastructure gives strong initial control, but strategic visibility and supply dependence limit endurance.",
           "overall": 6.9,
           "rank": 3,
-          "percentile": 14.29
+          "percentile": 17.65
         }
       ],
       "isolated_landmass": [
@@ -5281,46 +4527,34 @@
       ],
       "landmark_structure": [
         {
-          "slug": "lighthouse-hormuz",
-          "name": "Lighthouse Hormuz",
-          "region": "middle_east",
+          "slug": "fastnet-lighthouse",
+          "name": "Fastnet Lighthouse",
+          "region": "uk_ireland",
           "type": "landmark_structure",
-          "summary": "Hormuz lighthouse has useful separation and surveillance value, but what kills you here is capacity exhaustion: the site is too small and too harsh to sustain a community once short-term stores are depleted.",
-          "overall": 5.4,
+          "summary": "A remote offshore lighthouse with extreme separation and strong visibility. It is nearly useless as a survival base because space, shelter, food, water, and evacuation options are all critically limited.",
+          "overall": 5.1,
           "rank": 1,
-          "percentile": 12.5
-        },
-        {
-          "slug": "phu-quoc-lighthouse",
-          "name": "Phu Quoc Lighthouse",
-          "region": "southeast_asia",
-          "type": "landmark_structure",
-          "summary": "A coastal lighthouse with visibility, limited access, and some island separation. It offers short-term observation value, but exposure, lack of resources, and dependence on nearby settlement make it weak as a base.",
-          "overall": 5.2,
-          "rank": 2,
           "percentile": 25.0
         },
         {
-          "slug": "cape-point-lighthouse",
-          "name": "Cape Point Lighthouse",
+          "slug": "great-mosque-of-djenne",
+          "name": "Great Mosque of Djenn\u00e9",
           "region": "africa",
           "type": "landmark_structure",
-          "summary": "Cape Point Lighthouse has tactical lookout value and some geographic separation, but it lacks the carrying capacity and resource depth needed for sustained habitation. It works best as an observation and signaling outpost rather than a primary survival settlement.",
-          "overall": 5.1,
-          "rank": 3,
-          "percentile": 37.5
-        }
-      ],
-      "polar_extreme": [
+          "summary": "The Great Mosque of Djenn\u00e9 is visually imposing and culturally significant, but materially fragile for sustained defensive use. It may serve as a symbolic shelter point, yet structural vulnerability and limited isolation make it unsuitable as a serious long-term survival base.",
+          "overall": 4.9,
+          "rank": 2,
+          "percentile": 50.0
+        },
         {
-          "slug": "crevasse-field-glacier",
-          "name": "Crevasse Field Glacier",
-          "region": "polar_extreme",
-          "type": "polar_extreme",
-          "summary": "A fractured glacial terrain filled with deep crevasses, offering extreme isolation and natural barriers. However, unstable footing, concealed crevasse risk, and lack of resources make long-term survival nearly impossible.",
-          "overall": 5.7,
-          "rank": 1,
-          "percentile": 100.0
+          "slug": "kizhi-pogost",
+          "name": "Kizhi Pogost",
+          "region": "eastern_europe",
+          "type": "landmark_structure",
+          "summary": "Kizhi is remote and scenic, but what kills you here is infrastructure poverty: you run out of heat, medicine, and repair capacity before threats ever need to storm the site.",
+          "overall": 4.4,
+          "rank": 3,
+          "percentile": 75.0
         }
       ],
       "remote_settlement": [
@@ -5332,7 +4566,7 @@
           "summary": "Eigg is a rare island community with real off-grid credibility; what kills you here is a bad season that breaks food, fuel, and medical margins before security fails.",
           "overall": 8.1,
           "rank": 1,
-          "percentile": 4.55
+          "percentile": 5.56
         },
         {
           "slug": "cusco-highlands-village",
@@ -5342,7 +4576,7 @@
           "summary": "Cusco highlands villages combine terrain defense with proven local subsistence systems, but what kills you here is cold-altitude medical decline in unacclimated groups.",
           "overall": 8.0,
           "rank": 2,
-          "percentile": 9.09
+          "percentile": 11.11
         },
         {
           "slug": "coober-pedy-underground-settlement",
@@ -5352,7 +4586,7 @@
           "summary": "Coober Pedy is one of the few desert sites where underground habitation is already proven, but long-term success is limited by hard water and logistics ceilings.",
           "overall": 7.1,
           "rank": 3,
-          "percentile": 13.64
+          "percentile": 16.67
         }
       ],
       "subterranean": [
@@ -5364,7 +4598,7 @@
           "summary": "Purpose-built hardened infrastructure makes this one of the most defensible options on the board.",
           "overall": 9.0,
           "rank": 1,
-          "percentile": 5.0
+          "percentile": 5.26
         },
         {
           "slug": "matmata-underground-dwellings",
@@ -5374,7 +4608,7 @@
           "summary": "Matmata offers a strong concealment-defense package with naturally insulated subterranean housing and manageable access points. Its core trade-off is protected living space versus limited scale and external dependence for growth.",
           "overall": 7.2,
           "rank": 2,
-          "percentile": 10.0
+          "percentile": 10.53
         },
         {
           "slug": "burlington-bunker",
@@ -5384,29 +4618,7 @@
           "summary": "Burlington is exceptionally hard to breach in the opening phase; what kills you here is closed-system decay once consumables, maintenance, or governance slip.",
           "overall": 7.1,
           "rank": 3,
-          "percentile": 15.0
-        }
-      ],
-      "transit_hub": [
-        {
-          "slug": "singapore-port",
-          "name": "Singapore Port",
-          "region": "southeast_asia",
-          "type": "transit_hub",
-          "summary": "A globally significant port with exceptional logistics, maritime access, and infrastructure. Those strengths become liabilities in collapse, as exposure, density, and strategic importance make it almost impossible to hold.",
-          "overall": 5.9,
-          "rank": 1,
-          "percentile": 50.0
-        },
-        {
-          "slug": "bangkok-airport",
-          "name": "Bangkok Airport",
-          "region": "southeast_asia",
-          "type": "transit_hub",
-          "summary": "A major transport hub with huge space, supplies, and infrastructure. It fails as a base because urban proximity, scale, and uncontrolled entry points make it impossible to secure.",
-          "overall": 5.8,
-          "rank": 2,
-          "percentile": 100.0
+          "percentile": 15.79
         }
       ]
     }
