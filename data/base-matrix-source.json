@@ -14,7 +14,6 @@
         { "name": "Burlington Bunker", "slug": "burlington-bunker", "type": "subterranean" },
         { "name": "HM Prison Dartmoor", "slug": "hm-prison-dartmoor", "type": "institutional_compound" },
         { "name": "Porton Down", "slug": "porton-down", "type": "institutional_compound" },
-        { "name": "Port Talbot Steelworks", "slug": "port-talbot-steelworks", "type": "industrial_site" },
         { "name": "UK Distribution Warehouse", "slug": "uk-warehouse", "type": "industrial_site" },
         { "name": "Isle of Eigg Village", "slug": "isle-of-eigg-village", "type": "remote_settlement" },
         { "name": "Clovelly", "slug": "clovelly", "type": "remote_settlement" },
@@ -36,7 +35,6 @@
         { "name": "Maginot Line Bunkers", "slug": "maginot-line-bunkers", "type": "subterranean" },
         { "name": "NATO Airbase Geilenkirchen", "slug": "nato-airbase-geilenkirchen", "type": "institutional_compound" },
         { "name": "French Legion Base", "slug": "legion-base", "type": "institutional_compound" },
-        { "name": "Ruhr Industrial Complex", "slug": "ruhr-industrial-complex", "type": "industrial_site" },
         { "name": "Hallstatt", "slug": "hallstatt", "type": "remote_settlement" },
         { "name": "Eguisheim", "slug": "eguisheim", "type": "remote_settlement" },
         { "name": "Phare du Créac'h", "slug": "phare-du-creach", "type": "landmark_structure" }
@@ -55,9 +53,7 @@
         { "name": "Sigiriya-style cliffs (analogue)", "slug": "sigiriya-analogue", "type": "elevated_stronghold" },
         { "name": "Derinkuyu Underground City", "slug": "derinkuyu-underground-city", "type": "subterranean" },
         { "name": "Cold War Bunkers Baltic", "slug": "baltic-bunker", "type": "subterranean" },
-        { "name": "Chernobyl Exclusion Zone Facility", "slug": "chernobyl-exclusion-zone-facility", "type": "institutional_compound" },
         { "name": "Russian Arctic Base", "slug": "arctic-base", "type": "institutional_compound" },
-        { "name": "Norilsk Industrial Complex", "slug": "norilsk", "type": "industrial_site" },
         { "name": "Baltic Shipyards", "slug": "shipyard", "type": "industrial_site" },
         { "name": "Longyearbyen", "slug": "longyearbyen", "type": "remote_settlement" },
         { "name": "Visby", "slug": "visby", "type": "remote_settlement" },
@@ -103,7 +99,6 @@
         { "name": "Military Jungle Base", "slug": "jungle-base", "type": "institutional_compound" },
         { "name": "Soy Processing Plant", "slug": "soy-plant", "type": "industrial_site" },
         { "name": "Hydroelectric Dam Complex", "slug": "hydro-dam", "type": "industrial_site" },
-        { "name": "Patagonian Village", "slug": "patagonian-village", "type": "remote_settlement" },
         { "name": "Andean Hamlet", "slug": "andean-hamlet", "type": "remote_settlement" }
       ]
     },
@@ -126,7 +121,6 @@
         { "name": "Oil Terminal Nigeria", "slug": "oil-terminal", "type": "industrial_site" },
         { "name": "Atlas Mountain Village", "slug": "atlas-village", "type": "remote_settlement" },
         { "name": "Namib Desert Settlement", "slug": "namib-settlement", "type": "remote_settlement" },
-        { "name": "Cape Point Lighthouse", "slug": "cape-point-lighthouse", "type": "landmark_structure" },
         { "name": "Great Mosque of Djenné", "slug": "great-mosque-of-djenne", "type": "landmark_structure" }
       ]
     },
@@ -146,8 +140,7 @@
         { "name": "Refinery Complex Gulf", "slug": "gulf-refinery", "type": "industrial_site" },
         { "name": "Water Desalination Plant", "slug": "desalination", "type": "industrial_site" },
         { "name": "Bedouin Settlement", "slug": "bedouin", "type": "remote_settlement" },
-        { "name": "Oasis Town", "slug": "oasis-town", "type": "remote_settlement" },
-        { "name": "Lighthouse Hormuz", "slug": "lighthouse-hormuz", "type": "landmark_structure" }
+        { "name": "Oasis Town", "slug": "oasis-town", "type": "remote_settlement" }
       ]
     },
 
@@ -209,10 +202,7 @@
         { "name": "Palm Oil Plantation Complex", "slug": "palm-oil", "type": "industrial_site" },
         { "name": "Fishing Port Hub", "slug": "fishing-port", "type": "industrial_site" },
         { "name": "Island Village Indonesia", "slug": "island-village", "type": "remote_settlement" },
-        { "name": "Jungle Hamlet", "slug": "jungle-hamlet", "type": "remote_settlement" },
-        { "name": "Bangkok Airport", "slug": "bangkok-airport", "type": "transit_hub" },
-        { "name": "Singapore Port", "slug": "singapore-port", "type": "transit_hub" },
-        { "name": "Phu Quoc Lighthouse", "slug": "phu-quoc-lighthouse", "type": "landmark_structure" }
+        { "name": "Jungle Hamlet", "slug": "jungle-hamlet", "type": "remote_settlement" }
       ]
     },
 
@@ -244,7 +234,6 @@
         { "name": "McMurdo Station", "slug": "mcmurdo-station", "type": "fortified_structure" },
         { "name": "Greenland", "slug": "greenland", "type": "isolated_landmass" },
         { "name": "Antarctic Peninsula", "slug": "antarctic-peninsula", "type": "isolated_landmass" },
-        { "name": "Crevasse Field Glacier", "slug": "crevasse-field-glacier", "type": "polar_extreme" },
         { "name": "Ice Tunnel Systems", "slug": "ice-tunnels", "type": "subterranean" },
         { "name": "Arctic Bunker", "slug": "arctic-bunker", "type": "subterranean" },
         { "name": "Research Base Antarctica", "slug": "antarctica-base", "type": "institutional_compound" },
@@ -254,8 +243,7 @@
         { "name": "Remote Arctic Village", "slug": "arctic-village", "type": "remote_settlement" },
         { "name": "Antarctic Camp", "slug": "antarctic-camp", "type": "remote_settlement" },
         { "name": "Ice Runway", "slug": "ice-runway", "type": "transit_hub" },
-        { "name": "Supply Port Arctic", "slug": "arctic-port", "type": "transit_hub" },
-        { "name": "Antarctic Lighthouse", "slug": "antarctic-lighthouse", "type": "landmark_structure" }
+        { "name": "Supply Port Arctic", "slug": "arctic-port", "type": "transit_hub" }
       ]
     }
   ]
