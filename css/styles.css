@@ -1737,9 +1737,8 @@ main > * {
 }
 
 
-/* Versus MVP: base-to-base comparison route and lightweight compare entry points. */
-.compare-button,
-.base-card-compare-link {
+/* Versus MVP: base-to-base comparison route and detail-page compare entry point. */
+.compare-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1758,16 +1757,10 @@ main > * {
 }
 
 .compare-button:hover,
-.compare-button:focus-visible,
-.base-card-compare-link:hover,
-.base-card-compare-link:focus-visible {
+.compare-button:focus-visible {
   border-color: var(--accent);
   color: var(--accent);
   text-decoration: none;
-}
-
-.base-card-compare-link {
-  margin: var(--space-2) 0 0 128px;
 }
 
 @media (min-width: 768px) {
@@ -1992,10 +1985,6 @@ main > * {
 }
 
 @media (max-width: 640px) {
-  .base-card-compare-link {
-    margin-left: 0;
-  }
-
   .versus-base-card {
     grid-template-columns: 1fr;
   }
