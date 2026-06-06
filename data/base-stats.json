@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-03T18:55:39.212528+00:00",
-  "totalBases": 210,
+  "generatedAt": "2026-06-06T18:17:55.531665+00:00",
+  "totalBases": 174,
   "scoreCategories": [
     "overall",
     "defensibility",
@@ -8,12 +8,12 @@
     "sustainability"
   ],
   "global": {
-    "count": 210,
+    "count": 174,
     "averages": {
-      "overall": 5.59,
-      "defensibility": 5.94,
-      "isolation": 5.54,
-      "sustainability": 4.47
+      "overall": 6.22,
+      "defensibility": 6.7,
+      "isolation": 6.21,
+      "sustainability": 4.87
     },
     "highest": {
       "slug": "cheyenne-mountain-complex",
@@ -21,9 +21,9 @@
       "overall": 9.0
     },
     "lowest": {
-      "slug": "lax-airport",
-      "name": "LAX Airport",
-      "overall": 1.0
+      "slug": "uluru-surroundings",
+      "name": "Uluru Surroundings",
+      "overall": 4.0
     }
   },
   "byRegion": {
@@ -47,12 +47,12 @@
       }
     },
     "east_asia": {
-      "count": 18,
+      "count": 15,
       "averages": {
-        "overall": 5.49,
-        "defensibility": 6.01,
-        "isolation": 4.53,
-        "sustainability": 4.4
+        "overall": 6.03,
+        "defensibility": 6.77,
+        "isolation": 5.1,
+        "sustainability": 4.77
       },
       "highest": {
         "slug": "mount-huashan",
@@ -60,18 +60,18 @@
         "overall": 7.1
       },
       "lowest": {
-        "slug": "tokyo-tower",
-        "name": "Tokyo Tower",
-        "overall": 1.7
+        "slug": "tokyo-airport",
+        "name": "Tokyo Airport",
+        "overall": 4.1
       }
     },
     "eastern_europe": {
-      "count": 17,
+      "count": 15,
       "averages": {
-        "overall": 5.75,
-        "defensibility": 5.72,
-        "isolation": 6.06,
-        "sustainability": 3.67
+        "overall": 6.15,
+        "defensibility": 6.22,
+        "isolation": 6.67,
+        "sustainability": 3.96
       },
       "highest": {
         "slug": "faroe-islands",
@@ -79,18 +79,18 @@
         "overall": 7.4
       },
       "lowest": {
-        "slug": "ostankino-tower",
-        "name": "Ostankino Tower",
-        "overall": 2.4
+        "slug": "kizhi-pogost",
+        "name": "Kizhi Pogost",
+        "overall": 4.4
       }
     },
     "middle_east": {
-      "count": 17,
+      "count": 12,
       "averages": {
-        "overall": 5.45,
-        "defensibility": 5.72,
-        "isolation": 5.15,
-        "sustainability": 4.18
+        "overall": 6.42,
+        "defensibility": 6.83,
+        "isolation": 6.21,
+        "sustainability": 4.73
       },
       "highest": {
         "slug": "socotra-island",
@@ -98,18 +98,18 @@
         "overall": 7.4
       },
       "lowest": {
-        "slug": "burj-khalifa",
-        "name": "Burj Khalifa",
-        "overall": 2.2
+        "slug": "gaza-tunnel-network",
+        "name": "Gaza Tunnel Network",
+        "overall": 4.8
       }
     },
     "north_america": {
-      "count": 18,
+      "count": 13,
       "averages": {
-        "overall": 5.54,
-        "defensibility": 6.1,
-        "isolation": 5.64,
-        "sustainability": 4.42
+        "overall": 6.7,
+        "defensibility": 7.55,
+        "isolation": 6.98,
+        "sustainability": 5.09
       },
       "highest": {
         "slug": "cheyenne-mountain-complex",
@@ -117,18 +117,18 @@
         "overall": 9.0
       },
       "lowest": {
-        "slug": "lax-airport",
-        "name": "LAX Airport",
-        "overall": 1.0
+        "slug": "utqiagvik",
+        "name": "Utqiagvik",
+        "overall": 5.0
       }
     },
     "oceania": {
-      "count": 17,
+      "count": 12,
       "averages": {
-        "overall": 5.14,
-        "defensibility": 5.58,
-        "isolation": 5.62,
-        "sustainability": 4.01
+        "overall": 6.23,
+        "defensibility": 6.77,
+        "isolation": 6.88,
+        "sustainability": 4.88
       },
       "highest": {
         "slug": "tasmania",
@@ -136,18 +136,18 @@
         "overall": 8.1
       },
       "lowest": {
-        "slug": "sydney-airport",
-        "name": "Sydney Airport",
-        "overall": 1.5
+        "slug": "uluru-surroundings",
+        "name": "Uluru Surroundings",
+        "overall": 4.0
       }
     },
     "polar_extreme": {
-      "count": 15,
+      "count": 13,
       "averages": {
-        "overall": 5.45,
-        "defensibility": 6.0,
-        "isolation": 8.19,
-        "sustainability": 3.16
+        "overall": 5.8,
+        "defensibility": 6.28,
+        "isolation": 8.08,
+        "sustainability": 3.41
       },
       "highest": {
         "slug": "greenland",
@@ -155,18 +155,18 @@
         "overall": 6.8
       },
       "lowest": {
-        "slug": "glacier-plateau",
-        "name": "Glacier Plateau",
-        "overall": 2.9
+        "slug": "prudhoe-bay-oil-field",
+        "name": "Prudhoe Bay Oil Field",
+        "overall": 4.1
       }
     },
     "south_america": {
-      "count": 18,
+      "count": 13,
       "averages": {
-        "overall": 5.22,
-        "defensibility": 5.12,
-        "isolation": 5.23,
-        "sustainability": 5.04
+        "overall": 6.25,
+        "defensibility": 6.35,
+        "isolation": 6.47,
+        "sustainability": 5.6
       },
       "highest": {
         "slug": "chiloe-island",
@@ -174,18 +174,18 @@
         "overall": 8.0
       },
       "lowest": {
-        "slug": "christ-the-redeemer",
-        "name": "Christ the Redeemer",
-        "overall": 1.0
+        "slug": "cueva-de-las-manos",
+        "name": "Cueva de las Manos",
+        "overall": 4.0
       }
     },
     "south_asia": {
-      "count": 18,
+      "count": 14,
       "averages": {
-        "overall": 5.64,
-        "defensibility": 5.77,
-        "isolation": 5.26,
-        "sustainability": 5.04
+        "overall": 6.61,
+        "defensibility": 6.84,
+        "isolation": 6.34,
+        "sustainability": 5.55
       },
       "highest": {
         "slug": "andaman-islands",
@@ -193,18 +193,18 @@
         "overall": 8.3
       },
       "lowest": {
-        "slug": "qutub-minar",
-        "name": "Qutub Minar",
-        "overall": 1.3
+        "slug": "tiruppur-textile-cluster",
+        "name": "Tiruppur Textile Cluster",
+        "overall": 4.7
       }
     },
     "southeast_asia": {
-      "count": 18,
+      "count": 17,
       "averages": {
-        "overall": 5.84,
-        "defensibility": 6.08,
-        "isolation": 5.36,
-        "sustainability": 5.56
+        "overall": 6.11,
+        "defensibility": 6.32,
+        "isolation": 5.62,
+        "sustainability": 5.82
       },
       "highest": {
         "slug": "palawan",
@@ -212,18 +212,18 @@
         "overall": 7.3
       },
       "lowest": {
-        "slug": "petronas-towers",
-        "name": "Petronas Towers",
-        "overall": 1.3
+        "slug": "general-santos-fish-port",
+        "name": "General Santos Fish Port",
+        "overall": 4.0
       }
     },
     "uk_ireland": {
-      "count": 18,
+      "count": 17,
       "averages": {
-        "overall": 5.89,
-        "defensibility": 6.51,
-        "isolation": 5.43,
-        "sustainability": 4.55
+        "overall": 6.12,
+        "defensibility": 6.83,
+        "isolation": 5.71,
+        "sustainability": 4.72
       },
       "highest": {
         "slug": "isle-of-eigg-village",
@@ -231,18 +231,18 @@
         "overall": 8.1
       },
       "lowest": {
-        "slug": "heathrow-airport",
-        "name": "Heathrow Airport",
-        "overall": 2.0
+        "slug": "portsmouth-harbour",
+        "name": "Portsmouth Harbour",
+        "overall": 4.1
       }
     },
     "western_europe": {
-      "count": 18,
+      "count": 15,
       "averages": {
-        "overall": 5.44,
-        "defensibility": 5.74,
-        "isolation": 4.94,
-        "sustainability": 4.64
+        "overall": 6.2,
+        "defensibility": 6.69,
+        "isolation": 5.73,
+        "sustainability": 5.11
       },
       "highest": {
         "slug": "mont-saint-michel",
@@ -250,20 +250,20 @@
         "overall": 8.2
       },
       "lowest": {
-        "slug": "eiffel-tower",
-        "name": "Eiffel Tower",
-        "overall": 1.0
+        "slug": "phare-du-creach",
+        "name": "Phare du Cr\u00e9ac'h",
+        "overall": 4.0
       }
     }
   },
   "byType": {
     "elevated_stronghold": {
-      "count": 23,
+      "count": 22,
       "averages": {
-        "overall": 6.41,
-        "defensibility": 7.75,
-        "isolation": 6.78,
-        "sustainability": 4.53
+        "overall": 6.57,
+        "defensibility": 7.84,
+        "isolation": 6.67,
+        "sustainability": 4.68
       },
       "highest": {
         "slug": "machu-picchu",
@@ -271,9 +271,9 @@
         "overall": 7.6
       },
       "lowest": {
-        "slug": "glacier-plateau",
-        "name": "Glacier Plateau",
-        "overall": 2.9
+        "slug": "uluru-surroundings",
+        "name": "Uluru Surroundings",
+        "overall": 4.0
       }
     },
     "fortified_structure": {
@@ -296,12 +296,12 @@
       }
     },
     "industrial_site": {
-      "count": 24,
+      "count": 20,
       "averages": {
-        "overall": 5.21,
-        "defensibility": 4.62,
-        "isolation": 3.99,
-        "sustainability": 5.32
+        "overall": 5.49,
+        "defensibility": 4.84,
+        "isolation": 4.1,
+        "sustainability": 5.66
       },
       "highest": {
         "slug": "anna-creek-station",
@@ -309,18 +309,18 @@
         "overall": 6.8
       },
       "lowest": {
-        "slug": "port-arthur-refinery",
-        "name": "Port Arthur Refinery",
-        "overall": 3.7
+        "slug": "general-santos-fish-port",
+        "name": "General Santos Fish Port",
+        "overall": 4.0
       }
     },
     "institutional_compound": {
-      "count": 24,
+      "count": 23,
       "averages": {
-        "overall": 6.11,
-        "defensibility": 6.82,
-        "isolation": 6.0,
-        "sustainability": 4.61
+        "overall": 6.2,
+        "defensibility": 6.94,
+        "isolation": 6.04,
+        "sustainability": 4.68
       },
       "highest": {
         "slug": "hanle-observatory",
@@ -328,9 +328,9 @@
         "overall": 7.1
       },
       "lowest": {
-        "slug": "ghawar-oil-field-central-processing",
-        "name": "Ghawar Oil Field Central Processing",
-        "overall": 3.9
+        "slug": "wuhan-institute-of-virology",
+        "name": "Wuhan Institute of Virology",
+        "overall": 4.6
       }
     },
     "isolated_landmass": {
@@ -353,12 +353,12 @@
       }
     },
     "landmark_structure": {
-      "count": 24,
+      "count": 10,
       "averages": {
-        "overall": 3.18,
-        "defensibility": 3.29,
-        "isolation": 3.77,
-        "sustainability": 1.97
+        "overall": 4.83,
+        "defensibility": 4.86,
+        "isolation": 6.36,
+        "sustainability": 2.66
       },
       "highest": {
         "slug": "lighthouse-hormuz",
@@ -366,9 +366,9 @@
         "overall": 5.4
       },
       "lowest": {
-        "slug": "christ-the-redeemer",
-        "name": "Christ the Redeemer",
-        "overall": 1.0
+        "slug": "phare-du-creach",
+        "name": "Phare du Cr\u00e9ac'h",
+        "overall": 4.0
       }
     },
     "polar_extreme": {
@@ -429,12 +429,12 @@
       }
     },
     "transit_hub": {
-      "count": 24,
+      "count": 8,
       "averages": {
-        "overall": 3.27,
-        "defensibility": 2.56,
-        "isolation": 2.12,
-        "sustainability": 3.85
+        "overall": 4.71,
+        "defensibility": 4.06,
+        "isolation": 2.79,
+        "sustainability": 5.05
       },
       "highest": {
         "slug": "singapore-port",
@@ -442,9 +442,9 @@
         "overall": 5.9
       },
       "lowest": {
-        "slug": "lax-airport",
-        "name": "LAX Airport",
-        "overall": 1.0
+        "slug": "tokyo-airport",
+        "name": "Tokyo Airport",
+        "overall": 4.1
       }
     }
   }
