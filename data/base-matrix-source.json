@@ -18,7 +18,6 @@
         { "name": "UK Distribution Warehouse", "slug": "uk-warehouse", "type": "industrial_site" },
         { "name": "Isle of Eigg Village", "slug": "isle-of-eigg-village", "type": "remote_settlement" },
         { "name": "Clovelly", "slug": "clovelly", "type": "remote_settlement" },
-        { "name": "Heathrow Airport", "slug": "heathrow-airport", "type": "transit_hub" },
         { "name": "Portsmouth Harbour", "slug": "portsmouth-harbour", "type": "transit_hub" },
         { "name": "Fastnet Lighthouse", "slug": "fastnet-lighthouse", "type": "landmark_structure" },
         { "name": "Spinnaker Tower", "slug": "spinnaker-tower", "type": "landmark_structure" }
@@ -43,10 +42,7 @@
         { "name": "Ruhr Industrial Complex", "slug": "ruhr-industrial-complex", "type": "industrial_site" },
         { "name": "Hallstatt", "slug": "hallstatt", "type": "remote_settlement" },
         { "name": "Eguisheim", "slug": "eguisheim", "type": "remote_settlement" },
-        { "name": "Charles de Gaulle Airport", "slug": "charles-de-gaulle-airport", "type": "transit_hub" },
-        { "name": "Schiphol Airport", "slug": "schiphol-airport", "type": "transit_hub" },
-        { "name": "Phare du Créac'h", "slug": "phare-du-creach", "type": "landmark_structure" },
-        { "name": "Eiffel Tower", "slug": "eiffel-tower", "type": "landmark_structure" }
+        { "name": "Phare du Créac'h", "slug": "phare-du-creach", "type": "landmark_structure" }
       ]
     },
 
@@ -68,10 +64,8 @@
         { "name": "Baltic Shipyards", "slug": "shipyard", "type": "industrial_site" },
         { "name": "Longyearbyen", "slug": "longyearbyen", "type": "remote_settlement" },
         { "name": "Visby", "slug": "visby", "type": "remote_settlement" },
-        { "name": "Helsinki Airport", "slug": "helsinki-airport", "type": "transit_hub" },
         { "name": "Murmansk Port", "slug": "port-of-murmansk", "type": "transit_hub" },
-        { "name": "Kizhi Pogost", "slug": "kizhi-pogost", "type": "landmark_structure" },
-        { "name": "Ostankino Tower", "slug": "ostankino-tower", "type": "landmark_structure" }
+        { "name": "Kizhi Pogost", "slug": "kizhi-pogost", "type": "landmark_structure" }
       ]
     },
 
@@ -93,10 +87,7 @@
         { "name": "Texas Oil Refinery", "slug": "oil-refinery", "type": "industrial_site" },
         { "name": "Utqiagvik", "slug": "utqiagvik", "type": "remote_settlement" },
         { "name": "Telluride", "slug": "telluride", "type": "remote_settlement" },
-        { "name": "LAX Airport", "slug": "lax-airport", "type": "transit_hub" },
-        { "name": "Chicago Rail Yard", "slug": "rail-yard", "type": "transit_hub" },
-        { "name": "Cape Hatteras Lighthouse", "slug": "cape-hatteras-lighthouse", "type": "landmark_structure" },
-        { "name": "CN Tower", "slug": "cn-tower", "type": "landmark_structure" }
+        { "name": "Chicago Rail Yard", "slug": "rail-yard", "type": "transit_hub" }
       ]
     },
 
@@ -117,11 +108,7 @@
         { "name": "Soy Processing Plant", "slug": "soy-plant", "type": "industrial_site" },
         { "name": "Hydroelectric Dam Complex", "slug": "hydro-dam", "type": "industrial_site" },
         { "name": "Patagonian Village", "slug": "patagonian-village", "type": "remote_settlement" },
-        { "name": "Andean Hamlet", "slug": "andean-hamlet", "type": "remote_settlement" },
-        { "name": "São Paulo Airport", "slug": "sao-paulo-airport", "type": "transit_hub" },
-        { "name": "Panama Canal Zone", "slug": "panama-canal-zone", "type": "transit_hub" },
-        { "name": "Christ the Redeemer", "slug": "christ-the-redeemer", "type": "landmark_structure" },
-        { "name": "Lighthouse Punta Del Este", "slug": "lighthouse-punta-del-este", "type": "landmark_structure" }
+        { "name": "Andean Hamlet", "slug": "andean-hamlet", "type": "remote_settlement" }
       ]
     },
 
@@ -167,9 +154,6 @@
         { "name": "Water Desalination Plant", "slug": "desalination", "type": "industrial_site" },
         { "name": "Bedouin Settlement", "slug": "bedouin", "type": "remote_settlement" },
         { "name": "Oasis Town", "slug": "oasis-town", "type": "remote_settlement" },
-        { "name": "Dubai Airport", "slug": "dubai-airport", "type": "transit_hub" },
-        { "name": "Jebel Ali Port", "slug": "jebel-ali-port", "type": "transit_hub" },
-        { "name": "Burj Khalifa", "slug": "burj-khalifa", "type": "landmark_structure" },
         { "name": "Lighthouse Hormuz", "slug": "lighthouse-hormuz", "type": "landmark_structure" }
       ]
     },
@@ -191,11 +175,7 @@
         { "name": "Rice Processing Facility", "slug": "rice-facility", "type": "industrial_site" },
         { "name": "Textile Industrial Complex", "slug": "textile-complex", "type": "industrial_site" },
         { "name": "Himalayan Village", "slug": "himalayan-village", "type": "remote_settlement" },
-        { "name": "Rural Kerala Settlement", "slug": "kerala-village", "type": "remote_settlement" },
-        { "name": "Delhi Airport", "slug": "delhi-airport", "type": "transit_hub" },
-        { "name": "Mumbai Port", "slug": "mumbai-port", "type": "transit_hub" },
-        { "name": "Qutub Minar", "slug": "qutub-minar", "type": "landmark_structure" },
-        { "name": "Lighthouse Mahabalipuram", "slug": "lighthouse-mahabalipuram", "type": "landmark_structure" }
+        { "name": "Rural Kerala Settlement", "slug": "kerala-village", "type": "remote_settlement" }
       ]
     },
 
@@ -217,10 +197,7 @@
         { "name": "Shipbuilding Yard Korea", "slug": "shipyard-korea", "type": "industrial_site" },
         { "name": "Rural Japanese Village", "slug": "japan-village", "type": "remote_settlement" },
         { "name": "Mountain Hamlet China", "slug": "china-hamlet", "type": "remote_settlement" },
-        { "name": "Tokyo Airport", "slug": "tokyo-airport", "type": "transit_hub" },
-        { "name": "Shanghai Port", "slug": "shanghai-port", "type": "transit_hub" },
-        { "name": "Tokyo Tower", "slug": "tokyo-tower", "type": "landmark_structure" },
-        { "name": "Great Buddha Leshan", "slug": "great-buddha-leshan", "type": "landmark_structure" }
+        { "name": "Tokyo Airport", "slug": "tokyo-airport", "type": "transit_hub" }
       ]
     },
 
@@ -244,7 +221,6 @@
         { "name": "Jungle Hamlet", "slug": "jungle-hamlet", "type": "remote_settlement" },
         { "name": "Bangkok Airport", "slug": "bangkok-airport", "type": "transit_hub" },
         { "name": "Singapore Port", "slug": "singapore-port", "type": "transit_hub" },
-        { "name": "Petronas Towers", "slug": "petronas-towers", "type": "landmark_structure" },
         { "name": "Phu Quoc Lighthouse", "slug": "phu-quoc-lighthouse", "type": "landmark_structure" }
       ]
     },
@@ -266,11 +242,7 @@
         { "name": "Mining Operation Site", "slug": "mining-site", "type": "industrial_site" },
         { "name": "Sheep Station Complex", "slug": "sheep-station", "type": "industrial_site" },
         { "name": "Outback Settlement", "slug": "outback-town", "type": "remote_settlement" },
-        { "name": "Island Village Pacific", "slug": "pacific-village", "type": "remote_settlement" },
-        { "name": "Sydney Airport", "slug": "sydney-airport", "type": "transit_hub" },
-        { "name": "Auckland Port", "slug": "auckland-port", "type": "transit_hub" },
-        { "name": "Sydney Harbour Bridge", "slug": "sydney-harbour-bridge", "type": "landmark_structure" },
-        { "name": "Cape Byron Lighthouse", "slug": "cape-byron-lighthouse", "type": "landmark_structure" }
+        { "name": "Island Village Pacific", "slug": "pacific-village", "type": "remote_settlement" }
       ]
     },
 
@@ -282,7 +254,6 @@
         { "name": "Greenland", "slug": "greenland", "type": "isolated_landmass" },
         { "name": "Antarctic Peninsula", "slug": "antarctic-peninsula", "type": "isolated_landmass" },
         { "name": "Crevasse Field Glacier", "slug": "crevasse-field-glacier", "type": "polar_extreme" },
-        { "name": "Glacier Plateau", "slug": "glacier-plateau", "type": "elevated_stronghold" },
         { "name": "Ice Tunnel Systems", "slug": "ice-tunnels", "type": "subterranean" },
         { "name": "Arctic Bunker", "slug": "arctic-bunker", "type": "subterranean" },
         { "name": "Research Base Antarctica", "slug": "antarctica-base", "type": "institutional_compound" },

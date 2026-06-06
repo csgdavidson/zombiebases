@@ -317,7 +317,7 @@
       "keyRisk": "Entrapment risk: once exits, water, or supply flow are compromised, defenders are pinned in a degrading pit complex."
     },
     "realityCheck": "Assumes safe zones can be established inside a partially degraded industrial landscape. Long-term habitation requires major remediation and external inputs.",
-    "scoreNarrative": "Kimberley now scores high in defensibility because the pit and surrounding works can channel and slow attacks. Isolation is moderate, but sustainability is decisively weak: water, food, and safe long-term habitability are poor. The dominant failure mode is entrapment—if lifelines fail, the same terrain that protects you can trap you.",
+    "scoreNarrative": "Kimberley now scores high in defensibility because the pit and surrounding works can channel and slow attacks. Isolation is moderate, but sustainability is decisively weak: water, food, and safe long-term habitability are poor. The dominant failure mode is entrapment\u2014if lifelines fail, the same terrain that protects you can trap you.",
     "image": "/images/bases/kimberley-big-hole-mining-complex.png"
   },
   {
@@ -690,7 +690,7 @@
     "image": "/images/bases/cape-point-lighthouse.png"
   },
   {
-    "name": "Great Mosque of Djenné",
+    "name": "Great Mosque of Djenn\u00e9",
     "slug": "great-mosque-of-djenne",
     "type": "landmark_structure",
     "region": "africa",
@@ -708,23 +708,23 @@
     "comparisonScores": {
       "exposure": {
         "score": 2,
-        "rationale": "The Great Mosque of Djenné exposure score is held down because low sustainability with limited capacity for autonomous food, water, and medical continuity."
+        "rationale": "The Great Mosque of Djenn\u00e9 exposure score is held down because low sustainability with limited capacity for autonomous food, water, and medical continuity."
       },
       "maintenanceBurden": {
         "score": 3,
-        "rationale": "The Great Mosque of Djenné landmark structure profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
+        "rationale": "The Great Mosque of Djenn\u00e9 landmark structure profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
       },
       "populationCapacity": {
         "score": 3,
-        "rationale": "The Great Mosque of Djenné population score is constrained because low sustainability with limited capacity for autonomous food, water, and medical continuity."
+        "rationale": "The Great Mosque of Djenn\u00e9 population score is constrained because low sustainability with limited capacity for autonomous food, water, and medical continuity."
       },
       "resourceSecurity": {
         "score": 4,
-        "rationale": "The Great Mosque of Djenné sustainability profile suggests adequate but not surplus resource security for long-term use."
+        "rationale": "The Great Mosque of Djenn\u00e9 sustainability profile suggests adequate but not surplus resource security for long-term use."
       }
     },
     "description": {
-      "summary": "The Great Mosque of Djenné is visually imposing and culturally significant, but materially fragile for sustained defensive use. It may serve as a symbolic shelter point, yet structural vulnerability and limited isolation make it unsuitable as a serious long-term survival base.",
+      "summary": "The Great Mosque of Djenn\u00e9 is visually imposing and culturally significant, but materially fragile for sustained defensive use. It may serve as a symbolic shelter point, yet structural vulnerability and limited isolation make it unsuitable as a serious long-term survival base.",
       "strengths": [
         "Slightly stronger defensibility than surrounding open urban fabric due to consolidated structure",
         "Moderate isolation from major coastal megacities compared with high-density hub locations"
@@ -748,11 +748,11 @@
       "keyRisk": "Material fragility: a culturally iconic structure can look strong but lacks the durability and defensive utility needed for sustained conflict conditions."
     },
     "realityCheck": "Assumes respectful, minimal-impact use of a heritage landmark. Practical survival planning should prioritize purpose-built or resource-rich alternatives.",
-    "scoreNarrative": "Djenné remains a weak base overall: defensibility is limited, isolation is low, and sustainability is modest at best. The dominant failure mode is fragility—its heritage construction and symbolic prominence do not translate into robust, long-duration defensive performance.",
+    "scoreNarrative": "Djenn\u00e9 remains a weak base overall: defensibility is limited, isolation is low, and sustainability is modest at best. The dominant failure mode is fragility\u2014its heritage construction and symbolic prominence do not translate into robust, long-duration defensive performance.",
     "image": "/images/bases/great-mosque-of-djenne.png"
   },
   {
-    "name": "Aït Benhaddou",
+    "name": "A\u00eft Benhaddou",
     "slug": "ait-benhaddou",
     "type": "remote_settlement",
     "region": "africa",
@@ -770,23 +770,23 @@
     "comparisonScores": {
       "exposure": {
         "score": 7,
-        "rationale": "The Aït Benhaddou profile cites moderate isolation reduces immediate pressure compared with major urban corridors, which reduces casual access pressure in Morocco."
+        "rationale": "The A\u00eft Benhaddou profile cites moderate isolation reduces immediate pressure compared with major urban corridors, which reduces casual access pressure in Morocco."
       },
       "maintenanceBurden": {
         "score": 6,
-        "rationale": "The Aït Benhaddou remote settlement form suggests a moderate upkeep load without clear low-tech maintenance advantages."
+        "rationale": "The A\u00eft Benhaddou remote settlement form suggests a moderate upkeep load without clear low-tech maintenance advantages."
       },
       "populationCapacity": {
         "score": 5,
-        "rationale": "The Aït Benhaddou population score is constrained because low sustainability in arid conditions with constrained local food-water productivity."
+        "rationale": "The A\u00eft Benhaddou population score is constrained because low sustainability in arid conditions with constrained local food-water productivity."
       },
       "resourceSecurity": {
         "score": 6,
-        "rationale": "The Aït Benhaddou sustainability profile suggests adequate but not surplus resource security for long-term use."
+        "rationale": "The A\u00eft Benhaddou sustainability profile suggests adequate but not surplus resource security for long-term use."
       }
     },
     "description": {
-      "summary": "Aït Benhaddou is a strong niche base: its fortified settlement form and relative isolation support controlled defense and lower immediate pressure. Its long-term ceiling is set by arid constraints, where limited water and food capacity become the decisive bottleneck.",
+      "summary": "A\u00eft Benhaddou is a strong niche base: its fortified settlement form and relative isolation support controlled defense and lower immediate pressure. Its long-term ceiling is set by arid constraints, where limited water and food capacity become the decisive bottleneck.",
       "strengths": [
         "High defensibility from fortified form, elevation, and controllable access paths",
         "Moderate isolation reduces immediate pressure compared with major urban corridors"
@@ -798,7 +798,7 @@
     },
     "verdict": {
       "bestUseCase": "Medium-term defended settlement for disciplined small groups",
-      "failureMode": "Environmental and infrastructure limits outlast the site’s defensive advantages"
+      "failureMode": "Environmental and infrastructure limits outlast the site\u2019s defensive advantages"
     },
     "survivalProfile": {
       "initial": "Strong",
@@ -810,7 +810,7 @@
       "keyRisk": "Water scarcity is the primary long-horizon threat, with food limits compounding endurance risk in prolonged disruption."
     },
     "realityCheck": "Assumes access to nearby water management and cultivated support zones. The ksar alone is not a complete long-horizon survival system.",
-    "scoreNarrative": "Aït Benhaddou scores as a high-performing niche option, with strong defensibility and strong isolation working together. Sustainability remains the limiting category because water and food expansion are constrained in an arid environment. The base can excel with tight planning, but water scarcity defines the long-term kill condition.",
+    "scoreNarrative": "A\u00eft Benhaddou scores as a high-performing niche option, with strong defensibility and strong isolation working together. Sustainability remains the limiting category because water and food expansion are constrained in an arid environment. The base can excel with tight planning, but water scarcity defines the long-term kill condition.",
     "image": "/images/bases/ait-benhaddou.png"
   },
   {
@@ -1424,7 +1424,7 @@
       }
     },
     "description": {
-      "summary": "The Shenzhen factory complex has unusual infrastructure depth and short-term resource potential, but it sits inside one of the world’s densest urban-industrial corridors. The dominant trade-off is internal capability versus catastrophic exposure.",
+      "summary": "The Shenzhen factory complex has unusual infrastructure depth and short-term resource potential, but it sits inside one of the world\u2019s densest urban-industrial corridors. The dominant trade-off is internal capability versus catastrophic exposure.",
       "strengths": [
         "Large enclosed facilities provide power distribution, workshops, and storage potential",
         "Industrial tooling supports fabrication, repair, and adaptive hardening tasks",
@@ -1764,130 +1764,6 @@
     "image": "/images/bases/okinawa.png"
   },
   {
-    "name": "Great Buddha Leshan",
-    "slug": "great-buddha-leshan",
-    "type": "landmark_structure",
-    "region": "east_asia",
-    "country": "China",
-    "lat": 29.5447,
-    "long": 103.7734,
-    "scores": {
-      "overall": 2.9,
-      "categories": {
-        "defensibility": 2.7,
-        "sustainability": 2.4,
-        "isolation": 2.1
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Great Buddha Leshan landmark structure profile leaves it highly exposed compared with more insulated bases."
-      },
-      "maintenanceBurden": {
-        "score": 3,
-        "rationale": "The Great Buddha Leshan landmark structure profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 3,
-        "rationale": "The Great Buddha Leshan profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 4,
-        "rationale": "The Great Buddha Leshan resource score is strengthened because the profile notes nearby river access may provide short-term water collection options."
-      }
-    },
-    "description": {
-      "summary": "Leshan’s landmark setting is symbolic, not survivable: it lacks perimeter control, shelter depth, and production capacity. What kills you here is exposure—too many approaches, too little infrastructure, no endurance.",
-      "strengths": [
-        "Elevated terrain offers limited observation value",
-        "Nearby river access may provide short-term water collection options"
-      ],
-      "weaknesses": [
-        "No defensible enclosed footprint for sustained occupation",
-        "Very weak sustainability and no meaningful long-term life-support systems"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Temporary waypoint or lookout, not a base",
-      "failureMode": "Rapid overexposure and resource depletion force abandonment"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Very weak",
-      "longTerm": "Non-viable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Brief scouting stop while moving to a real settlement",
-      "keyRisk": "Occupants are fixed in an open tourist terrain that cannot be secured or supplied"
-    },
-    "realityCheck": "Assumes minimal occupancy and immediate onward movement. Treating Leshan as a permanent refuge is unrealistic.",
-    "scoreNarrative": "All core categories score low because the site is a landmark rather than a fortified or self-sustaining habitat. The defining failure mode is immediate exposure, so overall viability is poor.",
-    "image": "/images/bases/great-buddha-leshan.png"
-  },
-  {
-    "name": "Tokyo Tower",
-    "slug": "tokyo-tower",
-    "type": "landmark_structure",
-    "region": "east_asia",
-    "country": "Japan",
-    "lat": 35.6586,
-    "long": 139.7454,
-    "scores": {
-      "overall": 1.7,
-      "categories": {
-        "defensibility": 1.8,
-        "sustainability": 1.2,
-        "isolation": 1.0
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Tokyo Tower exposure score is held down because located in one of the densest urban environments possible."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Tokyo Tower landmark structure profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 3,
-        "rationale": "The Tokyo Tower profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 3,
-        "rationale": "The Tokyo Tower resource score is weak because the profile shows limited independent replenishment for long-term survival."
-      }
-    },
-    "description": {
-      "summary": "Tokyo Tower is an urban observation structure, not a survivable refuge. What kills you here is instant concentration risk: extreme visibility, no self-sufficiency, and no controllable defensive envelope.",
-      "strengths": [
-        "Excellent line-of-sight for short-duration surveillance",
-        "Strong steel structure resists weather better than light buildings"
-      ],
-      "weaknesses": [
-        "Located in one of the densest urban environments possible",
-        "No realistic food, water, sanitation, or protected living capacity"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Minutes-to-hours observation point only",
-      "failureMode": "Immediate urban encirclement and total resource failure"
-    },
-    "survivalProfile": {
-      "initial": "Very weak",
-      "shortTerm": "Collapse-prone",
-      "longTerm": "Non-viable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Quick visual recon before relocating",
-      "keyRisk": "Staying in place turns visibility advantage into target fixation with no sustainment path"
-    },
-    "realityCheck": "Assumes zero intent to occupy long-term. Any prolonged hold at this site is strategically unsound.",
-    "scoreNarrative": "Tokyo Tower ranks near the bottom because it fails every survival pillar: no isolation, negligible sustainability, and almost no practical defensibility. The base fails by design, not by bad execution.",
-    "image": "/images/bases/tokyo-tower.png"
-  },
-  {
     "name": "Shaxi Ancient Town",
     "slug": "shaxi-ancient-town",
     "type": "remote_settlement",
@@ -2046,7 +1922,7 @@
       }
     },
     "description": {
-      "summary": "Iwo Jima’s bunker network is exceptionally hard to assault and highly isolated, but it is austere and resource-poor. What kills you here is life-support collapse underground: water, ventilation, and medical limits outrun defensive advantages.",
+      "summary": "Iwo Jima\u2019s bunker network is exceptionally hard to assault and highly isolated, but it is austere and resource-poor. What kills you here is life-support collapse underground: water, ventilation, and medical limits outrun defensive advantages.",
       "strengths": [
         "Elite defensibility from hardened subterranean terrain and chokepoints",
         "High ocean isolation minimizes routine external threat contact"
@@ -2134,68 +2010,6 @@
     "realityCheck": "Assumes pre-stocked spares, disciplined maintenance crews, water treatment capability, and strict occupancy control in a dense urban crisis zone.",
     "scoreNarrative": "Defensibility keeps Beijing Underground City competitive, but sustainability drags the score down. The decisive failure mode is internal systems collapse: you do not get overrun first, you run out of breathable and safe living conditions.",
     "image": "/images/bases/beijing-underground-city.png"
-  },
-  {
-    "name": "Shanghai Port",
-    "slug": "shanghai-port",
-    "type": "transit_hub",
-    "region": "east_asia",
-    "country": "China",
-    "lat": 31.2304,
-    "long": 121.4737,
-    "scores": {
-      "overall": 3.8,
-      "categories": {
-        "defensibility": 2,
-        "sustainability": 4,
-        "isolation": 2
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Shanghai Port exposure score is held down because flat open terrain and crane-field geometry are extremely hard to secure against large groups."
-      },
-      "maintenanceBurden": {
-        "score": 1,
-        "rationale": "The Shanghai Port transit hub profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The Shanghai Port profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The Shanghai Port sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "Shanghai Port has extraordinary logistics but zero survivable perimeter once order breaks down. What kills you here is endless contact pressure from people, fire, and conflict converging on critical cargo nodes.",
-      "strengths": [
-        "Massive fuel, storage, heavy equipment, and maritime throughput in one location",
-        "Multiple dock systems offer temporary evacuation and salvage options"
-      ],
-      "weaknesses": [
-        "Flat open terrain and crane-field geometry are extremely hard to secure against large groups",
-        "High strategic value guarantees repeated raids and organized takeover attempts"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Fast scavenging and maritime extraction point, not a holdout base",
-      "failureMode": "Attrition from continuous human pressure strips security, supplies, and safe movement"
-    },
-    "survivalProfile": {
-      "initial": "Moderate for prepared teams",
-      "shortTerm": "Weak",
-      "longTerm": "Very weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Conduct brief, high-tempo retrieval operations before departing by water",
-      "keyRisk": "Staying to defend fixed infrastructure turns your group into a static target in a converging urban battlespace"
-    },
-    "realityCheck": "Assumes early access, marine competence, and enough force to load and leave quickly; assumes no prolonged siege posture.",
-    "scoreNarrative": "Access and material abundance inflate tactical opportunity but not survivability. The core failure mode is persistent exposure: the port attracts too many actors to defend long enough for stability.",
-    "image": "/images/bases/shanghai-port.png"
   },
   {
     "name": "Tokyo Airport",
@@ -2508,7 +2322,7 @@
     "image": "/images/bases/suomenlinna-fortress.png"
   },
   {
-    "name": "Gdańsk Shipyard",
+    "name": "Gda\u0144sk Shipyard",
     "slug": "gdansk-shipyard",
     "type": "industrial_site",
     "region": "eastern_europe",
@@ -2526,23 +2340,23 @@
     "comparisonScores": {
       "exposure": {
         "score": 3,
-        "rationale": "The Gdańsk Shipyard exposure score is held down because urban-adjacent location guarantees recurrent raids, theft, and sabotage pressure."
+        "rationale": "The Gda\u0144sk Shipyard exposure score is held down because urban-adjacent location guarantees recurrent raids, theft, and sabotage pressure."
       },
       "maintenanceBurden": {
         "score": 3,
-        "rationale": "The Gdańsk Shipyard industrial site profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
+        "rationale": "The Gda\u0144sk Shipyard industrial site profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
       },
       "populationCapacity": {
         "score": 7,
-        "rationale": "The Gdańsk Shipyard can support more people than many industrial site options because it offers water access supports evacuation, trade, and distributed staging."
+        "rationale": "The Gda\u0144sk Shipyard can support more people than many industrial site options because it offers water access supports evacuation, trade, and distributed staging."
       },
       "resourceSecurity": {
         "score": 7,
-        "rationale": "The Gdańsk Shipyard resource score is strengthened because the profile notes water access supports evacuation, trade, and distributed staging."
+        "rationale": "The Gda\u0144sk Shipyard resource score is strengthened because the profile notes water access supports evacuation, trade, and distributed staging."
       }
     },
     "description": {
-      "summary": "Gdańsk Shipyard is a high-value industrial toolkit, not a survivable sanctuary. What kills you here is perimeter overstretch: too much open infrastructure to guard, too many approach paths, too many competing groups.",
+      "summary": "Gda\u0144sk Shipyard is a high-value industrial toolkit, not a survivable sanctuary. What kills you here is perimeter overstretch: too much open infrastructure to guard, too many approach paths, too many competing groups.",
       "strengths": [
         "Heavy fabrication and repair capacity can restore vehicles, generators, and hulls",
         "Water access supports evacuation, trade, and distributed staging"
@@ -2566,7 +2380,7 @@
       "keyRisk": "Treating the whole shipyard as a live-in fortress exhausts personnel and collapses sector control"
     },
     "realityCheck": "Assumes skilled labor, spare parts, and convoy or marine security to move produced assets quickly.",
-    "scoreNarrative": "Gdańsk gains points on practical industry but loses heavily on defendable footprint and exposure. The dominant kill mechanism is not scarcity; it is overstretched security.",
+    "scoreNarrative": "Gda\u0144sk gains points on practical industry but loses heavily on defendable footprint and exposure. The dominant kill mechanism is not scarcity; it is overstretched security.",
     "image": "/images/bases/gdansk-shipyard.png"
   },
   {
@@ -2942,68 +2756,6 @@
     "image": "/images/bases/kizhi-pogost.png"
   },
   {
-    "name": "Ostankino Tower",
-    "slug": "ostankino-tower",
-    "type": "landmark_structure",
-    "region": "eastern_europe",
-    "country": "Russia",
-    "lat": 55.8197,
-    "long": 37.6116,
-    "scores": {
-      "overall": 2.4,
-      "categories": {
-        "defensibility": 2,
-        "sustainability": 1,
-        "isolation": 1
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Ostankino Tower exposure score is held down because urban location guarantees sustained human pressure and rapid encirclement."
-      },
-      "maintenanceBurden": {
-        "score": 3,
-        "rationale": "The Ostankino Tower landmark structure profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 3,
-        "rationale": "The Ostankino Tower profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 2,
-        "rationale": "The Ostankino Tower resource score is weak because the profile shows limited independent replenishment for long-term survival."
-      }
-    },
-    "description": {
-      "summary": "Ostankino is a symbolic vertical landmark, not a survival base; what kills you here is siege and fire in a high-visibility trap with no resilient life-support depth.",
-      "strengths": [
-        "Excellent observation altitude for temporary intelligence gathering",
-        "Concrete core offers limited short-duration hard cover"
-      ],
-      "weaknesses": [
-        "Urban location guarantees sustained human pressure and rapid encirclement",
-        "Vertical egress chokepoints become lethal if smoke, fire, or structural damage occurs"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Brief lookout or relay point only, never primary shelter",
-      "failureMode": "Entrapment during fire or siege with no sustainable evacuation lane"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Very Weak",
-      "longTerm": "Nonviable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Exploit elevation for short scans, then rotate to low-signature fallback shelters",
-      "keyRisk": "If teams treat it as a fortress, visibility and choke-point exits convert it into a kill box"
-    },
-    "realityCheck": "Assumes controlled access windows and preplanned exfil routes; otherwise casualty risk spikes fast.",
-    "scoreNarrative": "Ostankino remains near the floor because it concentrates people in an obvious vertical trap. The core failure mode is catastrophic entrapment under urban pressure.",
-    "image": "/images/bases/ostankino-tower.png"
-  },
-  {
     "name": "Longyearbyen",
     "slug": "longyearbyen",
     "type": "remote_settlement",
@@ -3252,68 +3004,6 @@
     "image": "/images/bases/derinkuyu-underground-city.png"
   },
   {
-    "name": "Helsinki Airport",
-    "slug": "helsinki-airport",
-    "type": "transit_hub",
-    "region": "eastern_europe",
-    "country": "Finland",
-    "lat": 60.3172,
-    "long": 24.9633,
-    "scores": {
-      "overall": 3.1,
-      "categories": {
-        "defensibility": 2,
-        "sustainability": 2,
-        "isolation": 2
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Helsinki Airport exposure score is held down because wide open geometry and many approach vectors are manpower-intensive to secure."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Helsinki Airport transit hub profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 5,
-        "rationale": "The Helsinki Airport can support more people than many transit hub options because it offers runways, fuel systems, and warehouses support rapid staging and evacuation operations."
-      },
-      "resourceSecurity": {
-        "score": 4,
-        "rationale": "The Helsinki Airport sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "Helsinki Airport is a movement asset, not a sanctuary; what kills you here is continuous mass ingress that overwhelms perimeter control and resource security.",
-      "strengths": [
-        "Runways, fuel systems, and warehouses support rapid staging and evacuation operations",
-        "Strong navigation and communication infrastructure helps coordinate regional movement"
-      ],
-      "weaknesses": [
-        "Wide open geometry and many approach vectors are manpower-intensive to secure",
-        "As a known transit node, it attracts desperate crowds and organized predation early"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Short-window logistics and extraction hub under strict time limits",
-      "failureMode": "Perimeter saturation and insider chaos collapse control faster than supplies can move"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Weak",
-      "longTerm": "Nonviable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Use for brief throughput operations, then relocate personnel to lower-signature sites",
-      "keyRisk": "If treated as a static base, crowd pressure and infiltration rapidly become unmanageable"
-    },
-    "realityCheck": "Assumes temporary military-grade security presence and preplanned relocation routes.",
-    "scoreNarrative": "Helsinki Airport gains points for mobility utility, but settlement viability is very low. The core failure mode is control collapse under continuous inbound pressure.",
-    "image": "/images/bases/helsinki-airport.png"
-  },
-  {
     "name": "Murmansk Port",
     "slug": "murmansk-port",
     "type": "transit_hub",
@@ -3410,7 +3100,7 @@
       }
     },
     "description": {
-      "summary": "Cappadocia’s broken terrain and concealment options make it a strong defensive refuge, but what kills you here is water-and-agriculture throughput: dispersed hideouts can outlast attacks, not prolonged scarcity.",
+      "summary": "Cappadocia\u2019s broken terrain and concealment options make it a strong defensive refuge, but what kills you here is water-and-agriculture throughput: dispersed hideouts can outlast attacks, not prolonged scarcity.",
       "strengths": [
         "Complex valleys and rock formations create layered observation, concealment, and chokepoint defense",
         "Distributed cave and ridge positions support fallback depth during localized breaches"
@@ -3624,68 +3314,6 @@
     "image": "/images/bases/masada.png"
   },
   {
-    "name": "Abqaiq Oil Processing Facility",
-    "slug": "abqaiq-oil-processing-facility",
-    "type": "industrial_site",
-    "region": "middle_east",
-    "country": "Saudi Arabia",
-    "lat": 25.937,
-    "long": 49.668,
-    "scores": {
-      "overall": 3.8,
-      "categories": {
-        "defensibility": 4,
-        "sustainability": 3,
-        "isolation": 4
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 3,
-        "rationale": "The Abqaiq Oil Processing Facility profile cites controlled industrial chokepoints can support temporary access denial, which reduces casual access pressure in Saudi Arabia."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Abqaiq Oil Processing Facility profile benefits from controlled industrial chokepoints can support temporary access denial, but complex processing infrastructure degrades quickly without specialist parts and crews keeps upkeep demanding."
-      },
-      "populationCapacity": {
-        "score": 5,
-        "rationale": "The Abqaiq Oil Processing Facility profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The Abqaiq Oil Processing Facility resource score is strengthened because the profile notes controlled industrial chokepoints can support temporary access denial."
-      }
-    },
-    "description": {
-      "summary": "Abqaiq has useful industrial assets, but what kills you here is strategic visibility: a famous energy node draws repeated attacks and requires fragile technical systems you cannot sustain locally.",
-      "strengths": [
-        "Large stock, pipeline, and utility footprint offers short-term salvage potential",
-        "Controlled industrial chokepoints can support temporary access denial"
-      ],
-      "weaknesses": [
-        "High-profile target status invites organized kinetic and sabotage pressure",
-        "Complex processing infrastructure degrades quickly without specialist parts and crews"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Rapid extraction and salvage operation under strict time constraints",
-      "failureMode": "Targeted disruption and system complexity collapse habitability almost immediately"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Weak",
-      "longTerm": "Nonviable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Strip fuel, tools, and materials then relocate to lower-signature terrain",
-      "keyRisk": "Attempting to hold Abqaiq invites repeated contact that burns manpower and critical stores"
-    },
-    "realityCheck": "Assumes brief controlled access window and an already identified fallback settlement.",
-    "scoreNarrative": "Abqaiq remains low-tier because strategic attention and technical fragility compound each other. The core failure mode is exposure-to-targeting plus infrastructure dependency.",
-    "image": "/images/bases/abqaiq-oil-processing-facility.png"
-  },
-  {
     "name": "Ras Al Khair Desalination Plant",
     "slug": "ras-al-khair-desalination-plant",
     "type": "industrial_site",
@@ -3720,7 +3348,7 @@
       }
     },
     "description": {
-      "summary": "Ras Al Khair’s water output is uniquely valuable, but what kills you here is power-chain fragility: once energy input or specialist maintenance fails, the core survival advantage disappears fast.",
+      "summary": "Ras Al Khair\u2019s water output is uniquely valuable, but what kills you here is power-chain fragility: once energy input or specialist maintenance fails, the core survival advantage disappears fast.",
       "strengths": [
         "Desalination capability can temporarily support large populations and downstream agriculture",
         "Industrial footprint provides sheltered workspace and controlled internal routing"
@@ -3808,68 +3436,6 @@
     "realityCheck": "Assumes cohesive command structure, disciplined perimeter staffing, and finite-duration mission planning.",
     "scoreNarrative": "Al Udeid lands in the mid-tier: excellent defensibility but poor strategic invisibility and modest sustainability. The killer is prolonged attention, not immediate breach.",
     "image": "/images/bases/al-udeid-air-base.png"
-  },
-  {
-    "name": "Ghawar Oil Field Central Processing",
-    "slug": "ghawar-oil-field-central-processing",
-    "type": "institutional_compound",
-    "region": "middle_east",
-    "country": "Saudi Arabia",
-    "lat": 25.4,
-    "long": 49.6,
-    "scores": {
-      "overall": 3.9,
-      "categories": {
-        "defensibility": 4,
-        "sustainability": 3,
-        "isolation": 5
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 4,
-        "rationale": "The Ghawar Oil Field Central Processing institutional compound setting gives it moderate exposure protection compared with more accessible bases."
-      },
-      "maintenanceBurden": {
-        "score": 3,
-        "rationale": "The Ghawar Oil Field Central Processing institutional compound profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 4,
-        "rationale": "The Ghawar Oil Field Central Processing profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 4,
-        "rationale": "The Ghawar Oil Field Central Processing resource score is strengthened because the profile notes extensive industrial hardware offers short-run salvage for fuel, transport, and fabrication."
-      }
-    },
-    "description": {
-      "summary": "Ghawar processing nodes sit in relatively sparse terrain, but what kills you here is cascading industrial failure: hazardous systems and specialist dependencies turn quickly from asset to liability.",
-      "strengths": [
-        "Lower nearby population density can reduce immediate crowd-driven security stress",
-        "Extensive industrial hardware offers short-run salvage for fuel, transport, and fabrication"
-      ],
-      "weaknesses": [
-        "Processing operations require technical supply chains that are unlikely to persist in collapse",
-        "Energy-critical status creates repeat conflict pressure over remaining stocks"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Temporary salvage-and-exit operation with strict hazard controls",
-      "failureMode": "System breakdown and contamination risks make sustained habitation untenable"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Weak",
-      "longTerm": "Nonviable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Recover movable equipment and consumables, then transition to simpler terrain bases",
-      "keyRisk": "Trying to run complex processing at reduced capacity increases accident and poisoning exposure"
-    },
-    "realityCheck": "Assumes access to protective gear, technical shutdown procedures, and immediate relocation options.",
-    "scoreNarrative": "Ghawar remains bottom-tier for residency despite salvage utility. The core failure mode is technical and environmental cascade after industrial support erosion.",
-    "image": "/images/bases/ghawar-oil-field-central-processing.png"
   },
   {
     "name": "Qeshm Island",
@@ -3996,68 +3562,6 @@
     "image": "/images/bases/socotra-island.png"
   },
   {
-    "name": "Burj Khalifa",
-    "slug": "burj-khalifa",
-    "type": "landmark_structure",
-    "region": "middle_east",
-    "country": "United Arab Emirates",
-    "lat": 25.1972,
-    "long": 55.2744,
-    "scores": {
-      "overall": 2.2,
-      "categories": {
-        "defensibility": 2.1,
-        "sustainability": 1.9,
-        "isolation": 1
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Burj Khalifa exposure score is held down because dense urban surroundings create constant approach pressure and no true buffer zone."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Burj Khalifa maintenance score is limited because vertical life support requires uninterrupted power and specialist maintenance."
-      },
-      "populationCapacity": {
-        "score": 4,
-        "rationale": "The Burj Khalifa can support more people than many landmark structure options because it offers large enclosed floor area offers short-term stockpile and triage space."
-      },
-      "resourceSecurity": {
-        "score": 3,
-        "rationale": "The Burj Khalifa resource score is weak because the profile shows limited independent replenishment for long-term survival."
-      }
-    },
-    "description": {
-      "summary": "Burj Khalifa looks defensible on paper, but what kills you here is infrastructure dependency cascade: elevators, pumping, cooling, and sanitation failures turn vertical shelter into a trapped population stack.",
-      "strengths": [
-        "High elevation gives broad observation and early-warning potential",
-        "Large enclosed floor area offers short-term stockpile and triage space"
-      ],
-      "weaknesses": [
-        "Dense urban surroundings create constant approach pressure and no true buffer zone",
-        "Vertical life support requires uninterrupted power and specialist maintenance"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Very short-duration rally point for evacuation coordination",
-      "failureMode": "Building systems failure strands occupants and drives lethal internal bottlenecks"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Weak",
-      "longTerm": "Nonviable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Exploit visibility and stores briefly, then relocate to lower-complexity terrain",
-      "keyRisk": "Trying to permanently occupy upper floors after grid loss creates evacuation deadlocks"
-    },
-    "realityCheck": "Assumes immediate fallback routes, stairwell control, and no expectation of full-system restoration.",
-    "scoreNarrative": "Burj remains near-bottom despite scale advantages. The core failure mode is vertical infrastructure collapse inside a high-pressure urban basin.",
-    "image": "/images/bases/burj-khalifa.png"
-  },
-  {
     "name": "Lighthouse Hormuz",
     "slug": "lighthouse-hormuz",
     "type": "landmark_structure",
@@ -4154,7 +3658,7 @@
       }
     },
     "description": {
-      "summary": "Siwa Oasis is one of the more credible long-horizon refuges in the region, but what kills you here is water-system fragility: contamination, overdraw, or pump failure can collapse the settlement’s carrying capacity.",
+      "summary": "Siwa Oasis is one of the more credible long-horizon refuges in the region, but what kills you here is water-system fragility: contamination, overdraw, or pump failure can collapse the settlement\u2019s carrying capacity.",
       "strengths": [
         "Distance from major corridors lowers sustained external pressure",
         "Existing oasis settlement pattern supports agriculture and local continuity"
@@ -4304,130 +3808,6 @@
     "realityCheck": "Assumes frequent rotation, reliable ventilation maintenance, and alternative surface logistics.",
     "scoreNarrative": "Despite high tactical defensibility, Gaza tunnels score below 5 for settlement viability. The core failure mode is underground habitability collapse.",
     "image": "/images/bases/gaza-tunnel-network.png"
-  },
-  {
-    "name": "Dubai Airport",
-    "slug": "dubai-airport",
-    "type": "transit_hub",
-    "region": "middle_east",
-    "country": "United Arab Emirates",
-    "lat": 25.2532,
-    "long": 55.3657,
-    "scores": {
-      "overall": 2.4,
-      "categories": {
-        "defensibility": 2.2,
-        "sustainability": 2.1,
-        "isolation": 1
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Dubai Airport exposure score is held down because open geometry and visibility make perimeter control manpower-prohibitive."
-      },
-      "maintenanceBurden": {
-        "score": 1,
-        "rationale": "The Dubai Airport transit hub profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The Dubai Airport can support more people than many transit hub options because it offers runway and warehouse space can stage emergency sorting operations."
-      },
-      "resourceSecurity": {
-        "score": 4,
-        "rationale": "The Dubai Airport resource score is strengthened because the profile notes runway and warehouse space can stage emergency sorting operations."
-      }
-    },
-    "description": {
-      "summary": "Dubai Airport has infrastructure abundance, but what kills you here is convergence pressure: every route, crowd, and claimant converges on the same open, high-value terrain.",
-      "strengths": [
-        "Massive logistics footprint offers short-term salvage and stockpile opportunities",
-        "Runway and warehouse space can stage emergency sorting operations"
-      ],
-      "weaknesses": [
-        "Open geometry and visibility make perimeter control manpower-prohibitive",
-        "Urban adjacency drives recurring crowd pressure and conflict risk"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Brief extraction and redistribution node during early collapse phase",
-      "failureMode": "Unmanageable inflow and perimeter overstretch collapse site security rapidly"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Weak",
-      "longTerm": "Nonviable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Recover priority supplies under tight timelines, then displace to less visible terrain",
-      "keyRisk": "Attempting fixed long-term occupation invites sieges and internal resource violence"
-    },
-    "realityCheck": "Assumes preplanned exit corridors and no dependence on continuous airport operations.",
-    "scoreNarrative": "Dubai Airport remains near-bottom despite scale and assets. The core failure mode is convergence overload at an obvious strategic node.",
-    "image": "/images/bases/dubai-airport.png"
-  },
-  {
-    "name": "Jebel Ali Port",
-    "slug": "jebel-ali-port",
-    "type": "transit_hub",
-    "region": "middle_east",
-    "country": "United Arab Emirates",
-    "lat": 25.0113,
-    "long": 55.0606,
-    "scores": {
-      "overall": 3.3,
-      "categories": {
-        "defensibility": 3.1,
-        "sustainability": 4.2,
-        "isolation": 2
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Jebel Ali Port transit hub profile leaves it highly exposed compared with more insulated bases."
-      },
-      "maintenanceBurden": {
-        "score": 3,
-        "rationale": "The Jebel Ali Port transit hub profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 7,
-        "rationale": "The Jebel Ali Port can support more people than many transit hub options because it offers waterfront layout can channel movement through controllable nodes in brief windows."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The Jebel Ali Port sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "Jebel Ali carries huge logistics value, but what kills you here is strategic magnetism: ports attract organized competition, making stable governance and perimeter security unsustainable.",
-      "strengths": [
-        "Deep storage, cranes, and maritime access support short-run procurement and fabrication",
-        "Waterfront layout can channel movement through controllable nodes in brief windows"
-      ],
-      "weaknesses": [
-        "Port-scale perimeter and waterfront complexity exceed typical defensive manpower",
-        "High-value cargo profile draws repeated raids and factional contest"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Time-limited salvage hub feeding inland fallback settlements",
-      "failureMode": "Persistent contest over port assets erodes security faster than replenishment"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Weak",
-      "longTerm": "Nonviable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Exploit port inventories quickly while building inland redundancy",
-      "keyRisk": "Treating the port as a permanent capital locks the group into constant conflict cycles"
-    },
-    "realityCheck": "Assumes maritime awareness, rapid convoy capability, and willingness to abandon fixed assets early.",
-    "scoreNarrative": "Jebel Ali scores slightly above airports on salvage upside, but remains low-tier for residence. The core failure mode is strategic overexposure.",
-    "image": "/images/bases/jebel-ali-port.png"
   },
   {
     "name": "Mesa Verde",
@@ -4740,68 +4120,6 @@
     "image": "/images/bases/hutchinson-salt-storage-caverns.png"
   },
   {
-    "name": "Port Arthur Refinery",
-    "slug": "port-arthur-refinery",
-    "type": "industrial_site",
-    "region": "north_america",
-    "country": "USA",
-    "lat": 29.8849,
-    "long": -93.9399,
-    "scores": {
-      "overall": 3.7,
-      "categories": {
-        "defensibility": 3.2,
-        "sustainability": 4.1,
-        "isolation": 1.8
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 2,
-        "rationale": "The Port Arthur Refinery exposure score is held down because dense hazard profile demands expert operations and continuous safety controls."
-      },
-      "maintenanceBurden": {
-        "score": 3,
-        "rationale": "The Port Arthur Refinery maintenance score is helped by large built footprint offers salvageable materials and short-term shelter pockets, making daily upkeep more manageable."
-      },
-      "populationCapacity": {
-        "score": 5,
-        "rationale": "The Port Arthur Refinery can support more people than many industrial site options because it offers large built footprint offers salvageable materials and short-term shelter pockets."
-      },
-      "resourceSecurity": {
-        "score": 6,
-        "rationale": "The Port Arthur Refinery resource score is strengthened because the profile notes large built footprint offers salvageable materials and short-term shelter pockets."
-      }
-    },
-    "description": {
-      "summary": "Port Arthur Refinery has immense industrial capacity, but its dominant failure mode is cascading industrial hazard: once maintenance and staffing quality drop, fire, toxic release, and perimeter chaos outpace any defensive benefit.",
-      "strengths": [
-        "Large built footprint offers salvageable materials and short-term shelter pockets",
-        "Fuel and mechanical assets can be valuable during very early disruption"
-      ],
-      "weaknesses": [
-        "Dense hazard profile demands expert operations and continuous safety controls",
-        "Low isolation in a contested corridor makes sustained defense impractical"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Rapid scavenging and transient operations with strict time limits",
-      "failureMode": "Safety-system degradation triggers compounding industrial incidents"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Weak",
-      "longTerm": "Weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Extract priority supplies quickly, then relocate to a lower-risk base",
-      "keyRisk": "Attempting static occupation inside a high-consequence industrial complex"
-    },
-    "realityCheck": "This is a resource site, not a survivable settlement; hazard management burden is too high.",
-    "scoreNarrative": "Port Arthur remains below 4 because isolation and defensibility are both poor in realistic collapse conditions. Utility value exists, but prolonged occupancy multiplies risk faster than resilience.",
-    "image": "/images/bases/port-arthur-refinery.png"
-  },
-  {
     "name": "Area 51",
     "slug": "area-51",
     "type": "institutional_compound",
@@ -5048,130 +4366,6 @@
     "realityCheck": "Resource depth is real, but social load management is the deciding variable.",
     "scoreNarrative": "Vancouver Island remains high-mid tier by combining strong sustainability with decent defensibility. It stays below 7 because isolation is only moderate once population and transport realities are included.",
     "image": "/images/bases/vancouver-island.png"
-  },
-  {
-    "name": "CN Tower",
-    "slug": "cn-tower",
-    "type": "landmark_structure",
-    "region": "north_america",
-    "country": "Canada",
-    "lat": 43.6426,
-    "long": -79.3871,
-    "scores": {
-      "overall": 1.9,
-      "categories": {
-        "defensibility": 2.4,
-        "sustainability": 1.2,
-        "isolation": 1.0
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The CN Tower exposure score is held down because urban center exposure and constrained egress create severe entrapment risk."
-      },
-      "maintenanceBurden": {
-        "score": 3,
-        "rationale": "The CN Tower maintenance score is helped by hardened concrete core offers brief shelter against limited threats, making daily upkeep more manageable."
-      },
-      "populationCapacity": {
-        "score": 3,
-        "rationale": "The CN Tower profile offers hardened concrete core offers brief shelter against limited threats, but urban center exposure and constrained egress create severe entrapment risk limits settlement scale."
-      },
-      "resourceSecurity": {
-        "score": 3,
-        "rationale": "The CN Tower resource score is weak because the profile shows limited independent replenishment for long-term survival."
-      }
-    },
-    "description": {
-      "summary": "The CN Tower has surveillance value but fails as a survival base; its dominant failure mode is vertical entrapment: limited exits, no resource base, and dense urban surround turn height into a dead end.",
-      "strengths": [
-        "Exceptional line-of-sight for short-duration observation and signaling",
-        "Hardened concrete core offers brief shelter against limited threats"
-      ],
-      "weaknesses": [
-        "No realistic food, water, or sanitation autonomy for sustained occupancy",
-        "Urban center exposure and constrained egress create severe entrapment risk"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Temporary reconnaissance perch supporting evacuation timing",
-      "failureMode": "Exit denial and supply exhaustion trap occupants in a nonviable vertical site"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Weak",
-      "longTerm": "Failing"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Use briefly for observation only, then exfiltrate to viable ground base",
-      "keyRisk": "Confusing visibility advantage with actual survivability"
-    },
-    "realityCheck": "Tall structure does not equal defensible habitat; sustainment is effectively zero.",
-    "scoreNarrative": "CN Tower is sub-2 overall because all core survival categories are weak except access. It is an observation asset, not a defensible or sustainable base.",
-    "image": "/images/bases/cn-tower.png"
-  },
-  {
-    "name": "Cape Hatteras Lighthouse",
-    "slug": "cape-hatteras-lighthouse",
-    "type": "landmark_structure",
-    "region": "north_america",
-    "country": "United States",
-    "lat": 35.2514,
-    "long": -75.528,
-    "scores": {
-      "overall": 3,
-      "categories": {
-        "defensibility": 3,
-        "sustainability": 2,
-        "isolation": 6
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 5,
-        "rationale": "The Cape Hatteras Lighthouse exposure score is held down because storm surge and erosion can remove access overnight."
-      },
-      "maintenanceBurden": {
-        "score": 3,
-        "rationale": "The Cape Hatteras Lighthouse maintenance score is limited because no meaningful food, water, or shelter depth for prolonged stay."
-      },
-      "populationCapacity": {
-        "score": 3,
-        "rationale": "The Cape Hatteras Lighthouse profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 3,
-        "rationale": "The Cape Hatteras Lighthouse resource score is weak because the profile shows limited independent replenishment for long-term survival."
-      }
-    },
-    "description": {
-      "summary": "Excellent sightline tower in a hostile coastal strip; useful for watch duty, not for living.",
-      "strengths": [
-        "Long-range coastal visibility for early warning",
-        "Low inland crowd pressure compared with major metros"
-      ],
-      "weaknesses": [
-        "Storm surge and erosion can remove access overnight",
-        "No meaningful food, water, or shelter depth for prolonged stay"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Short observation post supporting evacuation timing and route selection",
-      "failureMode": "You get pinned by weather and run out of essentials in an exposed structure"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Weak",
-      "longTerm": "Failing"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Use as a temporary lookout, then relocate inland before conditions turn",
-      "keyRisk": "Treating visibility advantage as if it were sustainment"
-    },
-    "realityCheck": "What kills you here is weather plus supply fragility, not direct assault.",
-    "scoreNarrative": "Cape Hatteras stays low overall: isolation is decent, but defensibility and sustainability are both poor in repeated storm conditions.",
-    "image": "/images/bases/cape-hatteras-lighthouse.png"
   },
   {
     "name": "Telluride",
@@ -5422,130 +4616,6 @@
     "image": "/images/bases/titan-missile-museum-silo-571-7.png"
   },
   {
-    "name": "Corwith Intermodal Yard",
-    "slug": "corwith-intermodal-yard",
-    "type": "transit_hub",
-    "region": "north_america",
-    "country": "USA",
-    "lat": 41.8283,
-    "long": -87.7056,
-    "scores": {
-      "overall": 3,
-      "categories": {
-        "defensibility": 2,
-        "sustainability": 4,
-        "isolation": 1
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Corwith Intermodal Yard exposure score is held down because flat, open terrain creates severe perimeter control problems."
-      },
-      "maintenanceBurden": {
-        "score": 3,
-        "rationale": "The Corwith Intermodal Yard transit hub profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The Corwith Intermodal Yard profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The Corwith Intermodal Yard sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "Huge logistics surface with salvage value, but fundamentally indefensible as a survival base.",
-      "strengths": [
-        "Large material stock and transport equipment footprint",
-        "Multiple access corridors for rapid extraction operations"
-      ],
-      "weaknesses": [
-        "Flat, open terrain creates severe perimeter control problems",
-        "Urban adjacency drives persistent contact and conflict pressure"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Rapid scavenging and transfer point, not a place to hold",
-      "failureMode": "Perimeter collapse from continuous exposure and traffic"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Weak",
-      "longTerm": "Failing"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Stage short raids for supplies and depart before fixation",
-      "keyRisk": "Trying to fortify a site designed for throughput, not defense"
-    },
-    "realityCheck": "What kills you here is exposure saturation from every direction.",
-    "scoreNarrative": "Corwith Yard scores low because accessibility and resources cannot compensate for near-zero isolation and weak defensibility.",
-    "image": "/images/bases/corwith-intermodal-yard.png"
-  },
-  {
-    "name": "LAX Airport",
-    "slug": "lax-airport",
-    "type": "transit_hub",
-    "region": "north_america",
-    "country": "United States",
-    "lat": 33.9416,
-    "long": -118.4085,
-    "scores": {
-      "overall": 1,
-      "categories": {
-        "defensibility": 1,
-        "sustainability": 2,
-        "isolation": 1
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The LAX Airport exposure score is held down because extreme population convergence and visibility."
-      },
-      "maintenanceBurden": {
-        "score": 1,
-        "rationale": "The LAX Airport transit hub profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The LAX Airport profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 4,
-        "rationale": "The LAX Airport sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "Massive infrastructure in the worst possible density context; viable only as a brief transit objective.",
-      "strengths": [
-        "Large short-term supply and equipment pools",
-        "Clear navigation landmark and route nexus"
-      ],
-      "weaknesses": [
-        "Extreme population convergence and visibility",
-        "Too many entry points to secure at any practical scale"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Fast extraction waypoint during early movement windows",
-      "failureMode": "Immediate overrun and entrapment in a high-traffic kill zone"
-    },
-    "survivalProfile": {
-      "initial": "Failing",
-      "shortTerm": "Failing",
-      "longTerm": "Failing"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Touch briefly for specific supplies, then exit immediately",
-      "keyRisk": "Confusing infrastructure size with defendable survivability"
-    },
-    "realityCheck": "What kills you here is sheer human pressure before plans can stabilize.",
-    "scoreNarrative": "LAX is bottom-tier: maximum accessibility combines with minimal isolation and defensibility, producing near-immediate failure risk.",
-    "image": "/images/bases/lax-airport.png"
-  },
-  {
     "name": "Blue Mountains Cliffs",
     "slug": "blue-mountains-cliffs",
     "type": "elevated_stronghold",
@@ -5792,68 +4862,6 @@
     "realityCheck": "What kills you here is slow sustainment collapse, not the first assault wave.",
     "scoreNarrative": "Maori pa scores as defense-forward but sustainment-limited: it wins opening phases, then degrades if isolation turns into siege.",
     "image": "/images/bases/maori-pa-fortifications.png"
-  },
-  {
-    "name": "Super Pit Gold Mine",
-    "slug": "super-pit-gold-mine",
-    "type": "industrial_site",
-    "region": "oceania",
-    "country": "Australia",
-    "lat": -30.7485,
-    "long": 121.516,
-    "scores": {
-      "overall": 3.8,
-      "categories": {
-        "defensibility": 4.0,
-        "sustainability": 2.0,
-        "isolation": 5.5
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 6,
-        "rationale": "The Super Pit Gold Mine profile cites remote industrial zone with useful heavy equipment and fuel systems, which reduces casual access pressure in Australia."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Super Pit Gold Mine maintenance score is limited because water, shelter, and defensible habitation are structurally weak."
-      },
-      "populationCapacity": {
-        "score": 4,
-        "rationale": "The Super Pit Gold Mine profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 4,
-        "rationale": "The Super Pit Gold Mine resource score is strengthened because the profile notes remote industrial zone with useful heavy equipment and fuel systems."
-      }
-    },
-    "description": {
-      "summary": "A giant pit gives visibility and machinery access, but it is an exposure trap with almost no resilient living envelope.",
-      "strengths": [
-        "Remote industrial zone with useful heavy equipment and fuel systems",
-        "Open sightlines make approach detection straightforward"
-      ],
-      "weaknesses": [
-        "Extreme exposure, dust, and heat rapidly erode health",
-        "Water, shelter, and defensible habitation are structurally weak"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Temporary salvage and logistics staging site",
-      "failureMode": "Environmental attrition and infrastructure dependence overwhelm occupants"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Weak",
-      "longTerm": "Failing"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Strip critical equipment and depart before static occupancy costs escalate",
-      "keyRisk": "Attempting to live in an industrial extraction void as if it were a settlement"
-    },
-    "realityCheck": "What kills you here is exposure and water vulnerability before any organized attack.",
-    "scoreNarrative": "Super Pit ranks weak overall: remoteness helps, but livability and sustainability are too poor for durable survival.",
-    "image": "/images/bases/super-pit-gold-mine.png"
   },
   {
     "name": "Anna Creek Station",
@@ -6166,130 +5174,6 @@
     "image": "/images/bases/tasmania.png"
   },
   {
-    "name": "Cape Byron Lighthouse",
-    "slug": "cape-byron-lighthouse",
-    "type": "landmark_structure",
-    "region": "oceania",
-    "country": "Australia",
-    "lat": -28.638,
-    "long": 153.638,
-    "scores": {
-      "overall": 2.9,
-      "categories": {
-        "defensibility": 3.4,
-        "sustainability": 1.9,
-        "isolation": 3.8
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 2,
-        "rationale": "The Cape Byron Lighthouse exposure score is held down because minimal shelter, storage, and production capacity."
-      },
-      "maintenanceBurden": {
-        "score": 4,
-        "rationale": "The Cape Byron Lighthouse profile benefits from simple high-ground position aids short-duration monitoring, but minimal shelter, storage, and production capacity keeps upkeep demanding."
-      },
-      "populationCapacity": {
-        "score": 3,
-        "rationale": "The Cape Byron Lighthouse profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 3,
-        "rationale": "The Cape Byron Lighthouse resource score is weak because the profile shows limited independent replenishment for long-term survival."
-      }
-    },
-    "description": {
-      "summary": "Excellent lookout value does not translate into base value: this is an exposed observation point, not a survivable settlement.",
-      "strengths": [
-        "Wide coastal visibility for early warning and signaling",
-        "Simple high-ground position aids short-duration monitoring"
-      ],
-      "weaknesses": [
-        "Minimal shelter, storage, and production capacity",
-        "Highly exposed winds and visibility make concealment impossible"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Temporary observation and relay point",
-      "failureMode": "Rapid exposure-driven depletion with no sustainment depth"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Failing",
-      "longTerm": "Failing"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Use for reconnaissance windows, then rotate to a real support site",
-      "keyRisk": "Trying to defend and inhabit a landmark with no logistical base"
-    },
-    "realityCheck": "What kills you here is exposure and depletion because lookout is not livability.",
-    "scoreNarrative": "Byron Light stays low-tier: strong visibility cannot compensate for almost nonexistent sustainability and capacity.",
-    "image": "/images/bases/cape-byron-lighthouse.png"
-  },
-  {
-    "name": "Sydney Harbour Bridge",
-    "slug": "sydney-harbour-bridge",
-    "type": "landmark_structure",
-    "region": "oceania",
-    "country": "Australia",
-    "lat": -33.8523,
-    "long": 151.2108,
-    "scores": {
-      "overall": 1.8,
-      "categories": {
-        "defensibility": 2.0,
-        "sustainability": 1.0,
-        "isolation": 1.0
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Sydney Harbour Bridge exposure score is held down because maximum exposure and congestion in a dense urban battlespace."
-      },
-      "maintenanceBurden": {
-        "score": 1,
-        "rationale": "The Sydney Harbour Bridge maintenance score is limited because no organic shelter, water, food, or defensible living envelope."
-      },
-      "populationCapacity": {
-        "score": 4,
-        "rationale": "The Sydney Harbour Bridge can support more people than many landmark structure options because it offers high symbolic and traffic-control value in urban movement networks."
-      },
-      "resourceSecurity": {
-        "score": 3,
-        "rationale": "The Sydney Harbour Bridge resource score is weak because the profile shows limited independent replenishment for long-term survival."
-      }
-    },
-    "description": {
-      "summary": "As a landmark chokepoint it has tactical relevance, but as a survival base it is functionally non-viable.",
-      "strengths": [
-        "High symbolic and traffic-control value in urban movement networks",
-        "Extreme visibility gives strong situational awareness"
-      ],
-      "weaknesses": [
-        "No organic shelter, water, food, or defensible living envelope",
-        "Maximum exposure and congestion in a dense urban battlespace"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Transient movement-control objective only",
-      "failureMode": "Immediate attrition from exposure, congestion, and zero sustainment"
-    },
-    "survivalProfile": {
-      "initial": "Failing",
-      "shortTerm": "Failing",
-      "longTerm": "Failing"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Cross quickly or control briefly, then disengage to habitable terrain",
-      "keyRisk": "Treating infrastructure symbolism as actual survivability"
-    },
-    "realityCheck": "What kills you here is instant overexposure in the least sustainable environment possible.",
-    "scoreNarrative": "Harbour Bridge remains near-bottom: operational relevance exists, but base viability is effectively zero.",
-    "image": "/images/bases/sydney-harbour-bridge.png"
-  },
-  {
     "name": "Port Vila",
     "slug": "port-vila",
     "type": "remote_settlement",
@@ -6410,7 +5294,7 @@
       "keyRisk": "Assuming underground comfort equals full autonomy in a water-scarce biome"
     },
     "realityCheck": "What kills you here is water exhaustion before security fails.",
-    "scoreNarrative": "Coober Pedy scores as a strong-mid base: defensibility and isolation are high, but sustainability—not walls—is the long-run limiter.",
+    "scoreNarrative": "Coober Pedy scores as a strong-mid base: defensibility and isolation are high, but sustainability\u2014not walls\u2014is the long-run limiter.",
     "image": "/images/bases/coober-pedy-underground-settlement.png"
   },
   {
@@ -6474,192 +5358,6 @@
     "realityCheck": "What kills you here is siege-driven depletion in an exposed urban basin.",
     "scoreNarrative": "North Head lands below mid-tier: excellent local defensibility cannot offset very weak sustainability and low isolation.",
     "image": "/images/bases/north-head-gun-emplacements.png"
-  },
-  {
-    "name": "Auckland Port",
-    "slug": "auckland-port",
-    "type": "transit_hub",
-    "region": "oceania",
-    "country": "New Zealand",
-    "lat": -36.844,
-    "long": 174.7622,
-    "scores": {
-      "overall": 2.6,
-      "categories": {
-        "defensibility": 2.6,
-        "sustainability": 3.1,
-        "isolation": 1.8
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 2,
-        "rationale": "The Auckland Port exposure score is held down because dense urban interface creates constant perimeter pressure."
-      },
-      "maintenanceBurden": {
-        "score": 1,
-        "rationale": "The Auckland Port maintenance score is limited because complex infrastructure dependency fails fast without coordinated industrial support."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The Auckland Port profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The Auckland Port sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "Auckland Port is useful for fast salvage and maritime movement, but it collapses quickly as a static survival base.",
-      "strengths": [
-        "Large logistics footprint can yield high short-window recovery value",
-        "Direct maritime access supports rapid redistribution and dispersal"
-      ],
-      "weaknesses": [
-        "Dense urban interface creates constant perimeter pressure",
-        "Complex infrastructure dependency fails fast without coordinated industrial support"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Time-limited extraction and transit node, not a residency site",
-      "failureMode": "Persistent exposure and infrastructure overload cause control collapse"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Weak",
-      "longTerm": "Weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Conduct tightly planned salvage operations and depart before sustained convergence",
-      "keyRisk": "Confusing logistics abundance with defensible long-term survivability"
-    },
-    "realityCheck": "What kills you here is nonstop human pressure long before resources run out.",
-    "scoreNarrative": "Auckland Port remains low-tier because accessibility and assets do not compensate for severe isolation and defensibility deficits.",
-    "image": "/images/bases/auckland-port.png"
-  },
-  {
-    "name": "Sydney Airport",
-    "slug": "sydney-airport",
-    "type": "transit_hub",
-    "region": "oceania",
-    "country": "Australia",
-    "lat": -33.9399,
-    "long": 151.1753,
-    "scores": {
-      "overall": 1.5,
-      "categories": {
-        "defensibility": 1.7,
-        "sustainability": 1.6,
-        "isolation": 1.0
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Sydney Airport exposure score is held down because extreme visibility and centrality make it a magnet for convergence."
-      },
-      "maintenanceBurden": {
-        "score": 1,
-        "rationale": "The Sydney Airport transit hub profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 5,
-        "rationale": "The Sydney Airport profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 3,
-        "rationale": "The Sydney Airport resource score is weak because the profile shows limited independent replenishment for long-term survival."
-      }
-    },
-    "description": {
-      "summary": "Sydney Airport is a movement asset only; as a survival base it is structurally non-viable.",
-      "strengths": [
-        "Large transport infrastructure can support rapid evacuation windows",
-        "Fuel, equipment, and warehousing may offer brief salvage opportunities"
-      ],
-      "weaknesses": [
-        "Extreme visibility and centrality make it a magnet for convergence",
-        "Open, expansive layout is effectively impossible to secure at sustainable staffing levels"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Short-duration transit corridor for relocation, never fixed occupation",
-      "failureMode": "Immediate overexposure and perimeter collapse at metropolitan scale"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Weak",
-      "longTerm": "Weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Exploit brief mobility value with strict exit triggers and no static defense plan",
-      "keyRisk": "Attempting to hold a globally obvious transit hub as a settlement"
-    },
-    "realityCheck": "What kills you here is convergence overload within hours, not months.",
-    "scoreNarrative": "Sydney Airport is near-bottom by design: accessibility is maximal while every survivability pillar is critically weak.",
-    "image": "/images/bases/sydney-airport.png"
-  },
-  {
-    "name": "Glacier Plateau",
-    "slug": "glacier-plateau",
-    "type": "elevated_stronghold",
-    "region": "polar_extreme",
-    "country": "Antarctica",
-    "lat": -82.8628,
-    "long": 135.0,
-    "scores": {
-      "overall": 2.9,
-      "categories": {
-        "defensibility": 5.8,
-        "sustainability": 1.3,
-        "isolation": 9.2
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 8,
-        "rationale": "The Glacier Plateau elevated stronghold setting keeps it well insulated from casual access and mass movement."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Glacier Plateau maintenance score is limited because food, fuel, and medical support are almost entirely imported or pre-staged."
-      },
-      "populationCapacity": {
-        "score": 4,
-        "rationale": "The Glacier Plateau profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 1,
-        "rationale": "The Glacier Plateau resource score is weak because the profile shows limited independent replenishment for long-term survival."
-      }
-    },
-    "description": {
-      "summary": "Glacier terrain provides exceptional separation and approach control, but almost no independent life-support capacity.",
-      "strengths": [
-        "Terrain and weather create formidable natural barriers to intrusion",
-        "Extreme remoteness minimizes direct conflict pressure"
-      ],
-      "weaknesses": [
-        "Food, fuel, and medical support are almost entirely imported or pre-staged",
-        "Exposure risk from cold, storms, and mobility loss compounds over time"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Limited-duration concealment or scientific-style outpost with heavy prepositioning",
-      "failureMode": "Life-support chain collapse in a resource-null environment"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Weak",
-      "longTerm": "Weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Use only as a low-traffic hide site paired with stronger production-capable hubs",
-      "keyRisk": "Mistaking low attacker probability for true long-term survivability"
-    },
-    "realityCheck": "What kills you here is exposure and supply failure, not attackers.",
-    "scoreNarrative": "Glacier scores poorly overall because elite isolation cannot compensate for near-zero sustainability.",
-    "image": "/images/bases/glacier-plateau.png"
   },
   {
     "name": "Crevasse Field Glacier",
@@ -7411,70 +6109,6 @@
     "image": "/images/bases/camp-century-ice-tunnels.png"
   },
   {
-    "name": "Phoenix Airfield (McMurdo)",
-    "slug": "phoenix-airfield-mcmurdo",
-    "type": "transit_hub",
-    "region": "polar_extreme",
-    "country": "Antarctica",
-    "lat": -77.9564,
-    "long": 166.7667,
-    "scores": {
-      "overall": 3.4,
-      "categories": {
-        "defensibility": 2.5,
-        "sustainability": 1.8,
-        "isolation": 8.5
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 6,
-        "rationale": "The Phoenix Airfield (McMurdo) profile cites useful as a relay node between remote sectors, which reduces casual access pressure in Antarctica."
-      },
-      "maintenanceBurden": {
-        "score": 1,
-        "rationale": "The Phoenix Airfield (McMurdo) profile benefits from simple layout allows fast operational setup, but infrastructure is fuel-dependent and fragile under disruption keeps upkeep demanding."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The Phoenix Airfield (McMurdo) profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 3,
-        "rationale": "The Phoenix Airfield (McMurdo) resource score is constrained because infrastructure is fuel-dependent and fragile under disruption."
-      }
-    },
-    "description": {
-      "summary": "Phoenix Airfield is useful for movement and staging, but as a survival base it is a flat, exposed logistics point with almost no self-sustaining capacity.",
-      "strengths": [
-        "Runway access supports rapid evacuation or resupply windows",
-        "Simple layout allows fast operational setup",
-        "Useful as a relay node between remote sectors"
-      ],
-      "weaknesses": [
-        "Open terrain offers minimal natural defense depth",
-        "Infrastructure is fuel-dependent and fragile under disruption",
-        "No reliable food or water production base on site"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Transit hub and emergency extraction point",
-      "failureMode": "Sustainment fails first once fuel, parts, and flights stop"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Weak",
-      "longTerm": "Collapse-prone"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Brief stopover for movement, triage, and redistribution of people or supplies",
-      "keyRisk": "What kills you here is dependence on external logistics the moment air operations degrade"
-    },
-    "realityCheck": "Assumes runway operability, aircraft access, and security staffing. If any one of those fails, site value drops sharply.",
-    "scoreNarrative": "Phoenix Airfield earns points for access utility but remains poor as a defensive or sustainable holdout. It is a tool, not a sanctuary.",
-    "image": "/images/bases/phoenix-airfield-mcmurdo.png"
-  },
-  {
     "name": "Port of Murmansk",
     "slug": "port-of-murmansk",
     "type": "transit_hub",
@@ -7859,70 +6493,6 @@
     "image": "/images/bases/itaipu-dam.png"
   },
   {
-    "name": "Bunge Soy Processing Plant (Santos)",
-    "slug": "bunge-soy-processing-plant-santos",
-    "type": "industrial_site",
-    "region": "south_america",
-    "country": "Brazil",
-    "lat": -23.9608,
-    "long": -46.3336,
-    "scores": {
-      "overall": 3.8,
-      "categories": {
-        "defensibility": 2.8,
-        "sustainability": 5.4,
-        "isolation": 2.5
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 3,
-        "rationale": "The Bunge Soy Processing Plant (Santos) exposure score is held down because dense surrounding activity raises conflict and contamination risk."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Bunge Soy Processing Plant (Santos) maintenance score is helped by existing processing and storage systems can extend food utility short-term, making daily upkeep more manageable."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The Bunge Soy Processing Plant (Santos) profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 6,
-        "rationale": "The Bunge Soy Processing Plant (Santos) resource score is strengthened because the profile notes existing processing and storage systems can extend food utility short-term."
-      }
-    },
-    "description": {
-      "summary": "Bunge Santos provides useful food-processing infrastructure, but it is an exposed industrial site that depends on fragile upstream and downstream networks.",
-      "strengths": [
-        "Existing processing and storage systems can extend food utility short-term",
-        "Industrial logistics footprint supports rapid throughput when supplied",
-        "Urban port proximity offers multiple transport interfaces"
-      ],
-      "weaknesses": [
-        "Site is difficult to fortify against persistent intrusion pressure",
-        "Operations rely on external inputs that fail in prolonged disruption",
-        "Dense surrounding activity raises conflict and contamination risk"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Short-term processing and redistribution node",
-      "failureMode": "Supply chain collapse turns infrastructure into an empty shell"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Weak",
-      "longTerm": "Very weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Temporary conversion hub for existing stockpiles, not a permanent refuge",
-      "keyRisk": "What kills you here is dependency on external agricultural and fuel flows"
-    },
-    "realityCheck": "Performance assumes inbound raw materials, spare parts, and steady security staffing. Without those, utility drops quickly.",
-    "scoreNarrative": "Bunge Santos is operationally helpful early but structurally poor for isolated survival. It is logistics-heavy and resilience-light.",
-    "image": "/images/bases/bunge-soy-processing-plant-santos.png"
-  },
-  {
     "name": "Amazon Tall Tower Observatory",
     "slug": "amazon-tall-tower-observatory",
     "type": "institutional_compound",
@@ -8049,7 +6619,7 @@
     "image": "/images/bases/tambopata-research-center.png"
   },
   {
-    "name": "Chiloé Island",
+    "name": "Chilo\u00e9 Island",
     "slug": "chiloe-island",
     "type": "isolated_landmass",
     "region": "south_america",
@@ -8067,22 +6637,22 @@
     "comparisonScores": {
       "exposure": {
         "score": 7,
-        "rationale": "The Chiloé Island profile cites island geography narrows avenues of approach, but population pressure can rise if mainland stability drops."
+        "rationale": "The Chilo\u00e9 Island profile cites island geography narrows avenues of approach, but population pressure can rise if mainland stability drops."
       },
       "maintenanceBurden": {
         "score": 6,
-        "rationale": "The Chiloé Island profile benefits from usable settlement network for distributed storage, but weather can stall transport for extended periods keeps upkeep demanding."
+        "rationale": "The Chilo\u00e9 Island profile benefits from usable settlement network for distributed storage, but weather can stall transport for extended periods keeps upkeep demanding."
       },
       "populationCapacity": {
         "score": 8,
-        "rationale": "The Chiloé Island can support more people than many island or isolated landmass options because it offers usable settlement network for distributed storage."
+        "rationale": "The Chilo\u00e9 Island can support more people than many island or isolated landmass options because it offers usable settlement network for distributed storage."
       },
       "resourceSecurity": {
         "score": 8,
-        "rationale": "The Chiloé Island profile notes established farming and fishing support continuity, but fuel and technical parts still depend on external supply weakens long-term resource security."
+        "rationale": "The Chilo\u00e9 Island profile notes established farming and fishing support continuity, but fuel and technical parts still depend on external supply weakens long-term resource security."
       }
     },
-    "summary": "Chiloé is a strong all-round island base with workable agriculture and defensible approaches, but what kills you here is prolonged maritime cutoff during a hard winter.",
+    "summary": "Chilo\u00e9 is a strong all-round island base with workable agriculture and defensible approaches, but what kills you here is prolonged maritime cutoff during a hard winter.",
     "strengths": [
       "Island geography narrows avenues of approach",
       "Established farming and fishing support continuity",
@@ -8106,12 +6676,12 @@
       "bestUseCase": "Managed island settlement with rationing and local food production",
       "keyRisk": "What kills you here is supply isolation when weather and sea lanes fail together"
     },
-    "realityCheck": "Chiloé is robust, not invulnerable. It needs disciplined stockpiles and winter planning.",
-    "scoreNarrative": "High sustainability plus good defensibility make Chiloé a strong option; dependence on sea logistics is the limiting factor.",
+    "realityCheck": "Chilo\u00e9 is robust, not invulnerable. It needs disciplined stockpiles and winter planning.",
+    "scoreNarrative": "High sustainability plus good defensibility make Chilo\u00e9 a strong option; dependence on sea logistics is the limiting factor.",
     "image": "/images/bases/chiloe-island.png"
   },
   {
-    "name": "Galápagos Islands",
+    "name": "Gal\u00e1pagos Islands",
     "slug": "galapagos-islands",
     "type": "isolated_landmass",
     "region": "south_america",
@@ -8129,22 +6699,22 @@
     "comparisonScores": {
       "exposure": {
         "score": 9,
-        "rationale": "The Galápagos Islands isolated landmass setting keeps it well insulated from casual access and mass movement."
+        "rationale": "The Gal\u00e1pagos Islands isolated landmass setting keeps it well insulated from casual access and mass movement."
       },
       "maintenanceBurden": {
         "score": 3,
-        "rationale": "The Galápagos Islands maintenance score is limited because food, fuel, medicine, and equipment rely on imports."
+        "rationale": "The Gal\u00e1pagos Islands maintenance score is limited because food, fuel, medicine, and equipment rely on imports."
       },
       "populationCapacity": {
         "score": 7,
-        "rationale": "The Galápagos Islands isolated landmass profile can hold a larger group than smaller refuges, though organization and rationing would still matter."
+        "rationale": "The Gal\u00e1pagos Islands isolated landmass profile can hold a larger group than smaller refuges, though organization and rationing would still matter."
       },
       "resourceSecurity": {
         "score": 5,
-        "rationale": "The Galápagos Islands resource score is constrained because freshwater and arable constraints limit scale."
+        "rationale": "The Gal\u00e1pagos Islands resource score is constrained because freshwater and arable constraints limit scale."
       }
     },
-    "summary": "Galápagos has extreme isolation and low random threat traffic, but what kills you here is supply collapse once imported essentials stop.",
+    "summary": "Gal\u00e1pagos has extreme isolation and low random threat traffic, but what kills you here is supply collapse once imported essentials stop.",
     "strengths": [
       "Ocean distance sharply reduces overrun probability",
       "Natural perimeter is easy to monitor",
@@ -8169,132 +6739,8 @@
       "keyRisk": "What kills you here is running out of critical imports before replacement systems exist"
     },
     "realityCheck": "Isolation is excellent, autonomy is not. Success depends on stock depth and demand control from day one.",
-    "scoreNarrative": "Galápagos scores elite on isolation but notably lower on sustainability, preventing top-tier overall resilience.",
+    "scoreNarrative": "Gal\u00e1pagos scores elite on isolation but notably lower on sustainability, preventing top-tier overall resilience.",
     "image": "/images/bases/galapagos-islands.png"
-  },
-  {
-    "name": "Christ the Redeemer",
-    "slug": "christ-the-redeemer",
-    "type": "landmark_structure",
-    "region": "south_america",
-    "country": "Brazil",
-    "lat": -22.9519,
-    "long": -43.2105,
-    "scores": {
-      "overall": 1,
-      "categories": {
-        "defensibility": 1,
-        "sustainability": 1,
-        "isolation": 1
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Christ the Redeemer landmark structure profile leaves it highly exposed compared with more insulated bases."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Christ the Redeemer maintenance score is limited because no shelter depth for weather or attack."
-      },
-      "populationCapacity": {
-        "score": 2,
-        "rationale": "The Christ the Redeemer profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 2,
-        "rationale": "The Christ the Redeemer resource score is weak because the profile shows limited independent replenishment for long-term survival."
-      }
-    },
-    "summary": "Christ the Redeemer is a landmark, not a base; what kills you here is immediate exposure with no sustainment capacity.",
-    "strengths": [
-      "High visibility for observation",
-      "Symbolic rally point value",
-      "Quick approach routes for short visits"
-    ],
-    "weaknesses": [
-      "No shelter depth for weather or attack",
-      "No food, water, or medical infrastructure",
-      "Predictable and heavily exposed position"
-    ],
-    "verdict": {
-      "bestUseCase": "Temporary lookout only",
-      "failureMode": "Rapid casualty risk from exposure and crowd convergence"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Weak",
-      "longTerm": "Non-viable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Brief observation and immediate relocation",
-      "keyRisk": "What kills you here is staying in place where everyone can see and reach you"
-    },
-    "realityCheck": "Treat as a waypoint, never as a survival site.",
-    "scoreNarrative": "All core survival dimensions are critically low; only accessibility is high, which increases threat exposure.",
-    "image": "/images/bases/christ-the-redeemer.png"
-  },
-  {
-    "name": "Lighthouse Punta Del Este",
-    "slug": "lighthouse-punta-del-este",
-    "type": "landmark_structure",
-    "region": "south_america",
-    "country": "Uruguay",
-    "lat": -34.9671,
-    "long": -54.9503,
-    "scores": {
-      "overall": 2,
-      "categories": {
-        "defensibility": 2,
-        "sustainability": 2,
-        "isolation": 3
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 2,
-        "rationale": "The Lighthouse Punta Del Este landmark structure profile leaves it highly exposed compared with more insulated bases."
-      },
-      "maintenanceBurden": {
-        "score": 4,
-        "rationale": "The Lighthouse Punta Del Este maintenance score is helped by simple structure usable as a short observation post, making daily upkeep more manageable."
-      },
-      "populationCapacity": {
-        "score": 4,
-        "rationale": "The Lighthouse Punta Del Este profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 3,
-        "rationale": "The Lighthouse Punta Del Este resource score is weak because the profile shows limited independent replenishment for long-term survival."
-      }
-    },
-    "summary": "Punta lighthouse gives sightlines but almost no survivability; what kills you here is being fixed in a visible coastal choke point without supplies.",
-    "strengths": [
-      "Excellent visual range over nearby approaches",
-      "Simple structure usable as a short observation post",
-      "Immediate coastal orientation for navigation"
-    ],
-    "weaknesses": [
-      "No meaningful food or water base",
-      "High wind and storm exposure",
-      "Limited interior space and poor defensive depth"
-    ],
-    "verdict": {
-      "bestUseCase": "Short-duration lookout and signaling point",
-      "failureMode": "Exposure plus supply failure under sustained pressure"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Weak",
-      "longTerm": "Non-viable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Observation stop integrated into a larger evacuation route",
-      "keyRisk": "What kills you here is prolonged hold in a site designed for navigation, not habitation"
-    },
-    "realityCheck": "Use for minutes to hours, not days to weeks.",
-    "scoreNarrative": "The lighthouse has tactical visibility but fails core survival requirements, keeping it near-bottom tier.",
-    "image": "/images/bases/lighthouse-punta-del-este.png"
   },
   {
     "name": "Cusco Highlands Village",
@@ -8483,7 +6929,7 @@
     "image": "/images/bases/cueva-de-las-manos.png"
   },
   {
-    "name": "Potosí Silver Mine (Cerro Rico)",
+    "name": "Potos\u00ed Silver Mine (Cerro Rico)",
     "slug": "potosi-silver-mine-cerro-rico",
     "type": "subterranean",
     "region": "south_america",
@@ -8501,22 +6947,22 @@
     "comparisonScores": {
       "exposure": {
         "score": 6,
-        "rationale": "The Potosí Silver Mine (Cerro Rico) profile cites multiple controlled points can be fortified, which reduces casual access pressure in Bolivia."
+        "rationale": "The Potos\u00ed Silver Mine (Cerro Rico) profile cites multiple controlled points can be fortified, which reduces casual access pressure in Bolivia."
       },
       "maintenanceBurden": {
         "score": 1,
-        "rationale": "The Potosí Silver Mine (Cerro Rico) maintenance score is helped by multiple controlled points can be fortified, making daily upkeep more manageable."
+        "rationale": "The Potos\u00ed Silver Mine (Cerro Rico) maintenance score is helped by multiple controlled points can be fortified, making daily upkeep more manageable."
       },
       "populationCapacity": {
         "score": 4,
-        "rationale": "The Potosí Silver Mine (Cerro Rico) profile supports a controlled group, but it does not indicate large-settlement capacity."
+        "rationale": "The Potos\u00ed Silver Mine (Cerro Rico) profile supports a controlled group, but it does not indicate large-settlement capacity."
       },
       "resourceSecurity": {
         "score": 4,
-        "rationale": "The Potosí Silver Mine (Cerro Rico) sustainability profile suggests adequate but not surplus resource security for long-term use."
+        "rationale": "The Potos\u00ed Silver Mine (Cerro Rico) sustainability profile suggests adequate but not surplus resource security for long-term use."
       }
     },
-    "summary": "Potosí mine has strong defensive geometry underground, but what kills you here is toxic air and chronic occupational health collapse.",
+    "summary": "Potos\u00ed mine has strong defensive geometry underground, but what kills you here is toxic air and chronic occupational health collapse.",
     "strengths": [
       "Underground network is difficult to assault directly",
       "Multiple controlled points can be fortified",
@@ -8543,130 +6989,6 @@
     "realityCheck": "Without industrial-grade ventilation and hygiene controls, endurance is limited.",
     "scoreNarrative": "High defensibility is offset by severe sustainability penalties from health and infrastructure burden.",
     "image": "/images/bases/potosi-silver-mine-cerro-rico.png"
-  },
-  {
-    "name": "Panama Canal Zone",
-    "slug": "panama-canal-zone",
-    "type": "transit_hub",
-    "region": "south_america",
-    "country": "Panama",
-    "lat": 9.08,
-    "long": -79.68,
-    "scores": {
-      "overall": 3,
-      "categories": {
-        "defensibility": 2,
-        "sustainability": 6,
-        "isolation": 2
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 2,
-        "rationale": "The Panama Canal Zone transit hub profile leaves it highly exposed compared with more insulated bases."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Panama Canal Zone transit hub profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 7,
-        "rationale": "The Panama Canal Zone can support more people than many transit hub options because it offers potential short-term staging capacity."
-      },
-      "resourceSecurity": {
-        "score": 6,
-        "rationale": "The Panama Canal Zone sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "summary": "Panama Canal has infrastructure and throughput, but what kills you here is becoming a strategic flashpoint that cannot be isolated from conflict pressure.",
-    "strengths": [
-      "Large logistical infrastructure and utility footprint",
-      "Access to transport corridors and material flow",
-      "Potential short-term staging capacity"
-    ],
-    "weaknesses": [
-      "Extreme strategic visibility attracts competing forces",
-      "Constant movement makes perimeter control unrealistic",
-      "High dependency on functioning national systems"
-    ],
-    "verdict": {
-      "bestUseCase": "Brief logistics transit node during organized evacuation",
-      "failureMode": "Overrun risk from conflict concentration and uncontrollable traffic"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Weak",
-      "longTerm": "Non-viable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Pass-through point, never static refuge",
-      "keyRisk": "What kills you here is strategic attention from everyone at once"
-    },
-    "realityCheck": "High infrastructure does not equal survivability when strategic contestation is inevitable.",
-    "scoreNarrative": "Sustainability assets are outweighed by near-zero isolation and poor defensibility in a globally contested corridor.",
-    "image": "/images/bases/panama-canal-zone.png"
-  },
-  {
-    "name": "São Paulo Airport",
-    "slug": "sao-paulo-airport",
-    "type": "transit_hub",
-    "region": "south_america",
-    "country": "Brazil",
-    "lat": -23.4356,
-    "long": -46.4731,
-    "scores": {
-      "overall": 2.8,
-      "categories": {
-        "defensibility": 1.8,
-        "sustainability": 3.6,
-        "isolation": 1.5
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The São Paulo Airport exposure score is held down because hyper-connected urban location drives relentless human and zombie pressure."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The São Paulo Airport maintenance score is limited because dependency on complex power, staffing, and supply systems causes fast degradation."
-      },
-      "populationCapacity": {
-        "score": 5,
-        "rationale": "The São Paulo Airport can support more people than many transit hub options because it offers runway and hangar infrastructure supports rapid staging, triage, and extraction."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The São Paulo Airport sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "summary": "São Paulo Airport is a logistics giant but a survival dead end: it offers short-lived salvage value and almost no defensible, low-pressure living profile.",
-    "strengths": [
-      "Large fuel, storage, and utility footprint can be exploited in the first 24–72 hours",
-      "Runway and hangar infrastructure supports rapid staging, triage, and extraction",
-      "High equipment density increases chance of finding tools, vehicles, and comms assets early"
-    ],
-    "weaknesses": [
-      "Hyper-connected urban location drives relentless human and zombie pressure",
-      "Open geometry and multiple ingress points make perimeter control unsustainable",
-      "Dependency on complex power, staffing, and supply systems causes fast degradation"
-    ],
-    "verdict": {
-      "bestUseCase": "One-time rapid scavenging and evacuation staging point",
-      "failureMode": "Continuous inflow pressure collapses perimeter control long before resources can be stabilized"
-    },
-    "survivalProfile": {
-      "initial": "Moderate for hours, not days",
-      "shortTerm": "Weak",
-      "longTerm": "Non-viable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Hit-and-move logistics raid with strict exit deadline",
-      "keyRisk": "The base becomes a magnet: accessibility amplifies threat faster than defenses can scale"
-    },
-    "realityCheck": "Assumes immediate organized arrival, preplanned extraction routes, and no attempt to hold terminal complexes as a settlement.",
-    "scoreNarrative": "Accessibility is the dominant advantage but also the fatal flaw. Defensibility and isolation are near-bottom, so even moderate supplies cannot convert this site into a survivable base.",
-    "image": "/images/bases/sao-paulo-airport.png"
   },
   {
     "name": "Hilltop Fort Rajasthan",
@@ -8731,7 +7053,7 @@
     "image": "/images/bases/hilltop-fort-rajasthan.png"
   },
   {
-    "name": "Tiger’s Nest Monastery",
+    "name": "Tiger\u2019s Nest Monastery",
     "slug": "tigers-nest-monastery",
     "type": "elevated_stronghold",
     "region": "south_asia",
@@ -8749,22 +7071,22 @@
     "comparisonScores": {
       "exposure": {
         "score": 8,
-        "rationale": "The Tiger’s Nest Monastery profile cites high isolation reduces random encounter pressure and opportunistic incursions, but difficult access slows all resupply, casualty movement, and infrastructure repair."
+        "rationale": "The Tiger\u2019s Nest Monastery profile cites high isolation reduces random encounter pressure and opportunistic incursions, but difficult access slows all resupply, casualty movement, and infrastructure repair."
       },
       "maintenanceBurden": {
         "score": 2,
-        "rationale": "The Tiger’s Nest Monastery maintenance score is limited because difficult access slows all resupply, casualty movement, and infrastructure repair."
+        "rationale": "The Tiger\u2019s Nest Monastery maintenance score is limited because difficult access slows all resupply, casualty movement, and infrastructure repair."
       },
       "populationCapacity": {
         "score": 4,
-        "rationale": "The Tiger’s Nest Monastery population score is constrained because very limited space for food production, storage expansion, and medical redundancy."
+        "rationale": "The Tiger\u2019s Nest Monastery population score is constrained because very limited space for food production, storage expansion, and medical redundancy."
       },
       "resourceSecurity": {
         "score": 4,
-        "rationale": "The Tiger’s Nest Monastery resource score is constrained because very limited space for food production, storage expansion, and medical redundancy."
+        "rationale": "The Tiger\u2019s Nest Monastery resource score is constrained because very limited space for food production, storage expansion, and medical redundancy."
       }
     },
-    "summary": "Tiger’s Nest is an extreme cliffside redoubt with elite access denial, but its tiny carrying capacity and severe logistics ceiling cap long-term survival.",
+    "summary": "Tiger\u2019s Nest is an extreme cliffside redoubt with elite access denial, but its tiny carrying capacity and severe logistics ceiling cap long-term survival.",
     "strengths": [
       "Near-vertical approach routes create exceptional natural access control",
       "High isolation reduces random encounter pressure and opportunistic incursions",
@@ -8950,7 +7272,7 @@
         "rationale": "The Tiruppur Textile Cluster resource score is strengthened because the profile notes dense industrial ecosystem increases odds of finding tools, generators, and spares."
       }
     },
-    "summary": "Tiruppur’s textile cluster offers manufacturing utility but poor survival geometry; it is better treated as a salvage-and-fabrication zone than a residential base.",
+    "summary": "Tiruppur\u2019s textile cluster offers manufacturing utility but poor survival geometry; it is better treated as a salvage-and-fabrication zone than a residential base.",
     "strengths": [
       "Strong fabrication potential for clothing, insulation, bandaging, and basic protective gear",
       "Dense industrial ecosystem increases odds of finding tools, generators, and spares",
@@ -9227,130 +7549,6 @@
     "image": "/images/bases/lakshadweep.png"
   },
   {
-    "name": "Lighthouse Mahabalipuram",
-    "slug": "lighthouse-mahabalipuram",
-    "type": "landmark_structure",
-    "region": "south_asia",
-    "country": "India",
-    "lat": 12.617,
-    "long": 80.1945,
-    "scores": {
-      "overall": 2.7,
-      "categories": {
-        "defensibility": 3,
-        "isolation": 3,
-        "sustainability": 2
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 2,
-        "rationale": "The Lighthouse Mahabalipuram exposure score is held down because coastal exposure creates predictable approach routes with little buffer depth."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Lighthouse Mahabalipuram landmark structure profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 3,
-        "rationale": "The Lighthouse Mahabalipuram population score is constrained because tiny internal volume prevents meaningful stockpiling for sustained holdout."
-      },
-      "resourceSecurity": {
-        "score": 2,
-        "rationale": "The Lighthouse Mahabalipuram resource score is constrained because no intrinsic food, freshwater, or sanitation makes it fully supply-dependent."
-      }
-    },
-    "summary": "Lighthouse Mahabalipuram is a coastal observation point, not a true survival base. It works for short surveillance and rendezvous because of elevation and clear sightlines. You die when external supplies stop, since the site has no durable food, water, or defensive depth.",
-    "strengths": [
-      "Elevation gives fast visual scanning of shoreline and road approaches.",
-      "Stone structure offers brief weather cover for short observation rotations.",
-      "Compact footprint is easy to occupy for time-boxed watch tasks."
-    ],
-    "weaknesses": [
-      "No intrinsic food, freshwater, or sanitation makes it fully supply-dependent.",
-      "Coastal exposure creates predictable approach routes with little buffer depth.",
-      "Tiny internal volume prevents meaningful stockpiling for sustained holdout."
-    ],
-    "verdict": {
-      "bestUseCase": "Short observation point or rendezvous marker",
-      "failureMode": "Exposure plus supply failure under sustained pressure"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Weak",
-      "longTerm": "Nonviable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Short observation point or rendezvous marker",
-      "keyRisk": "Rapid exposure and depletion force abandonment quickly"
-    },
-    "realityCheck": "Assumes no protected logistics tail and no scalable support infrastructure on site.",
-    "scoreNarrative": "The dominant strength is rapid local surveillance from elevation. The dominant weakness is near-total sustainment dependence, which makes static survival nonviable.",
-    "image": "/images/bases/lighthouse-mahabalipuram.png"
-  },
-  {
-    "name": "Qutub Minar",
-    "slug": "qutub-minar",
-    "type": "landmark_structure",
-    "region": "south_asia",
-    "country": "India",
-    "lat": 28.5245,
-    "long": 77.1855,
-    "scores": {
-      "overall": 1.3,
-      "categories": {
-        "defensibility": 2,
-        "isolation": 1,
-        "sustainability": 1
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Qutub Minar exposure score is held down because dense urban surroundings produce constant multi-direction contact pressure."
-      },
-      "maintenanceBurden": {
-        "score": 1,
-        "rationale": "The Qutub Minar profile benefits from stone construction gives minimal short-duration weather shelter, but no autonomous food, water, power, or waste systems exist on site keeps upkeep demanding."
-      },
-      "populationCapacity": {
-        "score": 4,
-        "rationale": "The Qutub Minar can support more people than many landmark structure options because it offers stone construction gives minimal short-duration weather shelter."
-      },
-      "resourceSecurity": {
-        "score": 3,
-        "rationale": "The Qutub Minar resource score is weak because the profile shows limited independent replenishment for long-term survival."
-      }
-    },
-    "summary": "Qutub Minar is an urban landmark that can serve as a waypoint but not a survivable base. It works only for brief navigation or coordination due to recognizability and height. You die from immediate urban pressure and zero on-site life-support capacity.",
-    "strengths": [
-      "Iconic visibility supports navigation and short rendezvous coordination.",
-      "Stone construction gives minimal short-duration weather shelter.",
-      "Elevation provides brief local situational awareness during movement windows."
-    ],
-    "weaknesses": [
-      "Dense urban surroundings produce constant multi-direction contact pressure.",
-      "No autonomous food, water, power, or waste systems exist on site.",
-      "Layout lacks layered defensive zones and attracts crowd convergence."
-    ],
-    "verdict": {
-      "bestUseCase": "Emergency waypoint only, not a holdout",
-      "failureMode": "Rapid overrun from concentrated urban contact"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Nonviable",
-      "longTerm": "Nonviable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Emergency waypoint only, not a holdout",
-      "keyRisk": "Crowd convergence overwhelms any defensive attempt"
-    },
-    "realityCheck": "Assumes city-scale disruption and no protected exclusion perimeter around the site.",
-    "scoreNarrative": "Its dominant strength is utility as a recognizable coordination marker. Its dominant weakness is extreme urban exposure paired with no survival infrastructure.",
-    "image": "/images/bases/qutub-minar.png"
-  },
-  {
     "name": "Kibber Village",
     "slug": "kibber-village",
     "type": "remote_settlement",
@@ -9597,130 +7795,6 @@
     "realityCheck": "Assumes winterized equipment, fuel, and medical chains are partially prepositioned.",
     "scoreNarrative": "The dominant strength is top-tier hardened defensibility. The dominant weakness is sustainment starvation under altitude and weather constraints.",
     "image": "/images/bases/kargil-war-bunkers.png"
-  },
-  {
-    "name": "Delhi Airport",
-    "slug": "delhi-airport",
-    "type": "transit_hub",
-    "region": "south_asia",
-    "country": "India",
-    "lat": 28.5562,
-    "long": 77.1,
-    "scores": {
-      "overall": 2.0,
-      "categories": {
-        "defensibility": 1,
-        "isolation": 1,
-        "sustainability": 4
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Delhi Airport exposure score is held down because urban feeder networks generate continuous inbound pressure."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Delhi Airport maintenance score is limited because complex systems fail quickly without specialized staffing and stable power."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The Delhi Airport profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The Delhi Airport sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "summary": "Delhi Airport is a massive transit complex suited only for short extraction operations. It works briefly because infrastructure density offers salvageable fuel, vehicles, and staging space. You die when perimeter control collapses under nonstop metropolitan inflow pressure.",
-    "strengths": [
-      "Large infrastructure base offers short-window salvage potential.",
-      "Multiple service zones allow temporary compartmentalized operations.",
-      "Mechanical and fuel assets can support rapid early extraction."
-    ],
-    "weaknesses": [
-      "Site scale exceeds realistic crisis manpower for perimeter control.",
-      "Urban feeder networks generate continuous inbound pressure.",
-      "Complex systems fail quickly without specialized staffing and stable power."
-    ],
-    "verdict": {
-      "bestUseCase": "Brief extraction/logistics node, never a fixed refuge",
-      "failureMode": "Continuous inflow pressure collapses perimeter control long before resources can be stabilized"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Nonviable",
-      "longTerm": "Nonviable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Brief extraction/logistics node, never a fixed refuge",
-      "keyRisk": "Contact pressure and perimeter chaos overwhelm defenses"
-    },
-    "realityCheck": "Assumes metropolitan stress, contested access roads, and no durable air-operations control.",
-    "scoreNarrative": "The dominant strength is short-term logistics and extraction utility. The dominant weakness is unmanageable perimeter exposure in a dense metro network.",
-    "image": "/images/bases/delhi-airport.png"
-  },
-  {
-    "name": "Mumbai Port",
-    "slug": "mumbai-port",
-    "type": "transit_hub",
-    "region": "south_asia",
-    "country": "India",
-    "lat": 18.9488,
-    "long": 72.8354,
-    "scores": {
-      "overall": 3.0,
-      "categories": {
-        "defensibility": 2,
-        "isolation": 1,
-        "sustainability": 6
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Mumbai Port exposure score is held down because low isolation and dense surrounding population keep pressure constant."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Mumbai Port maintenance score is limited because operations depend on fuel, power, and specialist labor continuity."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The Mumbai Port can support more people than many transit hub options because it offers marine assets can support evacuation and coastal movement in early phases."
-      },
-      "resourceSecurity": {
-        "score": 7,
-        "rationale": "The Mumbai Port resource score is strengthened because the profile notes industrial zones provide temporary staging and repair potential."
-      }
-    },
-    "summary": "Mumbai Port is a high-throughput maritime logistics hub, not a durable fortress. It works for rapid salvage and redistribution while port systems still function. You die when open coastal exposure and urban pressure overwhelm security and operational continuity.",
-    "strengths": [
-      "Port infrastructure enables bulk intake, storage, and rapid redistribution.",
-      "Marine assets can support evacuation and coastal movement in early phases.",
-      "Industrial zones provide temporary staging and repair potential."
-    ],
-    "weaknesses": [
-      "Low isolation and dense surrounding population keep pressure constant.",
-      "Open waterfront and multiple access corridors are difficult to secure.",
-      "Operations depend on fuel, power, and specialist labor continuity."
-    ],
-    "verdict": {
-      "bestUseCase": "Temporary logistics exploitation under armed control",
-      "failureMode": "Perimeter attrition and staffing shortfalls collapse output and security simultaneously"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Weak",
-      "longTerm": "Nonviable as static holdout"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Temporary logistics exploitation under armed control",
-      "keyRisk": "Security demand outpaces manpower and depletes stores"
-    },
-    "realityCheck": "Assumes contested shoreline, disrupted shipping rhythm, and unstable labor/security balance.",
-    "scoreNarrative": "The dominant strength is high logistics throughput while systems run. The dominant weakness is persistent exposure that breaks security and operations over time.",
-    "image": "/images/bases/mumbai-port.png"
   },
   {
     "name": "Ha Long Bay Cliffs",
@@ -10343,68 +8417,6 @@
     "image": "/images/bases/palawan.png"
   },
   {
-    "name": "Petronas Towers",
-    "slug": "petronas-towers",
-    "type": "landmark_structure",
-    "region": "southeast_asia",
-    "country": "Malaysia",
-    "lat": 3.1579,
-    "long": 101.7115,
-    "scores": {
-      "overall": 1.3,
-      "categories": {
-        "defensibility": 2,
-        "isolation": 1,
-        "sustainability": 1
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Petronas Towers exposure score is held down because dense city-core location means constant convergence and no isolation."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Petronas Towers maintenance score is helped by interior spaces can provide short-duration shelter while transiting, making daily upkeep more manageable."
-      },
-      "populationCapacity": {
-        "score": 4,
-        "rationale": "The Petronas Towers can support more people than many landmark structure options because it offers interior spaces can provide short-duration shelter while transiting."
-      },
-      "resourceSecurity": {
-        "score": 3,
-        "rationale": "The Petronas Towers resource score is strengthened because the profile notes initial office materials may support very short emergency staging."
-      }
-    },
-    "summary": "Petronas Towers are iconic urban high-rises with negligible collapse-survival utility. They work only as momentary observation or waypoint structures during movement. You die when dense-city convergence and utility failure remove access, water, and safe egress.",
-    "strengths": [
-      "Height offers brief district observation and signaling potential.",
-      "Interior spaces can provide short-duration shelter while transiting.",
-      "Initial office materials may support very short emergency staging."
-    ],
-    "weaknesses": [
-      "Dense city-core location means constant convergence and no isolation.",
-      "No autonomous food, water, or waste systems for sustained occupancy.",
-      "Vertical evacuation bottlenecks and lift dependence create severe failure points."
-    ],
-    "verdict": {
-      "bestUseCase": "Momentary waypoint only during transit",
-      "failureMode": "Immediate urban encirclement and total resource failure"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Nonviable",
-      "longTerm": "Nonviable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Momentary waypoint only during transit",
-      "keyRisk": "Encirclement and utility collapse make prolonged stay fatal"
-    },
-    "realityCheck": "Assumes prolonged urban disruption with no protected utility restoration.",
-    "scoreNarrative": "The dominant strength is brief vantage and coordination value. The dominant weakness is total dependence on an urban utility grid in a high-pressure environment.",
-    "image": "/images/bases/petronas-towers.png"
-  },
-  {
     "name": "Phu Quoc Lighthouse",
     "slug": "phu-quoc-lighthouse",
     "type": "landmark_structure",
@@ -10905,7 +8917,7 @@
         "Limited internal growing and storage capacity",
         "Heritage layout constrains modern hardening adaptations"
       ],
-      "analysis": "The castle’s terrain and structure provide genuine defensive leverage. The limiting factor is urban embedding: pressure, fire risk, and supply dependence from the surrounding city erode long-term viability."
+      "analysis": "The castle\u2019s terrain and structure provide genuine defensive leverage. The limiting factor is urban embedding: pressure, fire risk, and supply dependence from the surrounding city erode long-term viability."
     },
     "verdict": {
       "bestUseCase": "Defensible urban redoubt for disciplined small groups",
@@ -11035,7 +9047,7 @@
         "Internal production capacity is modest without adaptation",
         "Historic fabric constrains heavy retrofitting"
       ],
-      "analysis": "Caerphilly’s layered moat-and-wall geometry gives real stand-off advantage. Its weakness is modern sustainment: it remains a fixed heritage shell requiring external food, fuel, and medical throughput."
+      "analysis": "Caerphilly\u2019s layered moat-and-wall geometry gives real stand-off advantage. Its weakness is modern sustainment: it remains a fixed heritage shell requiring external food, fuel, and medical throughput."
     },
     "verdict": {
       "bestUseCase": "Defensive regional strongpoint with controlled occupancy",
@@ -11425,7 +9437,7 @@
         "Limited land and freshwater constrain growth",
         "Evacuation and medical timing are highly constrained"
       ],
-      "analysis": "Lindisfarne’s tidal timing creates natural control over movement and approach. The trade-off is throughput fragility: weather and tide windows can bottleneck food, fuel, and emergency response."
+      "analysis": "Lindisfarne\u2019s tidal timing creates natural control over movement and approach. The trade-off is throughput fragility: weather and tide windows can bottleneck food, fuel, and emergency response."
     },
     "verdict": {
       "bestUseCase": "Disciplined small-group island refuge with strict timing control",
@@ -11620,7 +9632,7 @@
         "Minimal usable living and storage space",
         "Limited routes in and out create evacuation traps"
       ],
-      "analysis": "Spinnaker’s height offers surveillance value but no viable settlement envelope. In collapse, urban density and constrained internal capacity quickly overwhelm any observational advantage."
+      "analysis": "Spinnaker\u2019s height offers surveillance value but no viable settlement envelope. In collapse, urban density and constrained internal capacity quickly overwhelm any observational advantage."
     },
     "verdict": {
       "bestUseCase": "Brief observation and signaling position",
@@ -11910,75 +9922,6 @@
     ],
     "scoreNarrative": "Good terrain defense cannot offset weak sustainability, so it scores as temporary shelter rather than durable base.",
     "image": "/images/bases/cheddar-gorge-caves.png"
-  },
-  {
-    "name": "Heathrow Airport",
-    "slug": "heathrow-airport",
-    "type": "transit_hub",
-    "region": "uk_ireland",
-    "country": "United Kingdom",
-    "lat": 51.47,
-    "long": -0.4543,
-    "scores": {
-      "overall": 2.0,
-      "categories": {
-        "defensibility": 1.1,
-        "isolation": 0.7,
-        "sustainability": 1.6
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Heathrow Airport transit hub profile leaves it highly exposed compared with more insulated bases."
-      },
-      "maintenanceBurden": {
-        "score": 1,
-        "rationale": "The Heathrow Airport transit hub profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 5,
-        "rationale": "The Heathrow Airport can support more people than many transit hub options because it offers multiple movement corridors in the first hours."
-      },
-      "resourceSecurity": {
-        "score": 3,
-        "rationale": "The Heathrow Airport resource score is weak because the profile shows limited independent replenishment for long-term survival."
-      }
-    },
-    "description": {
-      "summary": "Heathrow is resource-rich but fundamentally non-defensible at collapse scale; what kills you here is mass convergence and perimeter chaos within days.",
-      "strengths": [
-        "Large immediate salvage pool",
-        "Multiple movement corridors in the first hours",
-        "Useful as a rapid extraction waypoint only"
-      ],
-      "weaknesses": [
-        "Extreme visibility and human pressure",
-        "Impossible perimeter-to-manpower ratio",
-        "Rapid systems failure without full institutional staffing"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Fast salvage-and-exit node, never a settlement",
-      "failureMode": "Congestion and violence overwhelm all control attempts"
-    },
-    "survivalProfile": {
-      "initial": "Very weak",
-      "shortTerm": "Very weak",
-      "longTerm": "Non-viable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Hours-long raid with preplanned exfil",
-      "keyRisk": "Teams become trapped in terminal chokepoints"
-    },
-    "realityCheck": "Any plan that includes holding this site is a planning error.",
-    "assumptions": [
-      "Extraction routes remain open",
-      "Group avoids terminal buildings chokepoints",
-      "No attempt at static defense"
-    ],
-    "scoreNarrative": "Isolation and defensibility are near floor values; short-lived salvage value does not translate into survivability.",
-    "image": "/images/bases/heathrow-airport.png"
   },
   {
     "name": "Portsmouth Harbour",
@@ -12650,7 +10593,7 @@
     "image": "/images/bases/heligoland.png"
   },
   {
-    "name": "Île d’Yeu",
+    "name": "\u00cele d\u2019Yeu",
     "slug": "ile-dyeu",
     "type": "isolated_landmass",
     "region": "western_europe",
@@ -12668,22 +10611,22 @@
     "comparisonScores": {
       "exposure": {
         "score": 8,
-        "rationale": "The Île d’Yeu profile cites good island isolation without extreme remoteness, but population concentration can strain local systems."
+        "rationale": "The \u00cele d\u2019Yeu profile cites good island isolation without extreme remoteness, but population concentration can strain local systems."
       },
       "maintenanceBurden": {
         "score": 5,
-        "rationale": "The Île d’Yeu maintenance score is helped by usable settlement footprint for community-scale survival, making daily upkeep more manageable."
+        "rationale": "The \u00cele d\u2019Yeu maintenance score is helped by usable settlement footprint for community-scale survival, making daily upkeep more manageable."
       },
       "populationCapacity": {
         "score": 7,
-        "rationale": "The Île d’Yeu can support more people than many island or isolated landmass options because it offers usable settlement footprint for community-scale survival."
+        "rationale": "The \u00cele d\u2019Yeu can support more people than many island or isolated landmass options because it offers usable settlement footprint for community-scale survival."
       },
       "resourceSecurity": {
         "score": 6,
-        "rationale": "The Île d’Yeu sustainability profile suggests adequate but not surplus resource security for long-term use."
+        "rationale": "The \u00cele d\u2019Yeu sustainability profile suggests adequate but not surplus resource security for long-term use."
       }
     },
-    "summary": "Île d’Yeu is a balanced island refuge with useful separation and livable conditions, but it lacks deep strategic depth. What kills you here is slow resource depletion under prolonged isolation.",
+    "summary": "\u00cele d\u2019Yeu is a balanced island refuge with useful separation and livable conditions, but it lacks deep strategic depth. What kills you here is slow resource depletion under prolonged isolation.",
     "strengths": [
       "Good island isolation without extreme remoteness",
       "Usable settlement footprint for community-scale survival",
@@ -12708,72 +10651,11 @@
       "keyRisk": "Demand growth and interrupted imports degrade resilience"
     },
     "realityCheck": "Assumes early governance, stock accounting, and shoreline control. Without demand management, sustainability decays steadily.",
-    "scoreNarrative": "Île d’Yeu performs well through strong isolation and balanced core scores, but no category is elite enough to absorb major planning failures.",
+    "scoreNarrative": "\u00cele d\u2019Yeu performs well through strong isolation and balanced core scores, but no category is elite enough to absorb major planning failures.",
     "image": "/images/bases/ile-dyeu.png"
   },
   {
-    "name": "Eiffel Tower",
-    "slug": "eiffel-tower",
-    "type": "landmark_structure",
-    "region": "western_europe",
-    "country": "France",
-    "lat": 48.8584,
-    "long": 2.2945,
-    "scores": {
-      "overall": 1,
-      "categories": {
-        "defensibility": 1,
-        "sustainability": 1,
-        "isolation": 1
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Eiffel Tower exposure score is held down because extreme urban density and visibility."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Eiffel Tower landmark structure profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 2,
-        "rationale": "The Eiffel Tower profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 2,
-        "rationale": "The Eiffel Tower resource score is weak because the profile shows limited independent replenishment for long-term survival."
-      }
-    },
-    "summary": "The Eiffel Tower is a visibility trap, not a survival base. What kills you here is immediate exposure and zero self-sufficiency.",
-    "strengths": [
-      "Excellent observation height for short-duration reconnaissance",
-      "Strong symbolic wayfinding point"
-    ],
-    "weaknesses": [
-      "No defensible living footprint",
-      "No food-water autonomy",
-      "Extreme urban density and visibility"
-    ],
-    "verdict": {
-      "bestUseCase": "Brief observation waypoint only",
-      "failureMode": "Rapid overrun from concentrated urban contact"
-    },
-    "survivalProfile": {
-      "initial": "Very weak",
-      "shortTerm": "Very weak",
-      "longTerm": "Non-viable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Temporary lookout before immediate relocation",
-      "keyRisk": "Every signal and movement attracts attention in a dense city core"
-    },
-    "realityCheck": "Assumes access is even possible in a collapse scenario. The site cannot function as a sustained refuge.",
-    "scoreNarrative": "All core survival categories are near-minimum. High accessibility is a liability here, not an advantage.",
-    "image": "/images/bases/eiffel-tower.png"
-  },
-  {
-    "name": "Phare du Créac'h",
+    "name": "Phare du Cr\u00e9ac'h",
     "slug": "phare-du-creach",
     "type": "landmark_structure",
     "region": "western_europe",
@@ -12791,22 +10673,22 @@
     "comparisonScores": {
       "exposure": {
         "score": 6,
-        "rationale": "The Phare du Créac'h landmark structure setting gives it moderate exposure protection compared with more accessible bases."
+        "rationale": "The Phare du Cr\u00e9ac'h landmark structure setting gives it moderate exposure protection compared with more accessible bases."
       },
       "maintenanceBurden": {
         "score": 4,
-        "rationale": "The Phare du Créac'h profile benefits from simple perimeter geometry, but high weather exposure in a coastal environment keeps upkeep demanding."
+        "rationale": "The Phare du Cr\u00e9ac'h profile benefits from simple perimeter geometry, but high weather exposure in a coastal environment keeps upkeep demanding."
       },
       "populationCapacity": {
         "score": 3,
-        "rationale": "The Phare du Créac'h profile supports a controlled group, but it does not indicate large-settlement capacity."
+        "rationale": "The Phare du Cr\u00e9ac'h profile supports a controlled group, but it does not indicate large-settlement capacity."
       },
       "resourceSecurity": {
         "score": 3,
-        "rationale": "The Phare du Créac'h resource score is weak because the profile shows limited independent replenishment for long-term survival."
+        "rationale": "The Phare du Cr\u00e9ac'h resource score is weak because the profile shows limited independent replenishment for long-term survival."
       }
     },
-    "summary": "Phare du Créac’h provides remote coastal isolation and observation value, but it is too small and brittle for extended habitation. What kills you here is capacity failure once stores run thin.",
+    "summary": "Phare du Cr\u00e9ac\u2019h provides remote coastal isolation and observation value, but it is too small and brittle for extended habitation. What kills you here is capacity failure once stores run thin.",
     "strengths": [
       "Strong geographic separation and low background traffic",
       "Excellent sightlines for early warning",
@@ -13081,127 +10963,5 @@
     "realityCheck": "Assumes regular rotation, external supply, and strict occupancy limits. As a permanent base, it is structurally mismatched.",
     "scoreNarrative": "Naours is stronger defensively than it is sustainable. It works as a shelter layer, not as the final survival architecture.",
     "image": "/images/bases/naours-underground-city.png"
-  },
-  {
-    "name": "Charles de Gaulle Airport",
-    "slug": "charles-de-gaulle-airport",
-    "type": "transit_hub",
-    "region": "western_europe",
-    "country": "France",
-    "lat": 49.0097,
-    "long": 2.5479,
-    "scores": {
-      "overall": 2,
-      "categories": {
-        "defensibility": 1,
-        "sustainability": 3,
-        "isolation": 1
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Charles de Gaulle Airport exposure score is held down because zero isolation in a major metro network."
-      },
-      "maintenanceBurden": {
-        "score": 1,
-        "rationale": "The Charles de Gaulle Airport maintenance score is limited because high dependence on complex systems and fuel."
-      },
-      "populationCapacity": {
-        "score": 5,
-        "rationale": "The Charles de Gaulle Airport can support more people than many transit hub options because it offers multiple movement corridors for rapid evacuation."
-      },
-      "resourceSecurity": {
-        "score": 4,
-        "rationale": "The Charles de Gaulle Airport sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "summary": "Charles de Gaulle Airport is a giant logistics surface but a catastrophic survival refuge. What kills you here is relentless exposure from scale, visibility, and traffic convergence.",
-    "strengths": [
-      "Large storage and transport infrastructure",
-      "Multiple movement corridors for rapid evacuation"
-    ],
-    "weaknesses": [
-      "Impossible perimeter burden",
-      "Zero isolation in a major metro network",
-      "High dependence on complex systems and fuel"
-    ],
-    "verdict": {
-      "bestUseCase": "Short-duration extraction and transit only",
-      "failureMode": "Continuous contact attrition overwhelms any defensive effort"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Very weak",
-      "longTerm": "Non-viable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Transit node with immediate exit plan",
-      "keyRisk": "Exposure is constant and multidirectional; static defense fails fast"
-    },
-    "realityCheck": "Assumes temporary use before relocation. Treating CDG as a permanent base is strategically unsound.",
-    "scoreNarrative": "CDG remains near the bottom because defensibility and isolation are minimal. Infrastructure scale cannot compensate for exposure.",
-    "image": "/images/bases/charles-de-gaulle-airport.png"
-  },
-  {
-    "name": "Schiphol Airport",
-    "slug": "schiphol-airport",
-    "type": "transit_hub",
-    "region": "western_europe",
-    "country": "Netherlands",
-    "lat": 52.3105,
-    "long": 4.7683,
-    "scores": {
-      "overall": 2,
-      "categories": {
-        "defensibility": 1,
-        "sustainability": 3,
-        "isolation": 1
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 1,
-        "rationale": "The Schiphol Airport exposure score is held down because open, sprawling layout that is hard to secure."
-      },
-      "maintenanceBurden": {
-        "score": 1,
-        "rationale": "The Schiphol Airport transit hub profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The Schiphol Airport can support more people than many transit hub options because it offers strong transport connectivity for short-window movement."
-      },
-      "resourceSecurity": {
-        "score": 4,
-        "rationale": "The Schiphol Airport sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "summary": "Schiphol has modern infrastructure but shares the same fatal profile as other mega-airports. What kills you here is nonstop exposure across open, high-traffic approach vectors.",
-    "strengths": [
-      "Robust logistics and warehousing footprint",
-      "Strong transport connectivity for short-window movement"
-    ],
-    "weaknesses": [
-      "Open, sprawling layout that is hard to secure",
-      "Very low isolation in a dense urban region",
-      "Dependence on energy, staffing, and technical continuity"
-    ],
-    "verdict": {
-      "bestUseCase": "Evacuation waypoint, not refuge",
-      "failureMode": "Perimeter collapse under constant multidirectional pressure"
-    },
-    "survivalProfile": {
-      "initial": "Weak",
-      "shortTerm": "Very weak",
-      "longTerm": "Non-viable"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Brief staging for relocation operations",
-      "keyRisk": "High visibility and connectivity ensure persistent conflict contact"
-    },
-    "realityCheck": "Assumes mission-oriented use with strict time limits. Long-term occupation is a losing proposition.",
-    "scoreNarrative": "Despite strong infrastructure, Schiphol scores very low where survival matters most: defensibility, isolation, and endurance.",
-    "image": "/images/bases/schiphol-airport.png"
   }
 ]
