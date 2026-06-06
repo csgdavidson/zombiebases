@@ -1,20 +1,11 @@
 {
-  "generatedAt": "2026-06-06T18:17:54Z",
+  "generatedAt": "2026-06-06T19:31:40Z",
   "source": {
     "bases": "data/bases-index.json",
     "schemaVersion": 1,
-    "hash": "5bea1d8979f0b5d54a567265ecd581aa17e3a8428273f7a5b69b0c1a0af3caea"
+    "hash": "ff18880d9ba36d5596e367ca7c06e8081ec3daad50d8e49c1c7827b6fec74a77"
   },
   "interpretations": [
-    {
-      "slug": "2e-rep-barracks-calvi",
-      "scoreBandLabel": "Strong base",
-      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
-      "scoreBandClass": "score-band-strong",
-      "archetypeLabel": "Defensive stronghold",
-      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
-      "scoreShapeSummary": "High-function profile with strong defence, while long-term viability remains the critical upgrade target."
-    },
     {
       "slug": "ait-benhaddou",
       "scoreBandLabel": "Strong base",
@@ -223,15 +214,6 @@
       "scoreShapeSummary": "Partial strength in defence cannot fully offset recurring long-term viability pressure."
     },
     {
-      "slug": "cape-town-airport",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
-    },
-    {
       "slug": "cappadocia-highlands",
       "scoreBandLabel": "Strong base",
       "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
@@ -320,15 +302,6 @@
       "archetypeLabel": "Defensive stronghold",
       "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
       "scoreShapeSummary": "Leans on defence for stability, but weak long-term viability still dictates failure risk."
-    },
-    {
-      "slug": "cueva-de-las-manos",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Any edge in isolation is overwhelmed by severe long-term viability weakness."
     },
     {
       "slug": "cusco-highlands-village",
@@ -475,15 +448,6 @@
       "scoreShapeSummary": "High-function profile with strong isolation, while long-term viability remains the critical upgrade target."
     },
     {
-      "slug": "gaza-tunnel-network",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Partial strength in defence cannot fully offset recurring long-term viability pressure."
-    },
-    {
       "slug": "gdansk-shipyard",
       "scoreBandLabel": "Situational refuge",
       "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
@@ -491,15 +455,6 @@
       "archetypeLabel": "Temporary fallback",
       "archetypeDescription": "Best used as a stopgap while moving toward a stronger base.",
       "scoreShapeSummary": "Partial strength in long-term viability cannot fully offset recurring isolation pressure."
-    },
-    {
-      "slug": "general-santos-fish-port",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
     },
     {
       "slug": "gotland",
@@ -628,15 +583,6 @@
       "scoreShapeSummary": "Partial strength in defence cannot fully offset recurring long-term viability pressure."
     },
     {
-      "slug": "hyundai-heavy-industries-shipyard",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Partial strength in defence cannot fully offset recurring isolation pressure."
-    },
-    {
       "slug": "ile-dyeu",
       "scoreBandLabel": "Strong base",
       "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
@@ -644,15 +590,6 @@
       "archetypeLabel": "Isolation refuge",
       "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
       "scoreShapeSummary": "High-function profile with strong isolation, while long-term viability remains the critical upgrade target."
-    },
-    {
-      "slug": "intramuros-manila",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe isolation weakness."
     },
     {
       "slug": "isle-of-eigg-village",
@@ -925,15 +862,6 @@
       "scoreShapeSummary": "Leans on defence for stability, but weak long-term viability still dictates failure risk."
     },
     {
-      "slug": "mombasa-port",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Partial strength in long-term viability cannot fully offset recurring isolation pressure."
-    },
-    {
       "slug": "mont-saint-michel",
       "scoreBandLabel": "Exceptional base",
       "scoreBandDescription": "Strong survival potential with clear strengths, but not without failure risks.",
@@ -959,15 +887,6 @@
       "archetypeLabel": "Defence-leaning refuge",
       "archetypeDescription": "Protective strength is the main edge, but weaker support traits cap long-term reliability.",
       "scoreShapeSummary": "Partial strength in defence cannot fully offset recurring long-term viability pressure."
-    },
-    {
-      "slug": "murmansk-port",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Partial strength in isolation cannot fully offset recurring long-term viability pressure."
     },
     {
       "slug": "nagurskoye-air-base",
@@ -1114,24 +1033,6 @@
       "scoreShapeSummary": "Leans on isolation for stability, but weak long-term viability still dictates failure risk."
     },
     {
-      "slug": "polar-observation-tower",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Isolation refuge",
-      "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
-      "scoreShapeSummary": "Partial strength in isolation cannot fully offset recurring long-term viability pressure."
-    },
-    {
-      "slug": "port-of-murmansk",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe defence weakness."
-    },
-    {
       "slug": "port-talbot-steelworks",
       "scoreBandLabel": "Situational refuge",
       "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
@@ -1159,15 +1060,6 @@
       "scoreShapeSummary": "Leans on defence for stability, but weak long-term viability still dictates failure risk."
     },
     {
-      "slug": "portsmouth-harbour",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
-    },
-    {
       "slug": "potosi-silver-mine-cerro-rico",
       "scoreBandLabel": "Situational refuge",
       "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
@@ -1184,15 +1076,6 @@
       "archetypeLabel": "Defensive stronghold",
       "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
       "scoreShapeSummary": "Leans on defence for stability, but weak long-term viability still dictates failure risk."
-    },
-    {
-      "slug": "prudhoe-bay-oil-field",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Any edge in isolation is overwhelmed by severe long-term viability weakness."
     },
     {
       "slug": "qeshm-island",
@@ -1238,15 +1121,6 @@
       "archetypeLabel": "Defence-leaning refuge",
       "archetypeDescription": "Protective strength is the main edge, but weaker support traits cap long-term reliability.",
       "scoreShapeSummary": "Leans on defence for stability, but weak long-term viability still dictates failure risk."
-    },
-    {
-      "slug": "rotterdam-port",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
     },
     {
       "slug": "ruhr-industrial-complex",
@@ -1357,15 +1231,6 @@
       "scoreShapeSummary": "Built around elite isolation; long-term viability is the main constraint."
     },
     {
-      "slug": "spinnaker-tower",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Any edge in defence is overwhelmed by severe isolation weakness."
-    },
-    {
       "slug": "st-kilda",
       "scoreBandLabel": "Viable but flawed",
       "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
@@ -1456,15 +1321,6 @@
       "scoreShapeSummary": "Leans on defence for stability, but weak long-term viability still dictates failure risk."
     },
     {
-      "slug": "tiruppur-textile-cluster",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Partial strength in long-term viability cannot fully offset recurring isolation pressure."
-    },
-    {
       "slug": "titan-missile-museum-silo-571-7",
       "scoreBandLabel": "Strong base",
       "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
@@ -1472,15 +1328,6 @@
       "archetypeLabel": "Defensive stronghold",
       "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
       "scoreShapeSummary": "High-function profile with strong defence, while long-term viability remains the critical upgrade target."
-    },
-    {
-      "slug": "tokyo-airport",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Any edge in long-term viability is overwhelmed by severe isolation weakness."
     },
     {
       "slug": "uluru-surroundings",
@@ -1553,15 +1400,6 @@
       "archetypeLabel": "Isolation refuge",
       "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
       "scoreShapeSummary": "Partial strength in isolation cannot fully offset recurring long-term viability pressure."
-    },
-    {
-      "slug": "wuhan-institute-of-virology",
-      "scoreBandLabel": "Fragile option",
-      "scoreBandDescription": "Some short-term utility, but too unstable for sustained survival.",
-      "scoreBandClass": "score-band-fragile",
-      "archetypeLabel": "Fragile shelter",
-      "archetypeDescription": "Can work briefly, but lacks the resilience needed for sustained pressure.",
-      "scoreShapeSummary": "Partial strength in defence cannot fully offset recurring isolation pressure."
     },
     {
       "slug": "zanzibar-island",
