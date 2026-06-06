@@ -47,7 +47,7 @@
     });
   }
 
-  function createBaseCard({ slug, name, href, metaText, description, score, rank, tags, scenarioId, compareHref }) {
+  function createBaseCard({ slug, name, href, metaText, description, score, rank, tags, scenarioId }) {
     const listItem = document.createElement('li');
     listItem.className = 'base-card-item';
 
@@ -94,16 +94,6 @@
     content.append(title, meta, tagRow, summary);
     card.append(content, aside);
     listItem.appendChild(card);
-
-    const resolvedCompareHref = compareHref || window.baseSlugHelper?.getCompareSetupUrl?.(slug);
-    if (resolvedCompareHref) {
-      const compareLink = document.createElement('a');
-      compareLink.className = 'base-card-compare-link';
-      compareLink.href = resolvedCompareHref;
-      compareLink.textContent = 'Compare';
-      compareLink.setAttribute('aria-label', `Compare ${name} against another base`);
-      listItem.appendChild(compareLink);
-    }
 
     return listItem;
   }
