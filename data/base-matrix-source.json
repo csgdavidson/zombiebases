@@ -18,9 +18,7 @@
         { "name": "UK Distribution Warehouse", "slug": "uk-warehouse", "type": "industrial_site" },
         { "name": "Isle of Eigg Village", "slug": "isle-of-eigg-village", "type": "remote_settlement" },
         { "name": "Clovelly", "slug": "clovelly", "type": "remote_settlement" },
-        { "name": "Portsmouth Harbour", "slug": "portsmouth-harbour", "type": "transit_hub" },
-        { "name": "Fastnet Lighthouse", "slug": "fastnet-lighthouse", "type": "landmark_structure" },
-        { "name": "Spinnaker Tower", "slug": "spinnaker-tower", "type": "landmark_structure" }
+        { "name": "Fastnet Lighthouse", "slug": "fastnet-lighthouse", "type": "landmark_structure" }
       ]
     },
 
@@ -38,7 +36,6 @@
         { "name": "Maginot Line Bunkers", "slug": "maginot-line-bunkers", "type": "subterranean" },
         { "name": "NATO Airbase Geilenkirchen", "slug": "nato-airbase-geilenkirchen", "type": "institutional_compound" },
         { "name": "French Legion Base", "slug": "legion-base", "type": "institutional_compound" },
-        { "name": "Rotterdam Port", "slug": "rotterdam-port", "type": "industrial_site" },
         { "name": "Ruhr Industrial Complex", "slug": "ruhr-industrial-complex", "type": "industrial_site" },
         { "name": "Hallstatt", "slug": "hallstatt", "type": "remote_settlement" },
         { "name": "Eguisheim", "slug": "eguisheim", "type": "remote_settlement" },
@@ -64,7 +61,6 @@
         { "name": "Baltic Shipyards", "slug": "shipyard", "type": "industrial_site" },
         { "name": "Longyearbyen", "slug": "longyearbyen", "type": "remote_settlement" },
         { "name": "Visby", "slug": "visby", "type": "remote_settlement" },
-        { "name": "Murmansk Port", "slug": "port-of-murmansk", "type": "transit_hub" },
         { "name": "Kizhi Pogost", "slug": "kizhi-pogost", "type": "landmark_structure" }
       ]
     },
@@ -130,8 +126,6 @@
         { "name": "Oil Terminal Nigeria", "slug": "oil-terminal", "type": "industrial_site" },
         { "name": "Atlas Mountain Village", "slug": "atlas-village", "type": "remote_settlement" },
         { "name": "Namib Desert Settlement", "slug": "namib-settlement", "type": "remote_settlement" },
-        { "name": "Cape Town Airport", "slug": "cape-town-airport", "type": "transit_hub" },
-        { "name": "Mombasa Port", "slug": "mombasa-port", "type": "transit_hub" },
         { "name": "Cape Point Lighthouse", "slug": "cape-point-lighthouse", "type": "landmark_structure" },
         { "name": "Great Mosque of Djenné", "slug": "great-mosque-of-djenne", "type": "landmark_structure" }
       ]
@@ -147,7 +141,6 @@
         { "name": "Qeshm Island", "slug": "qeshm-island", "type": "isolated_landmass" },
         { "name": "Petra", "slug": "petra", "type": "elevated_stronghold" },
         { "name": "Cappadocia Highlands", "slug": "cappadocia-highlands", "type": "elevated_stronghold" },
-        { "name": "Gaza Tunnel Network", "slug": "gaza-tunnel-network", "type": "subterranean" },
         { "name": "Desert Military Base", "slug": "desert-base", "type": "institutional_compound" },
         { "name": "Oil Field Compound", "slug": "oil-compound", "type": "institutional_compound" },
         { "name": "Refinery Complex Gulf", "slug": "gulf-refinery", "type": "industrial_site" },
@@ -196,8 +189,7 @@
         { "name": "Shenzhen Industrial Zone", "slug": "shenzhen", "type": "industrial_site" },
         { "name": "Shipbuilding Yard Korea", "slug": "shipyard-korea", "type": "industrial_site" },
         { "name": "Rural Japanese Village", "slug": "japan-village", "type": "remote_settlement" },
-        { "name": "Mountain Hamlet China", "slug": "china-hamlet", "type": "remote_settlement" },
-        { "name": "Tokyo Airport", "slug": "tokyo-airport", "type": "transit_hub" }
+        { "name": "Mountain Hamlet China", "slug": "china-hamlet", "type": "remote_settlement" }
       ]
     },
 
@@ -205,7 +197,6 @@
       "id": "southeast_asia",
       "name": "Southeast Asia",
       "bases": [
-        { "name": "Intramuros Manila", "slug": "intramuros-manila", "type": "fortified_structure" },
         { "name": "Hue Citadel", "slug": "hue-citadel", "type": "fortified_structure" },
         { "name": "Palawan", "slug": "palawan", "type": "isolated_landmass" },
         { "name": "Komodo Island", "slug": "komodo-island", "type": "isolated_landmass" },
@@ -264,7 +255,6 @@
         { "name": "Antarctic Camp", "slug": "antarctic-camp", "type": "remote_settlement" },
         { "name": "Ice Runway", "slug": "ice-runway", "type": "transit_hub" },
         { "name": "Supply Port Arctic", "slug": "arctic-port", "type": "transit_hub" },
-        { "name": "Polar Observation Tower", "slug": "polar-observation-tower", "type": "landmark_structure" },
         { "name": "Antarctic Lighthouse", "slug": "antarctic-lighthouse", "type": "landmark_structure" }
       ]
     }
