@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-06T19:51:13.577281+00:00",
-  "totalBases": 131,
+  "generatedAt": "2026-06-07T13:18:55.213340+00:00",
+  "totalBases": 116,
   "scoreCategories": [
     "overall",
     "defensibility",
@@ -8,12 +8,12 @@
     "sustainability"
   ],
   "global": {
-    "count": 131,
+    "count": 116,
     "averages": {
-      "overall": 6.59,
-      "defensibility": 7.25,
-      "isolation": 6.8,
-      "sustainability": 5.01
+      "overall": 6.6,
+      "defensibility": 7.23,
+      "isolation": 6.9,
+      "sustainability": 5.02
     },
     "highest": {
       "slug": "cheyenne-mountain-complex",
@@ -28,12 +28,12 @@
   },
   "byRegion": {
     "africa": {
-      "count": 14,
+      "count": 12,
       "averages": {
-        "overall": 6.54,
-        "defensibility": 7.51,
-        "isolation": 6.31,
-        "sustainability": 4.76
+        "overall": 6.57,
+        "defensibility": 7.47,
+        "isolation": 6.7,
+        "sustainability": 4.7
       },
       "highest": {
         "slug": "seychelles",
@@ -47,12 +47,12 @@
       }
     },
     "east_asia": {
-      "count": 9,
+      "count": 8,
       "averages": {
-        "overall": 6.68,
-        "defensibility": 7.79,
-        "isolation": 6.61,
-        "sustainability": 4.9
+        "overall": 6.64,
+        "defensibility": 7.66,
+        "isolation": 6.65,
+        "sustainability": 4.94
       },
       "highest": {
         "slug": "mount-huashan",
@@ -104,12 +104,12 @@
       }
     },
     "north_america": {
-      "count": 13,
+      "count": 11,
       "averages": {
-        "overall": 6.7,
-        "defensibility": 7.55,
-        "isolation": 6.98,
-        "sustainability": 5.09
+        "overall": 6.65,
+        "defensibility": 7.4,
+        "isolation": 7.05,
+        "sustainability": 5.17
       },
       "highest": {
         "slug": "cheyenne-mountain-complex",
@@ -123,12 +123,12 @@
       }
     },
     "oceania": {
-      "count": 11,
+      "count": 9,
       "averages": {
-        "overall": 6.26,
-        "defensibility": 6.95,
-        "isolation": 6.86,
-        "sustainability": 4.83
+        "overall": 6.16,
+        "defensibility": 6.77,
+        "isolation": 6.97,
+        "sustainability": 4.81
       },
       "highest": {
         "slug": "tasmania",
@@ -142,16 +142,16 @@
       }
     },
     "polar_extreme": {
-      "count": 8,
+      "count": 5,
       "averages": {
         "overall": 6.44,
-        "defensibility": 7.35,
-        "isolation": 8.46,
-        "sustainability": 3.88
+        "defensibility": 7.86,
+        "isolation": 8.74,
+        "sustainability": 3.4
       },
       "highest": {
-        "slug": "greenland",
-        "name": "Greenland",
+        "slug": "olavsvern-naval-base",
+        "name": "Olavsvern Naval Base",
         "overall": 6.8
       },
       "lowest": {
@@ -180,12 +180,12 @@
       }
     },
     "south_asia": {
-      "count": 11,
+      "count": 10,
       "averages": {
-        "overall": 7.01,
+        "overall": 7.05,
         "defensibility": 7.79,
-        "isolation": 7.2,
-        "sustainability": 5.08
+        "isolation": 7.51,
+        "sustainability": 5.05
       },
       "highest": {
         "slug": "andaman-islands",
@@ -199,12 +199,12 @@
       }
     },
     "southeast_asia": {
-      "count": 12,
+      "count": 10,
       "averages": {
-        "overall": 6.56,
-        "defensibility": 6.71,
-        "isolation": 6.83,
-        "sustainability": 6.0
+        "overall": 6.62,
+        "defensibility": 6.85,
+        "isolation": 6.95,
+        "sustainability": 6.05
       },
       "highest": {
         "slug": "palawan",
@@ -212,17 +212,17 @@
         "overall": 7.3
       },
       "lowest": {
-        "slug": "sime-darby-palm-oil-estate-sabah",
-        "name": "Sime Darby Palm Oil Estate (Sabah)",
+        "slug": "banlung",
+        "name": "Banlung",
         "overall": 6.1
       }
     },
     "uk_ireland": {
-      "count": 13,
+      "count": 12,
       "averages": {
-        "overall": 6.48,
+        "overall": 6.52,
         "defensibility": 7.43,
-        "isolation": 6.77,
+        "isolation": 6.88,
         "sustainability": 4.62
       },
       "highest": {
@@ -237,12 +237,12 @@
       }
     },
     "western_europe": {
-      "count": 12,
+      "count": 11,
       "averages": {
-        "overall": 6.38,
-        "defensibility": 7.14,
-        "isolation": 6.33,
-        "sustainability": 5.09
+        "overall": 6.41,
+        "defensibility": 7.06,
+        "isolation": 6.63,
+        "sustainability": 5.1
       },
       "highest": {
         "slug": "mont-saint-michel",
@@ -277,12 +277,12 @@
       }
     },
     "fortified_structure": {
-      "count": 21,
+      "count": 19,
       "averages": {
         "overall": 6.72,
-        "defensibility": 8.37,
-        "isolation": 5.79,
-        "sustainability": 4.7
+        "defensibility": 8.39,
+        "isolation": 5.75,
+        "sustainability": 4.69
       },
       "highest": {
         "slug": "mont-saint-michel",
@@ -296,12 +296,12 @@
       }
     },
     "industrial_site": {
-      "count": 7,
+      "count": 4,
       "averages": {
-        "overall": 6.29,
-        "defensibility": 6.14,
-        "isolation": 5.61,
-        "sustainability": 5.9
+        "overall": 6.38,
+        "defensibility": 6.38,
+        "isolation": 5.58,
+        "sustainability": 5.75
       },
       "highest": {
         "slug": "anna-creek-station",
@@ -315,12 +315,12 @@
       }
     },
     "institutional_compound": {
-      "count": 17,
+      "count": 11,
       "averages": {
-        "overall": 6.42,
-        "defensibility": 7.08,
-        "isolation": 6.62,
-        "sustainability": 5.02
+        "overall": 6.36,
+        "defensibility": 6.62,
+        "isolation": 7.4,
+        "sustainability": 4.98
       },
       "highest": {
         "slug": "hanle-observatory",
@@ -334,12 +334,12 @@
       }
     },
     "isolated_landmass": {
-      "count": 24,
+      "count": 22,
       "averages": {
-        "overall": 7.16,
+        "overall": 7.22,
         "defensibility": 6.5,
-        "isolation": 8.33,
-        "sustainability": 6.14
+        "isolation": 8.29,
+        "sustainability": 6.31
       },
       "highest": {
         "slug": "andaman-islands",
@@ -391,11 +391,11 @@
       }
     },
     "subterranean": {
-      "count": 19,
+      "count": 17,
       "averages": {
-        "overall": 6.38,
-        "defensibility": 8.28,
-        "isolation": 6.33,
+        "overall": 6.35,
+        "defensibility": 8.25,
+        "isolation": 6.4,
         "sustainability": 3.77
       },
       "highest": {

@@ -317,132 +317,8 @@
       "keyRisk": "Entrapment risk: once exits, water, or supply flow are compromised, defenders are pinned in a degrading pit complex."
     },
     "realityCheck": "Assumes safe zones can be established inside a partially degraded industrial landscape. Long-term habitation requires major remediation and external inputs.",
-    "scoreNarrative": "Kimberley now scores high in defensibility because the pit and surrounding works can channel and slow attacks. Isolation is moderate, but sustainability is decisively weak: water, food, and safe long-term habitability are poor. The dominant failure mode is entrapment\u2014if lifelines fail, the same terrain that protects you can trap you.",
+    "scoreNarrative": "Kimberley now scores high in defensibility because the pit and surrounding works can channel and slow attacks. Isolation is moderate, but sustainability is decisively weak: water, food, and safe long-term habitability are poor. The dominant failure mode is entrapment—if lifelines fail, the same terrain that protects you can trap you.",
     "image": "/images/bases/kimberley-big-hole-mining-complex.png"
-  },
-  {
-    "name": "Bonny Island LNG Terminal",
-    "slug": "bonny-island-lng-terminal",
-    "type": "industrial_site",
-    "region": "africa",
-    "country": "Nigeria",
-    "lat": 4.4297,
-    "long": 7.17,
-    "scores": {
-      "overall": 6.1,
-      "categories": {
-        "defensibility": 7.0,
-        "sustainability": 4.8,
-        "isolation": 4.5
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 4,
-        "rationale": "The Bonny Island LNG Terminal profile cites excellent island isolation significantly reduces unstructured overland threat flow, which reduces casual access pressure in Nigeria."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Bonny Island LNG Terminal profile benefits from controlled industrial footprint can support perimeter management and access denial, but very low sustainability without continuous technical support, fuel, and spare parts keeps upkeep demanding."
-      },
-      "populationCapacity": {
-        "score": 5,
-        "rationale": "The Bonny Island LNG Terminal profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 6,
-        "rationale": "The Bonny Island LNG Terminal resource score is strengthened because the profile notes controlled industrial footprint can support perimeter management and access denial."
-      }
-    },
-    "description": {
-      "summary": "Bonny LNG Terminal is a powerful industrial strongpoint with controlled space and hard infrastructure, but it is brittle under collapse conditions. Its usefulness depends on complex systems, skilled maintenance, and steady supply chains that are hard to replace locally.",
-      "strengths": [
-        "Excellent island isolation significantly reduces unstructured overland threat flow",
-        "Controlled industrial footprint can support perimeter management and access denial"
-      ],
-      "weaknesses": [
-        "Very low sustainability without continuous technical support, fuel, and spare parts",
-        "Industrial safety hazards create persistent high-impact failure risks for residents"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Short-term maritime-isolated hold with strict perimeter control",
-      "failureMode": "Technical system failure collapses water, power, and safety faster than defenses can compensate"
-    },
-    "survivalProfile": {
-      "initial": "Strong",
-      "shortTerm": "Moderate",
-      "longTerm": "Weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Temporary secure staging site during early disruption in coastal regions",
-      "keyRisk": "Infrastructure failure after external support stops can rapidly collapse power, water, safety controls, and habitability."
-    },
-    "realityCheck": "Assumes initial access to trained operators and stored supplies. Without industrial continuity, habitability declines quickly despite isolation.",
-    "scoreNarrative": "Bonny scores as a capable but fragile base: defensibility is solid, while isolation and sustainability are only moderate once realistic support constraints are applied. The site can perform well in the short run, but long-run survival hinges on complex infrastructure that degrades quickly without technical supply chains.",
-    "image": "/images/bases/bonny-island-lng-terminal.png"
-  },
-  {
-    "name": "Camp Lemonnier",
-    "slug": "camp-lemonnier",
-    "type": "institutional_compound",
-    "region": "africa",
-    "country": "Djibouti",
-    "lat": 11.5473,
-    "long": 43.1595,
-    "scores": {
-      "overall": 6.6,
-      "categories": {
-        "defensibility": 8.5,
-        "sustainability": 5.5,
-        "isolation": 3.5
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 4,
-        "rationale": "The Camp Lemonnier exposure score is held down because low isolation near strategic transport and population corridors increases competition risk."
-      },
-      "maintenanceBurden": {
-        "score": 3,
-        "rationale": "The Camp Lemonnier profile benefits from high defensibility from layered security design and controlled entry points, but sustainability is limited without continued fuel, maintenance, and external supply chains keeps upkeep demanding."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The Camp Lemonnier profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The Camp Lemonnier resource score is constrained because sustainability is limited without continued fuel, maintenance, and external supply chains."
-      }
-    },
-    "description": {
-      "summary": "Camp Lemonnier has exceptional military-grade defensive capability and organized base infrastructure, making it one of the strongest compounds in a direct security sense. But it is not highly independent: if fuel, water treatment, and logistics pipelines fail, performance drops fast.",
-      "strengths": [
-        "High defensibility from layered security design and controlled entry points",
-        "Established base infrastructure supports coordinated operations and rapid response"
-      ],
-      "weaknesses": [
-        "Low isolation near strategic transport and population corridors increases competition risk",
-        "Sustainability is limited without continued fuel, maintenance, and external supply chains"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Early-phase defensive command compound for organized groups",
-      "failureMode": "Persistent attention from external actors erodes security and supply resilience"
-    },
-    "survivalProfile": {
-      "initial": "Very strong",
-      "shortTerm": "Stable with discipline",
-      "longTerm": "Moderate to weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Structured security hub and logistics node during initial regional breakdown",
-      "keyRisk": "Dependence on fuel, water systems, and external supply chains undermines long-term independence despite strong defenses."
-    },
-    "realityCheck": "Assumes occupants can retain control of key systems and perimeter manpower. Long-term autonomy is difficult without dependable supply inflow.",
-    "scoreNarrative": "Camp Lemonnier remains a top-tier defensive site with a very high defensibility score. However, low isolation and logistics dependence limit autonomy, so sustainability and endurance depend on continued fuel, water, maintenance, and resupply. In short: tactically strong, strategically dependent.",
-    "image": "/images/bases/camp-lemonnier.png"
   },
   {
     "name": "Seychelles",
@@ -567,7 +443,7 @@
     "image": "/images/bases/zanzibar-island.png"
   },
   {
-    "name": "Great Mosque of Djenn\u00e9",
+    "name": "Great Mosque of Djenné",
     "slug": "great-mosque-of-djenne",
     "type": "landmark_structure",
     "region": "africa",
@@ -585,23 +461,23 @@
     "comparisonScores": {
       "exposure": {
         "score": 2,
-        "rationale": "The Great Mosque of Djenn\u00e9 exposure score is held down because low sustainability with limited capacity for autonomous food, water, and medical continuity."
+        "rationale": "The Great Mosque of Djenné exposure score is held down because low sustainability with limited capacity for autonomous food, water, and medical continuity."
       },
       "maintenanceBurden": {
         "score": 3,
-        "rationale": "The Great Mosque of Djenn\u00e9 landmark structure profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
+        "rationale": "The Great Mosque of Djenné landmark structure profile has a low maintenance score because keeping it useful depends on complex or high-effort upkeep."
       },
       "populationCapacity": {
         "score": 3,
-        "rationale": "The Great Mosque of Djenn\u00e9 population score is constrained because low sustainability with limited capacity for autonomous food, water, and medical continuity."
+        "rationale": "The Great Mosque of Djenné population score is constrained because low sustainability with limited capacity for autonomous food, water, and medical continuity."
       },
       "resourceSecurity": {
         "score": 4,
-        "rationale": "The Great Mosque of Djenn\u00e9 sustainability profile suggests adequate but not surplus resource security for long-term use."
+        "rationale": "The Great Mosque of Djenné sustainability profile suggests adequate but not surplus resource security for long-term use."
       }
     },
     "description": {
-      "summary": "The Great Mosque of Djenn\u00e9 is visually imposing and culturally significant, but materially fragile for sustained defensive use. It may serve as a symbolic shelter point, yet structural vulnerability and limited isolation make it unsuitable as a serious long-term survival base.",
+      "summary": "The Great Mosque of Djenné is visually imposing and culturally significant, but materially fragile for sustained defensive use. It may serve as a symbolic shelter point, yet structural vulnerability and limited isolation make it unsuitable as a serious long-term survival base.",
       "strengths": [
         "Slightly stronger defensibility than surrounding open urban fabric due to consolidated structure",
         "Moderate isolation from major coastal megacities compared with high-density hub locations"
@@ -625,11 +501,11 @@
       "keyRisk": "Material fragility: a culturally iconic structure can look strong but lacks the durability and defensive utility needed for sustained conflict conditions."
     },
     "realityCheck": "Assumes respectful, minimal-impact use of a heritage landmark. Practical survival planning should prioritize purpose-built or resource-rich alternatives.",
-    "scoreNarrative": "Djenn\u00e9 remains a weak base overall: defensibility is limited, isolation is low, and sustainability is modest at best. The dominant failure mode is fragility\u2014its heritage construction and symbolic prominence do not translate into robust, long-duration defensive performance.",
+    "scoreNarrative": "Djenné remains a weak base overall: defensibility is limited, isolation is low, and sustainability is modest at best. The dominant failure mode is fragility—its heritage construction and symbolic prominence do not translate into robust, long-duration defensive performance.",
     "image": "/images/bases/great-mosque-of-djenne.png"
   },
   {
-    "name": "A\u00eft Benhaddou",
+    "name": "Aït Benhaddou",
     "slug": "ait-benhaddou",
     "type": "remote_settlement",
     "region": "africa",
@@ -647,23 +523,23 @@
     "comparisonScores": {
       "exposure": {
         "score": 7,
-        "rationale": "The A\u00eft Benhaddou profile cites moderate isolation reduces immediate pressure compared with major urban corridors, which reduces casual access pressure in Morocco."
+        "rationale": "The Aït Benhaddou profile cites moderate isolation reduces immediate pressure compared with major urban corridors, which reduces casual access pressure in Morocco."
       },
       "maintenanceBurden": {
         "score": 6,
-        "rationale": "The A\u00eft Benhaddou remote settlement form suggests a moderate upkeep load without clear low-tech maintenance advantages."
+        "rationale": "The Aït Benhaddou remote settlement form suggests a moderate upkeep load without clear low-tech maintenance advantages."
       },
       "populationCapacity": {
         "score": 5,
-        "rationale": "The A\u00eft Benhaddou population score is constrained because low sustainability in arid conditions with constrained local food-water productivity."
+        "rationale": "The Aït Benhaddou population score is constrained because low sustainability in arid conditions with constrained local food-water productivity."
       },
       "resourceSecurity": {
         "score": 6,
-        "rationale": "The A\u00eft Benhaddou sustainability profile suggests adequate but not surplus resource security for long-term use."
+        "rationale": "The Aït Benhaddou sustainability profile suggests adequate but not surplus resource security for long-term use."
       }
     },
     "description": {
-      "summary": "A\u00eft Benhaddou is a strong niche base: its fortified settlement form and relative isolation support controlled defense and lower immediate pressure. Its long-term ceiling is set by arid constraints, where limited water and food capacity become the decisive bottleneck.",
+      "summary": "Aït Benhaddou is a strong niche base: its fortified settlement form and relative isolation support controlled defense and lower immediate pressure. Its long-term ceiling is set by arid constraints, where limited water and food capacity become the decisive bottleneck.",
       "strengths": [
         "High defensibility from fortified form, elevation, and controllable access paths",
         "Moderate isolation reduces immediate pressure compared with major urban corridors"
@@ -675,7 +551,7 @@
     },
     "verdict": {
       "bestUseCase": "Medium-term defended settlement for disciplined small groups",
-      "failureMode": "Environmental and infrastructure limits outlast the site\u2019s defensive advantages"
+      "failureMode": "Environmental and infrastructure limits outlast the site’s defensive advantages"
     },
     "survivalProfile": {
       "initial": "Strong",
@@ -687,7 +563,7 @@
       "keyRisk": "Water scarcity is the primary long-horizon threat, with food limits compounding endurance risk in prolonged disruption."
     },
     "realityCheck": "Assumes access to nearby water management and cultivated support zones. The ksar alone is not a complete long-horizon survival system.",
-    "scoreNarrative": "A\u00eft Benhaddou scores as a high-performing niche option, with strong defensibility and strong isolation working together. Sustainability remains the limiting category because water and food expansion are constrained in an arid environment. The base can excel with tight planning, but water scarcity defines the long-term kill condition.",
+    "scoreNarrative": "Aït Benhaddou scores as a high-performing niche option, with strong defensibility and strong isolation working together. Sustainability remains the limiting category because water and food expansion are constrained in an arid environment. The base can excel with tight planning, but water scarcity defines the long-term kill condition.",
     "image": "/images/bases/ait-benhaddou.png"
   },
   {
@@ -1011,70 +887,6 @@
     "image": "/images/bases/tiger-leaping-gorge-cliffs.png"
   },
   {
-    "name": "Great Wall Fortress Sections",
-    "slug": "great-wall-fortress-sections",
-    "type": "fortified_structure",
-    "region": "east_asia",
-    "country": "China",
-    "lat": 40.4319,
-    "long": 116.5704,
-    "scores": {
-      "overall": 7.0,
-      "categories": {
-        "defensibility": 8.8,
-        "sustainability": 4.6,
-        "isolation": 6.3
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 5,
-        "rationale": "The Great Wall Fortress Sections profile cites fortified walls, towers, and ridge lines support surveillance and layered defense, which reduces casual access pressure in China."
-      },
-      "maintenanceBurden": {
-        "score": 5,
-        "rationale": "The Great Wall Fortress Sections maintenance score is limited because many sections are exposed to weather and require significant retrofit effort."
-      },
-      "populationCapacity": {
-        "score": 4,
-        "rationale": "The Great Wall Fortress Sections profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 6,
-        "rationale": "The Great Wall Fortress Sections sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "Great Wall fortress sections provide strong engineered defense lines and terrain leverage, but they are fragmented assets rather than turnkey settlements. The dominant trade-off is excellent barrier control versus poor self-sustaining living capacity.",
-      "strengths": [
-        "Fortified walls, towers, and ridge lines support surveillance and layered defense",
-        "Historic choke corridors can be selectively held with small teams",
-        "Segment choice allows some flexibility in tactical positioning"
-      ],
-      "weaknesses": [
-        "Long, discontinuous sections are manpower-intensive to secure continuously",
-        "Built-in water, sanitation, and food systems are inadequate for multi-year occupancy",
-        "Many sections are exposed to weather and require significant retrofit effort"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Defensive control line and observation network, not a standalone colony",
-      "failureMode": "Manpower and sustainment deficits hollow out control of dispersed sections"
-    },
-    "survivalProfile": {
-      "initial": "Strong",
-      "shortTerm": "Moderate to strong",
-      "longTerm": "Moderate to weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Temporary defensive spine linked to nearby villages or support farms",
-      "keyRisk": "Teams become overextended defending static infrastructure without enough supply depth"
-    },
-    "realityCheck": "Assumes selecting and fortifying a limited segment, not attempting to hold broad continuous wall systems.",
-    "scoreNarrative": "Great Wall sections reach the 7 range through very high defensibility, but only if occupation is tightly scoped. What kills you here is overextension: too much wall, not enough sustainment.",
-    "image": "/images/bases/great-wall-fortress-sections.png"
-  },
-  {
     "name": "Himeji Castle",
     "slug": "himeji-castle",
     "type": "fortified_structure",
@@ -1359,7 +1171,7 @@
       }
     },
     "description": {
-      "summary": "Iwo Jima\u2019s bunker network is exceptionally hard to assault and highly isolated, but it is austere and resource-poor. What kills you here is life-support collapse underground: water, ventilation, and medical limits outrun defensive advantages.",
+      "summary": "Iwo Jima’s bunker network is exceptionally hard to assault and highly isolated, but it is austere and resource-poor. What kills you here is life-support collapse underground: water, ventilation, and medical limits outrun defensive advantages.",
       "strengths": [
         "Elite defensibility from hardened subterranean terrain and chokepoints",
         "High ocean isolation minimizes routine external threat contact"
@@ -2165,7 +1977,7 @@
       }
     },
     "description": {
-      "summary": "Cappadocia\u2019s broken terrain and concealment options make it a strong defensive refuge, but what kills you here is water-and-agriculture throughput: dispersed hideouts can outlast attacks, not prolonged scarcity.",
+      "summary": "Cappadocia’s broken terrain and concealment options make it a strong defensive refuge, but what kills you here is water-and-agriculture throughput: dispersed hideouts can outlast attacks, not prolonged scarcity.",
       "strengths": [
         "Complex valleys and rock formations create layered observation, concealment, and chokepoint defense",
         "Distributed cave and ridge positions support fallback depth during localized breaches"
@@ -2599,7 +2411,7 @@
       }
     },
     "description": {
-      "summary": "Siwa Oasis is one of the more credible long-horizon refuges in the region, but what kills you here is water-system fragility: contamination, overdraw, or pump failure can collapse the settlement\u2019s carrying capacity.",
+      "summary": "Siwa Oasis is one of the more credible long-horizon refuges in the region, but what kills you here is water-system fragility: contamination, overdraw, or pump failure can collapse the settlement’s carrying capacity.",
       "strengths": [
         "Distance from major corridors lowers sustained external pressure",
         "Existing oasis settlement pattern supports agriculture and local continuity"
@@ -2999,68 +2811,6 @@
     "image": "/images/bases/hutchinson-salt-storage-caverns.png"
   },
   {
-    "name": "Area 51",
-    "slug": "area-51",
-    "type": "institutional_compound",
-    "region": "north_america",
-    "country": "United States",
-    "lat": 37.235,
-    "long": -115.8111,
-    "scores": {
-      "overall": 6.9,
-      "categories": {
-        "defensibility": 7.8,
-        "sustainability": 5.3,
-        "isolation": 8.2
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 7,
-        "rationale": "The Area 51 institutional compound setting gives it moderate exposure protection compared with more accessible bases."
-      },
-      "maintenanceBurden": {
-        "score": 4,
-        "rationale": "The Area 51 maintenance score is limited because mission-critical systems likely rely on specialist parts and technical labor."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The Area 51 profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 6,
-        "rationale": "The Area 51 resource score is constrained because desert constraints limit local food-water autonomy without major adaptation."
-      }
-    },
-    "description": {
-      "summary": "Area 51 combines remoteness, controlled approaches, and hardened infrastructure, but its dominant failure mode is systems complexity debt: without specialized maintenance pipelines, high-tech capabilities decay into unusable overhead.",
-      "strengths": [
-        "Large exclusion distance reduces uncontrolled contact and opportunistic approach",
-        "Layered security design supports screening, zoning, and response depth"
-      ],
-      "weaknesses": [
-        "Mission-critical systems likely rely on specialist parts and technical labor",
-        "Desert constraints limit local food-water autonomy without major adaptation"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Command-and-control enclave during early-to-mid disruption phases",
-      "failureMode": "Technical sustainment backlog erodes core utilities and operational readiness"
-    },
-    "survivalProfile": {
-      "initial": "Strong",
-      "shortTerm": "Strong",
-      "longTerm": "Moderate"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Prioritize low-tech, maintainable subsystems and shrink footprint over time",
-      "keyRisk": "Trying to preserve full peacetime capability with collapsing supply chains"
-    },
-    "realityCheck": "Remote security helps, but spare parts, water strategy, and maintainable power architecture decide endurance.",
-    "scoreNarrative": "Area 51 sits just under 7: strong defensibility and isolation are offset by only moderate sustainability. The rating assumes partial downshifting from complex systems to simpler, repairable operations.",
-    "image": "/images/bases/area-51.png"
-  },
-  {
     "name": "Guantanamo Bay",
     "slug": "guantanamo-bay",
     "type": "institutional_compound",
@@ -3433,68 +3183,6 @@
     "scoreNarrative": "Cheyenne remains top-tier overall because defensibility is maximal; long-run risk comes from technical sustainment complexity."
   },
   {
-    "name": "Titan Missile Museum (Silo 571-7)",
-    "slug": "titan-missile-museum-silo-571-7",
-    "type": "subterranean",
-    "region": "north_america",
-    "country": "USA",
-    "lat": 31.8876,
-    "long": -110.9965,
-    "scores": {
-      "overall": 7,
-      "categories": {
-        "defensibility": 9,
-        "sustainability": 4,
-        "isolation": 5
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 4,
-        "rationale": "The Titan Missile Museum (Silo 571-7) subterranean site setting gives it moderate exposure protection compared with more accessible bases."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Titan Missile Museum (Silo 571-7) maintenance score is limited because dependence on retrofitted utilities for water, sanitation, and power."
-      },
-      "populationCapacity": {
-        "score": 4,
-        "rationale": "The Titan Missile Museum (Silo 571-7) population score is constrained because constrained living space and airflow margin for larger groups."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The Titan Missile Museum (Silo 571-7) sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "A tough underground shell with real protective value, but limited habitability without major adaptation.",
-      "strengths": [
-        "Hardened structure is highly resistant to direct external threats",
-        "Compact footprint is easier to secure than open compounds"
-      ],
-      "weaknesses": [
-        "Constrained living space and airflow margin for larger groups",
-        "Dependence on retrofitted utilities for water, sanitation, and power"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Short-to-medium duration hardened shelter for a small disciplined team",
-      "failureMode": "Life-support bottlenecks outpace defensive advantages"
-    },
-    "survivalProfile": {
-      "initial": "Strong",
-      "shortTerm": "Moderate",
-      "longTerm": "Weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Exploit structural hardening while capping occupancy and consumption",
-      "keyRisk": "Overfilling a bunker that cannot sustain that load"
-    },
-    "realityCheck": "What kills you here is sustainment choke points inside a sealed site.",
-    "scoreNarrative": "Titan Silo is high-mid overall: elite defensibility is offset by limited long-term habitability and utility depth.",
-    "image": "/images/bases/titan-missile-museum-silo-571-7.png"
-  },
-  {
     "name": "Blue Mountains Cliffs",
     "slug": "blue-mountains-cliffs",
     "type": "elevated_stronghold",
@@ -3681,68 +3369,6 @@
     "image": "/images/bases/fort-denison.png"
   },
   {
-    "name": "Maori Pa Fortifications",
-    "slug": "maori-pa-fortifications",
-    "type": "fortified_structure",
-    "region": "oceania",
-    "country": "New Zealand",
-    "lat": -38.1368,
-    "long": 176.2497,
-    "scores": {
-      "overall": 6.6,
-      "categories": {
-        "defensibility": 7.5,
-        "sustainability": 5.0,
-        "isolation": 6.0
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 5,
-        "rationale": "The Maori Pa Fortifications profile cites elevated earthworks and chokepoints give efficient defensive leverage, which reduces casual access pressure in New Zealand."
-      },
-      "maintenanceBurden": {
-        "score": 6,
-        "rationale": "The Maori Pa Fortifications maintenance score is limited because limited modern shelter, water storage, and medical capacity."
-      },
-      "populationCapacity": {
-        "score": 5,
-        "rationale": "The Maori Pa Fortifications profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 4,
-        "rationale": "The Maori Pa Fortifications sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "Strong terrain-first fortifications can stop early incursions, but most pa sites fail once stocks and water run thin.",
-      "strengths": [
-        "Elevated earthworks and chokepoints give efficient defensive leverage",
-        "Small perimeter is manageable for a disciplined, low-headcount group"
-      ],
-      "weaknesses": [
-        "Limited modern shelter, water storage, and medical capacity",
-        "Short sustainment runway under prolonged pressure"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Short-to-mid duration defensive hold in broken terrain",
-      "failureMode": "Siege-style depletion of water, food, and treatment capacity"
-    },
-    "survivalProfile": {
-      "initial": "Strong",
-      "shortTerm": "Moderate",
-      "longTerm": "Weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Use as a hardened fallback node while mobile teams secure external supply loops",
-      "keyRisk": "Treating a heritage fortification as a self-sustaining settlement"
-    },
-    "realityCheck": "What kills you here is slow sustainment collapse, not the first assault wave.",
-    "scoreNarrative": "Maori pa scores as defense-forward but sustainment-limited: it wins opening phases, then degrades if isolation turns into siege.",
-    "image": "/images/bases/maori-pa-fortifications.png"
-  },
-  {
     "name": "Anna Creek Station",
     "slug": "anna-creek-station",
     "type": "industrial_site",
@@ -3803,68 +3429,6 @@
     "realityCheck": "What kills you here is overextension: too much ground, not enough people on key points.",
     "scoreNarrative": "Anna Creek sits upper-mid: isolation and sustainability are strong, but defensibility drags because scale outpaces control.",
     "image": "/images/bases/anna-creek-station.png"
-  },
-  {
-    "name": "RAAF Base Tindal",
-    "slug": "raaf-base-tindal",
-    "type": "institutional_compound",
-    "region": "oceania",
-    "country": "Australia",
-    "lat": -14.5211,
-    "long": 132.3783,
-    "scores": {
-      "overall": 6.9,
-      "categories": {
-        "defensibility": 8.0,
-        "sustainability": 4.8,
-        "isolation": 6.8
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 7,
-        "rationale": "The RAAF Base Tindal profile cites remote location keeps civilian pressure comparatively low, which reduces casual access pressure in Australia."
-      },
-      "maintenanceBurden": {
-        "score": 3,
-        "rationale": "The RAAF Base Tindal maintenance score is limited because sustainment depends on complex technical and fuel supply chains."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The RAAF Base Tindal profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 4,
-        "rationale": "The RAAF Base Tindal sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "High-grade military infrastructure gives strong initial control, but strategic visibility and supply dependence limit endurance.",
-      "strengths": [
-        "Purpose-built security layout and hardened operating systems",
-        "Remote location keeps civilian pressure comparatively low"
-      ],
-      "weaknesses": [
-        "Recognizable strategic profile increases deliberate targeting risk",
-        "Sustainment depends on complex technical and fuel supply chains"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Disciplined regional command hub for controlled operations",
-      "failureMode": "Becoming a high-value target after external supply degradation"
-    },
-    "survivalProfile": {
-      "initial": "Strong",
-      "shortTerm": "Moderate",
-      "longTerm": "Weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Use for protected coordination and phased relocation planning",
-      "keyRisk": "Assuming military-grade hardening equals long-term self-sufficiency"
-    },
-    "realityCheck": "What kills you here is target visibility once logistics stop being reliable.",
-    "scoreNarrative": "Tindal is defense-strong but endurance-mid: impressive hardening cannot fully offset strategic exposure and sustainment dependence.",
-    "image": "/images/bases/raaf-base-tindal.png"
   },
   {
     "name": "Pine Gap Facility",
@@ -4111,7 +3675,7 @@
       "keyRisk": "Assuming underground comfort equals full autonomy in a water-scarce biome"
     },
     "realityCheck": "What kills you here is water exhaustion before security fails.",
-    "scoreNarrative": "Coober Pedy scores as a strong-mid base: defensibility and isolation are high, but sustainability\u2014not walls\u2014is the long-run limiter.",
+    "scoreNarrative": "Coober Pedy scores as a strong-mid base: defensibility and isolation are high, but sustainability—not walls—is the long-run limiter.",
     "image": "/images/bases/coober-pedy-underground-settlement.png"
   },
   {
@@ -4239,68 +3803,6 @@
     "image": "/images/bases/mcmurdo-station.png"
   },
   {
-    "name": "Murmansk Icebreaker Port",
-    "slug": "murmansk-icebreaker-port",
-    "type": "industrial_site",
-    "region": "polar_extreme",
-    "country": "Russia",
-    "lat": 68.9585,
-    "long": 33.0827,
-    "scores": {
-      "overall": 6.3,
-      "categories": {
-        "defensibility": 6.5,
-        "sustainability": 5.5,
-        "isolation": 6.5
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 5,
-        "rationale": "The Murmansk Icebreaker Port exposure score is held down because open port profile is highly visible and difficult to conceal or fully harden."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Murmansk Icebreaker Port maintenance score is limited because long-term viability depends on uninterrupted fuel, parts, and maritime supply flow."
-      },
-      "populationCapacity": {
-        "score": 7,
-        "rationale": "The Murmansk Icebreaker Port industrial site profile can hold a larger group than smaller refuges, though organization and rationing would still matter."
-      },
-      "resourceSecurity": {
-        "score": 7,
-        "rationale": "The Murmansk Icebreaker Port sustainability profile suggests stronger resource security than most bases, though not unlimited surplus."
-      }
-    },
-    "description": {
-      "summary": "A polar maritime hub with specialist icebreaker infrastructure and Arctic access. However, port exposure, supply dependency, and harsh operating conditions limit long-term security.",
-      "strengths": [
-        "Specialist maritime infrastructure provides strong logistics and engineering capability",
-        "Arctic operations experience supports organized cold-environment continuity"
-      ],
-      "weaknesses": [
-        "Open port profile is highly visible and difficult to conceal or fully harden",
-        "Long-term viability depends on uninterrupted fuel, parts, and maritime supply flow"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Regional maritime logistics node supporting shorter-horizon polar operations",
-      "failureMode": "Attritional disruption of port throughput and utilities degrades survivability"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Moderate",
-      "longTerm": "Weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Use dock and repair capacity aggressively while dispersing critical supplies inland",
-      "keyRisk": "What kills you here is prolonged infrastructure exposure at a visible port chokepoint"
-    },
-    "realityCheck": "Murmansk performs best with secure maritime flow; without it, complexity outruns local resilience.",
-    "scoreNarrative": "Murmansk rises on defensibility and practical infrastructure, but its dominant failure mode remains exposed port dependence under Arctic strain.",
-    "image": "/images/bases/murmansk-icebreaker-port.png"
-  },
-  {
     "name": "Nagurskoye Air Base",
     "slug": "nagurskoye-air-base",
     "type": "institutional_compound",
@@ -4423,130 +3925,6 @@
     "realityCheck": "South Pole Station is secure from attackers, but not from thermodynamic reality when critical systems fail.",
     "scoreNarrative": "South Pole Station rates high on isolation and defensibility, yet stays constrained because sustainability is structurally dependent on complex support chains.",
     "image": "/images/bases/amundsen-scott-south-pole-station.png"
-  },
-  {
-    "name": "Antarctic Peninsula",
-    "slug": "antarctic-peninsula",
-    "type": "isolated_landmass",
-    "region": "polar_extreme",
-    "country": "Antarctica",
-    "lat": -63.0,
-    "long": -57.0,
-    "scores": {
-      "overall": 6.2,
-      "categories": {
-        "defensibility": 6.5,
-        "sustainability": 3.0,
-        "isolation": 9.0
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 8,
-        "rationale": "The Antarctic Peninsula profile cites remote geography and terrain provide strong natural separation, which reduces casual access pressure in Antarctica."
-      },
-      "maintenanceBurden": {
-        "score": 2,
-        "rationale": "The Antarctic Peninsula profile benefits from coastal access points can support controlled landing and staged movement, but infrastructure is sparse, distributed, and difficult to maintain at scale keeps upkeep demanding."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The Antarctic Peninsula can support more people than many island or isolated landmass options because it offers coastal access points can support controlled landing and staged movement."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The Antarctic Peninsula sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "A remote polar region with natural isolation and access to coastal landing points. However, severe weather, limited infrastructure, and scarce sustainable resources make survival highly fragile.",
-      "strengths": [
-        "Remote geography and terrain provide strong natural separation",
-        "Coastal access points can support controlled landing and staged movement"
-      ],
-      "weaknesses": [
-        "Infrastructure is sparse, distributed, and difficult to maintain at scale",
-        "Local food and energy production capacity remains extremely limited"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Low-density regional refuge for mobile teams with maritime logistics support",
-      "failureMode": "Resource scarcity and weather attrition outlast planned stockpiles"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Weak",
-      "longTerm": "Weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Use dispersed coastal nodes while minimizing fixed high-maintenance installations",
-      "keyRisk": "What kills you here is slow starvation and exposure when weather blocks replenishment"
-    },
-    "realityCheck": "Antarctic Peninsula offers options for movement, but not abundant autonomous life-support resources.",
-    "scoreNarrative": "Antarctic Peninsula keeps strong isolation value, yet long-run outcomes are capped by thin infrastructure and persistent sustainability deficits.",
-    "image": "/images/bases/antarctic-peninsula.png"
-  },
-  {
-    "name": "Greenland",
-    "slug": "greenland",
-    "type": "isolated_landmass",
-    "region": "polar_extreme",
-    "country": "Greenland",
-    "lat": 71.7069,
-    "long": -42.6043,
-    "scores": {
-      "overall": 6.8,
-      "categories": {
-        "defensibility": 6.5,
-        "sustainability": 5.5,
-        "isolation": 8.5
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 8,
-        "rationale": "The Greenland profile cites large landmass and sparse population provide strategic depth and isolation, which reduces casual access pressure in Greenland."
-      },
-      "maintenanceBurden": {
-        "score": 4,
-        "rationale": "The Greenland maintenance score is limited because critical infrastructure remains concentrated and vulnerable to supply disruptions."
-      },
-      "populationCapacity": {
-        "score": 7,
-        "rationale": "The Greenland isolated landmass profile can hold a larger group than smaller refuges, though organization and rationing would still matter."
-      },
-      "resourceSecurity": {
-        "score": 7,
-        "rationale": "The Greenland sustainability profile suggests stronger resource security than most bases, though not unlimited surplus."
-      }
-    },
-    "description": {
-      "summary": "A vast Arctic island with extreme isolation, natural resources, and scattered settlements. However, harsh climate, huge scale, and infrastructure dependency make it difficult to control or sustain.",
-      "strengths": [
-        "Large landmass and sparse population provide strategic depth and isolation",
-        "Selected coastal zones offer fisheries and limited resource extraction opportunities"
-      ],
-      "weaknesses": [
-        "Distance and scale make coordination, defense, and logistics management difficult",
-        "Critical infrastructure remains concentrated and vulnerable to supply disruptions"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Distributed Arctic refuge network anchored by a few viable coastal hubs",
-      "failureMode": "Fragmented infrastructure and distance-driven logistics collapse"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Moderate",
-      "longTerm": "Weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Prioritize defensible coastal micro-hubs linked by planned seasonal supply movement",
-      "keyRisk": "What kills you here is overextension across vast terrain with insufficient logistics density"
-    },
-    "realityCheck": "Greenland has more resource potential than most polar sites, but exploiting it reliably requires sustained technical and transport capacity.",
-    "scoreNarrative": "Greenland remains one of the stronger polar options due to scale and resource pockets, yet still loses points where climate and infrastructure fragility meet distance.",
-    "image": "/images/bases/greenland.png"
   },
   {
     "name": "Olavsvern Naval Base",
@@ -5057,7 +4435,7 @@
     "image": "/images/bases/tambopata-research-center.png"
   },
   {
-    "name": "Chilo\u00e9 Island",
+    "name": "Chiloé Island",
     "slug": "chiloe-island",
     "type": "isolated_landmass",
     "region": "south_america",
@@ -5075,22 +4453,22 @@
     "comparisonScores": {
       "exposure": {
         "score": 7,
-        "rationale": "The Chilo\u00e9 Island profile cites island geography narrows avenues of approach, but population pressure can rise if mainland stability drops."
+        "rationale": "The Chiloé Island profile cites island geography narrows avenues of approach, but population pressure can rise if mainland stability drops."
       },
       "maintenanceBurden": {
         "score": 6,
-        "rationale": "The Chilo\u00e9 Island profile benefits from usable settlement network for distributed storage, but weather can stall transport for extended periods keeps upkeep demanding."
+        "rationale": "The Chiloé Island profile benefits from usable settlement network for distributed storage, but weather can stall transport for extended periods keeps upkeep demanding."
       },
       "populationCapacity": {
         "score": 8,
-        "rationale": "The Chilo\u00e9 Island can support more people than many island or isolated landmass options because it offers usable settlement network for distributed storage."
+        "rationale": "The Chiloé Island can support more people than many island or isolated landmass options because it offers usable settlement network for distributed storage."
       },
       "resourceSecurity": {
         "score": 8,
-        "rationale": "The Chilo\u00e9 Island profile notes established farming and fishing support continuity, but fuel and technical parts still depend on external supply weakens long-term resource security."
+        "rationale": "The Chiloé Island profile notes established farming and fishing support continuity, but fuel and technical parts still depend on external supply weakens long-term resource security."
       }
     },
-    "summary": "Chilo\u00e9 is a strong all-round island base with workable agriculture and defensible approaches, but what kills you here is prolonged maritime cutoff during a hard winter.",
+    "summary": "Chiloé is a strong all-round island base with workable agriculture and defensible approaches, but what kills you here is prolonged maritime cutoff during a hard winter.",
     "strengths": [
       "Island geography narrows avenues of approach",
       "Established farming and fishing support continuity",
@@ -5114,12 +4492,12 @@
       "bestUseCase": "Managed island settlement with rationing and local food production",
       "keyRisk": "What kills you here is supply isolation when weather and sea lanes fail together"
     },
-    "realityCheck": "Chilo\u00e9 is robust, not invulnerable. It needs disciplined stockpiles and winter planning.",
-    "scoreNarrative": "High sustainability plus good defensibility make Chilo\u00e9 a strong option; dependence on sea logistics is the limiting factor.",
+    "realityCheck": "Chiloé is robust, not invulnerable. It needs disciplined stockpiles and winter planning.",
+    "scoreNarrative": "High sustainability plus good defensibility make Chiloé a strong option; dependence on sea logistics is the limiting factor.",
     "image": "/images/bases/chiloe-island.png"
   },
   {
-    "name": "Gal\u00e1pagos Islands",
+    "name": "Galápagos Islands",
     "slug": "galapagos-islands",
     "type": "isolated_landmass",
     "region": "south_america",
@@ -5137,22 +4515,22 @@
     "comparisonScores": {
       "exposure": {
         "score": 9,
-        "rationale": "The Gal\u00e1pagos Islands isolated landmass setting keeps it well insulated from casual access and mass movement."
+        "rationale": "The Galápagos Islands isolated landmass setting keeps it well insulated from casual access and mass movement."
       },
       "maintenanceBurden": {
         "score": 3,
-        "rationale": "The Gal\u00e1pagos Islands maintenance score is limited because food, fuel, medicine, and equipment rely on imports."
+        "rationale": "The Galápagos Islands maintenance score is limited because food, fuel, medicine, and equipment rely on imports."
       },
       "populationCapacity": {
         "score": 7,
-        "rationale": "The Gal\u00e1pagos Islands isolated landmass profile can hold a larger group than smaller refuges, though organization and rationing would still matter."
+        "rationale": "The Galápagos Islands isolated landmass profile can hold a larger group than smaller refuges, though organization and rationing would still matter."
       },
       "resourceSecurity": {
         "score": 5,
-        "rationale": "The Gal\u00e1pagos Islands resource score is constrained because freshwater and arable constraints limit scale."
+        "rationale": "The Galápagos Islands resource score is constrained because freshwater and arable constraints limit scale."
       }
     },
-    "summary": "Gal\u00e1pagos has extreme isolation and low random threat traffic, but what kills you here is supply collapse once imported essentials stop.",
+    "summary": "Galápagos has extreme isolation and low random threat traffic, but what kills you here is supply collapse once imported essentials stop.",
     "strengths": [
       "Ocean distance sharply reduces overrun probability",
       "Natural perimeter is easy to monitor",
@@ -5177,7 +4555,7 @@
       "keyRisk": "What kills you here is running out of critical imports before replacement systems exist"
     },
     "realityCheck": "Isolation is excellent, autonomy is not. Success depends on stock depth and demand control from day one.",
-    "scoreNarrative": "Gal\u00e1pagos scores elite on isolation but notably lower on sustainability, preventing top-tier overall resilience.",
+    "scoreNarrative": "Galápagos scores elite on isolation but notably lower on sustainability, preventing top-tier overall resilience.",
     "image": "/images/bases/galapagos-islands.png"
   },
   {
@@ -5305,7 +4683,7 @@
     "image": "/images/bases/hilltop-fort-rajasthan.png"
   },
   {
-    "name": "Tiger\u2019s Nest Monastery",
+    "name": "Tiger’s Nest Monastery",
     "slug": "tigers-nest-monastery",
     "type": "elevated_stronghold",
     "region": "south_asia",
@@ -5323,22 +4701,22 @@
     "comparisonScores": {
       "exposure": {
         "score": 8,
-        "rationale": "The Tiger\u2019s Nest Monastery profile cites high isolation reduces random encounter pressure and opportunistic incursions, but difficult access slows all resupply, casualty movement, and infrastructure repair."
+        "rationale": "The Tiger’s Nest Monastery profile cites high isolation reduces random encounter pressure and opportunistic incursions, but difficult access slows all resupply, casualty movement, and infrastructure repair."
       },
       "maintenanceBurden": {
         "score": 2,
-        "rationale": "The Tiger\u2019s Nest Monastery maintenance score is limited because difficult access slows all resupply, casualty movement, and infrastructure repair."
+        "rationale": "The Tiger’s Nest Monastery maintenance score is limited because difficult access slows all resupply, casualty movement, and infrastructure repair."
       },
       "populationCapacity": {
         "score": 4,
-        "rationale": "The Tiger\u2019s Nest Monastery population score is constrained because very limited space for food production, storage expansion, and medical redundancy."
+        "rationale": "The Tiger’s Nest Monastery population score is constrained because very limited space for food production, storage expansion, and medical redundancy."
       },
       "resourceSecurity": {
         "score": 4,
-        "rationale": "The Tiger\u2019s Nest Monastery resource score is constrained because very limited space for food production, storage expansion, and medical redundancy."
+        "rationale": "The Tiger’s Nest Monastery resource score is constrained because very limited space for food production, storage expansion, and medical redundancy."
       }
     },
-    "summary": "Tiger\u2019s Nest is an extreme cliffside redoubt with elite access denial, but its tiny carrying capacity and severe logistics ceiling cap long-term survival.",
+    "summary": "Tiger’s Nest is an extreme cliffside redoubt with elite access denial, but its tiny carrying capacity and severe logistics ceiling cap long-term survival.",
     "strengths": [
       "Near-vertical approach routes create exceptional natural access control",
       "High isolation reduces random encounter pressure and opportunistic incursions",
@@ -5427,68 +4805,6 @@
     "realityCheck": "Assumes coordinated external buffer zones and strict access governance; walls alone cannot offset prolonged urban spillover.",
     "scoreNarrative": "Defensibility is the dominant strength and clearly tops the profile. Isolation is the weak axis, so long-term success depends on controlling surrounding approach corridors.",
     "image": "/images/bases/mehrangarh-fort.png"
-  },
-  {
-    "name": "Pathankot Air Force Station",
-    "slug": "pathankot-air-force-station",
-    "type": "institutional_compound",
-    "region": "south_asia",
-    "country": "India",
-    "lat": 32.233,
-    "long": 75.634,
-    "scores": {
-      "overall": 6.6,
-      "categories": {
-        "defensibility": 7.8,
-        "sustainability": 5.4,
-        "isolation": 4.1
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 4,
-        "rationale": "The Pathankot Air Force Station exposure score is held down because moderate isolation means surrounding pressure remains persistent."
-      },
-      "maintenanceBurden": {
-        "score": 3,
-        "rationale": "The Pathankot Air Force Station profile benefits from military-grade perimeter logic and controlled zones improve immediate security posture, but high fuel, maintenance, and technical dependencies challenge long-horizon independence keeps upkeep demanding."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The Pathankot Air Force Station profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The Pathankot Air Force Station sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "summary": "Pathankot AFS is a hardened operational compound with meaningful defensive structure, but its strategic visibility keeps pressure high and long-term autonomy uncertain.",
-    "strengths": [
-      "Military-grade perimeter logic and controlled zones improve immediate security posture",
-      "Airfield infrastructure can support fast logistics, medevac, and reconnaissance operations",
-      "Existing command-and-control layout enables disciplined team organization"
-    ],
-    "weaknesses": [
-      "Strategic value makes the site a likely target for both organized and opportunistic actors",
-      "Moderate isolation means surrounding pressure remains persistent",
-      "High fuel, maintenance, and technical dependencies challenge long-horizon independence"
-    ],
-    "verdict": {
-      "bestUseCase": "Regional security and coordination base during early-to-mid collapse",
-      "failureMode": "Becomes a contested strategic node where conflict load exceeds sustainment capacity"
-    },
-    "survivalProfile": {
-      "initial": "Strong",
-      "shortTerm": "Stable with command discipline",
-      "longTerm": "Moderate"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Protected operations hub linked to distributed civilian fallback sites",
-      "keyRisk": "Targeting pressure rises because the base is visible, capable, and symbolically important"
-    },
-    "realityCheck": "Assumes trained operators, fuel management, and layered outer security; without operational continuity, advantage erodes quickly.",
-    "scoreNarrative": "Defensibility leads and keeps the base above average, but isolation is the limiting weakness. This is an operations platform, not a low-signature sanctuary.",
-    "image": "/images/bases/pathankot-air-force-station.png"
   },
   {
     "name": "Hanle Observatory",
@@ -6049,68 +5365,6 @@
     "image": "/images/bases/hue-citadel.png"
   },
   {
-    "name": "Sime Darby Palm Oil Estate (Sabah)",
-    "slug": "sime-darby-palm-oil-estate-sabah",
-    "type": "industrial_site",
-    "region": "southeast_asia",
-    "country": "Malaysia",
-    "lat": 5.98,
-    "long": 117.85,
-    "scores": {
-      "overall": 6.1,
-      "categories": {
-        "defensibility": 4,
-        "isolation": 6,
-        "sustainability": 8
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 4,
-        "rationale": "The Sime Darby Palm Oil Estate (Sabah) industrial site setting gives it moderate exposure protection compared with more accessible bases."
-      },
-      "maintenanceBurden": {
-        "score": 4,
-        "rationale": "The Sime Darby Palm Oil Estate (Sabah) maintenance score is limited because output depends on machinery, fuel, and spare parts hard to replace locally."
-      },
-      "populationCapacity": {
-        "score": 8,
-        "rationale": "The Sime Darby Palm Oil Estate (Sabah) industrial site profile can hold a larger group than smaller refuges, though organization and rationing would still matter."
-      },
-      "resourceSecurity": {
-        "score": 6,
-        "rationale": "The Sime Darby Palm Oil Estate (Sabah) sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "summary": "Sime Darby Sabah is a large agro-industrial estate that can produce at regional scale. It works when core zones, mills, roads, and workforce discipline stay synchronized. You die when security overstretch and machinery dependence cause cascading output loss.",
-    "strengths": [
-      "Large cultivated area can sustain strong calorie production capacity.",
-      "Relative distance from major cities lowers sudden mass inflow pressure.",
-      "Internal roads and facilities support defended core-sector logistics."
-    ],
-    "weaknesses": [
-      "Estate footprint is too large for complete perimeter control.",
-      "Output depends on machinery, fuel, and spare parts hard to replace locally.",
-      "Monocrop bias reduces dietary resilience if processing is interrupted."
-    ],
-    "verdict": {
-      "bestUseCase": "Regional food backbone with defended core zones",
-      "failureMode": "Network-wide attrition from overstretched security"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Stable if organized",
-      "longTerm": "Weak when security fractures"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Regional food backbone with defended core zones",
-      "keyRisk": "Overstretch causes cascading theft, sabotage, and output loss"
-    },
-    "realityCheck": "Assumes phased contraction to defendable sectors rather than full-estate control.",
-    "scoreNarrative": "The dominant strength is high-scale agricultural throughput potential. The dominant weakness is control-at-scale fragility across a broad, machinery-dependent estate.",
-    "image": "/images/bases/sime-darby-palm-oil-estate-sabah.png"
-  },
-  {
     "name": "Kota Kinabalu Naval Base",
     "slug": "kota-kinabalu-naval-base",
     "type": "institutional_compound",
@@ -6554,71 +5808,6 @@
     "image": "/images/bases/cu-chi-tunnels.png"
   },
   {
-    "name": "Vietnam Tunnel Systems",
-    "slug": "vietnam-tunnel-systems",
-    "type": "subterranean",
-    "region": "southeast_asia",
-    "country": "Vietnam",
-    "lat": 10.8327,
-    "long": 106.4713,
-    "scores": {
-      "overall": 6.4,
-      "categories": {
-        "defensibility": 8.0,
-        "isolation": 6.5,
-        "sustainability": 3.5
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 6,
-        "rationale": "The Vietnam Tunnel Systems profile cites terrain and tunnels enable controlled local movement, which reduces casual access pressure in Vietnam."
-      },
-      "maintenanceBurden": {
-        "score": 3,
-        "rationale": "The Vietnam Tunnel Systems maintenance score is helped by terrain and tunnels enable controlled local movement, making daily upkeep more manageable."
-      },
-      "populationCapacity": {
-        "score": 5,
-        "rationale": "The Vietnam Tunnel Systems can support more people than many subterranean site options because it offers terrain and tunnels enable controlled local movement."
-      },
-      "resourceSecurity": {
-        "score": 4,
-        "rationale": "The Vietnam Tunnel Systems sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "A broader tunnel-system concept with strong concealment and movement control across difficult terrain. It provides tactical advantage, but fragmented infrastructure and poor long-term livability keep it below true stronghold status.",
-      "strengths": [
-        "Strong concealment across multiple linked positions",
-        "Terrain and tunnels enable controlled local movement",
-        "Defensive history validates denial-oriented tactics"
-      ],
-      "weaknesses": [
-        "Fragmented network complicates command and logistics",
-        "Long-term habitation quality is consistently poor",
-        "Medical evacuation and sanitation are persistent weak points"
-      ],
-      "analysis": "At area scale, Cu Chi offers flexible concealment and local maneuver advantage. The penalty is fragmented support: disconnected nodes, inconsistent conditions, and weak sustainment integration over time."
-    },
-    "verdict": {
-      "bestUseCase": "Distributed tactical refuge and movement network",
-      "failureMode": "Fragmentation and sustainment shortfalls break cohesion"
-    },
-    "survivalProfile": {
-      "initial": "Strong",
-      "shortTerm": "Moderate",
-      "longTerm": "Poor"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Concealed regional fallback during active threat periods",
-      "keyRisk": "What kills you here is cumulative degradation from poor living conditions and fragmented support lines."
-    },
-    "realityCheck": "Needs surface support hubs and disciplined rotation to remain viable.",
-    "scoreNarrative": "Defensive utility is high, but long-term living quality remains the structural weakness. This is a tactical system, not a complete settlement.",
-    "image": "/images/bases/vietnam-tunnel-systems.png"
-  },
-  {
     "name": "Edinburgh Castle",
     "slug": "edinburgh-castle",
     "type": "elevated_stronghold",
@@ -6664,7 +5853,7 @@
         "Limited internal growing and storage capacity",
         "Heritage layout constrains modern hardening adaptations"
       ],
-      "analysis": "The castle\u2019s terrain and structure provide genuine defensive leverage. The limiting factor is urban embedding: pressure, fire risk, and supply dependence from the surrounding city erode long-term viability."
+      "analysis": "The castle’s terrain and structure provide genuine defensive leverage. The limiting factor is urban embedding: pressure, fire risk, and supply dependence from the surrounding city erode long-term viability."
     },
     "verdict": {
       "bestUseCase": "Defensible urban redoubt for disciplined small groups",
@@ -6794,7 +5983,7 @@
         "Internal production capacity is modest without adaptation",
         "Historic fabric constrains heavy retrofitting"
       ],
-      "analysis": "Caerphilly\u2019s layered moat-and-wall geometry gives real stand-off advantage. Its weakness is modern sustainment: it remains a fixed heritage shell requiring external food, fuel, and medical throughput."
+      "analysis": "Caerphilly’s layered moat-and-wall geometry gives real stand-off advantage. Its weakness is modern sustainment: it remains a fixed heritage shell requiring external food, fuel, and medical throughput."
     },
     "verdict": {
       "bestUseCase": "Defensive regional strongpoint with controlled occupancy",
@@ -6944,71 +6133,6 @@
     "image": "/images/bases/hm-prison-dartmoor.png"
   },
   {
-    "name": "Porton Down",
-    "slug": "porton-down",
-    "type": "institutional_compound",
-    "region": "uk_ireland",
-    "country": "United Kingdom",
-    "lat": 51.129,
-    "long": -1.803,
-    "scores": {
-      "overall": 6.1,
-      "categories": {
-        "defensibility": 7.5,
-        "isolation": 5.5,
-        "sustainability": 4.5
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 4,
-        "rationale": "The Porton Down profile cites controlled perimeter and disciplined site design, which reduces casual access pressure in United Kingdom."
-      },
-      "maintenanceBurden": {
-        "score": 4,
-        "rationale": "The Porton Down maintenance score is helped by controlled perimeter and disciplined site design, making daily upkeep more manageable."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The Porton Down profile supports a controlled group, but it does not indicate large-settlement capacity."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The Porton Down sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "A secure research facility with controlled access, specialist infrastructure, and perimeter discipline. It has defensive value, but technical dependency, contamination risk, and strategic visibility create serious long-term weakness.",
-      "strengths": [
-        "Controlled perimeter and disciplined site design",
-        "Specialist infrastructure supports high-end operations",
-        "Compartmented zones aid containment and incident response"
-      ],
-      "weaknesses": [
-        "Technical systems require expert staffing and parts",
-        "Potential contamination events carry outsized consequences",
-        "Strategic profile increases likelihood of human contestation"
-      ],
-      "analysis": "Porton Down offers strong control architecture and specialist capability. Its core risk is complexity: advanced systems, hazardous contexts, and high visibility are difficult to sustain safely in collapse."
-    },
-    "verdict": {
-      "bestUseCase": "Specialized secured site for short-duration technical operations",
-      "failureMode": "Complexity and hazard risk overwhelm maintainers"
-    },
-    "survivalProfile": {
-      "initial": "Moderate to strong",
-      "shortTerm": "Moderate",
-      "longTerm": "Weak to moderate"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Controlled operations hub linked to simpler off-site living bases",
-      "keyRisk": "What kills you here is technical failure under stress, amplified by contamination and visibility."
-    },
-    "realityCheck": "Keep mission scope narrow and avoid overcommitting population on-site.",
-    "scoreNarrative": "Defensibility is good, but sustainability is constrained by complexity and hazard. Strong procedures are mandatory, not optional.",
-    "image": "/images/bases/porton-down.png"
-  },
-  {
     "name": "Lindisfarne",
     "slug": "lindisfarne",
     "type": "isolated_landmass",
@@ -7054,7 +6178,7 @@
         "Limited land and freshwater constrain growth",
         "Evacuation and medical timing are highly constrained"
       ],
-      "analysis": "Lindisfarne\u2019s tidal timing creates natural control over movement and approach. The trade-off is throughput fragility: weather and tide windows can bottleneck food, fuel, and emergency response."
+      "analysis": "Lindisfarne’s tidal timing creates natural control over movement and approach. The trade-off is throughput fragility: weather and tide windows can bottleneck food, fuel, and emergency response."
     },
     "verdict": {
       "bestUseCase": "Disciplined small-group island refuge with strict timing control",
@@ -7752,68 +6876,6 @@
     "image": "/images/bases/mont-saint-michel.png"
   },
   {
-    "name": "NATO Airbase Geilenkirchen",
-    "slug": "nato-airbase-geilenkirchen",
-    "type": "institutional_compound",
-    "region": "western_europe",
-    "country": "Germany",
-    "lat": 50.96,
-    "long": 6.042,
-    "scores": {
-      "overall": 6,
-      "categories": {
-        "defensibility": 8,
-        "sustainability": 5,
-        "isolation": 3
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 3,
-        "rationale": "The NATO Airbase Geilenkirchen exposure score is held down because very low isolation in a connected region."
-      },
-      "maintenanceBurden": {
-        "score": 3,
-        "rationale": "The NATO Airbase Geilenkirchen profile benefits from robust hardened facilities and controlled access points, but high system dependence for power, maintenance, and fuel keeps upkeep demanding."
-      },
-      "populationCapacity": {
-        "score": 6,
-        "rationale": "The NATO Airbase Geilenkirchen can support more people than many institutional compound options because it offers large operational footprint for staging and triage."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The NATO Airbase Geilenkirchen sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "summary": "Geilenkirchen offers serious NATO-grade infrastructure and layered security, but it is embedded in dense mainland networks. What kills you here is constant contact pressure once perimeter staffing and logistics slip.",
-    "strengths": [
-      "Robust hardened facilities and controlled access points",
-      "Large operational footprint for staging and triage",
-      "Strong immediate defensive posture"
-    ],
-    "weaknesses": [
-      "Very low isolation in a connected region",
-      "Large perimeter demands sustained manpower",
-      "High system dependence for power, maintenance, and fuel"
-    ],
-    "verdict": {
-      "bestUseCase": "Regional operations hub, not permanent sanctuary",
-      "failureMode": "Perimeter fatigue under continuous external pressure"
-    },
-    "survivalProfile": {
-      "initial": "Strong",
-      "shortTerm": "Moderate-to-strong",
-      "longTerm": "Weak-to-moderate without external support"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Command-and-control base for organized groups",
-      "keyRisk": "Contact frequency and staffing burnout erode security faster than expected"
-    },
-    "realityCheck": "Assumes trained personnel, spare parts, and reliable fuel reserves. Civilian spillover and road access drive persistent threat load.",
-    "scoreNarrative": "High defensibility is offset by low isolation and only moderate sustainability. Geilenkirchen performs as a mission base, not a low-signature refuge.",
-    "image": "/images/bases/nato-airbase-geilenkirchen.png"
-  },
-  {
     "name": "Heligoland",
     "slug": "heligoland",
     "type": "isolated_landmass",
@@ -7876,7 +6938,7 @@
     "image": "/images/bases/heligoland.png"
   },
   {
-    "name": "\u00cele d\u2019Yeu",
+    "name": "Île d’Yeu",
     "slug": "ile-dyeu",
     "type": "isolated_landmass",
     "region": "western_europe",
@@ -7894,22 +6956,22 @@
     "comparisonScores": {
       "exposure": {
         "score": 8,
-        "rationale": "The \u00cele d\u2019Yeu profile cites good island isolation without extreme remoteness, but population concentration can strain local systems."
+        "rationale": "The Île d’Yeu profile cites good island isolation without extreme remoteness, but population concentration can strain local systems."
       },
       "maintenanceBurden": {
         "score": 5,
-        "rationale": "The \u00cele d\u2019Yeu maintenance score is helped by usable settlement footprint for community-scale survival, making daily upkeep more manageable."
+        "rationale": "The Île d’Yeu maintenance score is helped by usable settlement footprint for community-scale survival, making daily upkeep more manageable."
       },
       "populationCapacity": {
         "score": 7,
-        "rationale": "The \u00cele d\u2019Yeu can support more people than many island or isolated landmass options because it offers usable settlement footprint for community-scale survival."
+        "rationale": "The Île d’Yeu can support more people than many island or isolated landmass options because it offers usable settlement footprint for community-scale survival."
       },
       "resourceSecurity": {
         "score": 6,
-        "rationale": "The \u00cele d\u2019Yeu sustainability profile suggests adequate but not surplus resource security for long-term use."
+        "rationale": "The Île d’Yeu sustainability profile suggests adequate but not surplus resource security for long-term use."
       }
     },
-    "summary": "\u00cele d\u2019Yeu is a balanced island refuge with useful separation and livable conditions, but it lacks deep strategic depth. What kills you here is slow resource depletion under prolonged isolation.",
+    "summary": "Île d’Yeu is a balanced island refuge with useful separation and livable conditions, but it lacks deep strategic depth. What kills you here is slow resource depletion under prolonged isolation.",
     "strengths": [
       "Good island isolation without extreme remoteness",
       "Usable settlement footprint for community-scale survival",
@@ -7934,11 +6996,11 @@
       "keyRisk": "Demand growth and interrupted imports degrade resilience"
     },
     "realityCheck": "Assumes early governance, stock accounting, and shoreline control. Without demand management, sustainability decays steadily.",
-    "scoreNarrative": "\u00cele d\u2019Yeu performs well through strong isolation and balanced core scores, but no category is elite enough to absorb major planning failures.",
+    "scoreNarrative": "Île d’Yeu performs well through strong isolation and balanced core scores, but no category is elite enough to absorb major planning failures.",
     "image": "/images/bases/ile-dyeu.png"
   },
   {
-    "name": "Phare du Cr\u00e9ac'h",
+    "name": "Phare du Créac'h",
     "slug": "phare-du-creach",
     "type": "landmark_structure",
     "region": "western_europe",
@@ -7956,22 +7018,22 @@
     "comparisonScores": {
       "exposure": {
         "score": 6,
-        "rationale": "The Phare du Cr\u00e9ac'h landmark structure setting gives it moderate exposure protection compared with more accessible bases."
+        "rationale": "The Phare du Créac'h landmark structure setting gives it moderate exposure protection compared with more accessible bases."
       },
       "maintenanceBurden": {
         "score": 4,
-        "rationale": "The Phare du Cr\u00e9ac'h profile benefits from simple perimeter geometry, but high weather exposure in a coastal environment keeps upkeep demanding."
+        "rationale": "The Phare du Créac'h profile benefits from simple perimeter geometry, but high weather exposure in a coastal environment keeps upkeep demanding."
       },
       "populationCapacity": {
         "score": 3,
-        "rationale": "The Phare du Cr\u00e9ac'h profile supports a controlled group, but it does not indicate large-settlement capacity."
+        "rationale": "The Phare du Créac'h profile supports a controlled group, but it does not indicate large-settlement capacity."
       },
       "resourceSecurity": {
         "score": 3,
-        "rationale": "The Phare du Cr\u00e9ac'h resource score is weak because the profile shows limited independent replenishment for long-term survival."
+        "rationale": "The Phare du Créac'h resource score is weak because the profile shows limited independent replenishment for long-term survival."
       }
     },
-    "summary": "Phare du Cr\u00e9ac\u2019h provides remote coastal isolation and observation value, but it is too small and brittle for extended habitation. What kills you here is capacity failure once stores run thin.",
+    "summary": "Phare du Créac’h provides remote coastal isolation and observation value, but it is too small and brittle for extended habitation. What kills you here is capacity failure once stores run thin.",
     "strengths": [
       "Strong geographic separation and low background traffic",
       "Excellent sightlines for early warning",
