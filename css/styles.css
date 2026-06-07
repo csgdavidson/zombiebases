@@ -1881,13 +1881,20 @@ main > * {
   font-weight: 800;
 }
 
+.score-comparison-table .score-difference-heading,
+.score-comparison-table .score-difference-cell,
+.score-comparison-table .score-difference-even {
+  text-align: center;
+}
+
 .score-difference-cell {
   color: var(--score-high);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .score-difference-even {
   color: var(--muted);
+  font-weight: 700;
 }
 
 .winner-card-grid,
