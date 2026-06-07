@@ -266,7 +266,8 @@ function renderScoreRows(baseA, baseB) {
       ? `${formatDifference(Math.abs(diff))}${winner ? ` ${winner === 'a' ? baseA.name : baseB.name}` : ''}`
       : '—';
 
-    tableRow.append(label, aCell, diffCell, bCell);
+    const orderedCells = [label, aCell, diffCell, bCell];
+    tableRow.append(...orderedCells);
     elements.scoreBody.appendChild(tableRow);
   });
 }
