@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-07T13:18:37Z",
+  "generatedAt": "2026-06-30T19:37:35Z",
   "source": {
     "bases": "data/bases-index.json",
     "schemaVersion": 1,
-    "hash": "8585644dd0edf825bbc310eb902e6f003d2005e07fc222cadcfd49f6e4f66ea9"
+    "hash": "7bd51f3ddb16c31f88fbeb3abc07b7ee89e01478138d056197b678fe8e0a3270"
   },
   "interpretations": [
     {
@@ -68,15 +68,6 @@
       "archetypeLabel": "Isolation settlement",
       "archetypeDescription": "Built around elite isolation and strong sustainability; defence is secondary.",
       "scoreShapeSummary": "High-function profile with strong isolation, while defence remains the critical upgrade target."
-    },
-    {
-      "slug": "anna-creek-station",
-      "scoreBandLabel": "Viable but flawed",
-      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
-      "scoreBandClass": "score-band-viable",
-      "archetypeLabel": "Isolation settlement",
-      "archetypeDescription": "Built around elite isolation and strong sustainability; defence is secondary.",
-      "scoreShapeSummary": "Leans on isolation for stability, but weak defence still dictates failure risk."
     },
     {
       "slug": "banda-neira",

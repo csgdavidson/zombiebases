@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-07T13:18:55.213340+00:00",
-  "totalBases": 116,
+  "generatedAt": "2026-06-30T19:37:37.330687+00:00",
+  "totalBases": 115,
   "scoreCategories": [
     "overall",
     "defensibility",
@@ -8,12 +8,12 @@
     "sustainability"
   ],
   "global": {
-    "count": 116,
+    "count": 115,
     "averages": {
       "overall": 6.6,
-      "defensibility": 7.23,
-      "isolation": 6.9,
-      "sustainability": 5.02
+      "defensibility": 7.25,
+      "isolation": 6.89,
+      "sustainability": 5.0
     },
     "highest": {
       "slug": "cheyenne-mountain-complex",
@@ -123,12 +123,12 @@
       }
     },
     "oceania": {
-      "count": 9,
+      "count": 8,
       "averages": {
-        "overall": 6.16,
-        "defensibility": 6.77,
-        "isolation": 6.97,
-        "sustainability": 4.81
+        "overall": 6.08,
+        "defensibility": 7.05,
+        "isolation": 6.78,
+        "sustainability": 4.51
       },
       "highest": {
         "slug": "tasmania",
@@ -296,16 +296,16 @@
       }
     },
     "industrial_site": {
-      "count": 4,
+      "count": 3,
       "averages": {
-        "overall": 6.38,
-        "defensibility": 6.38,
-        "isolation": 5.58,
-        "sustainability": 5.75
+        "overall": 6.23,
+        "defensibility": 7.0,
+        "isolation": 4.6,
+        "sustainability": 5.27
       },
       "highest": {
-        "slug": "anna-creek-station",
-        "name": "Anna Creek Station",
+        "slug": "itaipu-dam",
+        "name": "Itaipu Dam",
         "overall": 6.8
       },
       "lowest": {
