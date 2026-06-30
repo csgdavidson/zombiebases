@@ -3369,68 +3369,6 @@
     "image": "/images/bases/fort-denison.png"
   },
   {
-    "name": "Anna Creek Station",
-    "slug": "anna-creek-station",
-    "type": "industrial_site",
-    "region": "oceania",
-    "country": "Australia",
-    "lat": -28.8667,
-    "long": 136.5,
-    "scores": {
-      "overall": 6.8,
-      "categories": {
-        "defensibility": 4.5,
-        "sustainability": 7.2,
-        "isolation": 8.5
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 7,
-        "rationale": "The Anna Creek Station profile cites isolation reduces immediate population-pressure shocks, which reduces casual access pressure in Australia."
-      },
-      "maintenanceBurden": {
-        "score": 3,
-        "rationale": "The Anna Creek Station maintenance score is limited because distance and transport friction complicate critical resupply."
-      },
-      "populationCapacity": {
-        "score": 7,
-        "rationale": "The Anna Creek Station industrial site profile can hold a larger group than smaller refuges, though organization and rationing would still matter."
-      },
-      "resourceSecurity": {
-        "score": 7,
-        "rationale": "The Anna Creek Station resource score is constrained because distance and transport friction complicate critical resupply."
-      }
-    },
-    "description": {
-      "summary": "Exceptional scale and remoteness support long-run survival potential, but the footprint is too vast to secure conventionally.",
-      "strengths": [
-        "Huge land area supports grazing, fallback dispersion, and low contact density",
-        "Isolation reduces immediate population-pressure shocks"
-      ],
-      "weaknesses": [
-        "Perimeter control is unrealistic without significant manpower",
-        "Distance and transport friction complicate critical resupply"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Distributed pastoral enclave with mobile security doctrine",
-      "failureMode": "Sparse manpower fails to secure critical water and logistics nodes"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Moderate",
-      "longTerm": "Strong"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Operate as a network of defended micro-sites rather than one centralized compound",
-      "keyRisk": "Overextending into static perimeter defense across impossible distances"
-    },
-    "realityCheck": "What kills you here is overextension: too much ground, not enough people on key points.",
-    "scoreNarrative": "Anna Creek sits upper-mid: isolation and sustainability are strong, but defensibility drags because scale outpaces control.",
-    "image": "/images/bases/anna-creek-station.png"
-  },
-  {
     "name": "Pine Gap Facility",
     "slug": "pine-gap-facility",
     "type": "institutional_compound",

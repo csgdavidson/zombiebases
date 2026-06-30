@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-07T13:18:36.652691+00:00",
-  "sourceDigest": "3b7750474e4b656fcb347910de42f29f926525192d9070de591825d7581ee2d6",
-  "totalBases": 116,
+  "generatedAt": "2026-06-30T19:37:36.249777+00:00",
+  "sourceDigest": "bf536535413649c2aa7539d53e9f28a9429bca591fb7aacec1bf0722b7edd62b",
+  "totalBases": 115,
   "scenarioOrder": [
     "long_term_survival",
     "short_term_refuge",
@@ -1555,12 +1555,12 @@
         "reason": "Strong defence profile with a different regional context."
       },
       {
-        "slug": "anna-creek-station",
-        "name": "Anna Creek Station",
-        "region": "oceania",
-        "type": "industrial_site",
-        "overall": 6.8,
-        "reason": "Comparable frontline profile with stronger long-term viability."
+        "slug": "kibber-village",
+        "name": "Kibber Village",
+        "region": "south_asia",
+        "type": "remote_settlement",
+        "overall": 6.5,
+        "reason": "Comparable isolation, but weaker long-term viability."
       }
     ],
     "socotra-island": [
@@ -2277,48 +2277,6 @@
         "reason": "Comparable frontline profile with stronger long-term viability."
       }
     ],
-    "anna-creek-station": [
-      {
-        "slug": "tambopata-research-center",
-        "name": "Tambopata Research Center",
-        "region": "south_america",
-        "type": "institutional_compound",
-        "overall": 6.0,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "amazon-tall-tower-observatory",
-        "name": "Amazon Tall Tower Observatory",
-        "region": "south_america",
-        "type": "institutional_compound",
-        "overall": 6.1,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
-        "slug": "qeshm-island",
-        "name": "Qeshm Island",
-        "region": "middle_east",
-        "type": "isolated_landmass",
-        "overall": 6.9,
-        "reason": "Similar defensive profile with lower sustainability."
-      },
-      {
-        "slug": "danum-valley-field-centre",
-        "name": "Danum Valley Field Centre",
-        "region": "southeast_asia",
-        "type": "institutional_compound",
-        "overall": 6.3,
-        "reason": "Similar defensive profile with lower sustainability."
-      },
-      {
-        "slug": "siwa-oasis",
-        "name": "Siwa Oasis",
-        "region": "middle_east",
-        "type": "remote_settlement",
-        "overall": 7.1,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      }
-    ],
     "pine-gap-facility": [
       {
         "slug": "nagurskoye-air-base",
@@ -2917,14 +2875,6 @@
         "reason": "Similar trade-off between protection and sustainability."
       },
       {
-        "slug": "anna-creek-station",
-        "name": "Anna Creek Station",
-        "region": "oceania",
-        "type": "industrial_site",
-        "overall": 6.8,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
         "slug": "danum-valley-field-centre",
         "name": "Danum Valley Field Centre",
         "region": "southeast_asia",
@@ -2947,6 +2897,14 @@
         "type": "remote_settlement",
         "overall": 7.1,
         "reason": "Comparable survival shape, but with stronger defensive coverage."
+      },
+      {
+        "slug": "shirakawa-go",
+        "name": "Shirakawa-go",
+        "region": "east_asia",
+        "type": "remote_settlement",
+        "overall": 6.0,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "tambopata-research-center": [
@@ -2956,14 +2914,6 @@
         "region": "south_america",
         "type": "institutional_compound",
         "overall": 6.1,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "anna-creek-station",
-        "name": "Anna Creek Station",
-        "region": "oceania",
-        "type": "industrial_site",
-        "overall": 6.8,
         "reason": "Similar trade-off between protection and sustainability."
       },
       {
@@ -2988,6 +2938,14 @@
         "region": "east_asia",
         "type": "remote_settlement",
         "overall": 6.0,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
+      },
+      {
+        "slug": "banlung",
+        "name": "Banlung",
+        "region": "southeast_asia",
+        "type": "remote_settlement",
+        "overall": 6.1,
         "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
@@ -4979,10 +4937,6 @@
       "scenario": "high_risk_high_reward",
       "title": "Highest risk / highest reward"
     },
-    "anna-creek-station": {
-      "scenario": "long_term_survival",
-      "title": "Best long-term survival bases"
-    },
     "pine-gap-facility": {
       "scenario": "short_term_refuge",
       "title": "Best short-term refuges"
@@ -5119,6 +5073,10 @@
       "scenario": "long_term_survival",
       "title": "Best long-term survival bases"
     },
+    "ile-dyeu": {
+      "scenario": "long_term_survival",
+      "title": "Best long-term survival bases"
+    },
     "eguisheim": {
       "scenario": "community_bases",
       "title": "Best community bases"
@@ -5224,21 +5182,12 @@
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
-          "slug": "anna-creek-station",
-          "name": "Anna Creek Station",
-          "region": "oceania",
-          "type": "industrial_site",
-          "overall": 6.8,
-          "rank": 11,
-          "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
-        },
-        {
           "slug": "jeju-island",
           "name": "Jeju Island",
           "region": "east_asia",
           "type": "isolated_landmass",
           "overall": 7.1,
-          "rank": 12,
+          "rank": 11,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5247,7 +5196,7 @@
           "region": "south_america",
           "type": "institutional_compound",
           "overall": 6.1,
-          "rank": 13,
+          "rank": 12,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5256,7 +5205,7 @@
           "region": "southeast_asia",
           "type": "isolated_landmass",
           "overall": 7.3,
-          "rank": 14,
+          "rank": 13,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5265,7 +5214,7 @@
           "region": "north_america",
           "type": "isolated_landmass",
           "overall": 7.2,
-          "rank": 15,
+          "rank": 14,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5274,7 +5223,7 @@
           "region": "south_america",
           "type": "industrial_site",
           "overall": 6.8,
-          "rank": 16,
+          "rank": 15,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5283,7 +5232,7 @@
           "region": "western_europe",
           "type": "isolated_landmass",
           "overall": 8.0,
-          "rank": 17,
+          "rank": 16,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5292,7 +5241,7 @@
           "region": "eastern_europe",
           "type": "isolated_landmass",
           "overall": 7.4,
-          "rank": 18,
+          "rank": 17,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5301,7 +5250,7 @@
           "region": "africa",
           "type": "isolated_landmass",
           "overall": 7.2,
-          "rank": 19,
+          "rank": 18,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5310,7 +5259,7 @@
           "region": "north_america",
           "type": "isolated_landmass",
           "overall": 6.7,
-          "rank": 20,
+          "rank": 19,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5319,7 +5268,7 @@
           "region": "south_america",
           "type": "institutional_compound",
           "overall": 6.0,
-          "rank": 21,
+          "rank": 20,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5328,7 +5277,7 @@
           "region": "western_europe",
           "type": "remote_settlement",
           "overall": 7.0,
-          "rank": 22,
+          "rank": 21,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5337,7 +5286,7 @@
           "region": "oceania",
           "type": "remote_settlement",
           "overall": 7.1,
-          "rank": 23,
+          "rank": 22,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5346,7 +5295,7 @@
           "region": "eastern_europe",
           "type": "isolated_landmass",
           "overall": 7.1,
-          "rank": 24,
+          "rank": 23,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5355,6 +5304,15 @@
           "region": "western_europe",
           "type": "fortified_structure",
           "overall": 8.2,
+          "rank": 24,
+          "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
+        },
+        {
+          "slug": "ile-dyeu",
+          "name": "\u00cele d\u2019Yeu",
+          "region": "western_europe",
+          "type": "isolated_landmass",
+          "overall": 7.0,
           "rank": 25,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         }
