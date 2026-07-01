@@ -2935,68 +2935,6 @@
     "image": "/images/bases/kodiak-island.png"
   },
   {
-    "name": "Vancouver Island",
-    "slug": "vancouver-island",
-    "type": "isolated_landmass",
-    "region": "north_america",
-    "country": "Canada",
-    "lat": 49.65,
-    "long": -125.45,
-    "scores": {
-      "overall": 6.7,
-      "categories": {
-        "defensibility": 6.4,
-        "sustainability": 7.3,
-        "isolation": 6.2
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 6,
-        "rationale": "The Vancouver Island profile cites island geography provides selective choke points for movement control, but large resident population and mainland linkage increase conflict and demand pressure."
-      },
-      "maintenanceBurden": {
-        "score": 5,
-        "rationale": "The Vancouver Island maintenance score is limited because complex grid and transport interdependence complicate rapid decentralization."
-      },
-      "populationCapacity": {
-        "score": 8,
-        "rationale": "The Vancouver Island can support more people than many island or isolated landmass options because it offers island geography provides selective choke points for movement control."
-      },
-      "resourceSecurity": {
-        "score": 8,
-        "rationale": "The Vancouver Island sustainability profile suggests stronger resource security than most bases, though not unlimited surplus."
-      }
-    },
-    "description": {
-      "summary": "Vancouver Island is one of the most balanced large-island options, but its dominant failure mode is population-interface pressure: connected urban corridors and ferry chokepoints can overwhelm otherwise strong local resources.",
-      "strengths": [
-        "Robust freshwater, timber, and agricultural zones support multi-year habitation",
-        "Island geography provides selective choke points for movement control"
-      ],
-      "weaknesses": [
-        "Large resident population and mainland linkage increase conflict and demand pressure",
-        "Complex grid and transport interdependence complicate rapid decentralization"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Regional self-reliance zone anchored in lower-density subregions",
-      "failureMode": "Infrastructure and migration pressure in populated corridors outruns governance capacity"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Strong",
-      "longTerm": "Moderate"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Prioritize rural nodes, food belts, and corridor control over urban holdout strategy",
-      "keyRisk": "Treating the whole island as equally defensible despite heavy population concentration"
-    },
-    "realityCheck": "Resource depth is real, but social load management is the deciding variable.",
-    "scoreNarrative": "Vancouver Island remains high-mid tier by combining strong sustainability with decent defensibility. It stays below 7 because isolation is only moderate once population and transport realities are included.",
-    "image": "/images/bases/vancouver-island.png"
-  },
-  {
     "name": "Telluride",
     "slug": "telluride",
     "type": "remote_settlement",

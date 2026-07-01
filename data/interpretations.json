@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-01T15:40:25Z",
+  "generatedAt": "2026-07-01T16:09:40Z",
   "source": {
     "bases": "data/bases-index.json",
     "schemaVersion": 1,
-    "hash": "6fd4807a54538763405ed82eb3001673d68d478458a6f1a4ff211518d0270f19"
+    "hash": "8b30525efbf67a4de2d441dfd726f452ae54cf22434c08f3886c9f2db53202e2"
   },
   "interpretations": [
     {
@@ -986,15 +986,6 @@
       "archetypeLabel": "Isolation refuge",
       "archetypeDescription": "Separation is a major advantage, but sustaining people and flow is the pressure point.",
       "scoreShapeSummary": "Partial strength in isolation cannot fully offset recurring long-term viability pressure."
-    },
-    {
-      "slug": "vancouver-island",
-      "scoreBandLabel": "Viable but flawed",
-      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
-      "scoreBandClass": "score-band-viable",
-      "archetypeLabel": "Balanced survivor",
-      "archetypeDescription": "Strong all-round performance with no extreme weakness.",
-      "scoreShapeSummary": "Leans on long-term viability for stability, but weak isolation still dictates failure risk."
     },
     {
       "slug": "visby",
