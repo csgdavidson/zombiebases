@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-01T15:40:24.809424+00:00",
-  "sourceDigest": "cbf625a078367ab9fbdb91505ea750aca17f0bd9011e6e3aa6aa2bf1e6c703b6",
-  "totalBases": 114,
+  "generatedAt": "2026-07-01T16:09:39.279889+00:00",
+  "sourceDigest": "42a240ea82adf0f75d18464c5c2fb054583bb30d685f7179df784e51399b47e0",
+  "totalBases": 113,
   "scenarioOrder": [
     "long_term_survival",
     "short_term_refuge",
@@ -699,14 +699,6 @@
         "reason": "Comparable survival shape with a different balance across key traits."
       },
       {
-        "slug": "vancouver-island",
-        "name": "Vancouver Island",
-        "region": "north_america",
-        "type": "isolated_landmass",
-        "overall": 6.7,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
         "slug": "wadi-musa",
         "name": "Wadi Musa",
         "region": "middle_east",
@@ -721,6 +713,14 @@
         "type": "elevated_stronghold",
         "overall": 6.1,
         "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "ha-long-bay-cliffs",
+        "name": "Ha Long Bay Cliffs",
+        "region": "southeast_asia",
+        "type": "elevated_stronghold",
+        "overall": 6.6,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "shirakawa-go": [
@@ -1983,48 +1983,6 @@
         "reason": "Similar trade-off between protection and sustainability."
       }
     ],
-    "vancouver-island": [
-      {
-        "slug": "hallstatt",
-        "name": "Hallstatt",
-        "region": "western_europe",
-        "type": "remote_settlement",
-        "overall": 7.0,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "okinawa",
-        "name": "Okinawa",
-        "region": "east_asia",
-        "type": "isolated_landmass",
-        "overall": 6.2,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "ha-long-bay-cliffs",
-        "name": "Ha Long Bay Cliffs",
-        "region": "southeast_asia",
-        "type": "elevated_stronghold",
-        "overall": 6.6,
-        "reason": "Similar defensive profile with lower sustainability."
-      },
-      {
-        "slug": "jeju-island",
-        "name": "Jeju Island",
-        "region": "east_asia",
-        "type": "isolated_landmass",
-        "overall": 7.1,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "telluride",
-        "name": "Telluride",
-        "region": "north_america",
-        "type": "remote_settlement",
-        "overall": 7.0,
-        "reason": "Similar defensive profile with lower sustainability."
-      }
-    ],
     "telluride": [
       {
         "slug": "ha-long-bay-cliffs",
@@ -3025,12 +2983,12 @@
         "reason": "Comparable survival shape, but with stronger isolation."
       },
       {
-        "slug": "vancouver-island",
-        "name": "Vancouver Island",
-        "region": "north_america",
-        "type": "isolated_landmass",
-        "overall": 6.7,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
+        "slug": "rocamadour",
+        "name": "Rocamadour",
+        "region": "western_europe",
+        "type": "elevated_stronghold",
+        "overall": 6.9,
+        "reason": "Similar defensive profile with lower sustainability."
       }
     ],
     "hilltop-fort-rajasthan": [
@@ -3471,14 +3429,6 @@
         "reason": "Comparable isolation, but weaker long-term viability."
       },
       {
-        "slug": "vancouver-island",
-        "name": "Vancouver Island",
-        "region": "north_america",
-        "type": "isolated_landmass",
-        "overall": 6.7,
-        "reason": "Similar defensive profile with lower sustainability."
-      },
-      {
         "slug": "tasmania",
         "name": "Tasmania",
         "region": "oceania",
@@ -3492,6 +3442,14 @@
         "region": "western_europe",
         "type": "remote_settlement",
         "overall": 7.0,
+        "reason": "Similar defensive profile with lower sustainability."
+      },
+      {
+        "slug": "jeju-island",
+        "name": "Jeju Island",
+        "region": "east_asia",
+        "type": "isolated_landmass",
+        "overall": 7.1,
         "reason": "Similar defensive profile with lower sustainability."
       }
     ],
@@ -4673,14 +4631,6 @@
     ],
     "hallstatt": [
       {
-        "slug": "vancouver-island",
-        "name": "Vancouver Island",
-        "region": "north_america",
-        "type": "isolated_landmass",
-        "overall": 6.7,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
         "slug": "telluride",
         "name": "Telluride",
         "region": "north_america",
@@ -4711,6 +4661,14 @@
         "type": "elevated_stronghold",
         "overall": 6.9,
         "reason": "Comparable survival shape, but with stronger defensive coverage."
+      },
+      {
+        "slug": "clovelly",
+        "name": "Clovelly",
+        "region": "uk_ireland",
+        "type": "remote_settlement",
+        "overall": 6.5,
+        "reason": "Similar defensive profile with lower sustainability."
       }
     ],
     "maginot-line-bunkers": [
@@ -4895,10 +4853,6 @@
       "scenario": "long_term_survival",
       "title": "Best long-term survival bases"
     },
-    "vancouver-island": {
-      "scenario": "community_bases",
-      "title": "Best community bases"
-    },
     "cheyenne-mountain-complex": {
       "scenario": "high_risk_high_reward",
       "title": "Highest risk / highest reward"
@@ -5004,6 +4958,10 @@
       "title": "Best community bases"
     },
     "palawan": {
+      "scenario": "long_term_survival",
+      "title": "Best long-term survival bases"
+    },
+    "banda-neira": {
       "scenario": "long_term_survival",
       "title": "Best long-term survival bases"
     },
@@ -5211,21 +5169,12 @@
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
-          "slug": "vancouver-island",
-          "name": "Vancouver Island",
-          "region": "north_america",
-          "type": "isolated_landmass",
-          "overall": 6.7,
-          "rank": 18,
-          "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
-        },
-        {
           "slug": "tambopata-research-center",
           "name": "Tambopata Research Center",
           "region": "south_america",
           "type": "institutional_compound",
           "overall": 6.0,
-          "rank": 19,
+          "rank": 18,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5234,7 +5183,7 @@
           "region": "western_europe",
           "type": "remote_settlement",
           "overall": 7.0,
-          "rank": 20,
+          "rank": 19,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5243,7 +5192,7 @@
           "region": "oceania",
           "type": "remote_settlement",
           "overall": 7.1,
-          "rank": 21,
+          "rank": 20,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5252,7 +5201,7 @@
           "region": "eastern_europe",
           "type": "isolated_landmass",
           "overall": 7.1,
-          "rank": 22,
+          "rank": 21,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5261,7 +5210,7 @@
           "region": "western_europe",
           "type": "fortified_structure",
           "overall": 8.2,
-          "rank": 23,
+          "rank": 22,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5270,7 +5219,7 @@
           "region": "western_europe",
           "type": "isolated_landmass",
           "overall": 7.0,
-          "rank": 24,
+          "rank": 23,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5279,6 +5228,15 @@
           "region": "middle_east",
           "type": "isolated_landmass",
           "overall": 6.9,
+          "rank": 24,
+          "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
+        },
+        {
+          "slug": "banda-neira",
+          "name": "Banda Neira",
+          "region": "southeast_asia",
+          "type": "remote_settlement",
+          "overall": 6.8,
           "rank": 25,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         }
@@ -5565,21 +5523,12 @@
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
-          "slug": "vancouver-island",
-          "name": "Vancouver Island",
-          "region": "north_america",
-          "type": "isolated_landmass",
-          "overall": 6.7,
-          "rank": 6,
-          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
-        },
-        {
           "slug": "hallstatt",
           "name": "Hallstatt",
           "region": "western_europe",
           "type": "remote_settlement",
           "overall": 7.0,
-          "rank": 7,
+          "rank": 6,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5588,7 +5537,7 @@
           "region": "south_asia",
           "type": "isolated_landmass",
           "overall": 8.3,
-          "rank": 8,
+          "rank": 7,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5597,7 +5546,7 @@
           "region": "south_asia",
           "type": "fortified_structure",
           "overall": 7.8,
-          "rank": 9,
+          "rank": 8,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5606,7 +5555,7 @@
           "region": "africa",
           "type": "elevated_stronghold",
           "overall": 6.5,
-          "rank": 10,
+          "rank": 9,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5615,7 +5564,7 @@
           "region": "uk_ireland",
           "type": "remote_settlement",
           "overall": 8.1,
-          "rank": 11,
+          "rank": 10,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5624,7 +5573,7 @@
           "region": "east_asia",
           "type": "isolated_landmass",
           "overall": 7.1,
-          "rank": 12,
+          "rank": 11,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5633,7 +5582,7 @@
           "region": "southeast_asia",
           "type": "fortified_structure",
           "overall": 6.6,
-          "rank": 13,
+          "rank": 12,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5642,7 +5591,7 @@
           "region": "middle_east",
           "type": "remote_settlement",
           "overall": 7.1,
-          "rank": 14,
+          "rank": 13,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5651,7 +5600,7 @@
           "region": "southeast_asia",
           "type": "isolated_landmass",
           "overall": 7.3,
-          "rank": 15,
+          "rank": 14,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5660,7 +5609,7 @@
           "region": "east_asia",
           "type": "fortified_structure",
           "overall": 6.8,
-          "rank": 16,
+          "rank": 15,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5669,7 +5618,7 @@
           "region": "southeast_asia",
           "type": "institutional_compound",
           "overall": 6.2,
-          "rank": 17,
+          "rank": 16,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5678,7 +5627,7 @@
           "region": "oceania",
           "type": "isolated_landmass",
           "overall": 7.3,
-          "rank": 18,
+          "rank": 17,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5687,7 +5636,7 @@
           "region": "south_america",
           "type": "institutional_compound",
           "overall": 6.1,
-          "rank": 19,
+          "rank": 18,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5696,7 +5645,7 @@
           "region": "western_europe",
           "type": "fortified_structure",
           "overall": 7.4,
-          "rank": 20,
+          "rank": 19,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5705,7 +5654,7 @@
           "region": "uk_ireland",
           "type": "elevated_stronghold",
           "overall": 6.5,
-          "rank": 21,
+          "rank": 20,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5714,7 +5663,7 @@
           "region": "western_europe",
           "type": "remote_settlement",
           "overall": 5.0,
-          "rank": 22,
+          "rank": 21,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5723,7 +5672,7 @@
           "region": "africa",
           "type": "fortified_structure",
           "overall": 6.2,
-          "rank": 23,
+          "rank": 22,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5732,7 +5681,7 @@
           "region": "south_america",
           "type": "fortified_structure",
           "overall": 6.4,
-          "rank": 24,
+          "rank": 23,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         },
         {
@@ -5741,6 +5690,15 @@
           "region": "east_asia",
           "type": "isolated_landmass",
           "overall": 6.2,
+          "rank": 24,
+          "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
+        },
+        {
+          "slug": "seychelles",
+          "name": "Seychelles",
+          "region": "africa",
+          "type": "isolated_landmass",
+          "overall": 8.0,
           "rank": 25,
           "reason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
         }

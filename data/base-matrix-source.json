@@ -66,7 +66,6 @@
         { "name": "Alcatraz Island", "slug": "alcatraz-island", "type": "fortified_structure" },
         { "name": "Fort Jefferson", "slug": "fort-jefferson", "type": "fortified_structure" },
         { "name": "Kodiak Island", "slug": "kodiak-island", "type": "isolated_landmass" },
-        { "name": "Vancouver Island", "slug": "vancouver-island", "type": "isolated_landmass" },
         { "name": "Mesa Verde", "slug": "mesa-verde", "type": "elevated_stronghold" },
         { "name": "Table Rock Plateau", "slug": "table-rock-plateau", "type": "elevated_stronghold" },
         { "name": "Cheyenne Mountain Complex", "slug": "cheyenne-mountain-complex", "type": "subterranean" },

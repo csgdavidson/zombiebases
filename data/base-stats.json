@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-01T15:40:26.413789+00:00",
-  "totalBases": 114,
+  "generatedAt": "2026-07-01T16:09:40.809982+00:00",
+  "totalBases": 113,
   "scoreCategories": [
     "overall",
     "defensibility",
@@ -8,12 +8,12 @@
     "sustainability"
   ],
   "global": {
-    "count": 114,
+    "count": 113,
     "averages": {
       "overall": 6.6,
-      "defensibility": 7.27,
-      "isolation": 6.92,
-      "sustainability": 4.97
+      "defensibility": 7.28,
+      "isolation": 6.93,
+      "sustainability": 4.95
     },
     "highest": {
       "slug": "cheyenne-mountain-complex",
@@ -104,12 +104,12 @@
       }
     },
     "north_america": {
-      "count": 11,
+      "count": 10,
       "averages": {
         "overall": 6.65,
-        "defensibility": 7.4,
-        "isolation": 7.05,
-        "sustainability": 5.17
+        "defensibility": 7.5,
+        "isolation": 7.14,
+        "sustainability": 4.96
       },
       "highest": {
         "slug": "cheyenne-mountain-complex",
@@ -334,12 +334,12 @@
       }
     },
     "isolated_landmass": {
-      "count": 22,
+      "count": 21,
       "averages": {
-        "overall": 7.22,
-        "defensibility": 6.5,
-        "isolation": 8.29,
-        "sustainability": 6.31
+        "overall": 7.25,
+        "defensibility": 6.51,
+        "isolation": 8.39,
+        "sustainability": 6.26
       },
       "highest": {
         "slug": "andaman-islands",
