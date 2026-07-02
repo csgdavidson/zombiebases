@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-02T19:19:47.241228+00:00",
-  "sourceDigest": "cad69b4b312cf05ec5c32c791ecdc3f99455838b7a00f0cdbf67c6fc9fc4072b",
-  "totalBases": 112,
+  "generatedAt": "2026-07-02T19:37:48.074164+00:00",
+  "sourceDigest": "9fcc74e54e38189166e0f9e3e45aa84b48d849660d3957fb597d02c6403c5e8d",
+  "totalBases": 111,
   "scenarioOrder": [
     "long_term_survival",
     "short_term_refuge",
@@ -699,14 +699,6 @@
         "reason": "Comparable survival shape with a different balance across key traits."
       },
       {
-        "slug": "wadi-musa",
-        "name": "Wadi Musa",
-        "region": "middle_east",
-        "type": "remote_settlement",
-        "overall": 5.9,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
         "slug": "table-rock-plateau",
         "name": "Table Rock Plateau",
         "region": "north_america",
@@ -721,6 +713,14 @@
         "type": "elevated_stronghold",
         "overall": 6.6,
         "reason": "Comparable survival shape, but with stronger defensive coverage."
+      },
+      {
+        "slug": "hallstatt",
+        "name": "Hallstatt",
+        "region": "western_europe",
+        "type": "remote_settlement",
+        "overall": 7.0,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "shirakawa-go": [
@@ -731,14 +731,6 @@
         "type": "remote_settlement",
         "overall": 6.1,
         "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "wadi-musa",
-        "name": "Wadi Musa",
-        "region": "middle_east",
-        "type": "remote_settlement",
-        "overall": 5.9,
-        "reason": "Strong defence profile with a different regional context."
       },
       {
         "slug": "okinawa",
@@ -762,6 +754,14 @@
         "region": "middle_east",
         "type": "isolated_landmass",
         "overall": 6.9,
+        "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "ile-dyeu",
+        "name": "\u00cele d\u2019Yeu",
+        "region": "western_europe",
+        "type": "isolated_landmass",
+        "overall": 7.0,
         "reason": "Strong defence profile with a different regional context."
       }
     ],
@@ -1605,48 +1605,6 @@
         "reason": "Similar remote-survival profile with a different risk balance."
       }
     ],
-    "wadi-musa": [
-      {
-        "slug": "shirakawa-go",
-        "name": "Shirakawa-go",
-        "region": "east_asia",
-        "type": "remote_settlement",
-        "overall": 6.0,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "banlung",
-        "name": "Banlung",
-        "region": "southeast_asia",
-        "type": "remote_settlement",
-        "overall": 6.1,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "okinawa",
-        "name": "Okinawa",
-        "region": "east_asia",
-        "type": "isolated_landmass",
-        "overall": 6.2,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "table-rock-plateau",
-        "name": "Table Rock Plateau",
-        "region": "north_america",
-        "type": "elevated_stronghold",
-        "overall": 6.1,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
-        "slug": "clovelly",
-        "name": "Clovelly",
-        "region": "uk_ireland",
-        "type": "remote_settlement",
-        "overall": 6.5,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      }
-    ],
     "mesa-verde": [
       {
         "slug": "clovelly",
@@ -1691,14 +1649,6 @@
     ],
     "table-rock-plateau": [
       {
-        "slug": "wadi-musa",
-        "name": "Wadi Musa",
-        "region": "middle_east",
-        "type": "remote_settlement",
-        "overall": 5.9,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
         "slug": "okinawa",
         "name": "Okinawa",
         "region": "east_asia",
@@ -1729,6 +1679,14 @@
         "type": "elevated_stronghold",
         "overall": 6.0,
         "reason": "Comparable isolation, but weaker long-term viability."
+      },
+      {
+        "slug": "mesa-verde",
+        "name": "Mesa Verde",
+        "region": "north_america",
+        "type": "elevated_stronghold",
+        "overall": 6.8,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "alcatraz-island": [
@@ -3689,19 +3647,19 @@
         "reason": "Comparable survival shape, but with stronger isolation."
       },
       {
-        "slug": "wadi-musa",
-        "name": "Wadi Musa",
-        "region": "middle_east",
-        "type": "remote_settlement",
-        "overall": 5.9,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
         "slug": "qeshm-island",
         "name": "Qeshm Island",
         "region": "middle_east",
         "type": "isolated_landmass",
         "overall": 6.9,
+        "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "ile-dyeu",
+        "name": "\u00cele d\u2019Yeu",
+        "region": "western_europe",
+        "type": "isolated_landmass",
+        "overall": 7.0,
         "reason": "Strong defence profile with a different regional context."
       }
     ],
@@ -4547,14 +4505,6 @@
     ],
     "eguisheim": [
       {
-        "slug": "wadi-musa",
-        "name": "Wadi Musa",
-        "region": "middle_east",
-        "type": "remote_settlement",
-        "overall": 5.9,
-        "reason": "Comparable survival shape, but with stronger isolation."
-      },
-      {
         "slug": "great-mosque-of-djenne",
         "name": "Great Mosque of Djenn\u00e9",
         "region": "africa",
@@ -4584,6 +4534,14 @@
         "region": "east_asia",
         "type": "isolated_landmass",
         "overall": 6.2,
+        "reason": "Comparable survival shape, but with stronger isolation."
+      },
+      {
+        "slug": "banlung",
+        "name": "Banlung",
+        "region": "southeast_asia",
+        "type": "remote_settlement",
+        "overall": 6.1,
         "reason": "Comparable survival shape, but with stronger isolation."
       }
     ],

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-02T19:19:48Z",
+  "generatedAt": "2026-07-02T19:37:48Z",
   "source": {
     "bases": "data/bases-index.json",
     "schemaVersion": 1,
-    "hash": "1c1d932474b476edda7044636489ded3da2e95a294b3feeb1df736486bab7bb4"
+    "hash": "52cbc9a594b158c5872752b79fc1960c3bda912a424e57ed8a842b8f16b2afab"
   },
   "interpretations": [
     {
@@ -986,15 +986,6 @@
       "archetypeLabel": "Defence-leaning refuge",
       "archetypeDescription": "Protective strength is the main edge, but weaker support traits cap long-term reliability.",
       "scoreShapeSummary": "High-function profile with strong defence, while long-term viability remains the critical upgrade target."
-    },
-    {
-      "slug": "wadi-musa",
-      "scoreBandLabel": "Situational refuge",
-      "scoreBandDescription": "Can work in specific conditions, but not as a default long-term choice.",
-      "scoreBandClass": "score-band-situational",
-      "archetypeLabel": "Defence-leaning refuge",
-      "archetypeDescription": "Protective strength is the main edge, but weaker support traits cap long-term reliability.",
-      "scoreShapeSummary": "Partial strength in isolation cannot fully offset recurring defence pressure."
     },
     {
       "slug": "waw-an-namus-cave-system",

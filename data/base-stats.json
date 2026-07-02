@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-02T19:19:49.569720+00:00",
-  "totalBases": 112,
+  "generatedAt": "2026-07-02T19:37:49.575747+00:00",
+  "totalBases": 111,
   "scoreCategories": [
     "overall",
     "defensibility",
@@ -8,10 +8,10 @@
     "sustainability"
   ],
   "global": {
-    "count": 112,
+    "count": 111,
     "averages": {
-      "overall": 6.6,
-      "defensibility": 7.27,
+      "overall": 6.61,
+      "defensibility": 7.29,
       "isolation": 6.96,
       "sustainability": 4.95
     },
@@ -85,12 +85,12 @@
       }
     },
     "middle_east": {
-      "count": 9,
+      "count": 8,
       "averages": {
-        "overall": 6.79,
-        "defensibility": 7.08,
-        "isolation": 6.51,
-        "sustainability": 5.09
+        "overall": 6.9,
+        "defensibility": 7.31,
+        "isolation": 6.59,
+        "sustainability": 5.0
       },
       "highest": {
         "slug": "socotra-island",
@@ -98,9 +98,9 @@
         "overall": 7.4
       },
       "lowest": {
-        "slug": "wadi-musa",
-        "name": "Wadi Musa",
-        "overall": 5.9
+        "slug": "al-udeid-air-base",
+        "name": "Al Udeid Air Base",
+        "overall": 6.2
       }
     },
     "north_america": {
@@ -372,12 +372,12 @@
       }
     },
     "remote_settlement": {
-      "count": 18,
+      "count": 17,
       "averages": {
-        "overall": 6.56,
-        "defensibility": 6.29,
-        "isolation": 7.28,
-        "sustainability": 5.63
+        "overall": 6.6,
+        "defensibility": 6.35,
+        "isolation": 7.36,
+        "sustainability": 5.62
       },
       "highest": {
         "slug": "isle-of-eigg-village",

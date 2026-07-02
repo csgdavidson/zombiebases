@@ -2377,68 +2377,6 @@
     "image": "/images/bases/siwa-oasis.png"
   },
   {
-    "name": "Wadi Musa",
-    "slug": "wadi-musa",
-    "type": "remote_settlement",
-    "region": "middle_east",
-    "country": "Jordan",
-    "lat": 30.3225,
-    "long": 35.4789,
-    "scores": {
-      "overall": 5.9,
-      "categories": {
-        "defensibility": 5.2,
-        "sustainability": 5.8,
-        "isolation": 5.9
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 6,
-        "rationale": "The Wadi Musa remote settlement setting gives it moderate exposure protection compared with more accessible bases."
-      },
-      "maintenanceBurden": {
-        "score": 6,
-        "rationale": "The Wadi Musa maintenance score is helped by existing settlement fabric supports practical day-to-day habitation, making daily upkeep more manageable."
-      },
-      "populationCapacity": {
-        "score": 7,
-        "rationale": "The Wadi Musa can support more people than many remote settlement options because it offers existing settlement fabric supports practical day-to-day habitation."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The Wadi Musa sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "Wadi Musa is workable but fragile; what kills you here is corridor squeeze: limited approach routes become contested chokepoints that choke trade, movement, and medical evacuation.",
-      "strengths": [
-        "Lower baseline density than major metro hubs reduces immediate surge pressure",
-        "Existing settlement fabric supports practical day-to-day habitation"
-      ],
-      "weaknesses": [
-        "Route dependence makes supply and casualty transport vulnerable to blockade",
-        "Moderate defensive depth leaves little margin once approaches are disrupted"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Small regional hub with route security and conservative population targets",
-      "failureMode": "Approach-route disruption isolates the town and degrades care and resupply"
-    },
-    "survivalProfile": {
-      "initial": "Moderate",
-      "shortTerm": "Moderate",
-      "longTerm": "Weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Fortify key road nodes and hold a mobile reserve for convoy continuity",
-      "keyRisk": "Overcommitting to static defense allows route interdiction to starve the settlement"
-    },
-    "realityCheck": "Assumes persistent patrol capability and fuel reserves for route clearance operations.",
-    "scoreNarrative": "Wadi Musa falls just under 6 because habitability is offset by transport fragility. The core failure mode is chokepoint isolation.",
-    "image": "/images/bases/wadi-musa.png"
-  },
-  {
     "name": "Mesa Verde",
     "slug": "mesa-verde",
     "type": "elevated_stronghold",
