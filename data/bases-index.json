@@ -1199,68 +1199,6 @@
     "image": "/images/bases/iwo-jima-underground-bunkers.png"
   },
   {
-    "name": "Beijing Underground City",
-    "slug": "beijing-underground-city",
-    "type": "subterranean",
-    "region": "east_asia",
-    "country": "China",
-    "lat": 39.9042,
-    "long": 116.4074,
-    "scores": {
-      "overall": 6,
-      "categories": {
-        "defensibility": 8,
-        "sustainability": 4,
-        "isolation": 4
-      }
-    },
-    "comparisonScores": {
-      "exposure": {
-        "score": 4,
-        "rationale": "The Beijing Underground City exposure score is held down because urban dependence means contamination, smoke, and infrastructure collapse propagate underground."
-      },
-      "maintenanceBurden": {
-        "score": 1,
-        "rationale": "The Beijing Underground City maintenance score is limited because life support is mechanically fragile: airflow, pumping, sanitation, and power are constant burdens."
-      },
-      "populationCapacity": {
-        "score": 4,
-        "rationale": "The Beijing Underground City can support more people than many subterranean site options because it offers large subterranean footprint with concealment and layered defensive movement options."
-      },
-      "resourceSecurity": {
-        "score": 5,
-        "rationale": "The Beijing Underground City sustainability profile suggests adequate but not surplus resource security for long-term use."
-      }
-    },
-    "description": {
-      "summary": "Beijing Underground City is hard to clear and hard to spot, but it is still a buried extension of a megacity. What kills you here is ventilation and water-system failure once surface utilities, filters, and spare parts stop flowing.",
-      "strengths": [
-        "Large subterranean footprint with concealment and layered defensive movement options",
-        "Multiple internal corridors and compartments can delay or channel intruders"
-      ],
-      "weaknesses": [
-        "Life support is mechanically fragile: airflow, pumping, sanitation, and power are constant burdens",
-        "Urban dependence means contamination, smoke, and infrastructure collapse propagate underground"
-      ]
-    },
-    "verdict": {
-      "bestUseCase": "Short-term covert shelter and staging node during acute instability",
-      "failureMode": "Air, water, and sanitation systems degrade faster than defenders can maintain them"
-    },
-    "survivalProfile": {
-      "initial": "Strong",
-      "shortTerm": "Moderate",
-      "longTerm": "Weak"
-    },
-    "useCaseAndRisk": {
-      "bestUseCase": "Hide and reorganize for weeks while preparing relocation to a surface-productive site",
-      "keyRisk": "If filters, pumps, or power chains fail, the bunker becomes a sealed hazard instead of a refuge"
-    },
-    "realityCheck": "Assumes pre-stocked spares, disciplined maintenance crews, water treatment capability, and strict occupancy control in a dense urban crisis zone.",
-    "scoreNarrative": "Defensibility keeps Beijing Underground City competitive, but sustainability drags the score down. The decisive failure mode is internal systems collapse: you do not get overrun first, you run out of breathable and safe living conditions.",
-    "image": "/images/bases/beijing-underground-city.png"
-  },
-  {
     "name": "Predjama Castle",
     "slug": "predjama-castle",
     "type": "elevated_stronghold",
