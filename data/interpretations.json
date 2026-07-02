@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-01T16:09:40Z",
+  "generatedAt": "2026-07-02T19:19:48Z",
   "source": {
     "bases": "data/bases-index.json",
     "schemaVersion": 1,
-    "hash": "8b30525efbf67a4de2d441dfd726f452ae54cf22434c08f3886c9f2db53202e2"
+    "hash": "1c1d932474b476edda7044636489ded3da2e95a294b3feeb1df736486bab7bb4"
   },
   "interpretations": [
     {
@@ -86,15 +86,6 @@
       "archetypeLabel": "Isolation-leaning refuge",
       "archetypeDescription": "Distance and separation help, but resilience depends on stronger supporting systems.",
       "scoreShapeSummary": "Leans on isolation for stability, but weak defence still dictates failure risk."
-    },
-    {
-      "slug": "beijing-underground-city",
-      "scoreBandLabel": "Viable but flawed",
-      "scoreBandDescription": "Usable with planning, but one weakness can still break the base.",
-      "scoreBandClass": "score-band-viable",
-      "archetypeLabel": "Defensive stronghold",
-      "archetypeDescription": "Outstanding protection, but long-term success depends on fixing sustainability.",
-      "scoreShapeSummary": "Leans on defence for stability, but weak long-term viability still dictates failure risk."
     },
     {
       "slug": "blue-mountains-cliffs",

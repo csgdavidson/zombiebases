@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-01T16:09:40.809982+00:00",
-  "totalBases": 113,
+  "generatedAt": "2026-07-02T19:19:49.569720+00:00",
+  "totalBases": 112,
   "scoreCategories": [
     "overall",
     "defensibility",
@@ -8,11 +8,11 @@
     "sustainability"
   ],
   "global": {
-    "count": 113,
+    "count": 112,
     "averages": {
       "overall": 6.6,
-      "defensibility": 7.28,
-      "isolation": 6.93,
+      "defensibility": 7.27,
+      "isolation": 6.96,
       "sustainability": 4.95
     },
     "highest": {
@@ -47,12 +47,12 @@
       }
     },
     "east_asia": {
-      "count": 8,
+      "count": 7,
       "averages": {
-        "overall": 6.64,
-        "defensibility": 7.66,
-        "isolation": 6.65,
-        "sustainability": 4.94
+        "overall": 6.73,
+        "defensibility": 7.61,
+        "isolation": 7.03,
+        "sustainability": 5.07
       },
       "highest": {
         "slug": "mount-huashan",
@@ -391,12 +391,12 @@
       }
     },
     "subterranean": {
-      "count": 17,
+      "count": 16,
       "averages": {
-        "overall": 6.35,
-        "defensibility": 8.25,
-        "isolation": 6.4,
-        "sustainability": 3.77
+        "overall": 6.37,
+        "defensibility": 8.27,
+        "isolation": 6.55,
+        "sustainability": 3.76
       },
       "highest": {
         "slug": "cheyenne-mountain-complex",

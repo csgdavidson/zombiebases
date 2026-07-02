@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-01T16:09:39.279889+00:00",
-  "sourceDigest": "42a240ea82adf0f75d18464c5c2fb054583bb30d685f7179df784e51399b47e0",
-  "totalBases": 113,
+  "generatedAt": "2026-07-02T19:19:47.241228+00:00",
+  "sourceDigest": "cad69b4b312cf05ec5c32c791ecdc3f99455838b7a00f0cdbf67c6fc9fc4072b",
+  "totalBases": 112,
   "scenarioOrder": [
     "long_term_survival",
     "short_term_refuge",
@@ -111,14 +111,6 @@
         "reason": "Strong defence profile with a different regional context."
       },
       {
-        "slug": "beijing-underground-city",
-        "name": "Beijing Underground City",
-        "region": "east_asia",
-        "type": "subterranean",
-        "overall": 6.0,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
         "slug": "table-mountain-plateau",
         "name": "Table Mountain Plateau",
         "region": "africa",
@@ -133,6 +125,14 @@
         "type": "fortified_structure",
         "overall": 5.3,
         "reason": "Comparable survival shape, but with weaker defensive coverage."
+      },
+      {
+        "slug": "edinburgh-castle",
+        "name": "Edinburgh Castle",
+        "region": "uk_ireland",
+        "type": "elevated_stronghold",
+        "overall": 6.5,
+        "reason": "Strong defence profile with a different regional context."
       }
     ],
     "fasil-ghebbi": [
@@ -329,20 +329,20 @@
         "reason": "Comparable survival shape, but with stronger defensive coverage."
       },
       {
-        "slug": "beijing-underground-city",
-        "name": "Beijing Underground City",
-        "region": "east_asia",
-        "type": "subterranean",
-        "overall": 6.0,
-        "reason": "Comparable survival shape, but with stronger defensive coverage."
-      },
-      {
         "slug": "petra",
         "name": "Petra",
         "region": "middle_east",
         "type": "elevated_stronghold",
         "overall": 6.4,
         "reason": "Comparable survival shape, but with stronger isolation."
+      },
+      {
+        "slug": "al-udeid-air-base",
+        "name": "Al Udeid Air Base",
+        "region": "middle_east",
+        "type": "institutional_compound",
+        "overall": 6.2,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       }
     ],
     "ait-benhaddou": [
@@ -631,12 +631,12 @@
         "reason": "Comparable isolation, but weaker long-term viability."
       },
       {
-        "slug": "beijing-underground-city",
-        "name": "Beijing Underground City",
-        "region": "east_asia",
-        "type": "subterranean",
-        "overall": 6.0,
-        "reason": "Comparable isolation, but weaker long-term viability."
+        "slug": "krak-des-chevaliers",
+        "name": "Krak des Chevaliers",
+        "region": "middle_east",
+        "type": "fortified_structure",
+        "overall": 7.3,
+        "reason": "Strong defence profile with a different regional context."
       }
     ],
     "jeju-island": [
@@ -805,48 +805,6 @@
         "type": "subterranean",
         "overall": 7.1,
         "reason": "Similar trade-off between protection and sustainability."
-      }
-    ],
-    "beijing-underground-city": [
-      {
-        "slug": "al-udeid-air-base",
-        "name": "Al Udeid Air Base",
-        "region": "middle_east",
-        "type": "institutional_compound",
-        "overall": 6.2,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
-        "slug": "hutchinson-salt-storage-caverns",
-        "name": "Hutchinson Salt Storage Caverns",
-        "region": "north_america",
-        "type": "industrial_site",
-        "overall": 5.9,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "petra",
-        "name": "Petra",
-        "region": "middle_east",
-        "type": "elevated_stronghold",
-        "overall": 6.4,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
-      },
-      {
-        "slug": "himeji-castle",
-        "name": "Himeji Castle",
-        "region": "east_asia",
-        "type": "fortified_structure",
-        "overall": 6.8,
-        "reason": "Comparable frontline profile with stronger long-term viability."
-      },
-      {
-        "slug": "elmina-castle",
-        "name": "Elmina Castle",
-        "region": "africa",
-        "type": "fortified_structure",
-        "overall": 6.2,
-        "reason": "Strong defence profile with a different regional context."
       }
     ],
     "predjama-castle": [
@@ -1481,14 +1439,6 @@
     ],
     "al-udeid-air-base": [
       {
-        "slug": "beijing-underground-city",
-        "name": "Beijing Underground City",
-        "region": "east_asia",
-        "type": "subterranean",
-        "overall": 6.0,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
         "slug": "hutchinson-salt-storage-caverns",
         "name": "Hutchinson Salt Storage Caverns",
         "region": "north_america",
@@ -1518,6 +1468,14 @@
         "region": "africa",
         "type": "fortified_structure",
         "overall": 6.2,
+        "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "malbork-castle",
+        "name": "Malbork Castle",
+        "region": "eastern_europe",
+        "type": "fortified_structure",
+        "overall": 7.0,
         "reason": "Strong defence profile with a different regional context."
       }
     ],
@@ -2219,20 +2177,20 @@
         "reason": "Strong defence profile with a different regional context."
       },
       {
-        "slug": "beijing-underground-city",
-        "name": "Beijing Underground City",
-        "region": "east_asia",
-        "type": "subterranean",
-        "overall": 6.0,
-        "reason": "Comparable frontline profile with stronger long-term viability."
-      },
-      {
         "slug": "al-udeid-air-base",
         "name": "Al Udeid Air Base",
         "region": "middle_east",
         "type": "institutional_compound",
         "overall": 6.2,
         "reason": "Comparable frontline profile with stronger long-term viability."
+      },
+      {
+        "slug": "naours-underground-city",
+        "name": "Naours Underground City",
+        "region": "western_europe",
+        "type": "subterranean",
+        "overall": 5.0,
+        "reason": "Comparable survival shape, but with stronger long-term viability."
       }
     ],
     "pine-gap-facility": [
@@ -2421,14 +2379,6 @@
         "reason": "Strong defence profile with a different regional context."
       },
       {
-        "slug": "beijing-underground-city",
-        "name": "Beijing Underground City",
-        "region": "east_asia",
-        "type": "subterranean",
-        "overall": 6.0,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
         "slug": "al-udeid-air-base",
         "name": "Al Udeid Air Base",
         "region": "middle_east",
@@ -2442,6 +2392,14 @@
         "region": "eastern_europe",
         "type": "subterranean",
         "overall": 5.6,
+        "reason": "Strong defence profile with a different regional context."
+      },
+      {
+        "slug": "naours-underground-city",
+        "name": "Naours Underground City",
+        "region": "western_europe",
+        "type": "subterranean",
+        "overall": 5.0,
         "reason": "Strong defence profile with a different regional context."
       }
     ],
@@ -2715,14 +2673,6 @@
         "reason": "Comparable survival shape, but with stronger defensive coverage."
       },
       {
-        "slug": "beijing-underground-city",
-        "name": "Beijing Underground City",
-        "region": "east_asia",
-        "type": "subterranean",
-        "overall": 6.0,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
         "slug": "al-udeid-air-base",
         "name": "Al Udeid Air Base",
         "region": "middle_east",
@@ -2737,6 +2687,14 @@
         "type": "landmark_structure",
         "overall": 4.9,
         "reason": "Comparable survival shape, but with weaker defensive coverage."
+      },
+      {
+        "slug": "naours-underground-city",
+        "name": "Naours Underground City",
+        "region": "western_europe",
+        "type": "subterranean",
+        "overall": 5.0,
+        "reason": "Strong defence profile with a different regional context."
       }
     ],
     "san-felipe-fortress": [
