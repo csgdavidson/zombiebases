@@ -23,39 +23,77 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <h1>Zombie Bases</h1>
+      <a class="site-logo" href="/" aria-label="Zombie Bases home">
+        <span class="site-logo-mark">ZB</span>
+        <span class="site-logo-text">Zombie Bases</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="./rankings.html">Rankings</a>
+        <a href="./rankings-region.html">Regions</a>
+        <a href="./rankings-type.html">Types</a>
+        <a href="./compare.html">Compare</a>
+      </nav>
       <label class="header-search" for="search-input">
         <span class="visually-hidden">Search bases</span>
-        <input id="search-input" type="search" placeholder="Search by name, region, country, or type">
+        <input id="search-input" type="search" placeholder="Search bases, countries, regions...">
       </label>
     </div>
   </header>
 
   <main>
-    <section id="featured-section" class="featured-section" aria-label="Featured zombie bases" hidden>
-      <h2>Featured Bases</h2>
-      <ul id="featured-bases-list" class="compact-base-list" aria-label="Featured zombie bases list"></ul>
+    <section class="home-hero" aria-label="Find a survival base">
+      <div class="hero-copy">
+        <p class="eyebrow">ZombieBases V2 field guide</p>
+        <h1>Find the safest real-world places to survive the outbreak.</h1>
+        <p class="hero-lede">Search 100+ ranked bases by defensibility, isolation, sustainability, terrain, and real-world constraints.</p>
+        <div class="hero-search-shell" aria-hidden="true">
+          <span>Search above for castles, islands, bunkers, mountain towns...</span>
+        </div>
+      </div>
+      <div class="hero-photo-card">
+        <img src="./images/bases/mont-saint-michel.png" alt="Mont Saint-Michel coastal stronghold" width="720" height="540">
+        <div class="hero-photo-overlay">
+          <span class="hero-rank">#1 field pick</span>
+          <strong>Image-led scouting for every base</strong>
+        </div>
+      </div>
     </section>
 
-    <section class="rankings-explore" aria-label="Explore zombie bases">
-      <h2>Explore</h2>
-      <div class="discovery-group">
-        <p class="discovery-heading">Rankings</p>
-        <ul class="rankings-explore-links">
-          <li><a href="./rankings.html">Best overall</a></li>
-          <li><a href="./rankings-region.html">By region</a></li>
-          <li><a href="./rankings-type.html">By type</a></li>
-        </ul>
+    <section class="stats-strip" aria-label="Zombie base directory stats">
+      <div><strong id="stat-base-count">100+</strong><span>ranked bases</span></div>
+      <div><strong id="stat-region-count">12</strong><span>regions</span></div>
+      <div><strong id="stat-type-count">9</strong><span>base categories</span></div>
+      <div><strong>3</strong><span>survival scores</span></div>
+    </section>
+
+    <section class="home-discovery-grid" aria-label="Explore zombie bases">
+      <div class="category-panel">
+        <div class="section-heading-row">
+          <p class="eyebrow">Explore by category</p>
+          <h2>Choose your survival strategy</h2>
+        </div>
+        <div id="category-links" class="category-links"></div>
       </div>
-      <div class="discovery-group">
-        <p class="discovery-heading">Scenarios</p>
-        <ul class="rankings-explore-links">
-          <li><a href="./scenarios.html?scenario=long_term_survival">Long-term</a></li>
-          <li><a href="./scenarios.html?scenario=short_term_refuge">Short-term</a></li>
-          <li><a href="./scenarios.html?scenario=community_bases">Community</a></li>
-          <li><a href="./scenarios.html?scenario=high_risk_high_reward">High risk / reward</a></li>
-        </ul>
+      <div class="popular-panel">
+        <div class="section-heading-row">
+          <p class="eyebrow">Popular rankings</p>
+          <h2>Fast paths to the best lists</h2>
+        </div>
+        <div class="ranking-link-grid">
+          <a href="./rankings.html"><span>Best overall</span><small>Top-ranked bases</small></a>
+          <a href="./rankings-region.html"><span>Best by region</span><small>Local strongholds</small></a>
+          <a href="./rankings-type.html"><span>Best by type</span><small>Castles, islands, bunkers</small></a>
+          <a href="./scenarios.html?scenario=long_term_survival"><span>Long-term survival</span><small>Resources and resilience</small></a>
+        </div>
       </div>
+    </section>
+
+    <section id="featured-section" class="featured-section" aria-label="Top bases right now" hidden>
+      <div class="section-heading-row">
+        <p class="eyebrow">Top bases right now</p>
+        <h2>Strong contenders worth scouting first</h2>
+      </div>
+      <ul id="featured-bases-list" class="compact-base-list" aria-label="Featured zombie bases list"></ul>
     </section>
 
     <section class="controls-panel" aria-label="Search and filter zombie bases">
