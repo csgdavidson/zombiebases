@@ -577,12 +577,26 @@ function renderCategoryLinks() {
   if (!elements.categoryLinks) return;
   elements.categoryLinks.innerHTML = '';
   uniqueValues(state.visibleBases, 'type').forEach((type) => {
-    const count = state.visibleBases.filter((base) => base.type === type).length;
+    const basesForType = state.visibleBases.filter((base) => base.type === type);
+    const count = basesForType.length;
+    const representativeBase = basesForType[0];
+    const imageSlug = representativeBase ? preferredSlugFor(representativeBase) : 'placeholder';
     const link = document.createElement('a');
     link.className = 'category-link';
     link.href = `/?type=${encodeURIComponent(type)}`;
     link.dataset.type = type;
-    link.innerHTML = `<span>${labelFor('type', type)}</span><small>${count} bases</small>`;
+    link.innerHTML = `
+      <span class="category-image-wrap">
+        <img src="/images/bases/${encodeURIComponent(imageSlug)}.png" alt="" loading="lazy" decoding="async">
+      </span>
+      <span class="category-card-copy">
+        <span>${labelFor('type', type)}</span>
+        <small>${count} bases</small>
+      </span>`;
+    const image = link.querySelector('img');
+    image?.addEventListener('error', () => {
+      image.src = '/images/bases/placeholder.png';
+    }, { once: true });
     link.addEventListener('click', (event) => {
       event.preventDefault();
       state.view = 'list';
