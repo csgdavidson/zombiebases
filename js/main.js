@@ -108,7 +108,7 @@ function updateHomepageMetadata() {
     description,
     url: canonicalUrl,
     type: 'website',
-    image: `${window.seo.PRODUCTION_ORIGIN}/images/bases/placeholder.png`
+    image: window.seo.DEFAULT_IMAGE
   });
 
   window.seo.setJsonLd('home-website', {

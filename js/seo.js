@@ -3,7 +3,7 @@
   const BRAND_NAME = 'Zombie Bases';
   const DEFAULT_TITLE = 'Zombie Bases | Survival Base Directory';
   const DEFAULT_DESCRIPTION = 'Explore zombie survival base locations by region and type, with list and map views for quick comparison.';
-  const DEFAULT_IMAGE = `${PRODUCTION_ORIGIN}/images/bases/placeholder.png`;
+  const DEFAULT_IMAGE = '/logo.png';
 
   function cleanText(value) {
     return typeof value === 'string' ? value.trim() : '';
