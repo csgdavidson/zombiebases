@@ -62,6 +62,8 @@ const elements = {
   keyRiskRow: document.getElementById('base-key-risk-row'),
   keyRiskText: document.getElementById('base-key-risk'),
   metaRow: document.getElementById('base-meta-row'),
+  quickFactsCard: document.getElementById('quick-facts-card'),
+  quickFactsList: document.getElementById('quick-facts-list'),
   backLink: document.getElementById('back-link'),
   compareLink: document.getElementById('compare-link'),
   heroSection: document.getElementById('hero-section'),
@@ -340,20 +342,21 @@ function applyDetailMetadata(base) {
   });
 }
 
+function getQuickFactItems(base) {
+  return [
+    { label: 'Type', value: labelFor('type', base.type) },
+    { label: 'Region', value: labelFor('region', base.region) },
+    { label: 'Country', value: isNonEmptyString(base.country) ? base.country : null },
+    { label: 'Best for', value: isNonEmptyString(base.best_for) ? base.best_for : firstSentence(base?.useCaseAndRisk?.bestUseCase) }
+  ].filter((item) => item.value);
+}
+
 function renderMetaRow(base) {
   elements.metaRow.innerHTML = '';
 
-  const items = [
-    { label: 'Type', value: labelFor('type', base.type) },
-    { label: 'Region', value: labelFor('region', base.region) },
-    { label: 'Country', value: isNonEmptyString(base.country) ? base.country : null }
-  ];
+  const items = getQuickFactItems(base).slice(0, 3);
 
   items.forEach((item) => {
-    if (!item.value) {
-      return;
-    }
-
     const listItem = document.createElement('li');
     const label = document.createElement('strong');
     label.textContent = `${item.label}: `;
@@ -361,6 +364,18 @@ function renderMetaRow(base) {
     elements.metaRow.appendChild(listItem);
   });
   elements.metaRow.hidden = elements.metaRow.children.length === 0;
+
+  if (elements.quickFactsCard && elements.quickFactsList) {
+    elements.quickFactsList.innerHTML = '';
+    getQuickFactItems(base).forEach((item) => {
+      const term = document.createElement('dt');
+      term.textContent = item.label;
+      const description = document.createElement('dd');
+      description.textContent = item.value;
+      elements.quickFactsList.append(term, description);
+    });
+    elements.quickFactsCard.hidden = elements.quickFactsList.children.length === 0;
+  }
 }
 
 function renderCompareEntry(base) {
