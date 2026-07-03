@@ -4112,3 +4112,176 @@ button:hover,
 .score-comparison-heading span:nth-child(3) {
   text-align: center;
 }
+
+/* PR5 global V2 rollout: unify remaining listing, scenario, navigation, and mobile surfaces. */
+.site-header .header-inner:not(:has(.header-search)) {
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.site-header .header-inner:not(:has(.header-search)) .site-nav {
+  justify-content: flex-end;
+}
+
+.listing-main {
+  width: min(1120px, 92vw);
+  gap: var(--space-5);
+}
+
+.rankings-page-header {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 48px);
+  border-color: var(--border-soft);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(47, 125, 60, 0.16), transparent 20rem),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(240, 247, 237, 0.86));
+  box-shadow: var(--elevation-2);
+  animation: section-rise 420ms var(--ease-premium) both;
+}
+
+.rankings-page-header::before {
+  content: "V2 field index";
+  position: absolute;
+  right: clamp(20px, 5vw, 56px);
+  bottom: -0.2em;
+  color: rgba(31, 107, 49, 0.07);
+  font-size: clamp(2.8rem, 9vw, 7.5rem);
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.rankings-page-header h1 {
+  max-width: 800px;
+  font-size: clamp(2.2rem, 5.4vw, 4.8rem);
+  letter-spacing: -0.065em;
+}
+
+.rankings-page-header .base-meta {
+  max-width: 640px;
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 1.4vw, 1.16rem);
+}
+
+.rankings-page-header > * {
+  position: relative;
+  z-index: 1;
+}
+
+.rankings-filter-wrap {
+  max-width: 420px;
+  padding: var(--space-3);
+  border: 1px solid rgba(47, 125, 60, 0.16);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: var(--shadow-xs);
+}
+
+.rankings-filter-wrap select {
+  min-height: 46px;
+}
+
+.listing-results {
+  animation: section-rise 520ms var(--ease-premium) both;
+}
+
+.rankings-list-page {
+  gap: var(--space-3);
+}
+
+.rankings-list-page .base-card-link {
+  --listing-card-thumb-width: 280px;
+  grid-template-columns: var(--listing-card-thumb-width) minmax(0, 1fr) auto;
+  gap: var(--space-4);
+  align-items: stretch;
+  padding: var(--space-3);
+  border-color: var(--border-soft);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--elevation-1);
+}
+
+.rankings-list-page .base-card-thumb-link {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+}
+
+.rankings-list-page .base-card-content {
+  align-content: center;
+}
+
+.rankings-list-page .base-card-title {
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+.rankings-list-page .base-card-aside {
+  padding-top: var(--space-1);
+}
+
+#rankings-status,
+#scenario-status,
+#rankings-empty,
+#scenario-empty,
+#detail-status,
+#compare-status {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--fs-meta);
+}
+
+.not-found,
+.empty-state {
+  border-color: var(--border-soft);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, #fff, var(--surface-subtle));
+  box-shadow: var(--elevation-1);
+  padding: var(--space-5);
+}
+
+@media (max-width: 980px) {
+  .site-header .header-inner:not(:has(.header-search)) {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header .header-inner:not(:has(.header-search)) .site-nav {
+    justify-content: flex-start;
+  }
+
+  .rankings-list-page .base-card-link {
+    --listing-card-thumb-width: 240px;
+  }
+}
+
+@media (max-width: 640px) {
+  .listing-main {
+    width: min(100% - 32px, 560px);
+    padding-top: var(--space-5);
+  }
+
+  .rankings-page-header {
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+
+  .rankings-page-header::before {
+    display: none;
+  }
+
+  .rankings-list-page .base-card-link {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    border-radius: var(--radius-lg);
+  }
+
+  .rankings-list-page .base-card-aside {
+    justify-items: start;
+    grid-auto-flow: column;
+  }
+
+  .rankings-filter-wrap {
+    max-width: none;
+    padding: var(--space-2);
+  }
+}

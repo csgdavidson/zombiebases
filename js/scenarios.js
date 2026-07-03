@@ -35,7 +35,8 @@ const elements = {
   description: document.getElementById('scenario-description'),
   status: document.getElementById('scenario-status'),
   list: document.getElementById('scenario-list'),
-  empty: document.getElementById('scenario-empty')
+  empty: document.getElementById('scenario-empty'),
+  scenarioSelect: document.getElementById('scenario-select')
 };
 
 function toTitleCaseSlug(value) {
@@ -124,6 +125,22 @@ function updateScenarioItemListJsonLd(title, description, entries) {
   });
 }
 
+function populateScenarioSelect(discovery, available, active) {
+  if (!elements.scenarioSelect) {
+    return;
+  }
+
+  elements.scenarioSelect.innerHTML = '';
+  available.forEach((id) => {
+    const scenario = discovery.scenarios?.[id];
+    const option = document.createElement('option');
+    option.value = id;
+    option.textContent = scenario?.title || toTitleCaseSlug(id);
+    elements.scenarioSelect.appendChild(option);
+  });
+  elements.scenarioSelect.value = active;
+}
+
 function setScenario(discovery, scenarioId) {
   const scenario = discovery.scenarios?.[scenarioId];
   if (!scenario) {
@@ -160,8 +177,17 @@ function initScenario(discovery) {
     updateScenarioParam(active);
   }
 
+  populateScenarioSelect(discovery, available, active);
   setScenario(discovery, active);
   elements.status.textContent = '';
+
+  if (elements.scenarioSelect) {
+    elements.scenarioSelect.addEventListener('change', () => {
+      const chosen = elements.scenarioSelect.value;
+      updateScenarioParam(chosen);
+      setScenario(discovery, chosen);
+    });
+  }
 }
 
 async function init() {
