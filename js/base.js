@@ -438,11 +438,18 @@ function renderScoreBreakdown(scoreObject) {
 
     const item = document.createElement('li');
     const itemLabel = document.createElement('strong');
-    itemLabel.textContent = `${label}:`;
+    itemLabel.textContent = label;
     const scoreValue = document.createElement('span');
     scoreValue.className = `score-value ${scoreToneClass(scoreObject[key])}`.trim();
-    scoreValue.textContent = ` ${scoreObject[key].toFixed(1)}/10`;
-    item.append(itemLabel, scoreValue);
+    scoreValue.textContent = `${scoreObject[key].toFixed(1)}/10`;
+    const meter = document.createElement('span');
+    meter.className = 'score-list-meter';
+    meter.setAttribute('aria-hidden', 'true');
+    const meterFill = document.createElement('span');
+    meterFill.className = `score-list-meter-fill ${scoreToneClass(scoreObject[key])}`.trim();
+    meterFill.style.width = `${Math.max(0, Math.min(10, scoreObject[key])) * 10}%`;
+    meter.appendChild(meterFill);
+    item.append(itemLabel, scoreValue, meter);
     elements.scoreList.appendChild(item);
   });
 }
@@ -641,6 +648,7 @@ function renderSurvivalProfile(base) {
 
     return `
       <article class="survival-card" data-status="${tone}">
+        <span class="survival-card-step">0${index + 1}</span>
         <p class="survival-card-timeframe">${phase.timeframe}</p>
         <p class="survival-card-status">${status}</p>
         <ul class="survival-card-points">
@@ -717,7 +725,13 @@ function renderSurvivalCharacteristics(base) {
 
     const label = document.createElement('p');
     label.className = 'survival-characteristic-label';
-    label.textContent = characteristic.label;
+    const icon = document.createElement('span');
+    icon.className = 'survival-characteristic-icon';
+    icon.setAttribute('aria-hidden', 'true');
+    icon.textContent = getSurvivalCharacteristicIcon(characteristic.key);
+    const labelText = document.createElement('span');
+    labelText.textContent = characteristic.label;
+    label.append(icon, labelText);
 
     const score = document.createElement('p');
     score.className = `survival-characteristic-score ${scoreToneClass(characteristic.score)}`.trim();
@@ -745,6 +759,15 @@ function renderSurvivalCharacteristics(base) {
 
     elements.survivalCharacteristicsGrid.appendChild(card);
   });
+}
+
+function getSurvivalCharacteristicIcon(key) {
+  return {
+    exposure: '◐',
+    maintenanceBurden: '⚙',
+    populationCapacity: '▦',
+    resourceSecurity: '◆'
+  }[key] || '•';
 }
 
 function renderScore(base) {
@@ -830,7 +853,18 @@ function appendComparisonItem(list, label, value, average, options = {}) {
   judgement.className = `comparison-judgement comparison-judgement-${comparison.tone}`;
   judgement.textContent = `${comparison.marker} ${comparison.label}`;
 
-  item.append(rowLabel, primary, values, judgement);
+  const meter = document.createElement('span');
+  meter.className = 'comparison-meter';
+  meter.setAttribute('aria-hidden', 'true');
+  const meterAverage = document.createElement('span');
+  meterAverage.className = 'comparison-meter-average';
+  meterAverage.style.left = `${Math.max(0, Math.min(10, average)) * 10}%`;
+  const meterFill = document.createElement('span');
+  meterFill.className = `comparison-meter-fill comparison-meter-${comparison.tone}`;
+  meterFill.style.width = `${Math.max(0, Math.min(10, value)) * 10}%`;
+  meter.append(meterFill, meterAverage);
+
+  item.append(rowLabel, primary, values, judgement, meter);
   list.appendChild(item);
   return { label, value, average, difference, comparison };
 }
@@ -867,7 +901,8 @@ function renderComparisonInsight(comparisons) {
     return;
   }
 
-  elements.comparisonInsightOverview.textContent = `Overall tier: ${overallEntry.comparison.label}`;
+  const sign = overallEntry.difference >= 0 ? '+' : '';
+  elements.comparisonInsightOverview.textContent = `${overallEntry.comparison.label} overall: ${sign}${overallEntry.difference.toFixed(1)} versus the global average, with the score profile below showing where this base wins or gives ground.`;
   elements.comparisonInsightBlock.hidden = false;
 }
 
