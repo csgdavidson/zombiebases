@@ -13,17 +13,23 @@
     return 'score-low';
   }
 
+  const BASE_IMAGE_FALLBACK_URL = '/images/bases/placeholder.png';
+
+  function baseImageUrl(slug) {
+    return `/images/bases/${encodeURIComponent(slug)}.png`;
+  }
+
   function createThumbnail(slug, name) {
     const image = document.createElement('img');
     image.className = 'base-card-thumb';
-    image.src = `/images/generated/card-thumbs/${slug}.png`;
+    image.src = baseImageUrl(slug);
     image.alt = `${name} thumbnail`;
     image.width = 112;
     image.height = 63;
     image.loading = 'lazy';
     image.decoding = 'async';
     image.addEventListener('error', () => {
-      image.src = '/images/generated/card-thumbs/placeholder.png';
+      image.src = BASE_IMAGE_FALLBACK_URL;
     }, { once: true });
     return image;
   }
