@@ -3739,3 +3739,376 @@ button:hover,
 #similar-section .similar-base-thumb-link {
   position: relative;
 }
+
+/* Compare page V2 intelligence-dossier redesign. */
+.comparison-page-main {
+  width: min(1180px, 92vw);
+  gap: var(--space-5);
+}
+
+.versus-page .base-header {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.versus-page .base-header h1 {
+  max-width: 980px;
+  font-size: clamp(2.25rem, 5.6vw, 4.9rem);
+  letter-spacing: -0.06em;
+}
+
+.versus-page .hero-lede {
+  max-width: 760px;
+}
+
+.versus-hero-card {
+  position: relative;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: var(--space-5);
+  padding: var(--space-5);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at 50% 10%, rgba(47, 125, 60, 0.14), transparent 22rem),
+    linear-gradient(135deg, rgba(240, 247, 237, 0.96), rgba(255, 255, 255, 0.86));
+  box-shadow: var(--shadow-md);
+}
+
+.versus-base-card {
+  position: relative;
+  grid-template-columns: 1fr;
+  gap: 0;
+  overflow: hidden;
+  border-color: var(--border-soft);
+  border-radius: var(--radius-xl);
+  background: var(--surface-elevated);
+  box-shadow: var(--shadow-sm);
+  padding: 0;
+  isolation: isolate;
+}
+
+.versus-base-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, transparent 40%, rgba(12, 23, 40, 0.06));
+}
+
+.versus-base-card-winner {
+  border-color: rgba(47, 125, 60, 0.48);
+  background: linear-gradient(180deg, #fff, var(--accent-faint));
+  box-shadow: 0 24px 60px rgba(31, 107, 49, 0.16), 0 0 0 2px rgba(47, 125, 60, 0.12);
+}
+
+.versus-base-card-winner::after {
+  content: "Overall leader";
+  position: absolute;
+  right: var(--space-4);
+  top: var(--space-4);
+  border-radius: var(--radius-pill);
+  background: var(--accent-strong);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.06em;
+  padding: var(--space-2) var(--space-3);
+  text-transform: uppercase;
+}
+
+.versus-base-image {
+  min-height: 300px;
+  height: 300px;
+  border-radius: 0;
+  background: var(--accent-faint);
+}
+
+.versus-base-content {
+  gap: var(--space-3);
+  padding: var(--space-5);
+}
+
+.versus-base-content h2 a {
+  color: var(--text);
+}
+
+.versus-overall-score {
+  margin: 0;
+  font-size: clamp(2.7rem, 6vw, 4.5rem);
+  font-weight: var(--fw-bold);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.versus-mini-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+  margin: var(--space-2) 0 0;
+}
+
+.versus-mini-stats div {
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.78);
+  padding: var(--space-3);
+}
+
+.versus-mini-stats dt {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.versus-mini-stats dd {
+  margin: var(--space-1) 0 0;
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+}
+
+.versus-divider {
+  border: 0;
+  background: var(--text);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-3) var(--space-4);
+}
+
+.overall-winner-summary,
+.overall-summary-card {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.overall-summary-card {
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.42fr);
+  align-items: center;
+  border: 1px solid rgba(47, 125, 60, 0.24);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--accent-faint), #fff);
+  padding: var(--space-5);
+}
+
+.overall-summary-title {
+  color: var(--text);
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.04em;
+}
+
+.overall-summary-metrics {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.overall-summary-metrics div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  background: #fff;
+  padding: var(--space-3) var(--space-4);
+}
+
+.overall-summary-metrics span {
+  color: var(--text-secondary);
+  font-weight: var(--fw-semibold);
+}
+
+.overall-summary-metrics strong {
+  color: var(--accent-strong);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.score-comparison-heading,
+.score-comparison-card {
+  display: grid;
+  grid-template-columns: 1.1fr minmax(120px, 0.8fr) minmax(150px, 0.8fr) minmax(120px, 0.8fr);
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.score-comparison-heading {
+  color: var(--muted);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.score-comparison-heading span:nth-child(2) {
+  text-align: center;
+}
+
+.score-card-list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.score-comparison-card {
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow-xs);
+  padding: var(--space-4);
+}
+
+.score-comparison-card h4,
+.score-side,
+.score-difference-cell,
+.score-difference-even {
+  margin: 0;
+}
+
+.score-comparison-card h4 {
+  font-size: 1rem;
+}
+
+.score-side {
+  display: grid;
+  gap: var(--space-1);
+  border-radius: var(--radius-md);
+  background: var(--surface-subtle);
+  padding: var(--space-3);
+}
+
+.score-side span {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: var(--fw-bold);
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.score-side strong {
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.score-side.score-cell-winner {
+  background: var(--accent-faint);
+  box-shadow: inset 0 0 0 1px rgba(47, 125, 60, 0.28);
+}
+
+.score-side.score-cell-winner strong {
+  color: var(--score-high);
+}
+
+.score-difference-cell,
+.score-difference-even {
+  justify-self: center;
+  border-radius: var(--radius-pill);
+  padding: var(--space-2) var(--space-3);
+  font-weight: var(--fw-bold);
+}
+
+.score-difference-cell {
+  background: var(--accent-faint);
+  color: var(--score-high);
+}
+
+.score-difference-even {
+  background: var(--surface-subtle);
+  color: var(--muted);
+}
+
+.winner-card-grid,
+.advantage-grid,
+.verdict-grid {
+  gap: var(--space-4);
+}
+
+.winner-card,
+.advantage-card,
+.verdict-card {
+  border-color: var(--border-soft);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, #fff, var(--surface-subtle));
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-4);
+}
+
+.comparison-primary-positive {
+  color: var(--score-high);
+}
+
+.comparison-primary-negative {
+  color: var(--score-medium);
+}
+
+.compare-picker-section {
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(135deg, #fff, var(--surface-warm));
+}
+
+.compare-select-label select {
+  min-height: 48px;
+  border-color: rgba(47, 125, 60, 0.24);
+  box-shadow: var(--shadow-xs);
+}
+
+.compare-button {
+  min-height: 44px;
+  padding: 0.7rem 1.05rem;
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.compare-button:hover,
+.compare-button:focus-visible {
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .versus-hero-card,
+  .overall-summary-card,
+  .score-comparison-card {
+    grid-template-columns: 1fr;
+  }
+
+  .score-comparison-heading {
+    display: none;
+  }
+
+  .versus-divider {
+    justify-self: center;
+    margin: calc(var(--space-3) * -1) 0;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .versus-hero-card {
+    padding: var(--space-3);
+  }
+
+  .versus-base-image {
+    min-height: 220px;
+    height: 220px;
+  }
+
+  .versus-mini-stats,
+  .overall-summary-card,
+  .overall-summary-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .versus-base-content,
+  .overall-summary-card,
+  .score-comparison-card {
+    padding: var(--space-4);
+  }
+}
+
+.score-comparison-heading span:nth-child(3) {
+  text-align: center;
+}
