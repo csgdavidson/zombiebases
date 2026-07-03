@@ -1,6 +1,5 @@
 const DATA_URL = '/data/bases-index.json';
 const LEGACY_DATA_URL = '/data/bases.json';
-const STATS_URL = '/data/base-stats.json';
 const RANKINGS_URL = '/data/rankings.json';
 const DISCOVERY_URL = '/data/discovery.json';
 const HERO_IMAGE_FALLBACK_URL = '/images/bases/placeholder.png';
@@ -71,17 +70,11 @@ const elements = {
   scoreSection: document.getElementById('score-section'),
   scoreEmpty: document.getElementById('score-empty'),
   scoreOverall: document.getElementById('base-score-overall'),
+  scoreRank: document.getElementById('base-score-rank'),
   scoreBadges: document.getElementById('base-score-badges'),
   scoreList: document.getElementById('base-score-list'),
   rankingSection: document.getElementById('ranking-section'),
   rankingList: document.getElementById('ranking-list'),
-  comparisonSection: document.getElementById('comparison-section'),
-  comparisonInsightBlock: document.getElementById('comparison-insight-block'),
-  comparisonInsightOverview: document.getElementById('comparison-insight-overview'),
-  comparisonOverallBlock: document.getElementById('comparison-overall-block'),
-  comparisonOverallList: document.getElementById('comparison-overall-list'),
-  comparisonStrengthBlock: document.getElementById('comparison-strength-block'),
-  comparisonCategoryList: document.getElementById('comparison-category-list'),
   similarSection: document.getElementById('similar-section'),
   similarList: document.getElementById('similar-bases-list'),
   similarExploreLink: document.getElementById('similar-explore-link'),
@@ -779,6 +772,10 @@ function renderScore(base) {
   if (!scoreObject && overall === null) {
     elements.scoreEmpty.hidden = false;
     elements.scoreOverall.hidden = true;
+    if (elements.scoreRank) {
+      elements.scoreRank.hidden = true;
+      elements.scoreRank.textContent = '';
+    }
     elements.scoreBadges.hidden = true;
     elements.scoreList.hidden = true;
     return;
@@ -791,6 +788,12 @@ function renderScore(base) {
     elements.scoreOverall.textContent = `${overall.toFixed(1)}/10`;
   }
 
+  if (elements.scoreRank) {
+    const rankLabel = slugHelper?.getScoreTierBadge ? slugHelper.getScoreTierBadge(base) : null;
+    elements.scoreRank.textContent = rankLabel || '';
+    elements.scoreRank.hidden = !rankLabel;
+  }
+
   elements.scoreList.hidden = !scoreObject;
   if (!scoreObject) {
     elements.scoreBadges.hidden = true;
@@ -800,113 +803,6 @@ function renderScore(base) {
   renderScoreBreakdown(scoreObject);
   renderScoreBadges(base);
 }
-
-function classifyComparison(value, average) {
-  if (!isValidScoreValue(value) || !isValidScoreValue(average)) {
-    return null;
-  }
-
-  const difference = value - average;
-  if (difference >= 1.5) {
-    return { label: 'Elite', marker: '▲', tone: 'positive' };
-  }
-  if (difference >= 0.5) {
-    return { label: 'Strong', marker: '▲', tone: 'positive' };
-  }
-  if (difference > -0.5) {
-    return { label: 'Average', marker: '▬', tone: 'neutral' };
-  }
-  if (difference > -1.5) {
-    return { label: 'Weak', marker: '▼', tone: 'negative' };
-  }
-  return { label: 'Critical', marker: '▼', tone: 'negative' };
-}
-
-function appendComparisonItem(list, label, value, average, options = {}) {
-  if (!isValidScoreValue(value) || !isValidScoreValue(average)) {
-    return;
-  }
-
-  const { averageLabel = "Global avg" } = options;
-  const comparison = classifyComparison(value, average);
-  if (!comparison) {
-    return null;
-  }
-  const difference = value - average;
-
-  const item = document.createElement('li');
-  item.className = 'comparison-row';
-
-  const rowLabel = document.createElement('span');
-  rowLabel.className = 'comparison-label';
-  rowLabel.textContent = label;
-
-  const primary = document.createElement('span');
-  primary.className = `comparison-primary comparison-primary-${comparison.tone}`;
-  primary.textContent = `${difference >= 0 ? '+' : ''}${difference.toFixed(1)} vs avg`;
-
-  const values = document.createElement('span');
-  values.className = 'comparison-values';
-  values.textContent = `${value.toFixed(1)} vs ${averageLabel} ${average.toFixed(1)}`;
-
-  const judgement = document.createElement('span');
-  judgement.className = `comparison-judgement comparison-judgement-${comparison.tone}`;
-  judgement.textContent = `${comparison.marker} ${comparison.label}`;
-
-  const meter = document.createElement('span');
-  meter.className = 'comparison-meter';
-  meter.setAttribute('aria-hidden', 'true');
-  const meterAverage = document.createElement('span');
-  meterAverage.className = 'comparison-meter-average';
-  meterAverage.style.left = `${Math.max(0, Math.min(10, average)) * 10}%`;
-  const meterFill = document.createElement('span');
-  meterFill.className = `comparison-meter-fill comparison-meter-${comparison.tone}`;
-  meterFill.style.width = `${Math.max(0, Math.min(10, value)) * 10}%`;
-  meter.append(meterFill, meterAverage);
-
-  item.append(rowLabel, primary, values, judgement, meter);
-  list.appendChild(item);
-  return { label, value, average, difference, comparison };
-}
-
-function comparisonOverallLabel(kind, base) {
-  if (kind === 'global') {
-    return 'Against all bases';
-  }
-  if (kind === 'region') {
-    return `Against ${labelFor('region', base.region)}`;
-  }
-  if (kind === 'type') {
-    return `Against ${labelFor('type', base.type)}`;
-  }
-  return '';
-}
-
-function renderComparisonInsight(comparisons) {
-  if (!elements.comparisonInsightBlock || !elements.comparisonInsightOverview) {
-    return;
-  }
-
-  if (!Array.isArray(comparisons) || !comparisons.length) {
-    elements.comparisonInsightBlock.hidden = true;
-    elements.comparisonInsightOverview.textContent = '';
-    return;
-  }
-
-  const overallEntry = comparisons.find((entry) => entry.label.includes('Against all bases'));
-
-  if (!overallEntry) {
-    elements.comparisonInsightBlock.hidden = true;
-    elements.comparisonInsightOverview.textContent = '';
-    return;
-  }
-
-  const sign = overallEntry.difference >= 0 ? '+' : '';
-  elements.comparisonInsightOverview.textContent = `${overallEntry.comparison.label} overall: ${sign}${overallEntry.difference.toFixed(1)} versus the global average, with the score profile below showing where this base wins or gives ground.`;
-  elements.comparisonInsightBlock.hidden = false;
-}
-
-
 
 function buildRankingsLinks(base, rankings) {
   if (!rankings || typeof rankings !== 'object') {
@@ -970,55 +866,6 @@ function renderRankingPosition(base, rankings) {
   });
 
   elements.rankingSection.hidden = false;
-}
-
-function renderComparison(base, stats) {
-  if (!elements.comparisonSection || !elements.comparisonOverallList || !elements.comparisonCategoryList) {
-    return;
-  }
-
-  if (!stats || typeof stats !== 'object') {
-    elements.comparisonSection.hidden = true;
-    renderComparisonInsight([]);
-    return;
-  }
-
-  const scoreObject = getScoreObject(base);
-  const overall = computeOverallScore(base);
-  const regionStats = stats.byRegion?.[base.region];
-  const typeStats = stats.byType?.[base.type];
-  const globalStats = stats.global;
-
-  elements.comparisonOverallList.innerHTML = '';
-  elements.comparisonCategoryList.innerHTML = '';
-  const comparisonEntries = [];
-
-  const overallEntries = [
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('global', base), overall, globalStats?.averages?.overall, { averageLabel: 'Global avg', showDelta: true }),
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('region', base), overall, regionStats?.averages?.overall, { averageLabel: 'Region avg', showDelta: true }),
-    appendComparisonItem(elements.comparisonOverallList, comparisonOverallLabel('type', base), overall, typeStats?.averages?.overall, { averageLabel: 'Type avg', showDelta: true })
-  ].filter(Boolean);
-  comparisonEntries.push(...overallEntries);
-
-  if (scoreObject && globalStats?.averages) {
-    Object.entries(SCORE_LABELS).forEach(([key, label]) => {
-      const item = appendComparisonItem(elements.comparisonCategoryList, label, scoreObject[key], globalStats.averages[key], { averageLabel: 'Global avg' });
-      if (item) {
-        comparisonEntries.push(item);
-      }
-    });
-  }
-
-  const hasContent = elements.comparisonOverallList.children.length > 0 || elements.comparisonCategoryList.children.length > 0;
-  if (elements.comparisonOverallBlock) {
-    elements.comparisonOverallBlock.hidden = elements.comparisonOverallList.children.length === 0;
-  }
-  if (elements.comparisonStrengthBlock) {
-    elements.comparisonStrengthBlock.hidden = elements.comparisonCategoryList.children.length === 0;
-  }
-
-  elements.comparisonSection.hidden = !hasContent;
-  renderComparisonInsight(hasContent ? comparisonEntries : []);
 }
 
 function createBaseUrl(slug, sourceParams) {
@@ -1176,7 +1023,7 @@ function deriveSimilarTags(item) {
   return tags.slice(0, 2);
 }
 
-function showBase(base, bases, params, stats, rankings, discovery) {
+function showBase(base, bases, params, rankings, discovery) {
   elements.name.textContent = base.name;
   applyDetailMetadata(base);
   renderMetaRow(base);
@@ -1188,7 +1035,6 @@ function showBase(base, bases, params, stats, rankings, discovery) {
   renderScore(base);
   renderSurvivalCharacteristics(base);
   renderRankingPosition(base, rankings);
-  renderComparison(base, stats);
   renderSurvivalProfile(base);
   renderRealityCheck(base);
   renderSimilarBases(base, bases, discovery, params);
@@ -1211,13 +1057,11 @@ async function loadBase() {
   elements.status.textContent = 'Loading base details...';
 
   try {
-    const [bases, statsResponse, rankingsResponse, discoveryResponse] = await Promise.all([
+    const [bases, rankingsResponse, discoveryResponse] = await Promise.all([
       loadBasesData(),
-      fetch(STATS_URL),
       fetch(RANKINGS_URL),
       fetch(DISCOVERY_URL)
     ]);
-    const stats = statsResponse.ok ? await statsResponse.json() : null;
     const rankings = rankingsResponse.ok ? await rankingsResponse.json() : null;
     const discovery = discoveryResponse.ok ? await discoveryResponse.json() : null;
     const matchedBase = slugHelper?.resolveBaseBySlug
@@ -1229,7 +1073,7 @@ async function loadBase() {
       return;
     }
 
-    showBase(matchedBase, bases, params, stats, rankings, discovery);
+    showBase(matchedBase, bases, params, rankings, discovery);
   } catch (error) {
     console.error(error);
     showLoadError();
