@@ -155,7 +155,11 @@ const elements = {
   mapViewButton: document.getElementById('view-map'),
   featuredSection: document.getElementById('featured-section'),
   featuredList: document.getElementById('featured-bases-list'),
-  activeFilters: document.getElementById('active-filters')
+  activeFilters: document.getElementById('active-filters'),
+  statBaseCount: document.getElementById('stat-base-count'),
+  statRegionCount: document.getElementById('stat-region-count'),
+  statTypeCount: document.getElementById('stat-type-count'),
+  categoryLinks: document.getElementById('category-links')
 };
 
 const baseMap = (window.createBaseMap && elements.mapElement && elements.mapStatus)
@@ -534,39 +538,60 @@ function renderFeaturedBases(items) {
   }
 
   elements.featuredList.innerHTML = '';
+  const source = items.length ? items : state.visibleBases;
+  const topBases = sortBases(source).slice(0, 4);
 
-  if (!items.length) {
+  if (!topBases.length) {
     elements.featuredSection.hidden = true;
     return;
   }
 
-  sortBases(items).slice(0, 3).forEach((base) => {
-    const listItem = document.createElement('li');
-    const link = document.createElement('a');
-    link.className = 'featured-link';
-    link.href = createBaseUrl(base);
-    link.textContent = base.name;
-
-    const meta = document.createElement('p');
-    meta.className = 'base-meta';
-    meta.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
-
-    listItem.append(link, meta);
-
-
-
-    const summaryText = getCardSummary(base);
-    if (summaryText) {
-      const summary = document.createElement('p');
-      summary.className = 'base-summary';
-      summary.textContent = summaryText;
-      listItem.appendChild(summary);
-    }
-
+  topBases.forEach((base, index) => {
+    const location = base.country
+      ? `${base.country}, ${labelFor('region', base.region)}`
+      : labelFor('region', base.region);
+    const listItem = window.baseCardRenderer.createBaseCard({
+      slug: preferredSlugFor(base),
+      name: base.name,
+      href: createBaseUrl(base),
+      metaText: `${location} • ${labelFor('type', base.type)}`,
+      description: getCardSummary(base),
+      score: computeOverallScore(base),
+      rank: index + 1,
+      tags: slugHelper?.getBaseBadges ? slugHelper.getBaseBadges(base, 2) : [],
+      scenarioId: null
+    });
     elements.featuredList.appendChild(listItem);
   });
 
   elements.featuredSection.hidden = false;
+}
+
+function renderDirectoryStats() {
+  if (elements.statBaseCount) elements.statBaseCount.textContent = `${state.visibleBases.length}+`;
+  if (elements.statRegionCount) elements.statRegionCount.textContent = uniqueValues(state.visibleBases, 'region').length;
+  if (elements.statTypeCount) elements.statTypeCount.textContent = uniqueValues(state.visibleBases, 'type').length;
+}
+
+function renderCategoryLinks() {
+  if (!elements.categoryLinks) return;
+  elements.categoryLinks.innerHTML = '';
+  uniqueValues(state.visibleBases, 'type').forEach((type) => {
+    const count = state.visibleBases.filter((base) => base.type === type).length;
+    const link = document.createElement('a');
+    link.className = 'category-link';
+    link.href = `/?type=${encodeURIComponent(type)}`;
+    link.dataset.type = type;
+    link.innerHTML = `<span>${labelFor('type', type)}</span><small>${count} bases</small>`;
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      state.view = 'list';
+      elements.typeFilter.value = type;
+      applyFilters();
+      document.getElementById('list-view')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    elements.categoryLinks.appendChild(link);
+  });
 }
 
 function renderCurrentView() {
@@ -669,6 +694,8 @@ async function loadBases() {
     populateFilter(elements.regionFilter, uniqueValues(state.visibleBases, 'region'), 'region');
     populateFilter(elements.typeFilter, uniqueValues(state.visibleBases, 'type'), 'type');
     populateSortOptions(elements.sortSelect);
+    renderDirectoryStats();
+    renderCategoryLinks();
 
     setInitialControls();
     applyFilters();
