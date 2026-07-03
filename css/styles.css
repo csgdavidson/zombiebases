@@ -4285,3 +4285,449 @@ button:hover,
     padding: var(--space-2);
   }
 }
+
+/* Final V2 polish pass: launch QA consistency layer across home, listing, detail, compare, rankings, and map. */
+:root {
+  --card-padding: var(--space-5);
+  --card-radius: var(--radius-xl);
+  --control-height: 46px;
+}
+
+main,
+.listing-main,
+.comparison-page-main,
+.base-detail-main {
+  gap: clamp(var(--space-4), 3vw, var(--space-6));
+}
+
+.content-section,
+.category-panel,
+.popular-panel,
+.controls-panel,
+.stats-strip,
+.map-shell,
+.rankings-page-header,
+.versus-hero-card,
+.base-card-link,
+.winner-card,
+.advantage-card,
+.verdict-card,
+.overall-summary-card,
+.score-comparison-card,
+.survival-characteristic-card,
+.survival-card {
+  border-color: var(--border-soft);
+}
+
+.content-section,
+.category-panel,
+.popular-panel,
+.controls-panel,
+.map-shell,
+.rankings-page-header,
+.versus-hero-card {
+  border-radius: var(--card-radius);
+}
+
+.section-heading-row,
+.detail-section-heading {
+  margin-bottom: var(--space-1);
+}
+
+.section-heading-row h2,
+.section-heading-row h3,
+.detail-section-heading h3,
+.compare-picker-section h3 {
+  letter-spacing: -0.035em;
+}
+
+/* Shared control and button language. */
+.toggle-buttons,
+.toggle-filters,
+.reset-filters,
+.compare-button,
+.compare-select-label select,
+.header-search input[type="search"],
+.controls-panel select,
+.controls-panel input[type="search"],
+.rankings-filter-wrap select,
+.rankings-filter-wrap input[type="search"] {
+  min-height: var(--control-height);
+}
+
+.toggle-filters,
+.reset-filters,
+.compare-button,
+.empty-reset {
+  border-radius: var(--radius-pill);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.01em;
+}
+
+.reset-filters,
+.empty-reset {
+  border-color: var(--accent-soft);
+  background: #ffffff;
+  color: var(--accent-strong);
+}
+
+.reset-filters:hover,
+.reset-filters:focus-visible,
+.empty-reset:hover,
+.empty-reset:focus-visible {
+  background: var(--accent-faint);
+  border-color: rgba(47, 125, 60, 0.36);
+}
+
+.badge,
+.filter-chip,
+.status-badge,
+.ranking-chip,
+.base-score-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.75rem;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-pill);
+  line-height: 1;
+}
+
+/* Homepage: tighter rhythm and premium balance without removing content. */
+.home-hero {
+  grid-template-columns: minmax(0, 0.9fr) minmax(380px, 1.1fr);
+  gap: clamp(var(--space-5), 5vw, var(--space-8));
+  min-height: clamp(520px, 56vw, 650px);
+}
+
+.hero-copy {
+  max-width: 680px;
+}
+
+.hero-photo-card {
+  align-self: stretch;
+}
+
+.stats-strip,
+.home-discovery-grid,
+.featured-section,
+.controls-panel,
+#list-view,
+#map-view {
+  margin-top: clamp(-10px, -0.6vw, 0px);
+}
+
+.category-panel,
+.popular-panel {
+  align-content: start;
+}
+
+.category-link,
+.ranking-link-grid a,
+.featured-section .base-card-link,
+#bases-list .base-card-link,
+.rankings-list-page .base-card-link {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 248, 242, 0.88));
+}
+
+/* Listing and ranking cards: one family, clearer scores, less repetition. */
+#bases-list .base-card-link,
+.rankings-list-page .base-card-link {
+  min-height: 190px;
+  align-items: center;
+}
+
+.base-card-thumb-link {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.base-card-content {
+  gap: var(--space-2);
+}
+
+.base-card-title {
+  letter-spacing: -0.03em;
+}
+
+.base-meta {
+  color: var(--text-secondary);
+  font-weight: var(--fw-medium);
+}
+
+.base-card-aside {
+  min-width: 88px;
+}
+
+.base-score-pill {
+  justify-content: center;
+  min-width: 4.25rem;
+  min-height: 3.1rem;
+  padding: 0 var(--space-3);
+  border-color: rgba(47, 125, 60, 0.22);
+  background: linear-gradient(135deg, #ffffff, var(--accent-faint));
+  font-size: clamp(1.45rem, 2.3vw, 2rem);
+}
+
+.ranking-chip {
+  justify-content: center;
+  min-width: 3.2rem;
+  padding: var(--space-2) var(--space-3);
+  background: #10243c;
+  color: #ffffff;
+  box-shadow: var(--shadow-xs);
+}
+
+.rankings-list-page .ranking-chip {
+  font-size: 0.96rem;
+}
+
+.card-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.card-badge-row .badge {
+  margin: 0;
+}
+
+/* Detail: calmer flow, consistent analytical cards, preserved hero emphasis. */
+.base-page {
+  gap: clamp(var(--space-4), 2.8vw, var(--space-6));
+}
+
+.base-summary-panel,
+.survival-characteristics-section,
+#survival-profile-section,
+.comparison-panel {
+  padding: clamp(var(--space-4), 3vw, var(--space-6));
+}
+
+.base-summary-panel,
+.survival-characteristics-section,
+#survival-profile-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(246, 248, 242, 0.76));
+}
+
+.survival-characteristic-card,
+.survival-card,
+.quick-facts-card {
+  border-radius: var(--radius-lg);
+}
+
+.comparison-panel {
+  box-shadow: var(--elevation-2);
+}
+
+.comparison-row {
+  border-radius: var(--radius-md);
+}
+
+/* Compare: balanced sides and scannable winner treatment. */
+.versus-hero-card {
+  align-items: stretch;
+}
+
+.versus-base-card {
+  min-height: 100%;
+}
+
+.versus-base-card-winner::after {
+  box-shadow: 0 10px 24px rgba(31, 107, 49, 0.22);
+}
+
+.score-side {
+  min-height: 78px;
+  justify-content: center;
+}
+
+.score-side.score-cell-winner {
+  border-color: rgba(47, 125, 60, 0.34);
+  background: linear-gradient(135deg, var(--accent-faint), #ffffff);
+}
+
+.score-comparison-card:hover,
+.winner-card:hover,
+.advantage-card:hover,
+.verdict-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Rankings: bring V1-feeling pages into the same premium system. */
+.rankings-page-header {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.rankings-filter-wrap {
+  margin-top: var(--space-2);
+}
+
+.rankings-filter-wrap label {
+  color: var(--accent-strong);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Map: product-grade panel, controls, cluster and popup styling. */
+.map-shell {
+  padding: var(--space-4);
+}
+
+.leaflet-control-zoom a,
+.leaflet-control-attribution,
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+  border-radius: var(--radius-md) !important;
+}
+
+.leaflet-control-zoom {
+  border: 1px solid var(--border-soft) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-sm) !important;
+  overflow: hidden;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: var(--radius-lg) !important;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--elevation-2) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+}
+
+.map-popup-card {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 210px;
+  padding: var(--space-4);
+  color: var(--text);
+}
+
+.map-popup-title {
+  font-size: 1rem;
+  letter-spacing: -0.025em;
+}
+
+.map-popup-meta,
+.map-popup-country {
+  color: var(--text-secondary);
+  font-size: var(--fs-meta);
+}
+
+.map-popup-link {
+  justify-self: start;
+  margin-top: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: #fff !important;
+  font-weight: var(--fw-bold);
+}
+
+.map-popup-link:hover,
+.map-popup-link:focus-visible {
+  background: var(--accent-strong);
+}
+
+/* Mobile QA: touch targets, stacking, no horizontal overflow. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+@media (max-width: 900px) {
+  .home-hero,
+  .versus-hero-card,
+  .comparison-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .score-comparison-card {
+    gap: var(--space-2);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --control-height: 48px;
+  }
+
+  main,
+  .listing-main,
+  .comparison-page-main,
+  .base-detail-main {
+    width: min(100% - 24px, 560px);
+    gap: var(--space-4);
+  }
+
+  .site-header .header-inner {
+    width: min(100% - 24px, 560px);
+  }
+
+  .site-nav {
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .home-hero,
+  .stats-strip,
+  .category-panel,
+  .popular-panel,
+  .controls-panel,
+  .content-section,
+  .rankings-page-header,
+  .versus-hero-card,
+  .map-shell {
+    border-radius: var(--radius-lg);
+  }
+
+  .home-hero {
+    min-height: 0;
+    gap: var(--space-4);
+    padding: var(--space-4);
+  }
+
+  .hero-search-shell {
+    border-radius: var(--radius-lg);
+    padding: var(--space-3);
+  }
+
+  .stats-strip div {
+    padding: var(--space-3);
+  }
+
+  #bases-list .base-card-link,
+  .rankings-list-page .base-card-link,
+  .featured-section .base-card-link {
+    min-height: 0;
+    padding: var(--space-3);
+  }
+
+  .base-card-aside {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .base-score-pill {
+    min-height: 2.75rem;
+  }
+
+  .survival-timeline-cards,
+  .winner-card-grid,
+  .advantage-grid,
+  .verdict-grid,
+  .compare-select-grid,
+  .overall-summary-card {
+    grid-template-columns: 1fr;
+  }
+}

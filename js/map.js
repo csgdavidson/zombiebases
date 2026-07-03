@@ -70,23 +70,28 @@
       mappableBases.forEach((base) => {
         const marker = window.L.marker([base.lat, base.long]);
         const popupContent = document.createElement('div');
+        popupContent.className = 'map-popup-card';
 
         const title = document.createElement('strong');
+        title.className = 'map-popup-title';
         title.textContent = base.name;
         popupContent.appendChild(title);
-        popupContent.appendChild(document.createElement('br'));
 
-        const typeAndRegion = document.createTextNode(`${labelFor('type', base.type)} • ${labelFor('region', base.region)}`);
+        const typeAndRegion = document.createElement('span');
+        typeAndRegion.className = 'map-popup-meta';
+        typeAndRegion.textContent = `${labelFor('type', base.type)} • ${labelFor('region', base.region)}`;
         popupContent.appendChild(typeAndRegion);
-        popupContent.appendChild(document.createElement('br'));
 
         if (base.country) {
-          popupContent.appendChild(document.createTextNode(base.country));
-          popupContent.appendChild(document.createElement('br'));
+          const country = document.createElement('span');
+          country.className = 'map-popup-country';
+          country.textContent = base.country;
+          popupContent.appendChild(country);
         }
 
         const detailsLink = document.createElement('a');
         detailsLink.href = createBaseUrl(base.slug);
+        detailsLink.className = 'map-popup-link';
         detailsLink.textContent = 'View base details';
         popupContent.appendChild(detailsLink);
 
