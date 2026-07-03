@@ -142,7 +142,6 @@ const elements = {
   sortSelect: document.getElementById('sort-select'),
   sortControl: document.getElementById('sort-select')?.closest('label') ?? null,
   advancedFilters: document.getElementById('advanced-filters'),
-  toggleFiltersButton: document.getElementById('toggle-filters'),
   resetFilters: document.getElementById('reset-filters'),
   list: document.getElementById('bases-list'),
   resultCount: document.getElementById('result-count'),
@@ -627,15 +626,6 @@ function renderCurrentView() {
   }
 }
 
-function setAdvancedFiltersVisibility(isExpanded) {
-  if (!elements.advancedFilters || !elements.toggleFiltersButton) {
-    return;
-  }
-  elements.advancedFilters.hidden = !isExpanded;
-  elements.toggleFiltersButton.textContent = isExpanded ? 'Hide filters' : 'Show filters';
-  elements.toggleFiltersButton.setAttribute('aria-expanded', String(isExpanded));
-}
-
 function applyFilters() {
   const region = elements.regionFilter.value;
   const type = elements.typeFilter.value;
@@ -729,10 +719,6 @@ if (elements.searchInput && elements.regionFilter && elements.typeFilter && elem
     applyFilters();
   });
   elements.resetFilters?.addEventListener('click', resetFilters);
-  elements.toggleFiltersButton?.addEventListener('click', () => {
-    const isExpanded = elements.toggleFiltersButton.getAttribute('aria-expanded') === 'true';
-    setAdvancedFiltersVisibility(!isExpanded);
-  });
   elements.listViewButton.addEventListener('click', (event) => {
     event.preventDefault();
     setView('list');
@@ -741,6 +727,5 @@ if (elements.searchInput && elements.regionFilter && elements.typeFilter && elem
     event.preventDefault();
     setView('map');
   });
-  setAdvancedFiltersVisibility(false);
   loadBases();
 }
