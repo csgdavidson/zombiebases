@@ -4,6 +4,7 @@ const STATS_URL = '/data/base-stats.json';
 const RANKINGS_URL = '/data/rankings.json';
 const DISCOVERY_URL = '/data/discovery.json';
 const HERO_IMAGE_FALLBACK_URL = '/images/bases/placeholder.png';
+const CARD_IMAGE_FALLBACK_URL = '/images/bases/placeholder.png';
 
 const LABELS = {
   type: {
@@ -204,6 +205,19 @@ function normalizeComparisonText(value) {
 function getHeroImage(base) {
   const value = firstAvailableValue(base, ['hero_image', 'heroImage', 'image', 'image_url']);
   return isNonEmptyString(value) ? value : '';
+}
+
+function getCardImage(baseOrSlug) {
+  const slug = typeof baseOrSlug === 'string' ? baseOrSlug : baseOrSlug?.slug;
+  const value = typeof baseOrSlug === 'string'
+    ? ''
+    : firstAvailableValue(baseOrSlug, ['image', 'image_url']);
+
+  if (isNonEmptyString(value)) {
+    return value;
+  }
+
+  return isNonEmptyString(slug) ? `/images/bases/${encodeURIComponent(slug)}.png` : CARD_IMAGE_FALLBACK_URL;
 }
 
 function getScoreObject(base) {
@@ -1028,14 +1042,14 @@ function renderSimilarBases(base, bases, discovery, params) {
 
     const image = document.createElement('img');
     image.className = 'similar-base-thumb';
-    image.src = `/images/generated/card-thumbs/${item.slug}.png`;
+    image.src = getCardImage(baseLookup.get(item.slug) || item.slug);
     image.alt = `${item.name} thumbnail`;
     image.loading = 'lazy';
     image.decoding = 'async';
     image.width = 112;
     image.height = 63;
     image.addEventListener('error', () => {
-      image.src = '/images/generated/card-thumbs/placeholder.png';
+      image.src = CARD_IMAGE_FALLBACK_URL;
     }, { once: true });
     imageLink.appendChild(image);
 
