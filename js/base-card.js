@@ -16,14 +16,14 @@
   function createThumbnail(slug, name) {
     const image = document.createElement('img');
     image.className = 'base-card-thumb';
-    image.src = `/images/bases/${slug}.png`;
+    image.src = `/images/generated/card-thumbs/${slug}.png`;
     image.alt = `${name} thumbnail`;
     image.width = 112;
     image.height = 63;
     image.loading = 'lazy';
     image.decoding = 'async';
     image.addEventListener('error', () => {
-      image.src = '/images/bases/placeholder.png';
+      image.src = '/images/generated/card-thumbs/placeholder.png';
     }, { once: true });
     return image;
   }
