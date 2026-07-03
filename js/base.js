@@ -1046,8 +1046,8 @@ function renderSimilarBases(base, bases, discovery, params) {
     image.alt = `${item.name} thumbnail`;
     image.loading = 'lazy';
     image.decoding = 'async';
-    image.width = 112;
-    image.height = 63;
+    image.width = 180;
+    image.height = 101;
     image.addEventListener('error', () => {
       image.src = CARD_IMAGE_FALLBACK_URL;
     }, { once: true });

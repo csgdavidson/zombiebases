@@ -20,18 +20,22 @@
   }
 
   function createThumbnail(slug, name) {
+    const wrapper = document.createElement('span');
+    wrapper.className = 'base-card-thumb-link';
+
     const image = document.createElement('img');
     image.className = 'base-card-thumb';
     image.src = baseImageUrl(slug);
     image.alt = `${name} thumbnail`;
-    image.width = 112;
-    image.height = 63;
+    image.width = 180;
+    image.height = 101;
     image.loading = 'lazy';
     image.decoding = 'async';
     image.addEventListener('error', () => {
       image.src = BASE_IMAGE_FALLBACK_URL;
     }, { once: true });
-    return image;
+    wrapper.appendChild(image);
+    return wrapper;
   }
 
   function appendBadges(row, tags, scenarioId) {
