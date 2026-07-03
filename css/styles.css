@@ -2277,16 +2277,13 @@ button:hover,
 }
 
 .site-logo-mark {
-  width: 38px;
-  height: 38px;
+  width: auto;
+  height: 46px;
   display: block;
   flex: 0 0 auto;
   object-fit: contain;
 }
 
-.site-logo-text {
-  font-size: 1.05rem;
-}
 
 .site-nav {
   display: flex;
@@ -2597,9 +2594,6 @@ button:hover,
   text-decoration: none;
 }
 
-.site-logo-text {
-  letter-spacing: -0.03em;
-}
 
 .site-nav {
   justify-content: center;
@@ -2816,8 +2810,9 @@ button:hover,
 }
 
 .site-logo-mark {
-  width: 42px;
-  height: 42px;
+  width: auto;
+  height: 46px;
+  max-width: min(220px, 44vw);
   transition: transform var(--motion-premium);
 }
 
@@ -3147,6 +3142,7 @@ button:hover,
 
 @media (max-width: 640px) {
   .site-header .header-inner { min-height: 0; }
+  .site-logo-mark { height: 38px; max-width: min(180px, 52vw); }
   .hero-copy h1 { letter-spacing: -0.06em; }
   #bases-list .base-card-aside { padding-top: 0; }
   .map-shell { padding: var(--space-2); border-radius: var(--radius-lg); }
