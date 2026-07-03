@@ -299,7 +299,7 @@ main > * {
 
 .base-card-link {
   display: grid;
-  grid-template-columns: 112px minmax(0, 1fr) auto;
+  grid-template-columns: minmax(160px, 180px) minmax(0, 1fr) auto;
   background: #ffffff;
   border: 1px solid #b7c5d6;
   border-radius: var(--radius-md);
@@ -312,7 +312,7 @@ main > * {
 }
 
 .base-card-thumb {
-  width: 112px;
+  width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: var(--radius-sm);
@@ -818,7 +818,7 @@ main > * {
 
 .compact-base-list li.similar-base-item {
   display: grid;
-  grid-template-columns: 112px minmax(0, 1fr) auto;
+  grid-template-columns: minmax(160px, 180px) minmax(0, 1fr) auto;
   grid-template-areas:
     "image content tags"
     "image description description";
@@ -833,13 +833,13 @@ main > * {
   grid-area: image;
   display: block;
   border-radius: var(--radius-sm);
-  width: 112px;
+  width: 100%;
   align-self: center;
 }
 
 .similar-base-thumb {
   display: block;
-  width: 112px;
+  width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: var(--radius-sm);
@@ -1596,17 +1596,12 @@ main > * {
   }
 
   .base-card-link {
-    grid-template-columns: 96px minmax(0, 1fr);
-    gap: var(--space-2);
-  }
-
-  .base-card-link {
     grid-template-columns: 1fr;
     gap: var(--space-2);
   }
 
   .base-card-thumb {
-    width: 96px;
+    width: 100%;
   }
 
   .comparison-row {
