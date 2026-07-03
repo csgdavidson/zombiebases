@@ -1028,14 +1028,14 @@ function renderSimilarBases(base, bases, discovery, params) {
 
     const image = document.createElement('img');
     image.className = 'similar-base-thumb';
-    image.src = `/images/bases/${item.slug}.png`;
+    image.src = `/images/generated/card-thumbs/${item.slug}.png`;
     image.alt = `${item.name} thumbnail`;
     image.loading = 'lazy';
     image.decoding = 'async';
     image.width = 112;
     image.height = 63;
     image.addEventListener('error', () => {
-      image.src = '/images/bases/placeholder.png';
+      image.src = '/images/generated/card-thumbs/placeholder.png';
     }, { once: true });
     imageLink.appendChild(image);
 
