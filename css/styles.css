@@ -315,14 +315,21 @@ main > * {
   color: inherit;
 }
 
-.base-card-thumb {
+.base-card-thumb-link {
+  display: block;
   width: var(--listing-card-thumb-width);
-  max-width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  overflow: hidden;
   border-radius: var(--radius-sm);
   background: #e7edf5;
+}
+
+.base-card-thumb {
   display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .base-card-content {
@@ -837,19 +844,20 @@ main > * {
 .similar-base-thumb-link {
   grid-area: image;
   display: block;
-  border-radius: var(--radius-sm);
   width: var(--listing-card-thumb-width);
-  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: #e7edf5;
   align-self: center;
 }
 
 .similar-base-thumb {
   display: block;
   width: 100%;
+  height: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: var(--radius-sm);
-  background: #e7edf5;
 }
 
 .similar-base-text {
@@ -1606,8 +1614,13 @@ main > * {
     gap: var(--space-2);
   }
 
+  .base-card-thumb-link {
+    width: 100%;
+  }
+
   .base-card-thumb {
     width: 100%;
+    height: 100%;
   }
 
   .comparison-row {
