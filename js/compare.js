@@ -84,6 +84,7 @@ const elements = {
   heroB: document.getElementById('hero-base-b'),
   scoreBaseA: document.getElementById('score-base-a'),
   scoreBaseB: document.getElementById('score-base-b'),
+  overallSummary: document.getElementById('overall-winner-summary'),
   scoreBody: document.getElementById('score-comparison-body'),
   winners: document.getElementById('category-winners'),
   advantages: document.getElementById('biggest-advantages'),
@@ -227,10 +228,64 @@ function renderHeroCard(container, base, overallWinner) {
 
   const badge = document.createElement('span');
   badge.className = `badge ${isWinner ? 'badge-tier' : 'badge-trait'}`;
-  badge.textContent = isWinner ? 'Higher Overall' : 'Challenger';
+  badge.textContent = isWinner ? 'Overall lead' : 'Challenger';
 
-  content.append(title, meta, score, badge);
+  const stats = document.createElement('dl');
+  stats.className = 'versus-mini-stats';
+  ['defensibility', 'sustainability', 'isolation'].forEach((key) => {
+    const row = SCORE_ROWS.find((item) => item.key === key);
+    const value = getScore(base, row);
+    const item = document.createElement('div');
+    const dt = document.createElement('dt');
+    dt.textContent = row.label;
+    const dd = document.createElement('dd');
+    dd.textContent = formatScore(value);
+    item.append(dt, dd);
+    stats.appendChild(item);
+  });
+
+  content.append(badge, title, meta, score, stats);
   container.append(image, content);
+}
+
+function renderOverallSummary(baseA, baseB, result) {
+  if (!elements.overallSummary) return;
+  elements.overallSummary.innerHTML = '';
+  const scoreA = getScore(baseA, 'overall');
+  const scoreB = getScore(baseB, 'overall');
+  const diff = normalizedDiff(baseA, baseB, SCORE_ROWS[0]);
+  const winner = result.winner;
+  const leaderName = winner ? winner.name : 'No clear winner';
+  const marginText = isValidScoreValue(diff) ? formatDifference(Math.abs(diff)) : '—';
+
+  const lead = document.createElement('article');
+  lead.className = 'overall-summary-card';
+  const label = document.createElement('p');
+  label.className = 'winner-card-label';
+  label.textContent = winner ? 'Overall advantage' : 'Overall dead heat';
+  const title = document.createElement('p');
+  title.className = 'overall-summary-title';
+  title.textContent = leaderName;
+  const detail = document.createElement('p');
+  detail.className = 'base-summary';
+  detail.textContent = winner
+    ? `${winner.name} leads the matchup by ${marginText} overall points, but the dossier below keeps each category weakness visible.`
+    : 'The two bases are effectively tied overall, so category-level strengths and weaknesses decide the mission fit.';
+  lead.append(label, title, detail);
+
+  const metrics = document.createElement('div');
+  metrics.className = 'overall-summary-metrics';
+  [baseA, baseB].forEach((base) => {
+    const item = document.createElement('div');
+    const name = document.createElement('span');
+    name.textContent = base.name;
+    const score = document.createElement('strong');
+    score.textContent = formatScore(getScore(base, 'overall'));
+    item.append(name, score);
+    metrics.appendChild(item);
+  });
+  lead.appendChild(metrics);
+  elements.overallSummary.appendChild(lead);
 }
 
 function renderScoreRows(baseA, baseB) {
@@ -245,30 +300,28 @@ function renderScoreRows(baseA, baseB) {
 
     const diff = normalizedDiff(baseA, baseB, row);
     const winner = !isValidScoreValue(diff) || Math.abs(diff) < 0.05 ? null : (diff > 0 ? 'a' : 'b');
-    const tableRow = document.createElement('tr');
-    tableRow.className = winner ? 'has-score-winner' : 'score-tie-row';
+    const card = document.createElement('article');
+    card.className = `score-comparison-card ${winner ? 'has-score-winner' : 'score-tie-row'}`;
 
-    const label = document.createElement('th');
-    label.scope = 'row';
+    const label = document.createElement('h4');
     label.textContent = row.label;
 
-    const aCell = document.createElement('td');
-    aCell.className = winner === 'a' ? 'score-cell-winner' : '';
-    aCell.textContent = formatScore(scoreA);
+    const aCell = document.createElement('p');
+    aCell.className = `score-side score-side-a ${winner === 'a' ? 'score-cell-winner' : ''}`;
+    aCell.innerHTML = `<span>${baseA.name}</span><strong>${formatScore(scoreA)}</strong>`;
 
-    const bCell = document.createElement('td');
-    bCell.className = winner === 'b' ? 'score-cell-winner' : '';
-    bCell.textContent = formatScore(scoreB);
-
-    const diffCell = document.createElement('td');
+    const diffCell = document.createElement('p');
     diffCell.className = winner ? 'score-difference-cell' : 'score-difference-even';
     diffCell.textContent = isValidScoreValue(diff)
       ? `${formatDifference(Math.abs(diff))}${winner ? ` ${winner === 'a' ? baseA.name : baseB.name}` : ''}`
       : '—';
 
-    const orderedCells = [label, aCell, diffCell, bCell];
-    tableRow.append(...orderedCells);
-    elements.scoreBody.appendChild(tableRow);
+    const bCell = document.createElement('p');
+    bCell.className = `score-side score-side-b ${winner === 'b' ? 'score-cell-winner' : ''}`;
+    bCell.innerHTML = `<span>${baseB.name}</span><strong>${formatScore(scoreB)}</strong>`;
+
+    card.append(label, aCell, diffCell, bCell);
+    elements.scoreBody.appendChild(card);
   });
 }
 
@@ -321,6 +374,19 @@ function renderAdvantages(baseA, baseB) {
       ? `${base.name}'s biggest advantage is ${advantage.row.label} (+${advantage.diff.toFixed(1)})`
       : `${base.name} has no positive scoring advantage over ${opponent.name}.`;
     card.appendChild(line);
+
+    const weaknesses = SCORE_ROWS
+      .filter((row) => row.key !== 'overall')
+      .map((row) => ({ row, diff: normalizedDiff(base, opponent, row) }))
+      .filter((item) => isValidScoreValue(item.diff) && item.diff < -0.05)
+      .sort((a, b) => a.diff - b.diff || a.row.label.localeCompare(b.row.label));
+    const weakness = weaknesses[0] || null;
+    const weakLine = document.createElement('p');
+    weakLine.className = 'comparison-primary comparison-primary-negative';
+    weakLine.textContent = weakness
+      ? `${base.name}'s biggest weakness is ${weakness.row.label} (${weakness.diff.toFixed(1)} vs ${opponent.name})`
+      : `${base.name} has no clear scoring weakness against ${opponent.name}.`;
+    card.appendChild(weakLine);
     elements.advantages.appendChild(card);
   });
 }
@@ -407,6 +473,7 @@ function renderComparison(baseA, baseB, bases) {
   elements.title.textContent = `${baseA.name} vs ${baseB.name}`;
   renderHeroCard(elements.heroA, baseA, overallResult.winner);
   renderHeroCard(elements.heroB, baseB, overallResult.winner);
+  renderOverallSummary(baseA, baseB, overallResult);
   renderScoreRows(baseA, baseB);
   renderWinnerCards(baseA, baseB);
   renderAdvantages(baseA, baseB);

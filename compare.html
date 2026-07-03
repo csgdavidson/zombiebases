@@ -20,7 +20,16 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <p class="site-brand"><a class="home-link" href="/">Zombie Bases</a></p>
+      <a class="site-logo" href="/" aria-label="Zombie Bases home">
+        <span class="site-logo-mark">ZB</span>
+        <span class="site-logo-text">Zombie Bases</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/rankings.html">Rankings</a>
+        <a href="/rankings-region.html">Regions</a>
+        <a href="/rankings-type.html">Types</a>
+        <a href="/compare.html">Compare</a>
+      </nav>
     </div>
   </header>
 
@@ -31,7 +40,9 @@
       <header class="detail-hero versus-hero">
         <div class="base-header">
           <a class="back-link" href="/">← Back to List</a>
+          <p class="eyebrow">Premium intelligence matchup</p>
           <h1 id="comparison-title">Base vs Base</h1>
+          <p class="hero-lede">Side-by-side survival dossier comparing scores, decisive advantages, liabilities, and verdicts.</p>
         </div>
 
         <section class="content-section versus-hero-card" aria-label="Comparison hero">
@@ -41,35 +52,49 @@
         </section>
       </header>
 
-      <section class="content-section score-comparison-section" aria-label="Score comparison">
-        <h3>Score Comparison</h3>
-        <div class="score-comparison-table-wrap">
-          <table class="score-comparison-table">
-            <thead>
-              <tr>
-                <th scope="col">Score / Metric</th>
-                <th id="score-base-a" scope="col">Base A</th>
-                <th scope="col" class="score-difference-heading">Difference</th>
-                <th id="score-base-b" scope="col">Base B</th>
-              </tr>
-            </thead>
-            <tbody id="score-comparison-body"></tbody>
-          </table>
+      <section class="content-section overall-summary-section" aria-label="Overall winner summary">
+        <div class="section-heading-row">
+          <p class="eyebrow">Command summary</p>
+          <h3>Overall Winner</h3>
         </div>
+        <div id="overall-winner-summary" class="overall-winner-summary"></div>
+      </section>
+
+      <section class="content-section score-comparison-section" aria-label="Score comparison">
+        <div class="section-heading-row">
+          <p class="eyebrow">Scoreboard</p>
+          <h3>Score Comparison</h3>
+        </div>
+        <div class="score-comparison-heading" aria-hidden="true">
+          <span>Metric</span>
+          <span id="score-base-a">Base A</span>
+          <span>Margin</span>
+          <span id="score-base-b">Base B</span>
+        </div>
+        <div id="score-comparison-body" class="score-card-list"></div>
       </section>
 
       <section class="content-section" aria-label="Category winners">
-        <h3>Category Winners</h3>
+        <div class="section-heading-row">
+          <p class="eyebrow">Attribute calls</p>
+          <h3>Attribute-by-attribute winners</h3>
+        </div>
         <div id="category-winners" class="winner-card-grid"></div>
       </section>
 
       <section class="content-section" aria-label="Biggest advantages">
-        <h3>Biggest Advantage</h3>
+        <div class="section-heading-row">
+          <p class="eyebrow">Risk / edge analysis</p>
+          <h3>Biggest advantages and weaknesses</h3>
+        </div>
         <div id="biggest-advantages" class="advantage-grid"></div>
       </section>
 
       <section class="content-section" aria-label="Deterministic verdicts">
-        <h3>Verdict</h3>
+        <div class="section-heading-row">
+          <p class="eyebrow">Deterministic readout</p>
+          <h3>Final verdict</h3>
+        </div>
         <div id="verdict-list" class="verdict-grid"></div>
       </section>
 
