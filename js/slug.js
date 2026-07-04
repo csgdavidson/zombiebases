@@ -108,11 +108,34 @@
     return `/base/${encodeURIComponent(slugA)}/vs/${encodeURIComponent(slugB)}`;
   }
 
+  function getCompareSlugsFromLocation(location = window.location) {
+    const pathParts = safeText(location.pathname || '')
+      .split('/')
+      .filter(Boolean)
+      .map((part) => normalizeSlugCandidate(decodeURIComponent(part)));
+    const baseIndex = pathParts.findIndex((part) => part === 'base');
+    const vsIndex = pathParts.findIndex((part) => part === 'vs');
+
+    if (baseIndex !== -1 && vsIndex === baseIndex + 2 && pathParts[baseIndex + 1] && pathParts[vsIndex + 1]) {
+      return { baseSlug: pathParts[baseIndex + 1], compareSlug: pathParts[vsIndex + 1] };
+    }
+
+    return null;
+  }
+
+  function isCompareRoute(location = window.location) {
+    return Boolean(getCompareSlugsFromLocation(location));
+  }
+
   function getBaseSlugFromLocation(location = window.location) {
     const params = new URLSearchParams(location.search || '');
     const fromQuery = normalizeSlugCandidate(params.get('slug') || '');
     if (fromQuery) {
       return fromQuery;
+    }
+
+    if (isCompareRoute(location)) {
+      return '';
     }
 
     const path = safeText(location.pathname || '').replace(/^\/+|\/+$/g, '');
@@ -225,6 +248,8 @@
     getBaseUrl,
     getCompareSetupUrl,
     getCompareUrl,
+    getCompareSlugsFromLocation,
+    isCompareRoute,
     getBaseSlugFromLocation,
     resolveBaseBySlug,
     normalizeSlugCandidate,

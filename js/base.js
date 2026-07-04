@@ -1371,7 +1371,30 @@ async function loadBasesData() {
   throw lastError || new Error('Failed to load base data.');
 }
 
-if (
+function loadComparisonShell() {
+  elements.status.textContent = 'Loading comparison...';
+
+  fetch('/compare.html')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to load comparison shell (${response.status})`);
+      }
+      return response.text();
+    })
+    .then((html) => {
+      document.open();
+      document.write(html);
+      document.close();
+    })
+    .catch((error) => {
+      console.error(error);
+      showLoadError();
+    });
+}
+
+if (slugHelper?.isCompareRoute?.(window.location)) {
+  loadComparisonShell();
+} else if (
   elements.status
   && elements.detail
   && elements.notFound
