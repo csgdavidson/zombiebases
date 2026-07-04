@@ -4807,3 +4807,142 @@ body {
     margin-left: 0;
   }
 }
+
+/* Detail page UI refinements: hero back link, readable rank badge, compare card, and roomier similar cards. */
+.detail-hero-main {
+  gap: var(--space-3);
+}
+
+.hero-back-link {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  z-index: 3;
+  min-height: 38px;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: var(--radius-pill);
+  background: rgba(6, 18, 31, 0.72);
+  color: #ffffff;
+  font-weight: 750;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(10px);
+}
+
+.hero-back-link:hover,
+.hero-back-link:focus-visible {
+  border-color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.94);
+  color: #0f2d45;
+  text-decoration: none;
+}
+
+.detail-score-rank {
+  border-color: rgba(16, 54, 35, 0.3);
+  background: linear-gradient(180deg, rgba(239, 250, 235, 0.98), rgba(218, 241, 217, 0.98));
+  color: #12351f;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.detail-compare-card {
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  align-items: center;
+  border-color: rgba(31, 107, 49, 0.18);
+  background: linear-gradient(135deg, #ffffff 0%, #f4fbf0 100%);
+}
+
+.detail-compare-copy {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.detail-compare-copy h3,
+.detail-compare-copy p {
+  margin: 0;
+}
+
+.detail-compare-copy p:not(.section-kicker) {
+  color: var(--text-secondary);
+}
+
+.detail-compare-form {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.detail-compare-form label {
+  color: #10243c;
+  font-size: 0.84rem;
+  font-weight: 750;
+}
+
+.detail-compare-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-3);
+}
+
+.detail-compare-controls select {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid rgba(31, 107, 49, 0.24);
+  border-radius: var(--radius-pill);
+  background: #ffffff;
+  color: var(--text);
+  padding: 0 0.95rem;
+  font: inherit;
+  box-shadow: var(--shadow-xs);
+}
+
+#similar-section .compact-base-list li.similar-base-item {
+  overflow: visible;
+}
+
+#similar-section .similar-base-text,
+#similar-section .compact-base-list li.similar-base-item .badge-row {
+  padding-inline: var(--space-5);
+}
+
+#similar-section .similar-base-description {
+  display: block;
+  overflow: visible;
+  padding: 0 var(--space-5) var(--space-5);
+  margin-top: 0;
+  text-overflow: clip;
+}
+
+@media (max-width: 900px) {
+  .detail-compare-card,
+  .detail-compare-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-compare-controls .compare-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-back-link {
+    top: var(--space-3);
+    left: var(--space-3);
+    min-height: 36px;
+    padding: 0.5rem 0.72rem;
+    font-size: 0.82rem;
+  }
+
+  .detail-score-rank {
+    margin-top: 0;
+  }
+
+  .detail-compare-card {
+    padding: var(--space-4);
+  }
+
+  .detail-compare-controls select,
+  .detail-compare-controls .compare-button {
+    min-height: 48px;
+  }
+}

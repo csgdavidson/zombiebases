@@ -40,13 +40,9 @@
     <article id="base-detail" class="base-page" hidden>
       <header class="detail-hero">
         <div class="detail-hero-main">
-          <div class="base-header">
-            <a id="back-link" class="back-link" href="/">← Back to List</a>
-            <a id="compare-link" class="compare-button" href="/compare.html" hidden>Compare</a>
-          </div>
-
           <section id="hero-section" class="hero-section" aria-label="Hero image section" hidden>
             <div class="feature-image-wrap">
+              <a id="back-link" class="back-link hero-back-link" href="/">← Back to List</a>
               <img id="base-hero-image" class="hero-image base-feature-image" alt="">
               <div class="hero-content-overlay">
                 <div class="hero-title-stack">
@@ -108,6 +104,23 @@
           <h3>Survival Profile</h3>
         </div>
         <div id="survival-timeline-cards" class="survival-timeline-cards" aria-label="Survival timeline cards"></div>
+      </section>
+
+      <section id="detail-compare-section" class="content-section detail-compare-card" aria-label="Compare this base" hidden>
+        <div class="detail-compare-copy">
+          <p class="section-kicker">Base comparison</p>
+          <h3>Compare this base</h3>
+          <p>See how this location stacks up against another survival base.</p>
+        </div>
+        <form id="detail-compare-form" class="detail-compare-form">
+          <label for="detail-compare-select">Choose another base</label>
+          <div class="detail-compare-controls">
+            <select id="detail-compare-select" required>
+              <option value="">Select a base</option>
+            </select>
+            <button class="compare-button" type="submit">Compare bases</button>
+          </div>
+        </form>
       </section>
 
       <section id="similar-section" class="content-section" aria-label="Similar bases section" hidden>
