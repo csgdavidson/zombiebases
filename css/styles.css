@@ -7070,3 +7070,120 @@ body {
     padding: 0 1rem 1rem;
   }
 }
+
+/* Targeted final layout fixes: balanced nav, non-breaking score cards, and mobile hero clarity. */
+.site-header .header-inner {
+  justify-content: flex-start;
+  column-gap: clamp(1.5rem, 5vw, 4.5rem);
+}
+
+.site-header .site-nav {
+  margin-left: 0;
+  gap: clamp(0.5rem, 1.4vw, 1.1rem);
+}
+
+.site-header .site-nav a {
+  white-space: nowrap;
+}
+
+.listing-search {
+  flex: 1 1 340px;
+  max-width: 520px;
+  min-width: min(100%, 260px);
+}
+
+.listing-search input[type="search"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid rgba(47, 125, 60, 0.28);
+  border-radius: var(--radius-pill);
+  padding: 0 var(--space-5);
+  background: #ffffff;
+  color: var(--text);
+  font-size: var(--fs-body);
+  line-height: 1.2;
+  box-shadow: 0 12px 30px rgba(31, 45, 34, 0.08);
+}
+
+.listing-search input[type="search"]:focus-visible {
+  outline: 2px solid rgba(59, 130, 246, 0.28);
+  outline-offset: 1px;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.16);
+}
+
+.v2-pillar-evidence {
+  grid-template-columns: repeat(3, minmax(14.5rem, 1fr));
+}
+
+.v2-pillar-top {
+  grid-template-columns: minmax(max-content, 1fr) max-content;
+  align-items: center;
+  gap: clamp(0.85rem, 1.4vw, 1.25rem);
+}
+
+.v2-pillar-card h3 {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  hyphens: manual;
+}
+
+.v2-pillar-score {
+  font-size: clamp(1.65rem, 2.6vw, 2.15rem);
+}
+
+@media (max-width: 1060px) {
+  .v2-score-panel {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "overall"
+      "pillars"
+      "fingerprint";
+  }
+}
+
+@media (max-width: 768px) {
+  .base-detail-v2-active .hero-back-link {
+    display: none;
+  }
+
+  .base-detail-v2-active .ranking-list,
+  .base-detail-v2-active .base-meta-row,
+  .base-detail-v2-active .badge-row {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header .header-inner {
+    column-gap: var(--space-3);
+  }
+
+  .site-header .site-nav {
+    gap: 0.35rem;
+  }
+
+  .site-header .site-nav a {
+    padding-inline: 0.75rem;
+  }
+
+  .listing-search {
+    flex-basis: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .v2-pillar-top {
+    grid-template-columns: minmax(max-content, 1fr) max-content;
+  }
+
+  .v2-pillar-score {
+    justify-self: end;
+    font-size: clamp(1.55rem, 8vw, 2rem);
+  }
+}
