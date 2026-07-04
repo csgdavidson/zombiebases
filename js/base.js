@@ -1151,49 +1151,127 @@ function appendV2Section(section) {
   anchor?.parentNode?.insertBefore(section, anchor);
 }
 
+function getMetricHighlightClass(score) {
+  if (!Number.isFinite(score)) return '';
+  if (score >= 8.8) return 'is-exceptional';
+  if (score <= 4.2) return 'is-critical';
+  return 'is-muted';
+}
+
+function sentenceLimit(text, max = 150) {
+  if (!isNonEmptyString(text)) return '';
+  const trimmed = text.trim();
+  if (trimmed.length <= max) return trimmed;
+  const clipped = trimmed.slice(0, max).replace(/\s+\S*$/, '').trim();
+  return `${clipped}…`;
+}
+
 function renderV2ScorePanel(pilot, globalRank) {
   const section = document.createElement('section');
   section.className = 'content-section v2-detail-section v2-score-panel';
-  section.setAttribute('aria-label', 'V2 survival scoring panel');
-  const pillars = [['Defensibility', pilot.defensibility, pilot.pillarWeights.defensibility, 'D'], ['Isolation', pilot.isolation, pilot.pillarWeights.isolation, 'I'], ['Sustainability', pilot.sustainability, pilot.pillarWeights.sustainability, 'S']];
-  section.innerHTML = `<div class="v2-score-panel-main"><p class="section-kicker">Overall Survival Score</p><div class="v2-overall-row"><p class="v2-overall-score ${scoreToneClass(pilot.overall)}">${formatV2Score(pilot.overall)}<span>/10</span></p><div><p class="v2-rank-label">${pilot.rankLabel}</p><p class="v2-global-rank">Global rank ${globalRank ? `#${globalRank}` : '—'}</p></div></div><p class="v2-score-note">Overall survival is weighted from Defensibility 30%, Isolation 25%, and Sustainability 45%.</p></div><div class="v2-pillar-grid">${pillars.map(([name, score, weight, code]) => `<article class="v2-pillar-card"><div><span class="v2-pillar-code">${code}</span><h3>${name}</h3></div><p class="v2-pillar-score ${scoreToneClass(score)}">${formatV2Score(score)}</p><div class="v2-meter"><span class="${scoreToneClass(score)}" style="width:${score * 10}%"></span></div><p>${weight}% weighting</p></article>`).join('')}</div>`;
+  section.setAttribute('aria-label', 'Survival score dossier');
+  const pillars = [
+    ['Defensibility', pilot.defensibility, pilot.pillarWeights.defensibility, 'Physical protection, access control, and terrain advantage.'],
+    ['Isolation', pilot.isolation, pilot.pillarWeights.isolation, 'Separation from population pressure and uncontrolled approach routes.'],
+    ['Sustainability', pilot.sustainability, pilot.pillarWeights.sustainability, 'Food, water, infrastructure, medical capacity, and maintainability.']
+  ];
+  section.innerHTML = `
+    <div class="v2-score-lead">
+      <p class="section-kicker">Overall Survival Score</p>
+      <div class="v2-score-lockup">
+        <p class="v2-overall-score ${scoreToneClass(pilot.overall)}">${formatV2Score(pilot.overall)}<span>/10</span></p>
+        <div>
+          <p class="v2-rank-label">${pilot.rankLabel}</p>
+          <p class="v2-global-rank">${globalRank ? `Global Rank #${globalRank}` : 'Global Rank —'}</p>
+        </div>
+      </div>
+    </div>
+    <div class="v2-pillar-evidence" aria-label="Pillar score evidence">
+      ${pillars.map(([name, score, weight, note]) => `<article class="v2-pillar-card">
+        <div class="v2-pillar-top"><h3>${name}</h3><p class="v2-pillar-score ${scoreToneClass(score)}">${formatV2Score(score)}</p></div>
+        <div class="v2-meter"><span class="${scoreToneClass(score)}" style="width:${score * 10}%"></span></div>
+        <p>${note}</p><span>${weight}% weighting</span>
+      </article>`).join('')}
+    </div>`;
   appendV2Section(section);
 }
 
 function renderV2ExecutiveVerdict(pilot) {
   const section = document.createElement('section');
   section.className = 'content-section v2-detail-section v2-executive-verdict';
-  section.innerHTML = `<div><p class="section-kicker">Executive Verdict</p><h2>Would I choose this base?</h2><p class="v2-verdict-answer">${pilot.executiveVerdict}</p><p>${pilot.narrative}</p></div><article class="v2-failure-card"><p class="section-kicker">Primary failure mode</p><h3>${pilot.primaryFailureMode}</h3><p>This is the constraint most likely to turn the score from a survival advantage into an operational liability.</p></article>`;
+  section.innerHTML = `
+    <div class="v2-verdict-copy">
+      <p class="section-kicker">Executive Verdict</p>
+      <h2>Would I choose this base?</h2>
+      <p class="v2-verdict-answer">${pilot.executiveVerdict}.</p>
+      <p class="v2-verdict-summary">${pilot.narrative}</p>
+    </div>
+    <aside class="v2-failure-card">
+      <p class="section-kicker">Primary failure mode</p>
+      <h3>${pilot.primaryFailureMode}</h3>
+      <p>${pilot.limitations}</p>
+    </aside>`;
   appendV2Section(section);
 }
 
 function renderV2OperationalAssessment(pilot) {
   const section = document.createElement('section');
   section.className = 'content-section v2-detail-section v2-operational-section';
-  section.innerHTML = `<div class="survival-characteristics-header"><p class="section-kicker">Operational Assessment</p><h3>Operational metrics</h3><p class="survival-characteristics-intro">These metrics support the headline pillars. Sustainability carries the broadest operational load.</p></div><div class="v2-operational-table">${pilot.metrics.map(([name, score, weight, impact, pillar, explanation]) => `<article class="v2-operational-row"><div class="v2-metric-name"><strong>${name}</strong><span>${explanation}</span></div><div class="v2-metric-score ${scoreToneClass(score)}">${formatV2Score(score)}</div><div class="v2-meter"><span class="${scoreToneClass(score)}" style="width:${score * 10}%"></span></div><div class="v2-metric-meta"><span>${weight}%</span><span class="impact-${impact.toLowerCase()}">${impact}</span><span>Pillar ${pillar}</span></div></article>`).join('')}</div>`;
+  section.innerHTML = `
+    <div class="v2-section-intro">
+      <p class="section-kicker">Operational Assessment</p>
+      <h3>The evidence behind the score</h3>
+      <p>Operational metrics explain the pillar scores without competing with the headline verdict.</p>
+    </div>
+    <div class="v2-operational-table">
+      ${pilot.metrics.map(([name, score, weight, impact, pillar, explanation]) => `<article class="v2-operational-row ${getMetricHighlightClass(score)}">
+        <div class="v2-metric-name"><strong>${name}</strong><span>${sentenceLimit(explanation, 118)}</span></div>
+        <div class="v2-meter"><span class="${scoreToneClass(score)}" style="width:${score * 10}%"></span></div>
+        <div class="v2-metric-score ${scoreToneClass(score)}">${formatV2Score(score)}</div>
+        <div class="v2-metric-meta"><span>${weight}%</span><span class="impact-${impact.toLowerCase()}">${impact}</span><span>${pillar}</span></div>
+      </article>`).join('')}
+    </div>`;
   appendV2Section(section);
 }
 
 function renderV2Timeline(pilot) {
   const section = document.createElement('section');
   section.className = 'content-section v2-detail-section v2-timeline-section';
-  section.innerHTML = `<p class="section-kicker">Survival Timeline</p><h3>How survivability changes over time</h3><div class="v2-timeline-grid">${pilot.timeline.map((stage) => `<article class="v2-timeline-card"><p class="v2-timeframe">${stage.stage}: ${stage.timeframe}</p><p class="v2-timeline-score ${scoreToneClass(stage.score)}">${formatV2Score(stage.score)} <span>${stage.label}</span></p><p>${stage.explanation}</p><p class="v2-risk"><strong>Key risk:</strong> ${stage.risk}</p></article>`).join('')}</div>`;
+  section.innerHTML = `
+    <div class="v2-section-intro"><p class="section-kicker">Survival Timeline</p><h3>The survival story</h3></div>
+    <div class="v2-timeline-grid">
+      ${pilot.timeline.map((stage, index) => `<article class="v2-timeline-card">
+        <p class="v2-step">0${index + 1}</p>
+        <p class="v2-timeframe">${stage.timeframe}</p>
+        <h4>${stage.stage}</h4>
+        <p class="v2-timeline-score ${scoreToneClass(stage.score)}">${formatV2Score(stage.score)} <span>${stage.label}</span></p>
+        <p>${stage.explanation}</p>
+        <p class="v2-risk">Eventually: ${stage.risk}</p>
+      </article>`).join('')}
+    </div>`;
   appendV2Section(section);
 }
 
 function renderV2InsightCards(pilot) {
-  const stars = (count) => '★★★★★'.split('').map((star, index) => `<span class="${index < count ? 'is-filled' : ''}">${star}</span>`).join('');
-  const recovery = Object.entries(pilot.recoveryPotential).map(([label, value]) => `<li><span>${label}</span><span class="v2-stars" aria-label="${value} out of 5">${stars(value)}</span></li>`).join('');
+  const blocks = (count) => Array.from({ length: 5 }, (_, i) => `<span class="${i < count ? 'is-filled' : ''}"></span>`).join('');
+  const recovery = Object.entries(pilot.recoveryPotential).map(([label, value]) => `<li><span>${label}</span><span class="v2-capability-bar" aria-label="${value} out of 5">${blocks(value)}</span></li>`).join('');
   const section = document.createElement('section');
   section.className = 'content-section v2-detail-section v2-insight-grid';
-  section.innerHTML = `<article><p class="section-kicker">Exceptional factor</p><h3>What makes this base exceptional</h3><p>${pilot.exceptional}</p></article><article><p class="section-kicker">Limitations</p><h3>Key limitations</h3><p>${pilot.limitations}</p></article><article><p class="section-kicker">Best suited for</p><h3>Best operating model</h3><p>${pilot.bestSuitedFor}</p></article><article><p class="section-kicker">Recovery potential</p><h3>Post-collapse recovery</h3><ul class="v2-recovery-list">${recovery}</ul></article>`;
+  section.innerHTML = `
+    <article class="v2-wide-insight"><p class="section-kicker">Why it works</p><h3>What makes this base exceptional</h3><p>${pilot.exceptional}</p></article>
+    <article><p class="section-kicker">Trade-offs</p><h3>Key limitations</h3><p>${pilot.limitations}</p></article>
+    <article><p class="section-kicker">Best suited for</p><h3>Best operating model</h3><p>${pilot.bestSuitedFor}</p></article>
+    <article class="v2-recovery-card"><p class="section-kicker">Recovery</p><h3>Capability matrix</h3><ul class="v2-recovery-list">${recovery}</ul></article>`;
   appendV2Section(section);
 }
 
 function renderV2IntelligenceReport(base, pilot) {
+  const sources = ['Military records', 'Satellite imagery', 'Topographic analysis', 'Historical documentation', 'Engineering assessment'];
   const section = document.createElement('section');
   section.className = 'content-section v2-detail-section v2-intel-report';
-  section.innerHTML = `<div><p class="section-kicker">Intelligence Report</p><h3>${base.name} survival narrative</h3><p>${pilot.narrative}</p></div><aside><span class="v2-confidence">Assessment confidence: High</span><h4>Evidence sources</h4><ul><li>Military records</li><li>Satellite imagery</li><li>Topographic analysis</li><li>Historical documentation</li><li>Engineering assessment</li></ul></aside>`;
+  section.innerHTML = `
+    <div><p class="section-kicker">Intelligence Report</p><h3>${base.name} survival narrative</h3><p>${pilot.narrative}</p></div>
+    <aside><span class="v2-confidence">High confidence</span><div class="v2-source-tags">${sources.map((source) => `<span>${source}</span>`).join('')}</div></aside>`;
   appendV2Section(section);
 }
 
