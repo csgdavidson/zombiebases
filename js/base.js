@@ -46,6 +46,83 @@ const SURVIVAL_CHARACTERISTIC_LABELS = {
   resourceSecurity: 'Resource Security'
 };
 
+const V2_PILOT_BASES = {
+  'cheyenne-mountain-complex': {
+    overall: 9.0,
+    rankLabel: 'Elite',
+    defensibility: 10.0,
+    isolation: 6.9,
+    sustainability: 7.3,
+    pillarWeights: { defensibility: 30, isolation: 25, sustainability: 45 },
+    timeline: [
+      { stage: 'Initial Collapse', timeframe: '0–30 days', score: 9.8, label: 'Exceptional', explanation: 'Hardening, access control and engineered redundancy make the first month highly survivable if entry discipline holds.', risk: 'Early failure would come from command breakdown or unmanaged intake, not from the site envelope.' },
+      { stage: 'Stabilisation', timeframe: '30 days–1 year', score: 8.8, label: 'Strong', explanation: 'The complex can run as a controlled refuge while stored supplies, water systems and power infrastructure remain maintained.', risk: 'Specialist maintenance and replacement parts become the critical constraint.' },
+      { stage: 'Long-term', timeframe: '1+ years', score: 7.9, label: 'Strong', explanation: 'Survival remains plausible, but only with disciplined engineering crews and external food production or trade.', risk: 'Complex systems decay faster than local self-sufficiency can replace them.' }
+    ],
+    primaryFailureMode: 'Maintenance dependency',
+    executiveVerdict: 'YES',
+    narrative: 'Cheyenne Mountain is the benchmark for engineered survival infrastructure. It offers unmatched protection during the collapse phase, but its long-term weakness is dependence on specialist engineers, industrial supply chains and complex maintenance.',
+    exceptional: 'Unmatched physical protection, hardened infrastructure and controlled access make the collapse phase safer here than almost anywhere else.',
+    limitations: 'Food production, replacement parts and specialist engineering capacity are the limiting factors once outside supply chains fail.',
+    bestSuitedFor: 'A disciplined technical group with stored provisions, maintenance expertise and a plan to secure food beyond the mountain.',
+    recoveryPotential: { Agriculture: 2, Industry: 5, Education: 5, 'Trade / Logistics': 3, 'Population Growth': 2, 'Overall Recovery': 3 },
+    metrics: [
+      ['Physical Defence',10.0,15,'High','D','Deep mountain hardening and controlled portals give the site near-maximum assault resistance.'],
+      ['Terrain Advantage',9.5,10,'High','D','Mountain cover, limited approaches and blast protection amplify the engineered defences.'],
+      ['Isolation',6.9,15,'Medium','I','The site is protected, but it remains tied to a populated regional corridor.'],
+      ['Food Security',3.2,15,'Low','S','Food survival depends on stores or external production rather than meaningful on-site agriculture.'],
+      ['Water Security',8.8,10,'High','S','Engineered water systems and mountain siting provide strong baseline water resilience.'],
+      ['Energy Independence',8.4,8,'High','S','Backup power capacity is strong, but fuel and technical upkeep still matter.'],
+      ['Medical Capability',9.0,7,'High','S','Purpose-built infrastructure supports unusually strong medical and command continuity.'],
+      ['Infrastructure',10.0,7,'High','S','Few locations match its hardened communications, utilities and internal systems.'],
+      ['Maintainability',3.1,8,'Low','S','The same complexity that protects the site creates a major long-term maintenance burden.'],
+      ['Population Capacity',5.4,3,'Medium','S','Capacity is useful for a selected group, not a large open settlement.'],
+      ['Governance & Resilience',7.1,7,'Medium','S','Command structure can be strong if technical leadership and rationing authority remain intact.']
+    ]
+  },
+  'andaman-islands': {
+    overall: 8.6, rankLabel: 'Exceptional', defensibility: 7.8, isolation: 9.6, sustainability: 8.7,
+    pillarWeights: { defensibility: 30, isolation: 25, sustainability: 45 },
+    timeline: [
+      { stage: 'Initial Collapse', timeframe: '0–30 days', score: 8.2, label: 'Strong', explanation: 'Distance from mainland collapse and distributed settlements reduce immediate pressure.', risk: 'Ports and local coordination must stay functional before panic disrupts movement.' },
+      { stage: 'Stabilisation', timeframe: '30 days–1 year', score: 8.8, label: 'Strong', explanation: 'Fishing, freshwater, agriculture and inter-island dispersion create a resilient medium-term system.', risk: 'Failure comes if maritime logistics fragment between communities.' },
+      { stage: 'Long-term', timeframe: '1+ years', score: 8.7, label: 'Strong', explanation: 'The island system can support durable recovery if governance protects water, crops and fleet capability.', risk: 'Storms, medical gaps and weak coordination can turn isolation into fragility.' }
+    ],
+    primaryFailureMode: 'Maritime coordination failure', executiveVerdict: 'YES',
+    narrative: 'The Andaman Islands trade engineered protection for exceptional long-term resilience. Maritime isolation, freshwater, fishing, tropical agriculture and distributed settlements make them one of the strongest long-horizon survival systems, provided governance and inter-island mobility remain intact.',
+    exceptional: 'High isolation combines with real food, water and settlement depth, so the score improves as the horizon lengthens.',
+    limitations: 'The system depends on boats, port discipline, weather awareness and shared governance across separated communities.',
+    bestSuitedFor: 'Maritime-capable groups that can defend harbours, maintain small craft and coordinate food and medical movement.',
+    recoveryPotential: { Agriculture: 5, Industry: 3, Education: 3, 'Trade / Logistics': 4, 'Population Growth': 4, 'Overall Recovery': 4 },
+    metrics: [
+      ['Physical Defence',7.0,15,'Medium','D','Defence is distributed and coastal rather than bunker-like, but approaches are controllable.'],['Terrain Advantage',8.2,10,'High','D','Jungle, coastlines and dispersed settlements complicate hostile movement.'],['Isolation',9.6,15,'High','I','Maritime separation is the defining strength and sharply reduces overland threat exposure.'],['Food Security',8.5,15,'High','S','Fishing and tropical agriculture give the islands genuine long-term food depth.'],['Water Security',8.3,10,'High','S','Freshwater availability is strong if catchments and settlement loads are managed.'],['Energy Independence',6.8,8,'Medium','S','Local renewables and fuel rationing can work, but modern power systems remain limited.'],['Medical Capability',5.8,7,'Medium','S','Basic care is plausible, while advanced treatment and evacuation are weak points.'],['Infrastructure',6.7,7,'Medium','S','Ports, roads and settlements are useful but vulnerable to storms and deferred maintenance.'],['Maintainability',6.4,8,'Medium','S','Small craft, tools and simple systems are maintainable if spares are conserved.'],['Population Capacity',8.0,3,'High','S','The archipelago can disperse people better than compact fortress sites.'],['Governance & Resilience',7.4,7,'Medium','S','Survival depends on shared rules for fisheries, water, harbours and inter-island movement.']
+    ]
+  },
+  'mont-saint-michel': {
+    overall: 7.9, rankLabel: 'Strong', defensibility: 9.3, isolation: 6.8, sustainability: 5.9,
+    pillarWeights: { defensibility: 30, isolation: 25, sustainability: 45 },
+    timeline: [
+      { stage: 'Initial Collapse', timeframe: '0–30 days', score: 9.2, label: 'Exceptional', explanation: 'Tidal separation, stone massing and limited access create an exceptional short-term refuge.', risk: 'Overcrowding and poor stock control can erase the defensive advantage.' },
+      { stage: 'Stabilisation', timeframe: '30 days–1 year', score: 7.8, label: 'Strong', explanation: 'The site can remain defensible, but every essential supply must be tightly rationed or moved across a bottleneck.', risk: 'Food, water and medical throughput become the main operational hazard.' },
+      { stage: 'Long-term', timeframe: '1+ years', score: 6.9, label: 'Moderate', explanation: 'Defence stays strong, but the compact footprint cannot support a large self-reliant settlement.', risk: 'Long-term survival fails through sustainment bottlenecks rather than assault.' }
+    ],
+    primaryFailureMode: 'Sustainment bottleneck', executiveVerdict: 'MAYBE',
+    narrative: 'Mont Saint-Michel is an exceptional defensive refuge but a weak long-term settlement. Its tidal separation, compact footprint and visibility make assault difficult, but food, space, water, medical support and logistics become severe constraints over time.',
+    exceptional: 'Few historic sites offer such a clear defensive edge: visible approaches, tidal timing and compact access points all help.',
+    limitations: 'The same compactness that aids defence restricts food, water storage, sanitation, medical capacity and population growth.',
+    bestSuitedFor: 'A small, disciplined group using the site as a defensive refuge while maintaining controlled mainland supply links.',
+    recoveryPotential: { Agriculture: 1, Industry: 2, Education: 3, 'Trade / Logistics': 3, 'Population Growth': 1, 'Overall Recovery': 2 },
+    metrics: [
+      ['Physical Defence',9.3,15,'High','D','Stone fortification and narrow access make direct assault costly.'],['Terrain Advantage',9.0,10,'High','D','Tides, mudflats and visibility create strong natural warning and delay.'],['Isolation',6.8,15,'Medium','I','Isolation is intermittent and powerful, but not equivalent to remote island separation.'],['Food Security',3.8,15,'Low','S','The footprint cannot feed many people without mainland access.'],['Water Security',5.0,10,'Medium','S','Water can be managed for a small group, but storage and throughput are limiting.'],['Energy Independence',4.8,8,'Low','S','Local generation options are constrained by space, exposure and maintenance.'],['Medical Capability',4.5,7,'Low','S','Basic care is possible, but serious treatment depends on outside support.'],['Infrastructure',6.2,7,'Medium','S','Built fabric is durable, but modern utilities and sanitation become stressed.'],['Maintainability',5.0,8,'Medium','S','Stone structures endure, while access systems and utilities need regular upkeep.'],['Population Capacity',3.9,3,'Low','S','The site works for a small refuge, not a broad recovery community.'],['Governance & Resilience',5.6,7,'Medium','S','Rules can be enforced in a compact site, but scarcity can destabilise them quickly.']
+    ]
+  }
+};
+
+function getV2Pilot(base) {
+  return V2_PILOT_BASES[base?.slug] || null;
+}
+
+
 const elements = {
   status: document.getElementById('detail-status'),
   detail: document.getElementById('base-detail'),
@@ -788,8 +865,11 @@ function getSurvivalCharacteristicIcon(key) {
 }
 
 function renderScore(base) {
-  const scoreObject = getScoreObject(base);
-  const overall = computeOverallScore(base);
+  const pilot = getV2Pilot(base);
+  const scoreObject = pilot
+    ? { defensibility: pilot.defensibility, isolation: pilot.isolation, sustainability: pilot.sustainability }
+    : getScoreObject(base);
+  const overall = pilot ? pilot.overall : computeOverallScore(base);
 
   elements.scoreSection.hidden = false;
 
@@ -813,7 +893,7 @@ function renderScore(base) {
   }
 
   if (elements.scoreRank) {
-    const rankLabel = slugHelper?.getScoreTierBadge ? slugHelper.getScoreTierBadge(base) : null;
+    const rankLabel = pilot?.rankLabel || (slugHelper?.getScoreTierBadge ? slugHelper.getScoreTierBadge(base) : null);
     elements.scoreRank.textContent = rankLabel || '';
     elements.scoreRank.hidden = !rankLabel;
   }
@@ -1047,6 +1127,76 @@ function deriveSimilarTags(item) {
   return tags.slice(0, 2);
 }
 
+function formatV2Score(value) {
+  return Number.isFinite(value) ? value.toFixed(1) : '—';
+}
+
+function renderV2Detail(base, rankings) {
+  const pilot = getV2Pilot(base);
+  document.querySelectorAll('.v2-detail-section').forEach((node) => node.remove());
+  document.body.classList.toggle('base-detail-v2-active', Boolean(pilot));
+  if (!pilot) return false;
+  const globalRank = (rankings?.global || []).find((entry) => entry.slug === base.slug)?.rank;
+  renderV2ScorePanel(pilot, globalRank);
+  renderV2ExecutiveVerdict(pilot);
+  renderV2OperationalAssessment(pilot);
+  renderV2Timeline(pilot);
+  renderV2InsightCards(pilot);
+  renderV2IntelligenceReport(base, pilot);
+  return true;
+}
+
+function appendV2Section(section) {
+  const anchor = document.getElementById('survival-characteristics-section');
+  anchor?.parentNode?.insertBefore(section, anchor);
+}
+
+function renderV2ScorePanel(pilot, globalRank) {
+  const section = document.createElement('section');
+  section.className = 'content-section v2-detail-section v2-score-panel';
+  section.setAttribute('aria-label', 'V2 survival scoring panel');
+  const pillars = [['Defensibility', pilot.defensibility, pilot.pillarWeights.defensibility, 'D'], ['Isolation', pilot.isolation, pilot.pillarWeights.isolation, 'I'], ['Sustainability', pilot.sustainability, pilot.pillarWeights.sustainability, 'S']];
+  section.innerHTML = `<div class="v2-score-panel-main"><p class="section-kicker">Overall Survival Score</p><div class="v2-overall-row"><p class="v2-overall-score ${scoreToneClass(pilot.overall)}">${formatV2Score(pilot.overall)}<span>/10</span></p><div><p class="v2-rank-label">${pilot.rankLabel}</p><p class="v2-global-rank">Global rank ${globalRank ? `#${globalRank}` : '—'}</p></div></div><p class="v2-score-note">Overall survival is weighted from Defensibility 30%, Isolation 25%, and Sustainability 45%.</p></div><div class="v2-pillar-grid">${pillars.map(([name, score, weight, code]) => `<article class="v2-pillar-card"><div><span class="v2-pillar-code">${code}</span><h3>${name}</h3></div><p class="v2-pillar-score ${scoreToneClass(score)}">${formatV2Score(score)}</p><div class="v2-meter"><span class="${scoreToneClass(score)}" style="width:${score * 10}%"></span></div><p>${weight}% weighting</p></article>`).join('')}</div>`;
+  appendV2Section(section);
+}
+
+function renderV2ExecutiveVerdict(pilot) {
+  const section = document.createElement('section');
+  section.className = 'content-section v2-detail-section v2-executive-verdict';
+  section.innerHTML = `<div><p class="section-kicker">Executive Verdict</p><h2>Would I choose this base?</h2><p class="v2-verdict-answer">${pilot.executiveVerdict}</p><p>${pilot.narrative}</p></div><article class="v2-failure-card"><p class="section-kicker">Primary failure mode</p><h3>${pilot.primaryFailureMode}</h3><p>This is the constraint most likely to turn the score from a survival advantage into an operational liability.</p></article>`;
+  appendV2Section(section);
+}
+
+function renderV2OperationalAssessment(pilot) {
+  const section = document.createElement('section');
+  section.className = 'content-section v2-detail-section v2-operational-section';
+  section.innerHTML = `<div class="survival-characteristics-header"><p class="section-kicker">Operational Assessment</p><h3>Operational metrics</h3><p class="survival-characteristics-intro">These metrics support the headline pillars. Sustainability carries the broadest operational load.</p></div><div class="v2-operational-table">${pilot.metrics.map(([name, score, weight, impact, pillar, explanation]) => `<article class="v2-operational-row"><div class="v2-metric-name"><strong>${name}</strong><span>${explanation}</span></div><div class="v2-metric-score ${scoreToneClass(score)}">${formatV2Score(score)}</div><div class="v2-meter"><span class="${scoreToneClass(score)}" style="width:${score * 10}%"></span></div><div class="v2-metric-meta"><span>${weight}%</span><span class="impact-${impact.toLowerCase()}">${impact}</span><span>Pillar ${pillar}</span></div></article>`).join('')}</div>`;
+  appendV2Section(section);
+}
+
+function renderV2Timeline(pilot) {
+  const section = document.createElement('section');
+  section.className = 'content-section v2-detail-section v2-timeline-section';
+  section.innerHTML = `<p class="section-kicker">Survival Timeline</p><h3>How survivability changes over time</h3><div class="v2-timeline-grid">${pilot.timeline.map((stage) => `<article class="v2-timeline-card"><p class="v2-timeframe">${stage.stage}: ${stage.timeframe}</p><p class="v2-timeline-score ${scoreToneClass(stage.score)}">${formatV2Score(stage.score)} <span>${stage.label}</span></p><p>${stage.explanation}</p><p class="v2-risk"><strong>Key risk:</strong> ${stage.risk}</p></article>`).join('')}</div>`;
+  appendV2Section(section);
+}
+
+function renderV2InsightCards(pilot) {
+  const stars = (count) => '★★★★★'.split('').map((star, index) => `<span class="${index < count ? 'is-filled' : ''}">${star}</span>`).join('');
+  const recovery = Object.entries(pilot.recoveryPotential).map(([label, value]) => `<li><span>${label}</span><span class="v2-stars" aria-label="${value} out of 5">${stars(value)}</span></li>`).join('');
+  const section = document.createElement('section');
+  section.className = 'content-section v2-detail-section v2-insight-grid';
+  section.innerHTML = `<article><p class="section-kicker">Exceptional factor</p><h3>What makes this base exceptional</h3><p>${pilot.exceptional}</p></article><article><p class="section-kicker">Limitations</p><h3>Key limitations</h3><p>${pilot.limitations}</p></article><article><p class="section-kicker">Best suited for</p><h3>Best operating model</h3><p>${pilot.bestSuitedFor}</p></article><article><p class="section-kicker">Recovery potential</p><h3>Post-collapse recovery</h3><ul class="v2-recovery-list">${recovery}</ul></article>`;
+  appendV2Section(section);
+}
+
+function renderV2IntelligenceReport(base, pilot) {
+  const section = document.createElement('section');
+  section.className = 'content-section v2-detail-section v2-intel-report';
+  section.innerHTML = `<div><p class="section-kicker">Intelligence Report</p><h3>${base.name} survival narrative</h3><p>${pilot.narrative}</p></div><aside><span class="v2-confidence">Assessment confidence: High</span><h4>Evidence sources</h4><ul><li>Military records</li><li>Satellite imagery</li><li>Topographic analysis</li><li>Historical documentation</li><li>Engineering assessment</li></ul></aside>`;
+  appendV2Section(section);
+}
+
 function showBase(base, bases, params, rankings, discovery) {
   elements.name.textContent = base.name;
   applyDetailMetadata(base);
@@ -1057,9 +1207,18 @@ function showBase(base, bases, params, rankings, discovery) {
   renderHeroTraits(base);
   renderUseCaseAndRisk(base);
   renderScore(base);
-  renderSurvivalCharacteristics(base);
+  const isV2Pilot = renderV2Detail(base, rankings);
+  if (!isV2Pilot) {
+    renderSurvivalCharacteristics(base);
+  } else {
+    elements.survivalCharacteristicsSection.hidden = true;
+  }
   renderRankingPosition(base, rankings);
-  renderSurvivalProfile(base);
+  if (!isV2Pilot) {
+    renderSurvivalProfile(base);
+  } else {
+    elements.survivalProfileSection.hidden = true;
+  }
   renderRealityCheck(base);
   renderSimilarBases(base, bases, discovery, params);
   elements.status.textContent = '';
