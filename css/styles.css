@@ -6935,3 +6935,138 @@ body {
     text-align: left;
   }
 }
+
+/* Base detail hero structural repair: stable two-column desktop and stacked tablet/mobile layout. */
+.base-detail-v2-active .feature-image-wrap {
+  display: grid;
+  grid-template-columns: minmax(420px, 0.38fr) minmax(0, 1fr);
+  min-height: clamp(420px, 42vw, 560px);
+  overflow: hidden;
+  background: #0b1725;
+}
+
+.base-detail-v2-active .feature-image-wrap::after {
+  display: none;
+}
+
+.base-detail-v2-active .hero-image,
+.base-detail-v2-active .base-feature-image {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+  border: 0;
+  border-radius: 0;
+  opacity: 1;
+}
+
+.base-detail-v2-active .hero-content-overlay {
+  position: static;
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: auto;
+  min-width: 420px;
+  max-width: none;
+  padding: clamp(5.75rem, 8vw, 7rem) clamp(1.5rem, 3vw, 3rem) clamp(2rem, 4vw, 3.5rem);
+  background: linear-gradient(180deg, #071220 0%, #0d1c2c 58%, #132437 100%);
+  color: #ffffff;
+  text-shadow: none;
+  z-index: 2;
+}
+
+.base-detail-v2-active .hero-title-stack {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+.base-detail-v2-active .detail-hero h1 {
+  max-width: none;
+  color: #ffffff;
+  font-size: clamp(2.35rem, 4.6vw, 4.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  word-break: normal;
+  overflow-wrap: normal;
+  white-space: normal;
+  hyphens: manual;
+}
+
+.base-detail-v2-active .hero-back-link {
+  top: clamp(1rem, 2vw, 1.5rem);
+  left: clamp(1rem, 2vw, 1.5rem);
+}
+
+.base-detail-v2-active .detail-positioning {
+  top: clamp(1rem, 2vw, 1.5rem);
+  right: clamp(1rem, 2vw, 1.5rem);
+  max-width: min(52vw, 620px);
+}
+
+@media (max-width: 900px) {
+  .base-detail-v2-active .feature-image-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    border-radius: var(--radius-xl);
+  }
+
+  .base-detail-v2-active .hero-image,
+  .base-detail-v2-active .base-feature-image {
+    order: 1;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+    border-radius: 0;
+    object-fit: cover;
+  }
+
+  .base-detail-v2-active .hero-content-overlay {
+    order: 2;
+    width: 100%;
+    min-width: 0;
+    padding: 1.25rem;
+  }
+
+  .base-detail-v2-active .detail-positioning {
+    order: 3;
+    position: static;
+    width: 100%;
+    max-width: none;
+    padding: 0 1.25rem 1.25rem;
+    background: #132437;
+  }
+
+  .base-detail-v2-active .detail-hero h1 {
+    font-size: clamp(2rem, 8vw, 3.35rem);
+    line-height: 1.02;
+    word-break: normal;
+    overflow-wrap: normal;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 520px) {
+  .base-detail-v2-active .feature-image-wrap {
+    border-radius: 24px;
+  }
+
+  .base-detail-v2-active .hero-content-overlay {
+    padding: 1rem;
+  }
+
+  .base-detail-v2-active .detail-hero h1 {
+    font-size: clamp(1.85rem, 10vw, 2.65rem);
+  }
+
+  .base-detail-v2-active .detail-positioning {
+    padding: 0 1rem 1rem;
+  }
+}
