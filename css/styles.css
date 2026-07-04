@@ -5899,3 +5899,308 @@ body {
   .v2-overall-score { font-size: 5.4rem; }
   .v2-operational-group { padding-inline: 0.85rem; }
 }
+
+/* V2 base detail refinement pass: polish hierarchy, rhythm, hero drama, and responsive cards. */
+.base-detail-v2-active .base-page {
+  gap: clamp(1rem, 2.6vw, 2.25rem);
+}
+
+.base-detail-v2-active .detail-hero {
+  background: linear-gradient(90deg, #fbfcf8 0%, rgba(251, 252, 248, 0.62) 22%, rgba(251, 252, 248, 0) 48%);
+}
+
+.base-detail-v2-active .feature-image-wrap {
+  min-height: clamp(335px, 39vw, 470px);
+}
+
+.base-detail-v2-active .hero-image {
+  width: 72%;
+}
+
+.base-detail-v2-active .feature-image-wrap::after {
+  background:
+    linear-gradient(90deg, rgba(5, 12, 22, 0.72) 0%, rgba(5, 12, 22, 0.46) 26%, rgba(5, 12, 22, 0.1) 48%, rgba(5, 12, 22, 0) 68%),
+    linear-gradient(0deg, rgba(5, 12, 22, 0.34) 0%, rgba(5, 12, 22, 0) 42%);
+}
+
+.base-detail-v2-active .hero-content-overlay {
+  inset: clamp(1.65rem, 4vw, 3.5rem) auto auto 0;
+  width: min(490px, 43vw);
+  color: #ffffff;
+  text-shadow: 0 3px 24px rgba(0, 0, 0, 0.52);
+}
+
+.base-detail-v2-active .detail-hero h1 {
+  color: #ffffff;
+  font-size: clamp(2.35rem, 4.8vw, 4.35rem);
+  line-height: 0.92;
+}
+
+.base-detail-v2-active .base-meta-row {
+  margin-top: 1rem;
+}
+
+.base-detail-v2-active .base-meta-row .badge,
+.base-detail-v2-active .badge-row .badge {
+  text-shadow: none;
+}
+
+.v2-score-panel,
+.v2-executive-verdict,
+.v2-operational-section,
+.v2-timeline-section,
+.v2-intel-report,
+.v2-insight-grid,
+.base-detail-v2-active #detail-compare-section,
+.base-detail-v2-active #similar-section {
+  margin-top: 0;
+}
+
+.v2-score-panel {
+  margin-top: clamp(-2.35rem, -3vw, -1.15rem);
+}
+
+.v2-score-lead,
+.v2-pillar-card,
+.v2-operational-section,
+.v2-timeline-section,
+.v2-intel-report,
+.v2-insight-grid article,
+.detail-compare-card {
+  padding: clamp(1rem, 2.2vw, 1.65rem);
+}
+
+.v2-section-intro {
+  margin-bottom: 1rem;
+}
+
+.v2-section-intro h3,
+.v2-insight-grid h3,
+.v2-intel-report h3,
+.v2-executive-verdict h2,
+.detail-compare-copy h3 {
+  line-height: 1.02;
+}
+
+.v2-executive-verdict {
+  padding-block: clamp(0.65rem, 1.8vw, 1.5rem);
+}
+
+.v2-operational-section,
+.v2-timeline-section,
+.v2-intel-report,
+.base-detail-v2-active #detail-compare-section {
+  background: linear-gradient(180deg, #ffffff, rgba(246, 248, 242, 0.72));
+}
+
+.v2-operational-groups {
+  gap: 0.9rem;
+}
+
+.v2-operational-group {
+  padding: 0.8rem 0.95rem 0.05rem;
+}
+
+.v2-operational-row {
+  grid-template-columns: minmax(210px, 1.42fr) minmax(115px, 0.72fr) 4rem minmax(130px, 0.74fr);
+  gap: 0.85rem;
+  padding: 0.72rem 0;
+}
+
+.v2-metric-name {
+  gap: 0.05rem;
+}
+
+.v2-metric-name span {
+  font-size: 0.84rem;
+  line-height: 1.34;
+}
+
+.v2-metric-score {
+  font-size: 1.55rem;
+}
+
+.v2-metric-meta span {
+  padding: 0.16rem 0.45rem;
+  font-size: 0.68rem;
+}
+
+.v2-timeline-grid {
+  margin-top: 0.9rem;
+}
+
+.v2-timeline-card {
+  padding: 1.15rem 1.15rem 1.2rem 1.75rem;
+}
+
+.v2-intel-report {
+  align-items: stretch;
+}
+
+.v2-intel-report aside {
+  align-self: stretch;
+  border: 1px solid var(--border-soft);
+  border-radius: 22px;
+  background: var(--surface-subtle);
+  padding: 1rem;
+}
+
+.base-detail-v2-active #detail-compare-section {
+  grid-template-columns: minmax(0, 0.82fr) minmax(380px, 1.18fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.base-detail-v2-active .detail-compare-form {
+  align-self: center;
+}
+
+.base-detail-v2-active .detail-compare-controls {
+  align-items: stretch;
+  gap: 0.9rem;
+}
+
+.base-detail-v2-active .detail-compare-controls select,
+.base-detail-v2-active .detail-compare-controls .compare-button {
+  min-height: 52px;
+  height: 52px;
+}
+
+.base-detail-v2-active #similar-section .compact-base-list {
+  align-items: stretch;
+}
+
+.base-detail-v2-active #similar-section .compact-base-list li.similar-base-item {
+  height: 100%;
+  min-height: 430px;
+  padding: 0.8rem;
+  overflow: visible;
+}
+
+.base-detail-v2-active #similar-section .similar-base-thumb-link {
+  aspect-ratio: 16 / 9;
+  min-height: auto;
+  flex: 0 0 auto;
+}
+
+.base-detail-v2-active #similar-section .similar-base-thumb {
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.base-detail-v2-active #similar-section .similar-base-text {
+  flex: 0 0 auto;
+  padding-inline: 0.65rem;
+}
+
+.base-detail-v2-active #similar-section .compact-base-list li.similar-base-item .badge-row {
+  padding-inline: 0.65rem;
+}
+
+.base-detail-v2-active #similar-section .similar-base-description {
+  display: block;
+  flex: 1 1 auto;
+  margin-top: 0.35rem;
+  padding: 0 0.65rem 0.8rem;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+}
+
+@media (max-width: 900px) {
+  .base-detail-v2-active .detail-hero {
+    background: #101820;
+  }
+
+  .base-detail-v2-active .feature-image-wrap {
+    min-height: 430px;
+  }
+
+  .base-detail-v2-active .hero-image {
+    width: 100%;
+    opacity: 0.72;
+  }
+
+  .base-detail-v2-active .feature-image-wrap::after {
+    background:
+      linear-gradient(90deg, rgba(5, 12, 22, 0.74) 0%, rgba(5, 12, 22, 0.48) 48%, rgba(5, 12, 22, 0.14) 100%),
+      linear-gradient(0deg, rgba(5, 12, 22, 0.58) 0%, rgba(5, 12, 22, 0.04) 62%);
+  }
+
+  .base-detail-v2-active .hero-content-overlay {
+    width: min(600px, 88vw);
+  }
+
+  .base-detail-v2-active #detail-compare-section,
+  .base-detail-v2-active .detail-compare-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .base-detail-v2-active #similar-section .compact-base-list li.similar-base-item {
+    min-height: auto;
+  }
+
+  .v2-timeline-grid::before,
+  .v2-timeline-card::after {
+    display: none;
+  }
+
+  .v2-timeline-card {
+    border-left: 0;
+    border-top: 1px solid var(--border-soft);
+    padding-left: 1rem;
+  }
+
+  .v2-timeline-card::before {
+    top: 1.2rem;
+    left: auto;
+    right: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .base-detail-v2-active .base-page {
+    gap: 1rem;
+  }
+
+  .base-detail-v2-active .feature-image-wrap {
+    min-height: 400px;
+  }
+
+  .base-detail-v2-active .hero-content-overlay {
+    inset: auto var(--space-3) var(--space-3) var(--space-3);
+    width: auto;
+  }
+
+  .base-detail-v2-active .detail-hero h1 {
+    font-size: clamp(2.05rem, 12vw, 3.5rem);
+  }
+
+  .v2-score-panel,
+  .v2-executive-verdict,
+  .v2-operational-section,
+  .v2-timeline-section,
+  .v2-intel-report,
+  .detail-compare-card {
+    border-radius: 20px;
+    padding: 0.9rem;
+  }
+
+  .v2-score-panel {
+    padding: 0;
+  }
+
+  .v2-operational-row {
+    gap: 0.45rem;
+    padding: 0.7rem 0;
+  }
+
+  .v2-metric-meta {
+    gap: 0.25rem;
+  }
+
+  .base-detail-v2-active #similar-section .similar-base-thumb-link {
+    min-height: auto;
+  }
+}
