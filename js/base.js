@@ -64,7 +64,9 @@ const elements = {
   quickFactsCard: document.getElementById('quick-facts-card'),
   quickFactsList: document.getElementById('quick-facts-list'),
   backLink: document.getElementById('back-link'),
-  compareLink: document.getElementById('compare-link'),
+  compareSection: document.getElementById('detail-compare-section'),
+  compareForm: document.getElementById('detail-compare-form'),
+  compareSelect: document.getElementById('detail-compare-select'),
   heroSection: document.getElementById('hero-section'),
   heroImage: document.getElementById('base-hero-image'),
   scoreSection: document.getElementById('score-section'),
@@ -371,15 +373,37 @@ function renderMetaRow(base) {
   }
 }
 
-function renderCompareEntry(base) {
-  if (!elements.compareLink) {
+function renderCompareCard(base, bases) {
+  if (!elements.compareSection || !elements.compareForm || !elements.compareSelect) {
     return;
   }
 
-  elements.compareLink.href = slugHelper?.getCompareSetupUrl
-    ? slugHelper.getCompareSetupUrl(base)
-    : `/compare.html?base=${encodeURIComponent(base.slug)}`;
-  elements.compareLink.hidden = false;
+  const currentSlug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(base) : base.slug;
+  const options = (Array.isArray(bases) ? bases : [])
+    .filter((entry) => (slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(entry) : entry.slug) !== currentSlug)
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  elements.compareSelect.innerHTML = '<option value="">Select a base</option>';
+  options.forEach((entry) => {
+    const option = document.createElement('option');
+    option.value = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(entry) : entry.slug;
+    option.textContent = entry.name;
+    elements.compareSelect.appendChild(option);
+  });
+
+  elements.compareForm.onsubmit = (event) => {
+    event.preventDefault();
+    const selectedSlug = elements.compareSelect.value;
+    if (!selectedSlug) {
+      elements.compareSelect.focus();
+      return;
+    }
+    window.location.href = slugHelper?.getCompareUrl
+      ? slugHelper.getCompareUrl(currentSlug, selectedSlug)
+      : `/base/${encodeURIComponent(currentSlug)}/vs/${encodeURIComponent(selectedSlug)}`;
+  };
+
+  elements.compareSection.hidden = options.length === 0;
 }
 
 function renderHero(base) {
@@ -1027,7 +1051,7 @@ function showBase(base, bases, params, rankings, discovery) {
   elements.name.textContent = base.name;
   applyDetailMetadata(base);
   renderMetaRow(base);
-  renderCompareEntry(base);
+  renderCompareCard(base, bases);
   renderHero(base);
   renderSummary(base);
   renderHeroTraits(base);
