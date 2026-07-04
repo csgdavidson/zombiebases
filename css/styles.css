@@ -6204,3 +6204,123 @@ body {
     min-height: auto;
   }
 }
+
+/* Base detail bug-fix polish: prevent V2 card overlap, clean timeline connectors, and stabilize recommendation cards. */
+.v2-score-panel,
+.v2-score-fingerprint,
+.v2-pillar-evidence,
+.v2-pillar-card,
+.v2-operational-row,
+.v2-timeline-grid,
+.v2-timeline-card,
+.base-detail-v2-active #similar-section .compact-base-list,
+.base-detail-v2-active #similar-section .compact-base-list li.similar-base-item {
+  min-width: 0;
+}
+
+.v2-pillar-evidence {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.v2-pillar-card {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 1.4vw, 1rem);
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.v2-pillar-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.v2-pillar-card h3 {
+  min-width: 0;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.v2-pillar-score {
+  justify-self: end;
+  flex: 0 0 auto;
+  font-size: clamp(1.85rem, 3.6vw, 2.45rem);
+  line-height: 0.95;
+  white-space: nowrap;
+}
+
+.v2-pillar-card p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.v2-pillar-card > span {
+  margin-top: auto;
+  line-height: 1.35;
+}
+
+.v2-timeline-grid::before,
+.v2-timeline-card::after {
+  display: none;
+}
+
+.v2-timeline-grid {
+  gap: 0;
+  overflow: visible;
+}
+
+.v2-timeline-card {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.base-detail-v2-active #similar-section .compact-base-list {
+  align-items: stretch;
+}
+
+.base-detail-v2-active #similar-section .compact-base-list li.similar-base-item {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+}
+
+.base-detail-v2-active #similar-section .similar-base-text,
+.base-detail-v2-active #similar-section .compact-base-list li.similar-base-item .badge-row,
+.base-detail-v2-active #similar-section .similar-base-description {
+  min-width: 0;
+}
+
+.base-detail-v2-active #similar-section .similar-base-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  padding-bottom: 0;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .v2-pillar-evidence {
+    grid-template-columns: 1fr;
+  }
+
+  .v2-pillar-score {
+    font-size: clamp(1.8rem, 9vw, 2.35rem);
+  }
+}
+
+@media (max-width: 420px) {
+  .v2-pillar-top {
+    grid-template-columns: 1fr;
+  }
+
+  .v2-pillar-score {
+    justify-self: start;
+  }
+}
