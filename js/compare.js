@@ -601,6 +601,18 @@ async function loadBasesData() {
 }
 
 async function initComparison() {
+  const requiredElements = [
+    elements.status,
+    elements.page,
+    elements.setup,
+    elements.notFound,
+    elements.notFoundMessage
+  ];
+
+  if (requiredElements.some((element) => !element)) {
+    return;
+  }
+
   elements.status.textContent = 'Loading comparison...';
   try {
     const bases = await loadBasesData();

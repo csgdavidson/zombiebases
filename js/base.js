@@ -167,6 +167,18 @@ const elements = {
 
 const slugHelper = window.baseSlugHelper;
 
+function showNotFound(message = "We couldn't find a base for this link.") {
+  if (elements.status) elements.status.textContent = '';
+  if (elements.detail) elements.detail.hidden = true;
+  const messageElement = elements.notFound?.querySelector('p');
+  if (messageElement) messageElement.textContent = message;
+  if (elements.notFound) elements.notFound.hidden = false;
+}
+
+function showLoadError() {
+  showNotFound('Base details could not be loaded. Please try again later.');
+}
+
 function toTitleCaseSlug(value) {
   return value
     .split('_')
@@ -1382,9 +1394,21 @@ function loadComparisonShell() {
       return response.text();
     })
     .then((html) => {
-      document.open();
-      document.write(html);
-      document.close();
+      const parsed = new DOMParser().parseFromString(html, 'text/html');
+      const comparisonMain = parsed.querySelector('.comparison-page-main');
+
+      if (!comparisonMain) {
+        throw new Error('Comparison shell is missing its main content.');
+      }
+
+      document.title = parsed.title || document.title;
+      document.body.innerHTML = parsed.body.innerHTML;
+
+      const script = document.createElement('script');
+      script.src = '/js/compare.js';
+      script.defer = true;
+      script.onerror = () => showLoadError();
+      document.body.appendChild(script);
     })
     .catch((error) => {
       console.error(error);
