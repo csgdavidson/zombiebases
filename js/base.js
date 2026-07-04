@@ -1150,7 +1150,6 @@ function renderV2Detail(base, rankings) {
   if (!pilot) return false;
   const globalRank = (rankings?.global || []).find((entry) => entry.slug === base.slug)?.rank;
   renderV2ScorePanel(pilot, globalRank);
-  renderV2FailureBrief(pilot);
   renderV2ExecutiveVerdict(pilot);
   renderV2OperationalAssessment(pilot);
   renderV2Timeline(pilot);
@@ -1284,7 +1283,7 @@ function renderV2Timeline(pilot) {
   const section = document.createElement('section');
   section.className = 'content-section v2-detail-section v2-timeline-section';
   section.innerHTML = `
-    <div class="v2-section-intro"><p class="section-kicker">Survival Timeline</p><h3>The survival story</h3></div>
+    <div class="v2-section-intro"><p class="section-kicker">Survival Timeline</p><h3>The survival story</h3><p>How conditions change from initial collapse through long-term isolation.</p></div>
     <div class="v2-timeline-grid">
       ${pilot.timeline.map((stage, index) => `<article class="v2-timeline-card">
         <p class="v2-step">Phase 0${index + 1}</p>
