@@ -7415,3 +7415,174 @@ body {
   .base-detail-v2-active .v2-metric-score { grid-area:score; }
   .base-detail-v2-active .v2-metric-meta { grid-area:meta; justify-content:flex-start; }
 }
+
+/* Base detail concept fidelity pass: scoped to the three V2 detail pages only. */
+.base-detail-v2-active .v2-score-lead { grid-area: overall; }
+.base-detail-v2-active .v2-pillar-evidence { grid-area: pillars; }
+.base-detail-v2-active .v2-score-fingerprint { grid-area: fingerprint; }
+
+.base-detail-v2-active .detail-hero-main,
+.base-detail-v2-active .base-page {
+  width: min(1180px, calc(100vw - clamp(1rem, 5vw, 4rem)));
+}
+
+.base-detail-v2-active .feature-image-wrap {
+  overflow: visible;
+  isolation: isolate;
+}
+
+.base-detail-v2-active .hero-title-stack {
+  display: grid;
+  gap: clamp(0.9rem, 1.7vw, 1.35rem);
+}
+
+.base-detail-v2-active .base-meta-row,
+.base-detail-v2-active .badge-row {
+  margin: 0;
+}
+
+.base-detail-v2-active .v2-overall-score,
+.base-detail-v2-active .v2-pillar-score,
+.base-detail-v2-active .v2-metric-score,
+.base-detail-v2-active .v2-timeline-score {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.base-detail-v2-active .v2-score-panel {
+  align-items: stretch;
+}
+
+.base-detail-v2-active .v2-score-lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.base-detail-v2-active .v2-pillar-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.base-detail-v2-active .v2-pillar-card p:last-of-type {
+  flex: 1;
+}
+
+.base-detail-v2-active .v2-operational-groups {
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.base-detail-v2-active .v2-operational-group {
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(247, 248, 243, 0.72), rgba(255, 255, 255, 0.86));
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+.base-detail-v2-active .v2-operational-row {
+  min-height: 72px;
+  padding: 0.95rem 0;
+}
+
+.base-detail-v2-active .v2-timeline-grid {
+  gap: clamp(0.85rem, 1.6vw, 1.2rem);
+}
+
+.base-detail-v2-active .v2-timeline-card {
+  border: 1px solid var(--border-soft);
+  border-left: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 12px 30px rgba(16, 35, 63, 0.055);
+}
+
+.base-detail-v2-active .v2-timeline-card::before {
+  display: none;
+}
+
+.base-detail-v2-active .v2-step {
+  align-self: flex-start;
+  border-radius: var(--radius-pill);
+  background: var(--accent-faint);
+  color: var(--accent-strong);
+  padding: 0.25rem 0.6rem;
+  font-size: 0.72rem;
+}
+
+.base-detail-v2-active .v2-insight-grid article {
+  min-height: 220px;
+}
+
+.base-detail-v2-active .v2-recovery-card {
+  grid-column: span 3;
+}
+
+.base-detail-v2-active .v2-recovery-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(1rem, 4vw, 3rem);
+}
+
+.base-detail-v2-active .v2-intel-report aside {
+  border-radius: 22px;
+  border: 1px solid var(--border-soft);
+  background: linear-gradient(180deg, var(--surface-subtle), #fff);
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+.base-detail-v2-active #detail-compare-section {
+  align-items: center;
+}
+
+.base-detail-v2-active #similar-section .compact-base-list li.similar-base-item a:not(.similar-base-thumb-link) {
+  padding-inline: 0.2rem;
+}
+
+@media (max-width: 1100px) {
+  .base-detail-v2-active .v2-recovery-card { grid-column: auto; }
+  .base-detail-v2-active .v2-recovery-list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 820px) {
+  .base-detail-v2-active .detail-hero-main,
+  .base-detail-v2-active .base-page {
+    width: min(100% - 1.5rem, 720px);
+  }
+
+  .base-detail-v2-active .feature-image-wrap {
+    box-shadow: 0 18px 45px rgba(16, 35, 63, 0.08);
+    overflow: hidden;
+  }
+
+  .base-detail-v2-active .hero-title-stack {
+    gap: 0.75rem;
+  }
+
+  .base-detail-v2-active .v2-score-panel {
+    margin-top: 0;
+  }
+
+  .base-detail-v2-active .v2-timeline-card,
+  .base-detail-v2-active .v2-insight-grid article {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .base-detail-v2-active .detail-hero-main,
+  .base-detail-v2-active .base-page {
+    width: calc(100% - 0.9rem);
+  }
+
+  .base-detail-v2-active .v2-operational-group {
+    padding: 0.85rem;
+  }
+
+  .base-detail-v2-active .v2-operational-row {
+    min-height: 0;
+  }
+
+  .base-detail-v2-active .v2-source-tags span,
+  .base-detail-v2-active .v2-metric-meta span {
+    font-size: 0.68rem;
+  }
+}
