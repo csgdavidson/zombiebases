@@ -1,3 +1,4 @@
+(() => {
 const DATA_URL = '/data/bases-index.json';
 const LEGACY_DATA_URL = '/data/bases.json';
 const HERO_IMAGE_FALLBACK_URL = '/images/bases/placeholder.png';
@@ -644,3 +645,5 @@ async function initComparison() {
 }
 
 initComparison();
+
+})();
