@@ -141,7 +141,7 @@ function compareUrl(slugA, slugB) {
 }
 
 function isCleanCompareRoute() {
-  return /^\/base\/[^/]+\/vs\/[^/]+\/?$/i.test(window.location.pathname);
+  return slugHelper?.isCompareRoute ? slugHelper.isCompareRoute(window.location) : /^\/base\/[^/]+\/vs\/[^/]+\/?$/i.test(window.location.pathname);
 }
 
 function syncCleanCompareUrl(baseA, baseB) {
@@ -522,12 +522,9 @@ function renderComparison(baseA, baseB, bases) {
 
 function getRequestedSlugs() {
   const params = new URLSearchParams(window.location.search);
-  const pathParts = window.location.pathname.split('/').filter(Boolean).map((part) => decodeURIComponent(part));
-  const baseIndex = pathParts.findIndex((part) => part.toLowerCase() === 'base');
-  const vsIndex = pathParts.findIndex((part) => part.toLowerCase() === 'vs');
-
-  if (baseIndex !== -1 && vsIndex === baseIndex + 2 && pathParts[baseIndex + 1] && pathParts[vsIndex + 1]) {
-    return { slugA: pathParts[baseIndex + 1], slugB: pathParts[vsIndex + 1] };
+  const cleanCompareSlugs = slugHelper?.getCompareSlugsFromLocation?.(window.location);
+  if (cleanCompareSlugs) {
+    return { slugA: cleanCompareSlugs.baseSlug, slugB: cleanCompareSlugs.compareSlug };
   }
 
   return {
@@ -610,6 +607,11 @@ async function initComparison() {
     const { slugA, slugB } = getRequestedSlugs();
     const baseA = slugA ? slugHelper?.resolveBaseBySlug?.(bases, slugA) || bases.find((base) => preferredSlugFor(base) === slugA) : null;
     const baseB = slugB ? slugHelper?.resolveBaseBySlug?.(bases, slugB) || bases.find((base) => preferredSlugFor(base) === slugB) : null;
+
+    if (slugA && slugB && preferredSlugFor(slugA) === preferredSlugFor(slugB)) {
+      showNotFound('Choose two different bases to compare. This comparison URL uses the same base on both sides.');
+      return;
+    }
 
     if ((slugA && !baseA) || (slugB && !baseB)) {
       const missing = [slugA && !baseA ? slugA : null, slugB && !baseB ? slugB : null].filter(Boolean).join(' and ');
