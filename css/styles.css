@@ -4946,3 +4946,269 @@ body {
     min-height: 48px;
   }
 }
+
+/* Detail page design-system pass: align base dossiers with the homepage/listing card language. */
+.base-detail-main {
+  padding-top: 0;
+}
+
+.base-page {
+  gap: clamp(var(--space-4), 2.4vw, var(--space-5));
+}
+
+.detail-hero-main {
+  gap: var(--space-4);
+}
+
+.hero-section {
+  margin-top: calc(-1 * var(--space-2));
+  margin-bottom: 0;
+}
+
+.feature-image-wrap {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 24px 70px rgba(12, 23, 40, 0.18);
+}
+
+.feature-image-wrap::after {
+  background:
+    linear-gradient(90deg, rgba(5, 12, 22, 0.82) 0%, rgba(5, 12, 22, 0.42) 42%, rgba(5, 12, 22, 0.12) 72%),
+    linear-gradient(0deg, rgba(5, 12, 22, 0.68) 0%, rgba(5, 12, 22, 0.08) 58%),
+    linear-gradient(180deg, rgba(5, 12, 22, 0.42) 0%, rgba(5, 12, 22, 0) 28%);
+}
+
+.hero-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 42px;
+  padding: 0.65rem 1rem;
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(7, 18, 32, 0.78);
+  color: #fff;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(14px) saturate(140%);
+}
+
+.hero-back-link:hover,
+.hero-back-link:focus-visible {
+  background: rgba(12, 23, 40, 0.92);
+  color: #fff;
+  border-color: rgba(220, 235, 214, 0.95);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(220, 235, 214, 0.24);
+}
+
+.score-band {
+  padding: var(--space-5);
+  border: 1px solid rgba(220, 235, 214, 0.92);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 22px 52px rgba(3, 7, 18, 0.3);
+}
+
+.score-overall-column {
+  gap: var(--space-2);
+}
+
+.detail-score-rank {
+  width: fit-content;
+  margin-top: 0;
+  border: 1px solid rgba(31, 107, 49, 0.24);
+  background: linear-gradient(180deg, #f0f7ed, #dcebd6);
+  color: #12351f;
+  box-shadow: none;
+}
+
+.base-summary-panel,
+.survival-characteristics-section,
+#survival-profile-section,
+.detail-compare-card {
+  border: 1px solid rgba(47, 125, 60, 0.16);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 248, 242, 0.86));
+  box-shadow: var(--shadow-sm);
+  padding: clamp(var(--space-4), 3vw, var(--space-6));
+  margin-top: 0;
+}
+
+.section-kicker,
+.eyebrow,
+.detail-compare-form label {
+  color: var(--accent-strong);
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.detail-summary,
+.survival-characteristics-intro,
+.detail-compare-copy p:not(.section-kicker),
+.similar-base-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.survival-characteristic-card,
+.survival-card,
+.quick-facts-card {
+  border: 1px solid rgba(47, 125, 60, 0.14);
+  background: linear-gradient(180deg, #ffffff, var(--accent-faint));
+  box-shadow: var(--shadow-xs);
+}
+
+.detail-compare-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1.15fr);
+  gap: var(--space-5);
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-compare-card::before {
+  content: "";
+  position: absolute;
+  inset: -40% auto auto -8rem;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 999px;
+  background: rgba(47, 125, 60, 0.1);
+  pointer-events: none;
+}
+
+.detail-compare-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.detail-compare-copy h3 {
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.detail-compare-controls select {
+  appearance: none;
+  -webkit-appearance: none;
+  min-height: 50px;
+  padding: 0 3rem 0 1rem;
+  border-color: rgba(47, 125, 60, 0.22);
+  border-radius: var(--radius-pill);
+  background-color: #fff;
+  background-image: linear-gradient(45deg, transparent 50%, var(--accent-strong) 50%), linear-gradient(135deg, var(--accent-strong) 50%, transparent 50%);
+  background-position: calc(100% - 1.35rem) 50%, calc(100% - 1rem) 50%;
+  background-size: 0.36rem 0.36rem, 0.36rem 0.36rem;
+  background-repeat: no-repeat;
+  box-shadow: var(--shadow-xs);
+}
+
+.detail-compare-controls select:focus-visible {
+  outline: 3px solid rgba(47, 125, 60, 0.18);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+
+.detail-compare-controls .compare-button {
+  min-height: 50px;
+  padding-inline: var(--space-5);
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: #fff;
+}
+
+.detail-compare-controls .compare-button:hover,
+.detail-compare-controls .compare-button:focus-visible {
+  background: var(--accent-strong);
+  color: #fff;
+}
+
+#similar-section {
+  padding: 0;
+}
+
+#similar-section .compact-base-list {
+  align-items: stretch;
+}
+
+#similar-section .compact-base-list li.similar-base-item {
+  min-height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border-color: rgba(47, 125, 60, 0.14);
+  background: linear-gradient(180deg, #fff, rgba(246, 248, 242, 0.92));
+  box-shadow: var(--shadow-sm);
+}
+
+#similar-section .similar-base-thumb-link {
+  aspect-ratio: 16 / 9;
+  min-height: 178px;
+}
+
+#similar-section .similar-base-text {
+  display: grid;
+  gap: var(--space-1);
+  padding-top: var(--space-4);
+}
+
+#similar-section .similar-base-text > a {
+  font-size: 1.05rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.02em;
+}
+
+#similar-section .compact-base-list li.similar-base-item .badge-row {
+  overflow: visible;
+  white-space: normal;
+}
+
+#similar-section .similar-base-description {
+  display: block;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  overflow: visible;
+  padding-bottom: var(--space-6);
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    margin-top: 0;
+  }
+
+  .hero-content-overlay {
+    align-items: stretch;
+  }
+
+  .detail-compare-card,
+  .detail-compare-controls,
+  #similar-section .compact-base-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .feature-image-wrap {
+    min-height: 720px;
+    border-radius: var(--radius-lg);
+  }
+
+  .hero-content-overlay {
+    inset: auto var(--space-3) var(--space-3) var(--space-3);
+  }
+
+  .score-band {
+    padding: var(--space-4);
+  }
+
+  .detail-compare-card {
+    gap: var(--space-4);
+  }
+
+  .detail-compare-controls select,
+  .detail-compare-controls .compare-button {
+    width: 100%;
+  }
+
+  #similar-section .similar-base-thumb-link {
+    min-height: 190px;
+  }
+}
