@@ -6324,3 +6324,285 @@ body {
     justify-self: start;
   }
 }
+
+/* Mobile responsiveness pass for V2 base detail pages. Desktop rules above remain unchanged. */
+@media (max-width: 768px) {
+  .base-detail-v2-active main,
+  .base-detail-v2-active .base-detail-main,
+  .base-detail-v2-active .detail-hero-main {
+    width: min(100% - 24px, 560px);
+  }
+
+  .base-detail-v2-active .base-page {
+    gap: 1.25rem;
+  }
+
+  .base-detail-v2-active .detail-hero {
+    margin-inline: 0;
+    width: 100%;
+    border: 0;
+    background: transparent;
+  }
+
+  .base-detail-v2-active .feature-image-wrap {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #101820;
+  }
+
+  .base-detail-v2-active .feature-image-wrap::after {
+    display: none;
+  }
+
+  .base-detail-v2-active .hero-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+    opacity: 1;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .base-detail-v2-active .hero-content-overlay {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(180deg, #101820, #172434);
+    color: #fff;
+    text-shadow: none;
+  }
+
+  .base-detail-v2-active .detail-hero h1 {
+    font-size: clamp(2rem, 10vw, 3.1rem);
+    line-height: 0.98;
+    overflow-wrap: anywhere;
+  }
+
+  .base-detail-v2-active .base-meta-row,
+  .base-detail-v2-active .badge-row {
+    gap: 0.45rem;
+  }
+
+  .base-detail-v2-active .base-meta-row .badge,
+  .base-detail-v2-active .badge-row .badge,
+  .base-detail-v2-active .ranking-badges .badge,
+  .base-detail-v2-active .detail-positioning li {
+    white-space: normal;
+  }
+
+  .base-detail-v2-active .detail-positioning {
+    position: static;
+    width: 100%;
+    margin-top: 0;
+    padding: 0.85rem 1rem 1rem;
+    background: #172434;
+  }
+
+  .base-detail-v2-active .ranking-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .v2-score-panel {
+    margin-top: 0;
+  }
+
+  .v2-score-lockup {
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .v2-overall-score {
+    font-size: clamp(4.25rem, 22vw, 5.6rem);
+    letter-spacing: -0.08em;
+  }
+
+  .v2-fingerprint-row {
+    grid-template-columns: 1fr auto;
+  }
+
+  .v2-fingerprint-track {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .v2-pillar-evidence {
+    grid-template-columns: 1fr;
+  }
+
+  .v2-pillar-card {
+    border-top: 1px solid var(--border-soft);
+    border-right: 0;
+    padding: 1rem;
+  }
+
+  .v2-pillar-card:first-child {
+    border-top: 0;
+  }
+
+  .v2-executive-verdict,
+  .v2-failure-brief,
+  .v2-intel-report,
+  .base-detail-v2-active #detail-compare-section,
+  .base-detail-v2-active .detail-compare-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .v2-executive-verdict,
+  .v2-operational-section,
+  .v2-timeline-section,
+  .v2-intel-report,
+  .v2-insight-grid article,
+  .base-detail-v2-active #detail-compare-section,
+  .base-detail-v2-active #similar-section {
+    border-radius: 22px;
+  }
+
+  .v2-operational-section,
+  .v2-timeline-section,
+  .v2-intel-report,
+  .base-detail-v2-active #detail-compare-section,
+  .base-detail-v2-active #similar-section {
+    padding: 1rem;
+  }
+
+  .v2-section-intro h3,
+  .v2-insight-grid h3,
+  .v2-intel-report h3,
+  .v2-executive-verdict h2,
+  .detail-compare-copy h3 {
+    font-size: clamp(1.55rem, 8vw, 2.1rem);
+  }
+
+  .v2-operational-group {
+    padding: 0.85rem;
+  }
+
+  .v2-operational-row {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "name score"
+      "meter meter"
+      "meta meta";
+    gap: 0.6rem 0.8rem;
+    align-items: start;
+    padding: 0.95rem 0;
+  }
+
+  .v2-metric-name { grid-area: name; }
+  .v2-operational-row > .v2-meter { grid-area: meter; }
+  .v2-metric-score { grid-area: score; }
+  .v2-metric-meta { grid-area: meta; justify-content: flex-start; }
+
+  .v2-metric-score {
+    min-width: 3rem;
+    font-size: 1.55rem;
+    line-height: 1;
+    text-align: right;
+  }
+
+  .v2-timeline-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .v2-timeline-card {
+    border: 1px solid var(--border-soft);
+    border-radius: 18px;
+    background: #fff;
+    padding: 1rem;
+  }
+
+  .v2-timeline-card::before,
+  .v2-timeline-grid::before,
+  .v2-timeline-card::after {
+    display: none;
+  }
+
+  .v2-insight-grid,
+  .base-detail-v2-active #similar-section .compact-base-list {
+    grid-template-columns: 1fr;
+  }
+
+  .v2-recovery-list li {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  .v2-capability-bar {
+    justify-self: start;
+  }
+
+  .v2-intel-report {
+    gap: 1rem;
+  }
+
+  .base-detail-v2-active .detail-compare-controls select,
+  .base-detail-v2-active .detail-compare-controls .compare-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .base-detail-v2-active #similar-section .compact-base-list li.similar-base-item {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .base-detail-v2-active #similar-section .similar-base-thumb-link,
+  .base-detail-v2-active #similar-section .similar-base-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .base-detail-v2-active #similar-section .similar-base-text,
+  .base-detail-v2-active #similar-section .compact-base-list li.similar-base-item .badge-row,
+  .base-detail-v2-active #similar-section .similar-base-description {
+    padding-inline: 0.25rem;
+  }
+
+  .base-detail-v2-active #similar-section .similar-base-description {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+}
+
+@media (max-width: 380px) {
+  .base-detail-v2-active main,
+  .base-detail-v2-active .base-detail-main,
+  .base-detail-v2-active .detail-hero-main {
+    width: min(100% - 16px, 560px);
+  }
+
+  .base-detail-v2-active .hero-content-overlay,
+  .v2-score-lead,
+  .v2-score-fingerprint,
+  .v2-pillar-card,
+  .v2-operational-section,
+  .v2-timeline-section,
+  .v2-intel-report,
+  .v2-insight-grid article,
+  .base-detail-v2-active #detail-compare-section,
+  .base-detail-v2-active #similar-section {
+    padding: 0.85rem;
+  }
+
+  .v2-operational-row {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "score"
+      "meter"
+      "meta";
+  }
+
+  .v2-metric-score {
+    text-align: left;
+  }
+}
