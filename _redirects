@@ -3,3 +3,6 @@
 
 # Clean base detail URLs served by Cloudflare Pages.
 /base/:slug /base.html 200
+
+# Clean field manual URL.
+/field-manual /field-manual.html 200
