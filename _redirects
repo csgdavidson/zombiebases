@@ -1,5 +1,6 @@
 # Standalone static pages must be registered before dynamic base detail rewrites.
 /field-manual /field-manual.html 200
+/field-manual/ /field-manual.html 200
 
 # Clean comparison pages must use the comparison shell before the base detail route.
 /base/:slugA/vs/:slugB /compare.html 200
