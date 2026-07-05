@@ -24,6 +24,12 @@
       .replace(/-{2,}/g, '-');
   }
 
+  const RESERVED_BASE_SLUGS = new Set(['field-manual']);
+
+  function isReservedBaseSlug(value) {
+    return RESERVED_BASE_SLUGS.has(normalizeSlugCandidate(value));
+  }
+
   function deriveSlug(baseOrValue) {
     if (typeof baseOrValue === 'string') {
       return normalizeSlugCandidate(baseOrValue);
@@ -130,7 +136,7 @@
   function getBaseSlugFromLocation(location = window.location) {
     const params = new URLSearchParams(location.search || '');
     const fromQuery = normalizeSlugCandidate(params.get('slug') || '');
-    if (fromQuery) {
+    if (fromQuery && !isReservedBaseSlug(fromQuery)) {
       return fromQuery;
     }
 
@@ -143,12 +149,13 @@
       return '';
     }
 
-    return normalizeSlugCandidate(decodeURIComponent(path.split('/').pop() || ''));
+    const slug = normalizeSlugCandidate(decodeURIComponent(path.split('/').pop() || ''));
+    return isReservedBaseSlug(slug) ? '' : slug;
   }
 
   function resolveBaseBySlug(bases, slugValue) {
     const target = normalizeSlugCandidate(slugValue);
-    if (!target || !Array.isArray(bases) || !bases.length) {
+    if (!target || isReservedBaseSlug(target) || !Array.isArray(bases) || !bases.length) {
       return null;
     }
 
@@ -253,6 +260,7 @@
     getBaseSlugFromLocation,
     resolveBaseBySlug,
     normalizeSlugCandidate,
+    isReservedBaseSlug,
     formatScore,
     getScoreTierBadge,
     getIdentityBadge,

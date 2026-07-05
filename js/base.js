@@ -1017,10 +1017,19 @@ function createBaseUrl(slug, sourceParams) {
   return queryString ? `${cleanUrl}?${queryString}` : cleanUrl;
 }
 
+function isReservedBaseSlug(value) {
+  if (slugHelper?.isReservedBaseSlug) {
+    return slugHelper.isReservedBaseSlug(value);
+  }
+
+  return String(value || '').trim().toLowerCase() === 'field-manual';
+}
+
 function getSlug() {
   const params = new URLSearchParams(window.location.search);
   if (params.get('slug')) {
-    return params.get('slug');
+    const querySlug = params.get('slug');
+    return isReservedBaseSlug(querySlug) ? null : querySlug;
   }
 
   const path = window.location.pathname.replace(/^\/|\/$/g, '');
@@ -1028,7 +1037,8 @@ function getSlug() {
     return null;
   }
 
-  return decodeURIComponent(path.split('/').pop() || '') || null;
+  const slug = decodeURIComponent(path.split('/').pop() || '') || null;
+  return isReservedBaseSlug(slug) ? null : slug;
 }
 
 function renderSimilarBases(base, bases, discovery, params) {
