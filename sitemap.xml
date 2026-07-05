@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zombiebases.com/</loc>
-    <lastmod>2026-07-04T21:03:16+01:00</lastmod>
+    <lastmod>2026-07-05T16:42:13+01:00</lastmod>
   </url>
   <url>
     <loc>https://zombiebases.com/rankings.html</loc>
-    <lastmod>2026-07-03T21:35:55+01:00</lastmod>
+    <lastmod>2026-07-05T16:42:13+01:00</lastmod>
   </url>
   <url>
     <loc>https://zombiebases.com/rankings-region.html</loc>
-    <lastmod>2026-07-03T21:35:55+01:00</lastmod>
+    <lastmod>2026-07-05T16:42:13+01:00</lastmod>
   </url>
   <url>
     <loc>https://zombiebases.com/rankings-type.html</loc>
-    <lastmod>2026-07-03T21:35:55+01:00</lastmod>
+    <lastmod>2026-07-05T16:42:13+01:00</lastmod>
   </url>
   <url>
     <loc>https://zombiebases.com/scenarios.html</loc>
-    <lastmod>2026-07-03T21:35:55+01:00</lastmod>
+    <lastmod>2026-07-05T16:42:13+01:00</lastmod>
   </url>
   <url>
     <loc>https://zombiebases.com/base.html?slug=ait-benhaddou</loc>
@@ -463,10 +463,5 @@
   <url>
     <loc>https://zombiebases.com/base.html?slug=zanzibar-island</loc>
     <lastmod>2026-07-02T20:40:47+01:00</lastmod>
-  </url>
-  <url>
-    <loc>https://zombiebases.com/field-manual</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
