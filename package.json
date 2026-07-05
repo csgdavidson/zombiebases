@@ -9,6 +9,7 @@
     "generate:base-metadata": "python3 scripts/generate-base-page-metadata.py",
     "validate:bases": "python3 scripts/validate-bases.py",
     "generate:card-thumbnails": "python3 scripts/generate-card-thumbnails.py",
-    "build": "npm run generate:card-thumbnails"
+    "build": "npm run generate:card-thumbnails && npm run generate:clean-pages",
+    "generate:clean-pages": "python3 scripts/generate-clean-pages.py"
   }
 }
