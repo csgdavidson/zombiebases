@@ -464,4 +464,9 @@
     <loc>https://zombiebases.com/base.html?slug=zanzibar-island</loc>
     <lastmod>2026-07-02T20:40:47+01:00</lastmod>
   </url>
+  <url>
+    <loc>https://zombiebases.com/field-manual</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
