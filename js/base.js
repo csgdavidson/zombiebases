@@ -119,7 +119,9 @@ const V2_PILOT_BASES = {
 };
 
 function getV2Pilot(base) {
-  return V2_PILOT_BASES[base?.slug] || null;
+  // The experimental detail layout is disabled for the three pilot bases so
+  // they render through the same production template as every other base.
+  return null;
 }
 
 
