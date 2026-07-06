@@ -159,6 +159,7 @@ const elements = {
   similarSection: document.getElementById('similar-section'),
   similarList: document.getElementById('similar-bases-list'),
   similarExploreLink: document.getElementById('similar-explore-link'),
+  survivalAssessmentSection: document.getElementById('survival-assessment-section'),
   survivalCharacteristicsSection: document.getElementById('survival-characteristics-section'),
   survivalCharacteristicsGrid: document.getElementById('survival-characteristics-grid'),
   survivalProfileSection: document.getElementById('survival-profile-section'),
@@ -728,6 +729,96 @@ function renderUseCaseAndRisk(base) {
   }
 }
 
+
+function renderCheyenneSurvivalAssessment(base) {
+  if (!elements.survivalAssessmentSection) {
+    return false;
+  }
+
+  const isCheyenne = base?.slug === 'cheyenne-mountain-complex';
+  elements.survivalAssessmentSection.hidden = !isCheyenne;
+  if (!isCheyenne) {
+    elements.survivalAssessmentSection.innerHTML = '';
+    return false;
+  }
+
+  const scores = getScoreObject(base) || {};
+  const description = getStructuredDescription(base);
+  const useCaseAndRisk = getUseCaseAndRisk(base);
+  const verdict = getVerdict(base);
+  const strengths = description.strengths.slice(0, 2);
+  const weaknesses = description.weaknesses.slice(0, 2);
+  const bestUse = firstSentence(verdict.bestUseCase) || firstSentence(useCaseAndRisk.bestUseCase);
+  const keyRisk = firstSentence(useCaseAndRisk.keyRisk) || firstSentence(verdict.failureMode);
+  const pillarCards = [
+    {
+      title: 'Defensibility',
+      question: 'Can the community survive the outbreak?',
+      score: scores.defensibility,
+      bullets: ['Extremely limited access', 'Hardened infrastructure', 'Excellent defensive position']
+    },
+    {
+      title: 'Isolation',
+      question: 'Can the community avoid outside threat and pressure?',
+      score: scores.isolation,
+      bullets: ['Remote subterranean location', 'Minimal external visibility', 'Not completely cut off']
+    },
+    {
+      title: 'Sustainability',
+      question: 'Can the community sustain itself long term?',
+      score: scores.sustainability,
+      bullets: ['Strong water security', 'Advanced infrastructure', 'High maintenance burden']
+    }
+  ];
+  const evidenceCards = [
+    ['Strengths', strengths.join(' ')],
+    ['Weaknesses', weaknesses.join(' ')],
+    ['Best Use', bestUse],
+    ['Key Risk', keyRisk]
+  ].filter(([, value]) => value);
+
+  elements.survivalAssessmentSection.innerHTML = `
+    <div class="survival-assessment-row survival-assessment-top-row">
+      <div class="survival-assessment-bottom-line">
+        <p class="survival-assessment-label">The bottom line</p>
+        <h2>Exceptionally secure and built to last—but its greatest risk is the systems that keep it alive.</h2>
+        <p>Cheyenne Mountain is engineered for survival. Deep underground, heavily protected and self-contained. The challenge is long-term maintenance. If critical systems fail and cannot be repaired, the mountain becomes a trap instead of a sanctuary.</p>
+      </div>
+      <div class="survival-assessment-pillars">
+        <p class="survival-assessment-label">The three survival pillars</p>
+        <div class="survival-assessment-pillar-grid">
+          ${pillarCards.map((card) => `
+            <article class="survival-assessment-card survival-assessment-pillar-card">
+              <div class="survival-assessment-card-heading">
+                <h3>${card.title}</h3>
+                <p class="survival-assessment-score ${scoreToneClass(card.score)}">${isValidScoreValue(card.score) ? card.score.toFixed(1) : '—'}<span>/10</span></p>
+              </div>
+              <p class="survival-assessment-question">${card.question}</p>
+              <ul>${card.bullets.map((item) => `<li>${item}</li>`).join('')}</ul>
+            </article>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+    <div class="survival-assessment-row survival-assessment-tradeoff-row">
+      <article class="survival-assessment-card survival-assessment-text-card">
+        <p class="survival-assessment-label">The big trade-off</p>
+        <p>Cheyenne Mountain solves almost every short-term survival problem.</p>
+        <p>Its greatest weakness is that it replaces zombie risk with infrastructure risk.</p>
+        <p>If critical systems fail and cannot be repaired, the community becomes increasingly dependent on skills and spare parts that may no longer exist.</p>
+      </article>
+      <article class="survival-assessment-card survival-assessment-text-card">
+        <p class="survival-assessment-label">What would most likely cause failure?</p>
+        <h3>Infrastructure failure</h3>
+        <p>Complex systems, specialised parts and skilled maintenance requirements become unsustainable over time.</p>
+      </article>
+    </div>
+    <div class="survival-assessment-row survival-assessment-evidence-row">
+      ${evidenceCards.map(([label, value]) => `<article class="survival-assessment-card survival-assessment-evidence-card"><p class="survival-assessment-label">${label}</p><p>${value}</p></article>`).join('')}
+    </div>
+  `;
+  return true;
+}
 
 function renderSurvivalProfile(base) {
   const profile = getSurvivalProfile(base);
@@ -1338,13 +1429,22 @@ function showBase(base, bases, params, rankings, discovery) {
   renderMetaRow(base);
   renderCompareCard(base, bases);
   renderHero(base);
+  const hasCheyenneAssessment = renderCheyenneSurvivalAssessment(base);
+  const summaryPanel = document.querySelector('.base-summary-panel');
+  if (summaryPanel) {
+    summaryPanel.hidden = hasCheyenneAssessment;
+  }
   renderSummary(base);
   renderHeroTraits(base);
   renderUseCaseAndRisk(base);
   renderScore(base);
   const isV2Pilot = renderV2Detail(base, rankings);
   if (!isV2Pilot) {
-    renderSurvivalCharacteristics(base);
+    if (hasCheyenneAssessment) {
+      elements.survivalCharacteristicsSection.hidden = true;
+    } else {
+      renderSurvivalCharacteristics(base);
+    }
   } else {
     elements.survivalCharacteristicsSection.hidden = true;
   }
