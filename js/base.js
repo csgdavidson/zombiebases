@@ -735,9 +735,76 @@ function renderCheyenneSurvivalAssessment(base) {
     return false;
   }
 
-  const isCheyenne = base?.slug === 'cheyenne-mountain-complex';
-  elements.survivalAssessmentSection.hidden = !isCheyenne;
-  if (!isCheyenne) {
+  const assessmentContent = {
+    'cheyenne-mountain-complex': {
+      headline: 'Exceptionally secure and built to last—but its greatest risk is the systems that keep it alive.',
+      bottomLine: 'Cheyenne Mountain is engineered for survival. Deep underground, heavily protected and self-contained. The challenge is long-term maintenance. If critical systems fail and cannot be repaired, the mountain becomes a trap instead of a sanctuary.',
+      pillars: [
+        {
+          title: 'Defensibility',
+          question: 'Can the community survive the outbreak?',
+          scoreKey: 'defensibility',
+          bullets: ['Extremely limited access', 'Hardened infrastructure', 'Excellent defensive position']
+        },
+        {
+          title: 'Isolation',
+          question: 'Can the community avoid outside threat and pressure?',
+          scoreKey: 'isolation',
+          bullets: ['Remote subterranean location', 'Minimal external visibility', 'Not completely cut off']
+        },
+        {
+          title: 'Sustainability',
+          question: 'Can the community sustain itself long term?',
+          scoreKey: 'sustainability',
+          bullets: ['Strong water security', 'Advanced infrastructure', 'High maintenance burden']
+        }
+      ],
+      tradeoff: [
+        'Cheyenne Mountain solves almost every short-term survival problem.',
+        'Its greatest weakness is that it replaces zombie risk with infrastructure risk.',
+        'If critical systems fail and cannot be repaired, the community becomes increasingly dependent on skills and spare parts that may no longer exist.'
+      ],
+      failureTitle: 'Infrastructure failure',
+      failureBody: 'Complex systems, specialised parts and skilled maintenance requirements become unsustainable over time.',
+      evidence: null
+    },
+    'andaman-islands': {
+      headline: 'The Andaman Islands exchange fortress-level defence for something far more valuable: the chance to build a resilient island society.',
+      bottomLine: 'Natural isolation dramatically reduces infection pressure while tropical resources provide one of the strongest long-term survival foundations on Zombie Bases. The challenge is keeping the islands connected. Boats, fuel, maintenance and governance become the lifelines that determine whether the archipelago functions as a resilient network or fragments into isolated communities.',
+      pillars: [
+        {
+          title: 'Defensibility',
+          question: 'Can the community survive the outbreak?',
+          scoreKey: 'defensibility',
+          bullets: ['Coastlines naturally restrict approach routes', 'Island geography reduces mass infection pressure', 'Multiple settlements require coordinated defence']
+        },
+        {
+          title: 'Isolation',
+          question: 'Can the community avoid outside threat and pressure?',
+          scoreKey: 'isolation',
+          bullets: ['Ocean separation creates natural quarantine', 'Remote location limits sustained external pressure', 'Geography discourages uncontrolled migration']
+        },
+        {
+          title: 'Sustainability',
+          question: 'Can the community sustain itself long term?',
+          scoreKey: 'sustainability',
+          bullets: ['Marine and tropical resources support long-term production', 'Multiple settlements improve resilience', 'Maritime infrastructure must be maintained']
+        }
+      ],
+      tradeoff: ['The Andamans succeed because they function as a network, not because any single island is perfect. Their resilience comes from cooperation, but that same dependence on transport and coordination creates their greatest vulnerability.'],
+      failureTitle: 'Network fragmentation',
+      failureBody: 'Boats fail. Fuel becomes scarce. Storm damage interrupts movement. Once settlements can no longer support one another, the archipelago gradually loses the resilience that makes it exceptional.',
+      evidence: [
+        ['Strengths', 'Exceptional natural isolation<br>Diverse marine and tropical food sources<br>Distributed settlements improve resilience<br>Outstanding long-term survival potential'],
+        ['Weaknesses', 'Maritime transport is essential<br>Fuel and boat maintenance remain critical<br>Healthcare and specialist repairs are limited<br>Coordinating multiple settlements is challenging'],
+        ['Best Use', 'A distributed island survival network built around cooperation, redundancy and long-term self-sufficiency.'],
+        ['Key Risk', 'Loss of maritime mobility fragments the survival network.']
+      ]
+    }
+  }[base?.slug];
+
+  elements.survivalAssessmentSection.hidden = !assessmentContent;
+  if (!assessmentContent) {
     elements.survivalAssessmentSection.innerHTML = '';
     return false;
   }
@@ -746,43 +813,20 @@ function renderCheyenneSurvivalAssessment(base) {
   const description = getStructuredDescription(base);
   const useCaseAndRisk = getUseCaseAndRisk(base);
   const verdict = getVerdict(base);
-  const strengths = description.strengths.slice(0, 2);
-  const weaknesses = description.weaknesses.slice(0, 2);
-  const bestUse = firstSentence(verdict.bestUseCase) || firstSentence(useCaseAndRisk.bestUseCase);
-  const keyRisk = firstSentence(useCaseAndRisk.keyRisk) || firstSentence(verdict.failureMode);
-  const pillarCards = [
-    {
-      title: 'Defensibility',
-      question: 'Can the community survive the outbreak?',
-      score: scores.defensibility,
-      bullets: ['Extremely limited access', 'Hardened infrastructure', 'Excellent defensive position']
-    },
-    {
-      title: 'Isolation',
-      question: 'Can the community avoid outside threat and pressure?',
-      score: scores.isolation,
-      bullets: ['Remote subterranean location', 'Minimal external visibility', 'Not completely cut off']
-    },
-    {
-      title: 'Sustainability',
-      question: 'Can the community sustain itself long term?',
-      score: scores.sustainability,
-      bullets: ['Strong water security', 'Advanced infrastructure', 'High maintenance burden']
-    }
+  const evidenceCards = assessmentContent.evidence || [
+    ['Strengths', description.strengths.slice(0, 2).join(' ')],
+    ['Weaknesses', description.weaknesses.slice(0, 2).join(' ')],
+    ['Best Use', firstSentence(verdict.bestUseCase) || firstSentence(useCaseAndRisk.bestUseCase)],
+    ['Key Risk', firstSentence(useCaseAndRisk.keyRisk) || firstSentence(verdict.failureMode)]
   ];
-  const evidenceCards = [
-    ['Strengths', strengths.join(' ')],
-    ['Weaknesses', weaknesses.join(' ')],
-    ['Best Use', bestUse],
-    ['Key Risk', keyRisk]
-  ].filter(([, value]) => value);
+  const pillarCards = assessmentContent.pillars.map((card) => ({ ...card, score: scores[card.scoreKey] }));
 
   elements.survivalAssessmentSection.innerHTML = `
     <div class="survival-assessment-row survival-assessment-top-row">
       <div class="survival-assessment-bottom-line">
         <p class="survival-assessment-label">The bottom line</p>
-        <h2>Exceptionally secure and built to last—but its greatest risk is the systems that keep it alive.</h2>
-        <p>Cheyenne Mountain is engineered for survival. Deep underground, heavily protected and self-contained. The challenge is long-term maintenance. If critical systems fail and cannot be repaired, the mountain becomes a trap instead of a sanctuary.</p>
+        <h2>${assessmentContent.headline}</h2>
+        <p>${assessmentContent.bottomLine}</p>
       </div>
       <div class="survival-assessment-pillars">
         <p class="survival-assessment-label">The three survival pillars</p>
@@ -803,18 +847,16 @@ function renderCheyenneSurvivalAssessment(base) {
     <div class="survival-assessment-row survival-assessment-tradeoff-row">
       <article class="survival-assessment-card survival-assessment-text-card">
         <p class="survival-assessment-label">The big trade-off</p>
-        <p>Cheyenne Mountain solves almost every short-term survival problem.</p>
-        <p>Its greatest weakness is that it replaces zombie risk with infrastructure risk.</p>
-        <p>If critical systems fail and cannot be repaired, the community becomes increasingly dependent on skills and spare parts that may no longer exist.</p>
+        ${assessmentContent.tradeoff.map((paragraph) => `<p>${paragraph}</p>`).join('')}
       </article>
       <article class="survival-assessment-card survival-assessment-text-card">
         <p class="survival-assessment-label">What would most likely cause failure?</p>
-        <h3>Infrastructure failure</h3>
-        <p>Complex systems, specialised parts and skilled maintenance requirements become unsustainable over time.</p>
+        <h3>${assessmentContent.failureTitle}</h3>
+        <p>${assessmentContent.failureBody}</p>
       </article>
     </div>
     <div class="survival-assessment-row survival-assessment-evidence-row">
-      ${evidenceCards.map(([label, value]) => `<article class="survival-assessment-card survival-assessment-evidence-card"><p class="survival-assessment-label">${label}</p><p>${value}</p></article>`).join('')}
+      ${evidenceCards.filter(([, value]) => value).map(([label, value]) => `<article class="survival-assessment-card survival-assessment-evidence-card"><p class="survival-assessment-label">${label}</p><p>${value}</p></article>`).join('')}
     </div>
   `;
   return true;
