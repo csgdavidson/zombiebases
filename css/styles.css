@@ -8375,3 +8375,40 @@ html {
     grid-template-columns: 1fr;
   }
 }
+
+/* Global base detail hero improvements: show pillar score bars in the desktop hero score card and increase rank badge contrast. */
+@media (min-width: 641px) {
+  .base-detail-main .score-band .dossier-score-header {
+    grid-template-columns: 1fr;
+  }
+
+  .base-detail-main .score-band .score-breakdown-column {
+    justify-self: stretch;
+    text-align: left;
+  }
+
+  .base-detail-main .score-band .score-breakdown-column .score-list {
+    justify-items: stretch;
+    border-top: 1px solid rgba(15, 23, 42, 0.14);
+    margin-top: var(--space-1);
+    padding-top: var(--space-3);
+  }
+}
+
+.base-detail-main #ranking-section .ranking-list .image-positioning-badge,
+.base-detail-v2-active #ranking-section .ranking-list .image-positioning-badge {
+  border-color: rgba(255, 255, 255, 0.42);
+  background: rgba(6, 18, 31, 0.72);
+  color: #ffffff;
+  text-shadow: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.base-detail-main #ranking-section .ranking-list .image-positioning-badge:hover,
+.base-detail-main #ranking-section .ranking-list .image-positioning-badge:focus-visible,
+.base-detail-v2-active #ranking-section .ranking-list .image-positioning-badge:hover,
+.base-detail-v2-active #ranking-section .ranking-list .image-positioning-badge:focus-visible {
+  border-color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.94);
+  color: #0f2d45;
+}
