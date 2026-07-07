@@ -800,6 +800,39 @@ function renderCheyenneSurvivalAssessment(base) {
         ['Best Use', 'A distributed island survival network built around cooperation, redundancy and long-term self-sufficiency.'],
         ['Key Risk', 'Loss of maritime mobility fragments the survival network.']
       ]
+    },
+    'mont-saint-michel': {
+      headline: 'One of Europe’s strongest defensive positions — but only if food, water and crowd control are solved.',
+      bottomLine: 'Mont Saint-Michel is a near-perfect tidal fortress, not a self-sustaining settlement. It protects people extremely well; it does not feed them. Long-term survival depends on strict population control, freshwater discipline and secured mainland supply.',
+      pillars: [
+        {
+          title: 'Defensibility',
+          question: 'Can the community survive the outbreak?',
+          scoreKey: 'defensibility',
+          bullets: ['Extreme tidal moat', 'Medieval walls and gatehouses', 'Steep, narrow approaches']
+        },
+        {
+          title: 'Isolation',
+          question: 'Can the community avoid outside threat and pressure?',
+          scoreKey: 'isolation',
+          bullets: ['Bay creates strong separation', 'Crossing windows are tide-dependent', 'World-famous location attracts survivors']
+        },
+        {
+          title: 'Sustainability',
+          question: 'Can the community sustain itself long term?',
+          scoreKey: 'sustainability',
+          bullets: ['Minimal food production', 'Freshwater storage limits population', 'Mainland supply control is essential']
+        }
+      ],
+      tradeoff: ['Mont Saint-Michel is almost unbeatable as a defensive redoubt, but it is not naturally self-sufficient. It protects people extremely well; it does not feed them.'],
+      failureTitle: 'Resource collapse',
+      failureBody: 'Food, freshwater, medicine and morale run down before zombies ever breach the walls.',
+      evidence: [
+        ['Strengths', 'Extreme tides, medieval fortifications, high visibility, narrow approaches and durable stone construction.'],
+        ['Weaknesses', 'Limited agriculture, freshwater constraints, small carrying capacity, refugee pressure and dependence on mainland resources.'],
+        ['Best Use', 'A compact tidal fortress and command redoubt supported by secured mainland farms and supply runs.'],
+        ['Key Risk', 'Mistaking a near-perfect fortress for a self-sustaining settlement.']
+      ]
     }
   }[base?.slug];
 
