@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-07T19:03:28Z",
+  "generatedAt": "2026-07-07T19:25:39Z",
   "source": {
     "bases": "data/bases-index.json",
     "schemaVersion": 1,
-    "hash": "1d95ba5119311aff0a55bef7f0ef2e377f774e010fa33e4b2984fc10f645949d"
+    "hash": "90415c4b01277eaaa94ccb7a666c7acd56e6176d6911cab07b922b13405822ec"
   },
   "interpretations": [
     {
@@ -452,9 +452,9 @@
       "scoreBandLabel": "Exceptional base",
       "scoreBandDescription": "Strong survival potential with clear strengths, but not without failure risks.",
       "scoreBandClass": "score-band-exceptional",
-      "archetypeLabel": "Isolation settlement",
-      "archetypeDescription": "Built around elite isolation and strong sustainability; defence is secondary.",
-      "scoreShapeSummary": "Exceptional outcome powered by isolation, but performance still bends around weak defence."
+      "archetypeLabel": "Long-term settlement",
+      "archetypeDescription": "Built for endurance, with balanced support for sustained multi-season survival.",
+      "scoreShapeSummary": "High-function profile with strong isolation, while defence remains the critical upgrade target."
     },
     {
       "slug": "iwo-jima-underground-bunkers",

@@ -6089,64 +6089,72 @@
     "lat": 56.914,
     "long": -6.142,
     "scores": {
-      "overall": 8.1,
+      "overall": 8.9,
       "categories": {
-        "defensibility": 6.4,
-        "isolation": 8.9,
-        "sustainability": 7.9
+        "defensibility": 8.7,
+        "isolation": 9.7,
+        "sustainability": 9.0
       }
     },
     "comparisonScores": {
       "exposure": {
-        "score": 8,
-        "rationale": "The Isle of Eigg Village exposure score is held down because any population creep quickly outruns local systems."
+        "score": 10,
+        "rationale": "Sea separation, remote location, and limited visitor access make Eigg extremely unlikely to face sustained zombie pressure unless survivors bring it ashore."
       },
       "maintenanceBurden": {
-        "score": 7,
-        "rationale": "The Isle of Eigg Village maintenance score is limited because limited carrying capacity for food and specialist care."
+        "score": 8,
+        "rationale": "The existing renewable power system and island community reduce day-to-day burden, but weather, specialist parts, and medical gaps still require careful maintenance planning."
       },
       "populationCapacity": {
-        "score": 7,
-        "rationale": "The Isle of Eigg Village remote settlement profile can hold a larger group than smaller refuges, though organization and rationing would still matter."
+        "score": 6,
+        "rationale": "Eigg can support a disciplined modest community well, but its carrying capacity is small and overcrowding would quickly exhaust housing, food, and services."
       },
       "resourceSecurity": {
-        "score": 8,
-        "rationale": "The Isle of Eigg Village profile notes local microgrid culture supports disciplined low-energy living, but storms can pause resupply for critical windows weakens long-term resource security."
+        "score": 9,
+        "rationale": "Freshwater, grazing, crofting potential, renewable electricity, and year-round residents give Eigg unusually strong resource security for an island base."
       }
     },
     "description": {
-      "summary": "Eigg is a rare island community with real off-grid credibility; what kills you here is a bad season that breaks food, fuel, and medical margins before security fails.",
+      "summary": "A rare location that is both naturally isolated and genuinely capable of long-term habitation. Eigg is less a fortress than a sustainable island community: survival depends on protecting a small, disciplined population and refusing growth beyond the island's natural carrying capacity.",
       "strengths": [
-        "Sea separation suppresses random contact",
-        "Local microgrid culture supports disciplined low-energy living",
-        "Small population footprint is governable"
+        "Excellent natural isolation from mainland zombie pressure",
+        "Existing permanent community already adapted to island living",
+        "Reliable freshwater availability",
+        "Productive grazing and crofting potential",
+        "Renewable electricity generation already built into local life",
+        "Multiple natural resources for a low-consumption settlement",
+        "Elevated terrain supports coastal observation and early warning"
       ],
       "weaknesses": [
-        "Limited carrying capacity for food and specialist care",
-        "Storms can pause resupply for critical windows",
-        "Any population creep quickly outruns local systems"
+        "Small carrying capacity limits safe population growth",
+        "Harsh weather can disrupt sea transport and emergency movement",
+        "Limited medical facilities and specialist care",
+        "Specialist equipment and replacement parts still depend on mainland supply",
+        "Little industrial capability for complex repairs or manufacturing",
+        "Housing and food production cannot be expanded quickly without degrading the island"
       ]
     },
     "verdict": {
-      "bestUseCase": "Long-horizon refuge for a small disciplined community",
-      "failureMode": "A prolonged supply shock creates cascading shortages"
+      "bestUseCase": "Permanent island settlement for a disciplined community of modest size",
+      "failureMode": "Population overload turns resilience into dependence on dangerous mainland supply runs"
     },
     "survivalProfile": {
-      "initial": "Strong",
-      "shortTerm": "Strong",
-      "longTerm": "Moderate to strong"
+      "initial": "Exceptional",
+      "shortTerm": "Exceptional",
+      "longTerm": "Strong"
     },
     "useCaseAndRisk": {
-      "bestUseCase": "Low-visibility island settlement with strict rationing",
-      "keyRisk": "Medical or harvest failure that cannot be externally backfilled"
+      "bestUseCase": "Long-term sustainable island refuge focused on rationing, coastal monitoring, crofting, grazing, freshwater protection, and renewable power maintenance rather than maximum intake",
+      "keyRisk": "Assuming isolation alone guarantees survival, then exceeding the island's carrying capacity until food, medical, fuel, housing, and repair needs force routine mainland resupply"
     },
-    "realityCheck": "Works only with hard population caps and pre-positioned reserves.",
+    "realityCheck": "Eigg sacrifices scale for resilience: it can support a relatively small population exceptionally well, but turning it into a refuge for hundreds would rapidly exhaust food, housing, fuel, and local services.",
     "assumptions": [
-      "Low inbound boat traffic after collapse",
-      "Core infrastructure remains operable",
-      "Group size stays within carrying capacity"
+      "Population remains deliberately capped",
+      "Landing points are monitored and controlled",
+      "Renewable power, freshwater systems, and agricultural routines remain maintained",
+      "Mainland supply runs are selective rather than routine"
     ],
-    "scoreNarrative": "High isolation and good sustainability drive the score; moderate defensibility and tight capacity cap long-term upside.",
+    "scoreNarrative": "Elite isolation, credible freshwater, existing crofting and grazing, renewable electricity, and a year-round community justify one of the strongest long-term scores. Defensibility is high because the sea controls access, but the score is capped by limited landing-point security, harsh weather, medical dependency, and a hard population ceiling.",
     "image": "/images/bases/isle-of-eigg-village.png"
   },
   {
