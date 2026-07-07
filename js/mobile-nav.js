@@ -10,11 +10,61 @@
     menu: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
     close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>',
     chevron: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>',
-    clock: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>'
+    clock: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>',
+    globe: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM3.6 9h16.8M3.6 15h16.8M12 3c2.2 2.5 3.3 5.5 3.3 9S14.2 18.5 12 21c-2.2-2.5-3.3-5.5-3.3-9S9.8 5.5 12 3z"/></svg>',
+    types: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 21h10M8 21l1-9h6l1 9M9 12 7 4h10l-2 8M6 8h12"/></svg>',
+    info: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17v-5M12 8h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>',
+    random: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM8 8h.01M16 8h.01M8 16h.01M16 16h.01M12 12h.01"/></svg>',
+    scenarios: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 4 7H8zm-6 18 4-7H2zm12 0 4-7h-8z"/></svg>'
   })[name];
 
   function isHome() { return location.pathname === '/' || location.pathname.endsWith('/index.html'); }
   function setBodyLocked(locked) { document.body.classList.toggle('mobile-nav-locked', locked); }
+
+
+
+  function pathMatches(href) {
+    const current = location.pathname.replace(/\/index\.html$/, '/') || '/';
+    const url = new URL(href, location.origin);
+    const target = url.pathname.replace(/\/index\.html$/, '/') || '/';
+    if (target === '/' && url.searchParams.get('view') === 'map') return isHome() && new URLSearchParams(location.search).get('view') === 'map';
+    if (target === '/') return isHome() && new URLSearchParams(location.search).get('view') !== 'map';
+    return current === target || current.startsWith(`${target.replace(/\/$/, '')}/`);
+  }
+
+  function enhanceDesktopHeader() {
+    const inner = document.querySelector('.site-header .header-inner');
+    const nav = inner?.querySelector('.site-nav');
+    if (!inner || !nav || inner.querySelector('.desktop-header-search')) return;
+
+    const primaryItems = [
+      ['Explore', '/', 'explore'],
+      ['Rankings', '/rankings.html', 'rankings'],
+      ['Map', '/?view=map', 'map'],
+      ['Compare', '/compare.html', 'compare']
+    ];
+    const moreItems = [
+      ['Regions', '/rankings-region.html', 'globe'],
+      ['Types', '/rankings-type.html', 'types'],
+      ['Field Manual', '/field-manual', 'map'],
+      ['Scenarios', '/scenarios.html', 'scenarios'],
+      ['About Zombie Bases', '/field-manual#what-is-zombie-bases', 'info']
+    ];
+
+    const search = document.createElement('form');
+    search.className = 'desktop-header-search';
+    search.setAttribute('role', 'search');
+    search.innerHTML = `<label class="visually-hidden" for="desktop-header-search-input">Search bases, regions, and types</label><span class="desktop-search-icon">${icon('search')}</span><input id="desktop-header-search-input" type="search" placeholder="Search bases, regions, types…" autocomplete="off"><span class="desktop-search-key" aria-hidden="true">Ctrl K</span>`;
+    nav.before(search);
+
+    nav.classList.add('desktop-product-nav');
+    nav.innerHTML = primaryItems.map(([label, href, key]) => `<a href="${href}" ${pathMatches(href) ? 'aria-current="page"' : ''}>${icon(key)}<span>${label}</span></a>`).join('');
+
+    const actions = document.createElement('div');
+    actions.className = 'desktop-nav-actions';
+    actions.innerHTML = `<button class="desktop-random-base" type="button" data-random-base>${icon('random')}<span>Random Base</span></button><div class="desktop-more-wrap"><button class="desktop-more-button" type="button" aria-label="Open more navigation" aria-expanded="false" aria-controls="desktop-more-menu" data-desktop-more>${icon('more')}</button><div id="desktop-more-menu" class="desktop-more-menu" role="menu" hidden>${moreItems.map(([label, href, key]) => `<a href="${href}" role="menuitem">${icon(key)}<span>${label}</span></a>`).join('')}</div></div>`;
+    nav.after(actions);
+  }
 
   function enhanceHeader() {
     const inner = document.querySelector('.site-header .header-inner');
@@ -81,24 +131,26 @@
   }
 
   function openOverlay(el) { el.hidden = false; setBodyLocked(true); setTimeout(() => el.querySelector('input, button, a')?.focus(), 30); }
-  function closeAll() { document.querySelectorAll('.mobile-sheet-overlay, .mobile-search-overlay').forEach(el => el.hidden = true); setBodyLocked(false); }
+  function closeDesktopMore() { const menu = document.querySelector('#desktop-more-menu'); const btn = document.querySelector('[data-desktop-more]'); if (menu) menu.hidden = true; if (btn) btn.setAttribute('aria-expanded', 'false'); }
+  function closeAll() { document.querySelectorAll('.mobile-sheet-overlay, .mobile-search-overlay').forEach(el => el.hidden = true); setBodyLocked(false); closeDesktopMore(); }
   function runSearch(q) { if (!q) return; if (isHome()) { closeAll(); const input = document.querySelector('#search-input'); if (input) { input.value = q; input.dispatchEvent(new Event('input', { bubbles: true })); input.focus(); return; } } location.href = `/?q=${encodeURIComponent(q)}`; }
 
   function bind() {
     document.addEventListener('click', async (event) => {
       const target = event.target;
+      if (target.closest('[data-desktop-more]')) { const menu = document.querySelector('#desktop-more-menu'); const btn = target.closest('[data-desktop-more]'); const open = menu.hidden; menu.hidden = !open; btn.setAttribute('aria-expanded', String(open)); } else if (document.querySelector('#desktop-more-menu') && !target.closest('.desktop-more-wrap')) closeDesktopMore();
       if (target.closest('[data-open-more]')) openOverlay(document.querySelector('#mobile-more-menu'));
       if (target.closest('[data-close-more], .mobile-sheet-backdrop')) closeAll();
       if (target.closest('[data-open-search]')) { openOverlay(document.querySelector('#mobile-search-overlay')); setTimeout(() => document.querySelector('.mobile-search-form input')?.focus(), 50); }
       if (target.closest('[data-close-search]')) closeAll();
       const chip = target.closest('.mobile-search-chips button');
       if (chip) runSearch(chip.textContent.trim());
-      const random = target.closest('[data-menu-link="Random Base"]');
+      const random = target.closest('[data-menu-link="Random Base"], [data-random-base]');
       if (random) { event.preventDefault(); try { const data = await fetch('/data/bases-index.json').then(r => r.json()); const base = data[Math.floor(Math.random() * data.length)]; if (base?.slug) location.href = `/base.html?slug=${base.slug}`; } catch { location.href = '/rankings.html'; } }
     });
-    document.addEventListener('submit', (event) => { if (event.target.matches('.mobile-search-form')) { event.preventDefault(); runSearch(event.target.querySelector('input').value.trim()); } });
-    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeAll(); });
+    document.addEventListener('submit', (event) => { if (event.target.matches('.mobile-search-form, .desktop-header-search')) { event.preventDefault(); runSearch(event.target.querySelector('input').value.trim()); } });
+    document.addEventListener('keydown', (event) => { if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); document.querySelector('#desktop-header-search-input')?.focus(); } if (event.key === 'Escape') closeAll(); });
   }
 
-  enhanceHeader(); makeBottomNav(); makeMoreMenu(); makeSearch(); bind();
+  enhanceDesktopHeader(); enhanceHeader(); makeBottomNav(); makeMoreMenu(); makeSearch(); bind();
 })();
