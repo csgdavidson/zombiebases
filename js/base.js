@@ -801,6 +801,34 @@ function renderCheyenneSurvivalAssessment(base) {
         ['Key Risk', 'Loss of maritime mobility fragments the survival network.']
       ]
     },
+    'isle-of-eigg-village': {
+      headline: 'A rare location that combines genuine long-term sustainability with natural isolation.',
+      bottomLine: "A rare location that combines genuine long-term sustainability with natural isolation. Eigg\'s greatest strength is not its defences but its ability to support a small, disciplined community indefinitely.",
+      pillars: [
+        {
+          title: 'Defensibility',
+          question: 'Can the community survive the outbreak?',
+          scoreKey: 'defensibility',
+          bullets: ['Sea separation controls access', 'Elevated terrain supports coastal observation', 'Landing points still require active monitoring']
+        },
+        {
+          title: 'Isolation',
+          question: 'Can the community avoid outside threat and pressure?',
+          scoreKey: 'isolation',
+          bullets: ['Excellent natural isolation from mainland zombie pressure', 'Remote location limits sustained external pressure', 'Limited visitor access supports quarantine']
+        },
+        {
+          title: 'Sustainability',
+          question: 'Can the community sustain itself long term?',
+          scoreKey: 'sustainability',
+          bullets: ['Reliable freshwater availability', 'Productive grazing and crofting potential', 'Renewable electricity generation already built into local life']
+        }
+      ],
+      tradeoff: ["Eigg can support a modest community exceptionally well, but every additional resident reduces resilience. Long-term success depends on protecting the island\'s carrying capacity rather than expanding it."],
+      failureTitle: 'Population overload',
+      failureBody: 'Food, housing, medical care and local infrastructure become overstretched, forcing dependence on increasingly risky mainland resupply.',
+      evidence: null
+    },
     'mont-saint-michel': {
       headline: 'One of Europe’s strongest defensive positions — but only if food, water and crowd control are solved.',
       bottomLine: 'Mont Saint-Michel is a near-perfect tidal fortress, not a self-sustaining settlement. It protects people extremely well; it does not feed them. Long-term survival depends on strict population control, freshwater discipline and secured mainland supply.',
