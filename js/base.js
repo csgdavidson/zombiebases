@@ -730,34 +730,86 @@ function renderUseCaseAndRisk(base) {
 }
 
 
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function getPillarBullets(base, pillarKey) {
+  const characteristic = base?.comparisonScores?.[pillarKey];
+  const rationale = firstSentence(characteristic?.rationale);
+  const description = getStructuredDescription(base);
+  const fallback = {
+    defensibility: description.strengths,
+    isolation: description.strengths,
+    sustainability: description.weaknesses
+  }[pillarKey] || [];
+
+  return [rationale, ...fallback.map(firstSentence)]
+    .filter(Boolean)
+    .filter((item, index, array) => array.findIndex((other) => normalizeComparisonText(other) === normalizeComparisonText(item)) === index)
+    .slice(0, 3);
+}
+
+function buildGenericAssessmentContent(base) {
+  const description = getStructuredDescription(base);
+  const useCaseAndRisk = getUseCaseAndRisk(base);
+  const verdict = getVerdict(base);
+  const scores = getScoreObject(base) || {};
+  const bottomLine = buildIntroSummary(base) || description.summary;
+  const headline = firstSentence(bottomLine) || `${base?.name || 'This base'} survival assessment.`;
+  const strengths = description.strengths.join('<br>');
+  const weaknesses = description.weaknesses.join('<br>');
+  const bestUse = firstSentence(verdict.bestUseCase) || firstSentence(useCaseAndRisk.bestUseCase);
+  const keyRisk = firstSentence(useCaseAndRisk.keyRisk) || firstSentence(verdict.failureMode);
+  const weakestPillar = Object.entries(scores)
+    .filter(([key, value]) => SCORE_LABELS[key] && isValidScoreValue(value))
+    .sort(([, a], [, b]) => a - b)[0]?.[0];
+  const strongestPillar = Object.entries(scores)
+    .filter(([key, value]) => SCORE_LABELS[key] && isValidScoreValue(value))
+    .sort(([, a], [, b]) => b - a)[0]?.[0];
+  const tradeoffSource = firstSentence(description.weaknesses[0]) || firstSentence(keyRisk) || 'its weakest long-term constraint must be managed carefully.';
+  const tradeoff = `${base?.name || 'This base'} trades ${strongestPillar ? SCORE_LABELS[strongestPillar].toLowerCase() : 'its strongest advantages'} for pressure around ${weakestPillar ? SCORE_LABELS[weakestPillar].toLowerCase() : 'its weakest constraints'}. ${tradeoffSource}`;
+  const failureTitle = keyRisk || (weakestPillar ? `${SCORE_LABELS[weakestPillar]} failure` : 'Survival failure');
+  const failureBody = firstSentence(useCaseAndRisk.keyRisk) || firstSentence(verdict.failureMode) || firstSentence(description.weaknesses[0]) || 'The most likely failure mode comes from the base’s existing weaknesses overtaking its survival advantages.';
+
+  return {
+    headline,
+    bottomLine,
+    pillars: [
+      { title: 'Defensibility', question: 'Can the community survive the outbreak?', scoreKey: 'defensibility', bullets: getPillarBullets(base, 'defensibility') },
+      { title: 'Isolation', question: 'Can the community avoid outside threat and pressure?', scoreKey: 'isolation', bullets: getPillarBullets(base, 'isolation') },
+      { title: 'Sustainability', question: 'Can the community sustain itself long term?', scoreKey: 'sustainability', bullets: getPillarBullets(base, 'sustainability') }
+    ],
+    tradeoff: [tradeoff],
+    failureTitle,
+    failureBody,
+    evidence: [
+      ['Strengths', strengths],
+      ['Weaknesses', weaknesses],
+      ['Best Use', bestUse],
+      ['Key Risk', keyRisk]
+    ]
+  };
+}
+
 function renderCheyenneSurvivalAssessment(base) {
   if (!elements.survivalAssessmentSection) {
     return false;
   }
 
-  const assessmentContent = {
+  const canonicalAssessmentContent = {
     'cheyenne-mountain-complex': {
       headline: 'Exceptionally secure and built to last—but its greatest risk is the systems that keep it alive.',
       bottomLine: 'Cheyenne Mountain is engineered for survival. Deep underground, heavily protected and self-contained. The challenge is long-term maintenance. If critical systems fail and cannot be repaired, the mountain becomes a trap instead of a sanctuary.',
       pillars: [
-        {
-          title: 'Defensibility',
-          question: 'Can the community survive the outbreak?',
-          scoreKey: 'defensibility',
-          bullets: ['Extremely limited access', 'Hardened infrastructure', 'Excellent defensive position']
-        },
-        {
-          title: 'Isolation',
-          question: 'Can the community avoid outside threat and pressure?',
-          scoreKey: 'isolation',
-          bullets: ['Remote subterranean location', 'Minimal external visibility', 'Not completely cut off']
-        },
-        {
-          title: 'Sustainability',
-          question: 'Can the community sustain itself long term?',
-          scoreKey: 'sustainability',
-          bullets: ['Strong water security', 'Advanced infrastructure', 'High maintenance burden']
-        }
+        { title: 'Defensibility', question: 'Can the community survive the outbreak?', scoreKey: 'defensibility', bullets: ['Extremely limited access', 'Hardened infrastructure', 'Excellent defensive position'] },
+        { title: 'Isolation', question: 'Can the community avoid outside threat and pressure?', scoreKey: 'isolation', bullets: ['Remote subterranean location', 'Minimal external visibility', 'Not completely cut off'] },
+        { title: 'Sustainability', question: 'Can the community sustain itself long term?', scoreKey: 'sustainability', bullets: ['Strong water security', 'Advanced infrastructure', 'High maintenance burden'] }
       ],
       tradeoff: [
         'Cheyenne Mountain solves almost every short-term survival problem.',
@@ -767,113 +819,11 @@ function renderCheyenneSurvivalAssessment(base) {
       failureTitle: 'Infrastructure failure',
       failureBody: 'Complex systems, specialised parts and skilled maintenance requirements become unsustainable over time.',
       evidence: null
-    },
-    'andaman-islands': {
-      headline: 'The Andaman Islands exchange fortress-level defence for something far more valuable: the chance to build a resilient island society.',
-      bottomLine: 'Natural isolation dramatically reduces infection pressure while tropical resources provide one of the strongest long-term survival foundations on Zombie Bases. The challenge is keeping the islands connected. Boats, fuel, maintenance and governance become the lifelines that determine whether the archipelago functions as a resilient network or fragments into isolated communities.',
-      pillars: [
-        {
-          title: 'Defensibility',
-          question: 'Can the community survive the outbreak?',
-          scoreKey: 'defensibility',
-          bullets: ['Coastlines naturally restrict approach routes', 'Island geography reduces mass infection pressure', 'Multiple settlements require coordinated defence']
-        },
-        {
-          title: 'Isolation',
-          question: 'Can the community avoid outside threat and pressure?',
-          scoreKey: 'isolation',
-          bullets: ['Ocean separation creates natural quarantine', 'Remote location limits sustained external pressure', 'Geography discourages uncontrolled migration']
-        },
-        {
-          title: 'Sustainability',
-          question: 'Can the community sustain itself long term?',
-          scoreKey: 'sustainability',
-          bullets: ['Marine and tropical resources support long-term production', 'Multiple settlements improve resilience', 'Maritime infrastructure must be maintained']
-        }
-      ],
-      tradeoff: ['The Andamans succeed because they function as a network, not because any single island is perfect. Their resilience comes from cooperation, but that same dependence on transport and coordination creates their greatest vulnerability.'],
-      failureTitle: 'Network fragmentation',
-      failureBody: 'Boats fail. Fuel becomes scarce. Storm damage interrupts movement. Once settlements can no longer support one another, the archipelago gradually loses the resilience that makes it exceptional.',
-      evidence: [
-        ['Strengths', 'Exceptional natural isolation<br>Diverse marine and tropical food sources<br>Distributed settlements improve resilience<br>Outstanding long-term survival potential'],
-        ['Weaknesses', 'Maritime transport is essential<br>Fuel and boat maintenance remain critical<br>Healthcare and specialist repairs are limited<br>Coordinating multiple settlements is challenging'],
-        ['Best Use', 'A distributed island survival network built around cooperation, redundancy and long-term self-sufficiency.'],
-        ['Key Risk', 'Loss of maritime mobility fragments the survival network.']
-      ]
-    },
-    'isle-of-eigg-village': {
-      headline: 'A genuinely sustainable island refuge where discipline matters more than defence.',
-      bottomLine: 'A genuinely sustainable island refuge where discipline matters more than defence. Eigg succeeds because it combines exceptional isolation with renewable energy, freshwater and an existing year-round community. Its greatest limitation is carrying capacity: survival depends on remaining small enough for the island to support.',
-      pillars: [
-        {
-          title: 'Defensibility',
-          question: 'Can the community survive the outbreak?',
-          scoreKey: 'defensibility',
-          bullets: ['Naturally protected island geography', 'Limited approach routes', 'Existing settlement infrastructure']
-        },
-        {
-          title: 'Isolation',
-          question: 'Can the community avoid outside threat and pressure?',
-          scoreKey: 'isolation',
-          bullets: ['Exceptional separation from mainland threats', 'Sea crossing limits casual access', 'Strong natural buffer against population pressure']
-        },
-        {
-          title: 'Sustainability',
-          question: 'Can the community sustain itself long term?',
-          scoreKey: 'sustainability',
-          bullets: ['Renewable electricity generation', 'Freshwater availability', 'Grazing, fishing and local food potential', 'Existing permanent community']
-        }
-      ],
-      tradeoff: ['Eigg trades expansion for resilience. A disciplined community of modest size can thrive for years, but attempting to support hundreds of people would quickly overwhelm food production, housing, healthcare and local infrastructure.'],
-      failureTitle: 'Population pressure',
-      failureBody: "Exceeding the island's natural carrying capacity creates growing dependence on imported food, fuel, medicine and specialist equipment, gradually removing the advantages that make Eigg attractive in the first place.",
-      evidence: [
-        ['Strengths', 'Exceptional natural isolation from mainland threats<br>Established year-round community and local knowledge<br>Renewable electricity already in operation<br>Reliable freshwater and grazing potential<br>Coastal visibility supports early warning<br>Diverse local resources for a low-consumption lifestyle'],
-        ['Weaknesses', 'Limited carrying capacity restricts population growth<br>Severe weather can interrupt sea access<br>Medical care remains limited<br>Specialist repairs still rely on mainland support<br>Local manufacturing capacity is modest'],
-        ['Best Use', 'Long-term refuge for a disciplined community willing to prioritise sustainability over expansion.'],
-        ['Key Risk', 'Believing isolation removes the need for careful resource management and population control.']
-      ]
-    },
-    'mont-saint-michel': {
-      headline: 'One of Europe’s strongest defensive positions — but only if food, water and crowd control are solved.',
-      bottomLine: 'Mont Saint-Michel is a near-perfect tidal fortress, not a self-sustaining settlement. It protects people extremely well; it does not feed them. Long-term survival depends on strict population control, freshwater discipline and secured mainland supply.',
-      pillars: [
-        {
-          title: 'Defensibility',
-          question: 'Can the community survive the outbreak?',
-          scoreKey: 'defensibility',
-          bullets: ['Extreme tidal moat', 'Medieval walls and gatehouses', 'Steep, narrow approaches']
-        },
-        {
-          title: 'Isolation',
-          question: 'Can the community avoid outside threat and pressure?',
-          scoreKey: 'isolation',
-          bullets: ['Bay creates strong separation', 'Crossing windows are tide-dependent', 'World-famous location attracts survivors']
-        },
-        {
-          title: 'Sustainability',
-          question: 'Can the community sustain itself long term?',
-          scoreKey: 'sustainability',
-          bullets: ['Minimal food production', 'Freshwater storage limits population', 'Mainland supply control is essential']
-        }
-      ],
-      tradeoff: ['Mont Saint-Michel is almost unbeatable as a defensive redoubt, but it is not naturally self-sufficient. It protects people extremely well; it does not feed them.'],
-      failureTitle: 'Resource collapse',
-      failureBody: 'Food, freshwater, medicine and morale run down before zombies ever breach the walls.',
-      evidence: [
-        ['Strengths', 'Extreme tides, medieval fortifications, high visibility, narrow approaches and durable stone construction.'],
-        ['Weaknesses', 'Limited agriculture, freshwater constraints, small carrying capacity, refugee pressure and dependence on mainland resources.'],
-        ['Best Use', 'A compact tidal fortress and command redoubt supported by secured mainland farms and supply runs.'],
-        ['Key Risk', 'Mistaking a near-perfect fortress for a self-sustaining settlement.']
-      ]
     }
   }[base?.slug];
 
-  elements.survivalAssessmentSection.hidden = !assessmentContent;
-  if (!assessmentContent) {
-    elements.survivalAssessmentSection.innerHTML = '';
-    return false;
-  }
+  const assessmentContent = canonicalAssessmentContent || buildGenericAssessmentContent(base);
+  elements.survivalAssessmentSection.hidden = false;
 
   const scores = getScoreObject(base) || {};
   const description = getStructuredDescription(base);
@@ -891,8 +841,8 @@ function renderCheyenneSurvivalAssessment(base) {
     <div class="survival-assessment-row survival-assessment-top-row">
       <div class="survival-assessment-bottom-line">
         <p class="survival-assessment-label">The bottom line</p>
-        <h2>${assessmentContent.headline}</h2>
-        <p>${assessmentContent.bottomLine}</p>
+        <h2>${escapeHtml(assessmentContent.headline)}</h2>
+        <p>${escapeHtml(assessmentContent.bottomLine)}</p>
       </div>
       <div class="survival-assessment-pillars">
         <p class="survival-assessment-label">The three survival pillars</p>
@@ -900,11 +850,11 @@ function renderCheyenneSurvivalAssessment(base) {
           ${pillarCards.map((card) => `
             <article class="survival-assessment-card survival-assessment-pillar-card">
               <div class="survival-assessment-card-heading">
-                <h3>${card.title}</h3>
+                <h3>${escapeHtml(card.title)}</h3>
                 <p class="survival-assessment-score ${scoreToneClass(card.score)}">${isValidScoreValue(card.score) ? card.score.toFixed(1) : '—'}<span>/10</span></p>
               </div>
-              <p class="survival-assessment-question">${card.question}</p>
-              <ul>${card.bullets.map((item) => `<li>${item}</li>`).join('')}</ul>
+              <p class="survival-assessment-question">${escapeHtml(card.question)}</p>
+              <ul>${card.bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
             </article>
           `).join('')}
         </div>
@@ -913,16 +863,16 @@ function renderCheyenneSurvivalAssessment(base) {
     <div class="survival-assessment-row survival-assessment-tradeoff-row">
       <article class="survival-assessment-card survival-assessment-text-card">
         <p class="survival-assessment-label">The big trade-off</p>
-        ${assessmentContent.tradeoff.map((paragraph) => `<p>${paragraph}</p>`).join('')}
+        ${assessmentContent.tradeoff.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}
       </article>
       <article class="survival-assessment-card survival-assessment-text-card">
         <p class="survival-assessment-label">What would most likely cause failure?</p>
-        <h3>${assessmentContent.failureTitle}</h3>
-        <p>${assessmentContent.failureBody}</p>
+        <h3>${escapeHtml(assessmentContent.failureTitle)}</h3>
+        <p>${escapeHtml(assessmentContent.failureBody)}</p>
       </article>
     </div>
     <div class="survival-assessment-row survival-assessment-evidence-row">
-      ${evidenceCards.filter(([, value]) => value).map(([label, value]) => `<article class="survival-assessment-card survival-assessment-evidence-card"><p class="survival-assessment-label">${label}</p><p>${value}</p></article>`).join('')}
+      ${evidenceCards.filter(([, value]) => value).map(([label, value]) => `<article class="survival-assessment-card survival-assessment-evidence-card"><p class="survival-assessment-label">${escapeHtml(label)}</p><p>${String(value).split('<br>').map(escapeHtml).join('<br>')}</p></article>`).join('')}
     </div>
   `;
   return true;
@@ -1551,13 +1501,7 @@ function showBase(base, bases, params, rankings, discovery) {
   renderUseCaseAndRisk(base);
   renderScore(base);
   const isV2Pilot = renderV2Detail(base, rankings);
-  if (!isV2Pilot) {
-    if (hasCheyenneAssessment) {
-      elements.survivalCharacteristicsSection.hidden = true;
-    } else {
-      renderSurvivalCharacteristics(base);
-    }
-  } else {
+  if (elements.survivalCharacteristicsSection) {
     elements.survivalCharacteristicsSection.hidden = true;
   }
   renderRankingPosition(base, rankings);
