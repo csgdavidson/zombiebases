@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02T19:37:47.267041+00:00",
+  "generatedAt": "2026-07-07T19:03:14.744975+00:00",
   "totalBases": 111,
   "global": [
     {
@@ -23,24 +23,14 @@
       "percentile": 1.8
     },
     {
-      "slug": "mont-saint-michel",
-      "name": "Mont Saint-Michel",
-      "region": "western_europe",
-      "type": "fortified_structure",
-      "summary": "Mont Saint-Michel is one of the hardest micro-sites to assault thanks to tidal separation; what kills you here is throughput limits in food, space, and medical response.",
-      "overall": 8.2,
-      "rank": 3,
-      "percentile": 2.7
-    },
-    {
       "slug": "isle-of-eigg-village",
       "name": "Isle of Eigg Village",
       "region": "uk_ireland",
       "type": "remote_settlement",
       "summary": "Eigg is a rare island community with real off-grid credibility; what kills you here is a bad season that breaks food, fuel, and medical margins before security fails.",
       "overall": 8.1,
-      "rank": 4,
-      "percentile": 3.6
+      "rank": 3,
+      "percentile": 2.7
     },
     {
       "slug": "tasmania",
@@ -49,8 +39,8 @@
       "type": "isolated_landmass",
       "summary": "Tasmania is one of the strongest balanced options: durable food-water-energy potential with enough separation to reduce pressure.",
       "overall": 8.1,
-      "rank": 5,
-      "percentile": 4.5
+      "rank": 4,
+      "percentile": 3.6
     },
     {
       "slug": "chiloe-island",
@@ -59,8 +49,8 @@
       "type": "isolated_landmass",
       "summary": "Chilo\u00e9 is a strong all-round island base with workable agriculture and defensible approaches, but what kills you here is prolonged maritime cutoff during a hard winter.",
       "overall": 8.0,
-      "rank": 6,
-      "percentile": 5.41
+      "rank": 5,
+      "percentile": 4.5
     },
     {
       "slug": "cusco-highlands-village",
@@ -69,8 +59,8 @@
       "type": "remote_settlement",
       "summary": "Cusco highlands villages combine terrain defense with proven local subsistence systems, but what kills you here is cold-altitude medical decline in unacclimated groups.",
       "overall": 8.0,
-      "rank": 7,
-      "percentile": 6.31
+      "rank": 6,
+      "percentile": 5.41
     },
     {
       "slug": "heligoland",
@@ -79,8 +69,8 @@
       "type": "isolated_landmass",
       "summary": "Heligoland is one of the strongest isolation plays in Western Europe: remote, compact, and easier to monitor than mainland sites. What kills you here is maritime dependency when weather or fuel cuts the lifeline.",
       "overall": 8.0,
-      "rank": 8,
-      "percentile": 7.21
+      "rank": 7,
+      "percentile": 6.31
     },
     {
       "slug": "seychelles",
@@ -89,8 +79,8 @@
       "type": "isolated_landmass",
       "summary": "Seychelles is one of the strongest African macro-base options because exceptional island isolation combines with a livable climate and realistic long-term habitation potential. The main constraint is coordination and resupply across dispersed islands once external systems weaken.",
       "overall": 8.0,
-      "rank": 9,
-      "percentile": 8.11
+      "rank": 8,
+      "percentile": 7.21
     },
     {
       "slug": "mehrangarh-fort",
@@ -98,6 +88,16 @@
       "region": "south_asia",
       "type": "fortified_structure",
       "summary": "Mehrangarh combines exceptional fortification geometry with workable internal scale, making it one of the stronger fortress options if surrounding pressure is actively managed.",
+      "overall": 7.8,
+      "rank": 9,
+      "percentile": 8.11
+    },
+    {
+      "slug": "mont-saint-michel",
+      "name": "Mont Saint-Michel",
+      "region": "western_europe",
+      "type": "fortified_structure",
+      "summary": "Mont Saint-Michel is arguably one of Europe\u2019s strongest defensive positions: a tidal island with medieval walls, steep approaches, elevated fighting positions, and commanding visibility across the bay. Its real survival test is not whether zombies can storm the mount; it is whether the people inside can solve food, freshwater, and crowd-control problems once mainland supply chains fail.",
       "overall": 7.8,
       "rank": 10,
       "percentile": 9.01
@@ -2138,22 +2138,22 @@
     ],
     "western_europe": [
       {
-        "slug": "mont-saint-michel",
-        "name": "Mont Saint-Michel",
-        "region": "western_europe",
-        "type": "fortified_structure",
-        "summary": "Mont Saint-Michel is one of the hardest micro-sites to assault thanks to tidal separation; what kills you here is throughput limits in food, space, and medical response.",
-        "overall": 8.2,
-        "rank": 1,
-        "percentile": 9.09
-      },
-      {
         "slug": "heligoland",
         "name": "Heligoland",
         "region": "western_europe",
         "type": "isolated_landmass",
         "summary": "Heligoland is one of the strongest isolation plays in Western Europe: remote, compact, and easier to monitor than mainland sites. What kills you here is maritime dependency when weather or fuel cuts the lifeline.",
         "overall": 8.0,
+        "rank": 1,
+        "percentile": 9.09
+      },
+      {
+        "slug": "mont-saint-michel",
+        "name": "Mont Saint-Michel",
+        "region": "western_europe",
+        "type": "fortified_structure",
+        "summary": "Mont Saint-Michel is arguably one of Europe\u2019s strongest defensive positions: a tidal island with medieval walls, steep approaches, elevated fighting positions, and commanding visibility across the bay. Its real survival test is not whether zombies can storm the mount; it is whether the people inside can solve food, freshwater, and crowd-control problems once mainland supply chains fail.",
+        "overall": 7.8,
         "rank": 2,
         "percentile": 18.18
       },
@@ -2464,21 +2464,21 @@
     ],
     "fortified_structure": [
       {
-        "slug": "mont-saint-michel",
-        "name": "Mont Saint-Michel",
-        "region": "western_europe",
-        "type": "fortified_structure",
-        "summary": "Mont Saint-Michel is one of the hardest micro-sites to assault thanks to tidal separation; what kills you here is throughput limits in food, space, and medical response.",
-        "overall": 8.2,
-        "rank": 1,
-        "percentile": 5.26
-      },
-      {
         "slug": "mehrangarh-fort",
         "name": "Mehrangarh Fort",
         "region": "south_asia",
         "type": "fortified_structure",
         "summary": "Mehrangarh combines exceptional fortification geometry with workable internal scale, making it one of the stronger fortress options if surrounding pressure is actively managed.",
+        "overall": 7.8,
+        "rank": 1,
+        "percentile": 5.26
+      },
+      {
+        "slug": "mont-saint-michel",
+        "name": "Mont Saint-Michel",
+        "region": "western_europe",
+        "type": "fortified_structure",
+        "summary": "Mont Saint-Michel is arguably one of Europe\u2019s strongest defensive positions: a tidal island with medieval walls, steep approaches, elevated fighting positions, and commanding visibility across the bay. Its real survival test is not whether zombies can storm the mount; it is whether the people inside can solve food, freshwater, and crowd-control problems once mainland supply chains fail.",
         "overall": 7.8,
         "rank": 2,
         "percentile": 10.53
@@ -3733,22 +3733,22 @@
       ],
       "western_europe": [
         {
-          "slug": "mont-saint-michel",
-          "name": "Mont Saint-Michel",
-          "region": "western_europe",
-          "type": "fortified_structure",
-          "summary": "Mont Saint-Michel is one of the hardest micro-sites to assault thanks to tidal separation; what kills you here is throughput limits in food, space, and medical response.",
-          "overall": 8.2,
-          "rank": 1,
-          "percentile": 9.09
-        },
-        {
           "slug": "heligoland",
           "name": "Heligoland",
           "region": "western_europe",
           "type": "isolated_landmass",
           "summary": "Heligoland is one of the strongest isolation plays in Western Europe: remote, compact, and easier to monitor than mainland sites. What kills you here is maritime dependency when weather or fuel cuts the lifeline.",
           "overall": 8.0,
+          "rank": 1,
+          "percentile": 9.09
+        },
+        {
+          "slug": "mont-saint-michel",
+          "name": "Mont Saint-Michel",
+          "region": "western_europe",
+          "type": "fortified_structure",
+          "summary": "Mont Saint-Michel is arguably one of Europe\u2019s strongest defensive positions: a tidal island with medieval walls, steep approaches, elevated fighting positions, and commanding visibility across the bay. Its real survival test is not whether zombies can storm the mount; it is whether the people inside can solve food, freshwater, and crowd-control problems once mainland supply chains fail.",
+          "overall": 7.8,
           "rank": 2,
           "percentile": 18.18
         },
@@ -3799,21 +3799,21 @@
       ],
       "fortified_structure": [
         {
-          "slug": "mont-saint-michel",
-          "name": "Mont Saint-Michel",
-          "region": "western_europe",
-          "type": "fortified_structure",
-          "summary": "Mont Saint-Michel is one of the hardest micro-sites to assault thanks to tidal separation; what kills you here is throughput limits in food, space, and medical response.",
-          "overall": 8.2,
-          "rank": 1,
-          "percentile": 5.26
-        },
-        {
           "slug": "mehrangarh-fort",
           "name": "Mehrangarh Fort",
           "region": "south_asia",
           "type": "fortified_structure",
           "summary": "Mehrangarh combines exceptional fortification geometry with workable internal scale, making it one of the stronger fortress options if surrounding pressure is actively managed.",
+          "overall": 7.8,
+          "rank": 1,
+          "percentile": 5.26
+        },
+        {
+          "slug": "mont-saint-michel",
+          "name": "Mont Saint-Michel",
+          "region": "western_europe",
+          "type": "fortified_structure",
+          "summary": "Mont Saint-Michel is arguably one of Europe\u2019s strongest defensive positions: a tidal island with medieval walls, steep approaches, elevated fighting positions, and commanding visibility across the bay. Its real survival test is not whether zombies can storm the mount; it is whether the people inside can solve food, freshwater, and crowd-control problems once mainland supply chains fail.",
           "overall": 7.8,
           "rank": 2,
           "percentile": 10.53

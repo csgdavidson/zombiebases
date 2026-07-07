@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02T19:37:49.575747+00:00",
+  "generatedAt": "2026-07-07T19:03:15.569986+00:00",
   "totalBases": 111,
   "scoreCategories": [
     "overall",
@@ -13,7 +13,7 @@
       "overall": 6.61,
       "defensibility": 7.29,
       "isolation": 6.96,
-      "sustainability": 4.95
+      "sustainability": 4.94
     },
     "highest": {
       "slug": "cheyenne-mountain-complex",
@@ -183,7 +183,7 @@
       "count": 10,
       "averages": {
         "overall": 7.05,
-        "defensibility": 7.79,
+        "defensibility": 7.83,
         "isolation": 7.51,
         "sustainability": 5.05
       },
@@ -239,15 +239,15 @@
     "western_europe": {
       "count": 11,
       "averages": {
-        "overall": 6.41,
-        "defensibility": 7.06,
-        "isolation": 6.63,
-        "sustainability": 5.1
+        "overall": 6.37,
+        "defensibility": 7.09,
+        "isolation": 6.61,
+        "sustainability": 5.04
       },
       "highest": {
-        "slug": "mont-saint-michel",
-        "name": "Mont Saint-Michel",
-        "overall": 8.2
+        "slug": "heligoland",
+        "name": "Heligoland",
+        "overall": 8.0
       },
       "lowest": {
         "slug": "phare-du-creach",
@@ -279,15 +279,15 @@
     "fortified_structure": {
       "count": 19,
       "averages": {
-        "overall": 6.72,
-        "defensibility": 8.39,
-        "isolation": 5.75,
-        "sustainability": 4.69
+        "overall": 6.69,
+        "defensibility": 8.41,
+        "isolation": 5.74,
+        "sustainability": 4.65
       },
       "highest": {
-        "slug": "mont-saint-michel",
-        "name": "Mont Saint-Michel",
-        "overall": 8.2
+        "slug": "mehrangarh-fort",
+        "name": "Mehrangarh Fort",
+        "overall": 7.8
       },
       "lowest": {
         "slug": "fort-denison",
@@ -337,7 +337,7 @@
       "count": 21,
       "averages": {
         "overall": 7.25,
-        "defensibility": 6.51,
+        "defensibility": 6.53,
         "isolation": 8.39,
         "sustainability": 6.26
       },
