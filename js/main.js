@@ -338,7 +338,7 @@ function readStateFromUrl() {
   const sort = params.get('sort') ?? 'highest_score';
 
   return {
-    view: params.get('view') === 'map' ? 'map' : 'list',
+    view: params.get('view') === 'map' || window.location.hash === '#map-view' ? 'map' : 'list',
     region: params.get('region') ?? '',
     type: params.get('type') ?? '',
     q: params.get('q') ?? '',
@@ -644,11 +644,32 @@ function applyFilters() {
   updateHomepageItemListJsonLd();
 }
 
-function setView(nextView) {
+function setView(nextView, options = {}) {
   state.view = nextView === 'map' ? 'map' : 'list';
   renderCurrentView();
   updateUrlFromState();
   updateHomepageMetadata();
+
+  if (state.view === 'map' && options.scrollToMap) {
+    elements.mapView?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function handleMapAnchorNavigation(event) {
+  const mapLink = event.target.closest('a[href$="#map-view"]');
+
+  if (!mapLink || !window.location.pathname.match(/\/$|\/index\.html$/)) {
+    return;
+  }
+
+  event.preventDefault();
+  setView('map', { scrollToMap: true });
+}
+
+function handleHashNavigation() {
+  if (window.location.hash === '#map-view') {
+    setView('map', { scrollToMap: true });
+  }
 }
 
 function resetFilters() {
@@ -727,5 +748,7 @@ if (elements.searchInput && elements.regionFilter && elements.typeFilter && elem
     event.preventDefault();
     setView('map');
   });
+  document.addEventListener('click', handleMapAnchorNavigation);
+  window.addEventListener('hashchange', handleHashNavigation);
   loadBases();
 }

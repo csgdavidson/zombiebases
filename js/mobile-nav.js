@@ -27,7 +27,7 @@
     const current = location.pathname.replace(/\/index\.html$/, '/') || '/';
     const url = new URL(href, location.origin);
     const target = url.pathname.replace(/\/index\.html$/, '/') || '/';
-    if (target === '/' && url.searchParams.get('view') === 'map') return isHome() && new URLSearchParams(location.search).get('view') === 'map';
+    if (target === '/' && (url.searchParams.get('view') === 'map' || url.hash === '#map-view')) return isHome() && (new URLSearchParams(location.search).get('view') === 'map' || location.hash === '#map-view');
     if (target === '/') return isHome() && new URLSearchParams(location.search).get('view') !== 'map';
     return current === target || current.startsWith(`${target.replace(/\/$/, '')}/`);
   }
@@ -40,15 +40,14 @@
     const primaryItems = [
       ['Explore', '/', 'explore'],
       ['Rankings', '/rankings.html', 'rankings'],
-      ['Map', '/?view=map', 'map'],
+      ['Map', '/#map-view', 'map'],
       ['Compare', '/compare.html', 'compare']
     ];
     const moreItems = [
       ['Regions', '/rankings-region.html', 'globe'],
       ['Types', '/rankings-type.html', 'types'],
       ['Field Manual', '/field-manual', 'map'],
-      ['Scenarios', '/scenarios.html', 'scenarios'],
-      ['About Zombie Bases', '/field-manual#what-is-zombie-bases', 'info']
+      ['Scenarios', '/scenarios.html', 'scenarios']
     ];
 
     const search = document.createElement('form');
@@ -82,11 +81,11 @@
     const nav = document.createElement('nav');
     nav.className = 'mobile-bottom-nav';
     nav.setAttribute('aria-label', 'Mobile primary navigation');
-    const mapActive = isHome() && new URLSearchParams(location.search).get('view') === 'map';
+    const mapActive = isHome() && (new URLSearchParams(location.search).get('view') === 'map' || location.hash === '#map-view');
     const items = [
       ['Explore', '/', 'explore', isHome() && !mapActive],
       ['Rankings', '/rankings.html', 'rankings', location.pathname.endsWith('/rankings.html')],
-      ['Map', '/?view=map', 'map', mapActive],
+      ['Map', '/#map-view', 'map', mapActive],
       ['Compare', '/compare.html', 'compare', location.pathname.endsWith('/compare.html')],
     ];
     nav.innerHTML = items.map(([label, href, key, active]) => `<a href="${href}" ${active ? 'aria-current="page"' : ''}>${icon(key)}<span>${label}</span></a>`).join('') +
@@ -101,10 +100,7 @@
       ['Types', '/rankings-type.html', 'Castles, islands, bunkers and more'],
       ['Field Manual', '/field-manual', 'Methodology & scoring'],
       ['Scenarios', '/scenarios.html', 'Outbreak planning lenses'],
-      ['Latest Bases', '/rankings.html', 'Recently updated rankings'], // TODO: Replace with a dedicated latest-bases route if one is added.
-      ['Random Base', '#random-base', 'Discover a surprise dossier'],
-      ['About Zombie Bases', '/field-manual#what-is-zombie-bases', 'Project background and scoring philosophy'],
-      ['View all bases', '/', 'Full base directory']
+      ['Random Base', '#random-base', 'Discover a surprise dossier']
     ];
     const overlay = document.createElement('div');
     overlay.id = 'mobile-more-menu';
