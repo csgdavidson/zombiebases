@@ -8711,3 +8711,283 @@ html {
     text-decoration: none;
   }
 }
+
+/* Desktop product navigation aligned with the mobile navigation model. */
+.desktop-header-search,
+.desktop-nav-actions {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .site-header .header-inner {
+    width: min(1360px, 96vw);
+    min-height: 86px;
+    gap: clamp(0.75rem, 1.35vw, 1.4rem);
+  }
+
+  .site-logo-mark {
+    height: clamp(50px, 4.7vw, 66px);
+  }
+
+  .desktop-header-search {
+    align-items: center;
+    background: #fff;
+    border: 1px solid rgba(25, 49, 34, 0.12);
+    border-radius: var(--radius-pill);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92), 0 8px 22px rgba(31, 45, 34, 0.055);
+    color: var(--text-secondary);
+    display: flex;
+    flex: 1 1 300px;
+    gap: 0.7rem;
+    min-width: 220px;
+    max-width: 390px;
+    min-height: 50px;
+    padding: 0 0.8rem 0 1.05rem;
+  }
+
+  .desktop-header-search svg,
+  .desktop-product-nav svg,
+  .desktop-nav-actions svg,
+  .desktop-more-menu svg {
+    fill: none;
+    height: 22px;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+    width: 22px;
+  }
+
+  .desktop-header-search input {
+    background: transparent;
+    border: 0;
+    color: var(--text);
+    flex: 1 1 auto;
+    font: inherit;
+    font-size: 0.95rem;
+    min-width: 0;
+    outline: 0;
+  }
+
+  .desktop-header-search input::placeholder {
+    color: var(--text-secondary);
+  }
+
+  .desktop-header-search:focus-within {
+    border-color: rgba(31, 107, 49, 0.5);
+    box-shadow: 0 0 0 4px rgba(47, 125, 60, 0.12), 0 12px 30px rgba(31, 45, 34, 0.08);
+  }
+
+  .desktop-search-key {
+    border: 1px solid rgba(25, 49, 34, 0.13);
+    border-radius: 9px;
+    color: var(--muted);
+    font-size: 0.76rem;
+    font-weight: 750;
+    line-height: 1;
+    padding: 0.38rem 0.46rem;
+    white-space: nowrap;
+  }
+
+  .site-header .desktop-product-nav {
+    display: flex;
+    flex: 0 1 auto;
+    gap: clamp(0.25rem, 0.7vw, 0.75rem);
+    margin-left: 0;
+    overflow: visible;
+  }
+
+  .site-header .desktop-product-nav a {
+    align-items: center;
+    border: 0;
+    border-radius: 0;
+    color: var(--text);
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 0.82rem;
+    font-weight: 850;
+    gap: 0.25rem;
+    min-width: 74px;
+    padding: 0.45rem 0.7rem 0.65rem;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .site-header .desktop-product-nav a + a {
+    border-left: 1px solid rgba(25, 49, 34, 0.12);
+  }
+
+  .site-header .desktop-product-nav a[aria-current="page"] {
+    background: transparent;
+    color: var(--accent-strong) !important;
+  }
+
+  .site-header .desktop-product-nav a[aria-current="page"]::after {
+    background: var(--accent-strong);
+    border-radius: var(--radius-pill);
+    bottom: -0.35rem;
+    content: "";
+    height: 3px;
+    left: 18%;
+    position: absolute;
+    right: 18%;
+  }
+
+  .site-header .desktop-product-nav a:hover,
+  .site-header .desktop-product-nav a:focus-visible {
+    background: var(--accent-faint);
+    border-radius: 18px;
+    outline: none;
+    transform: translateY(-1px);
+  }
+
+  .desktop-nav-actions {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 0.8rem;
+    margin-left: auto;
+  }
+
+  .desktop-random-base,
+  .desktop-more-button {
+    align-items: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    font-weight: 850;
+    justify-content: center;
+  }
+
+  .desktop-random-base {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    color: #164d27;
+    gap: 0.55rem;
+    min-height: 48px;
+    padding: 0 1rem;
+    white-space: nowrap;
+  }
+
+  .desktop-more-button {
+    background: #fff;
+    border-color: rgba(25, 49, 34, 0.12);
+    border-radius: 999px;
+    color: var(--text);
+    height: 50px;
+    width: 50px;
+  }
+
+  .desktop-random-base:hover,
+  .desktop-random-base:focus-visible,
+  .desktop-more-button:hover,
+  .desktop-more-button:focus-visible {
+    border-color: rgba(31, 107, 49, 0.28);
+    box-shadow: 0 10px 24px rgba(31, 45, 34, 0.1);
+    outline: none;
+    transform: translateY(-1px);
+  }
+
+  .desktop-more-wrap {
+    position: relative;
+  }
+
+  .desktop-more-menu {
+    background: #fff;
+    border: 1px solid rgba(25, 49, 34, 0.1);
+    border-radius: 14px;
+    box-shadow: 0 24px 60px rgba(7, 22, 14, 0.18);
+    display: grid;
+    gap: 0.2rem;
+    min-width: 238px;
+    padding: 0.75rem;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 1rem);
+    z-index: 110;
+  }
+
+  .desktop-more-menu[hidden] {
+    display: none;
+  }
+
+  .desktop-more-menu::before {
+    background: #fff;
+    border-left: 1px solid rgba(25, 49, 34, 0.1);
+    border-top: 1px solid rgba(25, 49, 34, 0.1);
+    content: "";
+    height: 18px;
+    position: absolute;
+    right: 23px;
+    top: -10px;
+    transform: rotate(45deg);
+    width: 18px;
+  }
+
+  .desktop-more-menu a {
+    align-items: center;
+    border-radius: 10px;
+    color: var(--text);
+    display: flex;
+    font-weight: 800;
+    gap: 0.85rem;
+    min-height: 46px;
+    padding: 0.5rem 0.6rem;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+  }
+
+  .desktop-more-menu a:last-child {
+    border-top: 1px solid var(--border-soft);
+    border-radius: 0 0 10px 10px;
+    margin-top: 0.35rem;
+    padding-top: 0.85rem;
+  }
+
+  .desktop-more-menu a:hover,
+  .desktop-more-menu a:focus-visible {
+    background: var(--accent-faint);
+    color: var(--accent-strong);
+    outline: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1160px) {
+  .site-header .header-inner {
+    width: min(1180px, 97vw);
+    gap: 0.6rem;
+  }
+
+  .desktop-header-search {
+    flex-basis: 245px;
+    max-width: 320px;
+  }
+
+  .desktop-search-key {
+    display: none;
+  }
+
+  .site-header .desktop-product-nav a {
+    min-width: 62px;
+    padding-inline: 0.5rem;
+  }
+
+  .desktop-random-base span {
+    display: none;
+  }
+
+  .desktop-random-base {
+    min-width: 48px;
+    padding-inline: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-header-search,
+  .desktop-nav-actions {
+    display: none !important;
+  }
+}
