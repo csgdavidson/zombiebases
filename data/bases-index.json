@@ -6503,64 +6503,71 @@
     "lat": 48.636,
     "long": -1.511,
     "scores": {
-      "overall": 8.2,
+      "overall": 7.8,
       "categories": {
-        "defensibility": 9.3,
-        "isolation": 9.0,
-        "sustainability": 5.0
+        "defensibility": 9.6,
+        "isolation": 8.8,
+        "sustainability": 4.3
       }
     },
     "comparisonScores": {
       "exposure": {
-        "score": 7,
-        "rationale": "The Mont Saint-Michel fortified structure setting gives it moderate exposure protection compared with more accessible bases."
+        "score": 9,
+        "rationale": "Tidal water, mudflats, narrow causeway access, and long sightlines give Mont Saint-Michel exceptional exposure protection when approaches are controlled."
       },
       "maintenanceBurden": {
-        "score": 5,
-        "rationale": "The Mont Saint-Michel fortified structure form suggests a moderate upkeep load without clear low-tech maintenance advantages."
+        "score": 6,
+        "rationale": "Durable stone construction lowers fire and breach risk, but water storage, sanitation, boats, gates, and access works still require disciplined maintenance."
       },
       "populationCapacity": {
-        "score": 5,
-        "rationale": "The Mont Saint-Michel profile supports a controlled group, but it does not indicate large-settlement capacity."
+        "score": 3,
+        "rationale": "The walls protect a compact settlement, not a broad recovery community; limited space and refugee pressure force strict occupancy limits."
       },
       "resourceSecurity": {
-        "score": 5,
-        "rationale": "The Mont Saint-Michel sustainability profile suggests adequate but not surplus resource security for long-term use."
+        "score": 3,
+        "rationale": "On-site food production is minimal and freshwater depends on capture and storage, so resource security depends on mainland farmland or regular supply runs."
       }
     },
     "description": {
-      "summary": "Mont Saint-Michel is one of the hardest micro-sites to assault thanks to tidal separation; what kills you here is throughput limits in food, space, and medical response.",
+      "summary": "Mont Saint-Michel is arguably one of Europe’s strongest defensive positions: a tidal island with medieval walls, steep approaches, elevated fighting positions, and commanding visibility across the bay. Its real survival test is not whether zombies can storm the mount; it is whether the people inside can solve food, freshwater, and crowd-control problems once mainland supply chains fail.",
       "strengths": [
-        "Tidal windows restrict approach timing",
-        "Compact elevated footprint is easy to defend",
-        "Excellent visibility for early warning"
+        "Extreme tidal moat: shifting water, mudflats, and limited crossing windows make uncontrolled approach dangerous and predictable.",
+        "Outstanding visibility: defenders can watch movement across the open bay for hours before any threat reaches the gates.",
+        "Historic medieval fortifications: multiple walls, gatehouses, steep streets, and elevated positions funnel attackers into narrow killing zones.",
+        "Stone construction reduces fire risk and gives the settlement a hard, durable defensive shell.",
+        "Narrow approach routes channel both zombies and hostile humans, making small disciplined guard teams disproportionately effective."
       ],
       "weaknesses": [
-        "Very limited room for expansion",
-        "Sustainment depends on disciplined inbound logistics",
-        "Emergency bottlenecks are severe"
+        "Food production is the hard limit: there is very little cultivable land, almost no grazing capacity, and stored supplies cannot feed a large population indefinitely.",
+        "Historically the mount depended on mainland Normandy for supplies, trade, pilgrims, and labour; long-term survival would require defended farmland or regular supply runs.",
+        "Freshwater is a ceiling, not a bonus: rainwater harvesting and storage become essential, and limited storage sharply reduces the sustainable population size.",
+        "Population pressure would arrive early because the site is world famous; desperate refugees may be a greater first threat than zombies.",
+        "Escape options are narrow: boats become strategic assets, and bad weather, destroyed craft, or a blockade can trap defenders behind their own walls.",
+        "Intelligent human attackers do not need to breach the fortifications; they can besiege the mount until food, water, medicine, and morale run down."
       ]
     },
     "verdict": {
-      "bestUseCase": "High-security redoubt for small elite groups",
-      "failureMode": "Supply and capacity ceilings force decline"
+      "bestUseCase": "Elite defensive refuge for a small, disciplined group with strict entry control, rainwater storage, boats, and protected mainland food access",
+      "failureMode": "Siege economics: starvation, water shortage, overcrowding, or loss of mainland supply routes beats the walls before zombies do"
     },
     "survivalProfile": {
-      "initial": "Very strong",
+      "initial": "Exceptional",
       "shortTerm": "Strong",
       "longTerm": "Moderate"
     },
     "useCaseAndRisk": {
-      "bestUseCase": "Defense-first refuge with strict population cap",
-      "keyRisk": "Operational success in defense hides unsolved sustainment math"
+      "bestUseCase": "A defense-first tidal fortress used as a compact redoubt while a separate mainland food and supply system is secured.",
+      "keyRisk": "Mistaking an almost perfect defensive position for a self-sufficient settlement; carrying capacity collapses under food, water, and refugee pressure."
     },
-    "realityCheck": "Only works at low headcount with consistent small-boat logistics.",
+    "realityCheck": "Mont-Saint-Michel is one of the finest defensive positions ever built, but it was never designed to be completely self-sufficient. Historically it relied on trade, pilgrims and supplies from the mainland. In a prolonged zombie apocalypse, the greatest challenge would not be holding the walls—it would be feeding everyone behind them.",
     "assumptions": [
-      "Tidal patterns remain exploitable",
-      "No prolonged blockade",
-      "Strict consumption control"
+      "Tidal patterns and bay visibility remain exploitable by trained defenders",
+      "Population is capped before refugee pressure overwhelms space, sanitation, and rationing",
+      "Rainwater harvesting and storage are maintained as critical infrastructure",
+      "Mainland farmland, caches, or supply runs can be protected against zombies and hostile humans",
+      "Boats remain available for evacuation, scouting, fishing, and emergency resupply"
     ],
-    "scoreNarrative": "Defensibility and isolation are elite; sustainability is merely moderate, so long-term success depends on strict throughput discipline.",
+    "scoreNarrative": "Mont Saint-Michel remains one of the highest-rated bases because its defensibility is extraordinary and its tidal isolation is tactically powerful. The revised score keeps defence near the top of the scale but lowers sustainability: limited food production, freshwater storage constraints, small carrying capacity, dependence on mainland resources, and likely refugee pressure mean this is an exceptional fortress, not an autonomous society.",
     "image": "/images/bases/mont-saint-michel.png"
   },
   {

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-02T19:37:48.074164+00:00",
-  "sourceDigest": "9fcc74e54e38189166e0f9e3e45aa84b48d849660d3957fb597d02c6403c5e8d",
+  "generatedAt": "2026-07-07T19:03:16.434429+00:00",
+  "sourceDigest": "0848d3d2869f4d8417d4029ec86dee1764e0ce1849023056280bd2dd2b64e05e",
   "totalBases": 111,
   "scenarioOrder": [
     "long_term_survival",
@@ -35,19 +35,19 @@
         "reason": "Similar trade-off between protection and sustainability."
       },
       {
+        "slug": "mont-saint-michel",
+        "name": "Mont Saint-Michel",
+        "region": "western_europe",
+        "type": "fortified_structure",
+        "overall": 7.8,
+        "reason": "Similar trade-off between protection and sustainability."
+      },
+      {
         "slug": "tigers-nest-monastery",
         "name": "Tiger\u2019s Nest Monastery",
         "region": "south_asia",
         "type": "elevated_stronghold",
         "overall": 6.9,
-        "reason": "Strong defence profile with a different regional context."
-      },
-      {
-        "slug": "mount-huashan",
-        "name": "Mount Huashan",
-        "region": "east_asia",
-        "type": "elevated_stronghold",
-        "overall": 7.1,
         "reason": "Strong defence profile with a different regional context."
       }
     ],
@@ -221,19 +221,19 @@
     ],
     "seychelles": [
       {
-        "slug": "andaman-islands",
-        "name": "Andaman Islands",
-        "region": "south_asia",
-        "type": "isolated_landmass",
-        "overall": 8.3,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
         "slug": "isle-of-eigg-village",
         "name": "Isle of Eigg Village",
         "region": "uk_ireland",
         "type": "remote_settlement",
         "overall": 8.1,
+        "reason": "Similar trade-off between protection and sustainability."
+      },
+      {
+        "slug": "andaman-islands",
+        "name": "Andaman Islands",
+        "region": "south_asia",
+        "type": "isolated_landmass",
+        "overall": 8.3,
         "reason": "Similar trade-off between protection and sustainability."
       },
       {
@@ -3077,20 +3077,20 @@
     ],
     "andaman-islands": [
       {
-        "slug": "isle-of-eigg-village",
-        "name": "Isle of Eigg Village",
-        "region": "uk_ireland",
-        "type": "remote_settlement",
-        "overall": 8.1,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
         "slug": "seychelles",
         "name": "Seychelles",
         "region": "africa",
         "type": "isolated_landmass",
         "overall": 8.0,
         "reason": "Similar trade-off between protection and sustainability."
+      },
+      {
+        "slug": "isle-of-eigg-village",
+        "name": "Isle of Eigg Village",
+        "region": "uk_ireland",
+        "type": "remote_settlement",
+        "overall": 8.1,
+        "reason": "Comparable survival shape, but with weaker defensive coverage."
       },
       {
         "slug": "tasmania",
@@ -3101,19 +3101,19 @@
         "reason": "Strong defence profile with a different regional context."
       },
       {
-        "slug": "fiji-islands",
-        "name": "Fiji Islands",
-        "region": "oceania",
-        "type": "isolated_landmass",
-        "overall": 7.3,
-        "reason": "Comparable isolation, but weaker long-term viability."
-      },
-      {
         "slug": "palawan",
         "name": "Palawan",
         "region": "southeast_asia",
         "type": "isolated_landmass",
         "overall": 7.3,
+        "reason": "Similar defensive profile with lower sustainability."
+      },
+      {
+        "slug": "kodiak-island",
+        "name": "Kodiak Island",
+        "region": "north_america",
+        "type": "isolated_landmass",
+        "overall": 7.2,
         "reason": "Similar defensive profile with lower sustainability."
       }
     ],
@@ -4085,20 +4085,20 @@
     ],
     "isle-of-eigg-village": [
       {
-        "slug": "andaman-islands",
-        "name": "Andaman Islands",
-        "region": "south_asia",
-        "type": "isolated_landmass",
-        "overall": 8.3,
-        "reason": "Similar trade-off between protection and sustainability."
-      },
-      {
         "slug": "seychelles",
         "name": "Seychelles",
         "region": "africa",
         "type": "isolated_landmass",
         "overall": 8.0,
         "reason": "Similar trade-off between protection and sustainability."
+      },
+      {
+        "slug": "andaman-islands",
+        "name": "Andaman Islands",
+        "region": "south_asia",
+        "type": "isolated_landmass",
+        "overall": 8.3,
+        "reason": "Comparable survival shape, but with stronger defensive coverage."
       },
       {
         "slug": "fiji-islands",
@@ -4350,7 +4350,7 @@
         "region": "africa",
         "type": "elevated_stronghold",
         "overall": 7.5,
-        "reason": "Similar defensive profile with lower sustainability."
+        "reason": "Similar trade-off between protection and sustainability."
       },
       {
         "slug": "kargil-war-bunkers",
@@ -4358,7 +4358,7 @@
         "region": "south_asia",
         "type": "subterranean",
         "overall": 7.1,
-        "reason": "Similar defensive profile with lower sustainability."
+        "reason": "Strong defence profile with a different regional context."
       },
       {
         "slug": "tigers-nest-monastery",
@@ -4366,14 +4366,14 @@
         "region": "south_asia",
         "type": "elevated_stronghold",
         "overall": 6.9,
-        "reason": "Similar defensive profile with lower sustainability."
+        "reason": "Similar trade-off between protection and sustainability."
       },
       {
-        "slug": "alcatraz-island",
-        "name": "Alcatraz Island",
-        "region": "north_america",
-        "type": "fortified_structure",
-        "overall": 6.8,
+        "slug": "iwo-jima-underground-bunkers",
+        "name": "Iwo Jima Underground Bunkers",
+        "region": "east_asia",
+        "type": "subterranean",
+        "overall": 7.0,
         "reason": "Comparable isolation, but weaker long-term viability."
       }
     ],
@@ -4690,6 +4690,10 @@
       "title": "Best long-term survival bases"
     },
     "zanzibar-island": {
+      "scenario": "long_term_survival",
+      "title": "Best long-term survival bases"
+    },
+    "matmata-underground-dwellings": {
       "scenario": "long_term_survival",
       "title": "Best long-term survival bases"
     },
@@ -5121,21 +5125,12 @@
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
-          "slug": "mont-saint-michel",
-          "name": "Mont Saint-Michel",
-          "region": "western_europe",
-          "type": "fortified_structure",
-          "overall": 8.2,
-          "rank": 22,
-          "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
-        },
-        {
           "slug": "ile-dyeu",
           "name": "\u00cele d\u2019Yeu",
           "region": "western_europe",
           "type": "isolated_landmass",
           "overall": 7.0,
-          "rank": 23,
+          "rank": 22,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5144,7 +5139,7 @@
           "region": "middle_east",
           "type": "isolated_landmass",
           "overall": 6.9,
-          "rank": 24,
+          "rank": 23,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         },
         {
@@ -5153,6 +5148,15 @@
           "region": "southeast_asia",
           "type": "remote_settlement",
           "overall": 6.8,
+          "rank": 24,
+          "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
+        },
+        {
+          "slug": "matmata-underground-dwellings",
+          "name": "Matmata Underground Dwellings",
+          "region": "africa",
+          "type": "subterranean",
+          "overall": 7.2,
           "rank": 25,
           "reason": "Strong long-term viability driven by high sustainability and stable overall performance."
         }
@@ -5167,7 +5171,7 @@
           "name": "Mont Saint-Michel",
           "region": "western_europe",
           "type": "fortified_structure",
-          "overall": 8.2,
+          "overall": 7.8,
           "rank": 1,
           "reason": "Built for immediate shelter with strong defensive coverage and separation from fast-moving threats."
         },
@@ -5634,12 +5638,21 @@
           "reason": "High overall potential with a sharp trade-off between elite isolation and weaker sustainability."
         },
         {
+          "slug": "mont-saint-michel",
+          "name": "Mont Saint-Michel",
+          "region": "western_europe",
+          "type": "fortified_structure",
+          "overall": 7.8,
+          "rank": 2,
+          "reason": "High overall potential with a sharp trade-off between elite defensibility and weaker sustainability."
+        },
+        {
           "slug": "cheyenne-mountain-complex",
           "name": "Cheyenne Mountain Complex",
           "region": "north_america",
           "type": "subterranean",
           "overall": 9.0,
-          "rank": 2,
+          "rank": 3,
           "reason": "High overall potential with a sharp trade-off between elite defensibility and weaker isolation."
         },
         {
@@ -5648,7 +5661,7 @@
           "region": "east_asia",
           "type": "subterranean",
           "overall": 7.0,
-          "rank": 3,
+          "rank": 4,
           "reason": "High overall potential with a sharp trade-off between elite defensibility and weaker sustainability."
         },
         {
@@ -5657,15 +5670,6 @@
           "region": "east_asia",
           "type": "elevated_stronghold",
           "overall": 6.9,
-          "rank": 4,
-          "reason": "High overall potential with a sharp trade-off between elite defensibility and weaker sustainability."
-        },
-        {
-          "slug": "mont-saint-michel",
-          "name": "Mont Saint-Michel",
-          "region": "western_europe",
-          "type": "fortified_structure",
-          "overall": 8.2,
           "rank": 5,
           "reason": "High overall potential with a sharp trade-off between elite defensibility and weaker sustainability."
         },

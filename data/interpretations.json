@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-02T19:37:48Z",
+  "generatedAt": "2026-07-07T19:03:28Z",
   "source": {
     "bases": "data/bases-index.json",
     "schemaVersion": 1,
-    "hash": "52cbc9a594b158c5872752b79fc1960c3bda912a424e57ed8a842b8f16b2afab"
+    "hash": "1d95ba5119311aff0a55bef7f0ef2e377f774e010fa33e4b2984fc10f645949d"
   },
   "interpretations": [
     {
@@ -665,12 +665,12 @@
     },
     {
       "slug": "mont-saint-michel",
-      "scoreBandLabel": "Exceptional base",
-      "scoreBandDescription": "Strong survival potential with clear strengths, but not without failure risks.",
-      "scoreBandClass": "score-band-exceptional",
+      "scoreBandLabel": "Strong base",
+      "scoreBandDescription": "Reliable under pressure, with manageable trade-offs.",
+      "scoreBandClass": "score-band-strong",
       "archetypeLabel": "Defensive-isolation stronghold",
       "archetypeDescription": "Outstanding protection and separation, but long-term success hinges on fixing sustainability.",
-      "scoreShapeSummary": "Exceptional outcome powered by defence, but performance still bends around weak long-term viability."
+      "scoreShapeSummary": "Built around elite defence; long-term viability is the main constraint."
     },
     {
       "slug": "mount-huashan",
