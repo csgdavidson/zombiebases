@@ -18,6 +18,14 @@ PROFILE_KEYS = ("defensibility", "isolation", "sustainability", "overall")
 SIMILAR_COUNT = 5
 SCENARIO_LIMIT = 25
 
+SIMILAR_OVERRIDES = {
+    "isle-of-eigg-village": [
+        ("tasmania", "Comparable island resilience with much greater scale, but weaker isolation."),
+        ("seychelles", "Comparable island isolation and habitability, but with more dispersed coordination demands."),
+        ("andaman-islands", "Comparable maritime isolation and resource depth, but dependent on inter-island network resilience."),
+    ],
+}
+
 SCENARIO_CONFIG = {
     "long_term_survival": {
         "title": "Best long-term survival bases",
@@ -169,13 +177,27 @@ def build_similar_bases(bases: list[dict]) -> dict[str, list[dict]]:
         if len(selected) < 3:
             selected = candidates[:3]
 
-        similar[slug] = [
+        entries = [
             {
                 **as_base_entry(candidate),
                 "reason": similar_reason(base, candidate, source_profile, profiles[candidate["slug"]]),
             }
             for _, candidate in selected[:SIMILAR_COUNT]
         ]
+
+        if slug in SIMILAR_OVERRIDES:
+            entry_by_slug = {entry["slug"]: entry for entry in entries}
+            for override_slug, override_reason in SIMILAR_OVERRIDES[slug]:
+                if override_slug not in entry_by_slug and override_slug in by_slug:
+                    entry_by_slug[override_slug] = as_base_entry(by_slug[override_slug])
+                if override_slug in entry_by_slug:
+                    entry_by_slug[override_slug]["reason"] = override_reason
+
+            ordered = [entry_by_slug[override_slug] for override_slug, _ in SIMILAR_OVERRIDES[slug] if override_slug in entry_by_slug]
+            ordered.extend(entry for entry in entries if entry["slug"] not in {override_slug for override_slug, _ in SIMILAR_OVERRIDES[slug]})
+            entries = ordered[:SIMILAR_COUNT]
+
+        similar[slug] = entries
 
     return similar
 

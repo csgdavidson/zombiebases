@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-07T19:25:33.403400+00:00",
-  "sourceDigest": "7100b83012db6549270b6b5f778dbbc1c91deafb5fba69fcca1c2f2eb3a9271a",
+  "generatedAt": "2026-07-07T19:46:00.129845+00:00",
+  "sourceDigest": "c300ccf94d855f76c22751ee99c944c7b265b5a4979ba71af7aa823c985c34bc",
   "totalBases": 111,
   "scenarioOrder": [
     "long_term_survival",
@@ -4085,12 +4085,12 @@
     ],
     "isle-of-eigg-village": [
       {
-        "slug": "andaman-islands",
-        "name": "Andaman Islands",
-        "region": "south_asia",
+        "slug": "tasmania",
+        "name": "Tasmania",
+        "region": "oceania",
         "type": "isolated_landmass",
-        "overall": 8.3,
-        "reason": "Comparable survival shape, but with weaker defensive coverage."
+        "overall": 8.1,
+        "reason": "Comparable island resilience with much greater scale, but weaker isolation."
       },
       {
         "slug": "seychelles",
@@ -4098,15 +4098,15 @@
         "region": "africa",
         "type": "isolated_landmass",
         "overall": 8.0,
-        "reason": "Comparable isolation, but weaker long-term viability."
+        "reason": "Comparable island isolation and habitability, but with more dispersed coordination demands."
       },
       {
-        "slug": "tasmania",
-        "name": "Tasmania",
-        "region": "oceania",
+        "slug": "andaman-islands",
+        "name": "Andaman Islands",
+        "region": "south_asia",
         "type": "isolated_landmass",
-        "overall": 8.1,
-        "reason": "Comparable survival shape, but with weaker isolation."
+        "overall": 8.3,
+        "reason": "Comparable maritime isolation and resource depth, but dependent on inter-island network resilience."
       },
       {
         "slug": "chiloe-island",
