@@ -6107,7 +6107,7 @@
       },
       "populationCapacity": {
         "score": 6,
-        "rationale": "Eigg can support a disciplined modest community well, but its carrying capacity is small and overcrowding would quickly exhaust housing, food, and services."
+        "rationale": "Well suited to a modest permanent community but unsuited to rapid population growth."
       },
       "resourceSecurity": {
         "score": 9,
@@ -6115,28 +6115,26 @@
       }
     },
     "description": {
-      "summary": "A rare location that is both naturally isolated and genuinely capable of long-term habitation. Eigg is less a fortress than a sustainable island community: survival depends on protecting a small, disciplined population and refusing growth beyond the island's natural carrying capacity.",
+      "summary": "A genuinely sustainable island refuge where discipline matters more than defence. Eigg succeeds because it combines exceptional isolation with renewable energy, freshwater and an existing year-round community. Its greatest limitation is carrying capacity: survival depends on remaining small enough for the island to support.",
       "strengths": [
-        "Excellent natural isolation from mainland zombie pressure",
-        "Existing permanent community already adapted to island living",
-        "Reliable freshwater availability",
-        "Productive grazing and crofting potential",
-        "Renewable electricity generation already built into local life",
-        "Multiple natural resources for a low-consumption settlement",
-        "Elevated terrain supports coastal observation and early warning"
+        "Exceptional natural isolation from mainland threats",
+        "Established year-round community and local knowledge",
+        "Renewable electricity already in operation",
+        "Reliable freshwater and grazing potential",
+        "Coastal visibility supports early warning",
+        "Diverse local resources for a low-consumption lifestyle"
       ],
       "weaknesses": [
-        "Small carrying capacity limits safe population growth",
-        "Harsh weather can disrupt sea transport and emergency movement",
-        "Limited medical facilities and specialist care",
-        "Specialist equipment and replacement parts still depend on mainland supply",
-        "Little industrial capability for complex repairs or manufacturing",
-        "Housing and food production cannot be expanded quickly without degrading the island"
+        "Limited carrying capacity restricts population growth",
+        "Severe weather can interrupt sea access",
+        "Medical care remains limited",
+        "Specialist repairs still rely on mainland support",
+        "Local manufacturing capacity is modest"
       ]
     },
     "verdict": {
-      "bestUseCase": "Permanent island settlement for a disciplined community of modest size",
-      "failureMode": "Population overload turns resilience into dependence on dangerous mainland supply runs"
+      "bestUseCase": "Long-term refuge for a disciplined community willing to prioritise sustainability over expansion.",
+      "failureMode": "Population pressure"
     },
     "survivalProfile": {
       "initial": "Exceptional",
@@ -6144,10 +6142,10 @@
       "longTerm": "Strong"
     },
     "useCaseAndRisk": {
-      "bestUseCase": "Long-term sustainable island refuge focused on rationing, coastal monitoring, crofting, grazing, freshwater protection, and renewable power maintenance rather than maximum intake",
-      "keyRisk": "Assuming isolation alone guarantees survival, then exceeding the island's carrying capacity until food, medical, fuel, housing, and repair needs force routine mainland resupply"
+      "bestUseCase": "Long-term refuge for a disciplined community willing to prioritise sustainability over expansion.",
+      "keyRisk": "Believing isolation removes the need for careful resource management and population control."
     },
-    "realityCheck": "Eigg sacrifices scale for resilience: it can support a relatively small population exceptionally well, but turning it into a refuge for hundreds would rapidly exhaust food, housing, fuel, and local services.",
+    "realityCheck": "Eigg trades expansion for resilience. A disciplined community of modest size can thrive for years, but attempting to support hundreds of people would quickly overwhelm food production, housing, healthcare and local infrastructure.",
     "assumptions": [
       "Population remains deliberately capped",
       "Landing points are monitored and controlled",

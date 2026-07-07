@@ -802,32 +802,37 @@ function renderCheyenneSurvivalAssessment(base) {
       ]
     },
     'isle-of-eigg-village': {
-      headline: 'A rare location that combines genuine long-term sustainability with natural isolation.',
-      bottomLine: "A rare location that combines genuine long-term sustainability with natural isolation. Eigg\'s greatest strength is not its defences but its ability to support a small, disciplined community indefinitely.",
+      headline: 'A genuinely sustainable island refuge where discipline matters more than defence.',
+      bottomLine: 'A genuinely sustainable island refuge where discipline matters more than defence. Eigg succeeds because it combines exceptional isolation with renewable energy, freshwater and an existing year-round community. Its greatest limitation is carrying capacity: survival depends on remaining small enough for the island to support.',
       pillars: [
         {
           title: 'Defensibility',
           question: 'Can the community survive the outbreak?',
           scoreKey: 'defensibility',
-          bullets: ['Sea separation controls access', 'Elevated terrain supports coastal observation', 'Landing points still require active monitoring']
+          bullets: ['Naturally protected island geography', 'Limited approach routes', 'Existing settlement infrastructure']
         },
         {
           title: 'Isolation',
           question: 'Can the community avoid outside threat and pressure?',
           scoreKey: 'isolation',
-          bullets: ['Excellent natural isolation from mainland zombie pressure', 'Remote location limits sustained external pressure', 'Limited visitor access supports quarantine']
+          bullets: ['Exceptional separation from mainland threats', 'Sea crossing limits casual access', 'Strong natural buffer against population pressure']
         },
         {
           title: 'Sustainability',
           question: 'Can the community sustain itself long term?',
           scoreKey: 'sustainability',
-          bullets: ['Reliable freshwater availability', 'Productive grazing and crofting potential', 'Renewable electricity generation already built into local life']
+          bullets: ['Renewable electricity generation', 'Freshwater availability', 'Grazing, fishing and local food potential', 'Existing permanent community']
         }
       ],
-      tradeoff: ["Eigg can support a modest community exceptionally well, but every additional resident reduces resilience. Long-term success depends on protecting the island\'s carrying capacity rather than expanding it."],
-      failureTitle: 'Population overload',
-      failureBody: 'Food, housing, medical care and local infrastructure become overstretched, forcing dependence on increasingly risky mainland resupply.',
-      evidence: null
+      tradeoff: ['Eigg trades expansion for resilience. A disciplined community of modest size can thrive for years, but attempting to support hundreds of people would quickly overwhelm food production, housing, healthcare and local infrastructure.'],
+      failureTitle: 'Population pressure',
+      failureBody: "Exceeding the island's natural carrying capacity creates growing dependence on imported food, fuel, medicine and specialist equipment, gradually removing the advantages that make Eigg attractive in the first place.",
+      evidence: [
+        ['Strengths', 'Exceptional natural isolation from mainland threats<br>Established year-round community and local knowledge<br>Renewable electricity already in operation<br>Reliable freshwater and grazing potential<br>Coastal visibility supports early warning<br>Diverse local resources for a low-consumption lifestyle'],
+        ['Weaknesses', 'Limited carrying capacity restricts population growth<br>Severe weather can interrupt sea access<br>Medical care remains limited<br>Specialist repairs still rely on mainland support<br>Local manufacturing capacity is modest'],
+        ['Best Use', 'Long-term refuge for a disciplined community willing to prioritise sustainability over expansion.'],
+        ['Key Risk', 'Believing isolation removes the need for careful resource management and population control.']
+      ]
     },
     'mont-saint-michel': {
       headline: 'One of Europe’s strongest defensive positions — but only if food, water and crowd control are solved.',
@@ -945,7 +950,7 @@ function renderSurvivalProfile(base) {
     const status = phase.value || 'Moderate';
     const level = getSurvivalLevel(status);
     const tone = level >= 4 ? 'strong' : level <= 2 ? 'weak' : 'moderate';
-    const bullets = getSurvivalCardBullets(index, tone);
+    const bullets = getSurvivalCardBullets(index, tone, base?.slug);
     const failureLine = getFailureLine(index, primaryRisk);
 
     return `
@@ -964,7 +969,7 @@ function renderSurvivalProfile(base) {
   elements.survivalTimelineCards.innerHTML = cardsMarkup;
 }
 
-function getSurvivalCardBullets(index, tone) {
+function getSurvivalCardBullets(index, tone, slug) {
   const phaseBullets = {
     strong: [
       ['✔ Secure and defensible', '✔ Controlled access', '✖ Early supply dependency'],
@@ -983,7 +988,11 @@ function getSurvivalCardBullets(index, tone) {
     ]
   };
 
-  return phaseBullets[tone][index] || phaseBullets.moderate[index];
+  const bullets = [...(phaseBullets[tone][index] || phaseBullets.moderate[index])];
+  if (slug === 'isle-of-eigg-village' && index === 2 && tone === 'strong') {
+    bullets[1] = '✔ Core systems remain sustainable';
+  }
+  return bullets;
 }
 
 function getFailureLine(index, risk) {
