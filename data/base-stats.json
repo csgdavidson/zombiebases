@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07T19:03:15.569986+00:00",
+  "generatedAt": "2026-07-07T19:25:41.383862+00:00",
   "totalBases": 111,
   "scoreCategories": [
     "overall",
@@ -11,9 +11,9 @@
     "count": 111,
     "averages": {
       "overall": 6.61,
-      "defensibility": 7.29,
-      "isolation": 6.96,
-      "sustainability": 4.94
+      "defensibility": 7.31,
+      "isolation": 6.97,
+      "sustainability": 4.95
     },
     "highest": {
       "slug": "cheyenne-mountain-complex",
@@ -220,15 +220,15 @@
     "uk_ireland": {
       "count": 12,
       "averages": {
-        "overall": 6.52,
-        "defensibility": 7.43,
-        "isolation": 6.88,
-        "sustainability": 4.62
+        "overall": 6.58,
+        "defensibility": 7.62,
+        "isolation": 6.94,
+        "sustainability": 4.72
       },
       "highest": {
         "slug": "isle-of-eigg-village",
         "name": "Isle of Eigg Village",
-        "overall": 8.1
+        "overall": 8.9
       },
       "lowest": {
         "slug": "fastnet-lighthouse",
@@ -374,15 +374,15 @@
     "remote_settlement": {
       "count": 17,
       "averages": {
-        "overall": 6.6,
-        "defensibility": 6.35,
-        "isolation": 7.36,
-        "sustainability": 5.62
+        "overall": 6.65,
+        "defensibility": 6.49,
+        "isolation": 7.41,
+        "sustainability": 5.69
       },
       "highest": {
         "slug": "isle-of-eigg-village",
         "name": "Isle of Eigg Village",
-        "overall": 8.1
+        "overall": 8.9
       },
       "lowest": {
         "slug": "utqiagvik",

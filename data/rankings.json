@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07T19:03:14.744975+00:00",
+  "generatedAt": "2026-07-07T19:25:40.560440+00:00",
   "totalBases": 111,
   "global": [
     {
@@ -13,22 +13,22 @@
       "percentile": 0.9
     },
     {
+      "slug": "isle-of-eigg-village",
+      "name": "Isle of Eigg Village",
+      "region": "uk_ireland",
+      "type": "remote_settlement",
+      "summary": "A rare location that is both naturally isolated and genuinely capable of long-term habitation. Eigg is less a fortress than a sustainable island community: survival depends on protecting a small, disciplined population and refusing growth beyond the island's natural carrying capacity.",
+      "overall": 8.9,
+      "rank": 2,
+      "percentile": 1.8
+    },
+    {
       "slug": "andaman-islands",
       "name": "Andaman Islands",
       "region": "south_asia",
       "type": "isolated_landmass",
       "summary": "The Andamans are one of the strongest long-horizon options: maritime isolation and resource diversity create resilience if governance and inter-island logistics stay coherent.",
       "overall": 8.3,
-      "rank": 2,
-      "percentile": 1.8
-    },
-    {
-      "slug": "isle-of-eigg-village",
-      "name": "Isle of Eigg Village",
-      "region": "uk_ireland",
-      "type": "remote_settlement",
-      "summary": "Eigg is a rare island community with real off-grid credibility; what kills you here is a bad season that breaks food, fuel, and medical margins before security fails.",
-      "overall": 8.1,
       "rank": 3,
       "percentile": 2.7
     },
@@ -2020,8 +2020,8 @@
         "name": "Isle of Eigg Village",
         "region": "uk_ireland",
         "type": "remote_settlement",
-        "summary": "Eigg is a rare island community with real off-grid credibility; what kills you here is a bad season that breaks food, fuel, and medical margins before security fails.",
-        "overall": 8.1,
+        "summary": "A rare location that is both naturally isolated and genuinely capable of long-term habitation. Eigg is less a fortress than a sustainable island community: survival depends on protecting a small, disciplined population and refusing growth beyond the island's natural carrying capacity.",
+        "overall": 8.9,
         "rank": 1,
         "percentile": 8.33
       },
@@ -3048,8 +3048,8 @@
         "name": "Isle of Eigg Village",
         "region": "uk_ireland",
         "type": "remote_settlement",
-        "summary": "Eigg is a rare island community with real off-grid credibility; what kills you here is a bad season that breaks food, fuel, and medical margins before security fails.",
-        "overall": 8.1,
+        "summary": "A rare location that is both naturally isolated and genuinely capable of long-term habitation. Eigg is less a fortress than a sustainable island community: survival depends on protecting a small, disciplined population and refusing growth beyond the island's natural carrying capacity.",
+        "overall": 8.9,
         "rank": 1,
         "percentile": 5.88
       },
@@ -3705,8 +3705,8 @@
           "name": "Isle of Eigg Village",
           "region": "uk_ireland",
           "type": "remote_settlement",
-          "summary": "Eigg is a rare island community with real off-grid credibility; what kills you here is a bad season that breaks food, fuel, and medical margins before security fails.",
-          "overall": 8.1,
+          "summary": "A rare location that is both naturally isolated and genuinely capable of long-term habitation. Eigg is less a fortress than a sustainable island community: survival depends on protecting a small, disciplined population and refusing growth beyond the island's natural carrying capacity.",
+          "overall": 8.9,
           "rank": 1,
           "percentile": 8.33
         },
@@ -3953,8 +3953,8 @@
           "name": "Isle of Eigg Village",
           "region": "uk_ireland",
           "type": "remote_settlement",
-          "summary": "Eigg is a rare island community with real off-grid credibility; what kills you here is a bad season that breaks food, fuel, and medical margins before security fails.",
-          "overall": 8.1,
+          "summary": "A rare location that is both naturally isolated and genuinely capable of long-term habitation. Eigg is less a fortress than a sustainable island community: survival depends on protecting a small, disciplined population and refusing growth beyond the island's natural carrying capacity.",
+          "overall": 8.9,
           "rank": 1,
           "percentile": 5.88
         },
