@@ -15,7 +15,8 @@
     types: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 21h10M8 21l1-9h6l1 9M9 12 7 4h10l-2 8M6 8h12"/></svg>',
     info: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17v-5M12 8h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>',
     random: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM8 8h.01M16 8h.01M8 16h.01M16 16h.01M12 12h.01"/></svg>',
-    scenarios: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 4 7H8zm-6 18 4-7H2zm12 0 4-7h-8z"/></svg>'
+    scenarios: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 4 7H8zm-6 18 4-7H2zm12 0 4-7h-8z"/></svg>',
+    target: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>'
   })[name];
 
   function isHome() { return location.pathname === '/' || location.pathname.endsWith('/index.html'); }
@@ -46,8 +47,12 @@
     const moreItems = [
       ['Regions', '/rankings-region.html', 'globe'],
       ['Types', '/rankings-type.html', 'types'],
-      ['Field Manual', '/field-manual', 'map'],
-      ['Scenarios', '/scenarios.html', 'scenarios']
+      ['Scenarios', '/scenarios.html', 'scenarios'],
+      'divider',
+      ['Survival Quiz', '/quiz/', 'target'],
+      ['Random Base', '#random-base', 'random'],
+      'divider',
+      ['Field Manual', '/field-manual', 'map']
     ];
 
     const search = document.createElement('form');
@@ -61,7 +66,7 @@
 
     const actions = document.createElement('div');
     actions.className = 'desktop-nav-actions';
-    actions.innerHTML = `<button class="desktop-random-base" type="button" data-random-base>${icon('random')}<span>Random Base</span></button><div class="desktop-more-wrap"><button class="desktop-more-button" type="button" aria-label="Open more navigation" aria-expanded="false" aria-controls="desktop-more-menu" data-desktop-more>${icon('more')}</button><div id="desktop-more-menu" class="desktop-more-menu" role="menu" hidden>${moreItems.map(([label, href, key]) => `<a href="${href}" role="menuitem">${icon(key)}<span>${label}</span></a>`).join('')}</div></div>`;
+    actions.innerHTML = `<button class="desktop-random-base" type="button" data-random-base>${icon('random')}<span>Random Base</span></button><div class="desktop-more-wrap"><button class="desktop-more-button" type="button" aria-label="Open more navigation" aria-expanded="false" aria-controls="desktop-more-menu" data-desktop-more>${icon('more')}</button><div id="desktop-more-menu" class="desktop-more-menu" role="menu" hidden>${moreItems.map((item) => item === 'divider' ? '<div class="desktop-more-divider" role="separator"></div>' : `<a href="${item[1]}" role="menuitem" ${pathMatches(item[1]) ? 'aria-current="page"' : ''}>${icon(item[2])}<span>${item[0]}</span></a>`).join('')}</div></div>`;
     nav.after(actions);
   }
 
@@ -98,9 +103,10 @@
     const menuItems = [
       ['Regions', '/rankings-region.html', 'Browse best bases by world region'],
       ['Types', '/rankings-type.html', 'Castles, islands, bunkers and more'],
-      ['Field Manual', '/field-manual', 'Methodology & scoring'],
       ['Scenarios', '/scenarios.html', 'Outbreak planning lenses'],
-      ['Random Base', '#random-base', 'Discover a surprise dossier']
+      ['Survival Quiz', '/quiz/', 'Discover your ideal survival base'],
+      ['Random Base', '#random-base', 'Discover a surprise dossier'],
+      ['Field Manual', '/field-manual', 'Methodology & scoring']
     ];
     const overlay = document.createElement('div');
     overlay.id = 'mobile-more-menu';
@@ -108,7 +114,7 @@
     overlay.hidden = true;
     overlay.innerHTML = `<div class="mobile-sheet-backdrop" data-close-more></div><section class="mobile-sheet" role="dialog" aria-modal="true" aria-labelledby="mobile-more-title">
       <div class="mobile-sheet-handle" aria-hidden="true"></div><div class="mobile-sheet-top"><h2 id="mobile-more-title">More</h2><button class="mobile-icon-button" type="button" data-close-more aria-label="Close menu">${icon('close')}</button></div>
-      <div class="mobile-menu-list">${menuItems.map(([label, href, help]) => `<a href="${href}" data-menu-link="${label}"><span><strong>${label}</strong><small>${help}</small></span>${icon('chevron')}</a>`).join('')}</div>
+      <div class="mobile-menu-list">${menuItems.map(([label, href, help]) => `<a href="${href}" data-menu-link="${label}" ${pathMatches(href) ? 'aria-current="page"' : ''}><span><strong>${label}</strong><small>${help}</small></span>${icon('chevron')}</a>`).join('')}</div>
     </section>`;
     document.body.append(overlay);
   }
