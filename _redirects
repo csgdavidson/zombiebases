@@ -1,4 +1,6 @@
 # Standalone static pages must be registered before dynamic base detail rewrites.
+/quiz /quiz.html 200
+/quiz/ /quiz.html 200
 /field-manual /field-manual.html 200
 /field-manual/ /field-manual.html 200
 
