@@ -6,6 +6,7 @@ import shutil
 ROOT = Path(__file__).resolve().parents[1]
 CLEAN_PAGES = {
     "field-manual.html": "field-manual/index.html",
+    "quiz.html": "quiz/index.html",
 }
 
 
