@@ -142,11 +142,19 @@
                 </label>
               </div>
               <p class="compare-available-count" data-count aria-live="polite">Loading locations…</p>
-              <div class="compare-base-select-wrap">
-                <label class="compare-base-select-label" for="compare-setup-primary">Choose a base</label>
-                <select id="compare-setup-primary" class="compare-base-select" data-base-select disabled>
-                  <option value="">Choose a base</option>
-                </select>
+              <div class="compare-base-select-wrap" data-base-combobox data-combobox-id="compare-setup-primary">
+                <span class="compare-base-select-label" id="compare-setup-primary-label">Choose a base</span>
+                <button id="compare-setup-primary" class="compare-base-combobox" type="button" data-combobox-button role="combobox" aria-labelledby="compare-setup-primary-label compare-setup-primary-value" aria-expanded="false" aria-controls="compare-setup-primary-listbox" aria-haspopup="listbox" disabled>
+                  <span id="compare-setup-primary-value" data-combobox-value>Choose a base</span>
+                  <span class="compare-combobox-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="compare-combobox-panel" data-combobox-panel hidden>
+                  <label class="sr-only" for="compare-setup-primary-search">Search filtered bases</label>
+                  <input id="compare-setup-primary-search" class="compare-combobox-search" type="search" data-combobox-search autocomplete="off">
+                  <div id="compare-setup-primary-listbox" class="compare-combobox-list" role="listbox" data-combobox-list></div>
+                  <p class="compare-combobox-empty" data-combobox-empty hidden>No bases match your search. <button type="button" data-clear-search>Clear search</button></p>
+                  <p class="compare-combobox-footer" data-combobox-footer aria-live="polite"></p>
+                </div>
                 <button class="compare-clear-filters" type="button" data-clear-filters hidden>Clear filters</button>
               </div>
             </div>
@@ -170,11 +178,19 @@
                 </label>
               </div>
               <p class="compare-available-count" data-count aria-live="polite">Loading locations…</p>
-              <div class="compare-base-select-wrap">
-                <label class="compare-base-select-label" for="compare-setup-secondary">Choose a base</label>
-                <select id="compare-setup-secondary" class="compare-base-select" data-base-select disabled>
-                  <option value="">Choose a base</option>
-                </select>
+              <div class="compare-base-select-wrap" data-base-combobox data-combobox-id="compare-setup-secondary">
+                <span class="compare-base-select-label" id="compare-setup-secondary-label">Choose a base</span>
+                <button id="compare-setup-secondary" class="compare-base-combobox" type="button" data-combobox-button role="combobox" aria-labelledby="compare-setup-secondary-label compare-setup-secondary-value" aria-expanded="false" aria-controls="compare-setup-secondary-listbox" aria-haspopup="listbox" disabled>
+                  <span id="compare-setup-secondary-value" data-combobox-value>Choose a base</span>
+                  <span class="compare-combobox-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="compare-combobox-panel" data-combobox-panel hidden>
+                  <label class="sr-only" for="compare-setup-secondary-search">Search filtered bases</label>
+                  <input id="compare-setup-secondary-search" class="compare-combobox-search" type="search" data-combobox-search autocomplete="off">
+                  <div id="compare-setup-secondary-listbox" class="compare-combobox-list" role="listbox" data-combobox-list></div>
+                  <p class="compare-combobox-empty" data-combobox-empty hidden>No bases match your search. <button type="button" data-clear-search>Clear search</button></p>
+                  <p class="compare-combobox-footer" data-combobox-footer aria-live="polite"></p>
+                </div>
                 <button class="compare-clear-filters" type="button" data-clear-filters hidden>Clear filters</button>
               </div>
             </div>
@@ -186,9 +202,13 @@
       </section>
 
       <section class="compare-lab-panel compare-suggestions-panel compare-curated-section" aria-labelledby="compare-curated-heading">
-        <div class="section-heading-row">
-          <h2 id="compare-curated-heading">Not sure where to start?</h2>
-          <p class="section-helper">Open one of these curated comparisons.</p>
+        <div class="compare-curated-heading">
+          <span class="compare-curated-icon" aria-hidden="true">⌖</span>
+          <div>
+            <p class="eyebrow">CURATED MATCHUPS</p>
+            <h2 id="compare-curated-heading">Not sure where to start?</h2>
+            <p class="section-helper">Three hand-picked comparisons to spark ideas and explore different survival strategies.</p>
+          </div>
         </div>
         <div id="compare-featured-matchups" class="matchup-card-grid compare-curated-grid"></div>
       </section>

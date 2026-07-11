@@ -10683,7 +10683,6 @@ html {
   font-weight: 900;
 }
 
-.compare-base-select,
 .compare-filter-label select {
   appearance: none;
   background-image:
@@ -10696,27 +10695,12 @@ html {
   background-repeat: no-repeat;
 }
 
-.compare-base-select {
-  width: 100%;
-  min-height: 54px;
-  border: 1px solid rgba(15, 23, 42, .14);
-  border-radius: var(--radius-md);
-  background-color: #fff;
-  color: var(--text);
-  padding: 0 2.4rem 0 1rem;
-  font: inherit;
-  font-weight: 850;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
-}
-
-.compare-base-select:focus-visible,
 .compare-clear-filters:focus-visible {
   outline: 3px solid rgba(47, 125, 60, .22);
   outline-offset: 3px;
   border-color: var(--accent);
 }
 
-.compare-base-select:disabled,
 .compare-filter-label select:disabled {
   cursor: not-allowed;
   opacity: .58;
@@ -10844,4 +10828,383 @@ html {
   .summary-stats, .category-counts { justify-content: space-between; gap: var(--space-3); }
   .radar-card figcaption, .compare-update-row .compare-select-grid { grid-template-columns: 1fr; }
   .compare-again-vs { justify-self: center; margin: 0; }
+}
+
+/* Compare landing final polish: curated matchups, custom base combobox, footer rhythm. */
+.comparison-page-main {
+  padding-bottom: clamp(64px, 7vw, 96px);
+}
+
+.compare-curated-section {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(47, 125, 60, .2);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at 10% 8%, rgba(47, 125, 60, .12), transparent 18rem),
+    linear-gradient(135deg, rgba(248, 252, 246, .98), rgba(255, 255, 255, .94));
+  box-shadow: 0 18px 50px rgba(15, 23, 42, .08);
+  padding: clamp(var(--space-4), 3.5vw, var(--space-6));
+}
+
+.compare-curated-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .35;
+  background-image: linear-gradient(135deg, rgba(47, 125, 60, .12) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: linear-gradient(90deg, transparent, #000 20%, transparent 78%);
+}
+
+.compare-curated-heading {
+  position: relative;
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+}
+
+.compare-curated-heading .eyebrow,
+.compare-curated-heading .section-helper {
+  margin: 0;
+}
+
+.compare-curated-icon {
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  background: rgba(47, 125, 60, .12);
+  color: var(--accent-strong);
+  font-weight: 950;
+}
+
+.compare-curated-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.curated-matchup-card {
+  display: flex;
+  min-width: 0;
+  overflow: hidden;
+  flex-direction: column;
+  border: 1px solid rgba(15, 23, 42, .12);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, .96);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, .08);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.curated-matchup-image-wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: rgba(15, 23, 42, .08);
+}
+
+.curated-matchup-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .22s ease;
+}
+
+.curated-category-badge {
+  position: absolute;
+  top: .85rem;
+  left: .85rem;
+  border-radius: var(--radius-pill);
+  background: rgba(17, 92, 45, .92);
+  color: #fff;
+  padding: .35rem .65rem;
+  font-size: .68rem;
+  font-weight: 950;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, .18);
+}
+
+.curated-category-fortress-showdown { background: rgba(157, 81, 19, .94); }
+.curated-category-opposite-strategies { background: rgba(71, 65, 132, .94); }
+
+.curated-matchup-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.curated-pair {
+  display: grid;
+  gap: .45rem;
+  color: #10243c;
+  font-size: 1.04rem;
+  line-height: 1.25;
+}
+
+.curated-pair span {
+  display: inline-grid;
+  place-items: center;
+  width: fit-content;
+  min-width: 1.65rem;
+  min-height: 1.35rem;
+  border-radius: var(--radius-pill);
+  background: #10243c;
+  color: #fff;
+  padding: .12rem .42rem;
+  font-size: .62rem;
+  font-weight: 950;
+  letter-spacing: .08em;
+}
+
+.curated-reason {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: .9rem;
+}
+
+.curated-link-text {
+  margin-top: auto;
+  color: var(--accent-strong);
+  font-weight: 950;
+}
+
+.curated-matchup-card:hover,
+.curated-matchup-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(47, 125, 60, .42);
+  box-shadow: 0 18px 42px rgba(15, 23, 42, .13);
+}
+
+.curated-matchup-card:hover img,
+.curated-matchup-card:focus-visible img {
+  transform: scale(1.025);
+}
+
+.compare-base-select-wrap {
+  position: relative;
+}
+
+.compare-base-combobox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: 54px;
+  border: 1px solid rgba(15, 23, 42, .14);
+  border-radius: var(--radius-md);
+  background: #fff;
+  color: var(--text);
+  padding: 0 1rem;
+  font: inherit;
+  font-weight: 850;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 8px 20px rgba(15, 23, 42, .04);
+}
+
+.compare-base-combobox:focus-visible,
+.compare-combobox-search:focus-visible,
+.compare-combobox-option:focus-visible {
+  outline: 3px solid rgba(47, 125, 60, .22);
+  outline-offset: 3px;
+  border-color: var(--accent);
+}
+
+.compare-base-combobox:disabled {
+  cursor: not-allowed;
+  opacity: .58;
+  background: rgba(15, 23, 42, .04);
+}
+
+.compare-combobox-chevron {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #10243c;
+  transition: transform .16s ease;
+}
+
+.compare-base-select-wrap.is-open .compare-combobox-chevron {
+  transform: rotate(180deg);
+}
+
+.compare-combobox-panel {
+  position: absolute;
+  top: calc(100% + .45rem);
+  left: 0;
+  right: 0;
+  z-index: 60;
+  overflow: hidden;
+  border: 1px solid rgba(47, 125, 60, .22);
+  border-radius: var(--radius-md);
+  background: #fff;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, .16);
+}
+
+.compare-combobox-search {
+  width: calc(100% - var(--space-3));
+  min-height: 44px;
+  margin: .55rem;
+  border: 1px solid rgba(15, 23, 42, .12);
+  border-radius: calc(var(--radius-md) - 4px);
+  padding: 0 .85rem;
+  font: inherit;
+}
+
+.compare-combobox-list {
+  display: grid;
+  max-height: min(370px, 48vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: .25rem .55rem .55rem;
+}
+
+.compare-combobox-option {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) auto;
+  gap: .75rem;
+  align-items: center;
+  min-height: 58px;
+  border: 0;
+  border-radius: calc(var(--radius-md) - 4px);
+  background: transparent;
+  color: var(--text);
+  padding: .55rem;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.compare-combobox-option:hover,
+.compare-combobox-option.is-active {
+  background: rgba(47, 125, 60, .09);
+}
+
+.compare-combobox-option.is-disabled {
+  opacity: .48;
+  cursor: not-allowed;
+}
+
+.compare-combobox-option img {
+  width: 48px;
+  height: 38px;
+  border-radius: .45rem;
+  object-fit: cover;
+  background: rgba(15, 23, 42, .08);
+}
+
+.compare-combobox-option-copy {
+  display: grid;
+  min-width: 0;
+  gap: .12rem;
+}
+
+.compare-combobox-option-copy strong,
+.compare-combobox-option-copy small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.compare-combobox-option-copy small {
+  color: var(--text-secondary);
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.compare-combobox-option em {
+  border-radius: var(--radius-pill);
+  background: rgba(47, 125, 60, .1);
+  color: var(--accent-strong);
+  padding: .25rem .5rem;
+  font-style: normal;
+  font-size: .84rem;
+  font-weight: 950;
+}
+
+.compare-combobox-empty,
+.compare-combobox-footer {
+  margin: 0;
+  border-top: 1px solid rgba(15, 23, 42, .08);
+  padding: .72rem .9rem;
+  color: var(--text-secondary);
+  font-size: .84rem;
+  font-weight: 800;
+}
+
+.compare-combobox-empty button {
+  border: 0;
+  background: transparent;
+  color: var(--accent-strong);
+  font: inherit;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  .compare-curated-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .comparison-page-main {
+    padding-bottom: calc(56px + env(safe-area-inset-bottom));
+  }
+
+  .compare-curated-heading {
+    gap: var(--space-2);
+  }
+
+  .compare-curated-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .curated-matchup-image-wrap {
+    aspect-ratio: 16 / 8.4;
+  }
+
+  .compare-combobox-panel {
+    position: fixed;
+    left: max(12px, env(safe-area-inset-left));
+    right: max(12px, env(safe-area-inset-right));
+    top: auto;
+    bottom: calc(78px + env(safe-area-inset-bottom));
+    max-height: calc(100vh - 120px - env(safe-area-inset-bottom));
+  }
+
+  .compare-combobox-list {
+    max-height: min(52vh, 360px);
+  }
+
+  .compare-combobox-option {
+    min-height: 64px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curated-matchup-card,
+  .curated-matchup-image-wrap img,
+  .compare-combobox-chevron {
+    transition: none;
+  }
+
+  .curated-matchup-card:hover,
+  .curated-matchup-card:focus-visible {
+    transform: none;
+  }
 }
