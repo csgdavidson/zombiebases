@@ -59,6 +59,14 @@
         <div id="overall-winner-summary" class="overall-winner-summary"></div>
       </section>
 
+      <section class="content-section category-overview-section" aria-label="Category overview">
+        <div class="section-heading-row">
+          <p class="eyebrow">Category overview</p>
+          <h3>At a glance</h3>
+        </div>
+        <div id="category-overview" class="category-overview-grid"></div>
+      </section>
+
       <section class="content-section score-comparison-section" aria-label="Score comparison">
         <div class="section-heading-row">
           <p class="eyebrow">Scoreboard</p>
@@ -74,16 +82,8 @@
         <div id="score-comparison-body" class="score-card-list"></div>
       </section>
 
-      <section id="strengths-verdict" class="comparison-insights" aria-label="Key deciding factors">
-        <div id="key-findings" class="insight-grid"></div>
-      </section>
-
-      <section class="content-section final-verdict-section" aria-label="Deterministic verdicts">
-        <div class="section-heading-row">
-          <p class="eyebrow">Final verdict</p>
-          <h3 id="verdict-heading">Final verdict</h3>
-        </div>
-        <div id="verdict-list" class="verdict-grid"></div>
+      <section class="content-section recommendation-section" aria-label="Recommendation">
+        <div id="recommendation-panel" class="recommendation-panel"></div>
       </section>
 
       <section class="content-section" aria-label="Key strengths and trade-offs">
@@ -99,14 +99,15 @@
         <p class="base-meta">Change either side of this matchup, then open the updated comparison.</p>
         <div class="compare-update-row">
           <div class="compare-select-grid">
-          <label for="compare-current-primary" class="compare-select-label">
-            First base
-            <select id="compare-current-primary"></select>
-          </label>
-          <label for="compare-current-secondary" class="compare-select-label">
-            Second base
-            <select id="compare-current-secondary"></select>
-          </label>
+            <label for="compare-current-primary" class="compare-select-label">
+              First base
+              <select id="compare-current-primary"></select>
+            </label>
+            <div class="compare-again-vs" aria-hidden="true">VS</div>
+            <label for="compare-current-secondary" class="compare-select-label">
+              Second base
+              <select id="compare-current-secondary"></select>
+            </label>
           </div>
           <button id="compare-current-button" class="compare-button" type="button">Update comparison</button>
         </div>
