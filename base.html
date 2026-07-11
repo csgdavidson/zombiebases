@@ -103,18 +103,18 @@
         <div id="survival-timeline-cards" class="survival-timeline-cards" aria-label="Survival timeline cards"></div>
       </section>
 
-      <section id="detail-compare-section" class="content-section detail-compare-card" aria-label="Compare this base" hidden>
+      <section id="detail-compare-section" class="content-section detail-compare-card detail-compare-explorer" aria-label="Compare this base" hidden>
         <div class="detail-compare-copy">
           <p class="section-kicker">Base comparison</p>
-          <h3>Compare this base</h3>
-          <p>See how this location stacks up against another survival base.</p>
+          <h3>Choose the next rival</h3>
+          <p id="detail-compare-intro">Compare this location against similar bases, stronger alternatives, or wild-card rivals with a different survival profile.</p>
         </div>
-        <form id="detail-compare-form" class="detail-compare-form">
-          <label for="detail-compare-select">Choose another base</label>
+        <div id="detail-compare-recommendations" class="detail-matchup-grid" aria-label="Recommended comparisons"></div>
+        <form id="detail-compare-form" class="detail-compare-form detail-compare-manual">
+          <label for="detail-compare-select">Search any base</label>
           <div class="detail-compare-controls">
-            <select id="detail-compare-select" required>
-              <option value="">Select a base</option>
-            </select>
+            <input id="detail-compare-select" list="detail-compare-options" type="search" autocomplete="off" placeholder="Search all locations" required>
+            <datalist id="detail-compare-options"></datalist>
             <button class="compare-button" type="submit">Compare bases</button>
           </div>
         </form>
