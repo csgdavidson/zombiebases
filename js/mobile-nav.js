@@ -28,8 +28,7 @@
     const current = location.pathname.replace(/\/index\.html$/, '/') || '/';
     const url = new URL(href, location.origin);
     const target = url.pathname.replace(/\/index\.html$/, '/') || '/';
-    if (target === '/' && (url.searchParams.get('view') === 'map' || url.hash === '#map-view')) return isHome() && (new URLSearchParams(location.search).get('view') === 'map' || location.hash === '#map-view');
-    if (target === '/') return isHome() && new URLSearchParams(location.search).get('view') !== 'map';
+    if (target === '/') return isHome();
     return current === target || current.startsWith(`${target.replace(/\/$/, '')}/`);
   }
 
@@ -41,7 +40,7 @@
     const primaryItems = [
       ['Explore', '/', 'explore'],
       ['Rankings', '/rankings.html', 'rankings'],
-      ['Map', '/?view=map', 'map'],
+      ['Field Manual', '/field-manual', 'map'],
       ['Compare', '/compare.html', 'compare']
     ];
     const moreItems = [
@@ -50,9 +49,7 @@
       ['Scenarios', '/scenarios.html', 'scenarios'],
       'divider',
       ['Survival Quiz', '/quiz/', 'target'],
-      ['Random Base', '#random-base', 'random'],
-      'divider',
-      ['Field Manual', '/field-manual', 'map']
+      ['Random Base', '#random-base', 'random']
     ];
 
     const search = document.createElement('form');
@@ -86,11 +83,10 @@
     const nav = document.createElement('nav');
     nav.className = 'mobile-bottom-nav';
     nav.setAttribute('aria-label', 'Mobile primary navigation');
-    const mapActive = isHome() && (new URLSearchParams(location.search).get('view') === 'map' || location.hash === '#map-view');
     const items = [
-      ['Explore', '/', 'explore', isHome() && !mapActive],
+      ['Explore', '/', 'explore', isHome()],
       ['Rankings', '/rankings.html', 'rankings', location.pathname.endsWith('/rankings.html')],
-      ['Map', '/?view=map', 'map', mapActive],
+      ['Field Manual', '/field-manual', 'map', pathMatches('/field-manual')],
       ['Compare', '/compare.html', 'compare', location.pathname.endsWith('/compare.html')],
     ];
     nav.innerHTML = items.map(([label, href, key, active]) => `<a href="${href}" ${active ? 'aria-current="page"' : ''}>${icon(key)}<span>${label}</span></a>`).join('') +
@@ -105,8 +101,7 @@
       ['Types', '/rankings-type.html', 'Castles, islands, bunkers and more'],
       ['Scenarios', '/scenarios.html', 'Outbreak planning lenses'],
       ['Survival Quiz', '/quiz/', 'Discover your ideal survival base'],
-      ['Random Base', '#random-base', 'Discover a surprise dossier'],
-      ['Field Manual', '/field-manual', 'Methodology & scoring']
+      ['Random Base', '#random-base', 'Discover a surprise dossier']
     ];
     const overlay = document.createElement('div');
     overlay.id = 'mobile-more-menu';
