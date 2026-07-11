@@ -147,6 +147,13 @@ const elements = {
   compareRecommendations: document.getElementById('detail-compare-recommendations'),
   heroSection: document.getElementById('hero-section'),
   heroImage: document.getElementById('base-hero-image'),
+  compactHeroSection: document.getElementById('compact-hero-section'),
+  compactHeroImage: document.getElementById('compact-hero-image'),
+  compactBaseName: document.getElementById('compact-base-name'),
+  compactBaseMeta: document.getElementById('compact-base-meta'),
+  compactRankingList: document.getElementById('compact-ranking-list'),
+  compactScoreSection: document.getElementById('compact-score-section'),
+  compactBackLink: document.getElementById('compact-back-link'),
   scoreSection: document.getElementById('score-section'),
   scoreEmpty: document.getElementById('score-empty'),
   scoreOverall: document.getElementById('base-score-overall'),
@@ -591,6 +598,47 @@ function renderHero(base) {
   };
   elements.heroImage.alt = `Feature image for ${base.name}`;
   elements.heroSection.hidden = false;
+}
+
+function renderCompactHero(base) {
+  if (!elements.compactHeroSection || !elements.compactHeroImage) {
+    return;
+  }
+
+  const imageUrl = getHeroImage(base);
+  if (!imageUrl) {
+    elements.compactHeroSection.hidden = true;
+    return;
+  }
+
+  elements.compactHeroImage.src = imageUrl;
+  elements.compactHeroImage.onerror = () => {
+    elements.compactHeroImage.onerror = null;
+    elements.compactHeroImage.src = HERO_IMAGE_FALLBACK_URL;
+  };
+  elements.compactHeroImage.alt = `Feature image for ${base.name}`;
+  if (elements.compactBaseName) {
+    elements.compactBaseName.textContent = base.name;
+  }
+  if (elements.compactBaseMeta) {
+    const type = labelFor('type', base.type);
+    const region = labelFor('region', base.region);
+    elements.compactBaseMeta.textContent = `Type: ${type} • Region: ${region}`;
+  }
+  if (elements.compactBackLink && elements.backLink) {
+    elements.compactBackLink.href = elements.backLink.href;
+  }
+  elements.compactHeroSection.hidden = false;
+}
+
+function syncCompactHeroDetails() {
+  if (elements.compactRankingList && elements.rankingList) {
+    elements.compactRankingList.innerHTML = elements.rankingList.innerHTML;
+  }
+  if (elements.compactScoreSection && elements.scoreSection) {
+    elements.compactScoreSection.innerHTML = elements.scoreSection.innerHTML.replace(/id=\"([^\"]+)\"/g, 'data-cloned-id=\"$1\"');
+    elements.compactScoreSection.hidden = elements.scoreSection.hidden;
+  }
 }
 
 function renderSummary(base) {
@@ -1573,6 +1621,7 @@ function showBase(base, bases, params, rankings, discovery) {
   renderMetaRow(base);
   renderCompareCard(base, bases);
   renderHero(base);
+  renderCompactHero(base);
   const hasCheyenneAssessment = renderCheyenneSurvivalAssessment(base);
   const summaryPanel = document.querySelector('.base-summary-panel');
   if (summaryPanel) {
@@ -1587,6 +1636,7 @@ function showBase(base, bases, params, rankings, discovery) {
     elements.survivalCharacteristicsSection.hidden = true;
   }
   renderRankingPosition(base, rankings);
+  syncCompactHeroDetails();
   if (!isV2Pilot) {
     renderSurvivalProfile(base);
   } else {
