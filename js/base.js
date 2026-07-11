@@ -607,9 +607,11 @@ function renderHero(base) {
   }
 
   elements.heroImage.src = imageUrl;
+  elements.heroSection.style.setProperty('--hero-image-url', `url("${imageUrl.replace(/"/g, '\\"')}")`);
   elements.heroImage.onerror = () => {
     elements.heroImage.onerror = null;
     elements.heroImage.src = HERO_IMAGE_FALLBACK_URL;
+    elements.heroSection.style.setProperty('--hero-image-url', `url("${HERO_IMAGE_FALLBACK_URL}")`);
   };
   elements.heroImage.alt = `Feature image for ${base.name}`;
   elements.heroSection.hidden = false;
