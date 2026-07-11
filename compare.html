@@ -132,20 +132,22 @@
                 <span class="compare-step-badge" aria-hidden="true">1</span>
                 <h3>First base</h3>
               </div>
-              <div class="compare-combobox-wrap">
-                <label class="sr-only" for="compare-setup-primary">Search for a first base</label>
-                <input id="compare-setup-primary" class="compare-combobox-input" type="search" autocomplete="off" placeholder="Search for a base..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="compare-setup-primary-results">
-                <div id="compare-setup-primary-results" class="compare-autocomplete-results" role="listbox" hidden></div>
-              </div>
               <div class="compare-filter-grid">
                 <label class="compare-filter-label" for="compare-primary-type">Type
-                  <select id="compare-primary-type" data-filter="type"><option value="">All Types</option></select>
+                  <select id="compare-primary-type" data-filter="type" disabled><option value="">All Types</option></select>
                 </label>
                 <label class="compare-filter-label" for="compare-primary-region">Region
-                  <select id="compare-primary-region" data-filter="region"><option value="">All Regions</option></select>
+                  <select id="compare-primary-region" data-filter="region" disabled><option value="">All Regions</option></select>
                 </label>
               </div>
-              <p class="compare-available-count" data-count>0 locations available</p>
+              <p class="compare-available-count" data-count aria-live="polite">Loading locations…</p>
+              <div class="compare-base-select-wrap">
+                <label class="compare-base-select-label" for="compare-setup-primary">Choose a base</label>
+                <select id="compare-setup-primary" class="compare-base-select" data-base-select disabled>
+                  <option value="">Choose a base</option>
+                </select>
+                <button class="compare-clear-filters" type="button" data-clear-filters hidden>Clear filters</button>
+              </div>
             </div>
             <div class="compare-selected-card" data-selected-card hidden></div>
           </article>
@@ -158,20 +160,22 @@
                 <span class="compare-step-badge" aria-hidden="true">2</span>
                 <h3>Second base</h3>
               </div>
-              <div class="compare-combobox-wrap">
-                <label class="sr-only" for="compare-setup-secondary">Search for a second base</label>
-                <input id="compare-setup-secondary" class="compare-combobox-input" type="search" autocomplete="off" placeholder="Search for a base..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="compare-setup-secondary-results">
-                <div id="compare-setup-secondary-results" class="compare-autocomplete-results" role="listbox" hidden></div>
-              </div>
               <div class="compare-filter-grid">
                 <label class="compare-filter-label" for="compare-secondary-type">Type
-                  <select id="compare-secondary-type" data-filter="type"><option value="">All Types</option></select>
+                  <select id="compare-secondary-type" data-filter="type" disabled><option value="">All Types</option></select>
                 </label>
                 <label class="compare-filter-label" for="compare-secondary-region">Region
-                  <select id="compare-secondary-region" data-filter="region"><option value="">All Regions</option></select>
+                  <select id="compare-secondary-region" data-filter="region" disabled><option value="">All Regions</option></select>
                 </label>
               </div>
-              <p class="compare-available-count" data-count>0 locations available</p>
+              <p class="compare-available-count" data-count aria-live="polite">Loading locations…</p>
+              <div class="compare-base-select-wrap">
+                <label class="compare-base-select-label" for="compare-setup-secondary">Choose a base</label>
+                <select id="compare-setup-secondary" class="compare-base-select" data-base-select disabled>
+                  <option value="">Choose a base</option>
+                </select>
+                <button class="compare-clear-filters" type="button" data-clear-filters hidden>Clear filters</button>
+              </div>
             </div>
             <div class="compare-selected-card" data-selected-card hidden></div>
           </article>
