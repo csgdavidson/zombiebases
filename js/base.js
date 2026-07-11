@@ -146,6 +146,8 @@ const elements = {
   compareSection: document.getElementById('detail-compare-section'),
   compareForm: document.getElementById('detail-compare-form'),
   compareSelect: document.getElementById('detail-compare-select'),
+  compareOptions: document.getElementById('detail-compare-options'),
+  compareRecommendations: document.getElementById('detail-compare-recommendations'),
   heroSection: document.getElementById('hero-section'),
   heroImage: document.getElementById('base-hero-image'),
   scoreSection: document.getElementById('score-section'),
@@ -465,6 +467,40 @@ function renderMetaRow(base) {
   }
 }
 
+function baseCompareOptionLabel(base) {
+  return `${base.name} — ${labelFor('type', base.type)}, ${labelFor('region', base.region)}`;
+}
+
+function resolveCompareInput(bases, value) {
+  const raw = String(value || '').trim();
+  const name = raw.split(' — ')[0].trim();
+  return bases.find((entry) => {
+    const slug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(entry) : entry.slug;
+    return slug === raw || entry.name.toLowerCase() === raw.toLowerCase() || entry.name.toLowerCase() === name.toLowerCase();
+  });
+}
+
+function compareScoreForRecommendation(base, candidate, mode) {
+  const currentOverall = Number(base?.scores?.overall) || 0;
+  const candidateOverall = Number(candidate?.scores?.overall) || 0;
+  const sameRegion = base.region === candidate.region ? 1 : 0;
+  const sameType = base.type === candidate.type ? 1 : 0;
+  const gap = Math.abs(currentOverall - candidateOverall);
+  const categoryGap = ['defensibility', 'sustainability', 'isolation'].reduce((sum, key) => sum + Math.abs((base?.scores?.categories?.[key] || 0) - (candidate?.scores?.categories?.[key] || 0)), 0) / 3;
+  if (mode === 'similar') return sameRegion * 3 + sameType * 3 + Math.max(0, 5 - gap) + Math.max(0, 4 - categoryGap);
+  if (mode === 'alternative') return candidateOverall + (candidateOverall > currentOverall ? 2 : 0) + sameRegion + sameType;
+  return categoryGap + gap * .7 + (sameType ? 0 : 1.5) + (sameRegion ? .5 : 0);
+}
+
+function getRecommendedComparisons(base, bases) {
+  const pool = bases.filter((entry) => (slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(entry) : entry.slug) !== (slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(base) : base.slug));
+  return [
+    { label: 'Most similar', mode: 'similar', help: 'Same kind of problem, tighter verdict.' },
+    { label: 'Strongest alternative', mode: 'alternative', help: 'A high-scoring rival worth considering.' },
+    { label: 'Different strengths', mode: 'contrast', help: 'A useful stress test against another strategy.' }
+  ].map((item) => ({ ...item, base: pool.slice().sort((a, b) => compareScoreForRecommendation(base, b, item.mode) - compareScoreForRecommendation(base, a, item.mode))[0] })).filter((item) => item.base);
+}
+
 function renderCompareCard(base, bases) {
   if (!elements.compareSection || !elements.compareForm || !elements.compareSelect) {
     return;
@@ -475,21 +511,27 @@ function renderCompareCard(base, bases) {
     .filter((entry) => (slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(entry) : entry.slug) !== currentSlug)
     .sort((a, b) => a.name.localeCompare(b.name));
 
-  elements.compareSelect.innerHTML = '<option value="">Select a base</option>';
-  options.forEach((entry) => {
-    const option = document.createElement('option');
-    option.value = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(entry) : entry.slug;
-    option.textContent = entry.name;
-    elements.compareSelect.appendChild(option);
-  });
+  if (elements.compareOptions) {
+    elements.compareOptions.innerHTML = options.map((entry) => `<option value="${baseCompareOptionLabel(entry)}"></option>`).join('');
+  }
 
+  if (elements.compareRecommendations) {
+    elements.compareRecommendations.innerHTML = getRecommendedComparisons(base, bases).map((item) => {
+      const slug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(item.base) : item.base.slug;
+      const url = slugHelper?.getCompareUrl ? slugHelper.getCompareUrl(currentSlug, slug) : `/base/${encodeURIComponent(currentSlug)}/vs/${encodeURIComponent(slug)}`;
+      return `<article class="detail-matchup-card"><p class="winner-card-label">${item.label}</p><h4>${item.base.name}</h4><p>${item.help}</p><a class="compare-button" href="${url}">Compare</a></article>`;
+    }).join('');
+  }
+
+  elements.compareSelect.value = '';
   elements.compareForm.onsubmit = (event) => {
     event.preventDefault();
-    const selectedSlug = elements.compareSelect.value;
-    if (!selectedSlug) {
+    const selected = resolveCompareInput(options, elements.compareSelect.value);
+    if (!selected) {
       elements.compareSelect.focus();
       return;
     }
+    const selectedSlug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(selected) : selected.slug;
     window.location.href = slugHelper?.getCompareUrl
       ? slugHelper.getCompareUrl(currentSlug, selectedSlug)
       : `/base/${encodeURIComponent(currentSlug)}/vs/${encodeURIComponent(selectedSlug)}`;
