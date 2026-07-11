@@ -63,6 +63,7 @@
         <div class="section-heading-row">
           <p class="eyebrow">Scoreboard</p>
           <h3>Score Comparison</h3>
+          <p class="section-helper">Overall scoring is weighted, so the final winner may differ from the base that leads the most individual categories.</p>
         </div>
         <div class="score-comparison-heading" aria-hidden="true">
           <span>Metric</span>
@@ -96,7 +97,8 @@
       <section class="content-section compare-picker-section" aria-label="Compare another base">
         <h3>Compare another base</h3>
         <p class="base-meta">Change either side of this matchup, then open the updated comparison.</p>
-        <div class="compare-select-grid">
+        <div class="compare-update-row">
+          <div class="compare-select-grid">
           <label for="compare-current-primary" class="compare-select-label">
             First base
             <select id="compare-current-primary"></select>
@@ -105,8 +107,9 @@
             Second base
             <select id="compare-current-secondary"></select>
           </label>
+          </div>
+          <button id="compare-current-button" class="compare-button" type="button">Update comparison</button>
         </div>
-        <button id="compare-current-button" class="compare-button" type="button">Update comparison</button>
       </section>
     </article>
 
