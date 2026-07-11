@@ -113,51 +113,79 @@
       </section>
     </article>
 
-    <section id="compare-setup" class="compare-explorer" hidden>
-      <header class="compare-explorer-hero">
-        <a class="back-link" href="/">← Back to List</a>
+    <section id="compare-setup" class="compare-explorer compare-tool-page" hidden>
+      <header class="compare-explorer-hero compare-tool-hero">
         <p class="eyebrow">Compare bases</p>
-        <h1>Compare any two survival locations.</h1>
-        <p class="hero-lede">Search by name, region, continent, or base type to build a side-by-side survival verdict in seconds.</p>
+        <h1>Compare any two survival locations</h1>
+        <p class="hero-lede">Search, filter and compare any two real-world survival locations across defence, sustainability, isolation and more.</p>
       </header>
 
-      <section class="compare-lab-panel compare-manual-panel compare-primary-panel" aria-label="Choose two bases to compare">
-        <div>
-          <p class="eyebrow">Start here</p>
-          <h2>Build your matchup</h2>
-          <p class="section-helper">Type terms like castle, island, Europe, subterranean, remote, or polar. Suggestions appear as you search.</p>
+      <section class="compare-builder-section" aria-labelledby="compare-builder-heading">
+        <div class="compare-builder-heading">
+          <p class="eyebrow">Build a matchup</p>
+          <h2 id="compare-builder-heading">Choose two bases</h2>
         </div>
-        <div class="compare-search-grid">
-          <label class="compare-search-label" for="compare-setup-primary">First base
-            <input id="compare-setup-primary" type="search" autocomplete="off" placeholder="Search first base" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="compare-setup-primary-results">
-            <div id="compare-setup-primary-results" class="compare-autocomplete-results" role="listbox" hidden></div>
-          </label>
-          <label class="compare-search-label" for="compare-setup-secondary">Second base
-            <input id="compare-setup-secondary" type="search" autocomplete="off" placeholder="Search second base" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="compare-setup-secondary-results">
-            <div id="compare-setup-secondary-results" class="compare-autocomplete-results" role="listbox" hidden></div>
-          </label>
-          <button id="compare-setup-button" class="compare-button" type="button">Compare bases</button>
+        <div class="compare-builder-grid">
+          <article class="compare-selector-panel" data-compare-side="primary">
+            <div class="compare-selector-card" data-selector-card>
+              <div class="compare-selector-topline">
+                <span class="compare-step-badge" aria-hidden="true">1</span>
+                <h3>First base</h3>
+              </div>
+              <div class="compare-combobox-wrap">
+                <label class="sr-only" for="compare-setup-primary">Search for a first base</label>
+                <input id="compare-setup-primary" class="compare-combobox-input" type="search" autocomplete="off" placeholder="Search for a base..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="compare-setup-primary-results">
+                <div id="compare-setup-primary-results" class="compare-autocomplete-results" role="listbox" hidden></div>
+              </div>
+              <div class="compare-filter-grid">
+                <label class="compare-filter-label" for="compare-primary-type">Type
+                  <select id="compare-primary-type" data-filter="type"><option value="">All Types</option></select>
+                </label>
+                <label class="compare-filter-label" for="compare-primary-region">Region
+                  <select id="compare-primary-region" data-filter="region"><option value="">All Regions</option></select>
+                </label>
+              </div>
+              <p class="compare-available-count" data-count>0 locations available</p>
+            </div>
+            <div class="compare-selected-card" data-selected-card hidden></div>
+          </article>
+
+          <div class="compare-vs-marker" aria-hidden="true">VS</div>
+
+          <article class="compare-selector-panel" data-compare-side="secondary">
+            <div class="compare-selector-card" data-selector-card>
+              <div class="compare-selector-topline">
+                <span class="compare-step-badge" aria-hidden="true">2</span>
+                <h3>Second base</h3>
+              </div>
+              <div class="compare-combobox-wrap">
+                <label class="sr-only" for="compare-setup-secondary">Search for a second base</label>
+                <input id="compare-setup-secondary" class="compare-combobox-input" type="search" autocomplete="off" placeholder="Search for a base..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="compare-setup-secondary-results">
+                <div id="compare-setup-secondary-results" class="compare-autocomplete-results" role="listbox" hidden></div>
+              </div>
+              <div class="compare-filter-grid">
+                <label class="compare-filter-label" for="compare-secondary-type">Type
+                  <select id="compare-secondary-type" data-filter="type"><option value="">All Types</option></select>
+                </label>
+                <label class="compare-filter-label" for="compare-secondary-region">Region
+                  <select id="compare-secondary-region" data-filter="region"><option value="">All Regions</option></select>
+                </label>
+              </div>
+              <p class="compare-available-count" data-count>0 locations available</p>
+            </div>
+            <div class="compare-selected-card" data-selected-card hidden></div>
+          </article>
         </div>
+        <button id="compare-setup-button" class="compare-button compare-builder-button" type="button" disabled>Compare bases</button>
         <p id="compare-setup-help" class="compare-helper" aria-live="polite">Choose two different bases to compare.</p>
       </section>
 
-      <section class="compare-lab-panel compare-suggestions-panel" aria-label="Suggested comparisons">
+      <section class="compare-lab-panel compare-suggestions-panel compare-curated-section" aria-labelledby="compare-curated-heading">
         <div class="section-heading-row">
-          <p class="eyebrow">Suggested comparisons</p>
-          <h2>Not sure where to start?</h2>
-          <p class="section-helper">A few high-signal matchups, labelled by why they are worth comparing.</p>
+          <h2 id="compare-curated-heading">Not sure where to start?</h2>
+          <p class="section-helper">Open one of these curated comparisons.</p>
         </div>
-        <div id="compare-featured-matchups" class="matchup-card-grid"></div>
-      </section>
-
-      <section class="compare-lab-panel compare-discovery-panel" aria-label="Explore comparison ideas">
-        <div class="section-heading-row">
-          <p class="eyebrow">Explore</p>
-          <h2>One base, three rival strategies</h2>
-          <p class="section-helper">Use these as inspiration after the direct compare tool.</p>
-        </div>
-        <div id="compare-scenario-tabs" class="scenario-chip-list" role="list"></div>
-        <div id="compare-scenario-results" class="scenario-results"></div>
+        <div id="compare-featured-matchups" class="matchup-card-grid compare-curated-grid"></div>
       </section>
     </section>
 
