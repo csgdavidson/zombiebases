@@ -144,8 +144,6 @@ const elements = {
   quickFactsList: document.getElementById('quick-facts-list'),
   backLink: document.getElementById('back-link'),
   compareSection: document.getElementById('detail-compare-section'),
-  compareForm: document.getElementById('detail-compare-form'),
-  compareSelect: document.getElementById('detail-compare-select'),
   compareRecommendations: document.getElementById('detail-compare-recommendations'),
   heroSection: document.getElementById('hero-section'),
   heroImage: document.getElementById('base-hero-image'),
@@ -467,136 +465,114 @@ function renderMetaRow(base) {
   }
 }
 
-function baseCompareOptionLabel(base) {
-  return `${base.name} — ${labelFor('type', base.type)}, ${labelFor('region', base.region)}`;
-}
-
-
-function searchTextForCompare(base) {
-  return [base.name, labelFor('type', base.type), labelFor('region', base.region), base.continent, base.type, base.region].filter(Boolean).join(' ').toLowerCase();
-}
-
-function renderCompareAutocompleteOption(base, id, active = false) {
-  return `<button id="${id}" class="compare-autocomplete-option${active ? ' is-active' : ''}" type="button" role="option" data-slug="${slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(base) : base.slug}" aria-selected="${active}"><strong>${base.name}</strong><span>${labelFor('type', base.type)} · ${labelFor('region', base.region)}</span></button>`;
-}
-
-function attachDetailCompareAutocomplete(input, results, bases, onSelect) {
-  if (!input || !results) return null;
-  const popular = bases.slice().sort((a, b) => (Number(b?.scores?.overall) || 0) - (Number(a?.scores?.overall) || 0)).slice(0, 5);
-  let matches = [];
-  let active = -1;
-  let selected = null;
-  const preferredSlug = (base) => slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(base) : base.slug;
-  const choose = (base) => {
-    selected = base;
-    input.value = baseCompareOptionLabel(base);
-    input.dataset.slug = preferredSlug(base);
-    results.hidden = true;
-    input.setAttribute('aria-expanded', 'false');
-    input.removeAttribute('aria-activedescendant');
-    onSelect?.(base);
+function recommendationMetrics(base, candidate) {
+  const keys = ['defensibility', 'sustainability', 'isolation'];
+  const currentOverall = computeOverallScore(base) || 0;
+  const candidateOverall = computeOverallScore(candidate) || 0;
+  const deltas = keys.map((key) => ({
+    key,
+    label: SCORE_LABELS[key],
+    current: Number(base?.scores?.categories?.[key]) || 0,
+    candidate: Number(candidate?.scores?.categories?.[key]) || 0
+  }));
+  const categoryGap = deltas.reduce((sum, item) => sum + Math.abs(item.current - item.candidate), 0) / deltas.length;
+  const strongestCandidateEdge = deltas.slice().sort((a, b) => (b.candidate - b.current) - (a.candidate - a.current))[0];
+  const strongestCurrentEdge = deltas.slice().sort((a, b) => (b.current - b.candidate) - (a.current - a.candidate))[0];
+  return {
+    currentOverall,
+    candidateOverall,
+    scoreGap: Math.abs(currentOverall - candidateOverall),
+    categoryGap,
+    sameType: base.type === candidate.type,
+    sameRegion: base.region === candidate.region,
+    strongestCandidateEdge,
+    strongestCurrentEdge
   };
-  const render = () => {
-    const query = input.value.trim().toLowerCase();
-    matches = (query ? bases.filter((base) => searchTextForCompare(base).includes(query)).slice(0, 8) : popular);
-    active = Math.min(active, matches.length - 1);
-    results.innerHTML = matches.length
-      ? `${!query ? '<p class="compare-autocomplete-hint">Popular rivals — start typing to search all bases.</p>' : ''}${matches.map((base, index) => renderCompareAutocompleteOption(base, `${input.id}-option-${index}`, index === active)).join('')}`
-      : '<p class="compare-autocomplete-empty">No matches. Try a type, region, or broader term.</p>';
-    results.hidden = false;
-    input.setAttribute('aria-expanded', 'true');
-    if (active >= 0) input.setAttribute('aria-activedescendant', `${input.id}-option-${active}`);
-    else input.removeAttribute('aria-activedescendant');
-  };
-  input.addEventListener('focus', render);
-  input.addEventListener('input', () => { selected = null; input.dataset.slug = ''; active = -1; render(); onSelect?.(null); });
-  input.addEventListener('keydown', (event) => {
-    if (results.hidden && ['ArrowDown', 'ArrowUp'].includes(event.key)) render();
-    if (event.key === 'ArrowDown') { event.preventDefault(); active = Math.min(matches.length - 1, active + 1); render(); }
-    if (event.key === 'ArrowUp') { event.preventDefault(); active = Math.max(0, active - 1); render(); }
-    if (event.key === 'Enter' && active >= 0 && matches[active]) { event.preventDefault(); choose(matches[active]); }
-    if (event.key === 'Escape') { results.hidden = true; input.setAttribute('aria-expanded', 'false'); }
-  });
-  results.addEventListener('click', (event) => {
-    const button = event.target.closest('button[data-slug]');
-    if (!button) return;
-    const base = bases.find((entry) => preferredSlug(entry) === button.dataset.slug);
-    if (base) choose(base);
-  });
-  document.addEventListener('click', (event) => {
-    if (!input.contains(event.target) && !results.contains(event.target)) {
-      results.hidden = true;
-      input.setAttribute('aria-expanded', 'false');
-    }
-  });
-  return { getSelected: () => selected || resolveCompareInput(bases, input.value) };
-}
-
-function resolveCompareInput(bases, value) {
-  const raw = String(value || '').trim();
-  const name = raw.split(' — ')[0].trim();
-  return bases.find((entry) => {
-    const slug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(entry) : entry.slug;
-    return slug === raw || entry.name.toLowerCase() === raw.toLowerCase() || entry.name.toLowerCase() === name.toLowerCase();
-  });
 }
 
 function compareScoreForRecommendation(base, candidate, mode) {
-  const currentOverall = Number(base?.scores?.overall) || 0;
-  const candidateOverall = Number(candidate?.scores?.overall) || 0;
-  const sameRegion = base.region === candidate.region ? 1 : 0;
-  const sameType = base.type === candidate.type ? 1 : 0;
-  const gap = Math.abs(currentOverall - candidateOverall);
-  const categoryGap = ['defensibility', 'sustainability', 'isolation'].reduce((sum, key) => sum + Math.abs((base?.scores?.categories?.[key] || 0) - (candidate?.scores?.categories?.[key] || 0)), 0) / 3;
-  if (mode === 'similar') return sameRegion * 3 + sameType * 3 + Math.max(0, 5 - gap) + Math.max(0, 4 - categoryGap);
-  if (mode === 'alternative') return candidateOverall + (candidateOverall > currentOverall ? 2 : 0) + sameRegion + sameType;
-  return categoryGap + gap * .7 + (sameType ? 0 : 1.5) + (sameRegion ? .5 : 0);
+  const metrics = recommendationMetrics(base, candidate);
+  if (mode === 'similar') {
+    return (metrics.sameRegion ? 2.5 : 0) + (metrics.sameType ? 2.5 : 0) + Math.max(0, 7 - metrics.scoreGap) + Math.max(0, 7 - metrics.categoryGap * 1.4);
+  }
+  if (mode === 'alternative') {
+    const higherBonus = metrics.candidateOverall > metrics.currentOverall ? 4 + Math.min(2, metrics.candidateOverall - metrics.currentOverall) : 0;
+    return metrics.candidateOverall + higherBonus + (metrics.sameType ? 2 : 0) + (metrics.sameRegion ? 1.4 : 0) - Math.max(0, metrics.categoryGap - 2) * .4;
+  }
+  return metrics.categoryGap * 2 + metrics.scoreGap * .7 + (metrics.sameType ? 0 : 1.8) + (metrics.sameRegion ? 0 : 1.2) + Math.max(0, metrics.candidateOverall - 6) * .5;
+}
+
+function recommendationReason(base, candidate, mode) {
+  const metrics = recommendationMetrics(base, candidate);
+  const type = labelFor('type', candidate.type).toLowerCase();
+  const region = labelFor('region', candidate.region);
+  const candidateEdge = metrics.strongestCandidateEdge;
+  const currentEdge = metrics.strongestCurrentEdge;
+  if (mode === 'similar') {
+    const shared = metrics.sameType ? `the same ${type} strategy` : metrics.sameRegion ? `the same ${region} risk context` : 'a close survival profile';
+    return `${candidate.name} keeps ${shared}, with only ${metrics.scoreGap.toFixed(1)} points between the overall scores and closely matched ${candidateEdge.label.toLowerCase()} pressure.`;
+  }
+  if (mode === 'alternative') {
+    if (metrics.candidateOverall > metrics.currentOverall) {
+      return `${candidate.name} scores ${metrics.candidateOverall.toFixed(1)} overall versus ${metrics.currentOverall.toFixed(1)}, adding a stronger ${candidateEdge.label.toLowerCase()} profile while staying relevant as ${metrics.sameType ? `another ${type}` : metrics.sameRegion ? `a ${region} option` : 'a comparable survival plan'}.`;
+    }
+    return `${candidate.name} is the strongest relevant peer available, matching the current score tier while offering a clearer edge in ${candidateEdge.label.toLowerCase()}.`;
+  }
+  return `${candidate.name} changes the strategy: it is ${metrics.sameType ? 'built around a different survival profile' : `a ${type}`} with a ${candidateEdge.label.toLowerCase()} edge, while ${base.name} holds more of the ${currentEdge.label.toLowerCase()} advantage.`;
 }
 
 function getRecommendedComparisons(base, bases) {
-  const pool = bases.filter((entry) => (slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(entry) : entry.slug) !== (slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(base) : base.slug));
-  return [
-    { label: 'Most similar', mode: 'similar', help: 'Same kind of problem, tighter verdict.' },
-    { label: 'Strongest alternative', mode: 'alternative', help: 'A high-scoring rival worth considering.' },
-    { label: 'Different strengths', mode: 'contrast', help: 'A useful stress test against another strategy.' }
-  ].map((item) => ({ ...item, base: pool.slice().sort((a, b) => compareScoreForRecommendation(base, b, item.mode) - compareScoreForRecommendation(base, a, item.mode))[0] })).filter((item) => item.base);
+  const currentSlug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(base) : base.slug;
+  const used = new Set([currentSlug]);
+  const pool = (Array.isArray(bases) ? bases : []).filter((entry) => (slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(entry) : entry.slug) !== currentSlug);
+  const scenarios = [
+    { label: 'MOST SIMILAR', mode: 'similar' },
+    { label: 'STRONGEST ALTERNATIVE', mode: 'alternative' },
+    { label: 'WILD CARD', mode: 'contrast' }
+  ];
+  return scenarios.map((item) => {
+    const candidate = pool
+      .filter((entry) => !used.has(slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(entry) : entry.slug))
+      .sort((a, b) => compareScoreForRecommendation(base, b, item.mode) - compareScoreForRecommendation(base, a, item.mode) || a.name.localeCompare(b.name))[0];
+    if (candidate) used.add(slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(candidate) : candidate.slug);
+    return candidate ? { ...item, base: candidate, reason: recommendationReason(base, candidate, item.mode) } : null;
+  }).filter(Boolean);
 }
 
 function renderCompareCard(base, bases) {
-  if (!elements.compareSection || !elements.compareForm || !elements.compareSelect) {
+  if (!elements.compareSection || !elements.compareRecommendations) {
     return;
   }
 
   const currentSlug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(base) : base.slug;
-  const options = (Array.isArray(bases) ? bases : [])
-    .filter((entry) => (slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(entry) : entry.slug) !== currentSlug)
-    .sort((a, b) => a.name.localeCompare(b.name));
+  const recommendations = getRecommendedComparisons(base, bases).slice(0, 3);
+  elements.compareRecommendations.innerHTML = recommendations.map((item) => {
+    const rival = item.base;
+    const slug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(rival) : rival.slug;
+    const url = slugHelper?.getCompareUrl ? slugHelper.getCompareUrl(currentSlug, slug) : `/base/${encodeURIComponent(currentSlug)}/vs/${encodeURIComponent(slug)}`;
+    const score = computeOverallScore(rival);
+    const scoreLabel = isValidScoreValue(score) ? score.toFixed(1) : '—';
+    const image = getCardImage(rival);
+    return `<article class="detail-matchup-card">
+      <div class="detail-matchup-image-wrap">
+        <img class="detail-matchup-image" src="${escapeHtml(image)}" alt="${escapeHtml(rival.name)} survival base" loading="lazy" decoding="async" width="420" height="236" onerror="this.onerror=null;this.src='${CARD_IMAGE_FALLBACK_URL}';">
+        <span class="detail-rival-badge">${escapeHtml(item.label)}</span>
+      </div>
+      <div class="detail-matchup-body">
+        <div class="detail-matchup-title-row">
+          <h4>${escapeHtml(rival.name)}</h4>
+          <span class="detail-score-badge" aria-label="Overall score ${escapeHtml(scoreLabel)}">🛡 ${escapeHtml(scoreLabel)}</span>
+        </div>
+        <p class="detail-matchup-meta">${escapeHtml(labelFor('type', rival.type))} <span aria-hidden="true">•</span> ${escapeHtml(labelFor('region', rival.region))}</p>
+        <div class="detail-matchup-reason"><h5>Why this match?</h5><p>${escapeHtml(item.reason)}</p></div>
+      </div>
+      <a class="compare-button detail-matchup-button" href="${escapeHtml(url)}">Compare <span aria-hidden="true">→</span></a>
+    </article>`;
+  }).join('');
 
-  if (elements.compareRecommendations) {
-    elements.compareRecommendations.innerHTML = getRecommendedComparisons(base, bases).map((item) => {
-      const slug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(item.base) : item.base.slug;
-      const url = slugHelper?.getCompareUrl ? slugHelper.getCompareUrl(currentSlug, slug) : `/base/${encodeURIComponent(currentSlug)}/vs/${encodeURIComponent(slug)}`;
-      return `<article class="detail-matchup-card"><p class="winner-card-label">${item.label}</p><h4>${item.base.name}</h4><p>${item.help}</p><a class="compare-button" href="${url}">Compare</a></article>`;
-    }).join('');
-  }
-
-  elements.compareSelect.value = '';
-  const results = document.getElementById('detail-compare-results');
-  const autocomplete = attachDetailCompareAutocomplete(elements.compareSelect, results, options, () => {});
-  elements.compareForm.onsubmit = (event) => {
-    event.preventDefault();
-    const selected = autocomplete?.getSelected() || resolveCompareInput(options, elements.compareSelect.value);
-    if (!selected) {
-      elements.compareSelect.focus();
-      return;
-    }
-    const selectedSlug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(selected) : selected.slug;
-    window.location.href = slugHelper?.getCompareUrl
-      ? slugHelper.getCompareUrl(currentSlug, selectedSlug)
-      : `/base/${encodeURIComponent(currentSlug)}/vs/${encodeURIComponent(selectedSlug)}`;
-  };
-
-  elements.compareSection.hidden = options.length === 0;
+  const ctaCopy = document.getElementById('detail-compare-page-copy');
+  if (ctaCopy && Array.isArray(bases)) ctaCopy.textContent = `Compare any of the ${bases.length} locations on ZombieBases.`;
+  elements.compareSection.hidden = recommendations.length !== 3;
 }
 
 function renderHero(base) {
