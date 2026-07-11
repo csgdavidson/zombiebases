@@ -10669,3 +10669,128 @@ html {
     max-height: min(320px, 55vh);
   }
 }
+
+/* Filtered Compare landing page controls */
+.compare-base-select-wrap {
+  display: grid;
+  gap: .65rem;
+  min-width: 0;
+}
+
+.compare-base-select-label {
+  color: var(--text);
+  font-size: .86rem;
+  font-weight: 900;
+}
+
+.compare-base-select,
+.compare-filter-label select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #10243c 50%),
+    linear-gradient(135deg, #10243c 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) 50%,
+    calc(100% - 12px) 50%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.compare-base-select {
+  width: 100%;
+  min-height: 54px;
+  border: 1px solid rgba(15, 23, 42, .14);
+  border-radius: var(--radius-md);
+  background-color: #fff;
+  color: var(--text);
+  padding: 0 2.4rem 0 1rem;
+  font: inherit;
+  font-weight: 850;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+.compare-base-select:focus-visible,
+.compare-clear-filters:focus-visible {
+  outline: 3px solid rgba(47, 125, 60, .22);
+  outline-offset: 3px;
+  border-color: var(--accent);
+}
+
+.compare-base-select:disabled,
+.compare-filter-label select:disabled {
+  cursor: not-allowed;
+  opacity: .58;
+  background-color: rgba(15, 23, 42, .04);
+}
+
+.compare-clear-filters {
+  justify-self: start;
+  border: 1px solid rgba(47, 125, 60, .2);
+  border-radius: var(--radius-pill);
+  background: #fff;
+  color: var(--accent-strong);
+  padding: .55rem .85rem;
+  font: inherit;
+  font-size: .86rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.compare-selected-card {
+  min-height: 150px;
+  grid-template-columns: 112px minmax(0, 1fr) auto;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.compare-selected-image {
+  width: 112px;
+  height: 86px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  background: rgba(15, 23, 42, .08);
+  box-shadow: var(--shadow-xs);
+}
+
+.compare-selected-copy {
+  display: grid;
+  gap: .18rem;
+  min-width: 0;
+}
+
+.compare-selected-copy .change-base-button {
+  grid-column: auto;
+  margin-top: .35rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+@media (max-width: 620px) {
+  .compare-tool-hero {
+    padding: var(--space-4);
+  }
+
+  .compare-tool-hero h1 {
+    font-size: clamp(2rem, 11vw, 2.65rem);
+  }
+
+  .compare-selector-card,
+  .compare-selected-card {
+    min-height: 0;
+    padding: var(--space-4);
+  }
+
+  .compare-selected-card {
+    grid-template-columns: 88px minmax(0, 1fr) auto;
+  }
+
+  .compare-selected-image {
+    width: 88px;
+    height: 72px;
+  }
+
+  .selected-base-score {
+    align-self: start;
+  }
+}

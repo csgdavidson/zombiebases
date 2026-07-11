@@ -97,51 +97,85 @@ function filteredBasesForState(bases, state) {
   });
 }
 function attachCompareSelector(panel, bases, callbacks = {}, initialBase = null) {
-  const input = panel.querySelector('input[role="combobox"]');
-  const results = panel.querySelector('[role="listbox"]');
+  const baseSelect = panel.querySelector('[data-base-select]');
   const typeSelect = panel.querySelector('select[data-filter="type"]');
   const regionSelect = panel.querySelector('select[data-filter="region"]');
   const count = panel.querySelector('[data-count]');
+  const clearFilters = panel.querySelector('[data-clear-filters]');
   const selectorCard = panel.querySelector('[data-selector-card]');
   const selectedCard = panel.querySelector('[data-selected-card]');
-  const state = { panel, input, results, typeSelect, regionSelect, selected: null, matches: [], active: -1 };
+  const state = { panel, baseSelect, typeSelect, regionSelect, selected: null, matches: [] };
   fillFilterOptions(typeSelect, 'type', bases);
   fillFilterOptions(regionSelect, 'region', bases);
-  const close = () => { results.hidden = true; input.setAttribute('aria-expanded', 'false'); input.removeAttribute('aria-activedescendant'); };
-  const updateCount = () => { const available = filteredBasesForState(bases, { input: { value: '' }, typeSelect, regionSelect }).length; count.textContent = `${available} location${available === 1 ? '' : 's'} available`; };
+  typeSelect.disabled = false;
+  regionSelect.disabled = false;
+
+  const matchesCurrentFilters = (base) => Boolean(base)
+    && (!typeSelect?.value || base.type === typeSelect.value)
+    && (!regionSelect?.value || base.region === regionSelect.value);
+  const filteredBases = () => bases.filter((base) => matchesCurrentFilters(base)).sort((a, b) => a.name.localeCompare(b.name));
+  const countText = (total) => total === 0 ? 'No locations match' : `${total} location${total === 1 ? '' : 's'} match`;
+
+  const renderOptions = () => {
+    state.matches = filteredBases();
+    baseSelect.innerHTML = '<option value="">Choose a base</option>';
+    state.matches.forEach((base) => {
+      const option = new Option(`${base.name} — ${labelFor('type', base.type)} · ${labelFor('region', base.region)} · ${formatScore(getScore(base, 'overall'))}`, preferredSlugFor(base));
+      if (callbacks.isDuplicate?.(base)) {
+        option.disabled = true;
+        option.textContent = `${base.name} — already selected on the other side`;
+      }
+      baseSelect.append(option);
+    });
+    const noMatches = state.matches.length === 0;
+    baseSelect.disabled = noMatches;
+    count.textContent = countText(state.matches.length);
+    clearFilters.hidden = !noMatches || (!typeSelect.value && !regionSelect.value);
+  };
+
   const renderSelected = () => {
     if (!state.selected) { selectorCard.hidden = false; selectedCard.hidden = true; selectedCard.innerHTML = ''; return; }
     const score = getScore(state.selected, 'overall');
     selectorCard.hidden = true; selectedCard.hidden = false;
-    selectedCard.innerHTML = `<div><p class="winner-card-label">${panel.dataset.compareSide === 'primary' ? 'First base' : 'Second base'}</p><h3>${state.selected.name}</h3><p>${optionMeta(state.selected)}</p></div><strong class="selected-base-score ${scoreToneClass(score)}">${formatScore(score)}</strong><button type="button" class="change-base-button">Change</button>`;
-    selectedCard.querySelector('button').addEventListener('click', () => { state.selected = null; input.value = ''; input.dataset.slug = ''; renderSelected(); updateCount(); callbacks.onChange?.(); setTimeout(() => input.focus(), 0); });
+    selectedCard.innerHTML = `<img class="compare-selected-image" src="${imageFor(state.selected)}" alt="${state.selected.name} base image" loading="lazy" decoding="async"><div class="compare-selected-copy"><p class="winner-card-label">${panel.dataset.compareSide === 'primary' ? 'First base' : 'Second base'}</p><h3>${state.selected.name}</h3><p>${labelFor('type', state.selected.type)}</p><p>${labelFor('region', state.selected.region)}</p><button type="button" class="change-base-button">Change</button></div><strong class="selected-base-score ${scoreToneClass(score)}">${formatScore(score)}</strong>`;
+    selectedCard.querySelector('img').addEventListener('error', (event) => { event.currentTarget.src = HERO_IMAGE_FALLBACK_URL; }, { once: true });
+    selectedCard.querySelector('button').addEventListener('click', () => { state.selected = null; renderSelected(); renderOptions(); callbacks.onChange?.(); setTimeout(() => baseSelect.focus(), 0); });
   };
+
   const choose = (base) => {
-    if (!base || callbacks.isDuplicate?.(base)) { callbacks.onDuplicate?.(base); return; }
-    state.selected = base; input.value = base.name; input.dataset.slug = preferredSlugFor(base); close(); renderSelected(); callbacks.onChange?.();
+    if (!base || callbacks.isDuplicate?.(base)) { callbacks.onDuplicate?.(base); baseSelect.value = ''; return; }
+    state.selected = base;
+    renderSelected();
+    callbacks.onChange?.();
   };
-  const renderResults = () => {
-    state.matches = filteredBasesForState(bases, state).sort((a, b) => (getScore(b, 'overall') || 0) - (getScore(a, 'overall') || 0)).slice(0, 8);
-    state.active = Math.min(Math.max(state.active, state.matches.length ? 0 : -1), state.matches.length - 1);
-    results.innerHTML = state.matches.length ? state.matches.map((base, index) => renderAutocompleteOption(base, `${input.id}-option-${index}`, index === state.active, callbacks.isDuplicate?.(base))).join('') : '<p class="compare-autocomplete-empty">No matches. Try a base name, type, or region.</p>';
-    results.hidden = false; input.setAttribute('aria-expanded', 'true');
-    if (state.active >= 0) input.setAttribute('aria-activedescendant', `${input.id}-option-${state.active}`); else input.removeAttribute('aria-activedescendant');
-    updateCount();
+
+  const clearSelectionIfInvalid = () => {
+    if (state.selected && !matchesCurrentFilters(state.selected)) state.selected = null;
   };
-  input.addEventListener('focus', renderResults);
-  input.addEventListener('input', () => { state.selected = null; input.dataset.slug = ''; state.active = -1; renderSelected(); renderResults(); callbacks.onChange?.(); });
-  input.addEventListener('keydown', (event) => {
-    if (results.hidden && ['ArrowDown', 'ArrowUp'].includes(event.key)) renderResults();
-    if (event.key === 'ArrowDown') { event.preventDefault(); state.active = Math.min(state.matches.length - 1, state.active + 1); renderResults(); }
-    if (event.key === 'ArrowUp') { event.preventDefault(); state.active = Math.max(0, state.active - 1); renderResults(); }
-    if (event.key === 'Enter' && state.active >= 0 && state.matches[state.active]) { event.preventDefault(); choose(state.matches[state.active]); }
-    if (event.key === 'Escape') { close(); }
+
+  baseSelect.addEventListener('change', () => {
+    const base = bases.find((item) => preferredSlugFor(item) === baseSelect.value);
+    choose(base);
   });
-  results.addEventListener('click', (event) => { const button = event.target.closest('button[data-slug]'); if (!button || button.disabled) return; const base = bases.find((item) => preferredSlugFor(item) === button.dataset.slug); choose(base); });
-  document.addEventListener('click', (event) => { if (!panel.contains(event.target)) close(); });
-  [typeSelect, regionSelect].forEach((select) => select.addEventListener('change', () => { state.selected = null; input.dataset.slug = ''; renderSelected(); updateCount(); renderResults(); callbacks.onChange?.(); }));
-  if (initialBase) choose(initialBase); else { renderSelected(); updateCount(); }
-  return { getSelected: () => state.selected, setDuplicateCallbacks(next) { Object.assign(callbacks, next); }, focus: () => input.focus() };
+  [typeSelect, regionSelect].forEach((select) => select.addEventListener('change', () => {
+    clearSelectionIfInvalid();
+    renderSelected();
+    renderOptions();
+    callbacks.onChange?.();
+  }));
+  clearFilters?.addEventListener('click', () => {
+    typeSelect.value = '';
+    regionSelect.value = '';
+    state.selected = null;
+    renderSelected();
+    renderOptions();
+    callbacks.onChange?.();
+    baseSelect.focus();
+  });
+  if (initialBase) state.selected = initialBase;
+  renderSelected();
+  renderOptions();
+  return { getSelected: () => state.selected, setDuplicateCallbacks(next) { Object.assign(callbacks, next); renderOptions(); }, focus: () => baseSelect.focus(), refreshOptions: renderOptions };
 }
 function resolveBaseInput(bases, value) { const raw = String(value || '').trim(); if (!raw) return null; const name = raw.split(' — ')[0].trim(); return slugHelper?.resolveBaseBySlug?.(bases, raw) || bases.find((base) => preferredSlugFor(base) === raw || base.name.toLowerCase() === name.toLowerCase() || base.name.toLowerCase() === raw.toLowerCase()); }
 function curatedMatchups(bases) {
@@ -201,7 +235,9 @@ function showSetup(bases, slugA = '', slugB = '') {
     const invalid = !nextBaseA || !nextBaseB || duplicate;
     elements.setupButton.disabled = invalid;
     if (duplicate) setHelp('Choose two different bases. The same location cannot be compared against itself.');
-    else setHelp(invalid ? 'Choose two different bases to compare.' : `${nextBaseA.name} vs ${nextBaseB.name} is ready.`);
+    else setHelp(invalid ? 'Choose two different bases to compare.' : 'Ready to see how they compare.');
+    primarySelector?.refreshOptions?.();
+    secondarySelector?.refreshOptions?.();
   };
   const duplicateWarning = (base) => { if (base) setHelp(`${base.name} is already selected on the other side.`); };
   primarySelector = attachCompareSelector(primaryPanel, bases, { onChange: updateSetupButton, onDuplicate: duplicateWarning }, baseA);
