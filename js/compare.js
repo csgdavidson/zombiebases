@@ -98,14 +98,23 @@ function filteredBasesForState(bases, state) {
   });
 }
 function attachCompareSelector(panel, bases, callbacks = {}, initialBase = null) {
-  const baseSelect = panel.querySelector('[data-base-select]');
+  const combo = panel.querySelector('[data-base-combobox]');
+  const comboId = combo?.dataset.comboboxId || `compare-combobox-${panel.dataset.compareSide || 'side'}`;
+  const button = combo?.querySelector('[data-combobox-button]');
+  const valueNode = combo?.querySelector('[data-combobox-value]');
+  const panelNode = combo?.querySelector('[data-combobox-panel]');
+  const searchInput = combo?.querySelector('[data-combobox-search]');
+  const listbox = combo?.querySelector('[data-combobox-list]');
+  const emptyNode = combo?.querySelector('[data-combobox-empty]');
+  const clearSearch = combo?.querySelector('[data-clear-search]');
+  const footer = combo?.querySelector('[data-combobox-footer]');
   const typeSelect = panel.querySelector('select[data-filter="type"]');
   const regionSelect = panel.querySelector('select[data-filter="region"]');
   const count = panel.querySelector('[data-count]');
   const clearFilters = panel.querySelector('[data-clear-filters]');
   const selectorCard = panel.querySelector('[data-selector-card]');
   const selectedCard = panel.querySelector('[data-selected-card]');
-  const state = { panel, baseSelect, typeSelect, regionSelect, selected: null, matches: [] };
+  const state = { panel, typeSelect, regionSelect, selected: null, matches: [], visible: [], activeIndex: -1, open: false };
   fillFilterOptions(typeSelect, 'type', bases);
   fillFilterOptions(regionSelect, 'region', bases);
   typeSelect.disabled = false;
@@ -116,67 +125,105 @@ function attachCompareSelector(panel, bases, callbacks = {}, initialBase = null)
     && (!regionSelect?.value || base.region === regionSelect.value);
   const filteredBases = () => bases.filter((base) => matchesCurrentFilters(base)).sort((a, b) => a.name.localeCompare(b.name));
   const countText = (total) => total === 0 ? 'No locations match' : `${total} location${total === 1 ? '' : 's'} match`;
-
+  const closeOthers = () => document.querySelectorAll('[data-base-combobox].is-open').forEach((node) => { if (node !== combo) node.dispatchEvent(new CustomEvent('compare-combobox-close')); });
+  const setActive = (index) => {
+    state.activeIndex = state.visible.length ? Math.max(0, Math.min(index, state.visible.length - 1)) : -1;
+    [...listbox.children].forEach((row, i) => {
+      row.classList.toggle('is-active', i === state.activeIndex);
+      row.setAttribute('aria-selected', i === state.activeIndex ? 'true' : 'false');
+    });
+    const active = listbox.children[state.activeIndex];
+    if (active) { button.setAttribute('aria-activedescendant', active.id); active.scrollIntoView({ block: 'nearest' }); }
+    else button.removeAttribute('aria-activedescendant');
+  };
+  const matchingSearch = () => {
+    const query = String(searchInput.value || '').trim().toLowerCase();
+    return state.matches.filter((base) => !query || searchTextFor(base).includes(query));
+  };
+  const renderList = () => {
+    state.visible = matchingSearch();
+    listbox.innerHTML = state.visible.map((base, index) => {
+      const slug = preferredSlugFor(base);
+      const duplicate = callbacks.isDuplicate?.(base);
+      const score = getScore(base, 'overall');
+      return `<button id="${comboId}-option-${index}" class="compare-combobox-option${duplicate ? ' is-disabled' : ''}" type="button" role="option" data-slug="${slug}" aria-selected="false"${duplicate ? ' disabled aria-disabled="true"' : ''}><img src="${imageFor(base)}" alt="" loading="lazy" decoding="async" width="48" height="38"><span class="compare-combobox-option-copy"><strong>${base.name}</strong><small>${optionMeta(base)}${duplicate ? ' · Already selected' : ''}</small></span><em class="${scoreToneClass(score)}">${formatScore(score)}</em></button>`;
+    }).join('');
+    listbox.querySelectorAll('img').forEach((img) => img.addEventListener('error', (event) => { event.currentTarget.src = HERO_IMAGE_FALLBACK_URL; }, { once: true }));
+    emptyNode.hidden = state.visible.length > 0;
+    footer.textContent = countText(state.matches.length);
+    setActive(state.visible.findIndex((base) => state.selected && preferredSlugFor(base) === preferredSlugFor(state.selected)));
+    if (state.activeIndex < 0 && state.visible.length) setActive(0);
+  };
+  const open = () => {
+    if (button.disabled) return;
+    closeOthers();
+    state.open = true;
+    combo.classList.add('is-open');
+    panelNode.hidden = false;
+    button.setAttribute('aria-expanded', 'true');
+    searchInput.placeholder = `Search within ${state.matches.length} location${state.matches.length === 1 ? '' : 's'}…`;
+    searchInput.value = '';
+    renderList();
+    setTimeout(() => searchInput.focus(), 0);
+  };
+  const close = (focusButton = false) => {
+    state.open = false;
+    combo.classList.remove('is-open');
+    panelNode.hidden = true;
+    button.setAttribute('aria-expanded', 'false');
+    button.removeAttribute('aria-activedescendant');
+    if (focusButton) button.focus();
+  };
+  combo?.addEventListener('compare-combobox-close', () => close(false));
+  const choose = (base) => {
+    if (!base || callbacks.isDuplicate?.(base)) { callbacks.onDuplicate?.(base); return; }
+    state.selected = base;
+    renderSelected();
+    close(false);
+    callbacks.onChange?.();
+  };
+  const chooseActive = () => { const base = state.visible[state.activeIndex]; if (base) choose(base); };
   const renderOptions = () => {
     state.matches = filteredBases();
-    baseSelect.innerHTML = '<option value="">Choose a base</option>';
-    state.matches.forEach((base) => {
-      const option = new Option(`${base.name} — ${labelFor('type', base.type)} · ${labelFor('region', base.region)} · ${formatScore(getScore(base, 'overall'))}`, preferredSlugFor(base));
-      if (callbacks.isDuplicate?.(base)) {
-        option.disabled = true;
-        option.textContent = `${base.name} — already selected on the other side`;
-      }
-      baseSelect.append(option);
-    });
     const noMatches = state.matches.length === 0;
-    baseSelect.disabled = noMatches;
+    button.disabled = noMatches;
+    valueNode.textContent = 'Choose a base';
     count.textContent = countText(state.matches.length);
     clearFilters.hidden = !noMatches || (!typeSelect.value && !regionSelect.value);
+    if (state.open) {
+      if (noMatches) close(false);
+      else { searchInput.placeholder = `Search within ${state.matches.length} location${state.matches.length === 1 ? '' : 's'}…`; renderList(); }
+    }
   };
-
-  const renderSelected = () => {
+  function renderSelected() {
     if (!state.selected) { selectorCard.hidden = false; selectedCard.hidden = true; selectedCard.innerHTML = ''; return; }
     const score = getScore(state.selected, 'overall');
     selectorCard.hidden = true; selectedCard.hidden = false;
     selectedCard.innerHTML = `<img class="compare-selected-image" src="${imageFor(state.selected)}" alt="${state.selected.name} base image" loading="lazy" decoding="async"><div class="compare-selected-copy"><p class="winner-card-label">${panel.dataset.compareSide === 'primary' ? 'First base' : 'Second base'}</p><h3>${state.selected.name}</h3><p>${labelFor('type', state.selected.type)}</p><p>${labelFor('region', state.selected.region)}</p><button type="button" class="change-base-button">Change</button></div><strong class="selected-base-score ${scoreToneClass(score)}">${formatScore(score)}</strong>`;
     selectedCard.querySelector('img').addEventListener('error', (event) => { event.currentTarget.src = HERO_IMAGE_FALLBACK_URL; }, { once: true });
-    selectedCard.querySelector('button').addEventListener('click', () => { state.selected = null; renderSelected(); renderOptions(); callbacks.onChange?.(); setTimeout(() => baseSelect.focus(), 0); });
-  };
-
-  const choose = (base) => {
-    if (!base || callbacks.isDuplicate?.(base)) { callbacks.onDuplicate?.(base); baseSelect.value = ''; return; }
-    state.selected = base;
-    renderSelected();
-    callbacks.onChange?.();
-  };
-
-  const clearSelectionIfInvalid = () => {
-    if (state.selected && !matchesCurrentFilters(state.selected)) state.selected = null;
-  };
-
-  baseSelect.addEventListener('change', () => {
-    const base = bases.find((item) => preferredSlugFor(item) === baseSelect.value);
-    choose(base);
+    selectedCard.querySelector('button').addEventListener('click', () => { state.selected = null; renderSelected(); renderOptions(); callbacks.onChange?.(); setTimeout(() => button.focus(), 0); });
+  }
+  const clearSelectionIfInvalid = () => { if (state.selected && !matchesCurrentFilters(state.selected)) state.selected = null; };
+  button.addEventListener('click', () => state.open ? close(false) : open());
+  button.addEventListener('keydown', (event) => { if (['Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(event.key)) { event.preventDefault(); open(); } });
+  searchInput.addEventListener('input', renderList);
+  searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowDown') { event.preventDefault(); setActive(state.activeIndex + 1); }
+    else if (event.key === 'ArrowUp') { event.preventDefault(); setActive(state.activeIndex - 1); }
+    else if (event.key === 'Home') { event.preventDefault(); setActive(0); }
+    else if (event.key === 'End') { event.preventDefault(); setActive(state.visible.length - 1); }
+    else if (event.key === 'Enter') { event.preventDefault(); chooseActive(); }
+    else if (event.key === 'Escape') { event.preventDefault(); close(true); }
   });
-  [typeSelect, regionSelect].forEach((select) => select.addEventListener('change', () => {
-    clearSelectionIfInvalid();
-    renderSelected();
-    renderOptions();
-    callbacks.onChange?.();
-  }));
-  clearFilters?.addEventListener('click', () => {
-    typeSelect.value = '';
-    regionSelect.value = '';
-    state.selected = null;
-    renderSelected();
-    renderOptions();
-    callbacks.onChange?.();
-    baseSelect.focus();
-  });
+  listbox.addEventListener('click', (event) => { const row = event.target.closest('[data-slug]'); if (row) choose(state.visible.find((base) => preferredSlugFor(base) === row.dataset.slug)); });
+  clearSearch?.addEventListener('click', () => { searchInput.value = ''; renderList(); searchInput.focus(); });
+  document.addEventListener('click', (event) => { if (state.open && !combo.contains(event.target)) close(false); });
+  [typeSelect, regionSelect].forEach((select) => select.addEventListener('change', () => { clearSelectionIfInvalid(); renderSelected(); renderOptions(); callbacks.onChange?.(); }));
+  clearFilters?.addEventListener('click', () => { typeSelect.value = ''; regionSelect.value = ''; state.selected = null; renderSelected(); renderOptions(); callbacks.onChange?.(); button.focus(); });
   if (initialBase) state.selected = initialBase;
   renderSelected();
   renderOptions();
-  return { getSelected: () => state.selected, setDuplicateCallbacks(next) { Object.assign(callbacks, next); renderOptions(); }, focus: () => baseSelect.focus(), refreshOptions: renderOptions };
+  return { getSelected: () => state.selected, setDuplicateCallbacks(next) { Object.assign(callbacks, next); renderOptions(); }, focus: () => button.focus(), refreshOptions: renderOptions };
 }
 function resolveBaseInput(bases, value) { const raw = String(value || '').trim(); if (!raw) return null; const name = raw.split(' — ')[0].trim(); return slugHelper?.resolveBaseBySlug?.(bases, raw) || bases.find((base) => preferredSlugFor(base) === raw || base.name.toLowerCase() === name.toLowerCase() || base.name.toLowerCase() === raw.toLowerCase()); }
 function curatedMatchups(bases) {
@@ -188,9 +235,14 @@ function curatedMatchups(bases) {
   return specs.map((spec) => ({ ...spec, baseA: slugHelper?.resolveBaseBySlug?.(bases, spec.a) || bases.find((base) => preferredSlugFor(base) === spec.a), baseB: slugHelper?.resolveBaseBySlug?.(bases, spec.b) || bases.find((base) => preferredSlugFor(base) === spec.b) })).filter((item) => item.baseA && item.baseB).slice(0, 3);
 }
 function renderMatchupCard(baseA, baseB, label = 'Recommended', description = '') {
-  return `<a class="matchup-prompt-card curated-matchup-card" href="${compareUrl(preferredSlugFor(baseA), preferredSlugFor(baseB))}" aria-label="Open matchup: ${baseA.name} versus ${baseB.name}"><p class="winner-card-label">${label}</p><div class="matchup-pair"><strong>${baseA.name}</strong><span aria-hidden="true">VS</span><strong>${baseB.name}</strong></div><p class="curated-score-line"><strong>${formatScore(getScore(baseA, 'overall'))}</strong><span>vs</span><strong>${formatScore(getScore(baseB, 'overall'))}</strong></p><p>${description || matchupReason(baseA, baseB)}</p><span class="curated-link-text">Open Matchup →</span></a>`;
+  const labelClass = label.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  return `<a class="curated-matchup-card" href="${compareUrl(preferredSlugFor(baseA), preferredSlugFor(baseB))}" aria-label="Open matchup: ${baseA.name} versus ${baseB.name}"><div class="curated-matchup-image-wrap"><img src="${imageFor(baseA)}" alt="${baseA.name} survival base landscape" loading="lazy" decoding="async" width="420" height="220"><span class="curated-category-badge curated-category-${labelClass}">${label}</span></div><div class="curated-matchup-body"><div class="curated-pair"><strong>${baseA.name}</strong><span aria-hidden="true">VS</span><strong>${baseB.name}</strong></div><p class="curated-score-line"><strong>${formatScore(getScore(baseA, 'overall'))}</strong><span>vs</span><strong>${formatScore(getScore(baseB, 'overall'))}</strong></p><p class="curated-reason">${description || matchupReason(baseA, baseB)}</p><span class="curated-link-text">Open matchup →</span></div></a>`;
 }
-function renderSetupRecommendations(bases) { if (elements.featuredMatchups) elements.featuredMatchups.innerHTML = curatedMatchups(bases).map((item) => renderMatchupCard(item.baseA, item.baseB, item.label, item.description)).join(''); }
+function renderSetupRecommendations(bases) {
+  if (!elements.featuredMatchups) return;
+  elements.featuredMatchups.innerHTML = curatedMatchups(bases).map((item) => renderMatchupCard(item.baseA, item.baseB, item.label, item.description)).join('');
+  elements.featuredMatchups.querySelectorAll('img').forEach((img) => img.addEventListener('error', (event) => { event.currentTarget.src = HERO_IMAGE_FALLBACK_URL; }, { once: true }));
+}
 function getComparableScore(baseA, baseB, mode = 'interesting') { const sameRegion = baseA.region === baseB.region ? 1 : 0; const sameType = baseA.type === baseB.type ? 1 : 0; const overallGap = Math.abs((getScore(baseA, 'overall') || 0) - (getScore(baseB, 'overall') || 0)); const attributeGap = SCORE_ROWS.filter((row) => row.key !== 'overall').reduce((sum, row) => sum + Math.abs((getScore(baseA, row) || 0) - (getScore(baseB, row) || 0)), 0) / 7; if (mode === 'similar') return sameRegion * 3 + sameType * 3 + Math.max(0, 4 - overallGap) + Math.max(0, 4 - attributeGap); if (mode === 'alternative') return (getScore(baseB, 'overall') || 0) + (sameRegion ? 1.2 : 0) + (sameType ? .8 : 0); if (mode === 'contrast') return attributeGap + overallGap * .6 + (sameRegion ? .5 : 0) + (sameType ? 0 : 1); return attributeGap * .8 + Math.max(0, 2 - overallGap) + sameRegion + sameType; }
 function topMatchesForBase(base, bases, mode = 'interesting', limit = 3) { return bases.filter((candidate) => preferredSlugFor(candidate) !== preferredSlugFor(base)).map((candidate) => ({ base: candidate, score: getComparableScore(base, candidate, mode) })).sort((a,b)=>b.score-a.score).slice(0, limit).map((item)=>item.base); }
 function matchupReason(baseA, baseB) { const result = buildComparisonResult(baseA, baseB); const factor = result.biggestDecidingFactor; if (!factor) return 'A close survival profile with enough overlap to make the verdict debatable.'; const leader = baseForWinner(result, factor.winner); return `${leader ? shortName(leader) : 'One side'} creates the biggest separation in ${factor.label.toLowerCase()}.`; }
