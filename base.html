@@ -44,35 +44,44 @@
         <div class="detail-hero-main">
           <section id="hero-section" class="hero-section" aria-label="Hero image section" hidden>
             <div class="feature-image-wrap">
-              <div class="hero-media-frame">
-                <a id="back-link" class="back-link hero-back-link" href="/">← Back to List</a>
-                <img id="base-hero-image" class="hero-image base-feature-image" alt="">
-                <div class="hero-content-overlay">
-                  <div class="hero-title-stack">
-                    <h1 id="base-name"></h1>
-                    <ul id="base-meta-row" class="base-meta-row" aria-label="Base metadata"></ul>
-                    <p id="base-score-badges" class="badge-row" hidden></p>
+              <a id="back-link" class="back-link hero-back-link" href="/">← Back to List</a>
+              <img id="base-hero-image" class="hero-image base-feature-image" alt="">
+              <div class="hero-content-overlay">
+                <div class="hero-title-stack">
+                  <h1 id="base-name"></h1>
+                  <ul id="base-meta-row" class="base-meta-row" aria-label="Base metadata"></ul>
+                  <p id="base-score-badges" class="badge-row" hidden></p>
+                </div>
+                <div id="score-section" class="score-band" aria-label="Base score summary" hidden>
+                  <div class="dossier-score-header">
+                    <div class="score-overall-column">
+                      <span class="score-eyebrow">Overall score</span>
+                      <p id="score-empty">Scoring coming soon.</p>
+                      <p id="base-score-overall" class="detail-overall-score" hidden></p>
+                      <p id="base-score-rank" class="detail-score-rank" hidden></p>
+                    </div>
+                    <div class="score-breakdown-column">
+                      <ul id="base-score-list" class="score-list" hidden></ul>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <aside id="ranking-section" class="detail-positioning" aria-label="Ranking badges" hidden>
+              <aside id="ranking-section" class="detail-positioning" aria-label="Positioning" hidden>
                 <ul id="ranking-list" class="ranking-list ranking-badges"></ul>
               </aside>
             </div>
+          </section>
 
-            <div id="score-section" class="score-band" aria-label="Base score summary" hidden>
-              <div class="dossier-score-header">
-                <div class="score-overall-column">
-                  <span class="score-eyebrow">Overall score</span>
-                  <p id="score-empty">Scoring coming soon.</p>
-                  <p id="base-score-overall" class="detail-overall-score" hidden></p>
-                  <p id="base-score-rank" class="detail-score-rank" hidden></p>
-                </div>
-                <div class="score-breakdown-column">
-                  <ul id="base-score-list" class="score-list" hidden></ul>
-                </div>
-              </div>
+          <section id="compact-hero-section" class="compact-hero-section" aria-label="Compact base hero" hidden>
+            <div class="compact-hero-image-wrap">
+              <a id="compact-back-link" class="back-link compact-hero-back-link" href="/">← Back to List</a>
+              <img id="compact-hero-image" class="compact-hero-image" alt="">
+            </div>
+            <div class="compact-hero-body">
+              <p id="compact-base-name" class="compact-hero-title"></p>
+              <p id="compact-base-meta" class="compact-hero-meta"></p>
+              <ul id="compact-ranking-list" class="compact-ranking-list"></ul>
+              <div id="compact-score-section" class="score-band compact-score-band" aria-label="Base score summary" hidden></div>
             </div>
           </section>
 
