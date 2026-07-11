@@ -448,6 +448,7 @@ function renderMetaRow(base) {
     const listItem = document.createElement('li');
     const label = document.createElement('strong');
     label.textContent = `${item.label}: `;
+    listItem.dataset.metaLabel = item.label;
     listItem.append(label, item.value);
     elements.metaRow.appendChild(listItem);
   });
