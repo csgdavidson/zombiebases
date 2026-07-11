@@ -10519,3 +10519,145 @@ html {
     gap: .55rem;
   }
 }
+
+/* Final base hero polish: desktop score inset and compact image context. */
+@media (min-width: 821px) {
+  .base-detail-main .hero-section {
+    grid-template-columns: minmax(0, 1fr) minmax(21rem, 27rem);
+  }
+
+  .base-detail-main .score-band {
+    justify-self: start;
+    width: calc(100% - clamp(1.5rem, 2.8vw, 2.5rem));
+    padding-right: 0;
+  }
+
+  .base-detail-main .hero-section > .detail-positioning {
+    z-index: 2;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    justify-self: start;
+    width: min(100% - clamp(4rem, 8vw, 8rem), 54rem);
+    margin: 0 clamp(2rem, 4vw, 4rem) clamp(1.45rem, 2.7vw, 2.4rem);
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .base-detail-main .hero-content-overlay {
+    padding-bottom: clamp(7rem, 8.5vw, 9.25rem);
+  }
+}
+
+@media (max-width: 820px) {
+  .base-detail-main .hero-section {
+    gap: var(--space-4);
+  }
+
+  .base-detail-main .feature-image-wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: #071423;
+  }
+
+  .base-detail-main .feature-image-wrap::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: inherit;
+    background: linear-gradient(
+      to bottom,
+      transparent 45%,
+      rgba(7, 20, 35, 0.18) 62%,
+      rgba(7, 20, 35, 0.84) 100%
+    );
+  }
+
+  .base-detail-main .hero-image,
+  .base-detail-main .base-feature-image,
+  .base-detail-main .hero-content-overlay,
+  .base-detail-main .hero-back-link {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .base-detail-main .hero-image,
+  .base-detail-main .base-feature-image {
+    order: initial;
+    border-radius: inherit;
+    box-shadow: none;
+  }
+
+  .base-detail-main .hero-back-link {
+    display: inline-flex;
+    z-index: 3;
+    align-self: start;
+    justify-self: start;
+    margin: clamp(0.85rem, 3vw, 1.25rem);
+    color: #fff;
+    background: rgba(7, 17, 31, .42);
+    border-color: rgba(226, 232, 240, .72);
+    box-shadow: none;
+  }
+
+  .base-detail-main .hero-content-overlay {
+    z-index: 2;
+    align-self: end;
+    order: initial;
+    padding: clamp(5.2rem, 18vw, 7rem) clamp(1rem, 4.8vw, 1.65rem) clamp(1.15rem, 5vw, 1.75rem);
+    color: #fff;
+    background: transparent;
+  }
+
+  .base-detail-main .detail-hero h1 {
+    max-width: 13ch;
+    color: #fff;
+    font-size: clamp(2.05rem, 9vw, 3.45rem);
+    line-height: .95;
+    text-shadow: 0 2px 14px rgba(0,0,0,.46);
+  }
+
+  .base-detail-main .base-meta-row {
+    margin-top: .75rem;
+    color: rgba(248, 250, 252, .82);
+    gap: .2rem .55rem;
+    font-size: clamp(.8rem, 2.7vw, .95rem);
+  }
+
+  .base-detail-main .base-meta-row li[data-meta-label="Country"] {
+    display: none;
+  }
+
+  .base-detail-main .base-meta-row li + li::before {
+    content: "•";
+    margin-right: .55rem;
+    color: rgba(248, 250, 252, .7);
+  }
+
+  .base-detail-main .base-meta-row strong {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .base-detail-main .hero-section > .detail-positioning {
+    position: static;
+    order: initial;
+    width: auto;
+    max-width: 100%;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+}
