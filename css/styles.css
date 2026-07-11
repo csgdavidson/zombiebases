@@ -9552,3 +9552,116 @@ html {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Base detail hero ranking layout repair: rankings are flow content, never overlayed.
+   Keep the badge group in one semantic location (after the h1) and place it with
+   grid/flex regions so future responsive changes do not reintroduce absolute offsets. */
+.base-detail-main #ranking-section,
+.base-detail-v2-active #ranking-section,
+.base-detail-main .detail-positioning,
+.base-detail-v2-active .detail-positioning {
+  position: static;
+  inset: auto;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.base-detail-main .hero-content-overlay {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(310px, 380px);
+  grid-template-rows: auto auto auto auto;
+  gap: var(--space-3) var(--space-5);
+  align-items: end;
+}
+
+.base-detail-main .hero-title-stack {
+  display: contents;
+}
+
+.base-detail-main .detail-hero h1 {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+}
+
+.base-detail-main #ranking-section {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: end;
+  align-self: start;
+}
+
+.base-detail-main .base-meta-row {
+  grid-column: 1;
+  grid-row: 3;
+  min-width: 0;
+}
+
+.base-detail-main .hero-title-stack .badge-row {
+  grid-column: 1;
+  grid-row: 4;
+  min-width: 0;
+}
+
+.base-detail-main .score-band {
+  grid-column: 2;
+  grid-row: 1 / 5;
+  align-self: end;
+  min-width: 0;
+}
+
+.base-detail-main #ranking-section .ranking-list,
+.base-detail-v2-active #ranking-section .ranking-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  max-width: 100%;
+}
+
+.base-detail-main #ranking-section .ranking-list > li,
+.base-detail-v2-active #ranking-section .ranking-list > li {
+  min-width: 0;
+}
+
+.base-detail-main #ranking-section .ranking-list .image-positioning-badge,
+.base-detail-v2-active #ranking-section .ranking-list .image-positioning-badge {
+  max-width: 100%;
+  white-space: normal;
+}
+
+@media (max-width: 820px) {
+  .base-detail-main .hero-content-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .base-detail-main .hero-title-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .base-detail-main .detail-hero h1,
+  .base-detail-main #ranking-section,
+  .base-detail-main .base-meta-row,
+  .base-detail-main .hero-title-stack .badge-row,
+  .base-detail-main .score-band {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .base-detail-main #ranking-section .ranking-list,
+  .base-detail-v2-active #ranking-section .ranking-list {
+    justify-content: flex-start;
+  }
+}
