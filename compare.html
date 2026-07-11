@@ -116,46 +116,48 @@
     <section id="compare-setup" class="compare-explorer" hidden>
       <header class="compare-explorer-hero">
         <a class="back-link" href="/">← Back to List</a>
-        <p class="eyebrow">Comparison command center</p>
-        <h1>Find the survival matchup worth debating.</h1>
-        <p class="hero-lede">Start with curated rivalries, scenario prompts, and smart recommendations — or jump straight to any two bases when you already know the contenders.</p>
+        <p class="eyebrow">Compare bases</p>
+        <h1>Compare any two survival locations.</h1>
+        <p class="hero-lede">Search by name, region, continent, or base type to build a side-by-side survival verdict in seconds.</p>
       </header>
 
-      <section class="compare-lab-grid" aria-label="Compare recommendations">
-        <article class="compare-lab-panel compare-lab-featured">
-          <div class="section-heading-row">
-            <p class="eyebrow">Featured matchups</p>
-            <h2>Pick a dossier briefing</h2>
-            <p class="section-helper">These pairings are generated from score gaps, similar profiles, and contrasting survival strategies.</p>
-          </div>
-          <div id="compare-featured-matchups" class="matchup-card-grid"></div>
-        </article>
-
-        <aside class="compare-lab-panel compare-scenario-panel" aria-label="Scenario quick picks">
-          <p class="eyebrow">What are you testing?</p>
-          <h2>Choose a comparison lens</h2>
-          <div id="compare-scenario-tabs" class="scenario-chip-list" role="list"></div>
-          <div id="compare-scenario-results" class="scenario-results"></div>
-        </aside>
-      </section>
-
-      <section class="compare-lab-panel compare-manual-panel" aria-label="Manual comparison builder">
+      <section class="compare-lab-panel compare-manual-panel compare-primary-panel" aria-label="Choose two bases to compare">
         <div>
-          <p class="eyebrow">Direct compare</p>
-          <h2>Build your own matchup</h2>
-          <p class="section-helper">Searchable inputs keep all 111 locations available without forcing you through a wall of dropdown options.</p>
+          <p class="eyebrow">Start here</p>
+          <h2>Build your matchup</h2>
+          <p class="section-helper">Type terms like castle, island, Europe, subterranean, remote, or polar. Suggestions appear as you search.</p>
         </div>
         <div class="compare-search-grid">
           <label class="compare-search-label" for="compare-setup-primary">First base
-            <input id="compare-setup-primary" list="compare-base-options" type="search" autocomplete="off" placeholder="Search or choose a base">
+            <input id="compare-setup-primary" type="search" autocomplete="off" placeholder="Search first base" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="compare-setup-primary-results">
+            <div id="compare-setup-primary-results" class="compare-autocomplete-results" role="listbox" hidden></div>
           </label>
           <label class="compare-search-label" for="compare-setup-secondary">Second base
-            <input id="compare-setup-secondary" list="compare-base-options" type="search" autocomplete="off" placeholder="Search or choose a rival">
+            <input id="compare-setup-secondary" type="search" autocomplete="off" placeholder="Search second base" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="compare-setup-secondary-results">
+            <div id="compare-setup-secondary-results" class="compare-autocomplete-results" role="listbox" hidden></div>
           </label>
-          <datalist id="compare-base-options"></datalist>
           <button id="compare-setup-button" class="compare-button" type="button">Compare bases</button>
         </div>
-        <p id="compare-setup-help" class="compare-helper" aria-live="polite">Tip: try a region, name, or base type, then choose a suggested option.</p>
+        <p id="compare-setup-help" class="compare-helper" aria-live="polite">Choose two different bases to compare.</p>
+      </section>
+
+      <section class="compare-lab-panel compare-suggestions-panel" aria-label="Suggested comparisons">
+        <div class="section-heading-row">
+          <p class="eyebrow">Suggested comparisons</p>
+          <h2>Not sure where to start?</h2>
+          <p class="section-helper">A few high-signal matchups, labelled by why they are worth comparing.</p>
+        </div>
+        <div id="compare-featured-matchups" class="matchup-card-grid"></div>
+      </section>
+
+      <section class="compare-lab-panel compare-discovery-panel" aria-label="Explore comparison ideas">
+        <div class="section-heading-row">
+          <p class="eyebrow">Explore</p>
+          <h2>One base, three rival strategies</h2>
+          <p class="section-helper">Use these as inspiration after the direct compare tool.</p>
+        </div>
+        <div id="compare-scenario-tabs" class="scenario-chip-list" role="list"></div>
+        <div id="compare-scenario-results" class="scenario-results"></div>
       </section>
     </section>
 

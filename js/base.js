@@ -146,7 +146,6 @@ const elements = {
   compareSection: document.getElementById('detail-compare-section'),
   compareForm: document.getElementById('detail-compare-form'),
   compareSelect: document.getElementById('detail-compare-select'),
-  compareOptions: document.getElementById('detail-compare-options'),
   compareRecommendations: document.getElementById('detail-compare-recommendations'),
   heroSection: document.getElementById('hero-section'),
   heroImage: document.getElementById('base-hero-image'),
@@ -471,6 +470,67 @@ function baseCompareOptionLabel(base) {
   return `${base.name} — ${labelFor('type', base.type)}, ${labelFor('region', base.region)}`;
 }
 
+
+function searchTextForCompare(base) {
+  return [base.name, labelFor('type', base.type), labelFor('region', base.region), base.continent, base.type, base.region].filter(Boolean).join(' ').toLowerCase();
+}
+
+function renderCompareAutocompleteOption(base, id, active = false) {
+  return `<button id="${id}" class="compare-autocomplete-option${active ? ' is-active' : ''}" type="button" role="option" data-slug="${slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(base) : base.slug}" aria-selected="${active}"><strong>${base.name}</strong><span>${labelFor('type', base.type)} · ${labelFor('region', base.region)}</span></button>`;
+}
+
+function attachDetailCompareAutocomplete(input, results, bases, onSelect) {
+  if (!input || !results) return null;
+  const popular = bases.slice().sort((a, b) => (Number(b?.scores?.overall) || 0) - (Number(a?.scores?.overall) || 0)).slice(0, 5);
+  let matches = [];
+  let active = -1;
+  let selected = null;
+  const preferredSlug = (base) => slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(base) : base.slug;
+  const choose = (base) => {
+    selected = base;
+    input.value = baseCompareOptionLabel(base);
+    input.dataset.slug = preferredSlug(base);
+    results.hidden = true;
+    input.setAttribute('aria-expanded', 'false');
+    input.removeAttribute('aria-activedescendant');
+    onSelect?.(base);
+  };
+  const render = () => {
+    const query = input.value.trim().toLowerCase();
+    matches = (query ? bases.filter((base) => searchTextForCompare(base).includes(query)).slice(0, 8) : popular);
+    active = Math.min(active, matches.length - 1);
+    results.innerHTML = matches.length
+      ? `${!query ? '<p class="compare-autocomplete-hint">Popular rivals — start typing to search all bases.</p>' : ''}${matches.map((base, index) => renderCompareAutocompleteOption(base, `${input.id}-option-${index}`, index === active)).join('')}`
+      : '<p class="compare-autocomplete-empty">No matches. Try a type, region, or broader term.</p>';
+    results.hidden = false;
+    input.setAttribute('aria-expanded', 'true');
+    if (active >= 0) input.setAttribute('aria-activedescendant', `${input.id}-option-${active}`);
+    else input.removeAttribute('aria-activedescendant');
+  };
+  input.addEventListener('focus', render);
+  input.addEventListener('input', () => { selected = null; input.dataset.slug = ''; active = -1; render(); onSelect?.(null); });
+  input.addEventListener('keydown', (event) => {
+    if (results.hidden && ['ArrowDown', 'ArrowUp'].includes(event.key)) render();
+    if (event.key === 'ArrowDown') { event.preventDefault(); active = Math.min(matches.length - 1, active + 1); render(); }
+    if (event.key === 'ArrowUp') { event.preventDefault(); active = Math.max(0, active - 1); render(); }
+    if (event.key === 'Enter' && active >= 0 && matches[active]) { event.preventDefault(); choose(matches[active]); }
+    if (event.key === 'Escape') { results.hidden = true; input.setAttribute('aria-expanded', 'false'); }
+  });
+  results.addEventListener('click', (event) => {
+    const button = event.target.closest('button[data-slug]');
+    if (!button) return;
+    const base = bases.find((entry) => preferredSlug(entry) === button.dataset.slug);
+    if (base) choose(base);
+  });
+  document.addEventListener('click', (event) => {
+    if (!input.contains(event.target) && !results.contains(event.target)) {
+      results.hidden = true;
+      input.setAttribute('aria-expanded', 'false');
+    }
+  });
+  return { getSelected: () => selected || resolveCompareInput(bases, input.value) };
+}
+
 function resolveCompareInput(bases, value) {
   const raw = String(value || '').trim();
   const name = raw.split(' — ')[0].trim();
@@ -511,10 +571,6 @@ function renderCompareCard(base, bases) {
     .filter((entry) => (slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(entry) : entry.slug) !== currentSlug)
     .sort((a, b) => a.name.localeCompare(b.name));
 
-  if (elements.compareOptions) {
-    elements.compareOptions.innerHTML = options.map((entry) => `<option value="${baseCompareOptionLabel(entry)}"></option>`).join('');
-  }
-
   if (elements.compareRecommendations) {
     elements.compareRecommendations.innerHTML = getRecommendedComparisons(base, bases).map((item) => {
       const slug = slugHelper?.getPreferredSlug ? slugHelper.getPreferredSlug(item.base) : item.base.slug;
@@ -524,9 +580,11 @@ function renderCompareCard(base, bases) {
   }
 
   elements.compareSelect.value = '';
+  const results = document.getElementById('detail-compare-results');
+  const autocomplete = attachDetailCompareAutocomplete(elements.compareSelect, results, options, () => {});
   elements.compareForm.onsubmit = (event) => {
     event.preventDefault();
-    const selected = resolveCompareInput(options, elements.compareSelect.value);
+    const selected = autocomplete?.getSelected() || resolveCompareInput(options, elements.compareSelect.value);
     if (!selected) {
       elements.compareSelect.focus();
       return;
