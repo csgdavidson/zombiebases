@@ -109,15 +109,20 @@
           <h3>Choose the next rival</h3>
           <p id="detail-compare-intro">Compare this location against similar bases, stronger alternatives, or wild-card rivals with a different survival profile.</p>
         </div>
-        <div id="detail-compare-recommendations" class="detail-matchup-grid" aria-label="Recommended comparisons"></div>
         <form id="detail-compare-form" class="detail-compare-form detail-compare-manual">
-          <label for="detail-compare-select">Search any base</label>
+          <label for="detail-compare-select">Search another base</label>
           <div class="detail-compare-controls">
-            <input id="detail-compare-select" list="detail-compare-options" type="search" autocomplete="off" placeholder="Search all locations" required>
-            <datalist id="detail-compare-options"></datalist>
+            <div class="detail-autocomplete-wrap">
+              <input id="detail-compare-select" type="search" autocomplete="off" placeholder="Try castle, island, Europe, remote..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="detail-compare-results" required>
+              <div id="detail-compare-results" class="compare-autocomplete-results" role="listbox" hidden></div>
+            </div>
             <button class="compare-button" type="submit">Compare bases</button>
           </div>
         </form>
+        <div class="detail-suggested-rivals">
+          <p class="eyebrow">Suggested rivals</p>
+          <div id="detail-compare-recommendations" class="detail-matchup-grid" aria-label="Recommended comparisons"></div>
+        </div>
       </section>
 
       <section id="similar-section" class="content-section" aria-label="Comparable locations section" hidden>
