@@ -106,25 +106,20 @@
         <div id="survival-timeline-cards" class="survival-timeline-cards" aria-label="Survival timeline cards"></div>
       </section>
 
-      <section id="detail-compare-section" class="content-section detail-compare-card detail-compare-explorer" aria-label="Compare this base" hidden>
+      <section id="detail-compare-section" class="content-section detail-compare-card detail-compare-explorer" aria-labelledby="detail-compare-heading" hidden>
         <div class="detail-compare-copy">
           <p class="section-kicker">Base comparison</p>
-          <h3>Choose the next rival</h3>
-          <p id="detail-compare-intro">Compare this location against similar bases, stronger alternatives, or wild-card rivals with a different survival profile.</p>
+          <h3 id="detail-compare-heading">Choose the next rival</h3>
+          <p id="detail-compare-intro">We’ve picked three locations that make for interesting comparisons.</p>
         </div>
-        <form id="detail-compare-form" class="detail-compare-form detail-compare-manual">
-          <label for="detail-compare-select">Search another base</label>
-          <div class="detail-compare-controls">
-            <div class="detail-autocomplete-wrap">
-              <input id="detail-compare-select" type="search" autocomplete="off" placeholder="Try castle, island, Europe, remote..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="detail-compare-results" required>
-              <div id="detail-compare-results" class="compare-autocomplete-results" role="listbox" hidden></div>
-            </div>
-            <button class="compare-button" type="submit">Compare bases</button>
+        <div id="detail-compare-recommendations" class="detail-matchup-grid" aria-label="Curated rival comparisons"></div>
+        <div class="detail-compare-page-cta">
+          <div class="detail-compare-page-cta-icon" aria-hidden="true">⌖</div>
+          <div>
+            <h4>Want to compare with a specific location?</h4>
+            <p id="detail-compare-page-copy">Compare any of the 111 locations on ZombieBases.</p>
           </div>
-        </form>
-        <div class="detail-suggested-rivals">
-          <p class="eyebrow">Suggested rivals</p>
-          <div id="detail-compare-recommendations" class="detail-matchup-grid" aria-label="Recommended comparisons"></div>
+          <a class="detail-compare-page-link" href="/compare.html">Go to Compare Page <span aria-hidden="true">→</span></a>
         </div>
       </section>
 
