@@ -27,7 +27,7 @@ const sandbox = {
 vm.createContext(sandbox);
 vm.runInContext(fs.readFileSync('js/compare.js', 'utf8'), sandbox);
 
-const { buildBaseComparison, formatDifference } = sandbox.window.zombieBasesComparison;
+const { buildBaseComparison, normaliseScore, formatDifference } = sandbox.window.zombieBasesComparison;
 
 function base(name, values) {
   return {
@@ -75,6 +75,20 @@ function base(name, values) {
   assert.strictEqual(result.overallWinner, 'tie');
   assert.strictEqual(result.metrics.find((m) => m.key === 'defensibility').winner, 'tie');
   assert.strictEqual(formatDifference(0.03), 'Even');
+}
+
+
+{
+  const result = buildBaseComparison(
+    base('Numeric String', { overall: '11', defensibility: '9', sustainability: 'bad', isolation: '5', exposure: '7', maintenanceBurden: '8', populationCapacity: undefined, resourceSecurity: '7' }),
+    base('Number Values', { overall: 9, defensibility: 8, sustainability: 7, isolation: 5, exposure: 6, maintenanceBurden: 5, populationCapacity: 8, resourceSecurity: 7 })
+  );
+  assert.strictEqual(normaliseScore('11'), 10);
+  assert.strictEqual(formatDifference('0.03'), 'Even');
+  assert.strictEqual(result.overallWinner, 'baseA');
+  assert.strictEqual(result.metrics.find((m) => m.key === 'overall').baseAValue, 10);
+  assert.strictEqual(result.metrics.find((m) => m.key === 'sustainability').baseAValue, null);
+  assert.strictEqual(result.metrics.find((m) => m.key === 'populationCapacity').baseAValue, null);
 }
 
 console.log('compare utility tests passed');
