@@ -607,6 +607,22 @@ function renderCategoryLinks() {
   });
 }
 
+function scrollMapSectionIntoView() {
+  const mapSection = elements.mapView;
+
+  if (!mapSection || state.view !== 'map' || mapSection.hidden) {
+    return;
+  }
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      if (state.view === 'map' && !mapSection.hidden) {
+        mapSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+}
+
 function renderCurrentView() {
   const isMapView = state.view === 'map';
   elements.listView.hidden = isMapView;
@@ -651,14 +667,23 @@ function setView(nextView, options = {}) {
   updateHomepageMetadata();
 
   if (state.view === 'map' && options.scrollToMap) {
-    elements.mapView?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    scrollMapSectionIntoView();
   }
 }
 
 function handleMapAnchorNavigation(event) {
-  const mapLink = event.target.closest('a[href$="#map-view"]');
+  const mapLink = event.target.closest('a[href]');
 
   if (!mapLink || !window.location.pathname.match(/\/$|\/index\.html$/)) {
+    return;
+  }
+
+  const url = new URL(mapLink.href, window.location.origin);
+  const isHomeMapLink = url.origin === window.location.origin
+    && url.pathname.match(/\/$|\/index\.html$/)
+    && (url.searchParams.get('view') === 'map' || url.hash === '#map-view');
+
+  if (!isHomeMapLink) {
     return;
   }
 
@@ -669,6 +694,25 @@ function handleMapAnchorNavigation(event) {
 function handleHashNavigation() {
   if (window.location.hash === '#map-view') {
     setView('map', { scrollToMap: true });
+  }
+}
+
+
+function syncStateFromCurrentUrl(options = {}) {
+  const { view, region, type, sort, q } = readStateFromUrl();
+  state.view = view;
+  state.sort = sort;
+
+  elements.regionFilter.value = LABELS.region[region] ? region : '';
+  elements.typeFilter.value = LABELS.type[type] ? type : '';
+  elements.searchInput.value = q;
+  if (elements.sortSelect) {
+    elements.sortSelect.value = state.sort;
+  }
+
+  applyFilters();
+  if (state.view === 'map' && options.scrollToMap) {
+    scrollMapSectionIntoView();
   }
 }
 
@@ -724,6 +768,9 @@ async function loadBases() {
 
     setInitialControls();
     applyFilters();
+    if (state.view === 'map') {
+      scrollMapSectionIntoView();
+    }
     elements.status.textContent = '';
   } catch (error) {
     elements.status.textContent = 'Could not load base data. Please try again later.';
@@ -746,9 +793,12 @@ if (elements.searchInput && elements.regionFilter && elements.typeFilter && elem
   });
   elements.mapViewButton.addEventListener('click', (event) => {
     event.preventDefault();
-    setView('map');
+    setView('map', { scrollToMap: true });
   });
   document.addEventListener('click', handleMapAnchorNavigation);
   window.addEventListener('hashchange', handleHashNavigation);
+  window.addEventListener('popstate', () => {
+    syncStateFromCurrentUrl({ scrollToMap: readStateFromUrl().view === 'map' });
+  });
   loadBases();
 }

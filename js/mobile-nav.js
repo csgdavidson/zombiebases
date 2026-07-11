@@ -41,7 +41,7 @@
     const primaryItems = [
       ['Explore', '/', 'explore'],
       ['Rankings', '/rankings.html', 'rankings'],
-      ['Map', '/#map-view', 'map'],
+      ['Map', '/?view=map', 'map'],
       ['Compare', '/compare.html', 'compare']
     ];
     const moreItems = [
@@ -90,7 +90,7 @@
     const items = [
       ['Explore', '/', 'explore', isHome() && !mapActive],
       ['Rankings', '/rankings.html', 'rankings', location.pathname.endsWith('/rankings.html')],
-      ['Map', '/#map-view', 'map', mapActive],
+      ['Map', '/?view=map', 'map', mapActive],
       ['Compare', '/compare.html', 'compare', location.pathname.endsWith('/compare.html')],
     ];
     nav.innerHTML = items.map(([label, href, key, active]) => `<a href="${href}" ${active ? 'aria-current="page"' : ''}>${icon(key)}<span>${label}</span></a>`).join('') +

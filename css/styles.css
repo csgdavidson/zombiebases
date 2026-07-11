@@ -1418,6 +1418,7 @@ main > * {
 
 #map-view {
   margin-top: calc(var(--space-2) * -1);
+  scroll-margin-top: clamp(96px, 12vw, 150px);
 }
 
 .rankings-explore h2 {
