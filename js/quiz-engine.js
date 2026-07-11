@@ -5,6 +5,7 @@
   const REGION_LABELS = {
     uk_ireland: 'UK & Ireland', western_europe: 'Western Europe', eastern_europe: 'Eastern & Northern Europe', north_america: 'North America', south_america: 'South America', africa: 'Africa', middle_east: 'Middle East', south_asia: 'South Asia', east_asia: 'East Asia', southeast_asia: 'Southeast Asia', oceania: 'Oceania', polar_extreme: 'Polar & Extreme'
   };
+  const AXIS_LABELS = { defence: 'Defence', isolation: 'Isolation', sustainability: 'Sustainability', resources: 'Resources', community: 'Community', complexity: 'Technical complexity', access: 'Access' };
   const BASE_TYPE_TRAITS = {
     fortified_structure: { defence: 9, isolation: 5, sustainability: 4, resources: 5, community: 6, complexity: 4, access: 5 },
     isolated_landmass: { defence: 6, isolation: 9, sustainability: 6, resources: 6, community: 5, complexity: 5, access: 2 },
@@ -16,31 +17,36 @@
     transit_hub: { defence: 5, isolation: 3, sustainability: 4, resources: 7, community: 5, complexity: 6, access: 9 },
     landmark_structure: { defence: 6, isolation: 5, sustainability: 4, resources: 4, community: 5, complexity: 4, access: 6 }
   };
-
+  const PROFILES = [
+    { id: 'fortress-commander', name: 'Fortress Commander', shortDescription: 'You prioritise strong barriers, chokepoints and early control.', description: 'Fortress Commanders want the first phase of collapse to be survivable through walls, high ground and defensible approaches. They accept that the strongest positions can need more supply discipline over time.', strength: 'Defensible perimeters and immediate threat control', compromise: 'May trade resource depth or easy access for stronger protection', dimensions: ['defence'] },
+    { id: 'island-isolationist', name: 'Island Isolationist', shortDescription: 'You favour distance, separation and fewer approach routes.', description: 'Island Isolationists reduce contact with infected areas and hostile traffic by choosing places that are hard to reach. The price is slower movement, limited salvage and heavier reliance on what is already on site.', strength: 'Low exposure through remoteness and controlled approaches', compromise: 'Harder resupply, evacuation and outside contact', dimensions: ['isolation'] },
+    { id: 'community-builder', name: 'Community Builder', shortDescription: 'You focus on people, skills and renewable settlement life.', description: 'Community Builders see survival as a long-term group project. They value food systems, shared labour and governance, even when that means accepting more visible or less bunker-like locations.', strength: 'Long-term resilience through skills, food and cooperation', compromise: 'Larger groups can increase visibility and coordination pressure', dimensions: ['community', 'sustainability'] },
+    { id: 'resource-planner', name: 'Resource Planner', shortDescription: 'You prioritise dependable supplies, sustainability and long-term resilience.', description: 'Resource Planners look for places where food, water, medical basics and renewable supplies can keep a group alive after stored goods run down. They often accept less extreme isolation if the resource base is stronger.', strength: 'Long-term resource planning', compromise: 'Less emphasis on extreme isolation or immediate mobility', dimensions: ['resources', 'sustainability'] },
+    { id: 'systems-survivor', name: 'Systems Survivor', shortDescription: 'You are willing to use complex infrastructure if it improves resilience.', description: 'Systems Survivors accept engineered sites, technical maintenance and specialist knowledge when those systems provide protection, power, water or control. Their risk is that complexity becomes a burden without skilled people and spare parts.', strength: 'Engineered resilience and infrastructure leverage', compromise: 'Higher maintenance burden and dependency on expertise', dimensions: ['complexity', 'defence', 'resources'] },
+    { id: 'resilient-generalist', name: 'Resilient Generalist', shortDescription: 'You balance defence, resources, isolation and people rather than maximising one axis.', description: 'Resilient Generalists avoid all-in strategies. They prefer bases with fewer severe weaknesses and enough flexibility to adapt as conditions change.', strength: 'Balanced survivability across multiple pressures', compromise: 'May miss the strongest specialist advantage in any single category', dimensions: ['defence', 'isolation', 'sustainability', 'resources', 'community'] }
+  ];
+  const PROFILE_BY_ID = Object.fromEntries(PROFILES.map((profile) => [profile.id, profile]));
   function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
-  function labelFor(kind, value) { return (kind === 'type' ? TYPE_LABELS : REGION_LABELS)[value] || String(value || '').replace(/_/g, ' '); }
+  function labelFor(kind, value) { if (kind === 'axis') return AXIS_LABELS[value] || value; return (kind === 'type' ? TYPE_LABELS : REGION_LABELS)[value] || String(value || '').replace(/_/g, ' '); }
   function scoreCategories(base) { return base?.scores?.categories || {}; }
   function answerFor(question, id) { return question.answers.find((answer) => answer.id === id); }
-
+  function getQuestions() { return (typeof window !== 'undefined' ? window.quizQuestions?.questions : globalThis.quizQuestions?.questions) || []; }
+  function getAxes() { return (typeof window !== 'undefined' ? window.quizQuestions?.axes : globalThis.quizQuestions?.axes) || ['defence', 'isolation', 'sustainability', 'resources', 'community', 'complexity', 'access']; }
   function buildUserProfile(answers) {
     const totals = { defence: 0, isolation: 0, sustainability: 0, resources: 0, community: 0, complexity: 0, access: 0 };
     const typeAffinity = {};
-    window.quizQuestions.questions.forEach((question) => {
+    getQuestions().forEach((question) => {
       const selected = answerFor(question, answers[question.id]);
       if (!selected) return;
       Object.entries(selected.weights || {}).forEach(([key, value]) => { totals[key] = (totals[key] || 0) + value; });
       Object.entries(selected.typeAffinity || {}).forEach(([key, value]) => { typeAffinity[key] = (typeAffinity[key] || 0) + value; });
     });
-    const values = Object.values(totals);
-    const min = Math.min(...values, 0);
-    const max = Math.max(...values, 1);
+    const values = Object.values(totals); const min = Math.min(...values, 0); const max = Math.max(...values, 1);
     const normalized = Object.fromEntries(Object.entries(totals).map(([key, value]) => [key, clamp(((value - min) / (max - min)) * 10, 0, 10)]));
     return { raw: totals, normalized, typeAffinity };
   }
-
   function baseProfile(base) {
-    const categories = scoreCategories(base);
-    const typeTraits = BASE_TYPE_TRAITS[base.type] || BASE_TYPE_TRAITS.landmark_structure;
+    const categories = scoreCategories(base); const typeTraits = BASE_TYPE_TRAITS[base.type] || BASE_TYPE_TRAITS.landmark_structure;
     const defensibility = Number(categories.defensibility ?? base?.scores?.defensibility ?? typeTraits.defence);
     const isolation = Number(categories.isolation ?? base?.scores?.isolation ?? typeTraits.isolation);
     const sustainability = Number(categories.sustainability ?? base?.scores?.sustainability ?? typeTraits.sustainability);
@@ -49,63 +55,17 @@
     const populationCapacity = Number(comparison.populationCapacity?.score ?? typeTraits.community);
     const maintenance = Number(comparison.maintenanceBurden?.score ?? typeTraits.complexity);
     const exposure = Number(comparison.exposure?.score ?? typeTraits.access);
-    return {
-      defence: (defensibility * 0.75) + (typeTraits.defence * 0.25),
-      isolation: (isolation * 0.75) + (typeTraits.isolation * 0.25),
-      sustainability: (sustainability * 0.7) + (typeTraits.sustainability * 0.3),
-      resources: (resourceSecurity * 0.6) + (sustainability * 0.25) + (typeTraits.resources * 0.15),
-      community: (populationCapacity * 0.55) + (sustainability * 0.25) + (typeTraits.community * 0.2),
-      complexity: (maintenance * 0.55) + (typeTraits.complexity * 0.45),
-      access: (exposure * 0.6) + (typeTraits.access * 0.4)
-    };
+    return { defence: (defensibility * 0.75) + (typeTraits.defence * 0.25), isolation: (isolation * 0.75) + (typeTraits.isolation * 0.25), sustainability: (sustainability * 0.7) + (typeTraits.sustainability * 0.3), resources: (resourceSecurity * 0.6) + (sustainability * 0.25) + (typeTraits.resources * 0.15), community: (populationCapacity * 0.55) + (sustainability * 0.25) + (typeTraits.community * 0.2), complexity: (maintenance * 0.55) + (typeTraits.complexity * 0.45), access: (exposure * 0.6) + (typeTraits.access * 0.4) };
   }
-
-  function compatibility(user, base, profile) {
-    const axes = window.quizQuestions.axes;
-    let weightedDistance = 0;
-    let weightTotal = 0;
-    axes.forEach((axis) => {
-      const priority = clamp(user.normalized[axis] || 0, 0, 10);
-      const weight = 0.7 + (priority / 10) * 1.8;
-      weightedDistance += Math.abs(priority - clamp(profile[axis] || 0, 0, 10)) * weight;
-      weightTotal += weight;
-    });
-    const typeBoost = user.typeAffinity[base.type] ? user.typeAffinity[base.type] * 1.8 : 0;
-    const overallBoost = Number(base?.scores?.overall || 0) * 0.45;
-    return Math.round(clamp(100 - ((weightedDistance / weightTotal) * 9.2) + typeBoost + overallBoost, 1, 99));
-  }
-
-  function personality(user) {
-    const n = user.normalized;
-    const ordered = Object.entries(n).sort((a, b) => b[1] - a[1]);
-    const top = ordered[0];
-    const second = ordered[1];
-    if (top && second && top[1] - second[1] < 1.15) return 'Resilient Generalist';
-    if (top[0] === 'defence') return 'Fortress Commander';
-    if (top[0] === 'isolation') return 'Island Isolationist';
-    if (top[0] === 'community' || top[0] === 'sustainability') return 'Community Builder';
-    if (top[0] === 'resources') return 'Resource Planner';
-    if (top[0] === 'complexity') return 'Systems Survivor';
-    return 'Resilient Generalist';
-  }
-
-  function explain(user, base, baseProf) {
-    const top = Object.entries(user.normalized).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([key]) => key);
-    const strengths = Object.entries(baseProf).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([key]) => key);
-    const typeLabel = labelFor('type', base.type).toLowerCase();
-    return `${base.name} fits because your profile prioritises ${top.join(' and ')} while this ${typeLabel} is strongest in ${strengths.join(' and ')}. Its existing dossier scores and derived resource profile make it a close match for how you balance immediate safety with long-term survival.`;
-  }
-
-  function recommend(bases, answers) {
-    const user = buildUserProfile(answers);
-    const scored = bases.filter((base) => base && base.slug && base.name && normalizeStatus(base) !== 'hidden').map((base) => {
-      const profile = baseProfile(base);
-      return { base, baseProfile: profile, match: compatibility(user, base, profile) };
-    }).sort((a, b) => b.match - a.match || (b.base?.scores?.overall || 0) - (a.base?.scores?.overall || 0) || a.base.name.localeCompare(b.base.name));
-    const best = scored[0];
-    return { userProfile: user, personality: personality(user), best, alternatives: scored.slice(1, 4), explanation: best ? explain(user, best.base, best.baseProfile) : '' };
-  }
+  function compatibility(user, base, profile) { let weightedDistance = 0; let weightTotal = 0; getAxes().forEach((axis) => { const priority = clamp(user.normalized[axis] || 0, 0, 10); const weight = 0.7 + (priority / 10) * 1.8; weightedDistance += Math.abs(priority - clamp(profile[axis] || 0, 0, 10)) * weight; weightTotal += weight; }); const typeBoost = user.typeAffinity[base.type] ? user.typeAffinity[base.type] * 1.8 : 0; const overallBoost = Number(base?.scores?.overall || 0) * 0.45; return Math.round(clamp(100 - ((weightedDistance / weightTotal) * 9.2) + typeBoost + overallBoost, 1, 99)); }
+  function classifyProfile(user) { const n = user.normalized; const ordered = Object.entries(n).sort((a, b) => b[1] - a[1]); const top = ordered[0]; const second = ordered[1]; if (top && second && top[1] - second[1] < 1.15) return PROFILE_BY_ID['resilient-generalist']; if (top[0] === 'defence') return PROFILE_BY_ID['fortress-commander']; if (top[0] === 'isolation') return PROFILE_BY_ID['island-isolationist']; if (top[0] === 'community' || top[0] === 'sustainability') return PROFILE_BY_ID['community-builder']; if (top[0] === 'resources') return PROFILE_BY_ID['resource-planner']; if (top[0] === 'complexity') return PROFILE_BY_ID['systems-survivor']; return PROFILE_BY_ID['resilient-generalist']; }
+  function scoreInterpretation(userScore, baseScore) { const diff = baseScore - userScore; const abs = Math.abs(diff); if (abs < 0.25) return 'Exact match'; if (diff >= 1.5) return 'Base exceeds your priority'; if (abs <= 1) return 'Excellent match'; if (abs <= 2) return 'Strong match'; if (abs <= 3.5) return 'Moderate compromise'; return 'Weak match'; }
+  function compatibilityBreakdown(user, baseProf) { return getAxes().map((axis) => { const userScore = clamp(user.normalized[axis] || 0, 0, 10); const baseScore = clamp(baseProf[axis] || 0, 0, 10); return { axis, label: labelFor('axis', axis), userScore, baseScore, interpretation: scoreInterpretation(userScore, baseScore) }; }); }
+  function generateExplanation(user, base, baseProf, breakdown) { const priorities = Object.entries(user.normalized).sort((a, b) => b[1] - a[1]).slice(0, 2); const aligned = breakdown.filter((row) => ['Exact match', 'Excellent match', 'Strong match', 'Base exceeds your priority'].includes(row.interpretation)).sort((a, b) => Math.abs(a.userScore - a.baseScore) - Math.abs(b.userScore - b.baseScore)).slice(0, 2); const compromise = breakdown.slice().sort((a, b) => Math.abs(b.userScore - b.baseScore) - Math.abs(a.userScore - a.baseScore))[0]; return { priorities: priorities.map(([key]) => labelFor('axis', key)), strongestAlignment: `${base.name} aligns most closely on ${aligned.map((row) => row.label.toLowerCase()).join(' and ') || 'your highest weighted factors'}, matching the priorities that scored highest in your answers: ${priorities.map(([key]) => labelFor('axis', key).toLowerCase()).join(' and ')}.`, gain: `You gain a ${labelFor('type', base.type).toLowerCase()} whose assessed strengths include ${Object.entries(baseProf).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([key]) => labelFor('axis', key).toLowerCase()).join(' and ')} while still scoring ${base.scores?.overall?.toFixed ? base.scores.overall.toFixed(1) : 'well'} overall.`, compromise: compromise ? `${labelFor('axis', compromise.axis)} is the clearest trade-off: your priority is ${Math.round(compromise.userScore)}/10 and ${base.name} rates ${Math.round(compromise.baseScore)}/10, which is a ${compromise.interpretation.toLowerCase()}.` : 'No major compromise was detected from the available scoring data.' }; }
+  function alternativeReason(item, best, user) { const rows = compatibilityBreakdown(user, item.baseProfile); const bestProfile = best?.baseProfile || {}; const improved = rows.filter((row) => row.baseScore > (bestProfile[row.axis] || 0) + 0.4).sort((a, b) => (b.baseScore - (bestProfile[b.axis] || 0)) - (a.baseScore - (bestProfile[a.axis] || 0)))[0]; if (improved) { const map = { defence: 'Stronger defensive option', isolation: 'Better isolation match', sustainability: 'Best sustainability alternative', resources: 'Better resources option', community: 'Better community fit', complexity: 'Stronger systems option', access: 'Easier access alternative' }; return map[improved.axis] || `Better ${improved.label.toLowerCase()} fit`; } return 'Closest overall alternative'; }
+  function recommend(bases, answers) { const user = buildUserProfile(answers); const profile = classifyProfile(user); const scored = bases.filter((base) => base && base.slug && base.name && normalizeStatus(base) !== 'hidden').map((base) => { const profile = baseProfile(base); return { base, baseProfile: profile, match: compatibility(user, base, profile) }; }).sort((a, b) => b.match - a.match || (b.base?.scores?.overall || 0) - (a.base?.scores?.overall || 0) || a.base.name.localeCompare(b.base.name)); const best = scored[0]; const breakdown = best ? compatibilityBreakdown(user, best.baseProfile) : []; const alternatives = scored.slice(1, 4).map((item) => ({ ...item, reason: alternativeReason(item, best, user) })); return { userProfile: user, profile, profileId: profile.id, personality: profile.name, best, alternatives, breakdown, explanation: best ? generateExplanation(user, best.base, best.baseProfile, breakdown) : null }; }
   function normalizeStatus(base) { return typeof base.status === 'string' ? base.status.trim().toLowerCase() : ''; }
-
-  window.quizEngine = { recommend, buildUserProfile, baseProfile, labelFor };
+  const api = { PROFILES, recommend, buildUserProfile, baseProfile, compatibility, classifyProfile, compatibilityBreakdown, scoreInterpretation, labelFor };
+  if (typeof module !== 'undefined') module.exports = api;
+  if (typeof window !== 'undefined') window.quizEngine = api;
 })();

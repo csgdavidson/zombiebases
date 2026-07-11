@@ -11460,3 +11460,22 @@ html {
     max-width: 100%;
   }
 }
+.quiz-profile-summary { display: grid; gap: var(--space-2); padding: var(--space-4); border: 1px solid rgba(47, 125, 60, 0.16); border-radius: var(--radius-lg); background: var(--accent-faint); }
+.quiz-profile-summary h2, .quiz-profile-summary p { margin: 0; }
+.quiz-result-grid { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.55fr); }
+.quiz-result-grid h3 { margin-block: var(--space-3) var(--space-2); }
+.quiz-breakdown-card { display: grid; gap: var(--space-3); }
+.quiz-breakdown-row { display: grid; grid-template-columns: minmax(120px, 1fr) repeat(3, auto); gap: var(--space-2) var(--space-3); align-items: center; padding-block: var(--space-2); border-bottom: 1px solid var(--border-soft); }
+.quiz-breakdown-row h3, .quiz-breakdown-row p { margin: 0; }
+.quiz-breakdown-row span, .quiz-alt-reason, .quiz-profile-card-head span { width: fit-content; border-radius: var(--radius-pill); padding: 0.35rem 0.65rem; background: var(--accent-faint); color: var(--accent-strong); font-weight: var(--fw-bold); font-size: 0.85rem; }
+.quiz-alt-reason { margin: 0 0 var(--space-2); }
+.quiz-profiles-section { display: grid; gap: var(--space-4); }
+.quiz-profile-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); }
+.quiz-profile-card { display: grid; gap: var(--space-2); padding: var(--space-4); border: 1px solid var(--border-soft); border-radius: var(--radius-lg); background: var(--surface-elevated); box-shadow: var(--shadow-sm); }
+.quiz-profile-card.is-active { border-color: rgba(47, 125, 60, 0.48); background: linear-gradient(180deg, #fff, var(--accent-faint)); box-shadow: 0 0 0 3px rgba(47, 125, 60, 0.1); }
+.quiz-profile-card-head { display: flex; justify-content: space-between; align-items: start; gap: var(--space-2); }
+.quiz-profile-card h3, .quiz-profile-card p { margin: 0; }
+.quiz-profile-card details { color: var(--text-secondary); }
+.quiz-profile-card summary { cursor: pointer; font-weight: var(--fw-bold); color: var(--accent-strong); }
+@media (max-width: 980px) { .quiz-profile-grid { grid-template-columns: 1fr 1fr; } .quiz-breakdown-row { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .quiz-profile-grid { grid-template-columns: 1fr; } }

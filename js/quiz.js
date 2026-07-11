@@ -1,5 +1,6 @@
 (function () {
   const STORAGE_KEY = 'zombieBasesSurvivalQuiz';
+  const STORAGE_VERSION = 2;
   const DATA_URL = '/data/bases-index.json';
   const state = { bases: [], answers: {}, current: 0, result: null };
   const el = { landing: document.getElementById('quiz-landing'), info: document.querySelector('.quiz-info-grid'), begin: document.getElementById('begin-quiz'), previous: document.getElementById('view-previous'), retakeLanding: document.getElementById('retake-from-landing'), quiz: document.getElementById('quiz-panel'), analysis: document.getElementById('analysis-panel'), results: document.getElementById('results-panel') };
@@ -7,51 +8,36 @@
   const slugHelper = window.baseSlugHelper;
   const baseUrl = (base) => slugHelper?.getBaseUrl ? slugHelper.getBaseUrl(base) : `/${encodeURIComponent(base.slug)}`;
   const imageUrl = (base) => base.image || `/images/bases/${encodeURIComponent(base.slug)}.png`;
-
-  function save(extra = {}) { localStorage.setItem(STORAGE_KEY, JSON.stringify({ answers: state.answers, result: state.result, personality: state.result?.personality, completionDate: state.result?.completionDate, ...extra })); }
-  function load() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null'); } catch { return null; } }
+  const hasStorage = () => typeof window !== 'undefined' && 'localStorage' in window;
+  const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+  const pct = (value) => `${Math.round(value)}%`;
+  const summary = (base) => base?.description?.summary || 'Survival dossier summary coming soon.';
+  function storedFromResult(result) { return { version: STORAGE_VERSION, completedAt: result.completedAt || new Date().toISOString(), answers: state.answers, profileId: result.profileId, profileScores: result.userProfile.normalized, primaryMatchId: result.best.base.slug, compatibility: result.best.match, alternativeMatchIds: result.alternatives.map((item) => item.base.slug) }; }
+  function save() { if (!hasStorage() || !state.result?.best) return; try { localStorage.setItem(STORAGE_KEY, JSON.stringify(storedFromResult(state.result))); } catch {} }
+  function load() { if (!hasStorage()) return null; try { const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null'); if (!stored || stored.version !== STORAGE_VERSION || !stored.answers || !stored.profileId || !stored.primaryMatchId) return null; return stored; } catch { return null; } }
+  function clearStored() { if (!hasStorage()) return; try { localStorage.removeItem(STORAGE_KEY); } catch {} }
   function show(panel) { [el.landing, el.info, el.quiz, el.analysis, el.results].forEach((node) => { if (node) node.hidden = node !== panel && !(panel === el.landing && node === el.info); }); }
   function hasAllAnswers() { return questions.every((question) => state.answers[question.id]); }
-  function pct(value) { return `${Math.round(value)}%`; }
-
+  function refreshLandingActions() { const hasResult = Boolean(load()); el.begin.hidden = hasResult; el.previous.hidden = !hasResult; el.retakeLanding.hidden = !hasResult; }
   function renderQuestion() {
-    show(el.quiz);
-    const question = questions[state.current];
-    const selected = state.answers[question.id];
-    el.quiz.innerHTML = `<div class="quiz-progress-row"><span>Question ${state.current + 1} of ${questions.length}</span><span>${pct(((state.current + 1) / questions.length) * 100)}</span></div><div class="quiz-progress"><span style="width:${((state.current + 1) / questions.length) * 100}%"></span></div><h2>${question.prompt}</h2><div class="quiz-answers" role="radiogroup" aria-label="${question.prompt}">${question.answers.map((answer) => `<button class="quiz-answer ${selected === answer.id ? 'is-selected' : ''}" type="button" role="radio" aria-checked="${selected === answer.id}" data-answer="${answer.id}"><span></span>${answer.label}</button>`).join('')}</div><div class="quiz-nav-row"><button class="quiz-secondary" type="button" data-action="back">Back</button><button class="compare-button" type="button" data-action="continue" ${selected ? '' : 'disabled'}>${state.current === questions.length - 1 ? 'Analyse Results' : 'Continue'}</button></div>`;
+    show(el.quiz); const question = questions[state.current]; const selected = state.answers[question.id]; const progress = ((state.current + 1) / questions.length) * 100;
+    el.quiz.innerHTML = `<div class="quiz-progress-row"><span>Question ${state.current + 1} of ${questions.length}</span><span aria-label="${pct(progress)} complete">${pct(progress)}</span></div><div class="quiz-progress" aria-hidden="true"><span style="width:${progress}%"></span></div><h2>${question.prompt}</h2><div class="quiz-answers" role="radiogroup" aria-label="${question.prompt}">${question.answers.map((answer) => `<button class="quiz-answer ${selected === answer.id ? 'is-selected' : ''}" type="button" role="radio" aria-checked="${selected === answer.id}" data-answer="${answer.id}"><span aria-hidden="true"></span>${answer.label}</button>`).join('')}</div><div class="quiz-nav-row"><button class="quiz-secondary" type="button" data-action="back">Back</button><button class="compare-button" type="button" data-action="continue" ${selected ? '' : 'disabled'}>${state.current === questions.length - 1 ? 'Analyse Results' : 'Continue'}</button></div>`;
   }
-
-  function runAnalysis() { state.result = window.quizEngine.recommend(state.bases, state.answers); state.result.completionDate = new Date().toISOString(); save(); show(el.analysis); setTimeout(renderResults, 2000); }
-  function bar(label, value) { return `<div class="quiz-bar"><span>${label}</span><strong>${Math.round(value)}/10</strong><i><b style="width:${clamp(value * 10, 0, 100)}%"></b></i></div>`; }
-  function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
-  function summary(base) { return base?.description?.summary || 'Survival dossier summary coming soon.'; }
-  function baseSummary(base, match) { return `<article class="quiz-alt-card"><img src="${imageUrl(base)}" alt="${base.name}" loading="lazy"><div><h3>${base.name}</h3><p class="base-meta">${base.country ? `${base.country}, ` : ''}${window.quizEngine.labelFor('region', base.region)} • ${window.quizEngine.labelFor('type', base.type)}</p><p><strong>${base.scores?.overall?.toFixed ? base.scores.overall.toFixed(1) : '—'}</strong> overall • <strong>${match}%</strong> match</p><p>${summary(base)}</p><a class="subtle-link" href="${baseUrl(base)}">Open dossier</a></div></article>`; }
-
+  function reconstruct(stored) { state.answers = stored.answers; state.result = window.quizEngine.recommend(state.bases, state.answers); state.result.completedAt = stored.completedAt; }
+  function runAnalysis() { state.result = window.quizEngine.recommend(state.bases, state.answers); state.result.completedAt = new Date().toISOString(); save(); show(el.analysis); setTimeout(renderResults, 700); }
+  function breakdownRow(row, baseName) { return `<div class="quiz-breakdown-row"><h3>${row.label}</h3><p>Your priority: <strong>${Math.round(row.userScore)}/10</strong></p><p>${baseName}: <strong>${Math.round(row.baseScore)}/10</strong></p><span>${row.interpretation}</span></div>`; }
+  function profileCard(profile, activeId) { const active = profile.id === activeId; return `<article class="quiz-profile-card ${active ? 'is-active' : ''}"><div class="quiz-profile-card-head"><h3>${profile.name}</h3>${active ? '<span>Your profile</span>' : ''}</div><p>${profile.shortDescription}</p><p><strong>Key strength:</strong> ${profile.strength}</p><p><strong>Typical compromise:</strong> ${profile.compromise}</p><details><summary>Read profile explanation</summary><p>${profile.description}</p></details></article>`; }
+  function altCard(item) { const base = item.base; return `<article class="quiz-alt-card"><img src="${imageUrl(base)}" alt="${base.name}" loading="lazy"><div><p class="quiz-alt-reason">${item.reason}</p><h3>${base.name}</h3><p class="base-meta">${base.country ? `${base.country}, ` : ''}${window.quizEngine.labelFor('region', base.region)} • ${window.quizEngine.labelFor('type', base.type)}</p><p><strong>${base.scores?.overall?.toFixed ? base.scores.overall.toFixed(1) : '—'}</strong> overall • <strong>${item.match}%</strong> match</p><p>${summary(base)}</p><a class="subtle-link" href="${baseUrl(base)}">Open dossier</a></div></article>`; }
+  function compareUrl(result) { const firstAlt = result.alternatives[0]?.base; return firstAlt ? `/compare.html?a=${encodeURIComponent(result.best.base.slug)}&b=${encodeURIComponent(firstAlt.slug)}` : '/compare.html'; }
+  function shareText(result) { const url = window.location?.href || 'https://zombiebases.com/quiz/'; return `My ZombieBases survival profile is ${result.profile.name}.\n\nMy best match is ${result.best.base.name} with ${result.best.match}% compatibility.\n\n${result.profile.name} prioritises ${result.profile.shortDescription.replace(/^You\s+/i, '').replace(/\.$/, '')}.\n\nExplore ZombieBases: ${url}`; }
   function renderResults() {
-    const result = state.result || window.quizEngine.recommend(state.bases, state.answers);
-    const best = result.best.base;
-    const user = result.userProfile.normalized;
-    const cats = best.scores?.categories || {};
-    show(el.results);
-    el.results.innerHTML = `<p class="eyebrow">Your Survival Base</p><div class="quiz-result-hero"><img src="${imageUrl(best)}" alt="${best.name}"><div><h1>${best.name}</h1><p class="quiz-compatibility">${result.best.match}% compatibility</p><p class="quiz-personality">${result.personality}</p><div class="quiz-actions"><a class="compare-button" href="${baseUrl(best)}">Explore this Base</a><button class="quiz-secondary" type="button" data-action="retake">Retake Assessment</button><button class="quiz-secondary" type="button" data-action="copy">Copy Result</button></div><p id="copy-status" class="base-meta" role="status"></p></div></div><section class="quiz-result-grid"><article><p class="eyebrow">Why this matches</p><p>${result.explanation}</p></article><article><p class="eyebrow">Profile Summary</p>${bar('Defence', user.defence)}${bar('Isolation', user.isolation)}${bar('Sustainability', user.sustainability)}${bar('Resources', user.resources)}${bar('Community', user.community)}</article><article><p class="eyebrow">Base Summary</p>${bar('Defensibility', cats.defensibility || 0)}${bar('Isolation', cats.isolation || 0)}${bar('Sustainability', cats.sustainability || 0)}</article></section><section><div class="section-heading-row"><p class="eyebrow">Alternative Matches</p><h2>Three more bases to consider</h2></div><div class="quiz-alt-grid">${result.alternatives.map((item) => baseSummary(item.base, item.match)).join('')}</div></section>`;
+    const result = state.result || window.quizEngine.recommend(state.bases, state.answers); state.result = result; const best = result.best.base; show(el.results);
+    el.results.innerHTML = `<p class="eyebrow">Your Survival Base</p><div class="quiz-result-hero"><img src="${imageUrl(best)}" alt="${best.name}"><div><h1>${best.name}</h1><p class="quiz-compatibility">${result.best.match}% compatibility</p><div class="quiz-profile-summary"><p class="eyebrow">Your survival profile</p><h2>${result.profile.name}</h2><p>${result.profile.shortDescription}</p><p><strong>Primary strength:</strong> ${result.profile.strength}</p><p><strong>Main compromise:</strong> ${result.profile.compromise}</p></div><div class="quiz-actions"><a class="compare-button" href="${baseUrl(best)}">Explore this Base</a><a class="quiz-secondary" href="${compareUrl(result)}">Compare Matches</a><button class="quiz-secondary" type="button" data-action="retake">Retake Assessment</button><button class="quiz-secondary" type="button" data-action="share">Share Result</button></div><p id="copy-status" class="base-meta" role="status" aria-live="polite"></p></div></div><section class="quiz-result-grid"><article><p class="eyebrow">Why this matches</p><h3>Strongest alignment</h3><p>${result.explanation.strongestAlignment}</p><h3>What you gain</h3><p>${result.explanation.gain}</p><h3>The compromise</h3><p>${result.explanation.compromise}</p></article><article class="quiz-breakdown-card"><p class="eyebrow">Compatibility breakdown</p>${result.breakdown.map((row) => breakdownRow(row, best.name)).join('')}</article></section><section><div class="section-heading-row"><p class="eyebrow">Alternative Matches</p><h2>Three more bases to consider</h2></div><div class="quiz-alt-grid">${result.alternatives.map(altCard).join('')}</div></section><section class="quiz-profiles-section"><div class="section-heading-row"><p class="eyebrow">Survival profiles</p><h2>Survival profiles</h2><p>Your answers most closely match the ${result.profile.name} profile. Explore the other strategies below to see how different survival priorities shape the results.</p></div><div class="quiz-profile-grid">${window.quizEngine.PROFILES.map((profile) => profileCard(profile, result.profileId)).join('')}</div></section>`;
   }
-  function retake() { state.answers = {}; state.current = 0; state.result = null; localStorage.removeItem(STORAGE_KEY); renderQuestion(); }
-
-  el.begin.addEventListener('click', retake);
-  el.retakeLanding.addEventListener('click', retake);
-  el.previous.addEventListener('click', () => { const stored = load(); if (stored?.answers) state.answers = stored.answers; if (stored?.result) state.result = stored.result; renderResults(); });
-  el.quiz.addEventListener('click', (event) => {
-    const answer = event.target.closest('[data-answer]');
-    if (answer) { state.answers[questions[state.current].id] = answer.dataset.answer; save(); renderQuestion(); return; }
-    const action = event.target.closest('[data-action]')?.dataset.action;
-    if (action === 'back') { if (state.current > 0) { state.current -= 1; renderQuestion(); } else { show(el.landing); } }
-    if (action === 'continue' && state.answers[questions[state.current].id]) { if (state.current < questions.length - 1) { state.current += 1; renderQuestion(); } else if (hasAllAnswers()) runAnalysis(); }
-  });
-  el.results.addEventListener('click', async (event) => {
-    const action = event.target.closest('[data-action]')?.dataset.action;
-    if (action === 'retake') retake();
-    if (action === 'copy' && state.result?.best) { const text = `My Zombie Bases survival match is ${state.result.best.base.name} — ${state.result.best.match}% compatible. I'm a ${state.result.personality}.`; await navigator.clipboard?.writeText(text); document.getElementById('copy-status').textContent = 'Result copied.'; }
-  });
-
-  fetch(DATA_URL).then((r) => r.json()).then((bases) => { state.bases = bases; const stored = load(); if (stored?.answers) state.answers = stored.answers; if (stored?.result) state.result = stored.result; if (stored?.result) { el.previous.hidden = false; el.retakeLanding.hidden = false; } }).catch(() => { el.begin.disabled = true; el.begin.textContent = 'Quiz unavailable'; });
+  function retake() { state.answers = {}; state.current = 0; state.result = null; clearStored(); refreshLandingActions(); renderQuestion(); }
+  el.begin.addEventListener('click', retake); el.retakeLanding.addEventListener('click', retake); el.previous.addEventListener('click', () => { const stored = load(); if (stored) reconstruct(stored); renderResults(); });
+  el.quiz.addEventListener('click', (event) => { const answer = event.target.closest('[data-answer]'); if (answer) { state.answers[questions[state.current].id] = answer.dataset.answer; renderQuestion(); return; } const action = event.target.closest('[data-action]')?.dataset.action; if (action === 'back') { if (state.current > 0) { state.current -= 1; renderQuestion(); } else { show(el.landing); refreshLandingActions(); } } if (action === 'continue' && state.answers[questions[state.current].id]) { if (state.current < questions.length - 1) { state.current += 1; renderQuestion(); } else if (hasAllAnswers()) runAnalysis(); } });
+  el.results.addEventListener('click', async (event) => { const action = event.target.closest('[data-action]')?.dataset.action; if (action === 'retake') retake(); if (action === 'share' && state.result?.best) { const text = shareText(state.result); if (navigator.share) { try { await navigator.share({ title: 'My ZombieBases survival result', text, url: window.location.href }); } catch (err) { if (err?.name === 'AbortError') return; await navigator.clipboard?.writeText(text); } } else { await navigator.clipboard?.writeText(text); } document.getElementById('copy-status').textContent = 'Result copied'; } });
+  fetch(DATA_URL).then((r) => r.json()).then((bases) => { state.bases = bases; refreshLandingActions(); }).catch(() => { el.begin.disabled = true; el.begin.textContent = 'Quiz unavailable'; });
+  window.quizStorage = { STORAGE_VERSION, STORAGE_KEY, load, clearStored, storedFromResult, shareText };
 })();
