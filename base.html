@@ -50,6 +50,9 @@
                 <div class="hero-title-stack">
                   <h1 id="base-name"></h1>
                   <ul id="base-meta-row" class="base-meta-row" aria-label="Base metadata"></ul>
+                  <aside id="ranking-section" class="detail-positioning" aria-label="Positioning" hidden>
+                    <ul id="ranking-list" class="ranking-list ranking-badges"></ul>
+                  </aside>
                   <p id="base-score-badges" class="badge-row" hidden></p>
                 </div>
                 <div id="score-section" class="score-band" aria-label="Base score summary" hidden>
@@ -66,9 +69,6 @@
                   </div>
                 </div>
               </div>
-              <aside id="ranking-section" class="detail-positioning" aria-label="Positioning" hidden>
-                <ul id="ranking-list" class="ranking-list ranking-badges"></ul>
-              </aside>
             </div>
           </section>
 
@@ -76,10 +76,13 @@
             <div class="compact-hero-image-wrap">
               <a id="compact-back-link" class="back-link compact-hero-back-link" href="/">← Back to List</a>
               <img id="compact-hero-image" class="compact-hero-image" alt="">
+              <div class="compact-hero-overlay" aria-hidden="true"></div>
+              <div class="compact-hero-identity">
+                <h1 id="compact-base-name" class="compact-hero-title"></h1>
+                <p id="compact-base-meta" class="compact-hero-meta"></p>
+              </div>
             </div>
             <div class="compact-hero-body">
-              <p id="compact-base-name" class="compact-hero-title"></p>
-              <p id="compact-base-meta" class="compact-hero-meta"></p>
               <ul id="compact-ranking-list" class="compact-ranking-list"></ul>
               <div id="compact-score-section" class="score-band compact-score-band" aria-label="Base score summary" hidden></div>
             </div>
