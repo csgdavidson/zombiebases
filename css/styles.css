@@ -11388,6 +11388,8 @@ html {
   .score-card-list { display: grid; gap: var(--space-3); }
   .score-comparison-row,
   .score-comparison-row.is-overall {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-3);
     margin: 0;
     padding: var(--space-3);
     border: 1px solid var(--border-soft);
@@ -11397,6 +11399,9 @@ html {
   }
   .score-comparison-row.is-overall { background: linear-gradient(135deg, var(--accent-faint), #fff); }
 
+  .score-metric,
+  .score-bar-cell,
+  .score-margin { min-width: 0; }
   .score-metric strong { font-size: 1rem; }
   .score-metric small { margin-top: .2rem; }
   .score-bar-cell,
@@ -11406,7 +11411,9 @@ html {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: .35rem .65rem;
     align-items: center;
+    width: 100%;
   }
+  .score-bar-cell-b { order: 3; }
   .score-bar-cell-b > * { direction: ltr; }
   .score-mobile-base-name {
     display: block;
@@ -11418,9 +11425,16 @@ html {
   .score-track { grid-column: 1 / -1; width: 100%; }
   .score-num { justify-self: end; }
   .score-margin {
+    order: 4;
     width: 100%;
     justify-items: center;
     text-align: center;
+  }
+  .score-margin small {
+    max-width: 100%;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
   }
 
   .recommendation-panel {
