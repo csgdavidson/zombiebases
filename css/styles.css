@@ -9554,12 +9554,120 @@ html {
 }
 
 
-/* Base detail hero ranking layout repair: rankings are flow content, never overlayed.
-   Keep the badge group in one semantic location (after the h1) and place it with
-   grid/flex regions so future responsive changes do not reintroduce absolute offsets. */
+/* Stable two-mode base detail hero: one ranking row, score card in allocated flow. */
+.base-detail-main {
+  padding-bottom: calc(var(--space-6) + 5.5rem + env(safe-area-inset-bottom));
+}
+
+.base-detail-main .detail-hero,
+.base-detail-v2-active .detail-hero {
+  container-type: inline-size;
+  width: 100%;
+}
+
+.base-detail-main .hero-section,
+.base-detail-v2-active .hero-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.base-detail-main .feature-image-wrap,
+.base-detail-v2-active .feature-image-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: #07111f;
+  box-shadow: var(--shadow-lg);
+}
+
+.base-detail-main .feature-image-wrap::after,
+.base-detail-v2-active .feature-image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(6, 13, 24, 0.18), rgba(6, 13, 24, 0.58));
+}
+
+.base-detail-main .hero-image,
+.base-detail-main .base-feature-image,
+.base-detail-v2-active .hero-image,
+.base-detail-v2-active .base-feature-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  opacity: 1;
+  border-radius: inherit;
+}
+
+.base-detail-main .hero-back-link,
+.base-detail-v2-active .hero-back-link {
+  position: absolute;
+  inset: var(--space-4) auto auto var(--space-4);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.base-detail-main .hero-content-overlay,
+.base-detail-v2-active .hero-content-overlay {
+  position: static;
+  inset: auto;
+  width: 100%;
+  max-width: none;
+  display: block;
+  padding: var(--space-4);
+  color: var(--text);
+  text-shadow: none;
+  background: #fff;
+}
+
+.base-detail-main .hero-title-stack,
+.base-detail-v2-active .hero-title-stack {
+  display: grid;
+  gap: var(--space-3);
+  width: 100%;
+  min-width: 0;
+}
+
+.base-detail-main .detail-hero h1,
+.base-detail-v2-active .detail-hero h1 {
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(2.15rem, 9cqi, 4rem);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.055em;
+  text-shadow: none;
+  overflow-wrap: anywhere;
+}
+
+.base-detail-main .base-meta-row,
+.base-detail-v2-active .base-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin: 0;
+  min-width: 0;
+}
+
+.base-detail-main .base-meta-row .badge,
+.base-detail-v2-active .base-meta-row .badge {
+  white-space: normal;
+}
+
 .base-detail-main #ranking-section,
-.base-detail-v2-active #ranking-section,
 .base-detail-main .detail-positioning,
+.base-detail-v2-active #ranking-section,
 .base-detail-v2-active .detail-positioning {
   position: static;
   inset: auto;
@@ -9571,58 +9679,17 @@ html {
   box-shadow: none;
 }
 
-.base-detail-main .hero-content-overlay {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(310px, 380px);
-  grid-template-rows: auto auto auto auto;
-  gap: var(--space-3) var(--space-5);
-  align-items: end;
-}
-
-.base-detail-main .hero-title-stack {
-  display: contents;
-}
-
-.base-detail-main .detail-hero h1 {
-  grid-column: 1;
-  grid-row: 2;
-  min-width: 0;
-}
-
-.base-detail-main #ranking-section {
-  grid-column: 1;
-  grid-row: 1;
-  justify-self: end;
-  align-self: start;
-}
-
-.base-detail-main .base-meta-row {
-  grid-column: 1;
-  grid-row: 3;
-  min-width: 0;
-}
-
-.base-detail-main .hero-title-stack .badge-row {
-  grid-column: 1;
-  grid-row: 4;
-  min-width: 0;
-}
-
-.base-detail-main .score-band {
-  grid-column: 2;
-  grid-row: 1 / 5;
-  align-self: end;
-  min-width: 0;
-}
-
 .base-detail-main #ranking-section .ranking-list,
 .base-detail-v2-active #ranking-section .ranking-list {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 0.55rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: .6rem;
   max-width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .base-detail-main #ranking-section .ranking-list > li,
@@ -9632,36 +9699,98 @@ html {
 
 .base-detail-main #ranking-section .ranking-list .image-positioning-badge,
 .base-detail-v2-active #ranking-section .ranking-list .image-positioning-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
   max-width: 100%;
+  padding: .62rem .82rem;
+  border: 1px solid rgba(16, 35, 63, .14);
+  border-radius: 999px;
+  background: var(--surface-subtle);
+  color: var(--text);
+  font-size: .86rem;
+  font-weight: 800;
+  line-height: 1.15;
+  text-decoration: none;
   white-space: normal;
 }
 
-@media (max-width: 820px) {
-  .base-detail-main .hero-content-overlay {
-    display: flex;
-    flex-direction: column;
+.base-detail-main .hero-title-stack .badge-row,
+.base-detail-v2-active .hero-title-stack .badge-row {
+  display: none !important;
+}
+
+.base-detail-main .score-band,
+.base-detail-v2-active .score-band {
+  position: static;
+  inset: auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  align-self: stretch;
+}
+
+.base-detail-main .score-band .dossier-score-header,
+.base-detail-v2-active .score-band .dossier-score-header {
+  min-width: 0;
+}
+
+@container (min-width: 70rem) {
+  .base-detail-main .hero-section,
+  .base-detail-v2-active .hero-section {
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 26rem);
     align-items: stretch;
-    gap: 1rem;
+    gap: var(--space-4);
   }
 
-  .base-detail-main .hero-title-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
+  .base-detail-main .feature-image-wrap,
+  .base-detail-v2-active .feature-image-wrap {
+    min-height: 620px;
+  }
+
+  .base-detail-main .hero-image,
+  .base-detail-main .base-feature-image,
+  .base-detail-v2-active .hero-image,
+  .base-detail-v2-active .base-feature-image {
+    height: 100%;
+    min-height: 620px;
+    aspect-ratio: auto;
+  }
+
+  .base-detail-main .hero-content-overlay,
+  .base-detail-v2-active .hero-content-overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+    z-index: 1;
+    padding: clamp(2rem, 4cqi, 3.25rem);
+    color: #fff;
+    background: linear-gradient(180deg, rgba(7, 17, 31, 0), rgba(7, 17, 31, .9));
   }
 
   .base-detail-main .detail-hero h1,
-  .base-detail-main #ranking-section,
-  .base-detail-main .base-meta-row,
-  .base-detail-main .hero-title-stack .badge-row,
-  .base-detail-main .score-band {
-    grid-column: auto;
-    grid-row: auto;
+  .base-detail-v2-active .detail-hero h1 {
+    color: #fff;
+    font-size: clamp(3rem, 5cqi, 5.6rem);
+    text-shadow: 0 3px 18px rgba(0, 0, 0, .42);
   }
 
-  .base-detail-main #ranking-section .ranking-list,
-  .base-detail-v2-active #ranking-section .ranking-list {
-    justify-content: flex-start;
+  .base-detail-main .base-meta-row .badge,
+  .base-detail-v2-active .base-meta-row .badge {
+    border-color: rgba(255,255,255,.24);
+    background: rgba(255,255,255,.14);
+    color: #fff;
+  }
+
+  .base-detail-main #ranking-section .ranking-list .image-positioning-badge,
+  .base-detail-v2-active #ranking-section .ranking-list .image-positioning-badge {
+    border-color: rgba(255,255,255,.24);
+    background: rgba(7,17,31,.72);
+    color: #fff;
+    backdrop-filter: blur(12px);
+  }
+
+  .base-detail-main .score-band,
+  .base-detail-v2-active .score-band {
+    align-self: center;
   }
 }

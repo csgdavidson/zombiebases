@@ -1072,7 +1072,10 @@ function renderScore(base) {
   }
 
   renderScoreBreakdown(scoreObject);
-  renderScoreBadges(base);
+  if (elements.scoreBadges) {
+    elements.scoreBadges.innerHTML = '';
+    elements.scoreBadges.hidden = true;
+  }
 }
 
 function buildRankingsLinks(base, rankings) {
