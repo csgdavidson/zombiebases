@@ -1,7 +1,7 @@
 (() => {
   const suggestions = ['Islands', 'Castles', 'Prisons', 'Mountains', 'Airports', 'Bunkers'];
   let lastOverlayTrigger = null;
-  const icon = (name) => ({
+  const icons = {
     explore: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',
     rankings: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0zm0 2H4v2a3 3 0 0 0 3 3m10-5h3v2a3 3 0 0 1-3 3"/></svg>',
     map: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18-6 3V6l6-3 6 3 6-3v15l-6 3zm0 0V3m6 18V6"/></svg>',
@@ -19,7 +19,8 @@
     random: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM8 8h.01M16 8h.01M8 16h.01M16 16h.01M12 12h.01"/></svg>',
     scenarios: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 4 7H8zm-6 18 4-7H2zm12 0 4-7h-8z"/></svg>',
     target: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>'
-  })[name];
+  };
+  const icon = (name, fallback = 'info') => icons[name] || icons[fallback] || '';
 
   function isHome() { return location.pathname === '/' || location.pathname.endsWith('/index.html'); }
   function setBodyLocked(locked) { document.body.classList.toggle('mobile-nav-locked', locked); }
@@ -105,8 +106,8 @@
       ['Types', '/rankings-type.html', 'Castles, islands, bunkers and more', 'types'],
       ['Scenarios', '/scenarios.html', 'Explore outbreak planning lenses', 'scenarios'],
       ['Field Manual', '/field-manual', 'Read the complete methodology', 'map'],
-      ['How locations are scored', '/field-manual#how-zombie-bases-scores-every-location', 'shield'],
-      ['Survival factors', '/field-manual#the-seven-survival-factors', 'target']
+      ['How locations are scored', '/field-manual#how-zombie-bases-scores-every-location', 'Understand the scoring methodology', 'shield'],
+      ['Survival factors', '/field-manual#the-seven-survival-factors', 'Explore the factors behind each score', 'target']
     ];
     const overlay = document.createElement('div');
     overlay.id = 'mobile-more-menu';
