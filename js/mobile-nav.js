@@ -1,5 +1,6 @@
 (() => {
   const suggestions = ['Islands', 'Castles', 'Prisons', 'Mountains', 'Airports', 'Bunkers'];
+  let lastOverlayTrigger = null;
   const icon = (name) => ({
     explore: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',
     rankings: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0zm0 2H4v2a3 3 0 0 0 3 3m10-5h3v2a3 3 0 0 1-3 3"/></svg>',
@@ -14,6 +15,7 @@
     globe: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM3.6 9h16.8M3.6 15h16.8M12 3c2.2 2.5 3.3 5.5 3.3 9S14.2 18.5 12 21c-2.2-2.5-3.3-5.5-3.3-9S9.8 5.5 12 3z"/></svg>',
     types: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 21h10M8 21l1-9h6l1 9M9 12 7 4h10l-2 8M6 8h12"/></svg>',
     info: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17v-5M12 8h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>',
+    shield: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-5"/></svg>',
     random: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM8 8h.01M16 8h.01M8 16h.01M16 16h.01M12 12h.01"/></svg>',
     scenarios: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 4 7H8zm-6 18 4-7H2zm12 0 4-7h-8z"/></svg>',
     target: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>'
@@ -39,17 +41,16 @@
 
     const primaryItems = [
       ['Explore', '/', 'explore'],
-      ['Rankings', '/rankings.html', 'rankings'],
-      ['Field Manual', '/field-manual', 'map'],
-      ['Compare', '/compare.html', 'compare']
+      ['Compare', '/compare.html', 'compare'],
+      ['Survival Quiz', '/quiz/', 'target'],
+      ['Rankings', '/rankings.html', 'rankings']
     ];
     const moreItems = [
       ['Regions', '/rankings-region.html', 'globe'],
       ['Types', '/rankings-type.html', 'types'],
       ['Scenarios', '/scenarios.html', 'scenarios'],
       'divider',
-      ['Survival Quiz', '/quiz/', 'target'],
-      ['Random Base', '#random-base', 'random']
+      ['Field Manual', '/field-manual', 'map']
     ];
 
     const search = document.createElement('form');
@@ -63,7 +64,7 @@
 
     const actions = document.createElement('div');
     actions.className = 'desktop-nav-actions';
-    actions.innerHTML = `<button class="desktop-random-base" type="button" data-random-base>${icon('random')}<span>Random Base</span></button><div class="desktop-more-wrap"><button class="desktop-more-button" type="button" aria-label="Open more navigation" aria-expanded="false" aria-controls="desktop-more-menu" data-desktop-more>${icon('more')}</button><div id="desktop-more-menu" class="desktop-more-menu" role="menu" hidden>${moreItems.map((item) => item === 'divider' ? '<div class="desktop-more-divider" role="separator"></div>' : `<a href="${item[1]}" role="menuitem" ${pathMatches(item[1]) ? 'aria-current="page"' : ''}>${icon(item[2])}<span>${item[0]}</span></a>`).join('')}</div></div>`;
+    actions.innerHTML = `<button class="desktop-random-base" type="button" data-random-base aria-label="Random Base">${icon('random')}<span>Random Base</span></button><div class="desktop-more-wrap"><button class="desktop-more-button" type="button" aria-label="Open more navigation" aria-expanded="false" aria-controls="desktop-more-menu" data-desktop-more>${icon('more')}</button><div id="desktop-more-menu" class="desktop-more-menu" role="menu" hidden>${moreItems.map((item) => item === 'divider' ? '<div class="desktop-more-divider" role="separator"></div>' : `<a href="${item[1]}" role="menuitem" ${pathMatches(item[1]) ? 'aria-current="page"' : ''}>${icon(item[2])}<span>${item[0]}</span></a>`).join('')}</div></div>`;
     nav.after(actions);
   }
 
@@ -85,23 +86,27 @@
     nav.setAttribute('aria-label', 'Mobile primary navigation');
     const items = [
       ['Explore', '/', 'explore', isHome()],
-      ['Rankings', '/rankings.html', 'rankings', location.pathname.endsWith('/rankings.html')],
-      ['Field Manual', '/field-manual', 'map', pathMatches('/field-manual')],
-      ['Compare', '/compare.html', 'compare', location.pathname.endsWith('/compare.html')],
+      ['Compare', '/compare.html', 'compare', pathMatches('/compare.html')],
+      ['Random', '#random-base', 'random', false, 'Random Base'],
+      ['Quiz', '/quiz/', 'target', pathMatches('/quiz/'), 'Survival Quiz'],
     ];
-    nav.innerHTML = items.map(([label, href, key, active]) => `<a href="${href}" ${active ? 'aria-current="page"' : ''}>${icon(key)}<span>${label}</span></a>`).join('') +
-      `<button type="button" data-open-more aria-label="Open more navigation">${icon('more')}<span>More</span></button>`;
+    nav.innerHTML = items.map(([label, href, key, active, ariaLabel]) => href === '#random-base'
+      ? `<button class="mobile-random-tab" type="button" data-random-base aria-label="${ariaLabel}">${icon(key)}<span>${label}</span></button>`
+      : `<a href="${href}" ${ariaLabel ? `aria-label="${ariaLabel}"` : ''} ${active ? 'aria-current="page"' : ''}>${icon(key)}<span>${label}</span></a>`).join('') +
+      `<button type="button" data-open-more aria-label="Open more navigation" aria-expanded="false" aria-controls="mobile-more-menu">${icon('more')}<span>More</span></button>`;
     document.body.append(nav);
   }
 
   function makeMoreMenu() {
     if (document.querySelector('#mobile-more-menu')) return;
     const menuItems = [
-      ['Regions', '/rankings-region.html', 'Browse best bases by world region'],
-      ['Types', '/rankings-type.html', 'Castles, islands, bunkers and more'],
-      ['Scenarios', '/scenarios.html', 'Outbreak planning lenses'],
-      ['Survival Quiz', '/quiz/', 'Discover your ideal survival base'],
-      ['Random Base', '#random-base', 'Discover a surprise dossier']
+      ['Rankings', '/rankings.html', 'See the top survival locations overall', 'rankings'],
+      ['Regions', '/rankings-region.html', 'Browse the best bases by world region', 'globe'],
+      ['Types', '/rankings-type.html', 'Castles, islands, bunkers and more', 'types'],
+      ['Scenarios', '/scenarios.html', 'Explore outbreak planning lenses', 'scenarios'],
+      ['Field Manual', '/field-manual', 'Read the complete methodology', 'map'],
+      ['How locations are scored', '/field-manual#how-zombie-bases-scores-every-location', 'shield'],
+      ['Survival factors', '/field-manual#the-seven-survival-factors', 'target']
     ];
     const overlay = document.createElement('div');
     overlay.id = 'mobile-more-menu';
@@ -109,7 +114,7 @@
     overlay.hidden = true;
     overlay.innerHTML = `<div class="mobile-sheet-backdrop" data-close-more></div><section class="mobile-sheet" role="dialog" aria-modal="true" aria-labelledby="mobile-more-title">
       <div class="mobile-sheet-handle" aria-hidden="true"></div><div class="mobile-sheet-top"><h2 id="mobile-more-title">More</h2><button class="mobile-icon-button" type="button" data-close-more aria-label="Close menu">${icon('close')}</button></div>
-      <div class="mobile-menu-list">${menuItems.map(([label, href, help]) => `<a href="${href}" data-menu-link="${label}" ${pathMatches(href) ? 'aria-current="page"' : ''}><span><strong>${label}</strong><small>${help}</small></span>${icon('chevron')}</a>`).join('')}</div>
+      <div class="mobile-menu-list">${menuItems.map(([label, href, help, key]) => `<a href="${href}" data-menu-link="${label}" ${pathMatches(href) ? 'aria-current="page"' : ''}>${icon(key)}<span><strong>${label}</strong><small>${help}</small></span>${icon('chevron')}</a>`).join('')}</div>
     </section>`;
     document.body.append(overlay);
   }
@@ -127,18 +132,18 @@
     document.body.append(overlay);
   }
 
-  function openOverlay(el) { el.hidden = false; setBodyLocked(true); setTimeout(() => el.querySelector('input, button, a')?.focus(), 30); }
+  function openOverlay(el, trigger) { if (!el) return; lastOverlayTrigger = trigger || document.activeElement; el.hidden = false; setBodyLocked(true); document.querySelectorAll('[data-open-more]').forEach(btn => btn.setAttribute('aria-expanded', String(el.id === 'mobile-more-menu'))); setTimeout(() => el.querySelector('input, button, a')?.focus(), 30); }
   function closeDesktopMore() { const menu = document.querySelector('#desktop-more-menu'); const btn = document.querySelector('[data-desktop-more]'); if (menu) menu.hidden = true; if (btn) btn.setAttribute('aria-expanded', 'false'); }
-  function closeAll() { document.querySelectorAll('.mobile-sheet-overlay, .mobile-search-overlay').forEach(el => el.hidden = true); setBodyLocked(false); closeDesktopMore(); }
+  function closeAll() { const hadOpen = [...document.querySelectorAll('.mobile-sheet-overlay, .mobile-search-overlay')].some(el => !el.hidden); document.querySelectorAll('.mobile-sheet-overlay, .mobile-search-overlay').forEach(el => el.hidden = true); document.querySelectorAll('[data-open-more]').forEach(btn => btn.setAttribute('aria-expanded', 'false')); setBodyLocked(false); closeDesktopMore(); if (hadOpen && lastOverlayTrigger?.focus) lastOverlayTrigger.focus(); lastOverlayTrigger = null; }
   function runSearch(q) { if (!q) return; if (isHome()) { closeAll(); const input = document.querySelector('#search-input'); if (input) { input.value = q; input.dispatchEvent(new Event('input', { bubbles: true })); input.focus(); return; } } location.href = `/?q=${encodeURIComponent(q)}`; }
 
   function bind() {
     document.addEventListener('click', async (event) => {
       const target = event.target;
       if (target.closest('[data-desktop-more]')) { const menu = document.querySelector('#desktop-more-menu'); const btn = target.closest('[data-desktop-more]'); const open = menu.hidden; menu.hidden = !open; btn.setAttribute('aria-expanded', String(open)); } else if (document.querySelector('#desktop-more-menu') && !target.closest('.desktop-more-wrap')) closeDesktopMore();
-      if (target.closest('[data-open-more]')) openOverlay(document.querySelector('#mobile-more-menu'));
+      if (target.closest('[data-open-more]')) openOverlay(document.querySelector('#mobile-more-menu'), target.closest('[data-open-more]'));
       if (target.closest('[data-close-more], .mobile-sheet-backdrop')) closeAll();
-      if (target.closest('[data-open-search]')) { openOverlay(document.querySelector('#mobile-search-overlay')); setTimeout(() => document.querySelector('.mobile-search-form input')?.focus(), 50); }
+      if (target.closest('[data-open-search]')) { openOverlay(document.querySelector('#mobile-search-overlay'), target.closest('[data-open-search]')); setTimeout(() => document.querySelector('.mobile-search-form input')?.focus(), 50); }
       if (target.closest('[data-close-search]')) closeAll();
       const chip = target.closest('.mobile-search-chips button');
       if (chip) runSearch(chip.textContent.trim());

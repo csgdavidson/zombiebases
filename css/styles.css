@@ -11591,3 +11591,86 @@ html {
   .quiz-alt-card { grid-template-columns: 1fr; }
   .quiz-alt-card img { aspect-ratio: 16 / 8.5; border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
 }
+
+/* Final V1 navigation and footer hierarchy polish. */
+@media (max-width: 768px) {
+  .mobile-bottom-nav .mobile-random-tab {
+    background: linear-gradient(135deg, var(--accent-strong), #1f7a31);
+    border: 4px solid #fff;
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(31, 107, 49, 0.32), 0 0 0 1px rgba(31, 107, 49, 0.16);
+    color: #fff;
+    gap: 0.1rem;
+    min-height: 66px;
+    padding: 0.45rem 0.25rem;
+    position: relative;
+    transform: translateY(-18px);
+  }
+
+  .mobile-bottom-nav .mobile-random-tab span {
+    color: var(--accent-strong);
+    left: 50%;
+    position: absolute;
+    top: calc(100% + 0.12rem);
+    transform: translateX(-50%);
+  }
+
+  .mobile-bottom-nav .mobile-random-tab svg {
+    height: 24px;
+    width: 24px;
+  }
+
+  .mobile-bottom-nav .mobile-random-tab:hover,
+  .mobile-bottom-nav .mobile-random-tab:focus-visible {
+    box-shadow: 0 0 0 4px rgba(47, 125, 60, 0.16), 0 12px 28px rgba(31, 107, 49, 0.34);
+    outline: none;
+  }
+
+  .mobile-bottom-nav .mobile-random-tab:active {
+    transform: translateY(-14px) scale(0.98);
+  }
+
+  .mobile-sheet {
+    max-height: min(82vh, 720px);
+    padding-bottom: calc(6.25rem + env(safe-area-inset-bottom));
+  }
+
+  .mobile-menu-list a {
+    display: grid;
+    grid-template-columns: 1.45rem minmax(0, 1fr) 1.45rem;
+    gap: 0.8rem;
+    justify-content: initial;
+    padding-inline: 0.45rem;
+  }
+
+  .mobile-menu-list a > svg:first-child {
+    align-self: center;
+    color: var(--text-primary);
+  }
+
+  .mobile-menu-list a > svg:last-child {
+    align-self: center;
+    justify-self: end;
+  }
+}
+
+@media (min-width: 769px) {
+  .desktop-random-base {
+    background: linear-gradient(135deg, var(--accent-strong), #256f32);
+    border-color: rgba(17, 84, 35, 0.45);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 10px 20px rgba(31, 107, 49, 0.14);
+    color: #fff;
+    min-height: 52px;
+    padding-inline: 1.15rem;
+  }
+
+  .desktop-random-base:hover,
+  .desktop-random-base:focus-visible {
+    border-color: rgba(17, 84, 35, 0.64);
+    box-shadow: 0 0 0 4px rgba(47, 125, 60, 0.13), 0 14px 26px rgba(31, 107, 49, 0.2);
+  }
+
+  .desktop-random-base:active {
+    transform: translateY(0);
+  }
+}
