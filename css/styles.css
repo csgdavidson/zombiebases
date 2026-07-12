@@ -11154,8 +11154,22 @@ html {
 }
 
 @media (max-width: 620px) {
+  /* Keep comparison content in normal page flow so the body-level mobile nav remains viewport-fixed above it. */
   .comparison-page-main {
-    padding-bottom: calc(var(--space-4) + var(--mobile-bottom-nav-clearance, calc(86px + env(safe-area-inset-bottom))));
+    position: relative;
+    z-index: 0;
+    overflow: visible;
+    transform: none;
+    filter: none;
+    contain: none;
+    isolation: auto;
+    padding-bottom: calc(var(--space-6) + var(--mobile-bottom-nav-clearance, calc(86px + env(safe-area-inset-bottom))));
+  }
+
+  .comparison-page-main .versus-page,
+  .comparison-page-main #compare-setup,
+  .comparison-page-main #compare-not-found {
+    overflow: visible;
   }
 
   .compare-curated-heading {
