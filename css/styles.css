@@ -8590,10 +8590,11 @@ html {
     width: min(1360px, 96vw);
     min-height: 86px;
     gap: clamp(0.75rem, 1.35vw, 1.4rem);
+    padding-block: 0.35rem;
   }
 
   .site-logo-mark {
-    height: clamp(60px, 5.6vw, 82px);
+    height: clamp(64px, 6vw, 88px);
   }
 
   .desktop-header-search {
@@ -9210,8 +9211,8 @@ html {
 
 .site-footer-logo img {
   display: block;
-  width: auto;
-  height: 68px;
+  width: min(260px, 100%);
+  height: auto;
 }
 
 .site-footer-brand p {
@@ -9340,6 +9341,7 @@ html {
   }
 
   .site-footer-logo img {
+    width: auto;
     height: 58px;
   }
 
