@@ -1,0 +1,252 @@
+{
+  "generatedBy": "manual audit script during repository inspection",
+  "counts": {
+    "bases": 111,
+    "regions": 12,
+    "types": 8,
+    "baseImages": 112,
+    "rankingGlobalEntries": 111,
+    "scenarios": 4
+  },
+  "taxonomies": {
+    "regions": [
+      "africa",
+      "east_asia",
+      "eastern_europe",
+      "middle_east",
+      "north_america",
+      "oceania",
+      "polar_extreme",
+      "south_america",
+      "south_asia",
+      "southeast_asia",
+      "uk_ireland",
+      "western_europe"
+    ],
+    "types": [
+      "elevated_stronghold",
+      "fortified_structure",
+      "industrial_site",
+      "institutional_compound",
+      "isolated_landmass",
+      "landmark_structure",
+      "remote_settlement",
+      "subterranean"
+    ]
+  },
+  "pages": [
+    {
+      "id": "home",
+      "path": "index.html",
+      "route": "/",
+      "scripts": [
+        "js/seo.js",
+        "js/base-card.js",
+        "js/map.js",
+        "js/main.js",
+        "js/site-footer.js",
+        "js/filter-taxonomy.js",
+        "js/mobile-nav.js"
+      ],
+      "datasets": [
+        "data/bases-index.json"
+      ]
+    },
+    {
+      "id": "base-detail",
+      "path": "base.html",
+      "routes": [
+        "/base.html?slug=:slug",
+        "/base/:slug",
+        "/:slug"
+      ],
+      "scripts": [
+        "js/seo.js",
+        "js/slug.js",
+        "js/base.js"
+      ],
+      "datasets": [
+        "data/bases-index.json",
+        "data/rankings.json",
+        "data/discovery.json",
+        "data/interpretations.json"
+      ]
+    },
+    {
+      "id": "compare",
+      "path": "compare.html",
+      "routes": [
+        "/compare.html",
+        "/compare",
+        "/base/:slugA/vs/:slugB"
+      ],
+      "scripts": [
+        "js/seo.js",
+        "js/slug.js",
+        "js/compare.js"
+      ],
+      "datasets": [
+        "data/bases-index.json"
+      ]
+    },
+    {
+      "id": "rankings",
+      "path": "rankings.html",
+      "route": "/rankings.html",
+      "scripts": [
+        "js/seo.js",
+        "js/slug.js",
+        "js/base-card.js",
+        "js/rankings.js"
+      ],
+      "datasets": [
+        "data/rankings.json"
+      ]
+    },
+    {
+      "id": "region-rankings",
+      "path": "rankings-region.html",
+      "route": "/rankings-region.html?region=:region",
+      "scripts": [
+        "js/seo.js",
+        "js/slug.js",
+        "js/base-card.js",
+        "js/rankings.js"
+      ],
+      "datasets": [
+        "data/rankings.json"
+      ]
+    },
+    {
+      "id": "type-rankings",
+      "path": "rankings-type.html",
+      "route": "/rankings-type.html?type=:type",
+      "scripts": [
+        "js/seo.js",
+        "js/slug.js",
+        "js/base-card.js",
+        "js/rankings.js"
+      ],
+      "datasets": [
+        "data/rankings.json"
+      ]
+    },
+    {
+      "id": "scenarios",
+      "path": "scenarios.html",
+      "route": "/scenarios.html?scenario=:scenario",
+      "scripts": [
+        "js/seo.js",
+        "js/slug.js",
+        "js/base-card.js",
+        "js/scenarios.js"
+      ],
+      "datasets": [
+        "data/discovery.json"
+      ]
+    },
+    {
+      "id": "quiz",
+      "path": "quiz.html",
+      "routes": [
+        "/quiz.html",
+        "/quiz",
+        "/quiz/"
+      ],
+      "scripts": [
+        "js/slug.js",
+        "js/quiz-questions.js",
+        "js/quiz-engine.js",
+        "js/quiz.js"
+      ],
+      "datasets": [
+        "data/bases-index.json"
+      ]
+    },
+    {
+      "id": "field-manual",
+      "path": "field-manual.html",
+      "routes": [
+        "/field-manual.html",
+        "/field-manual",
+        "/field-manual/"
+      ],
+      "scripts": [
+        "js/seo.js",
+        "js/field-manual.js"
+      ],
+      "datasets": []
+    }
+  ],
+  "datasets": [
+    {
+      "path": "data/bases-index.json",
+      "kind": "canonical",
+      "records": 111,
+      "joinKey": "slug"
+    },
+    {
+      "path": "data/rankings.json",
+      "kind": "generated",
+      "generator": "scripts/generate-rankings.py",
+      "records": 111,
+      "joinKey": "slug"
+    },
+    {
+      "path": "data/discovery.json",
+      "kind": "generated",
+      "generator": "scripts/generate-discovery.py",
+      "scenarios": [
+        "long_term_survival",
+        "short_term_refuge",
+        "community_bases",
+        "high_risk_high_reward"
+      ],
+      "joinKey": "slug"
+    },
+    {
+      "path": "data/interpretations.json",
+      "kind": "generated",
+      "generator": "scripts/generate-interpretations.py",
+      "joinKey": "slug"
+    },
+    {
+      "path": "data/base-stats.json",
+      "kind": "generated",
+      "generator": "scripts/generate-base-stats.py"
+    },
+    {
+      "path": "data/base-matrix-source.json",
+      "kind": "legacy-source-matrix"
+    }
+  ],
+  "assets": {
+    "baseImageDirectory": "images/bases",
+    "convention": "images/bases/<slug>.png",
+    "placeholder": "images/bases/placeholder.png",
+    "missingImagesForBases": [],
+    "extraImagesInBaseDir": []
+  },
+  "relationships": [
+    {
+      "from": "data/bases-index.json",
+      "to": "images/bases/*.png",
+      "key": "slug filename"
+    },
+    {
+      "from": "data/bases-index.json",
+      "to": "data/rankings.json",
+      "key": "slug"
+    },
+    {
+      "from": "data/bases-index.json",
+      "to": "data/discovery.json",
+      "key": "slug"
+    },
+    {
+      "from": "data/bases-index.json",
+      "to": "data/interpretations.json",
+      "key": "slug"
+    }
+  ]
+}
