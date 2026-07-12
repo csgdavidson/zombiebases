@@ -91,4 +91,36 @@ function base(name, values) {
   assert.strictEqual(result.metrics.find((m) => m.key === 'populationCapacity').baseAValue, null);
 }
 
+
+{
+  const { categoryWinnerSide, categorySummaryText, weightedResultCopy, categoryInsights, pluralise } = sandbox.window.zombieBasesComparison;
+  const result = buildBaseComparison(
+    base('Alpha', { overall: 7, defensibility: 9, sustainability: 6, isolation: 5, exposure: 7, maintenanceBurden: 8, populationCapacity: 4, resourceSecurity: 7 }),
+    base('Beta', { overall: 8, defensibility: 5, sustainability: 7, isolation: 5, exposure: 6, maintenanceBurden: 5, populationCapacity: 8, resourceSecurity: 7 })
+  );
+  assert.strictEqual(categoryWinnerSide(result), 'baseA');
+  assert.strictEqual(categorySummaryText(result), '3 wins · 2 ties · 2 losses');
+  assert.strictEqual(weightedResultCopy(result), 'Beta still leads the weighted overall result.');
+  const insights = categoryInsights(result);
+  assert.strictEqual(insights[0].title, 'Alpha');
+  assert.strictEqual(insights[0].detail, 'Defensibility (+4.0)');
+  assert.strictEqual(insights[1].title, 'Beta');
+  assert.strictEqual(insights[1].detail, 'Population Capacity (+4.0)');
+  assert.strictEqual(insights[2].kicker, 'Closest match');
+  assert.strictEqual(pluralise(1, 'category', 'categories'), '1 category');
+  assert.strictEqual(pluralise(2, 'category', 'categories'), '2 categories');
+}
+
+{
+  const { categoryWinnerSide, categorySummaryText, weightedResultCopy, categoryInsights } = sandbox.window.zombieBasesComparison;
+  const result = buildBaseComparison(
+    base('One', { overall: 5, defensibility: 5, sustainability: 5, isolation: 5, exposure: 5, maintenanceBurden: 5, populationCapacity: 5, resourceSecurity: 5 }),
+    base('Two', { overall: 5, defensibility: 5, sustainability: 5, isolation: 5, exposure: 5, maintenanceBurden: 5, populationCapacity: 5, resourceSecurity: 5 })
+  );
+  assert.strictEqual(categoryWinnerSide(result), 'tie');
+  assert.strictEqual(categorySummaryText(result), '0 One wins · 0 Two wins · 7 ties');
+  assert.strictEqual(weightedResultCopy(result), 'The weighted overall result is tied.');
+  assert.strictEqual(categoryInsights(result).some((item) => item.detail === 'Scores are tied'), true);
+}
+
 console.log('compare utility tests passed');
