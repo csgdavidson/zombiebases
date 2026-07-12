@@ -11153,7 +11153,7 @@ html {
 
 @media (max-width: 620px) {
   .comparison-page-main {
-    padding-bottom: calc(56px + env(safe-area-inset-bottom));
+    padding-bottom: calc(var(--space-4) + var(--mobile-bottom-nav-clearance, calc(86px + env(safe-area-inset-bottom))));
   }
 
   .compare-curated-heading {
