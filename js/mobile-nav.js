@@ -1,5 +1,14 @@
 (() => {
-  const suggestions = ['Islands', 'Castles', 'Prisons', 'Mountains', 'Airports', 'Bunkers'];
+  const taxonomy = window.zombieBaseFilterTaxonomy ?? { type: {}, region: {} };
+  const searchPresets = [
+    { label: 'Islands', category: 'type', value: 'isolated_landmass' },
+    { label: 'Castles', category: 'type', value: 'fortified_structure' },
+    { label: 'Prisons', category: 'type', value: 'institutional_compound' },
+    { label: 'Mountains', category: 'type', value: 'elevated_stronghold' },
+    { label: 'Airports', category: 'type', value: 'industrial_site' },
+    { label: 'Bunkers', category: 'type', value: 'subterranean' }
+  ];
+  const validSearchPresets = searchPresets.filter(({ category, value }) => taxonomy[category]?.[value]);
   let lastOverlayTrigger = null;
   const icons = {
     explore: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',
@@ -128,7 +137,7 @@
     overlay.hidden = true;
     overlay.innerHTML = `<section class="mobile-search-panel" role="dialog" aria-modal="true" aria-labelledby="mobile-search-title"><h2 id="mobile-search-title" class="visually-hidden">Search</h2>
       <form class="mobile-search-form"><label>${icon('search')}<input type="search" placeholder="Search bases, regions, types…" autocomplete="off"></label><button type="button" data-close-search>Cancel</button></form>
-      <p class="mobile-search-kicker">Suggested searches</p><div class="mobile-search-chips">${suggestions.map(s => `<button type="button">${s}</button>`).join('')}</div>
+      <p class="mobile-search-kicker">Explore by type</p><div class="mobile-search-chips">${validSearchPresets.map(({ label, category, value }) => `<button type="button" data-filter-category="${category}" data-filter-value="${value}">${label}</button>`).join('')}</div>
       <a class="mobile-search-all" href="/">View all bases →</a></section>`;
     document.body.append(overlay);
   }
@@ -137,6 +146,16 @@
   function closeDesktopMore() { const menu = document.querySelector('#desktop-more-menu'); const btn = document.querySelector('[data-desktop-more]'); if (menu) menu.hidden = true; if (btn) btn.setAttribute('aria-expanded', 'false'); }
   function closeAll() { const hadOpen = [...document.querySelectorAll('.mobile-sheet-overlay, .mobile-search-overlay')].some(el => !el.hidden); document.querySelectorAll('.mobile-sheet-overlay, .mobile-search-overlay').forEach(el => el.hidden = true); document.querySelectorAll('[data-open-more]').forEach(btn => btn.setAttribute('aria-expanded', 'false')); setBodyLocked(false); closeDesktopMore(); if (hadOpen && lastOverlayTrigger?.focus) lastOverlayTrigger.focus(); lastOverlayTrigger = null; }
   function runSearch(q) { if (!q) return; if (isHome()) { closeAll(); const input = document.querySelector('#search-input'); if (input) { input.value = q; input.dispatchEvent(new Event('input', { bubbles: true })); input.focus(); return; } } location.href = `/?q=${encodeURIComponent(q)}`; }
+  function runFilterPreset(preset) {
+    const category = preset?.dataset.filterCategory;
+    const value = preset?.dataset.filterValue;
+    if (!category || !value || !taxonomy[category]?.[value]) return;
+
+    const params = new URLSearchParams(window.location.search);
+    params.delete('q');
+    params.set(category, value);
+    location.href = `/?${params.toString()}`;
+  }
 
   function bind() {
     document.addEventListener('click', async (event) => {
@@ -147,7 +166,7 @@
       if (target.closest('[data-open-search]')) { openOverlay(document.querySelector('#mobile-search-overlay'), target.closest('[data-open-search]')); setTimeout(() => document.querySelector('.mobile-search-form input')?.focus(), 50); }
       if (target.closest('[data-close-search]')) closeAll();
       const chip = target.closest('.mobile-search-chips button');
-      if (chip) runSearch(chip.textContent.trim());
+      if (chip) runFilterPreset(chip);
       const random = target.closest('[data-menu-link="Random Base"], [data-random-base]');
       if (random) { event.preventDefault(); try { const data = await fetch('/data/bases-index.json').then(r => r.json()); const base = data[Math.floor(Math.random() * data.length)]; if (base?.slug) location.href = `/base.html?slug=${base.slug}`; } catch { location.href = '/rankings.html'; } }
     });
