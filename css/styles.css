@@ -4816,7 +4816,7 @@ body {
 
   .site-logo-mark {
     width: auto;
-    height: 42px;
+    height: 52px;
   }
 
   .site-nav {
@@ -8341,7 +8341,7 @@ html {
   }
 
   .site-logo-mark {
-    max-height: 46px;
+    max-height: 56px;
   }
 
   .site-header .site-nav {
@@ -8593,7 +8593,7 @@ html {
   }
 
   .site-logo-mark {
-    height: clamp(50px, 4.7vw, 66px);
+    height: clamp(60px, 5.6vw, 82px);
   }
 
   .desktop-header-search {
@@ -9211,7 +9211,7 @@ html {
 .site-footer-logo img {
   display: block;
   width: auto;
-  height: 52px;
+  height: 68px;
 }
 
 .site-footer-brand p {
@@ -9340,7 +9340,7 @@ html {
   }
 
   .site-footer-logo img {
-    height: 46px;
+    height: 58px;
   }
 
   .site-footer-brand p {
