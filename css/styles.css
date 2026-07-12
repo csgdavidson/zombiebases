@@ -4816,7 +4816,7 @@ body {
 
   .site-logo-mark {
     width: auto;
-    height: 52px;
+    height: 78px;
   }
 
   .site-nav {
@@ -8340,10 +8340,6 @@ html {
     padding-block: 0.55rem;
   }
 
-  .site-logo-mark {
-    max-height: 56px;
-  }
-
   .site-header .site-nav {
     display: none !important;
   }
@@ -8856,6 +8852,13 @@ html {
   }
 }
 
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .site-logo-mark {
+    max-height: 56px;
+  }
+}
+
 @media (max-width: 768px) {
   .desktop-header-search,
   .desktop-nav-actions {
@@ -9340,11 +9343,6 @@ html {
     grid-row: auto;
   }
 
-  .site-footer-logo img {
-    width: auto;
-    height: 58px;
-  }
-
   .site-footer-brand p {
     max-width: 32rem;
   }
@@ -9363,6 +9361,21 @@ html {
   .site-footer-bottom span:nth-child(2),
   .site-footer-bottom span:last-child {
     text-align: left;
+  }
+}
+
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .site-footer-logo img {
+    width: auto;
+    height: 58px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer-logo img {
+    width: auto;
+    height: 87px;
   }
 }
 
