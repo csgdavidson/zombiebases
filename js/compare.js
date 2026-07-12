@@ -90,24 +90,14 @@ function fillFilterOptions(select, kind, bases) {
   select.innerHTML = `<option value="">${placeholder}</option>` + values.map((value) => `<option value="${value}">${labelFor(kind, value)}</option>`).join('');
   if (values.includes(current)) select.value = current;
 }
-function filteredBasesForState(bases, state) {
-  const query = String(state.input?.value || '').trim().toLowerCase();
-  return bases.filter((base) => {
-    if (state.typeSelect?.value && base.type !== state.typeSelect.value) return false;
-    if (state.regionSelect?.value && base.region !== state.regionSelect.value) return false;
-    return !query || searchTextFor(base).includes(query);
-  });
-}
 function attachCompareSelector(panel, bases, callbacks = {}, initialBase = null) {
   const combo = panel.querySelector('[data-base-combobox]');
   const comboId = combo?.dataset.comboboxId || `compare-combobox-${panel.dataset.compareSide || 'side'}`;
   const button = combo?.querySelector('[data-combobox-button]');
   const valueNode = combo?.querySelector('[data-combobox-value]');
   const panelNode = combo?.querySelector('[data-combobox-panel]');
-  const searchInput = combo?.querySelector('[data-combobox-search]');
   const listbox = combo?.querySelector('[data-combobox-list]');
   const emptyNode = combo?.querySelector('[data-combobox-empty]');
-  const clearSearch = combo?.querySelector('[data-clear-search]');
   const footer = combo?.querySelector('[data-combobox-footer]');
   const typeSelect = panel.querySelector('select[data-filter="type"]');
   const regionSelect = panel.querySelector('select[data-filter="region"]');
@@ -131,23 +121,20 @@ function attachCompareSelector(panel, bases, callbacks = {}, initialBase = null)
     state.activeIndex = state.visible.length ? Math.max(0, Math.min(index, state.visible.length - 1)) : -1;
     [...listbox.children].forEach((row, i) => {
       row.classList.toggle('is-active', i === state.activeIndex);
-      row.setAttribute('aria-selected', i === state.activeIndex ? 'true' : 'false');
+      row.setAttribute('aria-current', i === state.activeIndex ? 'true' : 'false');
     });
     const active = listbox.children[state.activeIndex];
     if (active) { button.setAttribute('aria-activedescendant', active.id); active.scrollIntoView({ block: 'nearest' }); }
     else button.removeAttribute('aria-activedescendant');
   };
-  const matchingSearch = () => {
-    const query = String(searchInput.value || '').trim().toLowerCase();
-    return state.matches.filter((base) => !query || searchTextFor(base).includes(query));
-  };
   const renderList = () => {
-    state.visible = matchingSearch();
+    state.visible = state.matches.slice();
     listbox.innerHTML = state.visible.map((base, index) => {
       const slug = preferredSlugFor(base);
       const duplicate = callbacks.isDuplicate?.(base);
+      const selected = state.selected && preferredSlugFor(state.selected) === slug;
       const score = getScore(base, 'overall');
-      return `<button id="${comboId}-option-${index}" class="compare-combobox-option${duplicate ? ' is-disabled' : ''}" type="button" role="option" data-slug="${slug}" aria-selected="false"${duplicate ? ' disabled aria-disabled="true"' : ''}><img src="${imageFor(base)}" alt="" loading="lazy" decoding="async" width="48" height="38"><span class="compare-combobox-option-copy"><strong>${base.name}</strong><small>${optionMeta(base)}${duplicate ? ' · Already selected' : ''}</small></span><em class="${scoreToneClass(score)}">${formatScore(score)}</em></button>`;
+      return `<button id="${comboId}-option-${index}" class="compare-combobox-option${selected ? ' is-selected' : ''}${duplicate ? ' is-disabled' : ''}" type="button" role="option" data-slug="${slug}" aria-selected="${selected ? 'true' : 'false'}"${duplicate ? ' disabled aria-disabled="true"' : ''}><img src="${imageFor(base)}" alt="" loading="lazy" decoding="async" width="48" height="38"><span class="compare-combobox-option-copy"><strong>${base.name}</strong><small>${optionMeta(base)}${duplicate ? ' · Already selected' : ''}</small></span><em class="${scoreToneClass(score)}">${formatScore(score)}</em></button>`;
     }).join('');
     listbox.querySelectorAll('img').forEach((img) => img.addEventListener('error', (event) => { event.currentTarget.src = HERO_IMAGE_FALLBACK_URL; }, { once: true }));
     emptyNode.hidden = state.visible.length > 0;
@@ -162,10 +149,7 @@ function attachCompareSelector(panel, bases, callbacks = {}, initialBase = null)
     combo.classList.add('is-open');
     panelNode.hidden = false;
     button.setAttribute('aria-expanded', 'true');
-    searchInput.placeholder = `Search within ${state.matches.length} location${state.matches.length === 1 ? '' : 's'}…`;
-    searchInput.value = '';
     renderList();
-    setTimeout(() => searchInput.focus(), 0);
   };
   const close = (focusButton = false) => {
     state.open = false;
@@ -187,37 +171,34 @@ function attachCompareSelector(panel, bases, callbacks = {}, initialBase = null)
   const renderOptions = () => {
     state.matches = filteredBases();
     const noMatches = state.matches.length === 0;
-    button.disabled = noMatches;
-    valueNode.textContent = 'Choose a base';
+    button.disabled = false;
+    valueNode.textContent = state.selected ? state.selected.name : 'Choose a base';
     count.textContent = countText(state.matches.length);
     clearFilters.hidden = !noMatches || (!typeSelect.value && !regionSelect.value);
     if (state.open) {
-      if (noMatches) close(false);
-      else { searchInput.placeholder = `Search within ${state.matches.length} location${state.matches.length === 1 ? '' : 's'}…`; renderList(); }
+      renderList();
     }
   };
   function renderSelected() {
+    valueNode.textContent = state.selected ? state.selected.name : 'Choose a base';
     if (!state.selected) { selectorCard.hidden = false; selectedCard.hidden = true; selectedCard.innerHTML = ''; return; }
     const score = getScore(state.selected, 'overall');
-    selectorCard.hidden = true; selectedCard.hidden = false;
+    selectorCard.hidden = false; selectedCard.hidden = false;
     selectedCard.innerHTML = `<img class="compare-selected-image" src="${imageFor(state.selected)}" alt="${state.selected.name} base image" loading="lazy" decoding="async"><div class="compare-selected-copy"><p class="winner-card-label">${panel.dataset.compareSide === 'primary' ? 'First base' : 'Second base'}</p><h3>${state.selected.name}</h3><p>${labelFor('type', state.selected.type)}</p><p>${labelFor('region', state.selected.region)}</p><button type="button" class="change-base-button">Change</button></div><strong class="selected-base-score ${scoreToneClass(score)}">${formatScore(score)}</strong>`;
     selectedCard.querySelector('img').addEventListener('error', (event) => { event.currentTarget.src = HERO_IMAGE_FALLBACK_URL; }, { once: true });
     selectedCard.querySelector('button').addEventListener('click', () => { state.selected = null; renderSelected(); renderOptions(); callbacks.onChange?.(); setTimeout(() => button.focus(), 0); });
   }
   const clearSelectionIfInvalid = () => { if (state.selected && !matchesCurrentFilters(state.selected)) state.selected = null; };
   button.addEventListener('click', () => state.open ? close(false) : open());
-  button.addEventListener('keydown', (event) => { if (['Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(event.key)) { event.preventDefault(); open(); } });
-  searchInput.addEventListener('input', renderList);
-  searchInput.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowDown') { event.preventDefault(); setActive(state.activeIndex + 1); }
-    else if (event.key === 'ArrowUp') { event.preventDefault(); setActive(state.activeIndex - 1); }
-    else if (event.key === 'Home') { event.preventDefault(); setActive(0); }
-    else if (event.key === 'End') { event.preventDefault(); setActive(state.visible.length - 1); }
-    else if (event.key === 'Enter') { event.preventDefault(); chooseActive(); }
-    else if (event.key === 'Escape') { event.preventDefault(); close(true); }
+  button.addEventListener('keydown', (event) => {
+    if (['Enter', ' '].includes(event.key)) { event.preventDefault(); state.open ? chooseActive() : open(); }
+    else if (event.key === 'ArrowDown') { event.preventDefault(); if (!state.open) open(); else setActive(state.activeIndex + 1); }
+    else if (event.key === 'ArrowUp') { event.preventDefault(); if (!state.open) open(); else setActive(state.activeIndex - 1); }
+    else if (event.key === 'Home') { event.preventDefault(); if (!state.open) open(); setActive(0); }
+    else if (event.key === 'End') { event.preventDefault(); if (!state.open) open(); setActive(state.visible.length - 1); }
+    else if (event.key === 'Escape' && state.open) { event.preventDefault(); close(true); }
   });
   listbox.addEventListener('click', (event) => { const row = event.target.closest('[data-slug]'); if (row) choose(state.visible.find((base) => preferredSlugFor(base) === row.dataset.slug)); });
-  clearSearch?.addEventListener('click', () => { searchInput.value = ''; renderList(); searchInput.focus(); });
   document.addEventListener('click', (event) => { if (state.open && !combo.contains(event.target)) close(false); });
   [typeSelect, regionSelect].forEach((select) => select.addEventListener('change', () => { clearSelectionIfInvalid(); renderSelected(); renderOptions(); callbacks.onChange?.(); }));
   clearFilters?.addEventListener('click', () => { typeSelect.value = ''; regionSelect.value = ''; state.selected = null; renderSelected(); renderOptions(); callbacks.onChange?.(); button.focus(); });
