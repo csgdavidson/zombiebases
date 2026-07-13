@@ -1,41 +1,35 @@
-# 00 Executive Summary
+# 00 — Executive summary
 
-## Audit methodology and verification status
+Status: RED-TEAM UPDATED 2026-07-13.
 
-Second-pass audit was performed at commit `e3b23b8e557d6408bd7bb48bdaeac107b68632fe` on `2026-07-12T21:17:59Z`. The root README, both briefing documents, every existing audit file and the current implementation were inspected. Verification used Node tests, Python validators/generators, static data inspection and deterministic calculation fixtures. No local browser/server, Lighthouse, axe, screen reader or live Cloudflare dashboard test was run.
+This pass re-read the root README, both root ZombieBases briefing documents, all existing `/audit` files, and relevant V1 source/data for scoring, scenarios, compare, quiz, routing, SEO and content migration. Evidence labels used throughout: VERIFIED, INSPECTED, INFERRED and UNKNOWN.
 
-Commands passed: `node --test tests/*.test.js`, `python3 scripts/validate-bases.py`, `python3 scripts/validate-discovery.py`, `python3 scripts/validate-interpretations.py`, `npm run build`, JSON validation for `audit/inventory.json`. Temporary generator diffs outside `/audit` were reverted.
+## What was verified
 
-## Ten most important verified findings
+* VERIFIED: compare helper behaviour and quiz engine behaviour with `node --test tests/*.test.js`.
+* VERIFIED: scenario/discovery and interpretation generated data match generators with `python3 scripts/validate-discovery.py` and `python3 scripts/validate-interpretations.py`.
+* VERIFIED: new audit evidence JSON and `inventory.json` validate as JSON.
+* INSPECTED: source-to-screen data lineage, nested JSON shapes, route rewrites, sitemap/canonical duplication, Field Manual structure, image conventions and parity behaviours.
 
-1. Canonical base data is `data/bases-index.json` with 111 bases.
-2. Overall score is stored/authored at `scores.overall`; V1 has no authoritative runtime overall formula.
-3. Scenario formulas are deterministic in `scripts/generate-discovery.py` and discovery validation passes.
-4. Compare uses eight rows, `WIN_EPSILON=0.05`, 0-10 clamping and stored compare scores.
-5. Quiz has seven axes, twelve fixed questions, six profiles and deterministic compatibility sorting.
-6. Node tests cover compare helpers and quiz engine only; they pass.
-7. Python base/discovery/interpretation validators pass.
-8. `npm run build` succeeds but produces uncommitted generated thumbnails outside tracked files.
-9. Image payload is large: 123 PNG files totaling ~350 MB.
-10. Clean base routing depends on Cloudflare rewrites plus reserved-route slug logic.
+## Contradictions resolved
 
-## Highest migration risks
+* Maintenance contradiction resolved conclusively: V1 stores `comparisonScores.maintenanceBurden.score`, but the user-facing and algorithmic score is **Maintenance Resilience**, higher-is-better. Prior lower-is-better/inversion statements are superseded by `audit/29-scoring-compare-quiz-red-team.md` and fixtures.
+* Cloudflare/dashboard certainty qualified: repository routes are inspected; dashboard-only rules remain UNKNOWN without owner/live verification.
+* Scenario, compare and quiz summaries are now fixture-backed instead of only prose-backed.
 
-1. Multiple score systems must not be collapsed accidentally.
-2. Root-level slugs collide with product/static routes.
-3. Client-side SEO means sitemap URLs may not have static metadata.
-4. Generated data can drift; rankings rerun changed Isle of Eigg summary.
-5. Quiz result reconstruction changes when data changes.
-6. Compare narrative relies on specific row semantics and tie thresholds.
-7. Field Manual content is embedded HTML.
-8. Image filename convention and root duplicates complicate migration.
-9. Accessibility issues in custom selectors, quiz controls and map need remediation.
-10. Cloudflare dashboard rules are not fully verifiable from the repo.
+## Confidence by subsystem
 
-## Discrepancies and unknowns
+| Subsystem | Confidence | Reason |
+|---|---|---|
+| Scoring dictionary | High | Source/data inspected; fixtures created. |
+| Scenario formulas | High | Generator validator passed and worked examples captured. |
+| Compare contract | High for helpers, medium for browser UI | Node tests passed; UI source inspected but not browser-tested. |
+| Quiz engine | High for algorithm, medium for browser UI/accessibility | Node tests passed; UI source inspected. |
+| Data/content schema | Medium-high | Observed shapes snapshotted; semantic editorial intent still needs owner decisions. |
+| Routing/SEO | Medium | Repo rules inspected; live Cloudflare dashboard remains UNKNOWN. |
+| Media | Medium | Paths/duplicates inspected; dimensions/alt governance need migration decisions. |
+| Parity matrix | Medium-high | Granular enough for V2 acceptance-test planning, but needs conversion into executable tests. |
 
-Main discrepancies: technical brief/dashboard routing may exceed `_redirects`; package script references missing `generate-base-page-metadata.py`; committed rankings JSON drifts from current generator/source text; clean canonical choice between root slug and `/base/:slug` remains unresolved; legacy `base-matrix-source` role is unclear.
+## Readiness for V2 architecture planning
 
-## Readiness verdict
-
-The audit is sufficient to begin V2 architecture planning for data model, routing, scoring, compare and quiz parity. It is not sufficient to claim complete production behaviour verification until live Cloudflare rules, browser accessibility, performance metrics and visual route rendering are tested.
+Scoring, scenarios, compare, quiz and data contracts are now sufficient to begin V2 architecture planning, with one caveat: live Cloudflare/dashboard behaviour and final CMS/media ownership decisions require owner confirmation before implementation freeze. Routing is sufficient for repository parity planning but not for claiming deployed-route truth.

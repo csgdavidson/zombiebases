@@ -1,0 +1,30 @@
+# 33 — Granular V1/V2 parity matrix
+
+Status legend: INSPECTED means source-read; VERIFIED means exercised by tests/validators; UNKNOWN means owner/live confirmation required. Each row should become an automated or manual V2 acceptance item.
+
+| ID | Area/item | Exact V1 behaviour | Evidence | Brief intent | Desktop/mobile/URL edge cases | Status | V2 disposition | Proposed tests |
+|---|---|---|---|---|---|---|---|
+| G-01 | Desktop header items | Header links route to explore/rankings/compare/quiz/manual families. | `index.html`, shared shell markup | Preserve navigation. | Active state JS-dependent. | INSPECTED | Preserve | Playwright nav link smoke. |
+| G-02 | Mobile header/bottom nav | Mobile navigation/search differs from desktop. | `index.html`, CSS/JS | Preserve mobile-first access. | Small viewport only. | INSPECTED | Preserve with ARIA | Manual responsive nav. |
+| G-03 | Search overlay/presets/random | Search and random-base are client-side over bases. | `js/main.js`, `js/slug.js` | Fast discovery. | Requires JS/data fetch. | INSPECTED | Preserve | Deterministic random mocked. |
+| H-01 | Homepage hero/statistics | Stats come from generated stats/data aggregation. | `data/base-stats.json`, `js/main.js` | Preserve. | JS-disabled partial shell. | INSPECTED | Derive | Snapshot stats. |
+| H-02 | Type cards/anchor/popular | Type filters/anchors update list state. | `index.html`, `js/main.js` | Preserve. | URL state query interactions. | INSPECTED | Preserve | Filter URL tests. |
+| H-03 | Search/region/type/sort/reset/result count | Client-side filtering and count rendering. | `js/main.js` | Preserve. | Empty result state. | INSPECTED | Preserve | Filter matrix tests. |
+| H-04 | List/map/cards/markers | Cards use shared renderer; map uses coordinates/markers/clusters. | `js/base-card.js`, `js/main.js` | Preserve. | Leaflet external dependency; JS required. | INSPECTED | Preserve | Visual/card/marker tests. |
+| B-01 | Detail hero/back/title/type/region/country/image | Slug resolves base, fallback image by slug/placeholder. | `js/base.js`, `js/slug.js` | Preserve. | Invalid slug not-found via JS. | INSPECTED | Preserve | Slug/image tests. |
+| B-02 | Rank badges/percentile/overall/headline scores | Rankings JSON plus base scores render badges and scores. | `data/rankings.json`, `js/base.js` | Preserve. | Missing ranking fallback. | INSPECTED | Preserve/derive | Ranking fixture tests. |
+| B-03 | Summary/pillars/strengths/weaknesses/tradeoffs | Narrative fields render from base/interpretations. | `data/bases-index.json`, `data/interpretations.json` | Preserve content. | Rich text migration risk. | INSPECTED | CMS/structured | Content snapshot. |
+| B-04 | Best use/key risk/failure/survival periods | Long-form base detail content. | `js/base.js`, data JSON | Preserve. | Missing fields fallback. | INSPECTED | CMS-managed | Detail snapshot. |
+| B-05 | Suggested comparisons/related/scenario links | Discovery data drives suggestions and links. | `data/discovery.json` | Preserve. | Clean vs query URL. | VERIFIED | Derive | Discovery validator. |
+| C-01 | Compare landing selectors | Two independent searchable selectors, metadata, duplicate prevention, button enablement. | `js/compare.js` | Preserve. | Same-base error. | VERIFIED helpers/INSPECTED UI | Preserve | Selector interaction test. |
+| C-02 | Curated matchups/change-base | Curated cards and change controls generate compare URLs. | `js/compare.js` | Preserve. | Invalid choices blocked. | INSPECTED | Preserve | URL generation test. |
+| C-03 | Compare detail rows/radar/winner | Eight rows, tie threshold .05, all higher-is-better including Maintenance Resilience. | `audit/evidence/compare-fixtures.json` | Preserve exact. | Missing score skipped/tie. | VERIFIED | Preserve | Fixture parity test. |
+| R-01 | Rankings global/region/type/scenario | Query-driven selectors and cards from rankings/discovery. | `js/rankings.js`, `js/scenarios.js` | Preserve. | Invalid selector defaults/empty. | INSPECTED | Preserve/derive | URL selector tests. |
+| Q-01 | Quiz landing/previous/retake | localStorage v2 reconstructs previous, retake clears. | `js/quiz.js` | Preserve. | Tampered storage fails safe. | VERIFIED test string checks | Version config | Storage tests. |
+| Q-02 | 12 questions/navigation/progress | Single-answer flow, back/forward, incomplete blocked. | `js/quiz-questions.js`, `js/quiz.js` | Preserve. | Keyboard/ARIA improve. | VERIFIED config/INSPECTED UI | Preserve | Journey tests. |
+| Q-03 | Result/profile/base/compatibility/alternatives/share | Engine chooses profile/best/top alternatives; share uses Web Share/clipboard. | `audit/evidence/quiz-fixtures.json` | Preserve. | Result changes if data changes. | VERIFIED | Versioned recommender | Fixture parity tests. |
+| F-01 | Manual hero/reading time/TOC/progress | Static content with JS TOC/progress/reading-time. | `field-manual.html` | Preserve content. | JS-disabled content visible. | INSPECTED | Rich content blocks | DOM snapshot. |
+| F-02 | Manual chapters/callouts/FAQs/further reading | Ordered HTML content and anchors. | `field-manual.html` | Preserve. | Link targets include legacy URLs. | INSPECTED | CMS neutral blocks | Anchor/link tests. |
+| T-01 | Clean routes/redirects/canonicals/sitemap | `_redirects` plus JS canonical helpers; query duplicates remain. | `_redirects`, `sitemap.xml`, route evidence | Preserve/clean up deliberately. | Dashboard UNKNOWN. | INSPECTED/UNKNOWN | Owner decision | Route matrix tests. |
+| T-02 | SEO metadata/structured data/JS-disabled | Runtime metadata for dynamic pages; static shell without JS. | HTML/`js/seo.js` | Preserve SEO intent. | Duplicate URL risk. | INSPECTED | SSR/static generation preferred | Crawler snapshots. |
+| T-03 | Media fallback/placeholders/slug filenames | `/images/bases/<slug>.png`, explicit image override, placeholder fallback. | data/images/templates | Preserve visible media. | Duplicate root legacy images. | INSPECTED | Stable media records | Missing image test. |
