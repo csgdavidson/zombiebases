@@ -1,0 +1,696 @@
+[
+  {
+    "id": "D1",
+    "title": "Public URLs and routing",
+    "status": "approved",
+    "affected_routes": [
+      "/",
+      "/{slug}",
+      "/base/{slug}",
+      "/compare",
+      "/base/{a}/vs/{b}"
+    ],
+    "affected_data": [
+      "base.slug",
+      "legacy slugs",
+      "reserved routes"
+    ],
+    "affected_v1_files": [
+      "_redirects",
+      "js/slug.js",
+      "sitemap.xml"
+    ],
+    "preserved_behaviours": [
+      "user-facing intent and deterministic outputs where V1 fixtures define parity",
+      "anonymous access and shareable public routes where applicable"
+    ],
+    "deliberate_changes": [
+      "root-level base URLs owned by Next.js; no Cloudflare app routing"
+    ],
+    "risks": [
+      "slug/route collision",
+      "stale or overbroad cache",
+      "draft leakage",
+      "formula drift",
+      "redirect/canonical mismatch"
+    ],
+    "required_tests": [
+      "V1 fixture parity",
+      "live-content filtering",
+      "redirect/canonical assertion",
+      "revalidation dependency assertion"
+    ],
+    "architecture_requirements": [
+      "centralised TypeScript logic",
+      "version-controlled routing/reserved slugs",
+      "dependency-aware revalidation",
+      "source-only authoritative data model"
+    ],
+    "open_questions": [],
+    "confidence": "high_repository_evidence_medium_live_cloudflare"
+  },
+  {
+    "id": "D2",
+    "title": "Rendering and caching",
+    "status": "approved",
+    "affected_routes": [
+      "/",
+      "/{slug}",
+      "/rankings",
+      "/regions/*",
+      "/types/*",
+      "/scenarios/*",
+      "/field-manual",
+      "/compare/*",
+      "/quiz"
+    ],
+    "affected_data": [
+      "published source records",
+      "cache tags"
+    ],
+    "affected_v1_files": [
+      "index.html",
+      "base.html",
+      "rankings.html",
+      "field-manual.html",
+      "compare.html",
+      "quiz.html"
+    ],
+    "preserved_behaviours": [
+      "user-facing intent and deterministic outputs where V1 fixtures define parity",
+      "anonymous access and shareable public routes where applicable"
+    ],
+    "deliberate_changes": [
+      "generated cached HTML with on-demand dependency revalidation"
+    ],
+    "risks": [
+      "slug/route collision",
+      "stale or overbroad cache",
+      "draft leakage",
+      "formula drift",
+      "redirect/canonical mismatch"
+    ],
+    "required_tests": [
+      "V1 fixture parity",
+      "live-content filtering",
+      "redirect/canonical assertion",
+      "revalidation dependency assertion"
+    ],
+    "architecture_requirements": [
+      "centralised TypeScript logic",
+      "version-controlled routing/reserved slugs",
+      "dependency-aware revalidation",
+      "source-only authoritative data model"
+    ],
+    "open_questions": [],
+    "confidence": "high_repository_evidence_medium_live_cloudflare"
+  },
+  {
+    "id": "D3",
+    "title": "Supabase source-data-only model",
+    "status": "approved",
+    "affected_routes": [
+      "all public routes"
+    ],
+    "affected_data": [
+      "bases",
+      "scores",
+      "scenario_defs",
+      "quiz_defs",
+      "media",
+      "publishing"
+    ],
+    "affected_v1_files": [
+      "data/bases-index.json",
+      "data/rankings.json",
+      "data/discovery.json",
+      "data/interpretations.json",
+      "data/base-stats.json"
+    ],
+    "preserved_behaviours": [
+      "user-facing intent and deterministic outputs where V1 fixtures define parity",
+      "anonymous access and shareable public routes where applicable"
+    ],
+    "deliberate_changes": [
+      "Supabase stores source/config/scores only; derived outputs regenerated"
+    ],
+    "risks": [
+      "slug/route collision",
+      "stale or overbroad cache",
+      "draft leakage",
+      "formula drift",
+      "redirect/canonical mismatch"
+    ],
+    "required_tests": [
+      "V1 fixture parity",
+      "live-content filtering",
+      "redirect/canonical assertion",
+      "revalidation dependency assertion"
+    ],
+    "architecture_requirements": [
+      "centralised TypeScript logic",
+      "version-controlled routing/reserved slugs",
+      "dependency-aware revalidation",
+      "source-only authoritative data model"
+    ],
+    "open_questions": [],
+    "confidence": "high_repository_evidence_medium_live_cloudflare"
+  },
+  {
+    "id": "D4",
+    "title": "Browser catalogue search/filter/sort",
+    "status": "approved",
+    "affected_routes": [
+      "/",
+      "/?q=&region=&type=&sort=&view="
+    ],
+    "affected_data": [
+      "catalogue fields"
+    ],
+    "affected_v1_files": [
+      "index.html",
+      "js/main.js",
+      "js/base-card.js",
+      "js/map.js",
+      "js/mobile-nav.js"
+    ],
+    "preserved_behaviours": [
+      "user-facing intent and deterministic outputs where V1 fixtures define parity",
+      "anonymous access and shareable public routes where applicable"
+    ],
+    "deliberate_changes": [
+      "compact published catalogue in browser; no Supabase query per normal search"
+    ],
+    "risks": [
+      "slug/route collision",
+      "stale or overbroad cache",
+      "draft leakage",
+      "formula drift",
+      "redirect/canonical mismatch"
+    ],
+    "required_tests": [
+      "V1 fixture parity",
+      "live-content filtering",
+      "redirect/canonical assertion",
+      "revalidation dependency assertion"
+    ],
+    "architecture_requirements": [
+      "centralised TypeScript logic",
+      "version-controlled routing/reserved slugs",
+      "dependency-aware revalidation",
+      "source-only authoritative data model"
+    ],
+    "open_questions": [],
+    "confidence": "high_repository_evidence_medium_live_cloudflare"
+  },
+  {
+    "id": "D5",
+    "title": "Server rankings and scenarios",
+    "status": "approved",
+    "affected_routes": [
+      "/rankings",
+      "/regions/*",
+      "/types/*",
+      "/scenarios/*",
+      "/{slug}"
+    ],
+    "affected_data": [
+      "scores",
+      "taxonomy",
+      "scenario definitions"
+    ],
+    "affected_v1_files": [
+      "scripts/generate-rankings.py",
+      "scripts/generate-discovery.py",
+      "data/rankings.json",
+      "data/discovery.json",
+      "js/rankings.js",
+      "js/scenarios.js"
+    ],
+    "preserved_behaviours": [
+      "user-facing intent and deterministic outputs where V1 fixtures define parity",
+      "anonymous access and shareable public routes where applicable"
+    ],
+    "deliberate_changes": [
+      "deterministic TypeScript engines on server generation/revalidation"
+    ],
+    "risks": [
+      "slug/route collision",
+      "stale or overbroad cache",
+      "draft leakage",
+      "formula drift",
+      "redirect/canonical mismatch"
+    ],
+    "required_tests": [
+      "V1 fixture parity",
+      "live-content filtering",
+      "redirect/canonical assertion",
+      "revalidation dependency assertion"
+    ],
+    "architecture_requirements": [
+      "centralised TypeScript logic",
+      "version-controlled routing/reserved slugs",
+      "dependency-aware revalidation",
+      "source-only authoritative data model"
+    ],
+    "open_questions": [],
+    "confidence": "high_repository_evidence_medium_live_cloudflare"
+  },
+  {
+    "id": "D6",
+    "title": "Hybrid Compare",
+    "status": "approved",
+    "affected_routes": [
+      "/compare",
+      "/compare/{a}-vs-{b}",
+      "/base/{a}/vs/{b}"
+    ],
+    "affected_data": [
+      "comparisonScores",
+      "headline scores",
+      "base metadata"
+    ],
+    "affected_v1_files": [
+      "compare.html",
+      "js/compare.js",
+      "tests/compare-utils.test.js"
+    ],
+    "preserved_behaviours": [
+      "user-facing intent and deterministic outputs where V1 fixtures define parity",
+      "anonymous access and shareable public routes where applicable"
+    ],
+    "deliberate_changes": [
+      "server-render initial result; browser swaps use same deterministic engine"
+    ],
+    "risks": [
+      "slug/route collision",
+      "stale or overbroad cache",
+      "draft leakage",
+      "formula drift",
+      "redirect/canonical mismatch"
+    ],
+    "required_tests": [
+      "V1 fixture parity",
+      "live-content filtering",
+      "redirect/canonical assertion",
+      "revalidation dependency assertion"
+    ],
+    "architecture_requirements": [
+      "centralised TypeScript logic",
+      "version-controlled routing/reserved slugs",
+      "dependency-aware revalidation",
+      "source-only authoritative data model"
+    ],
+    "open_questions": [],
+    "confidence": "high_repository_evidence_medium_live_cloudflare"
+  },
+  {
+    "id": "D7",
+    "title": "Hybrid Quiz",
+    "status": "approved",
+    "affected_routes": [
+      "/quiz"
+    ],
+    "affected_data": [
+      "quiz questions",
+      "profiles",
+      "base scores",
+      "localStorage profile"
+    ],
+    "affected_v1_files": [
+      "quiz.html",
+      "js/quiz.js",
+      "js/quiz-engine.js",
+      "js/quiz-questions.js",
+      "tests/quiz-engine.test.js"
+    ],
+    "preserved_behaviours": [
+      "user-facing intent and deterministic outputs where V1 fixtures define parity",
+      "anonymous access and shareable public routes where applicable"
+    ],
+    "deliberate_changes": [
+      "browser answers/results; LocalStorage profile; no accounts/versioning"
+    ],
+    "risks": [
+      "slug/route collision",
+      "stale or overbroad cache",
+      "draft leakage",
+      "formula drift",
+      "redirect/canonical mismatch"
+    ],
+    "required_tests": [
+      "V1 fixture parity",
+      "live-content filtering",
+      "redirect/canonical assertion",
+      "revalidation dependency assertion"
+    ],
+    "architecture_requirements": [
+      "centralised TypeScript logic",
+      "version-controlled routing/reserved slugs",
+      "dependency-aware revalidation",
+      "source-only authoritative data model"
+    ],
+    "open_questions": [],
+    "confidence": "high_repository_evidence_medium_live_cloudflare"
+  },
+  {
+    "id": "D8",
+    "title": "R2 media plus Supabase metadata",
+    "status": "approved",
+    "affected_routes": [
+      "/",
+      "/{slug}",
+      "/rankings",
+      "/compare",
+      "/quiz"
+    ],
+    "affected_data": [
+      "media records",
+      "base_media relationships",
+      "alt/caption/role"
+    ],
+    "affected_v1_files": [
+      "images/bases/*.png",
+      "js/base-card.js",
+      "js/base.js",
+      "js/compare.js",
+      "scripts/generate-card-thumbnails.py"
+    ],
+    "preserved_behaviours": [
+      "user-facing intent and deterministic outputs where V1 fixtures define parity",
+      "anonymous access and shareable public routes where applicable"
+    ],
+    "deliberate_changes": [
+      "media files in R2; role metadata/relationships in Supabase"
+    ],
+    "risks": [
+      "slug/route collision",
+      "stale or overbroad cache",
+      "draft leakage",
+      "formula drift",
+      "redirect/canonical mismatch"
+    ],
+    "required_tests": [
+      "V1 fixture parity",
+      "live-content filtering",
+      "redirect/canonical assertion",
+      "revalidation dependency assertion"
+    ],
+    "architecture_requirements": [
+      "centralised TypeScript logic",
+      "version-controlled routing/reserved slugs",
+      "dependency-aware revalidation",
+      "source-only authoritative data model"
+    ],
+    "open_questions": [],
+    "confidence": "high_repository_evidence_medium_live_cloudflare"
+  },
+  {
+    "id": "D9",
+    "title": "Draft/Published with publish_at",
+    "status": "approved",
+    "affected_routes": [
+      "all public routes",
+      "/sitemap.xml"
+    ],
+    "affected_data": [
+      "status",
+      "publish_at",
+      "published_at",
+      "updated_at"
+    ],
+    "affected_v1_files": [
+      "data/bases-index.json",
+      "scripts/generate-sitemap.py",
+      "js/quiz-engine.js"
+    ],
+    "preserved_behaviours": [
+      "user-facing intent and deterministic outputs where V1 fixtures define parity",
+      "anonymous access and shareable public routes where applicable"
+    ],
+    "deliberate_changes": [
+      "live rule gates every public output and scheduled publication"
+    ],
+    "risks": [
+      "slug/route collision",
+      "stale or overbroad cache",
+      "draft leakage",
+      "formula drift",
+      "redirect/canonical mismatch"
+    ],
+    "required_tests": [
+      "V1 fixture parity",
+      "live-content filtering",
+      "redirect/canonical assertion",
+      "revalidation dependency assertion"
+    ],
+    "architecture_requirements": [
+      "centralised TypeScript logic",
+      "version-controlled routing/reserved slugs",
+      "dependency-aware revalidation",
+      "source-only authoritative data model"
+    ],
+    "open_questions": [],
+    "confidence": "high_repository_evidence_medium_live_cloudflare"
+  },
+  {
+    "id": "D10",
+    "title": "No methodology versioning",
+    "status": "approved",
+    "affected_routes": [
+      "rankings",
+      "scenarios",
+      "compare",
+      "quiz",
+      "base detail"
+    ],
+    "affected_data": [
+      "current scoring inputs",
+      "current quiz/scenario definitions"
+    ],
+    "affected_v1_files": [
+      "scripts/generate-rankings.py",
+      "scripts/generate-discovery.py",
+      "js/compare.js",
+      "js/quiz-engine.js"
+    ],
+    "preserved_behaviours": [
+      "user-facing intent and deterministic outputs where V1 fixtures define parity",
+      "anonymous access and shareable public routes where applicable"
+    ],
+    "deliberate_changes": [
+      "one current scoring/scenario/quiz model"
+    ],
+    "risks": [
+      "slug/route collision",
+      "stale or overbroad cache",
+      "draft leakage",
+      "formula drift",
+      "redirect/canonical mismatch"
+    ],
+    "required_tests": [
+      "V1 fixture parity",
+      "live-content filtering",
+      "redirect/canonical assertion",
+      "revalidation dependency assertion"
+    ],
+    "architecture_requirements": [
+      "centralised TypeScript logic",
+      "version-controlled routing/reserved slugs",
+      "dependency-aware revalidation",
+      "source-only authoritative data model"
+    ],
+    "open_questions": [],
+    "confidence": "high_repository_evidence_medium_live_cloudflare"
+  },
+  {
+    "id": "D11",
+    "title": "No user accounts",
+    "status": "approved",
+    "affected_routes": [
+      "all routes",
+      "/quiz"
+    ],
+    "affected_data": [
+      "local preferences/profile only"
+    ],
+    "affected_v1_files": [
+      "js/quiz.js",
+      "js/main.js"
+    ],
+    "preserved_behaviours": [
+      "user-facing intent and deterministic outputs where V1 fixtures define parity",
+      "anonymous access and shareable public routes where applicable"
+    ],
+    "deliberate_changes": [
+      "anonymous core features; LocalStorage only"
+    ],
+    "risks": [
+      "slug/route collision",
+      "stale or overbroad cache",
+      "draft leakage",
+      "formula drift",
+      "redirect/canonical mismatch"
+    ],
+    "required_tests": [
+      "V1 fixture parity",
+      "live-content filtering",
+      "redirect/canonical assertion",
+      "revalidation dependency assertion"
+    ],
+    "architecture_requirements": [
+      "centralised TypeScript logic",
+      "version-controlled routing/reserved slugs",
+      "dependency-aware revalidation",
+      "source-only authoritative data model"
+    ],
+    "open_questions": [],
+    "confidence": "high_repository_evidence_medium_live_cloudflare"
+  },
+  {
+    "id": "D12",
+    "title": "Basic search capability",
+    "status": "approved",
+    "affected_routes": [
+      "/"
+    ],
+    "affected_data": [
+      "name",
+      "aliases",
+      "region",
+      "country",
+      "type",
+      "short summary"
+    ],
+    "affected_v1_files": [
+      "js/main.js",
+      "js/mobile-nav.js",
+      "data/bases-index.json"
+    ],
+    "preserved_behaviours": [
+      "user-facing intent and deterministic outputs where V1 fixtures define parity",
+      "anonymous access and shareable public routes where applicable"
+    ],
+    "deliberate_changes": [
+      "deterministic field search only; no semantic/full-document indexing"
+    ],
+    "risks": [
+      "slug/route collision",
+      "stale or overbroad cache",
+      "draft leakage",
+      "formula drift",
+      "redirect/canonical mismatch"
+    ],
+    "required_tests": [
+      "V1 fixture parity",
+      "live-content filtering",
+      "redirect/canonical assertion",
+      "revalidation dependency assertion"
+    ],
+    "architecture_requirements": [
+      "centralised TypeScript logic",
+      "version-controlled routing/reserved slugs",
+      "dependency-aware revalidation",
+      "source-only authoritative data model"
+    ],
+    "open_questions": [],
+    "confidence": "high_repository_evidence_medium_live_cloudflare"
+  },
+  {
+    "id": "D13",
+    "title": "LocalStorage personalisation",
+    "status": "approved",
+    "affected_routes": [
+      "/",
+      "/{slug}",
+      "/rankings",
+      "/field-manual",
+      "/compare",
+      "/quiz"
+    ],
+    "affected_data": [
+      "local survival profile",
+      "lightweight preferences"
+    ],
+    "affected_v1_files": [
+      "js/quiz.js",
+      "js/quiz-engine.js"
+    ],
+    "preserved_behaviours": [
+      "user-facing intent and deterministic outputs where V1 fixtures define parity",
+      "anonymous access and shareable public routes where applicable"
+    ],
+    "deliberate_changes": [
+      "restrained survival-profile personalisation; site usable without quiz"
+    ],
+    "risks": [
+      "slug/route collision",
+      "stale or overbroad cache",
+      "draft leakage",
+      "formula drift",
+      "redirect/canonical mismatch"
+    ],
+    "required_tests": [
+      "V1 fixture parity",
+      "live-content filtering",
+      "redirect/canonical assertion",
+      "revalidation dependency assertion"
+    ],
+    "architecture_requirements": [
+      "centralised TypeScript logic",
+      "version-controlled routing/reserved slugs",
+      "dependency-aware revalidation",
+      "source-only authoritative data model"
+    ],
+    "open_questions": [],
+    "confidence": "high_repository_evidence_medium_live_cloudflare"
+  },
+  {
+    "id": "CW",
+    "title": "Content workflow",
+    "status": "approved",
+    "affected_routes": [
+      "admin/editorial process",
+      "public routes after publish"
+    ],
+    "affected_data": [
+      "content fields",
+      "status",
+      "publish_at",
+      "media metadata"
+    ],
+    "affected_v1_files": [
+      "README.md",
+      "V2_DECISIONS.md",
+      "audit/30-data-and-content-contract.md"
+    ],
+    "preserved_behaviours": [
+      "user-facing intent and deterministic outputs where V1 fixtures define parity",
+      "anonymous access and shareable public routes where applicable"
+    ],
+    "deliberate_changes": [
+      "owner-reviewed AI content, manual Supabase entry, draft until published"
+    ],
+    "risks": [
+      "slug/route collision",
+      "stale or overbroad cache",
+      "draft leakage",
+      "formula drift",
+      "redirect/canonical mismatch"
+    ],
+    "required_tests": [
+      "V1 fixture parity",
+      "live-content filtering",
+      "redirect/canonical assertion",
+      "revalidation dependency assertion"
+    ],
+    "architecture_requirements": [
+      "centralised TypeScript logic",
+      "version-controlled routing/reserved slugs",
+      "dependency-aware revalidation",
+      "source-only authoritative data model"
+    ],
+    "open_questions": [],
+    "confidence": "high_repository_evidence_medium_live_cloudflare"
+  }
+]
