@@ -1,0 +1,16 @@
+{
+  "status": "INSPECTED/UNKNOWN for dashboard-only rules",
+  "routes": [
+    {"url":"/","target":"index.html","status":200,"canonical":"https://zombiebases.com/","sitemap":true,"owner":"filesystem","jsDisabled":"static shell/cards absent","invalidSlug":"n/a","confidence":"high"},
+    {"url":"/base.html?slug=:slug","target":"base.html","status":200,"canonical":"/:slug via JS","sitemap":false,"owner":"filesystem+JS","jsDisabled":"generic shell","invalidSlug":"not-found panel via JS","confidence":"high"},
+    {"url":"/base/:slug","target":"/base.html rewrite","status":200,"canonical":"/:slug preferred by helper","sitemap":true,"owner":"_redirects","jsDisabled":"generic shell","invalidSlug":"base.html shell then JS not-found","confidence":"high in repo"},
+    {"url":"/:slug","target":"/base.html rewrite","status":200,"canonical":"/:slug","sitemap":true,"owner":"_redirects catch-all","collision":"reserved/static paths must precede catch-all or exist as assets","jsDisabled":"generic shell","confidence":"medium because dashboard order unknown"},
+    {"url":"/compare.html","target":"compare.html","status":200,"canonical":"/compare.html or clean pair when selected","sitemap":true,"owner":"filesystem","jsDisabled":"setup shell only","confidence":"high"},
+    {"url":"/compare.html?a=:a&b=:b","target":"compare.html","status":200,"canonical":"/base/:a/vs/:b via JS","sitemap":false,"owner":"JS query parsing","invalidSlug":"not-found/setup error","confidence":"high"},
+    {"url":"/base/:a/vs/:b","target":"/compare.html rewrite","status":200,"canonical":"/base/:a/vs/:b","sitemap":true,"owner":"_redirects before base route","invalidSlug":"compare not-found via JS","confidence":"high in repo"},
+    {"url":"/quiz and /quiz/","target":"/quiz.html rewrite plus quiz/index.html duplicate","status":200,"canonical":"/quiz","sitemap":true,"owner":"_redirects + generated duplicate","jsDisabled":"landing shell only","confidence":"high"},
+    {"url":"/field-manual and /field-manual/","target":"/field-manual.html rewrite plus field-manual/index.html duplicate","status":200,"canonical":"/field-manual","sitemap":true,"owner":"_redirects + generated duplicate","jsDisabled":"content visible","confidence":"high"},
+    {"url":"/rankings*.html and /scenarios.html","target":"matching html","status":200,"canonical":"query-aware JS","sitemap":true,"owner":"filesystem","jsDisabled":"shell/list absent","confidence":"high"},
+    {"url":"/compare, /rankings, /scenarios clean aliases","target":"UNKNOWN dashboard rules only if configured","status":"UNKNOWN","canonical":"UNKNOWN","sitemap":false,"owner":"Cloudflare dashboard per brief not repo","confidence":"low"}
+  ]
+}

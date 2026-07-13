@@ -28,3 +28,7 @@
 | Field Manual content | `field-manual.html` | Preserve content; restructure only during planned migration. |
 | Root-level base URLs | `_redirects`, `js/slug.js` | Preserve via redirects/canonicals even if canonical route changes. |
 | Image slug convention | `images/bases/*.png` | Use as migration convention, not final sole relationship. |
+
+## Red-team correction — 2026-07-13
+
+INSPECTED/VERIFIED: Risk R3 should be read as a legacy naming risk, not an active lower-is-better algorithm. The stored key is `maintenanceBurden`, but V1 display, radar and compare winner logic treat higher raw values as better Maintenance Resilience.

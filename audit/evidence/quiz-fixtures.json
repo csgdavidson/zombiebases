@@ -1,0 +1,2125 @@
+{
+  "axes": [
+    "defence",
+    "isolation",
+    "sustainability",
+    "resources",
+    "community",
+    "complexity",
+    "access"
+  ],
+  "questions": [
+    {
+      "id": "group_size",
+      "prompt": "What's your ideal group size?",
+      "answers": [
+        {
+          "id": "solo",
+          "label": "Just me",
+          "weights": {
+            "isolation": 3,
+            "access": 1,
+            "community": -1
+          }
+        },
+        {
+          "id": "small",
+          "label": "2–5 people",
+          "weights": {
+            "defence": 1,
+            "resources": 1,
+            "isolation": 2
+          }
+        },
+        {
+          "id": "community",
+          "label": "Small community (6–20)",
+          "weights": {
+            "community": 3,
+            "sustainability": 2,
+            "resources": 1
+          }
+        },
+        {
+          "id": "settlement",
+          "label": "Large settlement (20+)",
+          "weights": {
+            "community": 4,
+            "defence": 2,
+            "sustainability": 1,
+            "access": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "first_priority",
+      "prompt": "The outbreak starts tomorrow. What comes first?",
+      "answers": [
+        {
+          "id": "lockdown",
+          "label": "Secure a defensible perimeter",
+          "weights": {
+            "defence": 4,
+            "community": 1
+          }
+        },
+        {
+          "id": "vanish",
+          "label": "Get far away from population centres",
+          "weights": {
+            "isolation": 4,
+            "access": -1
+          }
+        },
+        {
+          "id": "supplies",
+          "label": "Find food, water and medical supplies",
+          "weights": {
+            "resources": 4,
+            "sustainability": 1
+          }
+        },
+        {
+          "id": "rally",
+          "label": "Gather trusted people and skills",
+          "weights": {
+            "community": 4,
+            "sustainability": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "preferred_isolation",
+      "prompt": "How isolated should your base be?",
+      "answers": [
+        {
+          "id": "nearby",
+          "label": "Near enough to salvage runs",
+          "weights": {
+            "access": 3,
+            "resources": 1,
+            "isolation": -1
+          }
+        },
+        {
+          "id": "regional",
+          "label": "Remote, but reachable by road or boat",
+          "weights": {
+            "isolation": 2,
+            "access": 1,
+            "resources": 1
+          }
+        },
+        {
+          "id": "extreme",
+          "label": "Extremely remote with few approach routes",
+          "weights": {
+            "isolation": 4,
+            "defence": 1,
+            "access": -2
+          }
+        },
+        {
+          "id": "hidden",
+          "label": "Hidden even if travel is difficult",
+          "weights": {
+            "isolation": 3,
+            "defence": 2,
+            "complexity": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "zombie_strategy",
+      "prompt": "What matters most against zombies?",
+      "answers": [
+        {
+          "id": "walls",
+          "label": "Strong walls and chokepoints",
+          "weights": {
+            "defence": 4
+          }
+        },
+        {
+          "id": "distance",
+          "label": "So much distance they rarely arrive",
+          "weights": {
+            "isolation": 4
+          }
+        },
+        {
+          "id": "visibility",
+          "label": "High ground and early warning",
+          "weights": {
+            "defence": 2,
+            "isolation": 1
+          }
+        },
+        {
+          "id": "mobility",
+          "label": "Multiple escape and fallback options",
+          "weights": {
+            "access": 3,
+            "resources": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "food_water",
+      "prompt": "Which resource plan feels safest?",
+      "answers": [
+        {
+          "id": "farms",
+          "label": "Reliable food production",
+          "weights": {
+            "sustainability": 4,
+            "community": 1
+          }
+        },
+        {
+          "id": "freshwater",
+          "label": "Fresh water security above all",
+          "weights": {
+            "resources": 4,
+            "sustainability": 1
+          }
+        },
+        {
+          "id": "stockpile",
+          "label": "Large stockpiles and salvage access",
+          "weights": {
+            "resources": 3,
+            "access": 2
+          }
+        },
+        {
+          "id": "mixed",
+          "label": "A mix of farming, fishing and storage",
+          "weights": {
+            "sustainability": 2,
+            "resources": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "base_type",
+      "prompt": "Which base type instinctively fits you?",
+      "answers": [
+        {
+          "id": "fortress",
+          "label": "Fortress",
+          "weights": {
+            "defence": 4,
+            "community": 1
+          },
+          "typeAffinity": {
+            "fortified_structure": 3,
+            "institutional_compound": 1
+          }
+        },
+        {
+          "id": "island",
+          "label": "Island",
+          "weights": {
+            "isolation": 4,
+            "resources": 1
+          },
+          "typeAffinity": {
+            "isolated_landmass": 3
+          }
+        },
+        {
+          "id": "remote_settlement",
+          "label": "Remote settlement",
+          "weights": {
+            "sustainability": 3,
+            "community": 3
+          },
+          "typeAffinity": {
+            "remote_settlement": 3
+          }
+        },
+        {
+          "id": "underground",
+          "label": "Underground",
+          "weights": {
+            "defence": 2,
+            "isolation": 2,
+            "complexity": 3
+          },
+          "typeAffinity": {
+            "subterranean": 3,
+            "industrial_site": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "technical_complexity",
+      "prompt": "How much technical complexity will you accept?",
+      "answers": [
+        {
+          "id": "low",
+          "label": "Low-tech and easy to maintain",
+          "weights": {
+            "sustainability": 2,
+            "complexity": -2,
+            "community": 1
+          }
+        },
+        {
+          "id": "medium",
+          "label": "Some systems if they add resilience",
+          "weights": {
+            "resources": 2,
+            "complexity": 1
+          }
+        },
+        {
+          "id": "high",
+          "label": "Complex infrastructure is worth it",
+          "weights": {
+            "complexity": 4,
+            "defence": 1,
+            "resources": 1
+          }
+        },
+        {
+          "id": "expert",
+          "label": "I want engineered protection",
+          "weights": {
+            "complexity": 5,
+            "defence": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "prompt": "You have one chance to leave. How far will you travel?",
+      "answers": [
+        {
+          "id": "country",
+          "label": "Stay in my country",
+          "weights": {
+            "access": 3,
+            "community": 1
+          }
+        },
+        {
+          "id": "continent",
+          "label": "Anywhere in my region",
+          "weights": {
+            "access": 1,
+            "resources": 1
+          }
+        },
+        {
+          "id": "world",
+          "label": "Anywhere in the world",
+          "weights": {
+            "isolation": 2,
+            "resources": 1
+          }
+        },
+        {
+          "id": "distance",
+          "label": "Distance doesn't matter if survival improves",
+          "weights": {
+            "isolation": 3,
+            "sustainability": 1,
+            "access": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "climate_tradeoff",
+      "prompt": "What climate trade-off can you tolerate?",
+      "answers": [
+        {
+          "id": "temperate",
+          "label": "Temperate and farmable",
+          "weights": {
+            "sustainability": 3,
+            "resources": 2
+          }
+        },
+        {
+          "id": "cold",
+          "label": "Cold if it lowers threat pressure",
+          "weights": {
+            "isolation": 2,
+            "defence": 1
+          }
+        },
+        {
+          "id": "hot",
+          "label": "Hot or dry if water is secured",
+          "weights": {
+            "resources": 3,
+            "isolation": 1
+          }
+        },
+        {
+          "id": "any",
+          "label": "Any climate with strong shelter",
+          "weights": {
+            "defence": 2,
+            "complexity": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "biggest_tradeoff",
+      "prompt": "Which advantage would you choose if you could only have one?",
+      "answers": [
+        {
+          "id": "strong_walls",
+          "label": "Strong walls",
+          "weights": {
+            "defence": 5
+          }
+        },
+        {
+          "id": "better_resources",
+          "label": "Better resources",
+          "weights": {
+            "resources": 4,
+            "sustainability": 1
+          }
+        },
+        {
+          "id": "greater_isolation",
+          "label": "Greater isolation",
+          "weights": {
+            "isolation": 5
+          }
+        },
+        {
+          "id": "easier_access",
+          "label": "Easier access",
+          "weights": {
+            "access": 4,
+            "community": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "long_term_goal",
+      "prompt": "What's your long-term goal?",
+      "answers": [
+        {
+          "id": "month",
+          "label": "Survive one month",
+          "weights": {
+            "defence": 3,
+            "resources": 2
+          }
+        },
+        {
+          "id": "year",
+          "label": "Survive one year",
+          "weights": {
+            "resources": 3,
+            "sustainability": 2
+          }
+        },
+        {
+          "id": "permanent",
+          "label": "Build a permanent community",
+          "weights": {
+            "sustainability": 4,
+            "community": 3
+          }
+        },
+        {
+          "id": "rebuild",
+          "label": "Rebuild civilisation",
+          "weights": {
+            "community": 4,
+            "sustainability": 3,
+            "complexity": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "final_priority",
+      "prompt": "Final priority: what should the match optimise for?",
+      "answers": [
+        {
+          "id": "defence",
+          "label": "Defence",
+          "weights": {
+            "defence": 5
+          }
+        },
+        {
+          "id": "isolation",
+          "label": "Isolation",
+          "weights": {
+            "isolation": 5
+          }
+        },
+        {
+          "id": "sustainability",
+          "label": "Sustainability",
+          "weights": {
+            "sustainability": 5,
+            "resources": 1
+          }
+        },
+        {
+          "id": "flexibility",
+          "label": "Flexibility",
+          "weights": {
+            "access": 2,
+            "resources": 2,
+            "community": 1
+          }
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "id": "fortress-commander",
+      "name": "Fortress Commander",
+      "strategyLabel": "Protection first",
+      "icon": "🛡",
+      "shortDescription": "You prioritise strong barriers, chokepoints and early control.",
+      "description": "Fortress Commanders want the first phase of collapse to be survivable through walls, high ground and defensible approaches. They accept that the strongest positions can need more supply discipline over time.",
+      "strength": "Defensible perimeters and immediate threat control",
+      "compromise": "May trade resource depth or easy access for stronger protection",
+      "dimensions": [
+        "defence"
+      ],
+      "dimensionWeights": {
+        "defence": 10,
+        "resources": 6,
+        "access": 4
+      }
+    },
+    {
+      "id": "island-isolationist",
+      "name": "Island Isolationist",
+      "strategyLabel": "Distance first",
+      "icon": "⛯",
+      "shortDescription": "You favour distance, separation and fewer approach routes.",
+      "description": "Island Isolationists reduce contact with infected areas and hostile traffic by choosing places that are hard to reach. The price is slower movement, limited salvage and heavier reliance on what is already on site.",
+      "strength": "Low exposure through remoteness and controlled approaches",
+      "compromise": "Harder resupply, evacuation and outside contact",
+      "dimensions": [
+        "isolation"
+      ],
+      "dimensionWeights": {
+        "isolation": 10,
+        "resources": 6,
+        "community": 4
+      }
+    },
+    {
+      "id": "community-builder",
+      "name": "Community Builder",
+      "strategyLabel": "People first",
+      "icon": "👥",
+      "shortDescription": "You focus on people, skills and renewable settlement life.",
+      "description": "Community Builders see survival as a long-term group project. They value food systems, shared labour and governance, even when that means accepting more visible or less bunker-like locations.",
+      "strength": "Long-term resilience through skills, food and cooperation",
+      "compromise": "Larger groups can increase visibility and coordination pressure",
+      "dimensions": [
+        "community",
+        "sustainability"
+      ],
+      "dimensionWeights": {
+        "community": 10,
+        "sustainability": 9,
+        "resources": 7
+      }
+    },
+    {
+      "id": "resource-planner",
+      "name": "Resource Planner",
+      "strategyLabel": "Supplies first",
+      "icon": "▣",
+      "shortDescription": "You prioritise dependable supplies, sustainability and long-term resilience.",
+      "description": "Resource Planners look for places where food, water, medical basics and renewable supplies can keep a group alive after stored goods run down. They often accept less extreme isolation if the resource base is stronger.",
+      "strength": "Long-term resource planning",
+      "compromise": "Less emphasis on extreme isolation or immediate mobility",
+      "dimensions": [
+        "resources",
+        "sustainability"
+      ],
+      "dimensionWeights": {
+        "resources": 10,
+        "sustainability": 9,
+        "complexity": 5
+      }
+    },
+    {
+      "id": "systems-survivor",
+      "name": "Systems Survivor",
+      "strategyLabel": "Infrastructure first",
+      "icon": "⚙",
+      "shortDescription": "You are willing to use complex infrastructure if it improves resilience.",
+      "description": "Systems Survivors accept engineered sites, technical maintenance and specialist knowledge when those systems provide protection, power, water or control. Their risk is that complexity becomes a burden without skilled people and spare parts.",
+      "strength": "Engineered resilience and infrastructure leverage",
+      "compromise": "Higher maintenance burden and dependency on expertise",
+      "dimensions": [
+        "complexity",
+        "defence",
+        "resources"
+      ],
+      "dimensionWeights": {
+        "complexity": 10,
+        "defence": 8,
+        "resources": 7
+      }
+    },
+    {
+      "id": "resilient-generalist",
+      "name": "Resilient Generalist",
+      "strategyLabel": "Balance first",
+      "icon": "⌖",
+      "shortDescription": "You balance defence, resources, isolation and people rather than maximising one axis.",
+      "description": "Resilient Generalists avoid all-in strategies. They prefer bases with fewer severe weaknesses and enough flexibility to adapt as conditions change.",
+      "strength": "Balanced survivability across multiple pressures",
+      "compromise": "May miss the strongest specialist advantage in any single category",
+      "dimensions": [
+        "defence",
+        "isolation",
+        "sustainability",
+        "resources",
+        "community"
+      ],
+      "dimensionWeights": {
+        "defence": 7,
+        "isolation": 7,
+        "sustainability": 7,
+        "resources": 7,
+        "community": 7
+      }
+    }
+  ],
+  "typeTraitsNote": "BASE_TYPE_TRAITS internal to js/quiz-engine.js; baseProfile output captured in fixtures",
+  "fixtures": [
+    {
+      "id": "fortress",
+      "answers": {
+        "group_size": {
+          "answerId": "solo",
+          "displayedAnswer": "Just me"
+        },
+        "first_priority": {
+          "answerId": "lockdown",
+          "displayedAnswer": "Secure a defensible perimeter"
+        },
+        "preferred_isolation": {
+          "answerId": "nearby",
+          "displayedAnswer": "Near enough to salvage runs"
+        },
+        "zombie_strategy": {
+          "answerId": "walls",
+          "displayedAnswer": "Strong walls and chokepoints"
+        },
+        "food_water": {
+          "answerId": "farms",
+          "displayedAnswer": "Reliable food production"
+        },
+        "base_type": {
+          "answerId": "fortress",
+          "displayedAnswer": "Fortress"
+        },
+        "technical_complexity": {
+          "answerId": "low",
+          "displayedAnswer": "Low-tech and easy to maintain"
+        },
+        "travel": {
+          "answerId": "country",
+          "displayedAnswer": "Stay in my country"
+        },
+        "climate_tradeoff": {
+          "answerId": "temperate",
+          "displayedAnswer": "Temperate and farmable"
+        },
+        "biggest_tradeoff": {
+          "answerId": "strong_walls",
+          "displayedAnswer": "Strong walls"
+        },
+        "long_term_goal": {
+          "answerId": "month",
+          "displayedAnswer": "Survive one month"
+        },
+        "final_priority": {
+          "answerId": "defence",
+          "displayedAnswer": "Defence"
+        }
+      },
+      "rawAccumulatedVector": {
+        "defence": 25,
+        "isolation": 2,
+        "sustainability": 9,
+        "resources": 5,
+        "community": 4,
+        "complexity": -2,
+        "access": 7
+      },
+      "normalizedVector": {
+        "defence": 10,
+        "isolation": 1.4814814814814814,
+        "sustainability": 4.0740740740740735,
+        "resources": 2.5925925925925926,
+        "community": 2.2222222222222223,
+        "complexity": 0,
+        "access": 3.333333333333333
+      },
+      "selectedProfile": {
+        "id": "fortress-commander",
+        "name": "Fortress Commander"
+      },
+      "profileTieBreak": "classifyProfile returns resilient-generalist when top two normalized axes differ by <1.15; otherwise maps top axis in fixed if/else order",
+      "topTenBaseMatches": [
+        {
+          "slug": "himeji-castle",
+          "name": "Himeji Castle",
+          "matchRaw": 93,
+          "baseProfile": {
+            "defence": 8.774999999999999,
+            "isolation": 3.95,
+            "sustainability": 4.7,
+            "resources": 5,
+            "community": 4.1000000000000005,
+            "complexity": 4,
+            "access": 4.4
+          }
+        },
+        {
+          "slug": "fort-denison",
+          "name": "Fort Denison",
+          "matchRaw": 93,
+          "baseProfile": {
+            "defence": 8.25,
+            "isolation": 4.25,
+            "sustainability": 2.5999999999999996,
+            "resources": 2.45,
+            "community": 2.8000000000000003,
+            "complexity": 4,
+            "access": 4.4
+          }
+        },
+        {
+          "slug": "fort-copacabana",
+          "name": "Fort Copacabana",
+          "matchRaw": 93,
+          "baseProfile": {
+            "defence": 7.65,
+            "isolation": 3.05,
+            "sustainability": 4,
+            "resources": 4.15,
+            "community": 4.4,
+            "complexity": 4.55,
+            "access": 3.2
+          }
+        },
+        {
+          "slug": "elmina-castle",
+          "name": "Elmina Castle",
+          "matchRaw": 93,
+          "baseProfile": {
+            "defence": 8.625,
+            "isolation": 3.3499999999999996,
+            "sustainability": 4.56,
+            "resources": 4.95,
+            "community": 4.6000000000000005,
+            "complexity": 5.1000000000000005,
+            "access": 3.2
+          }
+        },
+        {
+          "slug": "masada",
+          "name": "Masada",
+          "matchRaw": 92,
+          "baseProfile": {
+            "defence": 9,
+            "isolation": 5.75,
+            "sustainability": 4,
+            "resources": 4.15,
+            "community": 4.4,
+            "complexity": 4,
+            "access": 5
+          }
+        },
+        {
+          "slug": "krak-des-chevaliers",
+          "name": "Krak des Chevaliers",
+          "matchRaw": 92,
+          "baseProfile": {
+            "defence": 9,
+            "isolation": 5,
+            "sustainability": 4.7,
+            "resources": 4.4,
+            "community": 5.2,
+            "complexity": 4.55,
+            "access": 4.4
+          }
+        },
+        {
+          "slug": "suomenlinna-fortress",
+          "name": "Suomenlinna Fortress",
+          "matchRaw": 90,
+          "baseProfile": {
+            "defence": 8.25,
+            "isolation": 5.75,
+            "sustainability": 4,
+            "resources": 4.15,
+            "community": 4.95,
+            "complexity": 3.45,
+            "access": 5
+          }
+        },
+        {
+          "slug": "malbork-castle",
+          "name": "Malbork Castle",
+          "matchRaw": 90,
+          "baseProfile": {
+            "defence": 8.25,
+            "isolation": 5,
+            "sustainability": 4.7,
+            "resources": 5,
+            "community": 4.65,
+            "complexity": 4,
+            "access": 4.4
+          }
+        },
+        {
+          "slug": "mont-saint-michel",
+          "name": "Mont Saint-Michel",
+          "matchRaw": 89,
+          "baseProfile": {
+            "defence": 9.45,
+            "isolation": 7.8500000000000005,
+            "sustainability": 4.21,
+            "resources": 3.625,
+            "community": 3.9250000000000003,
+            "complexity": 5.1000000000000005,
+            "access": 7.3999999999999995
+          }
+        },
+        {
+          "slug": "mehrangarh-fort",
+          "name": "Mehrangarh Fort",
+          "matchRaw": 88,
+          "baseProfile": {
+            "defence": 9.3,
+            "isolation": 5.225,
+            "sustainability": 5.3999999999999995,
+            "resources": 5.85,
+            "community": 6.000000000000001,
+            "complexity": 4,
+            "access": 5.6
+          }
+        }
+      ],
+      "chosenResult": {
+        "slug": "himeji-castle",
+        "name": "Himeji Castle",
+        "match": 93
+      },
+      "alternativeMatches": [
+        {
+          "slug": "elmina-castle",
+          "name": "Elmina Castle",
+          "match": 93,
+          "reason": {
+            "factorId": "access",
+            "label": "Better access fit",
+            "explanation": "Improves access against one of your strongest priorities."
+          }
+        },
+        {
+          "slug": "fort-copacabana",
+          "name": "Fort Copacabana",
+          "match": 93,
+          "reason": {
+            "factorId": "access",
+            "label": "Better access fit",
+            "explanation": "Improves access against one of your strongest priorities."
+          }
+        },
+        {
+          "slug": "fort-denison",
+          "name": "Fort Denison",
+          "match": 93,
+          "reason": {
+            "label": "Closest overall alternative"
+          }
+        }
+      ]
+    },
+    {
+      "id": "island",
+      "answers": {
+        "group_size": {
+          "answerId": "solo",
+          "displayedAnswer": "Just me"
+        },
+        "first_priority": {
+          "answerId": "vanish",
+          "displayedAnswer": "Get far away from population centres"
+        },
+        "preferred_isolation": {
+          "answerId": "nearby",
+          "displayedAnswer": "Near enough to salvage runs"
+        },
+        "zombie_strategy": {
+          "answerId": "distance",
+          "displayedAnswer": "So much distance they rarely arrive"
+        },
+        "food_water": {
+          "answerId": "farms",
+          "displayedAnswer": "Reliable food production"
+        },
+        "base_type": {
+          "answerId": "island",
+          "displayedAnswer": "Island"
+        },
+        "technical_complexity": {
+          "answerId": "low",
+          "displayedAnswer": "Low-tech and easy to maintain"
+        },
+        "travel": {
+          "answerId": "world",
+          "displayedAnswer": "Anywhere in the world"
+        },
+        "climate_tradeoff": {
+          "answerId": "cold",
+          "displayedAnswer": "Cold if it lowers threat pressure"
+        },
+        "biggest_tradeoff": {
+          "answerId": "greater_isolation",
+          "displayedAnswer": "Greater isolation"
+        },
+        "long_term_goal": {
+          "answerId": "month",
+          "displayedAnswer": "Survive one month"
+        },
+        "final_priority": {
+          "answerId": "isolation",
+          "displayedAnswer": "Isolation"
+        }
+      },
+      "rawAccumulatedVector": {
+        "defence": 4,
+        "isolation": 28,
+        "sustainability": 6,
+        "resources": 5,
+        "community": 1,
+        "complexity": -2,
+        "access": 3
+      },
+      "normalizedVector": {
+        "defence": 2,
+        "isolation": 10,
+        "sustainability": 2.6666666666666665,
+        "resources": 2.3333333333333335,
+        "community": 1,
+        "complexity": 0,
+        "access": 1.6666666666666665
+      },
+      "selectedProfile": {
+        "id": "island-isolationist",
+        "name": "Island Isolationist"
+      },
+      "profileTieBreak": "classifyProfile returns resilient-generalist when top two normalized axes differ by <1.15; otherwise maps top axis in fixed if/else order",
+      "topTenBaseMatches": [
+        {
+          "slug": "st-kilda",
+          "name": "St Kilda",
+          "matchRaw": 84,
+          "baseProfile": {
+            "defence": 6.375,
+            "isolation": 9.375,
+            "sustainability": 4.6,
+            "resources": 4.9,
+            "community": 5.8500000000000005,
+            "complexity": 3.9000000000000004,
+            "access": 6.199999999999999
+          }
+        },
+        {
+          "slug": "uluru-surroundings",
+          "name": "Uluru Surroundings",
+          "matchRaw": 83,
+          "baseProfile": {
+            "defence": 5.75,
+            "isolation": 8.5,
+            "sustainability": 2.5999999999999996,
+            "resources": 3.5,
+            "community": 3.5,
+            "complexity": 2.45,
+            "access": 6
+          }
+        },
+        {
+          "slug": "komodo-island",
+          "name": "Komodo Island",
+          "matchRaw": 83,
+          "baseProfile": {
+            "defence": 6,
+            "isolation": 9,
+            "sustainability": 5.3,
+            "resources": 5.15,
+            "community": 5.550000000000001,
+            "complexity": 3.9000000000000004,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "galapagos-islands",
+          "name": "Galápagos Islands",
+          "matchRaw": 83,
+          "baseProfile": {
+            "defence": 6.75,
+            "isolation": 9.75,
+            "sustainability": 5.3,
+            "resources": 5.15,
+            "community": 6.1000000000000005,
+            "complexity": 3.9000000000000004,
+            "access": 6.199999999999999
+          }
+        },
+        {
+          "slug": "waw-an-namus-cave-system",
+          "name": "Waw an Namus Cave System",
+          "matchRaw": 82,
+          "baseProfile": {
+            "defence": 7.324999999999999,
+            "isolation": 8.75,
+            "sustainability": 2.79,
+            "resources": 3.0749999999999997,
+            "community": 3.125,
+            "complexity": 4.6,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "socotra-island",
+          "name": "Socotra Island",
+          "matchRaw": 82,
+          "baseProfile": {
+            "defence": 6.449999999999999,
+            "isolation": 9.45,
+            "sustainability": 5.16,
+            "resources": 5.1,
+            "community": 5.5,
+            "complexity": 5,
+            "access": 6.199999999999999
+          }
+        },
+        {
+          "slug": "fastnet-lighthouse",
+          "name": "Fastnet Lighthouse",
+          "matchRaw": 82,
+          "baseProfile": {
+            "defence": 5.625,
+            "isolation": 8,
+            "sustainability": 2.25,
+            "resources": 2.175,
+            "community": 3.0250000000000004,
+            "complexity": 4,
+            "access": 6.6000000000000005
+          }
+        },
+        {
+          "slug": "kizhi-pogost",
+          "name": "Kizhi Pogost",
+          "matchRaw": 81,
+          "baseProfile": {
+            "defence": 3.75,
+            "isolation": 6.5,
+            "sustainability": 2.5999999999999996,
+            "resources": 2.9,
+            "community": 3.1500000000000004,
+            "complexity": 2.9000000000000004,
+            "access": 5.4
+          }
+        },
+        {
+          "slug": "camp-century-ice-tunnels",
+          "name": "Camp Century Ice Tunnels",
+          "matchRaw": 81,
+          "baseProfile": {
+            "defence": 8.600000000000001,
+            "isolation": 8.899999999999999,
+            "sustainability": 2.3,
+            "resources": 2.9,
+            "community": 2.95,
+            "complexity": 5.15,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "simien-mountains",
+          "name": "Simien Mountains",
+          "matchRaw": 80,
+          "baseProfile": {
+            "defence": 8.75,
+            "isolation": 8.875,
+            "sustainability": 3.6499999999999995,
+            "resources": 3.875,
+            "community": 3.325,
+            "complexity": 3.5500000000000003,
+            "access": 6
+          }
+        }
+      ],
+      "chosenResult": {
+        "slug": "st-kilda",
+        "name": "St Kilda",
+        "match": 84
+      },
+      "alternativeMatches": [
+        {
+          "slug": "galapagos-islands",
+          "name": "Galápagos Islands",
+          "match": 83,
+          "reason": {
+            "label": "Closest overall alternative"
+          }
+        },
+        {
+          "slug": "komodo-island",
+          "name": "Komodo Island",
+          "match": 83,
+          "reason": {
+            "label": "Closest overall alternative"
+          }
+        },
+        {
+          "slug": "uluru-surroundings",
+          "name": "Uluru Surroundings",
+          "match": 83,
+          "reason": {
+            "label": "Closest overall alternative"
+          }
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "answers": {
+        "group_size": {
+          "answerId": "small",
+          "displayedAnswer": "2–5 people"
+        },
+        "first_priority": {
+          "answerId": "supplies",
+          "displayedAnswer": "Find food, water and medical supplies"
+        },
+        "preferred_isolation": {
+          "answerId": "nearby",
+          "displayedAnswer": "Near enough to salvage runs"
+        },
+        "zombie_strategy": {
+          "answerId": "mobility",
+          "displayedAnswer": "Multiple escape and fallback options"
+        },
+        "food_water": {
+          "answerId": "freshwater",
+          "displayedAnswer": "Fresh water security above all"
+        },
+        "base_type": {
+          "answerId": "island",
+          "displayedAnswer": "Island"
+        },
+        "technical_complexity": {
+          "answerId": "medium",
+          "displayedAnswer": "Some systems if they add resilience"
+        },
+        "travel": {
+          "answerId": "continent",
+          "displayedAnswer": "Anywhere in my region"
+        },
+        "climate_tradeoff": {
+          "answerId": "temperate",
+          "displayedAnswer": "Temperate and farmable"
+        },
+        "biggest_tradeoff": {
+          "answerId": "better_resources",
+          "displayedAnswer": "Better resources"
+        },
+        "long_term_goal": {
+          "answerId": "month",
+          "displayedAnswer": "Survive one month"
+        },
+        "final_priority": {
+          "answerId": "sustainability",
+          "displayedAnswer": "Sustainability"
+        }
+      },
+      "rawAccumulatedVector": {
+        "defence": 4,
+        "isolation": 5,
+        "sustainability": 11,
+        "resources": 24,
+        "community": 0,
+        "complexity": 1,
+        "access": 7
+      },
+      "normalizedVector": {
+        "defence": 1.6666666666666665,
+        "isolation": 2.0833333333333335,
+        "sustainability": 4.583333333333333,
+        "resources": 10,
+        "community": 0,
+        "complexity": 0.41666666666666663,
+        "access": 2.916666666666667
+      },
+      "selectedProfile": {
+        "id": "resource-planner",
+        "name": "Resource Planner"
+      },
+      "profileTieBreak": "classifyProfile returns resilient-generalist when top two normalized axes differ by <1.15; otherwise maps top axis in fixed if/else order",
+      "topTenBaseMatches": [
+        {
+          "slug": "tasmania",
+          "name": "Tasmania",
+          "matchRaw": 76,
+          "baseProfile": {
+            "defence": 6.6,
+            "isolation": 7.949999999999999,
+            "sustainability": 7.819999999999999,
+            "resources": 8.45,
+            "community": 8.1,
+            "complexity": 5,
+            "access": 5
+          }
+        },
+        {
+          "slug": "okinawa",
+          "name": "Okinawa",
+          "matchRaw": 76,
+          "baseProfile": {
+            "defence": 6,
+            "isolation": 7.050000000000001,
+            "sustainability": 6.35,
+            "resources": 6.725,
+            "community": 6.4750000000000005,
+            "complexity": 5,
+            "access": 5
+          }
+        },
+        {
+          "slug": "table-mountain-plateau",
+          "name": "Table Mountain Plateau",
+          "matchRaw": 75,
+          "baseProfile": {
+            "defence": 8,
+            "isolation": 4.75,
+            "sustainability": 5.3999999999999995,
+            "resources": 6.3,
+            "community": 5.05,
+            "complexity": 4.1,
+            "access": 3.6
+          }
+        },
+        {
+          "slug": "qeshm-island",
+          "name": "Qeshm Island",
+          "matchRaw": 75,
+          "baseProfile": {
+            "defence": 5.25,
+            "isolation": 8.25,
+            "sustainability": 5.999999999999999,
+            "resources": 6.6,
+            "community": 6.3500000000000005,
+            "complexity": 5,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "great-mosque-of-djenne",
+          "name": "Great Mosque of Djenné",
+          "matchRaw": 75,
+          "baseProfile": {
+            "defence": 5.25,
+            "isolation": 3.125,
+            "sustainability": 4,
+            "resources": 4,
+            "community": 3.6500000000000004,
+            "complexity": 3.45,
+            "access": 3.6000000000000005
+          }
+        },
+        {
+          "slug": "chiloe-island",
+          "name": "Chiloé Island",
+          "matchRaw": 75,
+          "baseProfile": {
+            "defence": 6.75,
+            "isolation": 7.5,
+            "sustainability": 7.3999999999999995,
+            "resources": 7.699999999999999,
+            "community": 7.4,
+            "complexity": 5.550000000000001,
+            "access": 5
+          }
+        },
+        {
+          "slug": "palawan",
+          "name": "Palawan",
+          "matchRaw": 74,
+          "baseProfile": {
+            "defence": 6.75,
+            "isolation": 8.25,
+            "sustainability": 6.699999999999999,
+            "resources": 7.449999999999999,
+            "community": 7.15,
+            "complexity": 5,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "kodiak-island",
+          "name": "Kodiak Island",
+          "matchRaw": 74,
+          "baseProfile": {
+            "defence": 6.675000000000001,
+            "isolation": 8.774999999999999,
+            "sustainability": 6.419999999999999,
+            "resources": 7.35,
+            "community": 7.050000000000001,
+            "complexity": 5,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "jeju-island",
+          "name": "Jeju Island",
+          "matchRaw": 74,
+          "baseProfile": {
+            "defence": 6.300000000000001,
+            "isolation": 8.1,
+            "sustainability": 6.84,
+            "resources": 7.5,
+            "community": 6.65,
+            "complexity": 5.550000000000001,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "heligoland",
+          "name": "Heligoland",
+          "matchRaw": 74,
+          "baseProfile": {
+            "defence": 6.75,
+            "isolation": 9,
+            "sustainability": 5.999999999999999,
+            "resources": 6.6,
+            "community": 5.800000000000001,
+            "complexity": 3.9000000000000004,
+            "access": 5.6
+          }
+        }
+      ],
+      "chosenResult": {
+        "slug": "tasmania",
+        "name": "Tasmania",
+        "match": 76
+      },
+      "alternativeMatches": [
+        {
+          "slug": "okinawa",
+          "name": "Okinawa",
+          "match": 76,
+          "reason": {
+            "label": "Closest overall alternative"
+          }
+        },
+        {
+          "slug": "chiloe-island",
+          "name": "Chiloé Island",
+          "match": 75,
+          "reason": {
+            "label": "Closest overall alternative"
+          }
+        },
+        {
+          "slug": "qeshm-island",
+          "name": "Qeshm Island",
+          "match": 75,
+          "reason": {
+            "label": "Closest overall alternative"
+          }
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "answers": {
+        "group_size": {
+          "answerId": "solo",
+          "displayedAnswer": "Just me"
+        },
+        "first_priority": {
+          "answerId": "lockdown",
+          "displayedAnswer": "Secure a defensible perimeter"
+        },
+        "preferred_isolation": {
+          "answerId": "nearby",
+          "displayedAnswer": "Near enough to salvage runs"
+        },
+        "zombie_strategy": {
+          "answerId": "walls",
+          "displayedAnswer": "Strong walls and chokepoints"
+        },
+        "food_water": {
+          "answerId": "farms",
+          "displayedAnswer": "Reliable food production"
+        },
+        "base_type": {
+          "answerId": "fortress",
+          "displayedAnswer": "Fortress"
+        },
+        "technical_complexity": {
+          "answerId": "low",
+          "displayedAnswer": "Low-tech and easy to maintain"
+        },
+        "travel": {
+          "answerId": "country",
+          "displayedAnswer": "Stay in my country"
+        },
+        "climate_tradeoff": {
+          "answerId": "temperate",
+          "displayedAnswer": "Temperate and farmable"
+        },
+        "biggest_tradeoff": {
+          "answerId": "easier_access",
+          "displayedAnswer": "Easier access"
+        },
+        "long_term_goal": {
+          "answerId": "permanent",
+          "displayedAnswer": "Build a permanent community"
+        },
+        "final_priority": {
+          "answerId": "flexibility",
+          "displayedAnswer": "Flexibility"
+        }
+      },
+      "rawAccumulatedVector": {
+        "defence": 12,
+        "isolation": 2,
+        "sustainability": 13,
+        "resources": 5,
+        "community": 9,
+        "complexity": -2,
+        "access": 13
+      },
+      "normalizedVector": {
+        "defence": 9.333333333333334,
+        "isolation": 2.6666666666666665,
+        "sustainability": 10,
+        "resources": 4.666666666666667,
+        "community": 7.333333333333333,
+        "complexity": 0,
+        "access": 10
+      },
+      "selectedProfile": {
+        "id": "resilient-generalist",
+        "name": "Resilient Generalist"
+      },
+      "profileTieBreak": "classifyProfile returns resilient-generalist when top two normalized axes differ by <1.15; otherwise maps top axis in fixed if/else order",
+      "topTenBaseMatches": [
+        {
+          "slug": "mehrangarh-fort",
+          "name": "Mehrangarh Fort",
+          "matchRaw": 85,
+          "baseProfile": {
+            "defence": 9.3,
+            "isolation": 5.225,
+            "sustainability": 5.3999999999999995,
+            "resources": 5.85,
+            "community": 6.000000000000001,
+            "complexity": 4,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "carcassonne",
+          "name": "Carcassonne",
+          "matchRaw": 84,
+          "baseProfile": {
+            "defence": 9,
+            "isolation": 5.15,
+            "sustainability": 4.9799999999999995,
+            "resources": 5.1,
+            "community": 5.8500000000000005,
+            "complexity": 4.55,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "fasil-ghebbi",
+          "name": "Fasil Ghebbi",
+          "matchRaw": 82,
+          "baseProfile": {
+            "defence": 8.55,
+            "isolation": 6.275,
+            "sustainability": 5.119999999999999,
+            "resources": 5.75,
+            "community": 5.9,
+            "complexity": 4.55,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "san-felipe-fortress",
+          "name": "San Felipe Fortress",
+          "matchRaw": 81,
+          "baseProfile": {
+            "defence": 8.25,
+            "isolation": 4.85,
+            "sustainability": 5.119999999999999,
+            "resources": 5.75,
+            "community": 5.3500000000000005,
+            "complexity": 4,
+            "access": 5
+          }
+        },
+        {
+          "slug": "mont-saint-michel",
+          "name": "Mont Saint-Michel",
+          "matchRaw": 81,
+          "baseProfile": {
+            "defence": 9.45,
+            "isolation": 7.8500000000000005,
+            "sustainability": 4.21,
+            "resources": 3.625,
+            "community": 3.9250000000000003,
+            "complexity": 5.1000000000000005,
+            "access": 7.3999999999999995
+          }
+        },
+        {
+          "slug": "krak-des-chevaliers",
+          "name": "Krak des Chevaliers",
+          "matchRaw": 81,
+          "baseProfile": {
+            "defence": 9,
+            "isolation": 5,
+            "sustainability": 4.7,
+            "resources": 4.4,
+            "community": 5.2,
+            "complexity": 4.55,
+            "access": 4.4
+          }
+        },
+        {
+          "slug": "isle-of-eigg-village",
+          "name": "Isle of Eigg Village",
+          "matchRaw": 81,
+          "baseProfile": {
+            "defence": 7.7749999999999995,
+            "isolation": 9.274999999999999,
+            "sustainability": 8.7,
+            "resources": 8.7,
+            "community": 7.15,
+            "complexity": 5.75,
+            "access": 7.2
+          }
+        },
+        {
+          "slug": "hue-citadel",
+          "name": "Hue Citadel",
+          "matchRaw": 81,
+          "baseProfile": {
+            "defence": 8.25,
+            "isolation": 5,
+            "sustainability": 5.3999999999999995,
+            "resources": 5.85,
+            "community": 6.000000000000001,
+            "complexity": 4,
+            "access": 4.4
+          }
+        },
+        {
+          "slug": "caerphilly-castle",
+          "name": "Caerphilly Castle",
+          "matchRaw": 81,
+          "baseProfile": {
+            "defence": 8.625,
+            "isolation": 5.375,
+            "sustainability": 5.05,
+            "resources": 5.725,
+            "community": 5.325,
+            "complexity": 4.55,
+            "access": 5
+          }
+        },
+        {
+          "slug": "himeji-castle",
+          "name": "Himeji Castle",
+          "matchRaw": 80,
+          "baseProfile": {
+            "defence": 8.774999999999999,
+            "isolation": 3.95,
+            "sustainability": 4.7,
+            "resources": 5,
+            "community": 4.1000000000000005,
+            "complexity": 4,
+            "access": 4.4
+          }
+        }
+      ],
+      "chosenResult": {
+        "slug": "mehrangarh-fort",
+        "name": "Mehrangarh Fort",
+        "match": 85
+      },
+      "alternativeMatches": [
+        {
+          "slug": "carcassonne",
+          "name": "Carcassonne",
+          "match": 84,
+          "reason": {
+            "label": "Closest overall alternative"
+          }
+        },
+        {
+          "slug": "fasil-ghebbi",
+          "name": "Fasil Ghebbi",
+          "match": 82,
+          "reason": {
+            "label": "Closest overall alternative"
+          }
+        },
+        {
+          "slug": "isle-of-eigg-village",
+          "name": "Isle of Eigg Village",
+          "match": 81,
+          "reason": {
+            "factorId": "sustainability",
+            "label": "Better sustainability fit",
+            "explanation": "Improves sustainability against one of your strongest priorities."
+          }
+        }
+      ]
+    },
+    {
+      "id": "complex",
+      "answers": {
+        "group_size": {
+          "answerId": "solo",
+          "displayedAnswer": "Just me"
+        },
+        "first_priority": {
+          "answerId": "lockdown",
+          "displayedAnswer": "Secure a defensible perimeter"
+        },
+        "preferred_isolation": {
+          "answerId": "hidden",
+          "displayedAnswer": "Hidden even if travel is difficult"
+        },
+        "zombie_strategy": {
+          "answerId": "walls",
+          "displayedAnswer": "Strong walls and chokepoints"
+        },
+        "food_water": {
+          "answerId": "farms",
+          "displayedAnswer": "Reliable food production"
+        },
+        "base_type": {
+          "answerId": "underground",
+          "displayedAnswer": "Underground"
+        },
+        "technical_complexity": {
+          "answerId": "low",
+          "displayedAnswer": "Low-tech and easy to maintain"
+        },
+        "travel": {
+          "answerId": "country",
+          "displayedAnswer": "Stay in my country"
+        },
+        "climate_tradeoff": {
+          "answerId": "any",
+          "displayedAnswer": "Any climate with strong shelter"
+        },
+        "biggest_tradeoff": {
+          "answerId": "strong_walls",
+          "displayedAnswer": "Strong walls"
+        },
+        "long_term_goal": {
+          "answerId": "rebuild",
+          "displayedAnswer": "Rebuild civilisation"
+        },
+        "final_priority": {
+          "answerId": "defence",
+          "displayedAnswer": "Defence"
+        }
+      },
+      "rawAccumulatedVector": {
+        "defence": 24,
+        "isolation": 8,
+        "sustainability": 9,
+        "resources": 0,
+        "community": 7,
+        "complexity": 4,
+        "access": 4
+      },
+      "normalizedVector": {
+        "defence": 10,
+        "isolation": 3.333333333333333,
+        "sustainability": 3.75,
+        "resources": 0,
+        "community": 2.916666666666667,
+        "complexity": 1.6666666666666665,
+        "access": 1.6666666666666665
+      },
+      "selectedProfile": {
+        "id": "fortress-commander",
+        "name": "Fortress Commander"
+      },
+      "profileTieBreak": "classifyProfile returns resilient-generalist when top two normalized axes differ by <1.15; otherwise maps top axis in fixed if/else order",
+      "topTenBaseMatches": [
+        {
+          "slug": "maginot-line-bunkers",
+          "name": "Maginot Line Bunkers",
+          "matchRaw": 91,
+          "baseProfile": {
+            "defence": 8.75,
+            "isolation": 6.5,
+            "sustainability": 2.9999999999999996,
+            "resources": 3.15,
+            "community": 3.2,
+            "complexity": 5.15,
+            "access": 3.8
+          }
+        },
+        {
+          "slug": "ligatne-bunker",
+          "name": "Ligatne Bunker",
+          "matchRaw": 91,
+          "baseProfile": {
+            "defence": 8,
+            "isolation": 5.75,
+            "sustainability": 2.3,
+            "resources": 2.9,
+            "community": 2.95,
+            "complexity": 4.6,
+            "access": 3.2
+          }
+        },
+        {
+          "slug": "north-head-gun-emplacements",
+          "name": "North Head Gun Emplacements",
+          "matchRaw": 90,
+          "baseProfile": {
+            "defence": 7.550000000000001,
+            "isolation": 4.325,
+            "sustainability": 2.79,
+            "resources": 3.6750000000000003,
+            "community": 3.125,
+            "complexity": 5.7,
+            "access": 3.2
+          }
+        },
+        {
+          "slug": "derinkuyu-underground-city",
+          "name": "Derinkuyu Underground City",
+          "matchRaw": 90,
+          "baseProfile": {
+            "defence": 8.600000000000001,
+            "isolation": 6.5,
+            "sustainability": 3.63,
+            "resources": 3.975,
+            "community": 4.525,
+            "complexity": 5.7,
+            "access": 3.8
+          }
+        },
+        {
+          "slug": "burlington-bunker",
+          "name": "Burlington Bunker",
+          "matchRaw": 90,
+          "baseProfile": {
+            "defence": 8.899999999999999,
+            "isolation": 6.5,
+            "sustainability": 3.9099999999999997,
+            "resources": 4.675,
+            "community": 4.075,
+            "complexity": 5.15,
+            "access": 4.3999999999999995
+          }
+        },
+        {
+          "slug": "kargil-war-bunkers",
+          "name": "Kargil War Bunkers",
+          "matchRaw": 89,
+          "baseProfile": {
+            "defence": 8.75,
+            "isolation": 8,
+            "sustainability": 3.6999999999999997,
+            "resources": 4,
+            "community": 4,
+            "complexity": 4.6,
+            "access": 5
+          }
+        },
+        {
+          "slug": "cu-chi-tunnels",
+          "name": "Cu Chi Tunnels",
+          "matchRaw": 89,
+          "baseProfile": {
+            "defence": 8.375,
+            "isolation": 6.875,
+            "sustainability": 3.3499999999999996,
+            "resources": 3.875,
+            "community": 3.875,
+            "complexity": 4.6,
+            "access": 5
+          }
+        },
+        {
+          "slug": "olavsvern-naval-base",
+          "name": "Olavsvern Naval Base",
+          "matchRaw": 88,
+          "baseProfile": {
+            "defence": 8.375,
+            "isolation": 7.25,
+            "sustainability": 4.05,
+            "resources": 3.525,
+            "community": 4.675,
+            "complexity": 5.15,
+            "access": 4.3999999999999995
+          }
+        },
+        {
+          "slug": "naours-underground-city",
+          "name": "Naours Underground City",
+          "matchRaw": 88,
+          "baseProfile": {
+            "defence": 7.25,
+            "isolation": 5.75,
+            "sustainability": 3.6999999999999997,
+            "resources": 4,
+            "community": 4,
+            "complexity": 5.15,
+            "access": 3.2
+          }
+        },
+        {
+          "slug": "himeji-castle",
+          "name": "Himeji Castle",
+          "matchRaw": 88,
+          "baseProfile": {
+            "defence": 8.774999999999999,
+            "isolation": 3.95,
+            "sustainability": 4.7,
+            "resources": 5,
+            "community": 4.1000000000000005,
+            "complexity": 4,
+            "access": 4.4
+          }
+        }
+      ],
+      "chosenResult": {
+        "slug": "maginot-line-bunkers",
+        "name": "Maginot Line Bunkers",
+        "match": 91
+      },
+      "alternativeMatches": [
+        {
+          "slug": "ligatne-bunker",
+          "name": "Ligatne Bunker",
+          "match": 91,
+          "reason": {
+            "factorId": "isolation",
+            "label": "Better isolation match",
+            "explanation": "Improves isolation against one of your strongest priorities."
+          }
+        },
+        {
+          "slug": "burlington-bunker",
+          "name": "Burlington Bunker",
+          "match": 90,
+          "reason": {
+            "factorId": "sustainability",
+            "label": "Better sustainability fit",
+            "explanation": "Improves sustainability against one of your strongest priorities."
+          }
+        },
+        {
+          "slug": "derinkuyu-underground-city",
+          "name": "Derinkuyu Underground City",
+          "match": 90,
+          "reason": {
+            "factorId": "sustainability",
+            "label": "Better sustainability fit",
+            "explanation": "Improves sustainability against one of your strongest priorities."
+          }
+        }
+      ]
+    },
+    {
+      "id": "balanced",
+      "answers": {
+        "group_size": {
+          "answerId": "solo",
+          "displayedAnswer": "Just me"
+        },
+        "first_priority": {
+          "answerId": "vanish",
+          "displayedAnswer": "Get far away from population centres"
+        },
+        "preferred_isolation": {
+          "answerId": "extreme",
+          "displayedAnswer": "Extremely remote with few approach routes"
+        },
+        "zombie_strategy": {
+          "answerId": "mobility",
+          "displayedAnswer": "Multiple escape and fallback options"
+        },
+        "food_water": {
+          "answerId": "farms",
+          "displayedAnswer": "Reliable food production"
+        },
+        "base_type": {
+          "answerId": "island",
+          "displayedAnswer": "Island"
+        },
+        "technical_complexity": {
+          "answerId": "high",
+          "displayedAnswer": "Complex infrastructure is worth it"
+        },
+        "travel": {
+          "answerId": "distance",
+          "displayedAnswer": "Distance doesn't matter if survival improves"
+        },
+        "climate_tradeoff": {
+          "answerId": "temperate",
+          "displayedAnswer": "Temperate and farmable"
+        },
+        "biggest_tradeoff": {
+          "answerId": "better_resources",
+          "displayedAnswer": "Better resources"
+        },
+        "long_term_goal": {
+          "answerId": "permanent",
+          "displayedAnswer": "Build a permanent community"
+        },
+        "final_priority": {
+          "answerId": "flexibility",
+          "displayedAnswer": "Flexibility"
+        }
+      },
+      "rawAccumulatedVector": {
+        "defence": 2,
+        "isolation": 18,
+        "sustainability": 13,
+        "resources": 11,
+        "community": 4,
+        "complexity": 4,
+        "access": 2
+      },
+      "normalizedVector": {
+        "defence": 1.1111111111111112,
+        "isolation": 10,
+        "sustainability": 7.222222222222222,
+        "resources": 6.111111111111112,
+        "community": 2.2222222222222223,
+        "complexity": 2.2222222222222223,
+        "access": 1.1111111111111112
+      },
+      "selectedProfile": {
+        "id": "island-isolationist",
+        "name": "Island Isolationist"
+      },
+      "profileTieBreak": "classifyProfile returns resilient-generalist when top two normalized axes differ by <1.15; otherwise maps top axis in fixed if/else order",
+      "topTenBaseMatches": [
+        {
+          "slug": "seychelles",
+          "name": "Seychelles",
+          "matchRaw": 90,
+          "baseProfile": {
+            "defence": 6.675000000000001,
+            "isolation": 9.149999999999999,
+            "sustainability": 6.909999999999999,
+            "resources": 6.324999999999999,
+            "community": 7.2250000000000005,
+            "complexity": 5,
+            "access": 6.199999999999999
+          }
+        },
+        {
+          "slug": "heligoland",
+          "name": "Heligoland",
+          "matchRaw": 90,
+          "baseProfile": {
+            "defence": 6.75,
+            "isolation": 9,
+            "sustainability": 5.999999999999999,
+            "resources": 6.6,
+            "community": 5.800000000000001,
+            "complexity": 3.9000000000000004,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "faroe-islands",
+          "name": "Faroe Islands",
+          "matchRaw": 90,
+          "baseProfile": {
+            "defence": 6,
+            "isolation": 9,
+            "sustainability": 5.999999999999999,
+            "resources": 6,
+            "community": 6.3500000000000005,
+            "complexity": 4.45,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "komodo-island",
+          "name": "Komodo Island",
+          "matchRaw": 89,
+          "baseProfile": {
+            "defence": 6,
+            "isolation": 9,
+            "sustainability": 5.3,
+            "resources": 5.15,
+            "community": 5.550000000000001,
+            "complexity": 3.9000000000000004,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "galapagos-islands",
+          "name": "Galápagos Islands",
+          "matchRaw": 89,
+          "baseProfile": {
+            "defence": 6.75,
+            "isolation": 9.75,
+            "sustainability": 5.3,
+            "resources": 5.15,
+            "community": 6.1000000000000005,
+            "complexity": 3.9000000000000004,
+            "access": 6.199999999999999
+          }
+        },
+        {
+          "slug": "socotra-island",
+          "name": "Socotra Island",
+          "matchRaw": 88,
+          "baseProfile": {
+            "defence": 6.449999999999999,
+            "isolation": 9.45,
+            "sustainability": 5.16,
+            "resources": 5.1,
+            "community": 5.5,
+            "complexity": 5,
+            "access": 6.199999999999999
+          }
+        },
+        {
+          "slug": "qeshm-island",
+          "name": "Qeshm Island",
+          "matchRaw": 88,
+          "baseProfile": {
+            "defence": 5.25,
+            "isolation": 8.25,
+            "sustainability": 5.999999999999999,
+            "resources": 6.6,
+            "community": 6.3500000000000005,
+            "complexity": 5,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "ile-dyeu",
+          "name": "Île d’Yeu",
+          "matchRaw": 88,
+          "baseProfile": {
+            "defence": 6,
+            "isolation": 8.25,
+            "sustainability": 5.999999999999999,
+            "resources": 6,
+            "community": 6.3500000000000005,
+            "complexity": 5,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "andaman-islands",
+          "name": "Andaman Islands",
+          "matchRaw": 88,
+          "baseProfile": {
+            "defence": 7.125,
+            "isolation": 9,
+            "sustainability": 7.3999999999999995,
+            "resources": 7.1,
+            "community": 7.4,
+            "complexity": 5.550000000000001,
+            "access": 5.6
+          }
+        },
+        {
+          "slug": "zanzibar-island",
+          "name": "Zanzibar Island",
+          "matchRaw": 87,
+          "baseProfile": {
+            "defence": 6.6,
+            "isolation": 8.25,
+            "sustainability": 6.279999999999999,
+            "resources": 6.700000000000001,
+            "community": 7,
+            "complexity": 5,
+            "access": 5.6
+          }
+        }
+      ],
+      "chosenResult": {
+        "slug": "heligoland",
+        "name": "Heligoland",
+        "match": 90
+      },
+      "alternativeMatches": [
+        {
+          "slug": "seychelles",
+          "name": "Seychelles",
+          "match": 90,
+          "reason": {
+            "factorId": "sustainability",
+            "label": "Better sustainability fit",
+            "explanation": "Improves sustainability against one of your strongest priorities."
+          }
+        },
+        {
+          "slug": "faroe-islands",
+          "name": "Faroe Islands",
+          "match": 90,
+          "reason": {
+            "label": "Closest overall alternative"
+          }
+        },
+        {
+          "slug": "galapagos-islands",
+          "name": "Galápagos Islands",
+          "match": 89,
+          "reason": {
+            "factorId": "isolation",
+            "label": "Better isolation match",
+            "explanation": "Improves isolation against one of your strongest priorities."
+          }
+        }
+      ]
+    }
+  ]
+}

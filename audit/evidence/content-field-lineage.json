@@ -1,0 +1,41 @@
+{
+  "status": "INSPECTED",
+  "lineage": [
+    {
+      "screen": "homepage statistics",
+      "source": "data/base-stats.json and bases-index aggregates",
+      "formatting": "js/main.js renderStats",
+      "migration": "derive in V2"
+    },
+    {
+      "screen": "type cards/homepage cards/map markers",
+      "source": "data/bases-index.json identity, coordinates, image, scores, description.summary",
+      "formatting": "js/main.js, js/base-card.js, Leaflet marker templates",
+      "migration": "structured fields plus media records"
+    },
+    {
+      "screen": "base detail hero/scores/narratives",
+      "source": "bases-index + rankings + interpretations + discovery",
+      "formatting": "js/base.js",
+      "migration": "base table plus generated ranking/discovery tables"
+    },
+    {
+      "screen": "compare results",
+      "source": "bases-index scores/comparisonScores",
+      "formatting": "js/compare.js SCORE_ROWS/buildComparisonResult",
+      "migration": "score dimensions with direction metadata"
+    },
+    {
+      "screen": "quiz result",
+      "source": "quiz JS constants + bases-index",
+      "formatting": "js/quiz.js renderResult",
+      "migration": "versioned quiz config and deterministic recommender"
+    },
+    {
+      "screen": "field manual",
+      "source": "field-manual.html static DOM",
+      "formatting": "HTML/CSS/JS reading time/TOC",
+      "migration": "rich content blocks"
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "generatedAt": "2026-07-13T07:11:12.051Z",
+  "scoreDictionary": [
+    {
+      "canonicalName": "Stored overall score",
+      "sourceField": "scores.overall",
+      "storedOrDerived": "stored",
+      "validRange": "0-10",
+      "direction": "higher is better",
+      "displayLabel": "Overall",
+      "consumers": [
+        "cards",
+        "detail",
+        "rankings",
+        "compare",
+        "quiz boost"
+      ],
+      "rounding": "display usually 1 decimal; rankings percentiles integer",
+      "fallback": "—/skip if invalid",
+      "missing": "compare skips row if both missing"
+    },
+    {
+      "canonicalName": "Defensibility",
+      "sourceField": "scores.categories.defensibility",
+      "storedOrDerived": "stored",
+      "validRange": "0-10",
+      "direction": "higher is better",
+      "displayLabel": "Defensibility",
+      "consumers": [
+        "detail",
+        "rankings",
+        "compare",
+        "scenarios",
+        "quiz"
+      ],
+      "rounding": "1 decimal display; scenario math raw",
+      "fallback": "quiz top-level fallback or type trait",
+      "missing": "scenario generator excludes base"
+    },
+    {
+      "canonicalName": "Isolation",
+      "sourceField": "scores.categories.isolation",
+      "storedOrDerived": "stored",
+      "validRange": "0-10",
+      "direction": "higher is better",
+      "displayLabel": "Isolation",
+      "consumers": [
+        "detail",
+        "rankings",
+        "compare",
+        "scenarios",
+        "quiz"
+      ],
+      "rounding": "1 decimal display; scenario math raw",
+      "fallback": "quiz top-level fallback or type trait",
+      "missing": "scenario generator excludes base"
+    },
+    {
+      "canonicalName": "Sustainability",
+      "sourceField": "scores.categories.sustainability",
+      "storedOrDerived": "stored",
+      "validRange": "0-10",
+      "direction": "higher is better",
+      "displayLabel": "Sustainability",
+      "consumers": [
+        "detail",
+        "rankings",
+        "compare",
+        "scenarios",
+        "quiz"
+      ],
+      "rounding": "1 decimal display; scenario math raw",
+      "fallback": "quiz top-level fallback or type trait",
+      "missing": "scenario generator excludes base"
+    },
+    {
+      "canonicalName": "Exposure Control",
+      "sourceField": "comparisonScores.exposure.score",
+      "storedOrDerived": "stored",
+      "validRange": "0-10",
+      "direction": "higher is better; higher means lower exposure",
+      "displayLabel": "Exposure Control",
+      "consumers": [
+        "compare",
+        "quiz access vector"
+      ],
+      "rounding": "1 decimal compare",
+      "fallback": "quiz type trait",
+      "missing": "compare row skipped if both missing"
+    },
+    {
+      "canonicalName": "Maintenance Resilience",
+      "sourceField": "comparisonScores.maintenanceBurden.score",
+      "storedOrDerived": "stored",
+      "validRange": "0-10",
+      "direction": "higher is better; raw value is easier upkeep/lower burden despite field name",
+      "displayLabel": "Maintenance Resilience",
+      "consumers": [
+        "compare",
+        "quiz complexity vector"
+      ],
+      "rounding": "1 decimal compare",
+      "fallback": "quiz type trait",
+      "missing": "compare row skipped if both missing"
+    },
+    {
+      "canonicalName": "Population Capacity",
+      "sourceField": "comparisonScores.populationCapacity.score",
+      "storedOrDerived": "stored",
+      "validRange": "0-10",
+      "direction": "higher is better",
+      "displayLabel": "Population Capacity",
+      "consumers": [
+        "compare",
+        "quiz community vector"
+      ],
+      "rounding": "1 decimal compare",
+      "fallback": "quiz type trait",
+      "missing": "compare row skipped if both missing"
+    },
+    {
+      "canonicalName": "Resource Security",
+      "sourceField": "comparisonScores.resourceSecurity.score",
+      "storedOrDerived": "stored",
+      "validRange": "0-10",
+      "direction": "higher is better",
+      "displayLabel": "Resource Security",
+      "consumers": [
+        "compare",
+        "quiz resources vector"
+      ],
+      "rounding": "1 decimal compare",
+      "fallback": "quiz type trait",
+      "missing": "compare row skipped if both missing"
+    },
+    {
+      "canonicalName": "Scenario score",
+      "sourceField": "data/discovery.json scenarios.*.entries[].scenarioScore",
+      "storedOrDerived": "generated from scores.overall and three categories",
+      "validRange": "not clamped; current approx 0-12.7",
+      "direction": "higher is better",
+      "displayLabel": "Scenario score",
+      "consumers": [
+        "scenarios page",
+        "base hints"
+      ],
+      "rounding": "round(value,2)",
+      "fallback": "none",
+      "missing": "base omitted if input invalid/high-risk overall<6.5"
+    },
+    {
+      "canonicalName": "Quiz axis value",
+      "sourceField": "quiz answers weights -> buildUserProfile.normalized",
+      "storedOrDerived": "runtime derived",
+      "validRange": "0-10",
+      "direction": "preference target; not globally good/bad",
+      "displayLabel": "axis labels",
+      "consumers": [
+        "quiz profile/recommendation/breakdown"
+      ],
+      "rounding": "not rounded internally; UI often Math.round",
+      "fallback": "unanswered contributes 0",
+      "missing": "incomplete blocked by UI"
+    },
+    {
+      "canonicalName": "Quiz compatibility percentage",
+      "sourceField": "quizEngine.compatibility()",
+      "storedOrDerived": "runtime derived",
+      "validRange": "1-99 integer",
+      "direction": "higher is better match",
+      "displayLabel": "% match",
+      "consumers": [
+        "quiz result"
+      ],
+      "rounding": "Math.round",
+      "fallback": "hidden bases excluded",
+      "missing": "no best if no valid bases"
+    },
+    {
+      "canonicalName": "Rank/percentile",
+      "sourceField": "data/rankings.json",
+      "storedOrDerived": "generated",
+      "validRange": "rank integer; percentile 0-100",
+      "direction": "rank lower better; percentile higher better",
+      "displayLabel": "rank/percentile",
+      "consumers": [
+        "detail",
+        "rankings"
+      ],
+      "rounding": "integer percentile",
+      "fallback": "hidden/missing not shown",
+      "missing": "no badge/value"
+    }
+  ],
+  "scenarioFormulas": {
+    "limit": 25,
+    "sort": "descending unrounded scenario score, then base.name ascending; high_risk filters overall>=6.5",
+    "reasons": "fixed per scenario except high_risk interpolates strongest/weakest score key",
+    "examples": [
+      {
+        "scenarioId": "long_term_survival",
+        "slug": "isle-of-eigg-village",
+        "rawInput": {
+          "defensibility": 8.7,
+          "isolation": 9.7,
+          "sustainability": 9,
+          "overall": 8.9
+        },
+        "intermediate": {
+          "calc": 9.56,
+          "penalty": 0
+        },
+        "unrounded": 9.56,
+        "finalDisplayed": null,
+        "finalRank": 1,
+        "generatedReason": "Strong long-term viability driven by high sustainability and stable overall performance."
+      },
+      {
+        "scenarioId": "short_term_refuge",
+        "slug": "isle-of-eigg-village",
+        "rawInput": {
+          "defensibility": 8.7,
+          "isolation": 9.7,
+          "sustainability": 9,
+          "overall": 8.9
+        },
+        "intermediate": {
+          "calc": 9.120000000000001,
+          "penalty": 0
+        },
+        "unrounded": 9.120000000000001,
+        "finalDisplayed": null,
+        "finalRank": 1,
+        "generatedReason": "Built for immediate shelter with strong defensive coverage and separation from fast-moving threats."
+      },
+      {
+        "scenarioId": "community_bases",
+        "slug": "isle-of-eigg-village",
+        "rawInput": {
+          "defensibility": 8.7,
+          "isolation": 9.7,
+          "sustainability": 9,
+          "overall": 8.9
+        },
+        "intermediate": {
+          "calc": 6.38,
+          "penalty": 0.4199999999999997,
+          "access": 0.3000000000000007
+        },
+        "unrounded": 6.38,
+        "finalDisplayed": null,
+        "finalRank": 6,
+        "generatedReason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
+      },
+      {
+        "scenarioId": "community_bases",
+        "slug": "cheyenne-mountain-complex",
+        "rawInput": {
+          "defensibility": 10,
+          "sustainability": 7,
+          "isolation": 6,
+          "overall": 9
+        },
+        "intermediate": {
+          "calc": 6.75,
+          "penalty": 0,
+          "access": 4
+        },
+        "unrounded": 6.75,
+        "finalDisplayed": null,
+        "finalRank": 4,
+        "generatedReason": "Supports group survival with durable infrastructure, manageable access, and steady resilience."
+      },
+      {
+        "scenarioId": "high_risk_high_reward",
+        "slug": "isle-of-eigg-village",
+        "rawInput": {
+          "defensibility": 8.7,
+          "isolation": 9.7,
+          "sustainability": 9,
+          "overall": 8.9
+        },
+        "intermediate": {
+          "calc": 9.9,
+          "penalty": 0,
+          "spread": 1
+        },
+        "unrounded": 9.9,
+        "finalDisplayed": null,
+        "finalRank": null,
+        "generatedReason": null
+      }
+    ]
+  }
+}

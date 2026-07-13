@@ -60,3 +60,7 @@ Each scenario keeps the top 25 entries and records rank, scenarioScore and reaso
 * Compare treats maintenance burden inversely, so a higher raw value is not always better for that row.
 * Scenario scores are generated and committed; the scenarios page does not recompute formulas at runtime.
 * Overall score has no visible formula in V1; any rebuild must preserve stored values unless a new scoring model is explicitly approved.
+
+## Red-team correction — 2026-07-13
+
+INSPECTED/VERIFIED: Earlier wording that described `comparisonScores.maintenanceBurden.score` as lower-is-better or inverted is superseded. V1 labels and compares this raw field as Maintenance Resilience with higher-is-better semantics. See `audit/29-scoring-compare-quiz-red-team.md` and `audit/evidence/scoring-fixtures.json`.
