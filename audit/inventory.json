@@ -1,252 +1,58 @@
 {
-  "generatedBy": "manual audit script during repository inspection",
-  "counts": {
-    "bases": 111,
-    "regions": 12,
-    "types": 8,
-    "baseImages": 112,
-    "rankingGlobalEntries": 111,
-    "scenarios": 4
-  },
-  "taxonomies": {
-    "regions": [
-      "africa",
-      "east_asia",
-      "eastern_europe",
-      "middle_east",
-      "north_america",
-      "oceania",
-      "polar_extreme",
-      "south_america",
-      "south_asia",
-      "southeast_asia",
-      "uk_ireland",
-      "western_europe"
-    ],
-    "types": [
-      "elevated_stronghold",
-      "fortified_structure",
-      "industrial_site",
-      "institutional_compound",
-      "isolated_landmass",
-      "landmark_structure",
-      "remote_settlement",
-      "subterranean"
-    ]
-  },
+  "routes": ["/", "/base.html?slug=:slug", "/base/:slug", "/:slug", "/compare.html", "/compare.html?a=:slugA&b=:slugB", "/base/:slugA/vs/:slugB", "/rankings.html", "/rankings-region.html?region=:region", "/rankings-type.html?type=:type", "/scenarios.html?scenario=:scenario", "/quiz.html", "/quiz", "/field-manual.html", "/field-manual"],
   "pages": [
-    {
-      "id": "home",
-      "path": "index.html",
-      "route": "/",
-      "scripts": [
-        "js/seo.js",
-        "js/base-card.js",
-        "js/map.js",
-        "js/main.js",
-        "js/site-footer.js",
-        "js/filter-taxonomy.js",
-        "js/mobile-nav.js"
-      ],
-      "datasets": [
-        "data/bases-index.json"
-      ]
-    },
-    {
-      "id": "base-detail",
-      "path": "base.html",
-      "routes": [
-        "/base.html?slug=:slug",
-        "/base/:slug",
-        "/:slug"
-      ],
-      "scripts": [
-        "js/seo.js",
-        "js/slug.js",
-        "js/base.js"
-      ],
-      "datasets": [
-        "data/bases-index.json",
-        "data/rankings.json",
-        "data/discovery.json",
-        "data/interpretations.json"
-      ]
-    },
-    {
-      "id": "compare",
-      "path": "compare.html",
-      "routes": [
-        "/compare.html",
-        "/compare",
-        "/base/:slugA/vs/:slugB"
-      ],
-      "scripts": [
-        "js/seo.js",
-        "js/slug.js",
-        "js/compare.js"
-      ],
-      "datasets": [
-        "data/bases-index.json"
-      ]
-    },
-    {
-      "id": "rankings",
-      "path": "rankings.html",
-      "route": "/rankings.html",
-      "scripts": [
-        "js/seo.js",
-        "js/slug.js",
-        "js/base-card.js",
-        "js/rankings.js"
-      ],
-      "datasets": [
-        "data/rankings.json"
-      ]
-    },
-    {
-      "id": "region-rankings",
-      "path": "rankings-region.html",
-      "route": "/rankings-region.html?region=:region",
-      "scripts": [
-        "js/seo.js",
-        "js/slug.js",
-        "js/base-card.js",
-        "js/rankings.js"
-      ],
-      "datasets": [
-        "data/rankings.json"
-      ]
-    },
-    {
-      "id": "type-rankings",
-      "path": "rankings-type.html",
-      "route": "/rankings-type.html?type=:type",
-      "scripts": [
-        "js/seo.js",
-        "js/slug.js",
-        "js/base-card.js",
-        "js/rankings.js"
-      ],
-      "datasets": [
-        "data/rankings.json"
-      ]
-    },
-    {
-      "id": "scenarios",
-      "path": "scenarios.html",
-      "route": "/scenarios.html?scenario=:scenario",
-      "scripts": [
-        "js/seo.js",
-        "js/slug.js",
-        "js/base-card.js",
-        "js/scenarios.js"
-      ],
-      "datasets": [
-        "data/discovery.json"
-      ]
-    },
-    {
-      "id": "quiz",
-      "path": "quiz.html",
-      "routes": [
-        "/quiz.html",
-        "/quiz",
-        "/quiz/"
-      ],
-      "scripts": [
-        "js/slug.js",
-        "js/quiz-questions.js",
-        "js/quiz-engine.js",
-        "js/quiz.js"
-      ],
-      "datasets": [
-        "data/bases-index.json"
-      ]
-    },
-    {
-      "id": "field-manual",
-      "path": "field-manual.html",
-      "routes": [
-        "/field-manual.html",
-        "/field-manual",
-        "/field-manual/"
-      ],
-      "scripts": [
-        "js/seo.js",
-        "js/field-manual.js"
-      ],
-      "datasets": []
-    }
+    {"id":"home","path":"index.html","scripts":["js/main.js","js/base-card.js","js/map.js"]},
+    {"id":"base-detail","path":"base.html","scripts":["js/base.js","js/slug.js","js/seo.js"]},
+    {"id":"compare","path":"compare.html","scripts":["js/compare.js"]},
+    {"id":"rankings","path":"rankings.html","scripts":["js/rankings.js"]},
+    {"id":"scenarios","path":"scenarios.html","scripts":["js/scenarios.js"]},
+    {"id":"quiz","path":"quiz.html","scripts":["js/quiz-questions.js","js/quiz-engine.js","js/quiz.js"]},
+    {"id":"field-manual","path":"field-manual.html","scripts":["js/field-manual.js"]}
   ],
-  "datasets": [
-    {
-      "path": "data/bases-index.json",
-      "kind": "canonical",
-      "records": 111,
-      "joinKey": "slug"
-    },
-    {
-      "path": "data/rankings.json",
-      "kind": "generated",
-      "generator": "scripts/generate-rankings.py",
-      "records": 111,
-      "joinKey": "slug"
-    },
-    {
-      "path": "data/discovery.json",
-      "kind": "generated",
-      "generator": "scripts/generate-discovery.py",
-      "scenarios": [
-        "long_term_survival",
-        "short_term_refuge",
-        "community_bases",
-        "high_risk_high_reward"
-      ],
-      "joinKey": "slug"
-    },
-    {
-      "path": "data/interpretations.json",
-      "kind": "generated",
-      "generator": "scripts/generate-interpretations.py",
-      "joinKey": "slug"
-    },
-    {
-      "path": "data/base-stats.json",
-      "kind": "generated",
-      "generator": "scripts/generate-base-stats.py"
-    },
-    {
-      "path": "data/base-matrix-source.json",
-      "kind": "legacy-source-matrix"
-    }
+  "components": ["baseCardRenderer", "baseSlugHelper", "seo", "createBaseMap", "quizEngine", "quizStorage", "zombieBasesComparison", "mobileNav", "siteFooter"],
+  "data_sources": [
+    {"path":"data/bases-index.json","kind":"canonical","records":111},
+    {"path":"data/rankings.json","kind":"generated","generator":"scripts/generate-rankings.py"},
+    {"path":"data/discovery.json","kind":"generated","generator":"scripts/generate-discovery.py"},
+    {"path":"data/interpretations.json","kind":"generated","generator":"scripts/generate-interpretations.py"},
+    {"path":"data/base-stats.json","kind":"generated","generator":"scripts/generate-base-stats.py"},
+    {"path":"data/base-matrix-source.json","kind":"legacy"}
   ],
-  "assets": {
-    "baseImageDirectory": "images/bases",
-    "convention": "images/bases/<slug>.png",
-    "placeholder": "images/bases/placeholder.png",
-    "missingImagesForBases": [],
-    "extraImagesInBaseDir": []
-  },
-  "relationships": [
-    {
-      "from": "data/bases-index.json",
-      "to": "images/bases/*.png",
-      "key": "slug filename"
-    },
-    {
-      "from": "data/bases-index.json",
-      "to": "data/rankings.json",
-      "key": "slug"
-    },
-    {
-      "from": "data/bases-index.json",
-      "to": "data/discovery.json",
-      "key": "slug"
-    },
-    {
-      "from": "data/bases-index.json",
-      "to": "data/interpretations.json",
-      "key": "slug"
-    }
-  ]
+  "schemas": ["bases-index", "rankings", "discovery", "interpretations", "base-stats", "quiz-questions", "quiz-profiles", "image-references"],
+  "score_dimensions": ["overall", "defensibility", "isolation", "sustainability", "exposure", "maintenanceBurden", "populationCapacity", "resourceSecurity"],
+  "score_formulas": [
+    {"id":"overall","status":"stored-authored","formula":null},
+    {"id":"long_term_survival","formula":"S*0.55 + O*0.30 + I*0.20 - max(0,3-I)*0.80"},
+    {"id":"short_term_refuge","formula":"D*0.50 + I*0.40 + O*0.10"},
+    {"id":"community_bases","formula":"S*0.50 + O*0.25 + (10-I)*0.25 - max(0,I-8.5)*0.35"},
+    {"id":"high_risk_high_reward","formula":"O + (max(D,I,S)-min(D,I,S))"},
+    {"id":"quiz_compatibility","formula":"round(clamp(100 - averageWeightedDistance*9.2 + typeBoost + overall*0.45,1,99))"}
+  ],
+  "scenarios": ["long_term_survival", "short_term_refuge", "community_bases", "high_risk_high_reward"],
+  "quiz_axes": ["defence", "isolation", "sustainability", "resources", "community", "complexity", "access"],
+  "quiz_questions": ["group_size", "first_priority", "preferred_isolation", "zombie_strategy", "food_water", "base_type", "technical_complexity", "travel", "climate_tradeoff", "biggest_tradeoff", "long_term_goal", "final_priority"],
+  "quiz_profiles": ["fortress-commander", "island-isolationist", "community-builder", "resource-planner", "systems-survivor", "resilient-generalist"],
+  "media_locations": ["images/bases", "root PNG duplicates", "logo.png", "hero.png", "quiz.png"],
+  "external_dependencies": ["Leaflet", "Leaflet.markercluster", "OpenStreetMap tiles", "browser Web Share API", "browser localStorage"],
+  "cloudflare_dependencies": ["_redirects clean quiz/manual/base/compare rewrites", "possible dashboard rules from brief"],
+  "seo_outputs": ["sitemap.xml", "robots.txt", "client title/meta/canonical", "client JSON-LD"],
+  "tests": ["tests/compare-utils.test.js", "tests/quiz-engine.test.js", "scripts/validate-bases.py", "scripts/validate-discovery.py", "scripts/validate-interpretations.py"],
+  "commands_run": [
+    {"command":"node --test tests/*.test.js","exit_status":0,"result":"pass"},
+    {"command":"python3 scripts/validate-bases.py","exit_status":0,"result":"pass"},
+    {"command":"python3 scripts/validate-discovery.py","exit_status":0,"result":"pass"},
+    {"command":"python3 scripts/validate-interpretations.py","exit_status":0,"result":"pass"},
+    {"command":"python3 scripts/generate-rankings.py","exit_status":0,"result":"temporary diff reverted"},
+    {"command":"python3 scripts/generate-base-stats.py","exit_status":0,"result":"temporary timestamp diff reverted"},
+    {"command":"npm run build","exit_status":0,"result":"pass; generated untracked thumbnails removed"}
+  ],
+  "findings": [
+    {"id":"F001","title":"Overall score is stored","category":"scoring","severity":"high","confidence":"high","verification_status":"INSPECTED","evidence_paths":["data/bases-index.json","js/rankings.js","scripts/generate-rankings.py"],"description":"V1 reads scores.overall and does not encode an authoritative overall formula.","user_impact":"Rankings depend on authored values.","v2_recommendation":"Preserve stored overall during parity.","disposition":"PRESERVE EXACTLY"},
+    {"id":"F002","title":"Scenario formulas verified","category":"scenarios","severity":"medium","confidence":"high","verification_status":"VERIFIED","evidence_paths":["scripts/generate-discovery.py","data/discovery.json"],"description":"Discovery validator passes and formulas are deterministic.","user_impact":"Scenario rankings can be reproduced.","v2_recommendation":"Port formulas with tests.","disposition":"PRESERVE EXACTLY"},
+    {"id":"F003","title":"Cloudflare routing dependency","category":"routing","severity":"high","confidence":"medium","verification_status":"INSPECTED","evidence_paths":["_redirects","js/slug.js"],"description":"Clean URLs depend on rewrite order and reserved slugs.","user_impact":"Route collisions can break base pages.","v2_recommendation":"Make routing explicit and tested.","disposition":"PRESERVE INTENT / REBUILD IMPLEMENTATION"},
+    {"id":"F004","title":"Large PNG payload","category":"performance","severity":"medium","confidence":"high","verification_status":"VERIFIED","evidence_paths":["images/bases","audit/25-performance-and-assets-audit.md"],"description":"123 PNG files total about 350 MB.","user_impact":"Slow pages and high bandwidth.","v2_recommendation":"Optimize after parity.","disposition":"IMPROVE AFTER PARITY"},
+    {"id":"F005","title":"Quiz result recomputation","category":"quiz","severity":"medium","confidence":"high","verification_status":"INSPECTED","evidence_paths":["js/quiz.js","js/quiz-engine.js"],"description":"Previous local result stores answers and recomputes against current data.","user_impact":"Old results may change after data edits.","v2_recommendation":"Version result algorithm/data.","disposition":"PRESERVE EXACTLY"}
+  ],
+  "open_questions": ["Which base URL should be canonical?", "Should dashboard-only redirects be codified?", "Should root duplicate PNGs migrate?", "Should missing base metadata generator be restored?", "Should rankings JSON be regenerated before baseline?"],
+  "parity_items": ["navigation", "homepage", "search", "filters", "list-map", "cards", "base-detail", "rankings", "scenarios", "compare", "quiz", "field-manual", "footer", "url-state", "seo", "images"]
 }
